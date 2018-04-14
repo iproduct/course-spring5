@@ -1,13 +1,11 @@
-package org.iproduct.spring.annotations;
+package org.iproduct.spring.programmatic;
 
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.support.GenericApplicationContext;
-import org.springframework.context.support.GenericXmlApplicationContext;
 
-@ComponentScan(basePackageClasses = org.iproduct.spring.annotations.SpringAnnotationsDI.class)
+@ComponentScan(basePackageClasses = org.iproduct.spring.programmatic.SpringAnnotationsDI.class)
 public class SpringAnnotationsDI {
     public static void main(String[] args) {
         ApplicationContext ctx = new GenericApplicationContext();

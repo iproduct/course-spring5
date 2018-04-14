@@ -5,6 +5,7 @@ import org.iproduct.demos.spring.streamingdemos.domain.ProcessInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 
 import java.time.Duration;
@@ -14,7 +15,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-@Component
+@Service
 public class Profiler {
 
     private List<ProcessInfo> oldProcesses;

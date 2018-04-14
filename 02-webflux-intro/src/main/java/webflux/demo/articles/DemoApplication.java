@@ -21,9 +21,9 @@ public class DemoApplication {
     @Bean
     public RouterFunction<ServerResponse> routes(ArticleHandler postController) {
         return route(GET("/articles"), postController::all)
-                .andRoute(POST("/articles"), postController::create)
-                .andRoute(GET("/articles/{id}"), postController::get)
-                .andRoute(PUT("/articles/{id}"), postController::update)
-                .andRoute(DELETE("/articles/{id}"), postController::delete);
+            .andRoute(POST("/articles"), postController::create)
+            .andRoute(GET("/articles/{id}"), postController::get)
+            .andRoute(PUT("/articles/{id}"), postController::update)
+            .andRoute(DELETE("/articles/{id}"), postController::delete);
     }
 }

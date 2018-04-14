@@ -1,4 +1,4 @@
-package org.iproduct.spring.annotations;
+package org.iproduct.spring.programmatic;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

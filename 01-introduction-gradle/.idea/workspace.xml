@@ -2,34 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="365587b0-f3b1-4b87-a981-9c19325ab385" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../intro-gradle-lab/annotationconfig/src/main/java/org/iproduct/spring/annotations/Article.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../intro-gradle-lab/annotationconfig/src/main/java/org/iproduct/spring/annotations/ArticlePresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../intro-gradle-lab/annotationconfig/src/main/java/org/iproduct/spring/annotations/ArticleProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../intro-gradle-lab/annotationconfig/src/main/java/org/iproduct/spring/annotations/ConsoleArticlePresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../intro-gradle-lab/annotationconfig/src/main/java/org/iproduct/spring/annotations/MockArticleProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../intro-gradle-lab/annotationconfig/src/main/java/org/iproduct/spring/annotations/SpringAnnotationsDI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../intro-gradle-lab/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/Article.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../intro-gradle-lab/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/ArticlePresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../intro-gradle-lab/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/ArticleProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../intro-gradle-lab/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/ConsoleArticlePresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../intro-gradle-lab/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/MockArticleProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../intro-gradle-lab/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/SpringXMLConfigAnnotationsDI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../intro-gradle-lab/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/SpringXMLConfigDI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../intro-gradle-lab/xmlconfig/src/main/resources/spring/app-context.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../intro-gradle-lab/programmaticconfig/src/main/java/org/iproduct/spring/programmatic/SpringProgrammaticAnnotationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../intro-gradle-lab/programmaticconfig/src/main/java/org/iproduct/spring/programmatic/SpringProgrammaticConfigDI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-introduction-maven/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-introduction-maven/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-introduction-maven/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-introduction-maven/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-introduction-maven/src/main/java/org/iproduct/spring/demo/beanconfig/ConsoleArticlePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-introduction-maven/src/main/java/org/iproduct/spring/demo/beanconfig/ConsoleArticlePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-introduction-maven/src/main/java/org/iproduct/spring/demo/beanconfig/MockArticleProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-introduction-maven/src/main/java/org/iproduct/spring/demo/beanconfig/MockArticleProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-introduction-maven/target/classes/org/iproduct/spring/demo/beanconfig/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/../01-introduction-maven/target/classes/org/iproduct/spring/demo/beanconfig/Article.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-introduction-maven/target/classes/org/iproduct/spring/demo/beanconfig/ArticlePresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../01-introduction-maven/target/classes/org/iproduct/spring/demo/beanconfig/ArticlePresenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-introduction-maven/target/classes/org/iproduct/spring/demo/beanconfig/ArticleProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/../01-introduction-maven/target/classes/org/iproduct/spring/demo/beanconfig/ArticleProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-introduction-maven/target/classes/org/iproduct/spring/demo/beanconfig/ConsoleArticlePresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../01-introduction-maven/target/classes/org/iproduct/spring/demo/beanconfig/ConsoleArticlePresenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-introduction-maven/target/classes/org/iproduct/spring/demo/beanconfig/HelloWorldConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/../01-introduction-maven/target/classes/org/iproduct/spring/demo/beanconfig/HelloWorldConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-introduction-maven/target/classes/org/iproduct/spring/demo/beanconfig/HelloWorldSpringAnnotated.class" beforeDir="false" afterPath="$PROJECT_DIR$/../01-introduction-maven/target/classes/org/iproduct/spring/demo/beanconfig/HelloWorldSpringAnnotated.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-introduction-maven/target/classes/org/iproduct/spring/demo/beanconfig/HelloWorldSpringDI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../01-introduction-maven/target/classes/org/iproduct/spring/demo/beanconfig/HelloWorldSpringDI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-introduction-maven/target/classes/org/iproduct/spring/demo/beanconfig/MockArticleProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/../01-introduction-maven/target/classes/org/iproduct/spring/demo/beanconfig/MockArticleProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-webflux-intro/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../02-webflux-intro/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../intro-gradle-lab/annotationconfig/src/main/java/org/iproduct/spring/annotations/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/../intro-gradle-lab/annotationconfig/src/main/java/org/iproduct/spring/programmatic/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../intro-gradle-lab/annotationconfig/src/main/java/org/iproduct/spring/annotations/ArticlePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../intro-gradle-lab/programmaticconfig/src/main/java/org/iproduct/spring/programmatic/ArticlePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../intro-gradle-lab/annotationconfig/src/main/java/org/iproduct/spring/annotations/ArticleProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../intro-gradle-lab/annotationconfig/src/main/java/org/iproduct/spring/programmatic/ArticleProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../intro-gradle-lab/annotationconfig/src/main/java/org/iproduct/spring/annotations/ConsoleArticlePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../intro-gradle-lab/programmaticconfig/src/main/java/org/iproduct/spring/programmatic/ConsoleArticlePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../intro-gradle-lab/annotationconfig/src/main/java/org/iproduct/spring/annotations/MockArticleProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../intro-gradle-lab/annotationconfig/src/main/java/org/iproduct/spring/programmatic/MockArticleProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../intro-gradle-lab/annotationconfig/src/main/java/org/iproduct/spring/annotations/SpringAnnotationsDI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../intro-gradle-lab/annotationconfig/src/main/java/org/iproduct/spring/programmatic/SpringAnnotationsDI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../intro-gradle-lab/programmaticconfig/src/main/java/org/iproduct/spring/annotations/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/../intro-gradle-lab/programmaticconfig/src/main/java/org/iproduct/spring/programmatic/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../intro-gradle-lab/programmaticconfig/src/main/java/org/iproduct/spring/annotations/ArticlePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../intro-gradle-lab/annotationconfig/src/main/java/org/iproduct/spring/programmatic/ArticlePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../intro-gradle-lab/programmaticconfig/src/main/java/org/iproduct/spring/annotations/ArticleProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../intro-gradle-lab/programmaticconfig/src/main/java/org/iproduct/spring/programmatic/ArticleProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../intro-gradle-lab/programmaticconfig/src/main/java/org/iproduct/spring/annotations/ConsoleArticlePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../intro-gradle-lab/annotationconfig/src/main/java/org/iproduct/spring/programmatic/ConsoleArticlePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../intro-gradle-lab/programmaticconfig/src/main/java/org/iproduct/spring/annotations/MockArticleProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../intro-gradle-lab/programmaticconfig/src/main/java/org/iproduct/spring/programmatic/MockArticleProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../intro-gradle-lab/programmaticconfig/src/main/java/org/iproduct/spring/annotations/SpringAnnotationsDI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../intro-gradle-lab/programmaticconfig/src/main/java/org/iproduct/spring/programmatic/SpringProgrammaticDI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -66,11 +53,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HelloWorldSpringDI.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HelloWorldSpringDI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/HelloWorldSpringDI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="43" selection-start-column="8" selection-end-column="43" />
+            <state relative-caret-position="379">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -105,7 +92,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app-context.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app-context.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/spring/app-context.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="308">
@@ -654,9 +641,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="1620" />
-    <option name="height" value="920" />
+    <option name="x" value="100" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="820" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -893,7 +881,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -903,7 +890,7 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5012854" side_tool="true" weight="0.31854838" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49871466" visible="true" weight="0.32916668" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49871466" weight="0.32916668" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.36021507" />
       <window_info id="Capture Tool" order="2" />
@@ -1069,20 +1056,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/HelloWorldSpringAnnotated.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/HelloWorldSpringDI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="43" selection-start-column="8" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/Article.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -1116,6 +1089,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="14" column="80" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/HelloWorldSpringAnnotated.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/HelloWorldSpringDI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>

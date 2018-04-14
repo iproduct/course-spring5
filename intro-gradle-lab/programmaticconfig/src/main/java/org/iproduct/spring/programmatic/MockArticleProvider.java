@@ -1,11 +1,10 @@
-package org.iproduct.spring.annotations;
+package org.iproduct.spring.programmatic;
 
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.List;
 
-@Component("provider")
 public class MockArticleProvider implements ArticleProvider{
 
     @Override

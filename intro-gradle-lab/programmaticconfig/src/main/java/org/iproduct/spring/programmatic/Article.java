@@ -1,4 +1,4 @@
-package org.iproduct.spring.annotations;
+package org.iproduct.spring.programmatic;
 
 import java.time.LocalDateTime;
 import java.util.Objects;

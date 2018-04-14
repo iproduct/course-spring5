@@ -1,12 +1,18 @@
-package org.iproduct.spring.annotations;
+package org.iproduct.spring.programmatic;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service("presenter")
 public class ConsoleArticlePresenter implements ArticlePresenter {
     private ArticleProvider provider;
+
+    public ConsoleArticlePresenter() {
+    }
+
+    public ConsoleArticlePresenter(ArticleProvider provider) {
+        this.provider = provider;
+    }
 
     @Override
     public void present() {
@@ -21,7 +27,6 @@ public class ConsoleArticlePresenter implements ArticlePresenter {
     }
 
     @Override
-    @Autowired
     public void setArticleProvider(ArticleProvider provider) {
         this.provider = provider;
     }
