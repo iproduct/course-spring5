@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.iproduct.demos.spring.hellowebflux.WebfluxUsersApplicationTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-02-03T15:07:36" hostname="office20" time="2.344">
+  <properties/>
+  <testcase name="whenUnauthenticatedGetUsersShouldFail" classname="org.iproduct.demos.spring.hellowebflux.WebfluxUsersApplicationTests" time="1.305"/>
+  <testcase name="whenAdminCredentialsGetUsersShouldSucceedWithHeaders" classname="org.iproduct.demos.spring.hellowebflux.WebfluxUsersApplicationTests" time="0.522"/>
+  <testcase name="whenAdminCredentialsGetUsersShouldSucceed" classname="org.iproduct.demos.spring.hellowebflux.WebfluxUsersApplicationTests" time="0.515"/>
+  <system-out><![CDATA[2018-02-03 17:07:30 INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-02-03 17:07:30 INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@bd2f9cd, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7ed2b2da, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4eb140fe, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6a250553, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7625854b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1d0aad37, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@5978a8d8, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@1b352139, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4160e0c9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@94b8ec7, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1569c95e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@27670e23, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@61c7d4ae, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@342f53e7]
+2018-02-03 17:07:31 INFO  o.s.c.s.GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@13801b60: startup date [Sat Feb 03 17:07:31 EET 2018]; root of context hierarchy
+2018-02-03 17:07:34 INFO  o.s.w.r.r.m.a.RequestMappingHandlerMapping - Mapped "{[/hello],methods=[GET]}" onto public org.iproduct.demos.spring.manageusers.domain.Hello org.iproduct.demos.spring.manageusers.controller.HelloSpringController.sayHello(java.lang.String)
+2018-02-03 17:07:34 INFO  o.s.w.r.f.s.s.RouterFunctionMapping - Mapped /api/users => {
+ (GET && ) -> org.iproduct.demos.spring.manageusers.WebfluxUsersApplication$$Lambda$392/1316122772@53416d5
+ (GET && /{id}) -> org.iproduct.demos.spring.manageusers.WebfluxUsersApplication$$Lambda$394/1169065136@2f48fc69
+ ((POST && ) && Content-Type: [application/json]) -> org.iproduct.demos.spring.manageusers.WebfluxUsersApplication$$Lambda$395/1991936597@4d9114f3
+ ((PUT && /{id}) && Content-Type: [application/json]) -> org.iproduct.demos.spring.manageusers.WebfluxUsersApplication$$Lambda$396/840220948@2552129c
+ (DELETE && /{id}) -> org.iproduct.demos.spring.manageusers.WebfluxUsersApplication$$Lambda$397/998110525@6120bfc1
+}
+2018-02-03 17:07:34 INFO  o.s.w.r.r.m.a.ControllerMethodResolver - Looking for @ControllerAdvice: org.springframework.context.support.GenericApplicationContext@13801b60: startup date [Sat Feb 03 17:07:31 EET 2018]; root of context hierarchy
+2018-02-03 17:07:36 INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-02-03 17:07:38 INFO  o.i.d.s.h.WebfluxUsersApplicationTests - Received: 
+> GET /api/users
+> WebTestClient-Request-Id: [1]
+> Authorization: [Basic YWRtaW46YWRtaW4=]
+
+No content
+
+< 200 OK
+< Content-Type: [application/json]
+< Cache-Control: [no-cache, no-store, max-age=0, must-revalidate]
+< Pragma: [no-cache]
+< Expires: [0]
+< X-Content-Type-Options: [nosniff]
+< X-Frame-Options: [DENY]
+< X-XSS-Protection: [1 ; mode=block]
+< Set-Cookie: [SESSION=20abe694-78b3-41c8-9dd0-1f0bd11d4ced; Path=/; HttpOnly]
+
+[{"id":"","username":"admin","fname":"Default","lname":"Admin","role":"ADMIN","active":true},{"id":"5a75d039ab07f51b58baa410","username":"testUser","fname":"Spring","lname":"User","role":"CUSTOMER","active":true}]
+
+2018-02-03 17:07:38 INFO  o.i.d.s.h.WebfluxUsersApplicationTests - Received: 
+> GET /api/users
+> WebTestClient-Request-Id: [1]
+> Authorization: [Basic YWRtaW46YWRtaW4=]
+
+No content
+
+< 200 OK
+< Content-Type: [application/json]
+< Cache-Control: [no-cache, no-store, max-age=0, must-revalidate]
+< Pragma: [no-cache]
+< Expires: [0]
+< X-Content-Type-Options: [nosniff]
+< X-Frame-Options: [DENY]
+< X-XSS-Protection: [1 ; mode=block]
+< Set-Cookie: [SESSION=d371a0a7-5369-41a8-a418-17c8d69e1aa3; Path=/; HttpOnly]
+
+[{"id":"","username":"admin","fname":"Default","lname":"Admin","role":"ADMIN","active":true},{"id":"5a75d03aab07f51b58baa411","username":"testUser","fname":"Spring","lname":"User","role":"CUSTOMER","active":true}]
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
