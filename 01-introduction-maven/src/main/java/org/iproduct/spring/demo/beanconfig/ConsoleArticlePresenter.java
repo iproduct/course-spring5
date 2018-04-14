@@ -1,6 +1,8 @@
 package org.iproduct.spring.demo.beanconfig;
 
-//@Service("presenter")
+import org.springframework.stereotype.Service;
+
+@Service("presenter")
 public class ConsoleArticlePresenter implements ArticlePresenter {
     private ArticleProvider provider;
 
