@@ -2,14 +2,15 @@ group 'org.iproduct.spring'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
-apply plugin: 'idea'
+apply plugin: 'application'
+mainClassName = 'org.iproduct.spring.programmatic.SpringAnnotationsDI'
 
+apply plugin: 'idea'
 idea {
     module {
         downloadJavadoc = true
     }
 }
-
 sourceCompatibility = 1.8
 
 repositories {

@@ -8,6 +8,10 @@ import org.springframework.stereotype.Service;
 public class ConsoleArticlePresenter implements ArticlePresenter {
     private ArticleProvider provider;
 
+    public ConsoleArticlePresenter(ArticleProvider provider) {
+        this.provider = provider;
+    }
+
     @Override
     public void present() {
         if(provider != null) {
@@ -21,7 +25,7 @@ public class ConsoleArticlePresenter implements ArticlePresenter {
     }
 
     @Override
-    @Autowired
+    @Autowired //@Inject //@Resource
     public void setArticleProvider(ArticleProvider provider) {
         this.provider = provider;
     }
