@@ -9,5 +9,6 @@ public class SpringXMLConfigDI {
         ApplicationContext ctx = new ClassPathXmlApplicationContext(
                 "spring/app-context.xml");
         ArticlePresenter presenter = ctx.getBean("presenter", ArticlePresenter.class);
+        presenter.present();
     }
 }

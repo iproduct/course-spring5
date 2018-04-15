@@ -2,11 +2,17 @@ group 'org.iproduct.spring'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'idea'
+
+idea {
+    module {
+        downloadJavadoc = true
+    }
+}
 
 sourceCompatibility = 1.8
 
 repositories {
-    mavenLocal()
     mavenCentral()
     maven { url "https://repo.spring.io/release" }
     maven { url "https://repo.spring.io/milestone" }
