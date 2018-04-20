@@ -13,7 +13,7 @@
         http://www.springframework.org/schema/util
         http://www.springframework.org/schema/util/spring-util.xsd">
 
-    <context:component-scan base-package="org.iproduct.spring.webmvc" />
+    <context:component-scan base-package="org.iproduct.spring.webmvc.web" />
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>

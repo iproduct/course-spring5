@@ -1,4 +1,4 @@
-package org.iproduct.spring.webmvc;
+package org.iproduct.spring.webmvc.model;
 
 import java.time.LocalDateTime;
 import java.util.Date;

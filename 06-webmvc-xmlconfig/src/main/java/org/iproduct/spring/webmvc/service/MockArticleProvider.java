@@ -1,5 +1,6 @@
-package org.iproduct.spring.webmvc;
+package org.iproduct.spring.webmvc.service;
 
+import org.iproduct.spring.webmvc.model.Article;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
