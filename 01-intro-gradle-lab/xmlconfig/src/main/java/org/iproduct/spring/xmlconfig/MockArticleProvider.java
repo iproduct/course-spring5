@@ -7,6 +7,9 @@ import java.util.List;
 
 @Component("provider")
 public class MockArticleProvider implements ArticleProvider{
+    public static MockArticleProvider createInstance(){
+        return new MockArticleProvider();
+    }
 
     @Override
     public List<Article> getArticles() {
