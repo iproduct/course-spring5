@@ -5,7 +5,8 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 import java.util.List;
 
-@Component("provider")
+@MockProvider
+@Component
 public class MockArticleProvider implements ArticleProvider{
 
     @Override

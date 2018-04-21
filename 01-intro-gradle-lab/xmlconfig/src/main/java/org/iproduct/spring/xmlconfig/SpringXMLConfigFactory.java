@@ -19,11 +19,12 @@ public class SpringXMLConfigFactory {
         DefaultListableBeanFactory beanFactory= new DefaultListableBeanFactory();
         XmlBeanDefinitionReader beanDefinitionReader = new XmlBeanDefinitionReader(beanFactory);
 //        beanDefinitionReader.loadBeanDefinitions(new ClassPathResource("spring/app-context.xml"));
-        beanDefinitionReader.loadBeanDefinitions("spring/app-context.xml");
-
+//        beanDefinitionReader.loadBeanDefinitions("spring/app-context.xml");
+//
         DefaultListableBeanFactory beanFactory1= new DefaultListableBeanFactory();
         XmlBeanDefinitionReader beanDefinitionReader1 = new XmlBeanDefinitionReader(beanFactory1);
-        beanDefinitionReader1.loadBeanDefinitions(new FileSystemResource("xmlconfig/src/main/resources/spring/app-context.xml"));
+        beanDefinitionReader1.loadBeanDefinitions(
+                new FileSystemResource("xmlconfig/src/main/resources/spring/app-context.xml"));
 
         System.out.println("beanfactory created successfully");
         ArticlePresenter presenter = beanFactory1.getBean("presenter", ArticlePresenter.class);

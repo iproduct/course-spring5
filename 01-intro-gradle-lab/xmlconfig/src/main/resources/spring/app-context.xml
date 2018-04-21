@@ -8,8 +8,7 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
-    <!--<bean id="provider"-->
-           <!--class="org.iproduct.spring.xmlconfig.MockArticleProvider"/>-->
+    <!--<bean id="provider" class="org.iproduct.spring.xmlconfig.MockArticleProvider"/>-->
     <bean id="provider" factory-method="createInstance" class="org.iproduct.spring.xmlconfig.MockArticleProvider" />
     <bean id="presenterFactory" name="presenterFactory" class="org.iproduct.spring.xmlconfig.ArticlePresenterFactory"
           c:provider-ref="provider"/>
