@@ -1,20 +1,32 @@
 package org.iproduct.spring.programmatic;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 @AlternativeProvider
 @Component("alternative_provider")
+@PropertySource("articles.properties")
 public class AnotherArticleProvider implements ArticleProvider {
+
+    @Value("${numberOfArticles}")
+    private int articleCount;
+
+    @Autowired
+    ApplicationContext context;
 
     @Override
     public List<Article> getArticles() {
-        return Arrays.asList(
-            new Article("Another: Welcome to Spring 5", "Spring 5 is great beacuse ..."),
-            new Article("Another: Dependency Injection", "Should I use DI or lookup ..."),
-            new Article("Another: Spring Beans and Wireing", "There are several ways to configure Spring beans.")
-        );
+        System.out.println(articleCount);
+        List<Article> articles = new ArrayList<>();
+        for(int i = 0; i < articleCount; i++) {
+            articles.add(context.getBean("article", Article.class));
+        }
+        return articles;
     }
 }
