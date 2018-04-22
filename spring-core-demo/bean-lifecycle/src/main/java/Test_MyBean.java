@@ -11,6 +11,7 @@ public class Test_MyBean {
 
 		MyBean obj=(MyBean)context.getBean("obj_myBean");
         obj.display();
+		((AbstractApplicationContext)context).registerShutdownHook();
 		
 	}
 

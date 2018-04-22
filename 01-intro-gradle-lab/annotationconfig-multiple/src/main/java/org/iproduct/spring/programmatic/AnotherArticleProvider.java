@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @AlternativeProvider
-@Component("alternative_provider")
+@Component
 public class AnotherArticleProvider implements ArticleProvider {
 
     @Override

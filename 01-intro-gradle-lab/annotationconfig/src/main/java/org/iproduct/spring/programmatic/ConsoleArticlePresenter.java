@@ -7,33 +7,34 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import javax.inject.Inject;
+import java.util.Set;
 
 @Service("presenter")
 public class ConsoleArticlePresenter implements ArticlePresenter {
-    @Autowired
-    @MockProvider
     private ArticleProvider provider;
     private String data;
 
-//    @Autowired
-//    @Inject
-//    public ConsoleArticlePresenter(ArticleProvider provider) {
-//        this.provider = provider;
-//    }
 
-//    public ConsoleArticlePresenter(ArticleProvider provider, String data) {
-//        this.data = data;
-//        this.provider = provider;
-//    }
+    //    @Inject
+    @Autowired
+    public ConsoleArticlePresenter(@Qualifier("alternative_provider") ArticleProvider provider) {
+        this.provider = provider;
+    }
+
+    public ConsoleArticlePresenter(ArticleProvider provider, String data) {
+        this.data = data;
+        this.provider = provider;
+    }
 
     @Override
     public void present() {
-        if(provider != null) {
+        if (provider != null) {
+
             provider.getArticles().forEach(System.out::println);
         }
     }
 
-    @Override
+    //    @Override
     public ArticleProvider getArticleProvider() {
         return provider;
     }

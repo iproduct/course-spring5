@@ -7,16 +7,8 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:annotation-config />
-    <bean id="obj" class="com.ch02.beans.Demo_Custom_Init" init-method="myInit" destroy-method="destroy">
-    </bean>
-
-    <bean id="obj_Initializing" class="com.ch02.beans.Demo_InitializingBean"/>
-     
-    <bean id="obj_Disposable" class="com.ch02.beans.Demo_DisposableBean"/>
-      
-    <bean id="obj_myBean" class="com.ch02.contextAware.MyBean"/>
-
-    <bean id="beanPostProcessor" class="com.ch02.processor.Demo_BeanPostProcessor"/>  
-      
+    <context:annotation-config/>
+    <context:component-scan base-package="com.ch02.*"></context:component-scan>
+	
+	
 </beans>

@@ -1,21 +1,21 @@
 import org.springframework.context.ApplicationContext;
-
-import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.ch02.beans.Car_JSR;
+import com.ch02.beans.Car;
 
 
 public class TestCar {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ApplicationContext context=new ClassPathXmlApplicationContext("beans_new.xml");
+		ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
 		// first request to get the car instance
-		Car_JSR car_one=(Car_JSR)context.getBean("car");
+		Car car_one=(Car)context.getBean("car");
         car_one.show();
-		((AbstractApplicationContext)context).registerShutdownHook();
+        
+        //second request to get the car instance
+        Car car_two=(Car)context.getBean("car");
+        car_two.show();
 	}
 
-	
 }
