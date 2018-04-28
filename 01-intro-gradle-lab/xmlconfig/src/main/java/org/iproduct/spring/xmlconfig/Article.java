@@ -1,12 +1,22 @@
 package org.iproduct.spring.xmlconfig;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
 class Article {
+    private static int next = 1;
+
     private String title;
     private String content;
     private LocalDateTime createdDate;
+    private Author author;
+
+    @Value("${articles.title1}") String title1;
+    @Value("${articles.content1}") String content1;
 
     public Article() {
     }
@@ -21,6 +31,12 @@ class Article {
         this.title = title;
         this.content = content;
         this.createdDate = createdDate;
+    }
+
+    @PostConstruct
+    private void init() {
+        title = title1 + next++;
+        content = content1;
     }
 
     public String getTitle() {
@@ -47,6 +63,14 @@ class Article {
         this.createdDate = createdDate;
     }
 
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -66,6 +90,7 @@ class Article {
         sb.append("title='").append(title).append('\'');
         sb.append(", content='").append(content).append('\'');
         sb.append(", createdDate=").append(createdDate);
+        sb.append(", author=").append(author);
         sb.append('}');
         return sb.toString();
     }
