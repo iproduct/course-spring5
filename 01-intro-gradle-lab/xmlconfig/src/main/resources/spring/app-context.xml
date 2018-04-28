@@ -9,14 +9,14 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
     <!--<bean id="provider" class="org.iproduct.spring.xmlconfig.MockArticleProvider"/>-->
-    <bean id="articleProvider" factory-method="createInstance"
+    <bean id="provider" factory-method="createInstance"
           class="org.iproduct.spring.xmlconfig.MockArticleProvider" autowire-candidate="true"/>
     <!--<bean id="presenterFactory" name="presenterFactory" class="org.iproduct.spring.xmlconfig.ArticlePresenterFactory"-->
           <!--c:provider-ref="provider"/>-->
     <!--<bean id="presenter" name="presenter"  factory-bean="presenterFactory" factory-method="createPresenter" />-->
     <bean id="presenter" name="presenter"
           class="org.iproduct.spring.xmlconfig.ConsoleArticlePresenter"
-          autowire="byName"/>
+          autowire="byType"/>
           <!--p:articleProvider-ref="articleProvider" />-->
           <!--c:provider-ref="provider" />-->
 
@@ -33,7 +33,7 @@
     </context:component-scan>-->
     <bean id="mappings"
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <!-- typed as a java.util.Properties -->
+         <!--typed as a java.util.Properties-->
         <property name="properties">
             <value>
                 articles.title1=Welcome to Spring 5

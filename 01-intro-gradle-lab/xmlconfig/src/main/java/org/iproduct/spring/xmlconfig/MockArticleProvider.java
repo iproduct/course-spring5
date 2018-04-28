@@ -17,8 +17,8 @@ public class MockArticleProvider implements ArticleProvider{
     @Autowired
     ApplicationContext ctx;
 
-//    @Value("${articles.title1}") String title1;
-//    @Value("${articles.content1}") String content1;
+    @Value("${articles.title1}") String title1;
+    @Value("${articles.content1}") String content1;
 
     @Override
     public List<Article> getArticles() {
