@@ -13,7 +13,7 @@ public class GreetingController {
     @Autowired
     private ArticleProvider provider;
 
-    @GetMapping("/greeting")
+    @GetMapping("/articles")
     public String greeting(@RequestParam(name="name", required=false, defaultValue="Stranger") String name, Model model) {
         model.addAttribute("articles", provider.getArticles());
 

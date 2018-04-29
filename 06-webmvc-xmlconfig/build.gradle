@@ -37,6 +37,6 @@ dependencies {
 // It will cause "No Spring WebApplicationInitializer types detected on classpath"
 gretty {
     httpPort = 8080
-    contextPath = 'spring5'
+    contextPath = 'mvc'
     servletContainer = 'jetty9' //tomcat7 or tomcat8
 }
