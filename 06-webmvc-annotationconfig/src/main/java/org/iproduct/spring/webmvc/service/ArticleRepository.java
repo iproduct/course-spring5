@@ -4,6 +4,7 @@ import org.iproduct.spring.webmvc.model.Article;
 
 import java.util.List;
 
-public interface ArticleProvider {
-    List<Article> getArticles();
+public interface ArticleRepository {
+    List<Article> findAll();
+    void create(Article article);
 }

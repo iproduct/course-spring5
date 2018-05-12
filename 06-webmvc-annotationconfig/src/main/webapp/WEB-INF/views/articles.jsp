@@ -73,6 +73,10 @@
 
 		</div>
 
+		<div class="buttons">
+		    <a class="btn btn-primary" href="new-article">Add New Article</a>
+		</div>
+
 	</div>
 
     <c:url value="/webjars/jquery/3.1.1/jquery.min.js" var="jquery" />
