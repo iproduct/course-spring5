@@ -2,6 +2,7 @@ package org.iproduct.spring.webmvc.web;
 
 import org.iproduct.spring.webmvc.exceptions.CustomValidationException;
 import org.iproduct.spring.webmvc.model.Article;
+import org.iproduct.spring.webmvc.model.ArticlesSelection;
 import org.iproduct.spring.webmvc.service.ArticleRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,14 +16,17 @@ import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 import java.nio.file.FileSystemException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 @Controller
+@SessionAttributes({"selection"})
 public class ArticleConroller {
 
     @Autowired
@@ -35,6 +39,11 @@ public class ArticleConroller {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
         dateFormat.setLenient(true);
         binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, false));
+    }
+
+    @ModelAttribute("selection")
+    ArticlesSelection getArticleModelAttribute() {
+        return new ArticlesSelection();
     }
 
     @GetMapping("/")
@@ -52,18 +61,36 @@ public class ArticleConroller {
     }
 
     @GetMapping("/new-article")
-    public ModelAndView showForm() {
-        return new ModelAndView("articleForm", "article", new Article());
+    public String showForm() {
+//        return new ModelAndView("articleForm", "article", new Article());
+        return "articleForm";
     }
 
     @PostMapping(value = "/submit-article")
     public String addArticle(@Valid @ModelAttribute("article") Article article,
-            BindingResult result, ModelMap model) {
+                             BindingResult result, ModelMap model) {
         if (result.hasErrors()) {
             return "articleForm";
         }
         repository.create(article);
         return "redirect:articles";
+    }
+
+    @PostMapping(value = "/select-articles")
+    public String addArticle(@ModelAttribute("selection") ArticlesSelection selection,
+                             BindingResult result, ModelMap model,
+                             SessionStatus session,
+                             @RequestParam(value="clear", required = false) String clear) {
+        if (result.hasErrors()) {
+            return "articles";
+        }
+        if(clear != null) {
+            session.setComplete();
+            selection.setArticleIds(new ArrayList<>());
+        }
+        System.out.println("Selection:" + selection);
+        model.addAttribute("articles", repository.findAll());
+        return "articles";
     }
 
     @ExceptionHandler ({CustomValidationException.class, FileSystemException.class})

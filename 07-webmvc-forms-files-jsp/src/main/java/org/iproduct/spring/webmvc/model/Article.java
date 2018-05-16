@@ -12,6 +12,9 @@ import java.util.Objects;
 
 public class Article {
     @NotNull
+    private long id = System.nanoTime();
+
+    @NotNull
     @Length(min = 2, max = 40)
     private String title;
 
@@ -36,6 +39,14 @@ public class Article {
         this.title = title;
         this.content = content;
         this.createdDate = new Date();
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -78,7 +89,8 @@ public class Article {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Article{");
-        sb.append("title='").append(title).append('\'');
+        sb.append("id=").append(id);
+        sb.append(", title='").append(title).append('\'');
         sb.append(", content='").append(content).append('\'');
         sb.append(", createdDate=").append(createdDate);
         sb.append('}');

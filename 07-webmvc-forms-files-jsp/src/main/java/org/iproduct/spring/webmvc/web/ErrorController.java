@@ -12,8 +12,8 @@ import java.util.Map;
 public class ErrorController {
 
     @RequestMapping(path = "/error")
-    public Map<String, Object> handle(HttpServletRequest request) {
-        Map<String, Object> map = new HashMap<String, Object>();
+    public Map<String, String> handle(HttpServletRequest request) {
+        Map<String, String> map = new HashMap<>();
         Enumeration<String> anames = request.getAttributeNames();
         while(anames.hasMoreElements()){
             String aname = anames.nextElement();
