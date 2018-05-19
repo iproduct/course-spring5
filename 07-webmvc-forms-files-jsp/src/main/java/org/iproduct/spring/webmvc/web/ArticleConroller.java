@@ -13,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.util.FileCopyUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
@@ -22,9 +23,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.FileSystemException;
+import java.nio.file.Files;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -77,10 +80,13 @@ public class ArticleConroller {
 
     @PostMapping(value = "/submit-article")
     public String addArticle(@Valid @ModelAttribute("article") Article article,
-                             BindingResult result, ModelMap model) {
+                             BindingResult result, ModelMap model,
+                             @RequestParam("file") MultipartFile file) {
         if (result.hasErrors()) {
             return "articleForm";
         }
+        String path = handleMultipartFile(file);
+        article.setPictureUrl(path);
         repository.create(article);
         return "redirect:articles";
     }
@@ -106,23 +112,27 @@ public class ArticleConroller {
     public String submit(@RequestParam("files") MultipartFile[] files, ModelMap modelMap) {
         modelMap.addAttribute("files", files);
         for(MultipartFile file: files) {
-            String name = file.getOriginalFilename();
-            long size = file.getSize();
-            System.out.println("File: " + name + ", Size: " + size);
-//            try {
-//                File currentDir = new File(".");
-//                String path = currentDir.getAbsolutePath() + "/" +file.getOriginalFilename();
-//                System.out.println(path);
-//                File f = new File(path);
-//                file.transferTo(f);
-//            } catch (IOException ex) {
-//                ex.printStackTrace();
-//            }
-
+            handleMultipartFile(file);
         }
         return "fileUploadView";
     }
 
+    private String handleMultipartFile(MultipartFile file) {
+        String name = file.getOriginalFilename();
+        long size = file.getSize();
+        System.out.println("File: " + name + ", Size: " + size);
+        try {
+            File currentDir = new File("tmp");
+            String path = currentDir.getAbsolutePath() + "/" + file.getOriginalFilename();
+            System.out.println(path);
+            File f = new File(path);
+            FileCopyUtils.copy(file.getInputStream(), new FileOutputStream(f));
+            return path;
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return null;
+    }
 
 
     @ExceptionHandler ({CustomValidationException.class, FileSystemException.class})

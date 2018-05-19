@@ -12,10 +12,12 @@
     <table class="table table-striped table-hover">
         <thead>
         <tr>
+            <th> </th>
             <th><spring:message code="lbl.number" /></th>
             <th><spring:message code="lbl.title" /></th>
             <th><spring:message code="lbl.content" /></th>
             <th><spring:message code="lbl.date" /></th>
+            <th><spring:message code="lbl.picture" /></th>
         </tr>
         </thead>
         <tbody>
@@ -28,6 +30,8 @@
                 <td>${article.title}</td>
                 <td>${article.content}</td>
                 <td><fmt:formatDate pattern="dd.MM.yyyy" value="${article.createdDate}" /></td>
+                <td>${article.pictureUrl}</td>
+
             </tr>
         </c:forEach>
         </tbody>

@@ -26,6 +26,8 @@ public class Article {
     @PastOrPresent
     private Date createdDate;
 
+    private String pictureUrl;
+
     public Article() {
     }
 
@@ -73,6 +75,14 @@ public class Article {
         this.createdDate = createdDate;
     }
 
+    public String getPictureUrl() {
+        return pictureUrl;
+    }
+
+    public void setPictureUrl(String pictureUrl) {
+        this.pictureUrl = pictureUrl;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -93,6 +103,7 @@ public class Article {
         sb.append(", title='").append(title).append('\'');
         sb.append(", content='").append(content).append('\'');
         sb.append(", createdDate=").append(createdDate);
+        sb.append(", pictureUrl='").append(pictureUrl).append('\'');
         sb.append('}');
         return sb.toString();
     }
