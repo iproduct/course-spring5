@@ -30,8 +30,10 @@
                 <td>${article.title}</td>
                 <td>${article.content}</td>
                 <td><fmt:formatDate pattern="dd.MM.yyyy" value="${article.createdDate}" /></td>
-                <td>${article.pictureUrl}</td>
-
+                <td>
+                <c:if test = "${article.pictureUrl != null}">
+                    <img class="img-thumbnail" src="${pageContext.request.contextPath}/uploads/${article.pictureUrl}" /></td>
+                </c:if>
             </tr>
         </c:forEach>
         </tbody>

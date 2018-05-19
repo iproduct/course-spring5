@@ -33,6 +33,8 @@ public class SpringWebConfig implements WebMvcConfigurer {
                 .addResourceLocations("/resources/");
         registry.addResourceHandler("/webjars/**")
                 .addResourceLocations("/webjars/");
+        registry.addResourceHandler("/uploads/**")
+                .addResourceLocations("file:tmp/");
     }
 
     @Bean

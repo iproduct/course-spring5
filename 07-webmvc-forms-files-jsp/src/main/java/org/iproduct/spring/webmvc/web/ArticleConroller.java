@@ -36,6 +36,8 @@ import java.util.Date;
 @SessionAttributes({"selection"})
 public class ArticleConroller {
 
+    private static final String UPLOADS_DIR = "tmp";
+
     @Autowired
     private ArticleRepository repository;
 
@@ -85,8 +87,8 @@ public class ArticleConroller {
         if (result.hasErrors()) {
             return "articleForm";
         }
-        String path = handleMultipartFile(file);
-        article.setPictureUrl(path);
+        handleMultipartFile(file);
+        article.setPictureUrl(file.getOriginalFilename());
         repository.create(article);
         return "redirect:articles";
     }
@@ -117,21 +119,20 @@ public class ArticleConroller {
         return "fileUploadView";
     }
 
-    private String handleMultipartFile(MultipartFile file) {
+    private void handleMultipartFile(MultipartFile file) {
         String name = file.getOriginalFilename();
         long size = file.getSize();
         System.out.println("File: " + name + ", Size: " + size);
         try {
-            File currentDir = new File("tmp");
+            File currentDir = new File(UPLOADS_DIR);
             String path = currentDir.getAbsolutePath() + "/" + file.getOriginalFilename();
+            path = new File(path).getAbsolutePath();
             System.out.println(path);
             File f = new File(path);
             FileCopyUtils.copy(file.getInputStream(), new FileOutputStream(f));
-            return path;
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-        return null;
     }
 
 
