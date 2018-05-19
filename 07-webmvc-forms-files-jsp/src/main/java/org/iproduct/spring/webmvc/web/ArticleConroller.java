@@ -17,9 +17,13 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.FileSystemException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -61,9 +65,14 @@ public class ArticleConroller {
     }
 
     @GetMapping("/new-article")
-    public String showForm() {
+    public String showArticleForm() {
 //        return new ModelAndView("articleForm", "article", new Article());
         return "articleForm";
+    }
+
+    @GetMapping("/files")
+    public String showFilesForm() {
+        return "fileUploadForm";
     }
 
     @PostMapping(value = "/submit-article")
@@ -92,6 +101,29 @@ public class ArticleConroller {
         model.addAttribute("articles", repository.findAll());
         return "articles";
     }
+
+    @RequestMapping(value = "/uploadFiles", method = RequestMethod.POST)
+    public String submit(@RequestParam("files") MultipartFile[] files, ModelMap modelMap) {
+        modelMap.addAttribute("files", files);
+        for(MultipartFile file: files) {
+            String name = file.getOriginalFilename();
+            long size = file.getSize();
+            System.out.println("File: " + name + ", Size: " + size);
+//            try {
+//                File currentDir = new File(".");
+//                String path = currentDir.getAbsolutePath() + "/" +file.getOriginalFilename();
+//                System.out.println(path);
+//                File f = new File(path);
+//                file.transferTo(f);
+//            } catch (IOException ex) {
+//                ex.printStackTrace();
+//            }
+
+        }
+        return "fileUploadView";
+    }
+
+
 
     @ExceptionHandler ({CustomValidationException.class, FileSystemException.class})
     @Order(1)
