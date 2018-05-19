@@ -87,8 +87,11 @@ public class ArticleConroller {
         if (result.hasErrors()) {
             return "articleForm";
         }
-        handleMultipartFile(file);
-        article.setPictureUrl(file.getOriginalFilename());
+
+        if(!file.isEmpty() && file.getOriginalFilename().length() > 0) {
+            handleMultipartFile(file);
+            article.setPictureUrl(file.getOriginalFilename());
+        }
         repository.create(article);
         return "redirect:articles";
     }
@@ -125,6 +128,9 @@ public class ArticleConroller {
         System.out.println("File: " + name + ", Size: " + size);
         try {
             File currentDir = new File(UPLOADS_DIR);
+            if(!currentDir.exists()) {
+                currentDir.mkdirs();
+            }
             String path = currentDir.getAbsolutePath() + "/" + file.getOriginalFilename();
             path = new File(path).getAbsolutePath();
             System.out.println(path);
