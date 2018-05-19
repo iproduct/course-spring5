@@ -1,4 +1,4 @@
-	<nav class="navbar navbar-inverse">
+	<nav class="navbar navbar-inverse navbar-dark bg-dark">
 		<div class="container">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#">Spring Boot</a>

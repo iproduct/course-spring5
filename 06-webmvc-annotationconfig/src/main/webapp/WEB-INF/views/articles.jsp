@@ -65,7 +65,7 @@
                         <td>${status.index}</td>
                         <td>${article.title}</td>
                         <td>${article.content}</td>
-                        <td><fmt:formatDate pattern="dd.MM.yyyy - HH:mm:ss" value="${article.createdDate}" /></td>
+                        <td><fmt:formatDate pattern="dd.MM.yyyy" value="${article.createdDate}" /></td>
                     </tr>
                 </c:forEach>
                 </tbody>

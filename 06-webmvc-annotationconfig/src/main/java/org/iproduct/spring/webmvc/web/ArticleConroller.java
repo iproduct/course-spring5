@@ -23,7 +23,7 @@ public class ArticleConroller {
 
     @InitBinder
     public void initBinder(WebDataBinder binder) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
         dateFormat.setLenient(true);
         binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, false));
     }
@@ -50,10 +50,9 @@ public class ArticleConroller {
     }
 
     @PostMapping(value = "/submit-article")
-    public String addArticle(@ModelAttribute("article") Article article,
-            BindingResult result, ModelMap model) {
+    public String addArticle(@ModelAttribute("article") Article article, BindingResult result) {
         if (result.hasErrors()) {
-            return "error";
+            return "articleForm";
         }
         repository.create(article);
         return "redirect:articles";
