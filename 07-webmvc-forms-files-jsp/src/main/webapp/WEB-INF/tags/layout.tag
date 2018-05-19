@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <title>${title}</title>
+    <meta charset="UTF-8" />
     <jsp:include page="/WEB-INF/views/head.jspf"/>
 </head>
 <body>

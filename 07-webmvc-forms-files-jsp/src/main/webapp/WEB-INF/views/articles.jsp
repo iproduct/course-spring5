@@ -12,10 +12,10 @@
     <table class="table table-striped table-hover">
         <thead>
         <tr>
-            <th>Number</th>
-            <th>Title</th>
-            <th>Content</th>
-            <th>Date</th>
+            <th><spring:message code="lbl.number" /></th>
+            <th><spring:message code="lbl.title" /></th>
+            <th><spring:message code="lbl.content" /></th>
+            <th><spring:message code="lbl.date" /></th>
         </tr>
         </thead>
         <tbody>
@@ -35,9 +35,9 @@
     <form:errors path="*" class="errors well bg-danger col-sm-12"/>
 
     <div class="col-sm-offset-1 col-sm-11">
-        <button type="submit" class="btn btn-default">Select Articles</button>
+        <button type="submit" class="btn btn-default"><spring:message code="lbl.select" /></button>
         <input type="submit" name="clear" class="btn btn-danger" value="Clear">
-        <a class="btn btn-primary" href="new-article">Add New Article</a>
+        <a class="btn btn-primary" href="new-article"><spring:message code="lbl.add" /></a>
     </div>
     </form:form>
 
