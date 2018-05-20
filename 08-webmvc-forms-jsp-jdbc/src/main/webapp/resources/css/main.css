@@ -1,0 +1,19 @@
+body, input[text], button {
+  color: #888;
+  font-family: Cambria, Georgia;
+}
+
+h3 {
+    margin-bottom: 1em;
+}
+
+.errors {
+    display: block;
+    padding: 1em 2em;
+    background: #fee;
+    color: red;
+}
+
+.btn {
+    margin-top: 10px;
+}
