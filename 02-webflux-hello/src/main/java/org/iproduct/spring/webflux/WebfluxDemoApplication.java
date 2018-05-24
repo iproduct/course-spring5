@@ -1,6 +1,6 @@
-package org.iproduct.spring.webfluxdemo;
+package org.iproduct.spring.webflux;
 
-import org.iproduct.spring.webfluxdemo.reactive.ReactiveHello;
+import org.iproduct.spring.webflux.reactive.ReactiveHello;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;

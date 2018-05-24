@@ -1,4 +1,4 @@
-package org.iproduct.spring.webfluxdemo;
+package org.iproduct.spring.webflux;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

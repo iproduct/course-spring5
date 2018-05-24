@@ -1,4 +1,4 @@
-package org.iproduct.spring.webfluxdemo.hello;
+package org.iproduct.spring.webflux.hello;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
