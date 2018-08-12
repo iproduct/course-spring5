@@ -23,7 +23,7 @@ class ArticleHandler {
     public Mono<ServerResponse> create(ServerRequest req) {
         return req.bodyToMono(Article.class)
                 .flatMap(article -> this.repository.save(article))
-                .flatMap(p -> ServerResponse.created(URI.create("/repository/" + p.getId())).build());
+                .flatMap(p -> ServerResponse.created(URI.create("/articles/" + p.getId())).build());
     }
 
     public Mono<ServerResponse> get(ServerRequest req) {

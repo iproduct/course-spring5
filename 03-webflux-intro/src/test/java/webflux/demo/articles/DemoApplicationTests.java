@@ -40,7 +40,7 @@ public class DemoApplicationTests {
     }
 
     @Test
-    public void getAllPostsShouldBeOkWithAuthetication() {
+    public void getAllPostsShouldBeOkWithoutAuthetication() {
         client
                 .get()
                 .uri("/articles/")
@@ -78,6 +78,16 @@ public class DemoApplicationTests {
     }
 
     @Test
+    public void deletePostsAllowedWhenAdmin() {
+        client
+                .mutate().filter(basicAuthentication("admin", "admin")).build()
+                .delete()
+                .uri("/articles/1")
+                .exchange()
+                .expectStatus().isEqualTo(HttpStatus.NO_CONTENT);
+    }
+
+    @Test
     public void postCrudOperations() {
         int randomInt = new Random().nextInt();
         String title = "Article test " + randomInt;
@@ -94,6 +104,7 @@ public class DemoApplicationTests {
         assertNotNull(location);
 
         EntityExchangeResult<byte[]> getResult = client
+                .mutate().filter(basicAuthentication("admin", "admin")).build()
                 .get()
                 .uri(location)
                 .exchange()

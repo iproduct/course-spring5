@@ -30,7 +30,7 @@ public class ConsoleArticlePresenter implements ArticlePresenter {
     public void present() {
         if(providers != null) {
 
-            providers.stream().map(p -> p.getArticles()).forEach(System.out::println);
+            providers.stream().flatMap(p -> p.getArticles().stream()).forEach(System.out::println);
         }
     }
 
