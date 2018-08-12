@@ -25,11 +25,11 @@ public class WebfluxUsersApplication {
     public RouterFunction<ServerResponse> routes(UserHandler userHandler) {
         return RouterFunctions.nest(RequestPredicates.path("/api/users"),
                 RouterFunctions
-                        .route(GET(""), userHandler::findAllUsers)
-                        .andRoute(GET("/{id}"), userHandler::findUser)
-                        .andRoute(POST("").and(contentType(APPLICATION_JSON)), userHandler::createUser)
-                        .andRoute(PUT("/{id}").and(contentType(APPLICATION_JSON)), userHandler::editUser)
-                        .andRoute(DELETE("/{id}"), userHandler::deleteUser)
+                    .route(GET(""), userHandler::findAllUsers)
+                    .andRoute(GET("/{id}"), userHandler::findUser)
+                    .andRoute(POST("").and(contentType(APPLICATION_JSON)), userHandler::createUser)
+                    .andRoute(PUT("/{id}").and(contentType(APPLICATION_JSON)), userHandler::editUser)
+                    .andRoute(DELETE("/{id}"), userHandler::deleteUser)
         );
     }
 

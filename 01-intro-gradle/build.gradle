@@ -3,7 +3,7 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'application'
-mainClassName = 'org.iproduct.spring.demo.xmlconfig.HelloWorldSpringDI'
+mainClassName = 'org.iproduct.spring.demo.beanconfig.HelloWorldSpringDI'
 
 apply plugin: 'idea'
 idea {
@@ -16,11 +16,10 @@ sourceCompatibility = 1.8
 
 task runApp(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
-    main = 'org.iproduct.spring.demo.xmlconfig.HelloWorldSpringDI'
+    main = 'org.iproduct.spring.demo.beanconfig.HelloWorldSpringDI'
 }
 
 repositories {
-    mavenLocal()
     mavenCentral()
     maven { url "https://repo.spring.io/snapshot" }
     maven { url "https://repo.spring.io/milestone" }

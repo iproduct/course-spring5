@@ -4,6 +4,8 @@ package org.iproduct.spring.xmlconfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.inject.Inject;
+
 @Service("presenter")
 public class ConsoleArticlePresenter implements ArticlePresenter {
     private ArticleProvider provider;
@@ -17,7 +19,10 @@ public class ConsoleArticlePresenter implements ArticlePresenter {
     public void present() {
         if(provider != null) {
             provider.getArticles().forEach(System.out::println);
+        } else {
+            throw new NullPointerException("Provider should not be null!");
         }
+
     }
 
     @Override
@@ -26,7 +31,7 @@ public class ConsoleArticlePresenter implements ArticlePresenter {
     }
 
     @Override
-//    @Autowired //@Inject //@Resource
+//    @Autowired // @Inject //@Resource
     public void setArticleProvider(ArticleProvider provider) {
         this.provider = provider;
     }
