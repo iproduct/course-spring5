@@ -14,10 +14,10 @@ idea {
 
 sourceCompatibility = 1.8
 
-task runApp(type: JavaExec) {
-    classpath = sourceSets.main.runtimeClasspath
-    main = 'org.iproduct.spring.demo.beanconfig.HelloWorldSpringDI'
-}
+//task runApp(type: JavaExec) {
+//    classpath = sourceSets.main.runtimeClasspath
+//    main = 'org.iproduct.spring.demo.beanconfig.HelloWorldSpringDI'
+//}
 
 repositories {
     mavenCentral()

@@ -17,14 +17,14 @@ public class ConsoleArticlePresenter implements ArticlePresenter {
 
     //    @Inject
     @Autowired
-    public ConsoleArticlePresenter(@Qualifier("alternative_provider") ArticleProvider provider) {
+    public ConsoleArticlePresenter(@Qualifier("provider") ArticleProvider provider) {
         this.provider = provider;
     }
 
-    public ConsoleArticlePresenter(ArticleProvider provider, String data) {
-        this.data = data;
-        this.provider = provider;
-    }
+//    public ConsoleArticlePresenter(ArticleProvider provider, String data) {
+//        this.data = data;
+//        this.provider = provider;
+//    }
 
     @Override
     public void present() {
@@ -40,8 +40,9 @@ public class ConsoleArticlePresenter implements ArticlePresenter {
     }
 
     @Override
-//    @Resource(name="provider")
+//    @Resource(name="alternative_provider")
 //    @Autowired
+//    @MockProvider
 //    @Inject
 //    @AlternativeProvider
     public void setArticleProvider(ArticleProvider provider) {

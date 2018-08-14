@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @MockProvider
-@Component
+@Component("provider")
 public class MockArticleProvider implements ArticleProvider{
 
     @Override

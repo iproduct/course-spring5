@@ -7,6 +7,8 @@ import java.util.List;
 
 public class MockArticleProvider implements ArticleProvider{
     private String[] articleTitles;
+    public MockArticleProvider(){
+    }
 
     public MockArticleProvider(String[] articleTitles){
         this.articleTitles = articleTitles;
