@@ -40,7 +40,7 @@ public class ConsoleArticlePresenter implements ArticlePresenter {
 
     @Override
 //    @Resource(name="alternative_provider")
-//    @Autowired
+    @Autowired
 //    @MockProvider
 //    @Inject
 //    @AlternativeProvider
