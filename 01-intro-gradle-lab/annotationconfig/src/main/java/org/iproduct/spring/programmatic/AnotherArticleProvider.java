@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @AlternativeProvider
-@Component("alternative_provider")
+@Component("alternativeProvider")
 @PropertySource("articles.properties")
 public class AnotherArticleProvider implements ArticleProvider {
 

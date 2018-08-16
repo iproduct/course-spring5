@@ -17,15 +17,16 @@
           <!--c:provider-ref="provider"/>-->
     <!--<bean id="presenter" name="presenter"  factory-bean="presenterFactory" factory-method="createPresenter" />-->
     <bean id="presenter" name="presenter"
-          class="org.iproduct.spring.xmlconfig.ConsoleArticlePresenter"
-          autowire="byType"/>
-          <!--p:articleProvider-ref="articleProvider" />-->
+          class="org.iproduct.spring.xmlconfig.ConsoleArticlePresenter">
           <!--c:provider-ref="provider" />-->
+            <!--autowire="byType"/>-->
+          <!--p:articleProvider-ref="articleProvider" />-->
 
-        <!--<constructor-arg type="ArticleProvider" index="0" name="provider" >-->
-            <!--<ref bean="provider" />-->
-        <!--</constructor-arg>-->
-    <!--</bean>-->
+
+        <constructor-arg index="0" name="provider" >
+            <ref bean="provider" />
+        </constructor-arg>
+    </bean>
     <context:component-scan base-package="org.iproduct.spring.xmlconfig"/>
     <!--<context:component-scan base-package="org.example">
         <context:include-filter type="regex"
@@ -46,11 +47,11 @@
     <bean id="article" class="org.iproduct.spring.xmlconfig.Article" scope="prototype">
         <!-- instead of using a reference to a target bean, simply define the target bean inline -->
         <property name="author">
-            <ref bean="author" />
-            <!--<bean class="org.iproduct.spring.xmlconfig.Author"> &lt;!&ndash; this is the inner bean &ndash;&gt;-->
-                <!--<property name="name" value="Fiona Apple"/>-->
-                <!--<property name="age" value="25"/>-->
-            <!--</bean>-->
+            <!--<ref bean="author" />-->
+            <bean class="org.iproduct.spring.xmlconfig.Author"> <!-- this is the inner bean -->
+                <property name="name" value="Fiona Apple"/>
+                <property name="age" value="25"/>
+            </bean>
         </property>
     </bean>
     <bean id="parent" abstract="true" class="org.iproduct.spring.xmlconfig.Author">

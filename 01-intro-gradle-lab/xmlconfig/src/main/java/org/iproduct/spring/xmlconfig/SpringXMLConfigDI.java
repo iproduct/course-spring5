@@ -2,6 +2,7 @@ package org.iproduct.spring.xmlconfig;
 
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class SpringXMLConfigDI {
@@ -10,5 +11,6 @@ public class SpringXMLConfigDI {
                 "spring/app-context.xml");
         ArticlePresenter presenter = ctx.getBean("presenter", ArticlePresenter.class);
         presenter.present();
+        ((AbstractApplicationContext)ctx).registerShutdownHook();
     }
 }

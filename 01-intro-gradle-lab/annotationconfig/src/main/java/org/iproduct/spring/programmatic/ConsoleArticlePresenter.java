@@ -15,10 +15,9 @@ public class ConsoleArticlePresenter implements ArticlePresenter {
     private String data;
 
 
-    //    @Inject
-    @Autowired
-    public ConsoleArticlePresenter(@Qualifier("provider") ArticleProvider provider) {
-        this.provider = provider;
+        @Inject
+    public ConsoleArticlePresenter(@Qualifier("provider") ArticleProvider myprovider) {
+        this.provider = myprovider;
     }
 
 //    public ConsoleArticlePresenter(ArticleProvider provider, String data) {

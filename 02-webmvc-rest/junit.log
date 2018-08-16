@@ -1,0 +1,25 @@
+4581 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Refreshing Root WebApplicationContext: startup date [Wed Aug 15 23:11:37 EEST 2018]; root of context hierarchy
+4620 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Registering annotated classes: [class org.iproduct.spring.webmvc.config.SpringRootConfig]
+5282 INFO  org.mongodb.driver.cluster: Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+5319 INFO  org.mongodb.driver.connection: Opened connection [connectionId{localValue:1, serverValue:88}] to 127.0.0.1:27017
+5321 INFO  org.mongodb.driver.cluster: Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 5]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=1557607}
+5541 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Refreshing Root WebApplicationContext: startup date [Wed Aug 15 23:11:38 EEST 2018]; parent: Root WebApplicationContext
+5542 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Registering annotated classes: [class org.iproduct.spring.webmvc.config.SpringWebConfig]
+6288 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/api/articles],methods=[GET]}" onto public java.util.List<org.iproduct.spring.webmvc.model.Article> org.iproduct.spring.webmvc.web.ArticleController.getArticles()
+6294 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+6295 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+6295 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+6414 INFO  o.s.w.s.h.SimpleUrlHandlerMapping: Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+6414 INFO  o.s.w.s.h.SimpleUrlHandlerMapping: Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+6565 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter: Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Wed Aug 15 23:11:38 EEST 2018]; parent: Root WebApplicationContext
+6675 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping: Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+6694 INFO  o.s.c.s.DefaultLifecycleProcessor: Starting beans in phase 2147483647
+6695 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper: Context refreshed
+6712 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper: Found 1 custom documentation plugin(s)
+6723 INFO  s.d.s.w.s.ApiListingReferenceScanner: Scanning for api listing references
+6799 INFO  o.s.web.context.ContextLoader: Root WebApplicationContext: initialization started
+6800 INFO  o.s.web.context.ContextLoader: Root WebApplicationContext: initialization completed in 0 ms
+6803 INFO  o.s.web.servlet.DispatcherServlet: FrameworkServlet 'dispatcher': initialization started
+6820 INFO  o.s.web.servlet.DispatcherServlet: FrameworkServlet 'dispatcher': initialization completed in 16 ms
+6869 INFO  o.i.spring.webmvc.Application: Server started: Connector[HTTP/1.1-8080]
+8673 INFO  org.mongodb.driver.connection: Opened connection [connectionId{localValue:2, serverValue:89}] to 127.0.0.1:27017

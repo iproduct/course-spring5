@@ -35,8 +35,8 @@ class Article {
 
     @PostConstruct
     private void init() {
-        title = title1 + next++;
-        content = content1;
+            title = title1 + next++;
+            content = content1;
     }
 
     public String getTitle() {
