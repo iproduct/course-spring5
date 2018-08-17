@@ -33,13 +33,15 @@ public class MockArticleProvider implements ArticleProvider, InitializingBean, D
         );
     }
 
-    @Override
-    public void destroy() throws Exception {
-        System.out.println("MockArticleProvider to be destroyed");
-    }
 
     @Override
     public void afterPropertiesSet() throws Exception {
         System.out.println("MockArticleProvider initialized");
     }
+
+    @Override
+    public void destroy() throws Exception {
+        System.out.println("MockArticleProvider to be destroyed");
+    }
+
 }
