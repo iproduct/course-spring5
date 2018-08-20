@@ -2,6 +2,8 @@ package org.iproduct.spring.webmvc.initializer;
 
 import org.iproduct.spring.webmvc.config.SpringRootConfig;
 import org.iproduct.spring.webmvc.config.SpringWebConfig;
+import org.iproduct.spring.webmvc.config.WebSecurityConfig;
+import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
@@ -13,8 +15,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletRegistration;
 
 
-//public class ArticlesWebInitializer extends
-//        AbstractAnnotationConfigDispatcherServletInitializer {
+//public class ArticlesWebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 //
 //    private static final String LOCATION = "c:/temp/"; // Temporary location where files will be stored
 //
@@ -26,7 +27,7 @@ import javax.servlet.ServletRegistration;
 //
 //    @Override
 //    protected Class<?>[] getRootConfigClasses() {
-//        return new Class<?>[] { SpringRootConfig.class };
+//        return new Class<?>[] { WebSecurityConfig.class, SpringRootConfig.class,  };
 //    }
 //
 //    @Override

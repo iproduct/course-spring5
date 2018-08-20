@@ -2,6 +2,7 @@ package org.iproduct.spring.webmvc.service;
 
 import org.iproduct.spring.webmvc.model.Article;
 import org.iproduct.spring.webmvc.service.ArticleProvider;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;

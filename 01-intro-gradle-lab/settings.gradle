@@ -1,4 +1,5 @@
 rootProject.name = 'intro-gradle-lab'
 include 'xmlconfig'
 include 'annotationconfig'
+include 'circular_dependency'
 

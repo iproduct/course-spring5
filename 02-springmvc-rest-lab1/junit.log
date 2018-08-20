@@ -1,0 +1,9 @@
+4190 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Refreshing Root WebApplicationContext: startup date [Mon Aug 20 12:09:18 EEST 2018]; root of context hierarchy
+4228 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Registering annotated classes: [class org.iproduct.spring.webmvc.config.SpringRootConfig]
+4414 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Refreshing Root WebApplicationContext: startup date [Mon Aug 20 12:09:18 EEST 2018]; parent: Root WebApplicationContext
+4415 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Registering annotated classes: [class org.iproduct.spring.webmvc.config.SpringWebConfig]
+4645 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/api/articles],methods=[GET]}" onto public java.util.List<org.iproduct.spring.webmvc.model.Article> org.iproduct.spring.webmvc.web.ArticleController.getArticles()
+4788 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter: Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Mon Aug 20 12:09:18 EEST 2018]; parent: Root WebApplicationContext
+4834 INFO  o.s.web.servlet.DispatcherServlet: FrameworkServlet 'dispatcher': initialization started
+4849 INFO  o.s.web.servlet.DispatcherServlet: FrameworkServlet 'dispatcher': initialization completed in 15 ms
+4892 INFO  o.i.spring.webmvc.Application: Server started: Connector[HTTP/1.1-9000]

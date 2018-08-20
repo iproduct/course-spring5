@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
 
-@Document(collection="articles")
+//@Document(collection="articles")
 @Data
 @Builder
 @NoArgsConstructor
@@ -19,6 +19,6 @@ public class Article {
     private String content;
     @Builder.Default
 //    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm")
+//    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm")
     private LocalDateTime createdDate = LocalDateTime.now();
 }

@@ -24,7 +24,7 @@ import java.util.Locale;
 @EnableWebMvc
 @Configuration
 @ComponentScan("org.iproduct.spring.webmvc.web")
-@Import(SwaggerConfig.class)
+@Import({ SwaggerConfig.class  })
 public class SpringWebConfig implements WebMvcConfigurer {
 
     @Override

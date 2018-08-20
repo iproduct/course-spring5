@@ -1,0 +1,40 @@
+group 'org.iproduct.spring'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+mainClassName = 'org.iproduct.spring.programmatic.SpringAnnotationsDI'
+
+apply plugin: 'idea'
+idea {
+    module {
+        downloadJavadoc = true
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url "https://repo.spring.io/release" }
+    maven { url "https://repo.spring.io/milestone" }
+}
+
+dependencies {
+    compile 'org.springframework:spring-context:5.0.8.RELEASE'
+    compile 'javax.inject:javax.inject:1@jar'
+    compile 'org.projectlombok:lombok:1.18.2'
+    compile 'org.slf4j:slf4j-api:1.7.25'
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
+    testCompile 'org.springframework:spring-test:5.0.8.RELEASE'
+    testCompile 'org.junit.platform:junit-platform-engine:1.2.0'
+    testCompile 'org.junit.platform:junit-platform-runner:1.2.0'
+    testRuntime 'org.junit.vintage:junit-vintage-engine:5.2.0'
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.2.0'
+    testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.2.0'
+//    testCompile("junit:junit:4.12")
+}

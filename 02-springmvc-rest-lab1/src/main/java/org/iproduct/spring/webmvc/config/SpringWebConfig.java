@@ -2,12 +2,12 @@ package org.iproduct.spring.webmvc.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
+@EnableWebMvc
 @Configuration
-@ComponentScan("org.iproduct.spring.webmvc.service")
+@ComponentScan("org.iproduct.spring.webmvc.web")
 @PropertySource("classpath:application.properties")
-@Import({ WebSecurityConfig.class, MongoConfig.class })
-public class SpringRootConfig {
+public class SpringWebConfig {
 }
