@@ -17,4 +17,14 @@ public class MockArticleProvider implements ArticleProvider {
         );
 
     }
+
+    @Override
+    public Article getArticleById(String id) {
+        return null;
+    }
+
+    @Override
+    public Article addArticle(Article article) {
+        return null;
+    }
 }

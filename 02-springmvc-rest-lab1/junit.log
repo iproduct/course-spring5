@@ -1,9 +1,26 @@
-4190 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Refreshing Root WebApplicationContext: startup date [Mon Aug 20 12:09:18 EEST 2018]; root of context hierarchy
-4228 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Registering annotated classes: [class org.iproduct.spring.webmvc.config.SpringRootConfig]
-4414 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Refreshing Root WebApplicationContext: startup date [Mon Aug 20 12:09:18 EEST 2018]; parent: Root WebApplicationContext
-4415 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Registering annotated classes: [class org.iproduct.spring.webmvc.config.SpringWebConfig]
-4645 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/api/articles],methods=[GET]}" onto public java.util.List<org.iproduct.spring.webmvc.model.Article> org.iproduct.spring.webmvc.web.ArticleController.getArticles()
-4788 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter: Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Mon Aug 20 12:09:18 EEST 2018]; parent: Root WebApplicationContext
-4834 INFO  o.s.web.servlet.DispatcherServlet: FrameworkServlet 'dispatcher': initialization started
-4849 INFO  o.s.web.servlet.DispatcherServlet: FrameworkServlet 'dispatcher': initialization completed in 15 ms
-4892 INFO  o.i.spring.webmvc.Application: Server started: Connector[HTTP/1.1-9000]
+4204 INFO  o.s.web.context.ContextLoader: Root WebApplicationContext: initialization started
+4212 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Refreshing Root WebApplicationContext: startup date [Thu Aug 23 11:15:04 EEST 2018]; root of context hierarchy
+4240 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Registering annotated classes: [class org.iproduct.spring.webmvc.config.SpringRootConfig]
+4865 INFO  org.mongodb.driver.cluster: Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+4902 INFO  org.mongodb.driver.connection: Opened connection [connectionId{localValue:1, serverValue:31}] to 127.0.0.1:27017
+4904 INFO  org.mongodb.driver.cluster: Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 5]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=1447895}
+5096 INFO  o.s.web.context.ContextLoader: Root WebApplicationContext: initialization completed in 890 ms
+5099 INFO  o.s.web.servlet.DispatcherServlet: FrameworkServlet 'dispatcher': initialization started
+5100 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Aug 23 11:15:05 EEST 2018]; parent: Root WebApplicationContext
+5100 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Registering annotated classes: [class org.iproduct.spring.webmvc.config.SpringWebConfig]
+5678 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/api/articles],methods=[POST]}" onto public org.springframework.http.ResponseEntity org.iproduct.spring.webmvc.web.ArticleController.create(org.springframework.web.util.UriComponentsBuilder,org.iproduct.spring.webmvc.model.Article)
+5679 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/api/articles],methods=[GET]}" onto public java.util.List<org.iproduct.spring.webmvc.model.Article> org.iproduct.spring.webmvc.web.ArticleController.getArticles()
+5679 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/api/articles/{id}],methods=[GET]}" onto public org.iproduct.spring.webmvc.model.Article org.iproduct.spring.webmvc.web.ArticleController.getArticleById(java.lang.String)
+5683 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+5684 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+5684 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+5788 INFO  o.s.w.s.h.SimpleUrlHandlerMapping: Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+5788 INFO  o.s.w.s.h.SimpleUrlHandlerMapping: Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+5979 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter: Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Aug 23 11:15:05 EEST 2018]; parent: Root WebApplicationContext
+6037 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping: Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+6054 INFO  o.s.c.s.DefaultLifecycleProcessor: Starting beans in phase 2147483647
+6054 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper: Context refreshed
+6070 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper: Found 1 custom documentation plugin(s)
+6088 INFO  s.d.s.w.s.ApiListingReferenceScanner: Scanning for api listing references
+6184 INFO  o.s.web.servlet.DispatcherServlet: FrameworkServlet 'dispatcher': initialization completed in 1085 ms
+6226 INFO  o.i.spring.webmvc.Application: Server started: Connector[HTTP/1.1-9000]

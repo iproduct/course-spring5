@@ -3,6 +3,7 @@ package org.iproduct.spring.webmvc.init;
 import org.iproduct.spring.webmvc.config.SpringRootConfig;
 import org.iproduct.spring.webmvc.config.SpringWebConfig;
 import org.springframework.web.WebApplicationInitializer;
+import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
@@ -17,15 +18,15 @@ public class ArticlesWebInitializer implements WebApplicationInitializer {
 
         AnnotationConfigWebApplicationContext rootContext = new AnnotationConfigWebApplicationContext();
         rootContext.register(SpringRootConfig.class);
-        rootContext.refresh();
+//        rootContext.refresh();
 
-//        servletContext.addListener(new ContextLoaderListener(rootContext));
+        servletContext.addListener(new ContextLoaderListener(rootContext));
 
         AnnotationConfigWebApplicationContext webContext = new AnnotationConfigWebApplicationContext();
-        webContext.setParent(rootContext);
+//        webContext.setParent(rootContext);
         webContext.setServletContext(servletContext);
         webContext.register(SpringWebConfig.class);
-        webContext.refresh();
+//        webContext.refresh();
 
         DispatcherServlet servlet = new DispatcherServlet(webContext);
         ServletRegistration.Dynamic registration = servletContext.addServlet("dispatcher", servlet);

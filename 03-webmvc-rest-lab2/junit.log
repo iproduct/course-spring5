@@ -1,13 +1,13 @@
-4338 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Refreshing Root WebApplicationContext: startup date [Mon Aug 20 18:22:13 EEST 2018]; root of context hierarchy
-4375 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Registering annotated classes: [class org.iproduct.spring.webmvc.config.SpringRootConfig]
-5004 INFO  org.mongodb.driver.cluster: Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-5042 INFO  org.mongodb.driver.connection: Opened connection [connectionId{localValue:1, serverValue:7}] to 127.0.0.1:27017
-5045 INFO  org.mongodb.driver.cluster: Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 5]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=1632137}
-5233 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Refreshing Root WebApplicationContext: startup date [Mon Aug 20 18:22:14 EEST 2018]; parent: Root WebApplicationContext
-5233 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Registering annotated classes: [class org.iproduct.spring.webmvc.config.SpringWebConfig]
-5362 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/api/articles],methods=[GET]}" onto public java.util.List<org.iproduct.spring.webmvc.model.Article> org.iproduct.spring.webmvc.web.ArticleController.getArticles()
-5522 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter: Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Mon Aug 20 18:22:14 EEST 2018]; parent: Root WebApplicationContext
-5574 INFO  o.s.web.servlet.DispatcherServlet: FrameworkServlet 'dispatcher': initialization started
-5590 INFO  o.s.web.servlet.DispatcherServlet: FrameworkServlet 'dispatcher': initialization completed in 16 ms
-5634 INFO  o.i.spring.webmvc.Application: Server started: Connector[HTTP/1.1-9000]
-17022 INFO  org.mongodb.driver.connection: Opened connection [connectionId{localValue:2, serverValue:8}] to 127.0.0.1:27017
+4252 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Refreshing Root WebApplicationContext: startup date [Thu Aug 23 09:52:32 EEST 2018]; root of context hierarchy
+4288 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Registering annotated classes: [class org.iproduct.spring.webmvc.config.SpringRootConfig]
+4929 INFO  org.mongodb.driver.cluster: Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+4968 INFO  org.mongodb.driver.connection: Opened connection [connectionId{localValue:1, serverValue:13}] to 127.0.0.1:27017
+4970 INFO  org.mongodb.driver.cluster: Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 5]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=1660674}
+5160 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Refreshing Root WebApplicationContext: startup date [Thu Aug 23 09:52:33 EEST 2018]; parent: Root WebApplicationContext
+5160 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Registering annotated classes: [class org.iproduct.spring.webmvc.config.SpringWebConfig]
+5284 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/api/articles],methods=[GET]}" onto public java.util.List<org.iproduct.spring.webmvc.model.Article> org.iproduct.spring.webmvc.web.ArticleController.getArticles()
+5447 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter: Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Aug 23 09:52:33 EEST 2018]; parent: Root WebApplicationContext
+5497 INFO  o.s.web.servlet.DispatcherServlet: FrameworkServlet 'dispatcher': initialization started
+5513 INFO  o.s.web.servlet.DispatcherServlet: FrameworkServlet 'dispatcher': initialization completed in 16 ms
+5555 INFO  o.i.spring.webmvc.Application: Server started: Connector[HTTP/1.1-9000]
+9055 INFO  org.mongodb.driver.connection: Opened connection [connectionId{localValue:2, serverValue:14}] to 127.0.0.1:27017
