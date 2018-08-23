@@ -17,3 +17,6 @@ db.articles.find()
 
 ### Add new article
 db.articles.insertOne({title:"Spring New Article", content:"New Content ..."})
+
+### curl POST Article
+curl -X POST "http://localhost:9000/api/articles" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"content\": \"Content 1 ...\", \"title\": \"Title 1\"}"
