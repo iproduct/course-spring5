@@ -1,34 +1,30 @@
-4326 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Refreshing Root WebApplicationContext: startup date [Mon Aug 20 05:39:30 EEST 2018]; root of context hierarchy
-4364 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Registering annotated classes: [class org.iproduct.spring.webmvc.config.SpringRootConfig]
-5031 INFO  org.mongodb.driver.cluster: Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-5072 INFO  org.mongodb.driver.connection: Opened connection [connectionId{localValue:1, serverValue:69}] to 127.0.0.1:27017
-5079 INFO  org.mongodb.driver.cluster: Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 5]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=4944896}
-5355 WARN  o.s.security.core.userdetails.User: User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
-5531 INFO  o.s.s.w.DefaultSecurityFilterChain: Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2d2685da, org.springframework.security.web.context.SecurityContextPersistenceFilter@5abe86f2, org.springframework.security.web.header.HeaderWriterFilter@1e1634fa, org.springframework.security.web.csrf.CsrfFilter@5bd817, org.springframework.security.web.authentication.logout.LogoutFilter@42e5c090, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@70fbaa1b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@400074e2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@39c0efdb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2361fd67, org.springframework.security.web.session.SessionManagementFilter@1a11e93c, org.springframework.security.web.access.ExceptionTranslationFilter@39ea56c6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4da013c4]
-5563 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Refreshing Root WebApplicationContext: startup date [Mon Aug 20 05:39:31 EEST 2018]; parent: Root WebApplicationContext
-5564 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Registering annotated classes: [class org.iproduct.spring.webmvc.config.SpringWebConfig]
-6126 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/api/articles],methods=[GET]}" onto public java.util.List<org.iproduct.spring.webmvc.model.Article> org.iproduct.spring.webmvc.web.ArticleController.getArticles()
-6131 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
-6132 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
-6132 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
-6243 INFO  o.s.w.s.h.SimpleUrlHandlerMapping: Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-6243 INFO  o.s.w.s.h.SimpleUrlHandlerMapping: Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-6434 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter: Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Mon Aug 20 05:39:31 EEST 2018]; parent: Root WebApplicationContext
-6497 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping: Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-6515 INFO  o.s.c.s.DefaultLifecycleProcessor: Starting beans in phase 2147483647
-6515 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper: Context refreshed
-6532 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper: Found 1 custom documentation plugin(s)
-6545 INFO  s.d.s.w.s.ApiListingReferenceScanner: Scanning for api listing references
-6619 INFO  o.s.web.context.ContextLoader: Root WebApplicationContext: initialization started
-6619 INFO  o.s.web.context.ContextLoader: Root WebApplicationContext: initialization completed in 0 ms
-6623 INFO  o.s.web.servlet.DispatcherServlet: FrameworkServlet 'dispatcher': initialization started
-6638 INFO  o.s.web.servlet.DispatcherServlet: FrameworkServlet 'dispatcher': initialization completed in 15 ms
-6685 INFO  o.i.spring.webmvc.Application: Server started: Connector[HTTP/1.1-8080]
-11742 WARN  o.s.web.servlet.PageNotFound: No mapping found for HTTP request with URI [/login] in DispatcherServlet with name 'dispatcher'
-14161 WARN  o.s.web.servlet.PageNotFound: No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'dispatcher'
-18374 INFO  org.mongodb.driver.connection: Opened connection [connectionId{localValue:2, serverValue:70}] to 127.0.0.1:27017
-22509 WARN  o.s.web.servlet.PageNotFound: No mapping found for HTTP request with URI [/login] in DispatcherServlet with name 'dispatcher'
-23740 WARN  o.s.web.servlet.PageNotFound: No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'dispatcher'
-23751 WARN  o.s.web.servlet.PageNotFound: No mapping found for HTTP request with URI [/csrf] in DispatcherServlet with name 'dispatcher'
-85029 WARN  o.s.web.servlet.PageNotFound: No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'dispatcher'
-85035 WARN  o.s.web.servlet.PageNotFound: No mapping found for HTTP request with URI [/csrf] in DispatcherServlet with name 'dispatcher'
+4274 INFO  o.s.web.context.ContextLoader: Root WebApplicationContext: initialization started
+4283 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Refreshing Root WebApplicationContext: startup date [Tue Aug 21 16:35:34 EEST 2018]; root of context hierarchy
+4310 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Registering annotated classes: [class org.iproduct.spring.webmvc.config.SpringRootConfig]
+4957 INFO  org.mongodb.driver.cluster: Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+4997 INFO  org.mongodb.driver.connection: Opened connection [connectionId{localValue:1, serverValue:24}] to 127.0.0.1:27017
+5000 INFO  org.mongodb.driver.cluster: Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 5]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=1849349}
+5268 WARN  o.s.security.core.userdetails.User: User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+5441 INFO  o.s.s.w.DefaultSecurityFilterChain: Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7e7e248b, org.springframework.security.web.context.SecurityContextPersistenceFilter@57bae294, org.springframework.security.web.header.HeaderWriterFilter@d2d0bde, org.springframework.security.web.csrf.CsrfFilter@400074e2, org.springframework.security.web.authentication.logout.LogoutFilter@197eec73, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6a52e96f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@127a77db, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@135c9a7b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@759216cb, org.springframework.security.web.session.SessionManagementFilter@4ed849c2, org.springframework.security.web.access.ExceptionTranslationFilter@87a5f58, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@503d03f]
+5470 INFO  o.s.web.context.ContextLoader: Root WebApplicationContext: initialization completed in 1194 ms
+5475 INFO  o.s.web.servlet.DispatcherServlet: FrameworkServlet 'dispatcher': initialization started
+5476 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Aug 21 16:35:36 EEST 2018]; parent: Root WebApplicationContext
+5476 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Registering annotated classes: [class org.iproduct.spring.webmvc.config.SpringWebConfig]
+6023 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/api/articles],methods=[GET]}" onto public java.util.List<org.iproduct.spring.webmvc.model.Article> org.iproduct.spring.webmvc.web.ArticleController.getArticles()
+6027 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+6028 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+6028 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+6134 INFO  o.s.w.s.h.SimpleUrlHandlerMapping: Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+6134 INFO  o.s.w.s.h.SimpleUrlHandlerMapping: Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+6330 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter: Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Aug 21 16:35:36 EEST 2018]; parent: Root WebApplicationContext
+6390 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping: Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+6407 INFO  o.s.c.s.DefaultLifecycleProcessor: Starting beans in phase 2147483647
+6407 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper: Context refreshed
+6424 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper: Found 1 custom documentation plugin(s)
+6436 INFO  s.d.s.w.s.ApiListingReferenceScanner: Scanning for api listing references
+6519 INFO  o.s.web.servlet.DispatcherServlet: FrameworkServlet 'dispatcher': initialization completed in 1043 ms
+6562 INFO  o.i.spring.webmvc.Application: Server started: Connector[HTTP/1.1-8080]
+30369 INFO  org.mongodb.driver.connection: Opened connection [connectionId{localValue:2, serverValue:25}] to 127.0.0.1:27017
+39557 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Aug 21 16:35:36 EEST 2018]; parent: Root WebApplicationContext
+39558 INFO  o.s.c.s.DefaultLifecycleProcessor: Stopping beans in phase 2147483647
+39568 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Closing Root WebApplicationContext: startup date [Tue Aug 21 16:35:34 EEST 2018]; root of context hierarchy

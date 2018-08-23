@@ -1,9 +1,11 @@
 package org.iproduct.spring.webmvc.model;
 
 import lombok.*;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
 
+@Document(collection = "articles")
 @Data
 @NoArgsConstructor
 @RequiredArgsConstructor

@@ -1,0 +1,78 @@
+group 'org.iproduct.spring'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+mainClassName = 'org.iproduct.spring.aop.MainApplication'
+
+apply plugin: 'idea'
+idea {
+    module {
+        downloadJavadoc = true
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility= 1.8
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    // Configuration that tracks the agents added to the JVM at run-time
+    runtimeAgent
+}
+
+dependencies {
+    compile 'org.springframework:spring-context:5.0.8.RELEASE'
+    compile 'javax.inject:javax.inject:1@jar'
+    compile 'org.projectlombok:lombok:1.18.2'
+    compile 'org.slf4j:slf4j-api:1.7.25'
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
+    compile 'org.springframework:spring-aspects:5.0.8.RELEASE'
+    compile 'org.aspectj:aspectjrt:1.9.1'
+    compile 'org.springframework:spring-tx:5.0.8.RELEASE'
+    compile 'org.aspectj:aspectjtools:1.9.1'
+
+    // These are the two important lines
+    runtimeAgent "org.springframework:spring-instrument:5.0.8.RELEASE"
+    runtimeAgent "org.aspectj:aspectjweaver:1.9.1"
+
+    testCompile 'org.springframework:spring-test:5.0.8.RELEASE'
+    testCompile 'org.junit.platform:junit-platform-engine:1.2.0'
+    testCompile 'org.junit.platform:junit-platform-runner:1.2.0'
+    testRuntime 'org.junit.vintage:junit-vintage-engine:5.2.0'
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.2.0'
+    testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.2.0'
+//    testCompile("junit:junit:4.12")
+}
+
+project.ext {
+    aspectjVersion = '1.9.1'
+}
+
+run {
+    // Ensure that all of the agents we need to load at run-time happen when running the app through Gradle
+    configurations.runtimeAgent.each {
+        File jarFile ->
+            jvmArgs "-javaagent:${jarFile.absolutePath}"
+    }
+}
+
+apply plugin: "aspectj.gradle"
+
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "gradle.plugin.aspectj:gradle-aspectj:0.1.6"
+    }
+}

@@ -60,17 +60,18 @@ public class ArticlesWebInitializer implements WebApplicationInitializer {
         // Load root application configuration
         AnnotationConfigWebApplicationContext rootContext = new AnnotationConfigWebApplicationContext();
         rootContext.register(SpringRootConfig.class);
-        rootContext.refresh();
+//        rootContext.refresh();
+        rootContext.registerShutdownHook();
 
         // Manage the lifecycle of the root application context
         servletCxt.addListener(new ContextLoaderListener(rootContext));
 
         // Load Spring web application configuration
         AnnotationConfigWebApplicationContext webContext = new AnnotationConfigWebApplicationContext();
-        webContext.setParent(rootContext);
+//        webContext.setParent(rootContext);
         webContext.setServletContext(servletCxt);
         webContext.register(SpringWebConfig.class);
-        webContext.refresh();
+//        webContext.refresh();
 
         // Create DispatcherServlet
         DispatcherServlet servlet = new DispatcherServlet(webContext);
@@ -79,6 +80,7 @@ public class ArticlesWebInitializer implements WebApplicationInitializer {
         ServletRegistration.Dynamic registration = servletCxt.addServlet("dispatcher", servlet);
         registration.setLoadOnStartup(1);
         registration.addMapping("/");
+
     }
 
 }

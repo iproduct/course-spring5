@@ -1,0 +1,298 @@
+---- AspectJ Properties ---
+AspectJ Compiler 1.9.1 built on Friday Apr 20, 2018 at 16:47:33 GMT
+---- Dump Properties ---
+Dump file: ajcore.20180823.030802.240.txt
+Dump reason: java.lang.RuntimeException
+Dump on exception: true
+Dump at exit condition: abort
+---- Exception Information ---
+java.lang.RuntimeException: Problem processing attributes in D:\CourseSpring\git\course-spring5\01-intro-gradle-lab\aop\build\classes\java\main\org\iproduct\spring\aop\EntityCreationPublishingAspect.class
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureAspectJAttributesUnpacked(BcelObjectType.java:387)
+	at org.aspectj.weaver.bcel.BcelObjectType.<init>(BcelObjectType.java:162)
+	at org.aspectj.weaver.bcel.BcelWorld.buildBcelDelegate(BcelWorld.java:410)
+	at org.aspectj.weaver.bcel.BcelWorld.addSourceObjectType(BcelWorld.java:487)
+	at org.aspectj.weaver.bcel.BcelWorld.addSourceObjectType(BcelWorld.java:453)
+	at org.aspectj.weaver.bcel.BcelWeaver.addClassFile(BcelWeaver.java:456)
+	at org.aspectj.weaver.bcel.BcelWeaver.addClassFile(BcelWeaver.java:480)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.initBcelWorld(AjBuildManager.java:908)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:253)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:189)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:114)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.aspectj.tools.ant.taskdefs.AjcTask.executeInSameVM(AjcTask.java:1319)
+	at org.aspectj.tools.ant.taskdefs.AjcTask.execute(AjcTask.java:1128)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:293)
+	at sun.reflect.GeneratedMethodAccessor127.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at groovy.util.AntBuilder.performTask(AntBuilder.java:327)
+	at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:272)
+	at org.gradle.api.internal.project.ant.BasicAntBuilder.nodeCompleted(BasicAntBuilder.java:78)
+	at groovy.util.BuilderSupport.doInvokeMethod(BuilderSupport.java:154)
+	at groovy.util.AntBuilder.doInvokeMethod(AntBuilder.java:207)
+	at org.gradle.api.internal.project.ant.BasicAntBuilder.doInvokeMethod(BasicAntBuilder.java:103)
+	at groovy.util.BuilderSupport.invokeMethod(BuilderSupport.java:67)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:133)
+	at aspectj.Ajc.compile(AspectJGradlePlugin.groovy:158)
+	at sun.reflect.GeneratedMethodAccessor356.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:73)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.doExecute(StandardTaskAction.java:46)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:39)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:26)
+	at org.gradle.api.internal.AbstractTask$TaskActionWrapper.execute(AbstractTask.java:788)
+	at org.gradle.api.internal.AbstractTask$TaskActionWrapper.execute(AbstractTask.java:755)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter$1.run(ExecuteActionsTaskExecuter.java:124)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor$RunnableBuildOperationWorker.execute(DefaultBuildOperationExecutor.java:336)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor$RunnableBuildOperationWorker.execute(DefaultBuildOperationExecutor.java:328)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.execute(DefaultBuildOperationExecutor.java:199)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:110)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeAction(ExecuteActionsTaskExecuter.java:113)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:95)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:73)
+	at org.gradle.api.internal.tasks.execution.OutputDirectoryCreatingTaskExecuter.execute(OutputDirectoryCreatingTaskExecuter.java:51)
+	at org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter.execute(SkipUpToDateTaskExecuter.java:59)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskOutputCachingStateExecuter.execute(ResolveTaskOutputCachingStateExecuter.java:54)
+	at org.gradle.api.internal.tasks.execution.ValidatingTaskExecuter.execute(ValidatingTaskExecuter.java:59)
+	at org.gradle.api.internal.tasks.execution.SkipEmptySourceFilesTaskExecuter.execute(SkipEmptySourceFilesTaskExecuter.java:101)
+	at org.gradle.api.internal.tasks.execution.FinalizeInputFilePropertiesTaskExecuter.execute(FinalizeInputFilePropertiesTaskExecuter.java:44)
+	at org.gradle.api.internal.tasks.execution.CleanupStaleOutputsExecuter.execute(CleanupStaleOutputsExecuter.java:91)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskArtifactStateTaskExecuter.execute(ResolveTaskArtifactStateTaskExecuter.java:62)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:59)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:54)
+	at org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter.execute(ExecuteAtMostOnceTaskExecuter.java:43)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:34)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter$EventFiringTaskWorker$1.run(DefaultTaskGraphExecuter.java:256)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor$RunnableBuildOperationWorker.execute(DefaultBuildOperationExecutor.java:336)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor$RunnableBuildOperationWorker.execute(DefaultBuildOperationExecutor.java:328)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.execute(DefaultBuildOperationExecutor.java:199)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:110)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter$EventFiringTaskWorker.execute(DefaultTaskGraphExecuter.java:249)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter$EventFiringTaskWorker.execute(DefaultTaskGraphExecuter.java:238)
+	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor$TaskExecutorWorker.processTask(DefaultTaskPlanExecutor.java:123)
+	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor$TaskExecutorWorker.access$200(DefaultTaskPlanExecutor.java:79)
+	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor$TaskExecutorWorker$1.execute(DefaultTaskPlanExecutor.java:104)
+	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor$TaskExecutorWorker$1.execute(DefaultTaskPlanExecutor.java:98)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionPlan.execute(DefaultTaskExecutionPlan.java:663)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionPlan.executeWithTask(DefaultTaskExecutionPlan.java:597)
+	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor$TaskExecutorWorker.run(DefaultTaskPlanExecutor.java:98)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: bad WeaverState.Kind: -115.  File was :<Unknown>::0
+	at org.aspectj.weaver.WeaverStateInfo.read(WeaverStateInfo.java:171)
+	at org.aspectj.weaver.AjAttribute.read(AjAttribute.java:105)
+	at org.aspectj.weaver.bcel.Utility.readAjAttributes(Utility.java:101)
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureAspectJAttributesUnpacked(BcelObjectType.java:383)
+	... 79 more
+---- System Properties ---
+java.vendor=Oracle Corporation
+sun.java.launcher=SUN_STANDARD
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+idea.paths.selector=IntelliJIdea2018.2
+jbre.win.app.icon.supported=true
+jnidispatch.path=C:\Users\office27\.IntelliJIdea2018.2\system\tmp\jna7652722912366429351.dll
+os.name=Windows 10
+winp.folder.preferred=C:\Users\office27\.IntelliJIdea2018.2\system\tmp
+sun.boot.class.path=C:\Program Files\Java\jdk1.8.0_181\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_181\jre\classes
+sun.desktop=windows
+java.vm.specification.vendor=Oracle Corporation
+java.runtime.version=1.8.0_181-b13
+jb.vmOptionsFile=C:\Program Files\JetBrains\IntelliJ IDEA 2018.2.1\bin\idea64.exe.vmoptions
+jna.loaded=true
+io.netty.serviceThreadPrefix=Netty 
+user.name=office27
+java.rmi.server.disableHttp=true
+user.language=en
+sun.boot.library.path=C:\Program Files\Java\jdk1.8.0_181\jre\bin
+jna.nosys=true
+idea.fatal.error.notification=disabled
+idea.registered=true
+swing.bufferPerWindow=false
+java.version=1.8.0_181
+java.net.preferIPv4Stack=true
+user.timezone=Europe/Helsinki
+jbre.popupwindow.settype=true
+sun.arch.data.model=64
+java.util.concurrent.ForkJoinPool.common.threadFactory=com.intellij.concurrency.IdeaForkJoinWorkerThreadFactory
+jna.tmpdir=C:\Users\office27\.IntelliJIdea2018.2\system\tmp
+java.endorsed.dirs=C:\Program Files\JetBrains\IntelliJ IDEA 2018.2.1\jre64\lib\endorsed
+ide.native.launcher=true
+sun.cpu.isalist=amd64
+sun.jnu.encoding=Cp1252
+file.encoding.pkg=sun.io
+file.separator=\
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+user.country=US
+java.home=C:\Program Files\Java\jdk1.8.0_181\jre
+java.vm.info=mixed mode
+os.version=10.0
+jdk.http.auth.tunneling.disabledSchemes=""
+path.separator=;
+java.vm.version=25.181-b13
+idea.no.launcher=false
+user.variant=
+com.jetbrains.suppressWindowRaise=false
+idea.max.content.load.filesize=20000
+java.awt.printerjob=sun.awt.windows.WPrinterJob
+javax.swing.rebaseCssSizeMap=true
+sun.io.unicode.encoding=UnicodeLittle
+idea.cycle.buffer.size=1024
+awt.toolkit=sun.awt.windows.WToolkit
+log4j.defaultInitOverride=true
+io.netty.processId=46078
+user.script=
+idea.dynamic.classpath=false
+user.home=C:\Users\office27
+__idea.mac.env.lock=unlocked
+java.specification.vendor=Oracle Corporation
+library.jansi.path=C:\Users\office27\.gradle\native\jansi\1.14\windows64
+java.library.path=C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\nodejs;C:\Program Files\MongoDB\Server\3.6\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\Programs\rabbitmq_server-3.7.7\sbin;;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\nodejs\;C:\Users\office27\AppData\Local\Microsoft\WindowsApps;C:\Users\office27\AppData\Local\Yarn\bin;C:\Users\office27\AppData\Roaming\npm;.
+java.vendor.url=http://java.oracle.com/
+java.vm.vendor=Oracle Corporation
+java.runtime.name=OpenJDK Runtime Environment
+sun.java.command=org.gradle.launcher.daemon.bootstrap.GradleDaemon 4.6
+java.class.path=C:\Users\office27\.gradle\wrapper\dists\gradle-4.6-all\bcst21l2brirad8k2ben1letg\gradle-4.6\lib\gradle-launcher-4.6.jar
+io.netty.machineId=28:f0:76:ff:fe:16:65:0e
+java.vm.specification.name=Java Virtual Machine Specification
+idea.xdebug.key=-Xdebug
+java.vm.specification.version=1.8
+idea.popup.weight=heavy
+sun.cpu.endian=little
+sun.os.patch.level=
+java.io.tmpdir=C:\Users\office27\AppData\Local\Temp\
+java.vendor.url.bug=https://youtrack.jetbrains.com
+java.rmi.server.hostname=127.0.0.1
+os.arch=amd64
+java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+idea.max.intellisense.filesize=2500
+java.ext.dirs=C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+idea.jre.check=true
+user.dir=D:\CourseSpring\git\course-spring5\01-intro-gradle-lab
+line.separator=
+
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+java.util.Arrays.useLegacyMergeSort=true
+file.encoding=Cp1252
+java.specification.version=1.8
+---- Command Line ---
+-d
+D:\CourseSpring\git\course-spring5\01-intro-gradle-lab\aop\build\classes\java\main
+-s
+D:\CourseSpring\git\course-spring5\01-intro-gradle-lab\aop\build\classes\java\main
+-source
+1.8
+-target
+1.8
+-Xlint:ignore
+-showWeaveInfo
+-classpath
+C:\Users\office27\.gradle\caches\modules-2\files-2.1\org.springframework\spring-context\5.0.8.RELEASE\3a067d8990761111c9b6d1d895640be26cc1fb38\spring-context-5.0.8.RELEASE.jar;C:\Users\office27\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar;C:\Users\office27\.gradle\caches\modules-2\files-2.1\org.projectlombok\lombok\1.18.2\524e0a697e9d62950b2f763d88d35cd8dc82a9a1\lombok-1.18.2.jar;C:\Users\office27\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-simple\1.7.25\8dacf9514f0c707cbbcdd6fd699e8940d42fb54e\slf4j-simple-1.7.25.jar;C:\Users\office27\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\1.7.25\da76ca59f6a57ee3102f8f9bd9cee742973efa8a\slf4j-api-1.7.25.jar;C:\Users\office27\.gradle\caches\modules-2\files-2.1\org.springframework\spring-aspects\5.0.8.RELEASE\e66926466b8c72658d7e536923041dc93976baf3\spring-aspects-5.0.8.RELEASE.jar;C:\Users\office27\.gradle\caches\modules-2\files-2.1\org.aspectj\aspectjrt\1.9.1\84b05e2d360c83ce9fd1780ab2b7f36565110b9c\aspectjrt-1.9.1.jar;C:\Users\office27\.gradle\caches\modules-2\files-2.1\org.springframework\spring-tx\5.0.8.RELEASE\b6488db6192f71bd682a13b9d42127307631c616\spring-tx-5.0.8.RELEASE.jar;C:\Users\office27\.gradle\caches\modules-2\files-2.1\org.aspectj\aspectjtools\1.9.1\b0554e90227b2457c6cd9ee584da85e389a0415b\aspectjtools-1.9.1.jar;C:\Users\office27\.gradle\caches\modules-2\files-2.1\org.springframework\spring-aop\5.0.8.RELEASE\f5086c1a3185c481104511837427b39a07a57aa2\spring-aop-5.0.8.RELEASE.jar;C:\Users\office27\.gradle\caches\modules-2\files-2.1\org.springframework\spring-beans\5.0.8.RELEASE\5fc965d3e7f5515099244857a8ae9e2a208c169b\spring-beans-5.0.8.RELEASE.jar;C:\Users\office27\.gradle\caches\modules-2\files-2.1\org.springframework\spring-expression\5.0.8.RELEASE\f23158f22c917df2cddf2ecebc398a9e95f95fae\spring-expression-5.0.8.RELEASE.jar;C:\Users\office27\.gradle\caches\modules-2\files-2.1\org.springframework\spring-core\5.0.8.RELEASE\dc39c49e3246cdf73d3786ac41119140aed3fa08\spring-core-5.0.8.RELEASE.jar;C:\Users\office27\.gradle\caches\modules-2\files-2.1\org.aspectj\aspectjweaver\1.8.13\ad94df2a28d658a40dc27bbaff6a1ce5fbf04e9b\aspectjweaver-1.8.13.jar;C:\Users\office27\.gradle\caches\modules-2\files-2.1\org.springframework\spring-jcl\5.0.8.RELEASE\a1fa8fb560fb252321776e16bc9ac8201af4ef5e\spring-jcl-5.0.8.RELEASE.jar
+-inpath
+D:\CourseSpring\git\course-spring5\01-intro-gradle-lab\aop\build\classes\java\main
+-sourceroots
+D:\CourseSpring\git\course-spring5\01-intro-gradle-lab\aop\src\main\java
+---- Full Classpath ---
+Empty
+---- Compiler Messages ---
+info directory classpath entry does not exist: C:\Program Files\Java\jdk1.8.0_181\jre\lib\sunrsasign.jar
+info zipfile classpath entry does not exist: C:\Program Files\Java\jdk1.8.0_181\jre\classes
+abort ABORT -- (RuntimeException) Problem processing attributes in D:\CourseSpring\git\course-spring5\01-intro-gradle-lab\aop\build\classes\java\main\org\iproduct\spring\aop\EntityCreationPublishingAspect.class
+Problem processing attributes in D:\CourseSpring\git\course-spring5\01-intro-gradle-lab\aop\build\classes\java\main\org\iproduct\spring\aop\EntityCreationPublishingAspect.class
+java.lang.RuntimeException: Problem processing attributes in D:\CourseSpring\git\course-spring5\01-intro-gradle-lab\aop\build\classes\java\main\org\iproduct\spring\aop\EntityCreationPublishingAspect.class
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureAspectJAttributesUnpacked(BcelObjectType.java:387)
+	at org.aspectj.weaver.bcel.BcelObjectType.<init>(BcelObjectType.java:162)
+	at org.aspectj.weaver.bcel.BcelWorld.buildBcelDelegate(BcelWorld.java:410)
+	at org.aspectj.weaver.bcel.BcelWorld.addSourceObjectType(BcelWorld.java:487)
+	at org.aspectj.weaver.bcel.BcelWorld.addSourceObjectType(BcelWorld.java:453)
+	at org.aspectj.weaver.bcel.BcelWeaver.addClassFile(BcelWeaver.java:456)
+	at org.aspectj.weaver.bcel.BcelWeaver.addClassFile(BcelWeaver.java:480)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.initBcelWorld(AjBuildManager.java:908)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:253)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:189)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:114)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.aspectj.tools.ant.taskdefs.AjcTask.executeInSameVM(AjcTask.java:1319)
+	at org.aspectj.tools.ant.taskdefs.AjcTask.execute(AjcTask.java:1128)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:293)
+	at sun.reflect.GeneratedMethodAccessor127.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at groovy.util.AntBuilder.performTask(AntBuilder.java:327)
+	at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:272)
+	at org.gradle.api.internal.project.ant.BasicAntBuilder.nodeCompleted(BasicAntBuilder.java:78)
+	at groovy.util.BuilderSupport.doInvokeMethod(BuilderSupport.java:154)
+	at groovy.util.AntBuilder.doInvokeMethod(AntBuilder.java:207)
+	at org.gradle.api.internal.project.ant.BasicAntBuilder.doInvokeMethod(BasicAntBuilder.java:103)
+	at groovy.util.BuilderSupport.invokeMethod(BuilderSupport.java:67)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:133)
+	at aspectj.Ajc.compile(AspectJGradlePlugin.groovy:158)
+	at sun.reflect.GeneratedMethodAccessor356.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:73)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.doExecute(StandardTaskAction.java:46)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:39)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:26)
+	at org.gradle.api.internal.AbstractTask$TaskActionWrapper.execute(AbstractTask.java:788)
+	at org.gradle.api.internal.AbstractTask$TaskActionWrapper.execute(AbstractTask.java:755)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter$1.run(ExecuteActionsTaskExecuter.java:124)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor$RunnableBuildOperationWorker.execute(DefaultBuildOperationExecutor.java:336)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor$RunnableBuildOperationWorker.execute(DefaultBuildOperationExecutor.java:328)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.execute(DefaultBuildOperationExecutor.java:199)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:110)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeAction(ExecuteActionsTaskExecuter.java:113)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:95)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:73)
+	at org.gradle.api.internal.tasks.execution.OutputDirectoryCreatingTaskExecuter.execute(OutputDirectoryCreatingTaskExecuter.java:51)
+	at org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter.execute(SkipUpToDateTaskExecuter.java:59)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskOutputCachingStateExecuter.execute(ResolveTaskOutputCachingStateExecuter.java:54)
+	at org.gradle.api.internal.tasks.execution.ValidatingTaskExecuter.execute(ValidatingTaskExecuter.java:59)
+	at org.gradle.api.internal.tasks.execution.SkipEmptySourceFilesTaskExecuter.execute(SkipEmptySourceFilesTaskExecuter.java:101)
+	at org.gradle.api.internal.tasks.execution.FinalizeInputFilePropertiesTaskExecuter.execute(FinalizeInputFilePropertiesTaskExecuter.java:44)
+	at org.gradle.api.internal.tasks.execution.CleanupStaleOutputsExecuter.execute(CleanupStaleOutputsExecuter.java:91)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskArtifactStateTaskExecuter.execute(ResolveTaskArtifactStateTaskExecuter.java:62)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:59)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:54)
+	at org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter.execute(ExecuteAtMostOnceTaskExecuter.java:43)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:34)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter$EventFiringTaskWorker$1.run(DefaultTaskGraphExecuter.java:256)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor$RunnableBuildOperationWorker.execute(DefaultBuildOperationExecutor.java:336)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor$RunnableBuildOperationWorker.execute(DefaultBuildOperationExecutor.java:328)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.execute(DefaultBuildOperationExecutor.java:199)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:110)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter$EventFiringTaskWorker.execute(DefaultTaskGraphExecuter.java:249)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter$EventFiringTaskWorker.execute(DefaultTaskGraphExecuter.java:238)
+	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor$TaskExecutorWorker.processTask(DefaultTaskPlanExecutor.java:123)
+	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor$TaskExecutorWorker.access$200(DefaultTaskPlanExecutor.java:79)
+	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor$TaskExecutorWorker$1.execute(DefaultTaskPlanExecutor.java:104)
+	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor$TaskExecutorWorker$1.execute(DefaultTaskPlanExecutor.java:98)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionPlan.execute(DefaultTaskExecutionPlan.java:663)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionPlan.executeWithTask(DefaultTaskExecutionPlan.java:597)
+	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor$TaskExecutorWorker.run(DefaultTaskPlanExecutor.java:98)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: bad WeaverState.Kind: -115.  File was :<Unknown>::0
+	at org.aspectj.weaver.WeaverStateInfo.read(WeaverStateInfo.java:171)
+	at org.aspectj.weaver.AjAttribute.read(AjAttribute.java:105)
+	at org.aspectj.weaver.bcel.Utility.readAjAttributes(Utility.java:101)
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureAspectJAttributesUnpacked(BcelObjectType.java:383)
+	... 79 more
+
