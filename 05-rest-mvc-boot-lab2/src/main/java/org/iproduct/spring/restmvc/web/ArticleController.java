@@ -7,6 +7,8 @@ import org.iproduct.spring.restmvc.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.servlet.http.HttpServletRequest;
@@ -37,11 +39,9 @@ public class ArticleController {
     }
 
     @PostMapping
-    public ResponseEntity<Article> addArticle(@RequestBody Article article, UriComponentsBuilder uriComponentsBuilder,
-                                              HttpServletRequest req) {
+    public ResponseEntity<Article> addArticle(@RequestBody Article article) {
         Article created = service.addArticle(article);
-        log.info(">>> Request URI {}", req.getServletPath());
-        URI location = uriComponentsBuilder.path(req.getServletPath())
+        URI location = MvcUriComponentsBuilder.fromMethodName(ArticleController.class, "addArticle", article)
                 .pathSegment("{id}").buildAndExpand(created.getId()).toUri() ;
         return ResponseEntity.created(location).body(created);
 //        return ResponseEntity.status(303).location(location).body(created);
