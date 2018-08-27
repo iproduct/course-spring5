@@ -13,7 +13,7 @@ import org.springframework.util.StopWatch;
 import java.util.concurrent.TimeUnit;
 
 @Aspect
-@Component
+//@Component
 //@Slf4j
 public class MethodProfilerAspect {
     final static Logger log = LoggerFactory.getLogger(MethodProfilerAspect.class);

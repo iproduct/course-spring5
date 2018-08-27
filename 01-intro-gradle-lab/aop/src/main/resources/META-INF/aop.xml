@@ -2,7 +2,7 @@
     <aspects>
         <aspect name="org.iproduct.spring.aop.LoggingAspect"/>
         <aspect name="org.iproduct.spring.aop.MethodProfilerAspect"/>
-        <aspect name="org.iproduct.spring.aop.EntityCreationPublishingAspect"/>
+        <aspect name="org.iproduct.spring.aop.EntityCreationPublishingAspect222222"/>
         <aspect name="org.iproduct.spring.aop.SystemArchitecture"/>
         <aspect name="org.iproduct.spring.aop.UsageTracking"/>
         <weaver options="-verbose">

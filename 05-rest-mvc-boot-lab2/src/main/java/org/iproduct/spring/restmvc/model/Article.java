@@ -1,4 +1,4 @@
-package org.iproduct.spring.webmvc.model;
+package org.iproduct.spring.restmvc.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
