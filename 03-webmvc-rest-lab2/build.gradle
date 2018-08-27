@@ -47,10 +47,8 @@ dependencies {
     runtime 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.6'
     compile 'org.springframework.data:spring-data-mongodb:2.0.9.RELEASE'
     compile 'org.mongodb:mongo-java-driver:3.8.0'
-    compile 'org.springframework.security:spring-security-core:5.0.7.RELEASE'
     compile 'org.springframework.security:spring-security-config:5.0.7.RELEASE'
     compile 'org.springframework.security:spring-security-web:5.0.7.RELEASE'
-    compile 'org.springframework.security:spring-security-catalina:2.0.4'
 
     compile 'javax.validation:validation-api:2.0.1.Final'
     compile 'org.projectlombok:lombok:1.18.2'

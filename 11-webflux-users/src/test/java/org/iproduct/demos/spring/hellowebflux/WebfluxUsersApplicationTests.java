@@ -42,16 +42,12 @@ public class WebfluxUsersApplicationTests {
         return basicAuthentication("root", "root");
     }
 
-    private static ExchangeFilterFunction adminCredentials() {
-        return basicAuthentication("admin", "admin");
-    }
-
     @Before
     public void setUp() {
         client = WebTestClient.bindToApplicationContext(context).build();
         client
                 .mutate()
-                .filter(adminCredentials())
+                .filter(springSecurity())
                 .build()
                 .post()
                 .uri("/api/users")
@@ -129,6 +125,11 @@ public class WebfluxUsersApplicationTests {
                 assertTrue("Should contain username testUser",
                     result.getResponseBody().stream().anyMatch(user -> user.getUsername().equals("testUser")));
             });
+    }
+
+
+    private static ExchangeFilterFunction springSecurity() {
+        return basicAuthentication("admin", "admin");
     }
 
 }

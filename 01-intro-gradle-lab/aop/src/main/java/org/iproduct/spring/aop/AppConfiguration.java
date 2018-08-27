@@ -10,8 +10,8 @@ import org.springframework.context.event.SimpleApplicationEventMulticaster;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
 
 @Configuration
-@EnableAspectJAutoProxy
-//@EnableLoadTimeWeaving(aspectjWeaving = EnableLoadTimeWeaving.AspectJWeaving.ENABLED)
+//@EnableAspectJAutoProxy
+@EnableLoadTimeWeaving(aspectjWeaving = EnableLoadTimeWeaving.AspectJWeaving.ENABLED)
 @ComponentScan(basePackages = "org.iproduct.spring.aop")
 public class AppConfiguration {
 

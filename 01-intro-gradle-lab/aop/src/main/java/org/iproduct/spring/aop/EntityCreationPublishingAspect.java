@@ -20,10 +20,10 @@ import java.util.regex.Pattern;
 
 @Component
 @Aspect
-public class EntityCreationPublishingAspect implements ApplicationContextAware {
+public class EntityCreationPublishingAspect {
     final static Logger log = LoggerFactory.getLogger(EntityCreationPublishingAspect.class);
 
-//    @Autowired
+    @Autowired
     private ApplicationEventPublisher eventPublisher;
 
     @Pointcut("@target(org.springframework.stereotype.Repository)")
@@ -52,8 +52,8 @@ public class EntityCreationPublishingAspect implements ApplicationContextAware {
         }
     }
 
-    @Override
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        eventPublisher = (ApplicationEventPublisher) applicationContext;
-    }
+//    @Override
+//    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+//        eventPublisher = (ApplicationEventPublisher) applicationContext;
+//    }
 }

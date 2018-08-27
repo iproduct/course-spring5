@@ -8,6 +8,6 @@ import org.springframework.context.annotation.PropertySource;
 @Configuration
 @ComponentScan({"org.iproduct.spring.webmvc.service", "org.iproduct.spring.webmvc.dao"})
 @PropertySource("classpath:application.properties")
-@Import(MongoConfig.class)
+@Import({WebSecurityConfig.class, MongoConfig.class})
 public class SpringRootConfig {
 }

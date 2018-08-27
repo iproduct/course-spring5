@@ -23,6 +23,6 @@ public class Article {
     private String content;
     @Builder.Default
 //    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm")
-    private LocalDateTime createdDate = LocalDateTime.now();
+    @JsonFormat(pattern = "uuuu-MM-dd HH:mm:ss")
+    private LocalDateTime created = LocalDateTime.now();
 }

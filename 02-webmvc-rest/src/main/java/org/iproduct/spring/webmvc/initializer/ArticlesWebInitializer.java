@@ -69,7 +69,7 @@ public class ArticlesWebInitializer implements WebApplicationInitializer {
         // Load Spring web application configuration
         AnnotationConfigWebApplicationContext webContext = new AnnotationConfigWebApplicationContext();
 //        webContext.setParent(rootContext);
-        webContext.setServletContext(servletCxt);
+//        webContext.setServletContext(servletCxt);
         webContext.register(SpringWebConfig.class);
 //        webContext.refresh();
 

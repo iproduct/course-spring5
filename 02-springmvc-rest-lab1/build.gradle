@@ -40,6 +40,7 @@ repositories {
 
 dependencies {
     compile 'org.springframework:spring-context:5.0.8.RELEASE'
+    compile 'org.springframework:spring-context-support:5.0.8.RELEASE'
     compile 'org.springframework:spring-webmvc:5.0.8.RELEASE'
     compile 'org.apache.tomcat.embed:tomcat-embed-jasper:9.0.10'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.9.6'
@@ -52,5 +53,8 @@ dependencies {
     compile 'ch.qos.logback:logback-classic:1.2.3'
     compile 'io.springfox:springfox-swagger2:2.9.2'
     compile 'io.springfox:springfox-swagger-ui:2.9.2'
+    compile 'org.springframework.security:spring-security-config:5.0.7.RELEASE'
+    compile 'org.springframework.security:spring-security-web:5.0.7.RELEASE'
+
     testCompile 'org.junit.jupiter:junit-jupiter-engine:5.2.0'
 }

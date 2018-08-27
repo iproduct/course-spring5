@@ -12,7 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 @ComponentScan("org.iproduct.spring.webmvc.web")
 @PropertySource("classpath:application.properties")
-@Import(SwaggerConfig.class)
+@Import({SwaggerConfig.class})
 public class SpringWebConfig  implements WebMvcConfigurer {
 
     @Override
