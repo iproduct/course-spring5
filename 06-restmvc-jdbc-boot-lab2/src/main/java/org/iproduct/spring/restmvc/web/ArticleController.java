@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
 
 import java.net.URI;
-import java.util.List;
+import java.util.Collection;
 
 @RestController
 @RequestMapping("/api/articles")
@@ -21,17 +21,17 @@ public class ArticleController {
     ArticleService service;
 
     @GetMapping
-    public List<Article> getArticles() {
+    public Collection<Article> getArticles() {
         return service.getArticles();
     }
 
     @GetMapping("{id}")
-    public Article getArticles(@PathVariable String id) {
+    public Article getArticles(@PathVariable long id) {
         return service.getArticleById(id);
     }
 
     @DeleteMapping("{id}")
-    public Article deleteArticles(@PathVariable String id) {
+    public Article deleteArticles(@PathVariable long id) {
         return service.deleteArticle(id);
     }
 
