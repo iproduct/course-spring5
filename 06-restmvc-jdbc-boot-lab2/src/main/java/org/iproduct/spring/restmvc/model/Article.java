@@ -12,12 +12,17 @@ import java.time.LocalDateTime;
 @Builder
 public class Article {
 //    @Id
-    private String id;
+    private long id;
     @NonNull
     private String title;
     @NonNull
     private String content;
-    @Builder.Default
+
+    private String pictureUrl;
+
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "uuuu-MM-dd HH:mm:ss")
     private LocalDateTime created = LocalDateTime.now();
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "uuuu-MM-dd HH:mm:ss")
+    private LocalDateTime updated = LocalDateTime.now();
 }

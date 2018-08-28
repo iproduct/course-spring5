@@ -45,8 +45,8 @@ public class ArticleController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<Article> addArticle(@PathVariable String id, @RequestBody Article article) {
-        if(!article.getId().equals(id)) throw new InvalidEntityIdException(
+    public ResponseEntity<Article> addArticle(@PathVariable long id, @RequestBody Article article) {
+        if(article.getId() != id) throw new InvalidEntityIdException(
                 String.format("Article ID=%s from path is different from Entity ID=%s", id, article.getId()));
         Article updated = service.updateArticle(article);
         log.info("Article updated: {}", updated);
