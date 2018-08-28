@@ -3,6 +3,7 @@ package org.iproduct.spring.restmvc.service;
 import lombok.extern.slf4j.Slf4j;
 import org.iproduct.spring.restmvc.dao.UserRepository;
 import org.iproduct.spring.restmvc.exception.EntityNotFoundException;
+import org.iproduct.spring.restmvc.model.Role;
 import org.iproduct.spring.restmvc.model.User;
 import org.iproduct.spring.restmvc.model.User;
 import org.iproduct.spring.restmvc.model.User;
@@ -17,6 +18,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import static org.iproduct.spring.restmvc.model.Role.ROLE_USER;
 
@@ -41,8 +43,17 @@ public class UserServiceImpl implements UserService {
         user.setCreated(LocalDateTime.now());
         user.setUpdated(LocalDateTime.now());
         if (user.getRoles().isEmpty()) {
-            user.getRoles().add(roles.getRoleByName(ROLE_USER));
+            user.getRoles().add(roles.getRoleByName(ROLE_USER).get());
+        } else {
+            List<Role> expandedRoles = user.getRoles().stream()
+                    .map(role -> roles.getRoleByName(role.getName()))
+                    .filter(roleOpt -> roleOpt.isPresent())
+                    .map(roleOpt -> roleOpt.get())
+                    .collect(Collectors.toList());
+            log.info(">>> Expanded roles: {}", expandedRoles);
+            user.setRoles(expandedRoles);
         }
+        log.info(">>> User Password: {}", user.getPassword());
         PasswordEncoder passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         user.setActive(true);

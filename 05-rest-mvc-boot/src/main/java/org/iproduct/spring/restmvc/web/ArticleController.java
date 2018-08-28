@@ -73,7 +73,8 @@ public class ArticleController {
     public ResponseEntity<Article> addArticle(@PathVariable String id, @RequestBody Article article) {
         if(!article.getId().equals(id)) throw new InvalidEntityIdException(
                 String.format("Article ID=%s from path is different from Entity ID=%s", id, article.getId()));
-        Article updated = service.updateArticle(article);
+        Article old = service.getArticleById(article.getId());
+        Article updated = service.updateArticle(old.getAuthorId(), article);
         log.info("Article updated: {}", updated);
         return ResponseEntity.ok(updated);
     }

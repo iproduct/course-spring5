@@ -2,9 +2,9 @@ package org.iproduct.spring.restmvc;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
-import org.iproduct.spring.restmvc.config.SpringRootConfig;
+import org.iproduct.spring.restmvc.config.TestRootConfig;
 import org.iproduct.spring.restmvc.config.SpringSecurityConfig;
-import org.iproduct.spring.restmvc.config.SpringWebConfig;
+import org.iproduct.spring.restmvc.config.TestWebConfig;
 import org.iproduct.spring.restmvc.dao.ArticleRepository;
 import org.iproduct.spring.restmvc.model.Article;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,11 +13,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.json.AutoConfigureJsonTesters;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.ContextHierarchy;
 import org.springframework.test.context.junit.jupiter.web.SpringJUnitWebConfig;
-import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
@@ -40,7 +38,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 
-@SpringJUnitWebConfig(classes = {SpringRootConfig.class, SpringWebConfig.class, SpringSecurityConfig.class})
+@SpringJUnitWebConfig(classes = {TestRootConfig.class, TestWebConfig.class, SpringSecurityConfig.class})
 //@ContextHierarchy({
 //        @ContextConfiguration(classes = SpringRootConfig.class),
 //        @ContextConfiguration(classes = SpringWebConfig.class)
@@ -83,12 +81,24 @@ public class ArticlesAPITests {
 
     private MockMvc mockMvc;
 
+    private String authToken;
+
 
     @BeforeEach
-    void setup(WebApplicationContext wac) {
+    void setup(WebApplicationContext wac) throws Exception {
         this.mockMvc = MockMvcBuilders.webAppContextSetup(wac)
                 .apply(springSecurity())
                 .build();
+
+//        MvcResult result = mockMvc.perform(post("/login")
+//                .accept("*/*")
+//                .header("Host", "localhost:9000")
+//                .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+//                .content("username=admin&password=admin"))
+//                .andDo(print())
+//                .andReturn();
+//        authToken = result.getResponse().getCookie("JSESSIONID").getValue();
+//        log.info(">>> AUTH Token: {}", authToken);
     }
 
     @Test
@@ -97,6 +107,7 @@ public class ArticlesAPITests {
         given(articleRepository.findAll()).willReturn(mockArticles);
 
         mockMvc.perform(get("/api/articles")
+                .with(user("admin").password("admin").roles("ADMIN"))
                 .accept(MediaType.parseMediaType("application/json;charset=UTF-8")))
                 .andDo(print())
                 .andExpect(status().isOk())
@@ -117,7 +128,8 @@ public class ArticlesAPITests {
         given(articleRepository.insert(any(Article.class))).willReturn(newArticle);
 
         mockMvc.perform(post("/api/articles")
-                    .with(httpBasic("admin","admin"))
+                    .with(user("admin").password("admin").roles("ADMIN"))
+//                    .with(httpBasic("admin","admin"))
                     .contentType(MediaType.APPLICATION_JSON)
                     .content(mapper.writeValueAsString(newArticle))
                     .accept(MediaType.parseMediaType("application/json;charset=UTF-8")))

@@ -8,7 +8,7 @@ public interface ArticleService {
     List<Article>  getArticles();
     List<Article> getArticlesByAuthorId(String userId);
     Article createArticle(Article article);
-    Article updateArticle(Article article);
+    Article updateArticle(String authorId, Article article);
     Article getArticleById(String id);
     Article deleteArticle(String id);
 }

@@ -62,7 +62,6 @@ public class User implements UserDetails {
     @JsonFormat(pattern = "uuuu-MM-dd HH:mm:ss")
     private LocalDateTime updated = LocalDateTime.now();
 
-    @java.beans.ConstructorProperties({"id", "username", "password", "fname", "lname", "roles", "active", "created", "updated"})
     public User(String id, @NotNull @Length(min = 3, max = 30) String username, @NotNull @Length(min = 5, max = 30) String password, @NotNull @Length(min = 1, max = 30) String fname, @NotNull @Length(min = 1, max = 30) String lname, List<Role> roles, boolean active, LocalDateTime created, LocalDateTime updated) {
         this.id = id;
         this.username = username;

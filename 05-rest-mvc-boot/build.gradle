@@ -7,7 +7,10 @@ buildscript {
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.2.0'
     }
+
+
 }
 
 apply plugin: 'java'
@@ -35,15 +38,14 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-data-mongodb')
     compile('org.springframework.boot:spring-boot-starter-actuator')
     runtime('org.springframework.boot:spring-boot-devtools')
-    providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
+//    providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
     compile('org.projectlombok:lombok')
     compile 'org.slf4j:slf4j-api:1.7.25'
     compile 'ch.qos.logback:logback-classic:1.2.3'
     compile 'io.springfox:springfox-swagger2:2.9.2'
     compile 'io.springfox:springfox-swagger-ui:2.9.2'
-    testCompile('org.springframework.boot:spring-boot-starter-test') {
-		exclude module: 'junit'
-	}
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    testCompile "org.springframework.security:spring-security-test:5.0.7.RELEASE"
     testRuntime 'org.junit.vintage:junit-vintage-engine:5.2.0'
     testCompile 'org.junit.jupiter:junit-jupiter-api:5.2.0'
     testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.2.0'
@@ -61,21 +63,6 @@ dependencies {
 
 }
 
-junitPlatform {
-    // platformVersion '1.2'
-    filters {
-        engines {
-            include 'junit-jupiter'
-            exclude 'junit-vintage'
-        }
-        tags {
-            // include 'fast'
-            exclude 'slow'
-        }
-        // includeClassNamePattern '.*Test'
-    }
-    // enableStandardTestTask true
-    // reportsDir file('build/test-results/junit-platform') // this is the default
-    // logManager 'org.apache.logging.log4j.jul.LogManager'
+test {
+    useJUnitPlatform()
 }
-

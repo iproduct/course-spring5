@@ -2,14 +2,13 @@ package org.iproduct.spring.restmvc;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
-import org.iproduct.spring.restmvc.config.SpringRootConfig;
+import org.iproduct.spring.restmvc.config.TestRootConfig;
 import org.iproduct.spring.restmvc.config.SpringSecurityConfig;
-import org.iproduct.spring.restmvc.config.SpringWebConfig;
+import org.iproduct.spring.restmvc.config.TestWebConfig;
 import org.iproduct.spring.restmvc.dao.ArticleRepository;
 import org.iproduct.spring.restmvc.model.Article;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.json.AutoConfigureJsonTesters;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -32,12 +31,13 @@ import static org.mockito.BDDMockito.then;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.httpBasic;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.user;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @RunWith(SpringRunner.class)
-@SpringJUnitWebConfig(classes = {SpringRootConfig.class, SpringWebConfig.class, SpringSecurityConfig.class})
+@SpringJUnitWebConfig(classes = {TestRootConfig.class, TestWebConfig.class, SpringSecurityConfig.class})
 @SpringBootTest(
         webEnvironment = SpringBootTest.WebEnvironment.MOCK,
         classes = RestMvcApplication.class)
@@ -68,6 +68,7 @@ public class RestMvcApplicationTests {
 		given(articleRepository.findAll()).willReturn(mockArticles);
 
 		mockMvc.perform(get("/api/articles")
+				.with(user("admin").password("admin").roles("ADMIN"))
 				.accept(MediaType.parseMediaType("application/json;charset=UTF-8")))
 				.andExpect(status().isOk())
 				.andExpect(content().contentType("application/json;charset=UTF-8"))
@@ -87,7 +88,7 @@ public class RestMvcApplicationTests {
 		given(articleRepository.insert(any(Article.class))).willReturn(newArticle);
 
 		mockMvc.perform(post("/api/articles")
-				.with(httpBasic("admin","admin"))
+				.with(user("admin").password("admin").roles("ADMIN"))
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(mapper.writeValueAsString(newArticle))
 				.accept(MediaType.parseMediaType("application/json;charset=UTF-8")))

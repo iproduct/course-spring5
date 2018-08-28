@@ -8,9 +8,11 @@ import org.iproduct.spring.restmvc.security.RestSavedRequestAwareAuthenticationS
 import org.iproduct.spring.restmvc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -22,6 +24,8 @@ import org.springframework.security.web.authentication.SimpleUrlAuthenticationFa
 
 @Configuration
 @EnableWebSecurity
+@EnableGlobalMethodSecurity(securedEnabled = true, jsr250Enabled = true, prePostEnabled = true)
+@ComponentScan("org.iproduct.spring.restmvc.security")
 @Slf4j
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
@@ -39,29 +43,21 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authenticationEntryPoint(restAuthenticationEntryPoint)
                 .and()
                     .authorizeRequests()
-                    .antMatchers("/login").permitAll()
-                    .antMatchers(HttpMethod.GET,"/..").authenticated()
-//                    .antMatchers("/..").permitAll()
-////                  .antMatchers(HttpMethod.POST, "/**").hasAnyRole("USER", "ADMIN")
-//                    .antMatchers(HttpMethod.PUT).hasAnyRole("USER", "ADMIN")
-//                    .antMatchers(HttpMethod.DELETE).hasAnyRole("USER", "ADMIN")
+                    .antMatchers("/v2/api-docs").permitAll()
+                    .antMatchers("/swagger*/**").permitAll()
+                    .antMatchers(HttpMethod.GET, "/**").authenticated()
+                    .antMatchers(HttpMethod.POST, "/**").hasAnyRole("USER", "ADMIN")
+                    .antMatchers(HttpMethod.PUT).hasAnyRole("USER", "ADMIN")
+                    .antMatchers(HttpMethod.DELETE).hasAnyRole("USER", "ADMIN")
                 .and()
                     .formLogin()
+                    .permitAll()
                     .successHandler(authenticationSuccessHandler)
                     .failureHandler(new SimpleUrlAuthenticationFailureHandler())
                 .and()
                     .logout();
-//        http.csrf().disable()
-//                .authorizeRequests()
-////                    .antMatchers(HttpMethod.GET, "/**").hasAnyRole("USER", "ADMIN")
-//                    .antMatchers(HttpMethod.POST, "/**").hasAnyRole("USER", "ADMIN")
-//                    .antMatchers(HttpMethod.PUT).hasAnyRole("USER", "ADMIN")
-//                    .antMatchers(HttpMethod.DELETE).hasAnyRole("USER", "ADMIN")
-//                    .antMatchers("/**").permitAll()
 //                .and()
-//                    .formLogin()
-//                .and()
-//                    .httpBasic();
+//                    .rememberMe();
     }
 
     @Bean
@@ -69,19 +65,9 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
         return username -> {
             User found = users.getUserByUsername(username);
             log.debug(">>> User authenticated for username: {} is: {}", username, found);
-            log.debug(">>> Auhorities: "+ found.getAuthorities());
+            log.debug(">>> Auhorities: " + found.getAuthorities());
             return found;
         };
-    }
-
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth)
-            throws Exception {
-
-        auth.inMemoryAuthentication()
-                .withUser("temporary").password("temporary").roles("ADMIN")
-                .and()
-                .withUser("user").password("userPass").roles("USER");
     }
 
     @Bean

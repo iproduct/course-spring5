@@ -9,5 +9,5 @@ import org.springframework.context.annotation.PropertySource;
 @ComponentScan("org.iproduct.spring.restmvc.service")
 @PropertySource("classpath:application.properties")
 @Import({ SpringSecurityConfig.class, MongoConfig.class })
-public class SpringRootConfig {
+public class TestRootConfig {
 }
