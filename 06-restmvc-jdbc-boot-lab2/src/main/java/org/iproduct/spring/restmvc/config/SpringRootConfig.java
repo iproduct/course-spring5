@@ -6,8 +6,8 @@ import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-@ComponentScan({"org.iproduct.spring.restmvc.service"})
+@ComponentScan({"org.iproduct.spring.restmvc"})
 @PropertySource("classpath:application.properties")
-@Import(MongoConfig.class)
+@Import(DataConfig.class)
 public class SpringRootConfig {
 }

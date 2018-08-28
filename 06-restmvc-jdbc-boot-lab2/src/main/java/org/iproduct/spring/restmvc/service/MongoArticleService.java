@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.Collection;
 import java.util.List;
 
 @Service
@@ -18,7 +19,7 @@ public class MongoArticleService implements ArticleService {
     ArticleRepository repo;
 
     @Override
-    public List<Article> getArticles() {
+    public Collection<Article> getArticles() {
         return repo.findAll();
     }
 
@@ -34,13 +35,13 @@ public class MongoArticleService implements ArticleService {
     }
 
     @Override
-    public Article getArticleById(String id) {
+    public Article getArticleById(long id) {
         return repo.findById(id).orElseThrow(() ->
                 new EntityNotFoundException(String.format("Article with ID=%s not found.", id)));
     }
 
     @Override
-    public Article deleteArticle(String id) {
+    public Article deleteArticle(long id) {
         Article old = repo.findById(id).orElseThrow( () ->
                 new EntityNotFoundException(String.format("Article with ID=%s not found.", id)));
         repo.deleteById(id);
