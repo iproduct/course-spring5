@@ -27,8 +27,7 @@ public class Role {
     @Length(min=2, max=30)
     private String name;
 
-    @Builder.Default
-    private Collection<Permission> permissions = new ArrayList<>();
+    private Collection<Permission> permissions;
 
     @java.beans.ConstructorProperties({"name", "permissions"})
     public Role(@NotNull @Length(min = 2, max = 30) String name, Collection<Permission> permissions) {
@@ -36,4 +35,7 @@ public class Role {
         this.permissions = permissions;
     }
 
+    public Role(@NotNull @Length(min = 2, max = 30) String name) {
+        this.name = name;
+    }
 }

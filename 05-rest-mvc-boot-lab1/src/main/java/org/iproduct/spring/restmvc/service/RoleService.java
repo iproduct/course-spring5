@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface RoleService {
     List<Role>  getRoles();
-    Optional<Role> getRoleByName(String asset);
+    Role getRoleByName(String name);
     Role createRoleIfNotExist(Role role);
     Role updateRole(Role role);
     void deleteRole(Role role);

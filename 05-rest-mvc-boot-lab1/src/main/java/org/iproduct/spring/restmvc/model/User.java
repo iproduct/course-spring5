@@ -4,7 +4,9 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NonNull;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -14,6 +16,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -24,35 +27,33 @@ import java.util.stream.Stream;
 @JsonIgnoreProperties({"authorities", "accountNonExpired", "accountNonLocked", "credentialsNonExpired", "enabled"})
 @Data
 @Builder
-@NoArgsConstructor
-@AllArgsConstructor
-@RequiredArgsConstructor
 public class User implements UserDetails {
     @Id
     private String id;
 
     @NotNull
-    @Length(min=3, max=30)
+    @Length(min = 3, max = 30)
     @NonNull
     private String username;
 
     @NotNull
-    @Length(min=5, max=30)
+    @Length(min = 5, max = 30)
     @NonNull
     private String password;
 
     @NotNull
-    @Length(min=1, max=30)
+    @Length(min = 1, max = 30)
     @NonNull
     private String fname;
 
     @NotNull
-    @Length(min=1, max=30)
+    @Length(min = 1, max = 30)
     @NonNull
     private String lname;
 
     @NonNull
-    private List<Role> roles;
+    @Builder.Default
+    private List<Role> roles = new ArrayList<>();
 
     @Builder.Default
     private boolean active = true;
@@ -64,6 +65,34 @@ public class User implements UserDetails {
     @Builder.Default
     @JsonFormat(pattern = "uuuu-MM-dd HH:mm:ss")
     private LocalDateTime updated = LocalDateTime.now();
+
+    public User(String id, @NotNull @Length(min = 3, max = 30) String username, @NotNull @Length(min = 5, max = 30) String password, @NotNull @Length(min = 1, max = 30) String fname, @NotNull @Length(min = 1, max = 30) String lname, List<Role> roles, boolean active, LocalDateTime created, LocalDateTime updated) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.fname = fname;
+        this.lname = lname;
+        this.roles = roles;
+        this.active = active;
+        this.created = created;
+        this.updated = updated;
+    }
+
+    public User() {
+    }
+
+    @java.beans.ConstructorProperties({"username", "password", "fname", "lname", "roles"})
+    public User(@NotNull @Length(min = 3, max = 30) String username,
+                @NotNull @Length(min = 5, max = 30) String password,
+                @NotNull @Length(min = 1, max = 30) String fname,
+                @NotNull @Length(min = 1, max = 30) String lname,
+                List<Role> roles) {
+        this.username = username;
+        this.password = password;
+        this.fname = fname;
+        this.lname = lname;
+        this.roles = roles;
+    }
 
 
     @JsonIgnore
@@ -85,8 +114,8 @@ public class User implements UserDetails {
                         Stream.concat(
                                 Stream.of(new SimpleGrantedAuthority(role.getName())),
                                 role.getPermissions().stream()
-                                    .map(Permission::toString)
-                                    .map(SimpleGrantedAuthority::new)
+                                        .map(Permission::toString)
+                                        .map(SimpleGrantedAuthority::new)
                         )).collect(Collectors.toList());
     }
 

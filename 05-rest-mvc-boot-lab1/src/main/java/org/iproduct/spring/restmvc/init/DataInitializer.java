@@ -21,8 +21,7 @@ import static org.iproduct.spring.restmvc.model.Role.ROLE_USER;
 
 @Component
 @Slf4j
-class DataInitializer implements ApplicationRunner {
-
+public class DataInitializer implements ApplicationRunner {
     @Autowired
     private ArticleService articles;
 
@@ -35,9 +34,10 @@ class DataInitializer implements ApplicationRunner {
     @Autowired
     private PermissionService permissions;
 
+
     @Override
-    public void run(ApplicationArguments args) {
-        log.info("Starting data initialization  ...");
+    public void run(ApplicationArguments args) throws Exception {
+        log.info("Strting data initialization ...");
         Permission ownArticleRead = permissions.createPermissionIfNotExist(new Permission(OWN, "ARTICLE", READ));
         Permission ownArticleUpdate = permissions.createPermissionIfNotExist(new Permission(OWN, "ARTICLE", UPDATE));
         Permission ownArticleDelete = permissions.createPermissionIfNotExist(new Permission(OWN, "ARTICLE", DELETE));
@@ -64,26 +64,5 @@ class DataInitializer implements ApplicationRunner {
         users.createUserIfNotExist(new User("admin", "admin", "DEFAULT", "ADMIN",
                 Arrays.asList(new Role[]{ roleAdmin })));
 
-
-
-//        this.articles
-//                .deleteAll()
-//                .thenMany(
-//                        Flux
-//                        .just("Article one", "Article two", "Article three")
-//                        .flatMap(
-//                                title -> this.articles.save(
-//                                        Article.builder().title(title).content("content of " + title).build())
-//                        )
-//                )
-//                .log()
-//                .subscribe(
-//                        null,
-//                        null,
-//                        () -> log.info("done initialization...")
-//                );
-//
     }
-
 }
-
