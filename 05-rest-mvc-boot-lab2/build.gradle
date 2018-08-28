@@ -44,3 +44,5 @@ dependencies {
 	testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.2.0'
 	testCompile 'org.hamcrest:hamcrest-library:1.3'
 	testCompile 'com.jayway.jsonpath:json-path-assert:2.4.0'}
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-webflux', version: '2.0.4.RELEASE'
+    testCompile('io.projectreactor:reactor-test')
