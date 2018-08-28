@@ -9,11 +9,15 @@ import org.hibernate.validator.constraints.Length;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 
 @Document(collection = "users")
@@ -48,7 +52,7 @@ public class User implements UserDetails {
     private String lname;
 
     @NonNull
-    private List<Role> role;
+    private List<Role> roles;
 
     @Builder.Default
     private boolean active = true;
@@ -76,7 +80,14 @@ public class User implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        return roles.stream()
+                .flatMap(role ->
+                        Stream.concat(
+                                Stream.of(new SimpleGrantedAuthority(role.getName())),
+                                role.getPermissions().stream()
+                                    .map(Permission::toString)
+                                    .map(SimpleGrantedAuthority::new)
+                        )).collect(Collectors.toList());
     }
 
 
