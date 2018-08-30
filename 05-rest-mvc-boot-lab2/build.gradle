@@ -45,5 +45,4 @@ dependencies {
 	testCompile 'org.hamcrest:hamcrest-library:1.3'
 	testCompile 'com.jayway.jsonpath:json-path-assert:2.4.0'
 	testCompile 'org.springframework.boot:spring-boot-starter-webflux:2.0.4.RELEASE'
-	testCompile 'org.reactivestreams:reactive-streams:1.0.2'
 }
