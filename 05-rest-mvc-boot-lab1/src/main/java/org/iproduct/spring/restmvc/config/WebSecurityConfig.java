@@ -39,12 +39,22 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authenticationEntryPoint(restAuthenticationEntryPoint)
             .and()
                 .authorizeRequests()
-                .antMatchers(HttpMethod.POST, "/**").hasRole("USER")
-                .antMatchers("/**").permitAll()
+                .antMatchers("/actuator/info").permitAll()
+                .antMatchers("/actuator/health").permitAll()
+                .antMatchers("/v2/api-docs").permitAll()
+                .antMatchers("/swagger*/**").permitAll()
+                .antMatchers(HttpMethod.GET, "/**").authenticated()
+                .antMatchers(HttpMethod.POST, "/**").hasAnyRole("USER", "ADMIN")
+                .antMatchers(HttpMethod.PUT, "/**").hasAnyRole("USER", "ADMIN")
+                .antMatchers(HttpMethod.DELETE, "/**").hasAnyRole("USER", "ADMIN")
             .and()
                 .formLogin()
+                .permitAll()
+                .successHandler(authenticationSuccessHandler)
+                .failureHandler(new SimpleUrlAuthenticationFailureHandler())
             .and()
-                .httpBasic();
+                .logout();
+
     }
 
     @Bean
@@ -62,7 +72,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public RestSavedRequestAwareAuthenticationSuccessHandler mySuccessHandler() {
-        new RestSavedRequestAwareAuthenticationSuccessHandler();
+        return new RestSavedRequestAwareAuthenticationSuccessHandler();
     }
 
     @Bean

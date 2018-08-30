@@ -9,6 +9,8 @@ import org.springframework.security.access.AccessDeniedException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import javax.validation.ConstraintViolationException;
+
 @ControllerAdvice("org.iproduct.spring.restmvc")
 @Slf4j
 public class ExceptionHandlerControllerAdvice {
@@ -19,8 +21,8 @@ public class ExceptionHandlerControllerAdvice {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
     }
 
-    @ExceptionHandler
-    public ResponseEntity<String> handle(InvalidEntityIdException ex){
+    @ExceptionHandler ({InvalidEntityIdException.class, ConstraintViolationException.class})
+    public ResponseEntity<String> handle(Exception ex){
         log.error(ex.getMessage());
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
     }

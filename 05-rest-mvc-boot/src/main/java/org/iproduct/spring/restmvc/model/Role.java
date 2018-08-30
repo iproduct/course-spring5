@@ -1,5 +1,6 @@
 package org.iproduct.spring.restmvc.model;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Data;
 import lombok.NonNull;
 import org.hibernate.validator.constraints.Length;
@@ -11,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 @Document(collection="roles")
+@JsonPropertyOrder({ "id", "name", "permissions"})
 @Data
 public class Role {
     public static String ROLE_USER = "ROLE_USER";

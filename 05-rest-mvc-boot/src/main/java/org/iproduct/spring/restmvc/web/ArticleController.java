@@ -4,7 +4,14 @@ import lombok.extern.slf4j.Slf4j;
 import org.iproduct.spring.restmvc.exception.InvalidEntityIdException;
 import org.iproduct.spring.restmvc.model.Article;
 import org.iproduct.spring.restmvc.service.ArticleService;
+import org.iproduct.spring.restmvc.web.resource.ArticleResource;
+import org.iproduct.spring.restmvc.web.resource.ArticleResourceAssembler;
+import org.iproduct.spring.restmvc.web.resource.UserResource;
+import org.iproduct.spring.restmvc.web.resource.UserResourceAssembler;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.ExposesResourceFor;
+import org.springframework.hateoas.Resource;
+import org.springframework.hateoas.Resources;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
@@ -15,14 +22,23 @@ import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import java.net.URI;
 import java.util.List;
+import java.util.stream.Collectors;
+
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
 @RestController
 @RequestMapping("/api/articles")
+@ExposesResourceFor(ArticleResource.class)
 @Slf4j
 public class ArticleController {
 
     @Autowired
     private ArticleService service;
+
+    @Autowired
+    private ArticleResourceAssembler assembler;
+
 
 //    @InitBinder()
 //    protected void initBinder(WebDataBinder binder) {
@@ -40,13 +56,29 @@ public class ArticleController {
 //    }
 
     @GetMapping
-    public List<Article> getArticles() {
-        return service.getArticles();
+    public List<ArticleResource> getArticles() { // Resources<Article>
+        return assembler.toResources(service.getArticles());
+
+//        return new Resources(
+//            service.getArticles().stream().map(article -> new Resource<Article>(
+//                article,
+//                    linkTo(methodOn(ArticleController.class)
+//                            .getArticleById(article.getId())).withSelfRel(),
+//                    linkTo(methodOn(UserController.class)
+//                            .getUserById(article.getAuthorId())).withRel("author")
+//                )).collect(Collectors.toList()),
+//                linkTo(methodOn(ArticleController.class).getArticles()).withSelfRel()
+//        );
     }
 
     @GetMapping("{id}")
-    public Article getArticles(@PathVariable String id) {
-        return service.getArticleById(id);
+    public ArticleResource getArticleById(@PathVariable String id) { // Resource<Article>
+        return assembler.toResource(service.getArticleById(id));
+
+//        Article article = service.getArticleById(id);
+//        return new Resource<Article>(article,
+//                linkTo(ArticleController.class).slash(article.getId()).withSelfRel()
+//        );
     }
 
     @DeleteMapping("{id}")

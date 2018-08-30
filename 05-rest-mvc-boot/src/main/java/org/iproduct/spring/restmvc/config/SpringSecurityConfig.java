@@ -43,6 +43,8 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authenticationEntryPoint(restAuthenticationEntryPoint)
                 .and()
                     .authorizeRequests()
+                    .antMatchers("/actuator/info").permitAll()
+                    .antMatchers("/actuator/health").permitAll()
                     .antMatchers("/v2/api-docs").permitAll()
                     .antMatchers("/swagger*/**").permitAll()
                     .antMatchers(HttpMethod.GET, "/**").authenticated()

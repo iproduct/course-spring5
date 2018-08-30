@@ -1,5 +1,6 @@
 package org.iproduct.spring.restmvc.service;
 
+import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
 import org.iproduct.spring.restmvc.dao.UserRepository;
 import org.iproduct.spring.restmvc.exception.EntityNotFoundException;
@@ -10,12 +11,19 @@ import org.iproduct.spring.restmvc.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.data.domain.Example;
+import org.springframework.security.access.prepost.PostFilter;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.access.prepost.PreFilter;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.validation.annotation.Validated;
 
+import javax.annotation.security.RolesAllowed;
+import javax.validation.Valid;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -25,6 +33,7 @@ import static org.iproduct.spring.restmvc.model.Role.ROLE_USER;
 @Service
 @Primary
 @Slf4j
+@Validated
 public class UserServiceImpl implements UserService {
 
     @Autowired
@@ -34,16 +43,17 @@ public class UserServiceImpl implements UserService {
     RoleService roles;
 
     @Override
+    @PostFilter("filterObject.id == authentication.principal.id")
     public List<User> getUsers() {
         return repo.findAll();
     }
 
     @Override
-    public User createUser(User user) {
+    public User createUser(@Valid User user) {
         user.setCreated(LocalDateTime.now());
         user.setUpdated(LocalDateTime.now());
-        if (user.getRoles().isEmpty()) {
-            user.getRoles().add(roles.getRoleByName(ROLE_USER).get());
+        if (user.getRoles() == null || user.getRoles().isEmpty()) {
+            user.setRoles(Lists.asList(roles.getRoleByName(ROLE_USER).get(), new Role[]{}));
         } else {
             List<Role> expandedRoles = user.getRoles().stream()
                     .map(role -> roles.getRoleByName(role.getName()))
@@ -90,6 +100,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @RolesAllowed("ROLE_ADMIN")
     public User deleteUser(String id) {
         User old = repo.findById(id).orElseThrow( () ->
                 new EntityNotFoundException(String.format("User with ID=%s not found.", id)));

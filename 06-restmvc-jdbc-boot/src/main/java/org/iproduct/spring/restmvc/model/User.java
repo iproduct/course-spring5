@@ -8,31 +8,25 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NonNull;
 import org.hibernate.validator.constraints.Length;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.hateoas.Identifiable;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.validation.constraints.NotNull;
-import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-@Document(collection = "users")
-@JsonIgnoreProperties(value = {"authorities", "name",
-        "accountNonExpired", "accountNonLocked", "credentialsNonExpired", "enabled"})
+
+@JsonIgnoreProperties({"authorities", "accountNonExpired", "accountNonLocked", "credentialsNonExpired", "enabled"})
 @Data
 @Builder
-public class User implements UserDetails, Identifiable<String> {
-
-    @Id
-    private String id;
+public class User implements UserDetails {
+//    @Id
+    private long id;
 
     @NotNull
     @Length(min = 3, max = 30)
@@ -40,31 +34,42 @@ public class User implements UserDetails, Identifiable<String> {
     private String username;
 
     @NotNull
-    @Length(min = 5, max = 30)
+    @Length(min = 4, max = 80)
     @NonNull
     private String password;
 
     @NotNull
-    @NonNull
     @Length(min = 1, max = 30)
+    @NonNull
     private String fname;
 
     @NotNull
-    @NonNull
     @Length(min = 1, max = 30)
+    @NonNull
     private String lname;
 
     @NonNull
-    private List<Role> roles = new ArrayList<>();
+    @Builder.Default
+    private String roles;
 
+    @Builder.Default
     private boolean active = true;
 
     @JsonFormat(pattern = "uuuu-MM-dd HH:mm:ss")
     private LocalDateTime created = LocalDateTime.now();
+
     @JsonFormat(pattern = "uuuu-MM-dd HH:mm:ss")
     private LocalDateTime updated = LocalDateTime.now();
 
-    public User(String id, @NotNull @Length(min = 3, max = 30) String username, @NotNull @Length(min = 5, max = 30) String password, @NotNull @Length(min = 1, max = 30) String fname, @NotNull @Length(min = 1, max = 30) String lname, List<Role> roles, boolean active, LocalDateTime created, LocalDateTime updated) {
+    public User(long id,
+                @NotNull @Length(min = 3, max = 30) String username,
+                @NotNull @Length(min = 4, max = 80) String password,
+                @NotNull @Length(min = 1, max = 30) String fname,
+                @NotNull @Length(min = 1, max = 30) String lname,
+                String roles,
+                boolean active,
+                LocalDateTime created,
+                LocalDateTime updated) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -80,7 +85,11 @@ public class User implements UserDetails, Identifiable<String> {
     }
 
     @java.beans.ConstructorProperties({"username", "password", "fname", "lname", "roles"})
-    public User(@NotNull @Length(min = 3, max = 30) String username, @Length(min = 5, max = 30) String password, @Length(min = 1, max = 30) String fname, @Length(min = 1, max = 30) String lname, List<Role> roles) {
+    public User(@NotNull @Length(min = 3, max = 30) String username,
+                @NotNull @Length(min = 4, max = 80) String password,
+                @NotNull @Length(min = 1, max = 30) String fname,
+                @NotNull @Length(min = 1, max = 30) String lname,
+                String roles) {
         this.username = username;
         this.password = password;
         this.fname = fname;
@@ -88,16 +97,8 @@ public class User implements UserDetails, Identifiable<String> {
         this.roles = roles;
     }
 
-
-//    @Override
-//    public String getPassword() {
-//        if(password.charAt(0) == '{')
-//            return password;
-//        else
-//            return "{noop}"+ password;
-//    }
-
     @JsonIgnore
+    @Override
     public String getPassword() {
         return password;
     }
@@ -107,19 +108,17 @@ public class User implements UserDetails, Identifiable<String> {
         this.password = password;
     }
 
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return getAuthoritiesForRoles(getRoles());
+        return Arrays.asList(roles.split("\\s*,\\s*")).stream()
+                .map(SimpleGrantedAuthority::new)
+                .collect(Collectors.toList());
     }
 
-    private Collection<GrantedAuthority> getAuthoritiesForRoles(List<Role> roles) {
-        return roles.stream()
-                .flatMap(role ->
-                    Stream.concat(
-                        Stream.of(new SimpleGrantedAuthority(role.getName())),
-                        role.getPermissions().stream().map(perm -> new SimpleGrantedAuthority(perm.toString()))
-                    )
-                ).collect(Collectors.toSet());
+    @Override
+    public String getUsername() {
+        return username;
     }
 
     @Override
@@ -141,5 +140,4 @@ public class User implements UserDetails, Identifiable<String> {
     public boolean isEnabled() {
         return active;
     }
-
 }

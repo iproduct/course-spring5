@@ -7,13 +7,15 @@ import lombok.NonNull;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.hateoas.Identifiable;
+import org.springframework.hateoas.ResourceSupport;
 
 import java.time.LocalDateTime;
 
 @Document(collection="articles")
 @Data
 @Builder
-public class Article {
+public class Article implements Identifiable<String> {
     @Id
     private String id;
     @NonNull
