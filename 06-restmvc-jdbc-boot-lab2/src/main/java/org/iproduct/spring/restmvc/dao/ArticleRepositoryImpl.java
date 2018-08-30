@@ -32,13 +32,7 @@ public class ArticleRepositoryImpl implements ArticleRepository {
     @Autowired
     private ArticleMapper articleMapper;
 
-//    @Autowired
-//    public void init(DataSource dataSource) {
-//        jdbcTemplate = new JdbcTemplate(dataSource);
-//    }
-
-
-    @Override
+   @Override
     public Collection<Article> findAll() {
         List<Article> articles = jdbcTemplate.query("select * from articles", articleMapper);
         log.info("Articles loaded: {}", articles);
@@ -78,10 +72,10 @@ public class ArticleRepositoryImpl implements ArticleRepository {
     @Override
     public Article save(Article article) {
         int count = this.jdbcTemplate.update(
-                "update articles set (title, content, author_id, picture_url, created, updated) = (?, ?, ?, ?, ?, ?) where id = ?",
+                "update articles set (title, content, picture_url, created, updated) = (?, ?, ?, ?, ?) where id = ?",
                 article.getTitle(),
                 article.getContent(),
-                article.getAuthorId(),
+//                article.getAuthorId(),
                 article.getPictureUrl(),
                 article.getCreated(),
                 article.getUpdated(),

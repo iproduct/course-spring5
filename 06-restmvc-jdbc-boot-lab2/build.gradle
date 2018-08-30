@@ -28,7 +28,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-actuator')
 	compile('org.springframework.boot:spring-boot-starter-aop')
 	compile('org.springframework.boot:spring-boot-starter-jdbc')
-//	compile('org.springframework.boot:spring-boot-starter-security')
+	compile('org.springframework.boot:spring-boot-starter-security')
 	compile 'org.apache.commons:commons-dbcp2:2.5.0'
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile 'org.slf4j:slf4j-api:1.7.25'
@@ -40,5 +40,5 @@ dependencies {
 	compileOnly('org.projectlombok:lombok')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 
-//	testCompile('org.springframework.security:spring-security-test')
+	testCompile('org.springframework.security:spring-security-test')
 }
