@@ -28,13 +28,13 @@ public class UserController {
     private UserResourceAssembler assembler;
 
     @GetMapping
-    public List<User> getUsers() {
-        return service.getUsers();
+    public List<UserResource> getUsers() {
+        return assembler.toResources(service.getUsers());
     }
 
     @GetMapping("{id}")
-    public User getUserById(@PathVariable String id) {
-        return service.getUserById(id);
+    public UserResource getUserById(@PathVariable String id) {
+        return assembler.toResource(service.getUserById(id));
     }
 
     @DeleteMapping("{id}")

@@ -56,24 +56,24 @@ public class ArticleController {
 //    }
 
     @GetMapping
-    public List<Article> getArticles() { // Resources<Article>
-        return service.getArticles();
+    public List <ArticleResource> getArticles() { // Resources<Article>
+        return assembler.toResources(service.getArticles());
 
 //        return new Resources(
-//            service.getArticles().stream().map(article -> new Resource<Article>(
-//                article,
-//                    linkTo(methodOn(ArticleController.class)
-//                            .getArticleById(article.getId())).withSelfRel(),
-//                    linkTo(methodOn(UserController.class)
-//                            .getUserById(article.getAuthorId())).withRel("author")
+//                service.getArticles().stream().map(article -> new Resource<Article>(
+//                        article,
+//                        linkTo(methodOn(ArticleController.class)
+//                                .getArticleById(article.getId())).withSelfRel(),
+//                        linkTo(methodOn(UserController.class)
+//                                .getUserById(article.getAuthorId())).withRel("author")
 //                )).collect(Collectors.toList()),
 //                linkTo(methodOn(ArticleController.class).getArticles()).withSelfRel()
 //        );
     }
 
     @GetMapping("{id}")
-    public Article getArticleById(@PathVariable String id) { // Resource<Article>
-        return service.getArticleById(id);
+    public ArticleResource getArticleById(@PathVariable String id) { // Resource<Article>
+        return assembler.toResource(service.getArticleById(id));
 
 //        Article article = service.getArticleById(id);
 //        return new Resource<Article>(article,

@@ -1,5 +1,7 @@
 package org.iproduct.spring.restmvc.web.resource;
 
+import lombok.extern.slf4j.Slf4j;
+import org.iproduct.spring.restmvc.exception.EntityNotFoundException;
 import org.iproduct.spring.restmvc.model.Article;
 import org.iproduct.spring.restmvc.model.User;
 import org.iproduct.spring.restmvc.service.UserService;
@@ -12,6 +14,7 @@ import org.springframework.hateoas.ResourceAssembler;
 import org.springframework.stereotype.Component;
 
 @Component
+@Slf4j
 public class ArticleResourceAssembler extends EmbeddableResourceAssemblerSupport<Article, ArticleResource, ArticleController> {
 
     @Autowired
@@ -36,8 +39,14 @@ public class ArticleResourceAssembler extends EmbeddableResourceAssemblerSupport
         final ArticleResource resource = createResourceWithId(article, article);
 
         // Add link to author resource
-        resource.add(userResourceAssembler.linkToSingleResource(userService.getUserById(article.getAuthorId()))
-                .withRel("author"));
+        try{
+            resource.add(userResourceAssembler
+                    .linkToSingleResource(userService.getUserById(article.getAuthorId()))
+                    .withRel("author"));
+        } catch(EntityNotFoundException ex) {
+            log.error("Error finding article author: {}", ex.getMessage());
+        }
+
 
         return resource;
     }

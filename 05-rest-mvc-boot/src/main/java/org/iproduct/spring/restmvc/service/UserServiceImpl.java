@@ -89,6 +89,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getUserById(String id) {
+        if(id == null) return null;
         return repo.findById(id).orElseThrow(() ->
                 new EntityNotFoundException(String.format("User with ID=%s not found.", id)));
     }
