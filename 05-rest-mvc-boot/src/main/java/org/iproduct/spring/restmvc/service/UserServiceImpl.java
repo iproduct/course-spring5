@@ -43,7 +43,7 @@ public class UserServiceImpl implements UserService {
     RoleService roles;
 
     @Override
-    @PostFilter("filterObject.id == authentication.principal.id")
+//    @PostFilter("filterObject.id == authentication.principal.id")
     public List<User> getUsers() {
         return repo.findAll();
     }

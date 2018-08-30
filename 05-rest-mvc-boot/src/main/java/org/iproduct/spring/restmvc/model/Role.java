@@ -1,5 +1,6 @@
 package org.iproduct.spring.restmvc.model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Data;
 import lombok.NonNull;
@@ -28,6 +29,7 @@ public class Role {
 
     private Collection<Permission> permissions = new ArrayList<>();
 
+    @JsonCreator
     @java.beans.ConstructorProperties({"name", "permissions"})
     public Role(@NotNull @Length(min = 2, max = 30) String name, Collection<Permission> permissions) {
         this.name = name;

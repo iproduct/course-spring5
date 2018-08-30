@@ -111,7 +111,7 @@ public class ArticlesAPITests {
                 .accept(MediaType.parseMediaType("application/json;charset=UTF-8")))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(content().contentType("application/json;charset=UTF-8"))
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
                 .andDo(result -> log.info(result.getResponse().getContentAsString()))
                 .andExpect(jsonPath("$.length()").value(3))
 //                .andExpect(jsonPath("$.length()").value(greaterThan(2)))
@@ -134,6 +134,7 @@ public class ArticlesAPITests {
                     .content(mapper.writeValueAsString(newArticle))
                     .accept(MediaType.parseMediaType("application/json;charset=UTF-8")))
                 .andExpect(status().isCreated())
+                .andDo(print())
                 .andExpect(header().string("location",
                         containsString("http://localhost/api/articles/" + newArticle.getId())));
 

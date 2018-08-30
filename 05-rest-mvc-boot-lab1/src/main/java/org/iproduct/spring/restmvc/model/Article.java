@@ -25,7 +25,6 @@ public class Article {
     @Length(min = 24, max = 24)
     private String authorId;
 
-    @Builder.Default
 //    @DateTimeFormat(pattern = "yyyy-MM-dd")
     @JsonFormat(pattern = "uuuu-MM-dd HH:mm:ss")
     private LocalDateTime created = LocalDateTime.now();

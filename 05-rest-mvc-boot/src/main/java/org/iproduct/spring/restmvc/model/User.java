@@ -1,9 +1,6 @@
 package org.iproduct.spring.restmvc.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.*;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NonNull;
@@ -79,6 +76,7 @@ public class User implements UserDetails, Identifiable<String> {
     public User() {
     }
 
+    @JsonCreator
     @java.beans.ConstructorProperties({"username", "password", "fname", "lname", "roles"})
     public User(@NotNull @Length(min = 3, max = 30) String username, @Length(min = 5, max = 30) String password, @Length(min = 1, max = 30) String fname, @Length(min = 1, max = 30) String lname, List<Role> roles) {
         this.username = username;
@@ -115,10 +113,10 @@ public class User implements UserDetails, Identifiable<String> {
     private Collection<GrantedAuthority> getAuthoritiesForRoles(List<Role> roles) {
         return roles.stream()
                 .flatMap(role ->
-                    Stream.concat(
-                        Stream.of(new SimpleGrantedAuthority(role.getName())),
-                        role.getPermissions().stream().map(perm -> new SimpleGrantedAuthority(perm.toString()))
-                    )
+                        Stream.concat(
+                                Stream.of(new SimpleGrantedAuthority(role.getName())),
+                                role.getPermissions().stream().map(perm -> new SimpleGrantedAuthority(perm.toString()))
+                        )
                 ).collect(Collectors.toSet());
     }
 

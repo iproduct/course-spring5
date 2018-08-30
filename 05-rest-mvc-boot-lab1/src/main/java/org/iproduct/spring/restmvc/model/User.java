@@ -98,7 +98,7 @@ public class User implements UserDetails {
     @JsonIgnore
     @Override
     public String getPassword() {
-        return null;
+        return password;
     }
 
     @JsonProperty

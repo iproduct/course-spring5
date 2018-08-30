@@ -56,8 +56,8 @@ public class ArticleController {
 //    }
 
     @GetMapping
-    public List<ArticleResource> getArticles() { // Resources<Article>
-        return assembler.toResources(service.getArticles());
+    public List<Article> getArticles() { // Resources<Article>
+        return service.getArticles();
 
 //        return new Resources(
 //            service.getArticles().stream().map(article -> new Resource<Article>(
@@ -72,8 +72,8 @@ public class ArticleController {
     }
 
     @GetMapping("{id}")
-    public ArticleResource getArticleById(@PathVariable String id) { // Resource<Article>
-        return assembler.toResource(service.getArticleById(id));
+    public Article getArticleById(@PathVariable String id) { // Resource<Article>
+        return service.getArticleById(id);
 
 //        Article article = service.getArticleById(id);
 //        return new Resource<Article>(article,

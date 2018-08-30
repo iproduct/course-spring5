@@ -83,9 +83,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User updateUser(User user) {
-        User found = repo.findById(user.getId()).orElseThrow(() -> {
-            throw new InvalidEntityIdException(String.format("User with ID=%s does not exist.", user.getId()));
-        });
+        User found = repo.findById(user.getId()).orElseThrow(() ->
+            new InvalidEntityIdException(String.format("User with ID=%s does not exist.", user.getId()))
+        );
         if(!found.getUsername().equals(user.getUsername())) {
             throw new InvalidEntityIdException(String.format("Username '%s' could not be modified to '%s'.",
                     found.getUsername(), user.getUsername()));
@@ -96,9 +96,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User deleteUser(String userId) {
-        User found = repo.findById(userId).orElseThrow(() -> {
-            throw new InvalidEntityIdException(String.format("User with ID=%s does not exist.",userId));
-        });
+        User found = repo.findById(userId).orElseThrow(() ->
+            new InvalidEntityIdException(String.format("User with ID=%s does not exist.",userId))
+        );
         repo.deleteById(userId);
         return found;
     }

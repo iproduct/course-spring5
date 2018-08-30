@@ -47,7 +47,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                     .antMatchers("/actuator/health").permitAll()
                     .antMatchers("/v2/api-docs").permitAll()
                     .antMatchers("/swagger*/**").permitAll()
-                    .antMatchers(HttpMethod.GET, "/**").authenticated()
+                    .antMatchers(HttpMethod.GET, "/**").permitAll()
                     .antMatchers(HttpMethod.POST, "/**").hasAnyRole("USER", "ADMIN")
                     .antMatchers(HttpMethod.PUT).hasAnyRole("USER", "ADMIN")
                     .antMatchers(HttpMethod.DELETE).hasAnyRole("USER", "ADMIN")

@@ -1,8 +1,6 @@
 package org.iproduct.spring.restmvc.model;
 
-import lombok.Builder;
-import lombok.Data;
-import lombok.NonNull;
+import lombok.*;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -14,6 +12,7 @@ import java.util.Collection;
 @Document(collection="roles")
 @Data
 @Builder
+@AllArgsConstructor
 public class Role {
 
     public static final String ROLE_USER ="ROLE_USER";
