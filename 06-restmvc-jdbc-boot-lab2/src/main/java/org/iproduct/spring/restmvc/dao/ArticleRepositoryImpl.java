@@ -77,12 +77,31 @@ public class ArticleRepositoryImpl implements ArticleRepository {
 
     @Override
     public Article save(Article article) {
-        return null;
+        int count = this.jdbcTemplate.update(
+                "update articles set (title, content, author_id, picture_url, created, updated) = (?, ?, ?, ?, ?, ?) where id = ?",
+                article.getTitle(),
+                article.getContent(),
+                article.getAuthorId(),
+                article.getPictureUrl(),
+                article.getCreated(),
+                article.getUpdated(),
+                article.getId());
+        log.info("Article updated: {}", article);
+        return article;
     }
 
     @Override
     public boolean deleteById(long articleId) {
-        return false;
+        int count = this.jdbcTemplate.update(
+                "delete from articles where id = ?",
+                Long.valueOf(articleId));
+        return count > 0;
+    }
+
+    @Override
+    public long count() {
+        PreparedStatementCreator p;
+        return jdbcTemplate.queryForObject("select count(*) from articles", Long.class);
     }
 
     @PostConstruct

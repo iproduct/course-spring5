@@ -11,4 +11,5 @@ public interface ArticleRepository {
     Article insert(Article article);
     Article save(Article article);
     boolean deleteById(long articleId);
+    long count();
 }
