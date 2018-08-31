@@ -17,7 +17,7 @@ import java.util.Collection;
 import java.util.Optional;
 
 @Repository
-//@Transactional
+@Transactional
 public class ArticleRepositoryHibernate implements ArticleRepository {
 
     private TransactionTemplate transactionTemplate;
@@ -50,7 +50,9 @@ public class ArticleRepositoryHibernate implements ArticleRepository {
 
     @Override
     public long count() {
-        return 0;
+        return this.sessionFactory.getCurrentSession()
+                .createQuery("select count(article) from Article article", Long.class)
+                .uniqueResult();
     }
 
     @Override
@@ -58,7 +60,7 @@ public class ArticleRepositoryHibernate implements ArticleRepository {
         this.transactionTemplate.execute(new TransactionCallbackWithoutResult() {
             public void doInTransactionWithoutResult(TransactionStatus status) {
                 sessionFactory.getCurrentSession()
-                        .persist(article);
+                        .saveOrUpdate(article);
             }
         });
 
@@ -73,7 +75,7 @@ public class ArticleRepositoryHibernate implements ArticleRepository {
             throw new EntityNotFoundException("Article with ID=" + article.getId() + " does not exist.");
         }
        return (Article) this.sessionFactory.getCurrentSession()
-                .<Article>merge(article);
+                .merge(article);
     }
 
     @Override

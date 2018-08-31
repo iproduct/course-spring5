@@ -2,17 +2,23 @@ package org.iproduct.spring.restmvc.web;
 
 import lombok.extern.slf4j.Slf4j;
 import org.iproduct.spring.restmvc.exception.InvalidEntityIdException;
+import org.iproduct.spring.restmvc.model.Article;
 import org.iproduct.spring.restmvc.model.User;
 import org.iproduct.spring.restmvc.service.UserService;
+import org.iproduct.spring.restmvc.web.resource.ArticleResource;
 import org.iproduct.spring.restmvc.web.resource.UserResource;
 import org.iproduct.spring.restmvc.web.resource.UserResourceAssembler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.ExposesResourceFor;
+import org.springframework.hateoas.Link;
+import org.springframework.hateoas.Resources;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PostFilter;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
 
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -28,8 +34,15 @@ public class UserController {
     private UserResourceAssembler assembler;
 
     @GetMapping
-    public List<UserResource> getUsers() {
-        return assembler.toResources(service.getUsers());
+    public Resources<List<UserResource>> getUsers() {
+        List<User> users = service.getUsers();
+        List<UserResource> userResources = assembler.toResources(service.getUsers());
+        List<Link> links = new ArrayList<>();
+        if(users.size() > 0) {
+            links.add(assembler.linkToSingleResource(users.get(0)).withRel("first"));
+            links.add(assembler.linkToSingleResource(users.get(0)).withRel("last"));
+        }
+        return new Resources(userResources, links);
     }
 
     @GetMapping("{id}")

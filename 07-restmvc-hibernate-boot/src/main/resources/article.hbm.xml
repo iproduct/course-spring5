@@ -16,10 +16,40 @@
 
         <property name = "title" column = "title" type = "string"/>
         <property name = "content" column = "content" type = "string"/>
-        <!--<property name = "authorId" column = "author_id" type = "string"/>-->
-        <property name = "pictureUrl" column = "picture_url" type = "string"/>
-        <property name = "created" column = "created_date" type = "timestamp"/>
-        <property name = "updated" column = "created_date" type = "timestamp"/>
+        <!--<property name = "authorId" column = "author_id" type = "long"/>-->
 
+        <property name = "pictureUrl" column = "picture_url" type = "string"/>
+        <many-to-one name="author" class="org.iproduct.spring.restmvc.model.User" fetch="select" cascade="refresh" lazy="false">
+            <column name="author_id" not-null="true" />
+        </many-to-one>
+
+        <property name = "created" column = "created_timestamp" type = "timestamp" />
+        <property name="updated" column="updated_timestamp" type = "timestamp" />
+    </class>
+
+    <class name = "org.iproduct.spring.restmvc.model.User" table = "USERS">
+
+        <meta attribute = "class-description">
+            This class contains the user details.
+        </meta>
+
+        <id name = "id" type = "long" column = "id">
+            <generator class="identity"/>
+        </id>
+
+        <property name = "username" column = "username" type = "string"/>
+        <property name = "password" column = "password" type = "string"/>
+        <property name = "fname" column = "fname" type = "string"/>
+        <property name = "lname" column = "lname" type = "string"/>
+        <property name = "roles" column = "roles" type = "string"/>
+        <bag name="articles" table="ARTICLES" inverse="true" lazy="true" fetch="select" cascade="refresh">
+            <key>
+                <column name="author_id" not-null="true" />
+            </key>
+            <one-to-many class="org.iproduct.spring.restmvc.model.Article"/>
+        </bag>
+
+        <property name = "created" column = "created_timestamp" type = "timestamp" />
+        <property name="updated" column="updated_timestamp" type = "timestamp" />
     </class>
 </hibernate-mapping>

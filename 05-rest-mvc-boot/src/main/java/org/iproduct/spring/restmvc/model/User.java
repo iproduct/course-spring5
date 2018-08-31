@@ -25,7 +25,6 @@ import java.util.stream.Stream;
 @JsonIgnoreProperties(value = {"authorities", "name",
         "accountNonExpired", "accountNonLocked", "credentialsNonExpired", "enabled"})
 @Data
-@Builder
 public class User implements UserDetails, Identifiable<String> {
 
     @Id

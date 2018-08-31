@@ -7,11 +7,11 @@ import org.iproduct.spring.restmvc.model.User;
 import org.iproduct.spring.restmvc.service.UserService;
 import org.iproduct.spring.restmvc.web.ArticleController;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.hateoas.EntityLinks;
-import org.springframework.hateoas.Link;
-import org.springframework.hateoas.RelProvider;
-import org.springframework.hateoas.ResourceAssembler;
+import org.springframework.hateoas.*;
 import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Component
 @Slf4j
@@ -33,19 +33,24 @@ public class ArticleResourceAssembler extends EmbeddableResourceAssemblerSupport
         return entityLinks.linkToSingleResource(ArticleResource.class, article);
     }
 
-
     @Override
     public ArticleResource toResource(Article article) {
         final ArticleResource resource = createResourceWithId(article, article);
 
-        // Add link to author resource
-        try{
+        try {
+            User author = userService.getUserById(article.getAuthorId());
+            // Add link to author resource
             resource.add(userResourceAssembler
-                    .linkToSingleResource(userService.getUserById(article.getAuthorId()))
+                    .linkToSingleResource(author)
                     .withRel("author"));
         } catch(EntityNotFoundException ex) {
             log.error("Error finding article author: {}", ex.getMessage());
         }
+
+//        List<User> authors = new ArrayList<>();
+//        authors.add(author);
+
+//        resource.setEmbeddeds(new Resources(userResourceAssembler.toEmbeddable(authors)));
 
 
         return resource;

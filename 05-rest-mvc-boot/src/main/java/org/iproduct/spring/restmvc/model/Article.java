@@ -14,7 +14,6 @@ import java.time.LocalDateTime;
 
 @Document(collection="articles")
 @Data
-@Builder
 public class Article implements Identifiable<String> {
     @Id
     private String id;
@@ -26,7 +25,6 @@ public class Article implements Identifiable<String> {
     @Length(min = 24, max = 24)
     private String authorId;
 
-    @Builder.Default
 //    @DateTimeFormat(pattern = "yyyy-MM-dd")
     @JsonFormat(pattern = "uuuu-MM-dd HH:mm:ss")
     private LocalDateTime created = LocalDateTime.now();

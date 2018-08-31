@@ -10,6 +10,7 @@ import org.iproduct.spring.restmvc.web.resource.UserResource;
 import org.iproduct.spring.restmvc.web.resource.UserResourceAssembler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.ExposesResourceFor;
+import org.springframework.hateoas.Link;
 import org.springframework.hateoas.Resource;
 import org.springframework.hateoas.Resources;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +22,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -56,8 +58,15 @@ public class ArticleController {
 //    }
 
     @GetMapping
-    public List <ArticleResource> getArticles() { // Resources<Article>
-        return assembler.toResources(service.getArticles());
+    public Resources<List<ArticleResource>> getArticles() { // Resources<Article>
+        List<Article> articles = service.getArticles();
+        List<ArticleResource> articleResources = assembler.toResources(articles);
+        List<Link> links = new ArrayList<>();
+        if(articles.size() > 0) {
+            links.add(assembler.linkToSingleResource(articles.get(0)).withRel("first"));
+            links.add(assembler.linkToSingleResource(articles.get(0)).withRel("last"));
+        }
+        return new Resources(articleResources, links);
 
 //        return new Resources(
 //                service.getArticles().stream().map(article -> new Resource<Article>(
@@ -102,7 +111,7 @@ public class ArticleController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<Article> addArticle(@PathVariable String id, @RequestBody Article article) {
+    public ResponseEntity<Article> updateArticle(@PathVariable String id, @RequestBody Article article) {
         if(!article.getId().equals(id)) throw new InvalidEntityIdException(
                 String.format("Article ID=%s from path is different from Entity ID=%s", id, article.getId()));
         Article old = service.getArticleById(article.getId());

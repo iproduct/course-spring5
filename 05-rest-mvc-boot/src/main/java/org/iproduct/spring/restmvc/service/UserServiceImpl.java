@@ -11,6 +11,7 @@ import org.iproduct.spring.restmvc.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.data.domain.Example;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.access.prepost.PostFilter;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.access.prepost.PreFilter;
@@ -43,7 +44,7 @@ public class UserServiceImpl implements UserService {
     RoleService roles;
 
     @Override
-//    @PostFilter("filterObject.id == authentication.principal.id")
+    @PostFilter("filterObject.id == authentication.principal.id or hasAuthority('ALL_USER_READ')")
     public List<User> getUsers() {
         return repo.findAll();
     }
@@ -101,7 +102,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @RolesAllowed("ROLE_ADMIN")
+//    @RolesAllowed("ROLE_ADMIN")
+    @Secured("ROLE_ADMIN")
     public User deleteUser(String id) {
         User old = repo.findById(id).orElseThrow( () ->
                 new EntityNotFoundException(String.format("User with ID=%s not found.", id)));

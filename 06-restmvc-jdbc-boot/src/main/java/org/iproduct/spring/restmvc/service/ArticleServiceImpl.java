@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionDefinition;
 import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.event.TransactionPhase;
 import org.springframework.transaction.event.TransactionalEventListener;
@@ -89,14 +90,14 @@ public class ArticleServiceImpl implements ArticleService {
         return repo.count();
     }
 
-    // Declarative transaction
-//    @Transactional
-//    public List<Article> createArticlesBatch(List<Article> articles) {
-//        List<Article> created = articles.stream()
-//                .map(article -> addArticle(article))
-//                .collect(Collectors.toList());
-//        return created;
-//    }
+//     Declarative transaction
+    @Transactional(propagation = Propagation.SUPPORTS)
+    public List<Article> createArticlesBatch(List<Article> articles) {
+        List<Article> created = articles.stream()
+                .map(article -> addArticle(article))
+                .collect(Collectors.toList());
+        return created;
+    }
 
 ////    Programmatic transaction
 //    public List<Article> createArticlesBatch(List<Article> articles) {
@@ -119,31 +120,31 @@ public class ArticleServiceImpl implements ArticleService {
 //    }
 
     // Managing transaction directly using PlatformTransactionManager
-    public List<Article> createArticlesBatch(List<Article> articles) {
-        DefaultTransactionDefinition def = new DefaultTransactionDefinition();
-        // explicitly setting the transaction name is something that can only be done programmatically
-        def.setName("createArticlesBatchTransaction");
-        def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);
-        def.setTimeout(5);
-
-        // Do in transaction
-        TransactionStatus status = transactionManager.getTransaction(def);
-        List<Article> created = articles.stream()
-            .map(article -> {
-                try {
-                    Article resultArticle = addArticle(article);
-                    applicationEventPublisher.publishEvent(new ArticleCreationEvent(resultArticle));
-                    return resultArticle;
-                } catch (ConstraintViolationException ex) {
-                    log.error(">>> Constraint violation inserting article: {} - {}", article, ex.getMessage());
-                    transactionManager.rollback(status); // ROLLBACK
-                    throw ex;
-                }
-            }).collect(Collectors.toList());
-
-        transactionManager.commit(status); // COMMIT
-        return created;
-    }
+//    public List<Article> createArticlesBatch(List<Article> articles) {
+//        DefaultTransactionDefinition def = new DefaultTransactionDefinition();
+//        // explicitly setting the transaction name is something that can only be done programmatically
+//        def.setName("createArticlesBatchTransaction");
+//        def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);
+//        def.setTimeout(5);
+//
+//        // Do in transaction
+//        TransactionStatus status = transactionManager.getTransaction(def);
+//        List<Article> created = articles.stream()
+//            .map(article -> {
+//                try {
+//                    Article resultArticle = addArticle(article);
+//                    applicationEventPublisher.publishEvent(new ArticleCreationEvent(resultArticle));
+//                    return resultArticle;
+//                } catch (ConstraintViolationException ex) {
+//                    log.error(">>> Constraint violation inserting article: {} - {}", article, ex.getMessage());
+//                    transactionManager.rollback(status); // ROLLBACK
+//                    throw ex;
+//                }
+//            }).collect(Collectors.toList());
+//
+//        transactionManager.commit(status); // COMMIT
+//        return created;
+//    }
 
     @TransactionalEventListener
     public void handleArticleCreatedTransactionCommit(ArticleCreationEvent creationEvent) {

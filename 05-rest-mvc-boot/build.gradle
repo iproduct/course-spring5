@@ -18,6 +18,12 @@ apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'war'
+apply plugin: 'idea'
+idea {
+    module {
+        downloadJavadoc = true
+    }
+}
 
 group = 'org.iproduct.spring'
 version = '0.0.1-SNAPSHOT'
