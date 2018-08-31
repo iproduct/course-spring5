@@ -8,16 +8,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.EntityLinks;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.RelProvider;
+import org.springframework.hateoas.Resources;
 import org.springframework.hateoas.mvc.IdentifiableResourceAssemblerSupport;
 import org.springframework.stereotype.Component;
 
 import java.awt.print.Book;
+import java.util.List;
 
 @Component
 public class UserResourceAssembler extends EmbeddableResourceAssemblerSupport<User, UserResource, UserController> {
 
     @Autowired
     private ArticleResourceAssembler articleResourceAssembler;
+
 
     @Autowired
     ArticleService articleService;
@@ -38,9 +41,13 @@ public class UserResourceAssembler extends EmbeddableResourceAssemblerSupport<Us
         final UserResource resource = createResourceWithId(user, user);
 
         // Add (multiple) links to authored books
-        for(Article article : articleService.getArticlesByAuthorId(user.getId())) {
+        List<Article> articles = articleService.getArticlesByAuthorId(user.getId());
+        for(Article article : articles) {
             resource.add( articleResourceAssembler.linkToSingleResource(article).withRel("authored-articles") );
         }
+        resource.setEmbeddeds(new Resources(articleResourceAssembler.toEmbeddable(articles)));
+
+
 
         return resource;
     }

@@ -1,0 +1,25 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name = "org.iproduct.spring.restmvc.model.Article" table = "ARTICLES">
+
+        <meta attribute = "class-description">
+            This class contains the articles details.
+        </meta>
+
+        <id name = "id" type = "long" column = "id">
+            <generator class="identity"/>
+        </id>
+
+        <property name = "title" column = "title" type = "string"/>
+        <property name = "content" column = "content" type = "string"/>
+        <!--<property name = "authorId" column = "author_id" type = "string"/>-->
+        <property name = "pictureUrl" column = "picture_url" type = "string"/>
+        <property name = "created" column = "created_date" type = "timestamp"/>
+        <property name = "updated" column = "created_date" type = "timestamp"/>
+
+    </class>
+</hibernate-mapping>
