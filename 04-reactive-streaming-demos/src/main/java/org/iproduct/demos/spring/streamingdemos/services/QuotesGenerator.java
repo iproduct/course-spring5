@@ -30,7 +30,7 @@ public class QuotesGenerator {
         return Flux.interval(period)
                 .map(index -> {
                     Quote quote = quotes.get(index.intValue() % quotes.size());
-                    quote.setPrice(quote.getPrice() * (0.95 + 0.1 * Math.random()));
+                    quote.setPrice(quote.getPrice() * (0.85 + 0.3 * Math.random()));
                     return new Quote(quote.getSymbol(), quote.getPrice());
                 })
                 .share()

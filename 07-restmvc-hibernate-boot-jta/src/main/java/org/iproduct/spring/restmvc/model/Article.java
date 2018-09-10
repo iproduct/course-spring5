@@ -3,10 +3,8 @@ package org.iproduct.spring.restmvc.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonView;
 import lombok.*;
-import net.bytebuddy.implementation.bind.annotation.Default;
 import org.hibernate.validator.constraints.Length;
 
-import java.time.LocalDateTime;
 import java.util.Date;
 
 @Data

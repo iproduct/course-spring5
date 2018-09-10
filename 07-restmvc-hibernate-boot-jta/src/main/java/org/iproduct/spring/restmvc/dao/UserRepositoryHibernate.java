@@ -12,7 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.TransactionCallbackWithoutResult;
 import org.springframework.transaction.support.TransactionTemplate;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -64,6 +63,7 @@ public class UserRepositoryHibernate implements UserRepository {
     }
 
     @Override
+    @Transactional
     public User insert(User user) {
         this.transactionTemplate.execute(new TransactionCallbackWithoutResult() {
             public void doInTransactionWithoutResult(TransactionStatus status) {

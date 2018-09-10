@@ -95,11 +95,15 @@ public class ArticleServiceImpl implements ArticleService {
     public List<Article> createArticlesBatch(List<Article> articles) {
         List<Article> created = articles.stream()
                 .map(article -> addArticle(article))
+                .map(article -> {
+                    applicationEventPublisher.publishEvent(new ArticleCreationEvent(article));
+                    return article;
+                })
                 .collect(Collectors.toList());
         return created;
     }
 
-////    Programmatic transaction
+//    //    Programmatic transaction
 //    public List<Article> createArticlesBatch(List<Article> articles) {
 //        return transactionTemplate.execute(new TransactionCallback<List<Article>>() {
 //            // the code in this method executes in a transactional context
@@ -119,7 +123,26 @@ public class ArticleServiceImpl implements ArticleService {
 //        });
 //    }
 
-//   // Managing transaction directly using PlatformTransactionManager
+    //    Programmatic transaction
+//    public List<Article> createArticlesBatch(List<Article> articles) {
+//        return transactionTemplate.execute(status -> {
+//                List<Article> created = articles.stream()
+//                        .map(article -> {
+//                            try {
+//                                Article art = addArticle(article);
+//                                applicationEventPublisher.publishEvent(new ArticleCreationEvent(art));
+//                                return art;
+//                            } catch (ConstraintViolationException ex) {
+//                                log.error(">>> Constraint violation inserting articles: {} - {}", article, ex.getMessage());
+//                                status.setRollbackOnly();
+//                                return null;
+//                            }
+//                        }).collect(Collectors.toList());
+//                return created;
+//            });
+//    }
+
+   // Managing transaction directly using PlatformTransactionManager
 //    public List<Article> createArticlesBatch(List<Article> articles) {
 //        DefaultTransactionDefinition def = new DefaultTransactionDefinition();
 //        // explicitly setting the transaction name is something that can only be done programmatically

@@ -12,7 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.TransactionCallbackWithoutResult;
 import org.springframework.transaction.support.TransactionTemplate;
 
-import javax.validation.Valid;
 import java.util.Collection;
 import java.util.Optional;
 
@@ -57,6 +56,7 @@ public class ArticleRepositoryHibernate implements ArticleRepository {
     }
 
     @Override
+    @Transactional
     public Article insert(Article article) {
         this.transactionTemplate.execute(new TransactionCallbackWithoutResult() {
             public void doInTransactionWithoutResult(TransactionStatus status) {

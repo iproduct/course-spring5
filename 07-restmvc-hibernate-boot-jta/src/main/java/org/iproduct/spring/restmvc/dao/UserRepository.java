@@ -3,7 +3,6 @@ package org.iproduct.spring.restmvc.dao;
 import org.iproduct.spring.restmvc.model.User;
 
 import javax.validation.Valid;
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 

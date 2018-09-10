@@ -57,7 +57,7 @@ public class DataInitializer implements CommandLineRunner {
             List<Article> mockArticles = Arrays.asList(
                     new Article("Welcome to Spring 5", "Spring 5 is great beacuse ...", users.get(0)),
                     new Article("Dependency Injection", "Should I use DI or lookup ...", users.get(0)),
-                    new Article("New in Spring 5", "There are several ways to configure Spring beans.", users.get(1))
+                    new Article("Ne", "There are several ways to configure Spring beans.", users.get(1))
             );
             try {
                 List<Article> created = articleService.createArticlesBatch(mockArticles);

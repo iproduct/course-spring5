@@ -1,27 +1,26 @@
 package org.iproduct.spring.restmvc.service;
 
-import io.swagger.annotations.Authorization;
 import lombok.extern.slf4j.Slf4j;
 import org.iproduct.spring.restmvc.dao.ArticleRepository;
 import org.iproduct.spring.restmvc.events.ArticleCreationEvent;
 import org.iproduct.spring.restmvc.exception.EntityNotFoundException;
 import org.iproduct.spring.restmvc.exception.InvalidEntityIdException;
 import org.iproduct.spring.restmvc.model.Article;
-import org.iproduct.spring.restmvc.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.annotation.Primary;
-import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.event.TransactionPhase;
 import org.springframework.transaction.event.TransactionalEventListener;
+import org.springframework.transaction.support.TransactionCallback;
 import org.springframework.transaction.support.TransactionTemplate;
 import org.springframework.validation.annotation.Validated;
 
+import javax.validation.ConstraintViolationException;
 import javax.validation.Valid;
-import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -58,6 +57,7 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
+    @Transactional
     public Article addArticle(@Valid Article article) {
         article.setCreated(new Date());
         article.setUpdated(new Date());
@@ -149,7 +149,7 @@ public class ArticleServiceImpl implements ArticleService {
 //                    throw ex;
 //                }
 //            }).collect(Collectors.toList());
-//
+
 //        transactionManager.commit(status); // COMMIT
 //        return created;
 //    }

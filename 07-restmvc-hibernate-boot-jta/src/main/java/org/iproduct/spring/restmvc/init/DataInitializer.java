@@ -9,12 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.validation.ConstraintViolationException;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
 @Component
@@ -23,7 +20,7 @@ public class DataInitializer implements CommandLineRunner {
     private static final List<Article> mockArticles = Arrays.asList(
             new Article("Welcome to Spring 5", "Spring 5 is great beacuse ..."),
             new Article("Dependency Injection", "Should I use DI or lookup ..."),
-            new Article("New in Spring 5", "There are several ways to configure Spring beans.")
+            new Article("N", "There are several ways to configure Spring beans.")
     );
 
     @Autowired
@@ -48,7 +45,7 @@ public class DataInitializer implements CommandLineRunner {
                     new User("ivan", "ivan", "Ivan", "Petrov", "ROLE_USER")
             );
 
-            defaultUsers.stream().forEach(user -> userService.createUser(user));
+             userService.createUsersBatch(defaultUsers);
 
 //            SqlParameterSource[] batch = SqlParameterSourceUtils.createBatch(users);
 //            jdbcTemplate.batchUpdate(UserRepositoryImpl.INSERT_SQL, batch);
