@@ -52,7 +52,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Collection<User> getUsers() {
+    public List<User> getUsers() {
         return repo.findAll();
     }
 

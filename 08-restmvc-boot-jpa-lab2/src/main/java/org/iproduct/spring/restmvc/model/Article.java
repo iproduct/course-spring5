@@ -4,15 +4,20 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 import org.hibernate.validator.constraints.Length;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
+@Entity
+@Table(name = "ARTICLES")
 @Data
 @NoArgsConstructor
 @RequiredArgsConstructor
 @AllArgsConstructor
 @Builder
 public class Article {
-//    @Id
+    @Id
+    @GeneratedValue
     private long id;
 
     @NonNull
@@ -23,7 +28,11 @@ public class Article {
     @Length(min=3, max=2048)
     private String content;
 
-    private long authorId;
+    @NonNull
+    @NotNull
+    @ManyToOne()
+    @JoinColumn(name = "AUTHOR_ID")
+    private User author;
 
     @Length(min=3, max=256)
     private String pictureUrl;

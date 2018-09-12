@@ -7,7 +7,7 @@ import java.util.Collection;
 import java.util.List;
 
 public interface UserService {
-    Collection<User> getUsers();
+    List<User> getUsers();
     User createUser(@Valid User user);
     User updateUser(User user);
     User getUserById(long id);

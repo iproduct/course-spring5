@@ -12,18 +12,22 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 import java.util.stream.Collectors;
 
-
+@Entity
+@Table(name = "USERS")
 @JsonIgnoreProperties({"authorities", "accountNonExpired", "accountNonLocked", "credentialsNonExpired", "enabled"})
 @Data
-@Builder
 public class User implements UserDetails {
-//    @Id
+    @Id
+    @GeneratedValue
     private long id;
 
     @NotNull
@@ -52,6 +56,9 @@ public class User implements UserDetails {
 
     @Builder.Default
     private boolean active = true;
+
+    @OneToMany(mappedBy = "author", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Article> articles = new ArrayList<>();
 
     @JsonFormat(pattern = "uuuu-MM-dd HH:mm:ss")
     private LocalDateTime created = LocalDateTime.now();
