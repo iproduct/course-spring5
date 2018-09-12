@@ -19,6 +19,6 @@ public class WebfluxDemoLab2Application {
 
 	@Bean
 	public RouterFunction<ServerResponse> routes(ArticleHandler articleHandler) {
-		return route(GET("/articles"), articleHandler::all);
+		return route(GET("/api/articles"), articleHandler::all);
 	}
 }
