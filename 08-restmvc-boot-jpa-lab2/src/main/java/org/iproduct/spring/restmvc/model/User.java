@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "USERS")
-@JsonIgnoreProperties({"authorities", "accountNonExpired", "accountNonLocked", "credentialsNonExpired", "enabled"})
+@JsonIgnoreProperties({"authorities", "accountNonExpired", "accountNonLocked", "credentialsNonExpired", "enabled", "articles"})
 @Data
 public class User implements UserDetails {
     @Id

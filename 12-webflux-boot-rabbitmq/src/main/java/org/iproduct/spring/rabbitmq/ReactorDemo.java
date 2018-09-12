@@ -15,26 +15,29 @@ public class ReactorDemo {
     public static void main(String[] args) throws InterruptedException {
 //        EmitterProcessor<String> emitter = EmitterProcessor.create();
 //        FluxSink<String> sink = emitter.sink();
-//        emitter.publishOn(Schedulers.single())
-////                .map(String::toUpperCase)
+//        Flux<String> flux = emitter.publishOn(Schedulers.single())
+//                .map(String::toUpperCase)
 ////                .filter(s -> s.startsWith("HELLO"))
-//                .delayElements(Duration.of(1000, MILLIS)).subscribe(System.out::println);
+//                .delayElements(Duration.of(1000, MILLIS));
+//        flux.subscribe(data -> System.out.println("Subscriber 1:" + data));
 //        sink.next("Hello World!"); // emit - non blocking
+//        Thread.sleep(1500);
+//        flux.subscribe(data -> System.out.println("Subscriber 2:" + data));
 //        sink.next("Goodbye World!");
 //        sink.next("Hello Trayan!");
 
-
-        Flux<Integer> ints = Flux.range(1, 4)
-                .map(i -> {
-                    if (i <= 5) return i;
-                    throw new RuntimeException("Got to 4");
-                });
-        ints.subscribe(i -> System.out.println(i),
-                error -> System.err.println("Error: " + error),
-                () -> {
-                    System.out.println("Done");
-                });
-
+//        Flux<Integer> ints = Flux.range(1, 10)
+//                .map(i -> {
+//                    if (i <= 11) return i;
+//                    throw new RuntimeException("Got to 5");
+//                });
+//
+//        ints.subscribe(System.out::println,
+//                error -> System.err.println("Error: " + error),
+//                () -> {
+//                    System.out.println("Done");
+//                });
+//
 //        Flux<String> flux = Flux.generate(
 //                () -> 0,
 //                (state, sink) -> {
@@ -63,7 +66,6 @@ public class ReactorDemo {
                 () -> {
                     System.out.println("Done");
                 });
-
 
         Thread.sleep(4000);
     }

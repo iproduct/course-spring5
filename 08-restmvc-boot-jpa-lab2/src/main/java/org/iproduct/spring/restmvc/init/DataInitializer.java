@@ -57,11 +57,12 @@ public class DataInitializer implements CommandLineRunner {
         }
 
         // Articles
+        usersCount = userService.getUsersCount();
         if (usersCount > 0) {
             List<Article> mockArticles = Arrays.asList(
                     new Article("Welcome to Spring 5", "Spring 5 is great beacuse ...", users.get(0)),
                     new Article("Dependency Injection", "Should I use DI or lookup ...", users.get(0)),
-                    new Article("Sp", "There are several ways to configure Spring beans.", users.get(0))
+                    new Article("Spring News", "There are several ways to configure Spring beans.", users.get(0))
             );
             long countBefore = articleService.getArticlesCount();
             try {
