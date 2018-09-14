@@ -18,12 +18,18 @@ destinations:
     NYSE:
       exchange: nyse
       routing-key: NYSE
+      durable-queue: true
     IBOV:
       exchange: ibov
       routing-key: IBOV
-
+      durable-queue: true
 
   topics:
     distance:
       exchange: alerts
       routing-key: DISTANCE
+      durable-queue: false
+    commands:
+      exchange: alerts
+      routing-key: COMMANDS
+      durable-queue: true

@@ -9,10 +9,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class DestinationsConfig {
 
 
-    private Map<String,DestinationInfo> queues = new HashMap<>();
+    private Map<String, DestinationInfo> queues = new HashMap<>();
 
-    private Map<String,DestinationInfo> topics = new HashMap<>();
-
+    private Map<String, DestinationInfo> topics = new HashMap<>();
 
 
     public Map<String, DestinationInfo> getQueues() {
@@ -37,23 +36,28 @@ public class DestinationsConfig {
 
         private String exchange;
         private String routingKey;
+        private boolean durableQueue;
 
 
         public String getExchange() {
             return exchange;
         }
+
         public void setExchange(String exchange) {
             this.exchange = exchange;
         }
+
         public String getRoutingKey() {
             return routingKey;
         }
+
         public void setRoutingKey(String routingKey) {
             this.routingKey = routingKey;
         }
 
+        public boolean isDurableQueue() { return durableQueue; }
 
-
+        public void setDurableQueue(boolean durableQueue) { this.durableQueue = durableQueue; }
     }
 
 }

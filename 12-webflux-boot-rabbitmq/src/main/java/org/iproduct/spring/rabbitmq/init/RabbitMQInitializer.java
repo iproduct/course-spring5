@@ -25,15 +25,7 @@ public class RabbitMQInitializer implements ApplicationRunner {
                             .durable(true)
                             .build();
                     amqpAdmin.declareExchange(ex);
-                    Queue q = QueueBuilder.durable(
-                            destination.getRoutingKey())
-                            .build();
-                    amqpAdmin.declareQueue(q);
-                    Binding b = BindingBuilder.bind(q)
-                            .to(ex)
-                            .with(destination.getRoutingKey())
-                            .noargs();
-                    amqpAdmin.declareBinding(b);
+                    createDurableQueueAndBinding(destination, ex);
                 });
 
         destinationsConfig.getTopics()
@@ -43,6 +35,21 @@ public class RabbitMQInitializer implements ApplicationRunner {
                             .durable(true)
                             .build();
                     amqpAdmin.declareExchange(ex);
+                    createDurableQueueAndBinding(destination, ex);
                 });
+    }
+
+    private void createDurableQueueAndBinding(DestinationsConfig.DestinationInfo destination, Exchange ex) {
+        if (destination.isDurableQueue()) {
+            Queue q = QueueBuilder.durable(
+                    destination.getRoutingKey())
+                    .build();
+            amqpAdmin.declareQueue(q);
+            Binding b = BindingBuilder.bind(q)
+                    .to(ex)
+                    .with(destination.getRoutingKey())
+                    .noargs();
+            amqpAdmin.declareBinding(b);
+        }
     }
 }
