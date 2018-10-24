@@ -8,9 +8,9 @@ public class CommentsDemoAnnotationDI {
         ApplicationContext ctx = new AnnotationConfigApplicationContext("org.iproduct.spring.comments");
         CommentsService supplier = ctx.getBean(CommentsService.class);
         for(int i = 0; i < 6; i++)
-        supplier.addComment(ctx.getBean(Comment.class));
-//        supplier.addComment(Comment.builder().text("Comment2").email("george@abv.bg").build());
-//        supplier.addComment(Comment.builder().text("Comment3").email("john@abv.bg").build());
+            supplier.addComment(ctx.getBean(Comment.class));
+        supplier.addComment(Comment.builder().text("Comment2").email("george@abv.bg").build());
+        supplier.addComment(Comment.builder().text("Comment3").email("john@abv.bg").build());
 //        supplier.addComment(Comment.builder().text("Comment4").email("john@abv.bg").build());
 //        supplier.addComment(Comment.builder().text("Comment5").email("george@abv.bg").build());
 //        supplier.addComment(Comment.builder().text("Comment6").email("john@abv.bg").build());

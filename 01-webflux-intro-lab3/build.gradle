@@ -28,6 +28,10 @@ sourceCompatibility = 1.8
 
 repositories {
 	mavenCentral()
+//	jcenter()
+//	maven {
+//		url "http://oss.jfrog.org/artifactory/oss-snapshot-local/"
+//	}
 }
 
 
@@ -35,6 +39,9 @@ dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-actuator')
 	implementation('org.springframework.boot:spring-boot-starter-data-mongodb-reactive')
 	implementation('org.springframework.boot:spring-boot-starter-webflux')
+	implementation 'io.springfox:springfox-swagger2:3.0.0-SNAPSHOT'
+	implementation 'io.springfox:springfox-spring-webflux:3.0.0-SNAPSHOT'
+	implementation 'io.springfox:springfox-swagger-ui:3.0.0-SNAPSHOT'
 	runtimeOnly('org.springframework.boot:spring-boot-devtools')
 	compileOnly('org.projectlombok:lombok')
 	testImplementation('org.springframework.boot:spring-boot-starter-test')

@@ -18,6 +18,9 @@ public class Article {
     @Value("${articleTitles}")
     private String[] articleTitles;
 
+    @Value("${numberOfArticles}")
+    private int numberOfTitles;
+
     private String title;
     private String content;
     private LocalDateTime createdDate = LocalDateTime.now();
@@ -27,7 +30,7 @@ public class Article {
 
     @PostConstruct
     public void init() {
-        title = articleTitles[nextArticle++ % articleTitles.length];
+        title = articleTitles[nextArticle++ % numberOfTitles];
         content = title + " content";
     }
 

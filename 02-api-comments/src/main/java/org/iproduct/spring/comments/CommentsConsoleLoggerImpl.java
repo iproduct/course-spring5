@@ -20,14 +20,12 @@ public class CommentsConsoleLoggerImpl implements CommentsLoggerService {
         supplier.getCommentsByEmail(authorEmail).forEach(System.out::println);
     }
 
-    @Override
     public CommentsService getCommentsService() {
         return supplier;
     }
 
-    @Override
     @Autowired
-    public void setCommentsService(CommentsService supplier) {
+    protected void setCommentsService(CommentsService supplier) {
         this.supplier = supplier;
     }
 }

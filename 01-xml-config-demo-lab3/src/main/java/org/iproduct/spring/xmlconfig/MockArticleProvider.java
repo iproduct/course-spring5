@@ -6,10 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.List;
 
+//@Service
 public class MockArticleProvider implements ArticleProvider {
     public static MockArticleProvider createInstance(){
         return new MockArticleProvider();

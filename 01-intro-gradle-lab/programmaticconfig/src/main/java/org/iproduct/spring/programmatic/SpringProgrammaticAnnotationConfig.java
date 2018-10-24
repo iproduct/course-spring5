@@ -1,7 +1,9 @@
 package org.iproduct.spring.programmatic;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Repository;
 
 @Configuration
@@ -10,16 +12,16 @@ import org.springframework.stereotype.Repository;
         includeFilters = @ComponentScan.Filter(type = FilterType.REGEX, pattern = ".*Stub.*Repository"),
         excludeFilters = @ComponentScan.Filter(Repository.class))
 public class SpringProgrammaticAnnotationConfig {
-//    @Autowired
-//    Environment env;
+    @Autowired
+    Environment env;
 
-    @Value("${listOfValues}")
-    private String[] articleTitles;
+//    @Value("${listOfValues}")
+//    private String[] articleTitles;
 
     @Bean
     public ArticleProvider provider() {
-//        return new MockArticleProvider(env.getProperty("value.from.file", "Default title"));
-        return new MockArticleProvider(articleTitles);
+        return new MockArticleProvider(env.getProperty("listOfValues", String[].class));
+//        return new MockArticleProvider(articleTitles);
     }
     @Bean
     public ArticlePresenter presenter() {
