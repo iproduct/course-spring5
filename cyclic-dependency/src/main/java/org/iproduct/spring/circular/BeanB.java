@@ -7,6 +7,14 @@ import org.springframework.stereotype.Component;
 public class BeanB {
     private BeanA beanA;
 
+    public BeanA getBeanA() {
+        return beanA;
+    }
+
+    public void setBeanA(BeanA beanA) {
+        this.beanA = beanA;
+    }
+
     @Autowired
     public BeanB(BeanA beanA) {
         this.beanA = beanA;
