@@ -2,19 +2,19 @@ package org.iproduct.spring.programmatic;
 
 
 import org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.GenericApplicationContext;
 
 public class SpringProgrammaticConfigDI {
     public static void main(String[] args) {
-        GenericApplicationContext ctx = new GenericApplicationContext();
+        GenericApplicationContext ctx = new AnnotationConfigApplicationContext();
         ctx.registerBean("provider", MockArticleProvider.class);
-//                () -> new MockArticleProvider(new String[] {"A", "B", "C"}));
         ctx.registerBean("presenter", ConsoleArticlePresenter.class,
                 () -> new ConsoleArticlePresenter(
                         ctx.getBean("provider", ArticleProvider.class)));
 
-        AutowiredAnnotationBeanPostProcessor postProcessor = new AutowiredAnnotationBeanPostProcessor();
-        postProcessor.setBeanFactory(ctx);
+//        AutowiredAnnotationBeanPostProcessor postProcessor = new AutowiredAnnotationBeanPostProcessor();
+//        postProcessor.setBeanFactory(ctx);
 
         ctx.refresh();
 

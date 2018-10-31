@@ -2,6 +2,8 @@ package org.iproduct.spring.programmatic;
 
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
@@ -9,10 +11,13 @@ import javax.annotation.PostConstruct;
 import java.util.Arrays;
 import java.util.List;
 
+@Component
+@PropertySource("articles.properties")
 public class MockArticleProvider implements ArticleProvider, InitializingBean {
-    @Autowired
+    @Autowired()
     Environment env;
 
+    @Value("${listOfValues}")
     private String[] articleTitles;
     public MockArticleProvider(){
     }
@@ -30,8 +35,9 @@ public class MockArticleProvider implements ArticleProvider, InitializingBean {
         );
     }
 
-    @Override
+    @PostConstruct
     public void afterPropertiesSet() throws Exception {
-        this.articleTitles = env.getProperty("listOfValues", String[].class);
+//        articleTitles = env.getProperty("listOfValues", String[].class);
+//        this.articleTitles = new String[]{"X", "Y", "Z"};
     }
 }

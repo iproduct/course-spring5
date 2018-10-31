@@ -9,6 +9,6 @@ public class CircularDependencyDemo {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(
                 "org.iproduct.spring.circular");
         BeanB b = ctx.getBean(BeanB.class);
-        System.out.println(b.getBeanA().getContent());
+        System.out.println(b.getBeanA().getBeanB().getBeanA().getContent());
     }
 }

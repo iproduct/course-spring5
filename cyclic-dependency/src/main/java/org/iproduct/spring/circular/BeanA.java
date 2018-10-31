@@ -2,6 +2,7 @@ package org.iproduct.spring.circular;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -26,8 +27,4 @@ public class BeanA {
         this.beanB = beanB;
     }
 
-    @Autowired
-    public BeanA(BeanB beanB) {
-        this.beanB = beanB;
-    }
 }
