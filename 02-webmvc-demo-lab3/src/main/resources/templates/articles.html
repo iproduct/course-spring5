@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+    <h2 th:text="'Articles count:' + ${articles.size()}" />
+    <table class="article-table">
+        <thead>
+            <th>Number</th>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Author</th>
+            <th>Created</th>
+        </thead>
+        <tbody>
+            <tr th:each="row,rowStat : ${articles}">
+                <td th:text="${rowStat.index}"></td>
+                <td th:text="${row.title}"></td>
+                <td th:text="${row.content}"></td>
+                <td th:text="${row.author}"></td>
+                <td th:text="${row.created}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
