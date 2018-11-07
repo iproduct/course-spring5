@@ -16,7 +16,7 @@ public class ArticleController {
 
     @GetMapping
     ModelAndView getArticles() {
-        ModelAndView modelAndView = new ModelAndView("articles");
+        ModelAndView modelAndView = new ModelAndView("list");
         modelAndView.addObject("articles", service.getAllArticles());
         return modelAndView;
     }
