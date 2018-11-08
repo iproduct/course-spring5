@@ -4,13 +4,13 @@
 <head>
     <title>${title}</title>
     <meta charset="UTF-8" />
-    <%@include file="/WEB-INF/views/head.jspf" %>
+    <%@include file="/WEB-INF/fragments/head.jspf" %>
 </head>
 <body>
-<%@include file="/WEB-INF/views/menu.jspf"%>
+<%@include file="/WEB-INF/fragments/menu.jspf"%>
     <div class="container">
 <jsp:doBody />
     </div>
-<%@include file="/WEB-INF/views/footer.jspf" %>
+<%@include file="/WEB-INF/fragments/footer.jspf" %>
 </body>
 </html>
