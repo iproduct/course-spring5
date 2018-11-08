@@ -1,10 +1,26 @@
-table {
+.article-table {
     border-collapse: collapse;
 }
 
-table td, table th {
+.article-table td, .article-table th {
     border: 1px solid green;
     padding: 2px 5px;
-
 }
 
+.menu-label {
+    color: #aaa;
+}
+
+.navbar-brand {
+    height: 60px;
+    padding-top: 5px;
+    padding-left: 30px;
+}
+
+.navbar-nav>li>a {
+    padding: 20px;
+}
+
+.language-form{
+    padding-top: 6px;
+}
