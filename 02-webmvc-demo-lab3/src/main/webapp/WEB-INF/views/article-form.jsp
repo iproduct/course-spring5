@@ -11,7 +11,7 @@
                 <form:input path="title" class="form-control"/>
             </div>
         </div>
-        <form:errors path="title" class="errors well bg-danger col-sm-offset-2 col-sm-10"/>
+        <form:errors path="title" class="errors well danger col-sm-offset-2 col-sm-10"/>
 
         <div class="form-group">
             <form:label path="content" class="col-sm-2 control-label">Content</form:label>
@@ -20,6 +20,14 @@
             </div>
         </div>
         <form:errors path="content" class="errors well bg-danger col-sm-offset-2 col-sm-10"/>
+
+        <div class="form-group">
+            <form:label path="author" class="col-sm-2 control-label">Author</form:label>
+            <div class="col-sm-10">
+                <form:input path="author" class="form-control"/>
+            </div>
+        </div>
+        <form:errors path="author" class="errors well bg-danger col-sm-offset-2 col-sm-10"/>
 
         <div class="form-group">
             <form:label path="created" class="col-sm-2 control-label">Date Created</form:label>

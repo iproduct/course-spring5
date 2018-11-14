@@ -1,6 +1,9 @@
 package org.iproduct.spring.mvcdemo.domain;
 
+import lombok.extern.slf4j.Slf4j;
+import org.iproduct.spring.mvcdemo.dao.ArticleDAO;
 import org.iproduct.spring.mvcdemo.model.Article;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -8,6 +11,7 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 @Service
+@Slf4j
 public class ArticleServiceImpl implements ArticleService{
     private List<Article> articles = new CopyOnWriteArrayList<>(
             Arrays.asList(new Article[] {
@@ -21,14 +25,18 @@ public class ArticleServiceImpl implements ArticleService{
                     "Spring Reactor enables functional coding ...", "Trayan Iliev")
     }));
 
+    @Autowired
+    private ArticleDAO dao;
+
     @Override
     public List<Article> getAllArticles() {
-        return articles;
+        return dao.findAll();
     }
 
     @Override
     public Article add(Article article) {
-        articles.add(article);
+        Article result = dao.insert(article);
+        log.info("Article created: {}", article);
         return article;
     }
 }
