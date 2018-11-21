@@ -25,8 +25,8 @@ public class ArticleController {
         return modelAndView;
     }
 
-    @GetMapping("/article-form")
-    String showArticleForm (@ModelAttribute Article article) {
+    @GetMapping(value = "/article-form")
+    String showArticleForm () {
         return"article-form";
     }
 

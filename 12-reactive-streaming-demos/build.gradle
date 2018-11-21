@@ -26,7 +26,7 @@ idea {
 
 group = 'org.iproduct.demos.spring'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 9
+sourceCompatibility = 10
 
 //moduleName = 'org.iproduct.demos.spring.reactivequotes'
 //

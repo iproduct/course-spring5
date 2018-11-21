@@ -14,7 +14,7 @@ public class GreetingController {
     private ArticleProvider provider;
 
     @GetMapping("/articles")
-    public String greeting(@RequestParam(name="name", required=false, defaultValue="Stranger") String name, Model model) {
+    public String greeting(@RequestParam(name="name", required=false, defaultValue="Anonimous") String name, Model model) {
         model.addAttribute("articles", provider.getArticles());
 
         model.addAttribute("name", name);

@@ -28,8 +28,6 @@ public class ArticleConroller {
         binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, false));
     }
 
-
-
     @GetMapping("/")
     public String getIndex() {
         return "redirect:articles";
