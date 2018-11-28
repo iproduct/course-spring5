@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 @Service("presenter")
 public class ConsoleArticlePresenter implements ArticlePresenter {
     @Value("#{provider}")
+//    @Autowired
     private ArticleProvider provider;
 
     public ConsoleArticlePresenter() {

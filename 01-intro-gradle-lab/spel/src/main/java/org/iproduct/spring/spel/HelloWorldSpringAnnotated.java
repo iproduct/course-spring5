@@ -31,41 +31,44 @@ public class HelloWorldSpringAnnotated {
 
         double value = parser.parseExpression("((42 div 5) % 3 + 1) * 10").getValue(Double.class);
         System.out.println(value);
-
+//
         boolean trueValue =parser.parseExpression("2 == 1 + 1").getValue(Boolean.class);
         System.out.println(trueValue);
-
+//
         boolean trueValue2 = parser.parseExpression("'black' < 'block'").getValue(Boolean.class);
         System.out.println(trueValue2);
-
+//
         boolean falseValue = parser.parseExpression(
-                "'xyz' instanceof T(Integer)").getValue(Boolean.class);
+                "new org.iproduct.spring.spel.Car(\"Opel\", 3, 2550, 2013) instanceof T(java.util.Date)").getValue(Boolean.class);
+        System.out.println(trueValue2);
+
 
         boolean falseValue2 = parser.parseExpression(
                 "not ('5.00' matches '^-?\\d+(\\.\\d{2})?$')").getValue(Boolean.class);
         System.out.println(falseValue2);
-
+//
         StandardEvaluationContext context = new StandardEvaluationContext();
         context.setBeanResolver(new BeanFactoryResolver(ctx.getBeanFactory()));
         String beanPropWithDefault = parser.parseExpression(
                 "@beanA.message != null ? @beanA.message : 'default message'").getValue(context, String.class);
         System.out.println(beanPropWithDefault);
-
+//
         String beanPropWithDefaultElvis = parser.parseExpression(
                 "@beanA.message ?:'default message'").getValue(context, String.class);
         System.out.println(beanPropWithDefault);
-
+//
         String thirdTitle = parser.parseExpression(
                 "@presenter.articleProvider.articles[2]?.title ?:'no title'").getValue(context, String.class);
         System.out.println(thirdTitle);
-
+//
         List<Article> springTitles = parser.parseExpression(
                 "@provider.articles.?[title matches '.*Spring.*'].![title]")
                 .getValue(context, List.class);
         System.out.println(springTitles);
-
+//
         Expression expression = parser.parseExpression("'Any string !'.replace(\" \", \"\").length()");
         int result = expression.getValue(Integer.class);
+        System.out.println(result);
 
         CarPark park = new CarPark();
         park.getCars().add(new Car("Opel", 5,
@@ -76,15 +79,16 @@ public class HelloWorldSpringAnnotated {
                 new Engine(4, 2500, 16, "engine model3"),2500, 2013 ));
         park.getCars().add(new Car("Opel3", 5,
                 new Engine(4, 2500, 16, "engine model4"),2500, 2013 ));
-
+//
         Expression expression2 = parser.parseExpression("cars.![make]");
+//        System.out.println(expression2.getValue(context, List.class));
 
         EvaluationContext context2 = new StandardEvaluationContext(park);
-//        expression2.setValue(context,"new engine model");
+//        expression2.setValue(context2,"new engine model");
         List result2 = (List) expression2.getValue(context2);
         System.out.println("SpEL:" +result2);
-
-
+//
+//
         CarPark park2 = parser.parseExpression("T(org.iproduct.spring.spel.CarPark).create({" +
                 "new org.iproduct.spring.spel.Car(\"Opel\", 3, 2550, 2013)," +
                 "new org.iproduct.spring.spel.Car(\"VW\", 2, 1350, 2010)," +
@@ -94,28 +98,30 @@ public class HelloWorldSpringAnnotated {
         Expression expression3 = parser.parseExpression("cars.![make]");
         List result3 = (List) expression3.getValue(context3);
         System.out.println("SpEL:" +result3);
-
-
+//
+//
         EvaluationContext context4 = SimpleEvaluationContext.forReadOnlyDataBinding().build();
-        Map mapOfMaps = (Map) parser
-                .parseExpression("{name:{first:'Nikola',last:'Tesla'},dob:{day:10,month:'July',year:1856}}")
-                .getValue(context4);
-        System.out.println("SpEL:" + mapOfMaps.get("name"));
-
-        // create an array of integers
+        Expression teslaExpr = parser
+                .parseExpression("{name:{first:'Nikola',last:'Tesla'},dob:{day:10,month:'July',year:1856}}");
+        Map mapOfMaps = (Map) teslaExpr.getValue(context4);
+        context4.setVariable("tesla", mapOfMaps);
+//        EvaluationContext context6 = new StandardEvaluationContext(mapOfMaps);
+        Expression exp4 = parser.parseExpression("#tesla['name']['last']");
+        System.out.println("SpEL:" + exp4.getValue(context4));
+//        // create an array of integers
         List<Integer> primes = new ArrayList<Integer>();
         primes.addAll(Arrays.asList(2,3,5,7,11,13,17));
-
-// create parser and set variable 'primes' as the array of integers
+//
+//// create parser and set variable 'primes' as the array of integers
         ExpressionParser parser2 = new SpelExpressionParser();
         EvaluationContext context5 = SimpleEvaluationContext.forReadOnlyDataBinding().build();
         context5.setVariable("primes", primes);
-
-// all prime numbers > 10 from the list (using selection ?{...})
+//
+//// all prime numbers > 10 from the list (using selection ?{...})
 // evaluates to [11, 13, 17]
         List<Integer> primesGreaterThanTen = (List<Integer>) parser.parseExpression(
                 "#primes.?[#this>10]").getValue(context5);
-
+//
         System.out.println("SpEL:" + primesGreaterThanTen);
     }
 }
