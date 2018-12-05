@@ -22,6 +22,8 @@ public class MainApplication {
         provider.addArticle(new Article("Spring AOP Forever", "Spring AOP can is a whole new universe ..."));
         presenter.present();
 
+        System.out.println();
+
         UsageTracked providerUsage =  (UsageTracked) ctx.getBean("provider");
         log.info("Provider usages: {}", providerUsage.getUseCount());
         UsageTracked presenterUsage =  (UsageTracked) ctx.getBean("presenter");

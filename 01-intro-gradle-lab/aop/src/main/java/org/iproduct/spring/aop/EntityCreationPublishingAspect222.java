@@ -8,19 +8,21 @@ import org.iproduct.spring.aop.events.EntityCreationEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.stereotype.Component;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-//@Component
+@Component
 @Aspect
 public class EntityCreationPublishingAspect222 implements  ApplicationContextAware{
     final static Logger log = LoggerFactory.getLogger(EntityCreationPublishingAspect222.class);
 
-//    @Autowired
+    @Autowired
     private ApplicationEventPublisher eventPublisher;
 
     @Pointcut("@target(org.springframework.stereotype.Repository)")
@@ -35,8 +37,8 @@ public class EntityCreationPublishingAspect222 implements  ApplicationContextAwa
     public void entityCreationMethods(Article article) {
     }
 
-    @AfterReturning(value = "entityCreationMethods(article)")
-    public void logMethodCall(JoinPoint jp, Article article) {
+    @AfterReturning(value = "entityCreationMethods(article)", returning = "retVal")
+    public void logMethodCall(JoinPoint jp, Article article, Object retVal) {
         Pattern p = Pattern.compile("[^.]+$");
 //        Matcher m = p.matcher(jp.getArgs()[0].getClass().getName());
         Matcher m = p.matcher(article.getClass().getName());
@@ -45,7 +47,7 @@ public class EntityCreationPublishingAspect222 implements  ApplicationContextAwa
         log.info(eventPublisher + "");
         if(eventPublisher != null) {
             eventPublisher.publishEvent(
-                    new EntityCreationEvent(this, entityName, article));
+                    new EntityCreationEvent(this, entityName, retVal));
         }
     }
 

@@ -10,7 +10,9 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -35,6 +37,12 @@ public class User implements UserDetails {
     private String password;
 
     @NotNull
+//    @Pattern(regexp = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", flags = Pattern.Flag.CASE_INSENSITIVE)
+    @Email(message = "Email should be valid")
+    @NonNull
+    private String email;
+
+    @NotNull
     @NonNull
     @Length(min = 1, max = 30)
     private String fname;
@@ -45,7 +53,7 @@ public class User implements UserDetails {
     private String lname;
 
     @NonNull
-    @CollectionTable
+//    @CollectionTable
     private String role;
 
     private boolean active = true;
@@ -56,12 +64,13 @@ public class User implements UserDetails {
 //    @JsonFormat(pattern = "uuuu-MM-dd HH:mm:ss")
     private Date updated = new Date();
 
-    public User(long id, @NotNull @Length(min = 3, max = 30) String username, @NotNull @Length(min = 5, max = 30) String password, @NotNull @Length(min = 1, max = 30) String fname, @NotNull @Length(min = 1, max = 30) String lname, String role, boolean active, Date created, Date updated) {
+    public User(long id, @NotNull @Length(min = 3, max = 30) String username, @NotNull @Length(min = 5, max = 30) String password, @NotNull @Length(min = 1, max = 30) String fname, @NotNull @Length(min = 1, max = 30) String lname, String email, String role, boolean active, Date created, Date updated) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.fname = fname;
         this.lname = lname;
+        this.email = email;
         this.role = role;
         this.active = active;
         this.created = created;
@@ -73,11 +82,12 @@ public class User implements UserDetails {
 
 //    @JsonCreator
 //    @java.beans.ConstructorProperties({"username", "password", "fname", "lname", "roles"})
-    public User(@NotNull @Length(min = 3, max = 30) String username, @Length(min = 5, max = 30) String password, @Length(min = 1, max = 30) String fname, @Length(min = 1, max = 30) String lname, String roles) {
+    public User(@NotNull @Length(min = 3, max = 30) String username, @Length(min = 5, max = 30) String password, @Length(min = 1, max = 30) String fname, @Length(min = 1, max = 30) String lname, String email, String roles) {
         this.username = username;
         this.password = password;
         this.fname = fname;
         this.lname = lname;
+        this.email = email;
         this.role = roles;
     }
 
@@ -107,7 +117,7 @@ public class User implements UserDetails {
 
     private Collection<GrantedAuthority> getAuthoritiesForRoles(String role) {
         Collection<GrantedAuthority> authorities = new ArrayList<>();
-        authorities.add(new SimpleGrantedAuthority(role));
+        authorities.add(new SimpleGrantedAuthority("ROLE_" + role.toUpperCase()));
         return authorities;
     }
 
