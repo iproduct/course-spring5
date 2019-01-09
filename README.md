@@ -1,5 +1,6 @@
 # course-spring5
 Demos and examples from course Introduction to Spring 5 provided by IPT - Intellectual Products &amp; Technologies
+For Spring 5 Course in FMI see the Wiki of this repo: https://github.com/iproduct/course-spring5/wiki
 
 ## Details
 
