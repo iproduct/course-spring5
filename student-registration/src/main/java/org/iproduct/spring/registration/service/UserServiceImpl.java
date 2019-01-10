@@ -21,4 +21,9 @@ public class UserServiceImpl implements UserService {
     public User addUser(User user) {
         return repo.save(user);
     }
+
+    @Override
+    public long getUsersCount() {
+        return repo.count();
+    }
 }

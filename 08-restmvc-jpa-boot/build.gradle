@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '2.0.4.RELEASE'
+		springBootVersion = '2.0.5.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -32,12 +32,11 @@ repositories {
 
 
 dependencies {
-	compile 'org.springframework.boot:spring-boot-starter-actuator'
-	compile 'org.springframework.boot:spring-boot-starter-aop'
-	compile 'org.springframework.boot:spring-boot-starter-data-jpa'
-	compile 'org.springframework.boot:spring-boot-starter-security'
-	compile 'org.javassist:javassist:3.23.1-GA'
-	compile 'org.springframework.boot:spring-boot-starter-web'
+	implementation('org.springframework.boot:spring-boot-starter-actuator')
+	implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+	implementation('org.springframework.boot:spring-boot-starter-security')
+	implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
+	implementation('org.springframework.boot:spring-boot-starter-web')
 	compile 'org.slf4j:slf4j-api:1.7.25'
 	compile 'ch.qos.logback:logback-classic:1.2.3'
 	compile 'io.springfox:springfox-swagger2:2.9.2'

@@ -1,29 +1,28 @@
-4341 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Refreshing Root WebApplicationContext: startup date [Fri Aug 24 19:42:45 EEST 2018]; root of context hierarchy
-4381 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Registering annotated classes: [class org.iproduct.spring.webmvc.config.SpringRootConfig]
-5031 INFO  org.mongodb.driver.cluster: Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-5078 INFO  org.mongodb.driver.connection: Opened connection [connectionId{localValue:1, serverValue:89}] to 127.0.0.1:27017
-5083 INFO  org.mongodb.driver.cluster: Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 5]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=3823096}
-5277 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Refreshing Root WebApplicationContext: startup date [Fri Aug 24 19:42:46 EEST 2018]; parent: Root WebApplicationContext
-5278 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Registering annotated classes: [class org.iproduct.spring.webmvc.config.SpringWebConfig]
-5944 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/api/articles/{id}],methods=[GET]}" onto public org.iproduct.spring.webmvc.model.Article org.iproduct.spring.webmvc.web.ArticleController.getArticles(java.lang.String)
-5944 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/api/articles],methods=[GET]}" onto public java.util.List<org.iproduct.spring.webmvc.model.Article> org.iproduct.spring.webmvc.web.ArticleController.getArticles()
-5945 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/api/articles/{id}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<org.iproduct.spring.webmvc.model.Article> org.iproduct.spring.webmvc.web.ArticleController.addArticle(java.lang.String,org.iproduct.spring.webmvc.model.Article)
-5945 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/api/articles],methods=[POST]}" onto public org.springframework.http.ResponseEntity<org.iproduct.spring.webmvc.model.Article> org.iproduct.spring.webmvc.web.ArticleController.addArticle(org.iproduct.spring.webmvc.model.Article,org.springframework.web.util.UriComponentsBuilder,javax.servlet.http.HttpServletRequest)
-5945 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/api/articles/{id}],methods=[DELETE]}" onto public org.iproduct.spring.webmvc.model.Article org.iproduct.spring.webmvc.web.ArticleController.deleteArticles(java.lang.String)
-5950 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
-5950 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
-5950 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
-6054 INFO  o.s.w.s.h.SimpleUrlHandlerMapping: Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-6054 INFO  o.s.w.s.h.SimpleUrlHandlerMapping: Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-6239 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter: Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Aug 24 19:42:46 EEST 2018]; parent: Root WebApplicationContext
-6268 INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver: Detected @ExceptionHandler methods in exceptionHandlerControllerAdvice
-6298 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping: Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-6316 INFO  o.s.c.s.DefaultLifecycleProcessor: Starting beans in phase 2147483647
-6316 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper: Context refreshed
-6332 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper: Found 1 custom documentation plugin(s)
-6353 INFO  s.d.s.w.s.ApiListingReferenceScanner: Scanning for api listing references
-6413 INFO  s.d.s.w.r.o.CachingOperationNameGenerator: Generating unique operation named: getArticlesUsingGET_1
-6437 INFO  o.s.web.servlet.DispatcherServlet: FrameworkServlet 'dispatcher': initialization started
-6453 INFO  o.s.web.servlet.DispatcherServlet: FrameworkServlet 'dispatcher': initialization completed in 15 ms
-6499 INFO  o.i.spring.webmvc.Application: Server started: Connector[HTTP/1.1-9000]
-11771 INFO  org.mongodb.driver.connection: Opened connection [connectionId{localValue:2, serverValue:90}] to 127.0.0.1:27017
+5810 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Refreshing Root WebApplicationContext: startup date [Wed Jan 09 21:24:37 EET 2019]; root of context hierarchy
+5855 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Registering annotated classes: [class org.iproduct.spring.webmvc.config.SpringRootConfig]
+6732 INFO  org.mongodb.driver.cluster: Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+6775 INFO  org.mongodb.driver.connection: Opened connection [connectionId{localValue:1, serverValue:66}] to 127.0.0.1:27017
+6777 INFO  org.mongodb.driver.cluster: Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 5]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=1636297}
+7014 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Refreshing Root WebApplicationContext: startup date [Wed Jan 09 21:24:38 EET 2019]; parent: Root WebApplicationContext
+7015 INFO  o.s.w.c.s.AnnotationConfigWebApplicationContext: Registering annotated classes: [class org.iproduct.spring.webmvc.config.SpringWebConfig]
+7788 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/api/articles/{id}],methods=[GET]}" onto public org.iproduct.spring.webmvc.model.Article org.iproduct.spring.webmvc.web.ArticleController.getArticles(java.lang.String)
+7789 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/api/articles],methods=[GET]}" onto public java.util.List<org.iproduct.spring.webmvc.model.Article> org.iproduct.spring.webmvc.web.ArticleController.getArticles()
+7789 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/api/articles/{id}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<org.iproduct.spring.webmvc.model.Article> org.iproduct.spring.webmvc.web.ArticleController.addArticle(java.lang.String,org.iproduct.spring.webmvc.model.Article)
+7789 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/api/articles],methods=[POST]}" onto public org.springframework.http.ResponseEntity<org.iproduct.spring.webmvc.model.Article> org.iproduct.spring.webmvc.web.ArticleController.addArticle(org.iproduct.spring.webmvc.model.Article,org.springframework.web.util.UriComponentsBuilder,javax.servlet.http.HttpServletRequest)
+7789 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/api/articles/{id}],methods=[DELETE]}" onto public org.iproduct.spring.webmvc.model.Article org.iproduct.spring.webmvc.web.ArticleController.deleteArticles(java.lang.String)
+7796 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+7797 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+7797 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+7941 INFO  o.s.w.s.h.SimpleUrlHandlerMapping: Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+7941 INFO  o.s.w.s.h.SimpleUrlHandlerMapping: Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+8159 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter: Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Wed Jan 09 21:24:38 EET 2019]; parent: Root WebApplicationContext
+8196 INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver: Detected @ExceptionHandler methods in exceptionHandlerControllerAdvice
+8234 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping: Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+8256 INFO  o.s.c.s.DefaultLifecycleProcessor: Starting beans in phase 2147483647
+8256 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper: Context refreshed
+8274 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper: Found 1 custom documentation plugin(s)
+8301 INFO  s.d.s.w.s.ApiListingReferenceScanner: Scanning for api listing references
+8386 INFO  s.d.s.w.r.o.CachingOperationNameGenerator: Generating unique operation named: getArticlesUsingGET_1
+8418 INFO  o.s.web.servlet.DispatcherServlet: FrameworkServlet 'dispatcher': initialization started
+8438 INFO  o.s.web.servlet.DispatcherServlet: FrameworkServlet 'dispatcher': initialization completed in 20 ms
+8485 INFO  o.i.spring.webmvc.Application: Server started: Connector[HTTP/1.1-9000]

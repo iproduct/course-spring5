@@ -16,17 +16,16 @@ public class DataInitializer implements CommandLineRunner {
     @Autowired
     UserService userService;
 
-
     @Override
     public void run(String... args) throws Exception {
-
-
-        List<User> defaultUsers = Arrays.asList(
-                new User("admin", "admin", "DEFAULT", "ADMIN", "admin@gamil.com", "ADMIN"),
-                new User("ivan", "ivan123", "Ivan", "Petrov", "ivan@gamil.com", "USER")
-        );
-        System.out.println(defaultUsers);
-        defaultUsers.stream().forEach(userService::addUser);
+        if(userService.getUsersCount() == 0) {
+            List<User> defaultUsers = Arrays.asList(
+                    new User("admin", "admin", "DEFAULT", "ADMIN", "admin@gamil.com", "ADMIN"),
+                    new User("ivan", "ivan123", "Ivan", "Petrov", "ivan@gamil.com", "USER")
+            );
+            System.out.println(defaultUsers);
+            defaultUsers.stream().forEach(userService::addUser);
+        }
 
 
         log.info("Querying for user records:");

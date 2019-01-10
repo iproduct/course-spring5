@@ -13,38 +13,33 @@ import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Date;
 import java.util.stream.Collectors;
 
 @Entity
-@Table(name = "users")
+@Table(name = "courses")
 @Data
-public class User implements UserDetails {
+public class Course {
 
     @Id
     @GeneratedValue
     private Long id;
 
     @NotNull
-    @Length(min = 3, max = 30)
+    @Length(min = 3, max = 80)
     @NonNull
-    private String username;
+    private String name;
 
     @NotNull
-    @Length(min = 5, max = 30)
+    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     @NonNull
-    private String password;
+    private Date startDate = new Date();
 
-    @NotNull
-//    @Pattern(regexp = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", flags = Pattern.Flag.CASE_INSENSITIVE)
-    @Email(message = "Email not valid")
-    @NonNull
-    private String email;
+    @ManyToOne
+    private User instructor;
 
     @NotNull
     @NonNull
@@ -71,7 +66,7 @@ public class User implements UserDetails {
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date updated = new Date();
 
-    public User(long id, @NotNull @Length(min = 3, max = 30) String username, @NotNull @Length(min = 5, max = 30) String password, @NotNull @Length(min = 1, max = 30) String fname, @NotNull @Length(min = 1, max = 30) String lname, String email, String roles, boolean active, Date created, Date updated) {
+    public Course(long id, @NotNull @Length(min = 3, max = 30) String username, @NotNull @Length(min = 5, max = 30) String password, @NotNull @Length(min = 1, max = 30) String fname, @NotNull @Length(min = 1, max = 30) String lname, String email, String roles, boolean active, Date created, Date updated) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -84,12 +79,12 @@ public class User implements UserDetails {
         this.updated = updated;
     }
 
-    public User() {
+    public Course() {
     }
 
 //    @JsonCreator
 //    @java.beans.ConstructorProperties({"username", "password", "fname", "lname", "roles"})
-    public User(@NotNull @Length(min = 3, max = 30) String username, @Length(min = 5, max = 30) String password, @Length(min = 1, max = 30) String fname, @Length(min = 1, max = 30) String lname, String email, String roles) {
+    public Course(@NotNull @Length(min = 3, max = 30) String username, @Length(min = 5, max = 30) String password, @Length(min = 1, max = 30) String fname, @Length(min = 1, max = 30) String lname, String email, String roles) {
         this.username = username;
         this.password = password;
         this.fname = fname;

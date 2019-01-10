@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonView;
 import lombok.*;
 import net.bytebuddy.implementation.bind.annotation.Default;
 import org.hibernate.validator.constraints.Length;
+import org.springframework.data.annotation.Id;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;

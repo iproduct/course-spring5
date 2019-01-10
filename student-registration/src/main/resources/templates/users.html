@@ -5,7 +5,7 @@
 <div th:replace="fragments/menu :: menu"/>
 <div class="container">
     <!--/*@thymesVar id="users" type=""*/-->
-    <h2 th:text="'Articles count:' + ${users.size()}"/>
+    <h2 th:text="'Users count:' + ${users.size()}"/>
     <table class="article-table">
         <thead>
         <th>Number</th>
@@ -27,7 +27,7 @@
             <td th:text="${row.lname}"></td>
             <td th:text="${row.email}"></td>
             <td th:text="${row.password}"></td>
-            <td th:text="${row.role}"></td>
+            <td th:text="${row.roles}"></td>
             <td th:text="${row.active}"></td>
             <td th:text="${row.created}"></td>
             <td th:text="${row.updated}"></td>

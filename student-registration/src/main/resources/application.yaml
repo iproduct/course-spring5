@@ -13,7 +13,8 @@ spring:
         dialect: org.hibernate.dialect.HSQLDialect
         show_sql: false
         # Hibernate ddl auto (create, create-drop, validate, update)
-        hibernate.hbm2ddl.auto: create
+        hbm2ddl:
+          auto: update
 
   # logging
 logging:
@@ -21,4 +22,4 @@ logging:
     org:
       iproduct:
         spring:
-          restmvc: DEBUG
+          registration: DEBUG
