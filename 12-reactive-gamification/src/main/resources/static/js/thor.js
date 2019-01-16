@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var api = "http://localhost:9000/api/";
+    var api = "http://localhost:8080/api/";
     var canvas = document.getElementById('canvas');
     var ctx = canvas.getContext('2d');
     var raf;
