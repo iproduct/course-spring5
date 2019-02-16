@@ -3,11 +3,9 @@ package org.iproduct.spring.webflux.webfluxintro.service;
 import org.iproduct.spring.webflux.webfluxintro.dao.ArticleRepository;
 import org.iproduct.spring.webflux.webfluxintro.model.Article;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 
-import java.util.Arrays;
 import java.util.List;
 
 @Service

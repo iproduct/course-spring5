@@ -25,6 +25,7 @@ public class ThorPositionsGenerator {
 
     public Flux<GameObject2D> getGameObjectsStream(Duration period) {
         return Flux.interval(period)
+//                .take(10)
                 .scan(thor, (old, index) -> {
                     double x = old.getPositionX() + old.getVelocityX() * period.toMillis() / 1000D;
                     double y = old.getPositionY() + old.getVelocityY() * period.toMillis() / 1000D;
