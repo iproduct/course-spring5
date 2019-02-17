@@ -8,8 +8,7 @@ import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.RouterFunctions;
 import org.springframework.web.reactive.function.server.ServerResponse;
 
-import static org.springframework.web.reactive.function.server.RequestPredicates.GET;
-import static org.springframework.web.reactive.function.server.RequestPredicates.POST;
+import static org.springframework.web.reactive.function.server.RequestPredicates.*;
 
 @SpringBootApplication
 public class WebfluxIntroLab4Application {
@@ -17,7 +16,9 @@ public class WebfluxIntroLab4Application {
 	@Bean
 	public RouterFunction<ServerResponse> routes(ArticleHandler handler) {
 		return RouterFunctions.route(GET("/api/articles"), handler::all)
-				.andRoute(POST("/api/articles"), handler::create);
+				.andRoute(POST("/api/articles"), handler::create)
+				.andRoute(GET("/api/articles/{id}"), handler::findById)
+				.andRoute(DELETE("/api/articles/{id}"), handler::deleteById);
 	}
 
 	public static void main(String[] args) {

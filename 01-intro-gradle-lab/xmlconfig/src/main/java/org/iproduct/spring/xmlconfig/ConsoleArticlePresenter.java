@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
-@Service("presenter")
+//@Service("presenter")
 public class ConsoleArticlePresenter implements ArticlePresenter {
 
     private ArticleProvider myProvider;
@@ -25,12 +25,12 @@ public class ConsoleArticlePresenter implements ArticlePresenter {
 
     }
 
-    @Override
+
     public ArticleProvider getArticleProvider() {
         return myProvider;
     }
 
-    @Override
+
 //    @Autowired
 // @Inject
 

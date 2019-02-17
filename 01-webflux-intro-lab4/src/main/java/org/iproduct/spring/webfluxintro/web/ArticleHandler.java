@@ -26,4 +26,19 @@ public class ArticleHandler {
                 .flatMap(article -> ServerResponse.created(URI.create(
                         "/api/articles/" + article.getId())).build());
     }
+
+    public Mono<ServerResponse> findById(ServerRequest req) {
+        return service.getArticleById(req.pathVariable("id"))
+                .flatMap(article -> ServerResponse.ok()
+                        .body(Mono.just(article), Article.class))
+                .switchIfEmpty(ServerResponse.notFound().build());
+    }
+
+    public Mono<ServerResponse> deleteById(ServerRequest req) {
+        return service.deleteById(req.pathVariable("id"))
+                .flatMap(article -> ServerResponse.ok()
+                        .body(Mono.just(article), Article.class))
+                .switchIfEmpty(ServerResponse.notFound().build());
+
+    }
 }

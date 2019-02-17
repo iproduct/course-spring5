@@ -22,4 +22,15 @@ public class ArticleServiceImpl implements ArticleService {
     public Mono<Article> create(Article article) {
         return repo.save(article);
     }
+
+    @Override
+    public Mono<Article> getArticleById(String id) {
+        return repo.findById(id);
+    }
+
+    @Override
+    public Mono<Article> deleteById(String id) {
+        return repo.findById(id).flatMap( article ->
+                repo.deleteById(id).log().thenReturn(article));
+    }
 }

@@ -10,4 +10,6 @@ import java.util.List;
 public interface ArticleService {
     Flux<Article> getAllArticles();
     Mono<Article> create(Article article);
+    Mono<Article> getArticleById(String id);
+    Mono<Article> deleteById(String id);
 }

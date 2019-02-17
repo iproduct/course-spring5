@@ -11,6 +11,6 @@ public class SpringXMLConfigDI {
                 "spring/app-context.xml");
         ArticlePresenter presenter = ctx.getBean("presenter", ArticlePresenter.class);
         presenter.present();
-        ((AbstractApplicationContext)ctx).registerShutdownHook();
+//        ((AbstractApplicationContext)ctx).registerShutdownHook();
     }
 }
