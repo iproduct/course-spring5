@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="createEmptyContentRootDirectories" value="true" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/annotationconfig" />
+        <option name="gradleHome" value="C:/Programs/gradle-4.3.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/annotationconfig" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="createEmptyContentRootDirectories" value="true" />
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/annotationconfig-multiple" />
+        <option name="gradleHome" value="C:/Programs/gradle-4.3.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/annotationconfig-multiple" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="createEmptyContentRootDirectories" value="true" />
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/aop" />
+        <option name="gradleHome" value="C:/Programs/gradle-4.3.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/aop" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="createEmptyContentRootDirectories" value="true" />
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/circular_dependency" />
+        <option name="gradleHome" value="C:/Programs/gradle-4.3.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/circular_dependency" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="createEmptyContentRootDirectories" value="true" />
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/programmaticconfig" />
+        <option name="gradleHome" value="C:/Programs/gradle-4.3.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/programmaticconfig" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="createEmptyContentRootDirectories" value="true" />
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/spel" />
+        <option name="gradleHome" value="C:/Programs/gradle-4.3.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/spel" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="createEmptyContentRootDirectories" value="true" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/xmlconfig" />
+        <option name="gradleHome" value="C:/Programs/gradle-4.3.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/xmlconfig" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

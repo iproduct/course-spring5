@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="02-_main" target="1.8" />
+      <module name="02-_test" target="1.8" />
+      <module name="02-spring_main" target="1.8" />
+      <module name="02-spring_test" target="1.8" />
+      <module name="02-сприн_main" target="1.8" />
+      <module name="02-сприн_test" target="1.8" />
+      <module name="annotationconfig-multiple_main" target="1.8" />
+      <module name="annotationconfig-multiple_test" target="1.8" />
+      <module name="annotationconfig_main" target="1.8" />
+      <module name="annotationconfig_test" target="1.8" />
+      <module name="aop_main" target="1.8" />
+      <module name="aop_test" target="1.8" />
+      <module name="circular_dependency_main" target="1.8" />
+      <module name="circular_dependency_test" target="1.8" />
+      <module name="intro-gradle-lab_main" target="1.8" />
+      <module name="intro-gradle-lab_test" target="1.8" />
+      <module name="programmaticconfig_main" target="1.8" />
+      <module name="programmaticconfig_test" target="1.8" />
+      <module name="spel_main" target="1.8" />
+      <module name="spel_test" target="1.8" />
+      <module name="xmlconfig_main" target="1.8" />
+      <module name="xmlconfig_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

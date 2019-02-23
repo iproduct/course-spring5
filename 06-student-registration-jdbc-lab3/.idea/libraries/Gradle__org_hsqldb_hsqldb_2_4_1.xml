@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: org.hsqldb:hsqldb:2.4.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hsqldb/hsqldb/2.4.1/9daff99b4fbd6809fd46ab4327650ad00a1be6d4/hsqldb-2.4.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hsqldb/hsqldb/2.4.1/fe6a34a5fe875616dc165e28f16b2af61ac5a019/hsqldb-2.4.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hsqldb/hsqldb/2.4.1/39b5e7e988c00331083aaf9231ca4e4fb00ac70d/hsqldb-2.4.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

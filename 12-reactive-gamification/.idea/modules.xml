@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/12-reactive-gamification.iml" filepath="$PROJECT_DIR$/.idea/modules/12-reactive-gamification.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/12-reactive-gamification_main.iml" filepath="$PROJECT_DIR$/.idea/modules/12-reactive-gamification_main.iml" group="12-reactive-gamification" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/12-reactive-gamification_test.iml" filepath="$PROJECT_DIR$/.idea/modules/12-reactive-gamification_test.iml" group="12-reactive-gamification" />
+      <module fileurl="file://$PROJECT_DIR$/12-reactive-streaming-demos.iml" filepath="$PROJECT_DIR$/12-reactive-streaming-demos.iml" />
+    </modules>
+  </component>
+</project>
