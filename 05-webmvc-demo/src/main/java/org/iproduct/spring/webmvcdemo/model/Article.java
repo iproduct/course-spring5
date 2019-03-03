@@ -24,6 +24,7 @@ public class Article {
     private String title;
     @NonNull @NotBlank
     private String content;
+    private String pictureUrl;
     @PastOrPresent
     private LocalDateTime created = LocalDateTime.now();
     @PastOrPresent

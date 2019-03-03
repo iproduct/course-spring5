@@ -52,6 +52,15 @@
                         </ul>
                     </li>
                 </ul>
+                <form class="language-form navbar-form navbar-right">
+                    <div class="form-group language-selector">
+                        <label for="locales" class="menu-label">Language</label>
+                        <select id="locales" class="form-control">
+                            <option value="en-US" th:selected="${#locale.toLanguageTag() == 'en-US'}">EN</option>
+                            <option value="bg-BG" th:selected="${#locale.toLanguageTag() == 'bg-BG'}">BG</option>
+                        </select>
+                    </div>
+                </form>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>

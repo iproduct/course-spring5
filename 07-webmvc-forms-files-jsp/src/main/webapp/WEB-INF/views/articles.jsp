@@ -26,7 +26,7 @@
                 <td>
                     <form:checkbox path="articleIds" value="${article.id}"/>
                 </td>
-                <td>${status.index}</td>
+                <td>${status.index + 1}</td>
                 <td>${article.title}</td>
                 <td>${article.content}</td>
                 <td><fmt:formatDate pattern="dd.MM.yyyy" value="${article.createdDate}" /></td>

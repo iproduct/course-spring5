@@ -1,6 +1,7 @@
 package org.iproduct.spring.webmvc.model;
 
 import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.URL;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
@@ -8,7 +9,6 @@ import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Objects;
-
 
 public class Article {
     @NotNull
@@ -22,10 +22,10 @@ public class Article {
     @Length(min = 2, max = 1000)
     private String content;
 
-    @NotNull
     @PastOrPresent
-    private Date createdDate;
+    private Date createdDate = new Date();
 
+    @URL
     private String pictureUrl;
 
     public Article() {

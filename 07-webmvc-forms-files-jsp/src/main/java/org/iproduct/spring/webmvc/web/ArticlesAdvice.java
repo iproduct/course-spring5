@@ -4,7 +4,7 @@ import org.iproduct.spring.webmvc.model.Article;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
-@ControllerAdvice
+@ControllerAdvice()
 public class ArticlesAdvice {
     @ModelAttribute("article")
     Article getArticleModelAttribute() {
