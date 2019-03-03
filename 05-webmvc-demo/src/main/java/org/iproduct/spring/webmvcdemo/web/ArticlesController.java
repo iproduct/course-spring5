@@ -22,7 +22,9 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.FileSystemException;
+import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -38,15 +40,41 @@ public class ArticlesController {
 
     @GetMapping
     public String getArticles(Model model){
-        model.addAttribute("title", "articles");
+        model.addAttribute("path", "articles");
         model.addAttribute("articles", articlesService.getArticles());
-        log.info("GET Articles: " + articlesService.getArticles());
+        log.debug("GET Articles: " + articlesService.getArticles());
         return "articles";
     }
 
+    @PostMapping(params = "edit")
+    public String editArticle(@RequestParam("edit") String editId, Model model){
+        log.info("Editing article: " + editId);
+        return "redirect:/articles/article-form?mode=edit&articleId=" + editId;
+    }
+
+    @PostMapping(params = "delete")
+    public String deleteArticle(@RequestParam("delete") String deleteId, Model model){
+        log.info("Deleting article: " + deleteId);
+        articlesService.delete(deleteId);
+        return "redirect:/articles";
+    }
+
     @GetMapping("/article-form")
-    public String getArticleForm(@ModelAttribute ("article") Article article, ModelMap model){
-        model.addAttribute("title", "article-form");
+    public String getArticleForm(@ModelAttribute ("article") Article article, ModelMap model,
+                                @RequestParam(value="mode", required=false) String mode,
+                                @RequestParam(value="articleId", required=false) String articleId){
+        String title = "Add New Article";
+        if("edit".equals(mode)) {
+             Optional<Article> foundArticle = articlesService.getArticleById(articleId);
+             if(foundArticle.isPresent()) {
+                 article = foundArticle.get();
+                 model.addAttribute("article", article);
+                 title = "Edit Article";
+             }
+        }
+
+        model.addAttribute("path", "article-form");
+        model.addAttribute("title", title);
         return  "article-form";
     }
 
@@ -77,7 +105,14 @@ public class ArticlesController {
                     return "article-form";
                 }
             }
-            articlesService.add(article);
+            if (article.getId() == null) {
+                log.info("ADD New Article: " + article);
+                articlesService.add(article);
+            } else {
+                article.setModified(LocalDateTime.now());
+                log.info("UPDATE Article: " + article);
+                articlesService.update(article);
+            }
             return "redirect:/articles";
         }
     }

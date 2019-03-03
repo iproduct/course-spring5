@@ -20,7 +20,7 @@ public class ArticleServiceImpl implements ArticlesService {
 
     @Override
     public Optional<Article> getArticleById(String articleId) {
-        return Optional.empty();
+        return repo.findById(articleId);
     }
 
     @Override
@@ -30,11 +30,15 @@ public class ArticleServiceImpl implements ArticlesService {
 
     @Override
     public Article update(Article article) {
-        return null;
+        return repo.save(article);
     }
 
     @Override
     public Optional<Article> delete(String articleId) {
-        return Optional.empty();
+        Optional<Article> toBeDeleted = repo.findById(articleId);
+        if(toBeDeleted.isPresent()) {
+            repo.deleteById(articleId);
+        }
+        return toBeDeleted;
     }
 }

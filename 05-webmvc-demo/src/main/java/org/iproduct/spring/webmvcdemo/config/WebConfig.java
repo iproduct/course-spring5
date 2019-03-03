@@ -1,6 +1,8 @@
 package org.iproduct.spring.webmvcdemo.config;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.coyote.http11.AbstractHttp11Protocol;
+import org.springframework.boot.web.embedded.tomcat.TomcatConnectorCustomizer;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.context.MessageSource;
@@ -54,20 +56,26 @@ public class WebConfig implements WebMvcConfigurer {
         };
     }
 
-//    // Set maxPostSize of embedded tomcat server to 10 megabytes (default is 2 MB, not large enough to support file uploads > 1.5 MB)
-//    @Bean
-//    public  WebServerFactoryCustomizer<TomcatServletWebServerFactory> getTomcatCustomizer() {
-//        return new WebServerFactoryCustomizer<TomcatServletWebServerFactory>() {
-//            @Override
-//            public void customize(TomcatServletWebServerFactory factory) {
-//                factory.addConnectorCustomizers(
-//                        (connector) -> {
-//                            connector.setMaxPostSize(10000000); // 10 MB
-//                        }
-//                );
-//            }
-//        };
-//    }
+    //Tomcat large file upload connection reset
+    //http://www.mkyong.com/spring/spring-file-upload-and-connection-reset-issue/
+    // Set maxPostSize of embedded tomcat server to 11 megabytes (default is 2 MB, not large enough to support file uploads > 1.5 MB)
+    @Bean
+    public  WebServerFactoryCustomizer<TomcatServletWebServerFactory> getTomcatCustomizer() {
+        return new WebServerFactoryCustomizer<TomcatServletWebServerFactory>() {
+            @Override
+            public void customize(TomcatServletWebServerFactory factory) {
+                factory.addConnectorCustomizers(
+                        (connector) -> {
+                            if ((connector.getProtocolHandler() instanceof AbstractHttp11Protocol<?>)) {
+                                //-1 means unlimited
+                                ((AbstractHttp11Protocol<?>) connector.getProtocolHandler()).setMaxSwallowSize(11534336); // 11 MB
+                            }
+                            connector.setMaxPostSize(11534336); // 11 MB
+                        }
+                );
+            }
+        };
+    }
 
     @Bean("messageSource")
     public MessageSource messageSource() {
