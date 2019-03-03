@@ -8,10 +8,10 @@ public class CircularDependencyBeanB {
     private CircularDependencyBeanA beanA;
     private String message = "Hi from Bean B!";
 
-//    @Autowired
-//    public CircularDependencyBeanB(CircularDependencyBeanA beanA) {
-//        this.beanA = beanA;
-//    }
+    @Autowired
+    public CircularDependencyBeanB(CircularDependencyBeanA beanA) {
+        this.beanA = beanA;
+    }
 
     public String getMessage() {
         return message;

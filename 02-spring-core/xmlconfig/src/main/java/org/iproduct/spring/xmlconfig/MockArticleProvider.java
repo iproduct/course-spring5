@@ -10,24 +10,24 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 import java.util.List;
 
-//@Component("provider")
+@Component("provider")
 public class MockArticleProvider implements ArticleProvider, InitializingBean, DisposableBean {
     public static MockArticleProvider createInstance(){
         return new MockArticleProvider();
     }
 
-//    @Autowired
-//    ApplicationContext ctx;
+    @Autowired
+    ApplicationContext ctx;
 
-//    @Value("${articles.title1}") String title1;
-//    @Value("${articles.content1}") String content1;
+    @Value("${articles.title1}") String title1;
+    @Value("${articles.content1}") String content1;
 
     @Override
     public List<Article> getArticles() {
         return Arrays.asList(
-//                ctx.getBean("article", Article.class),
-//                ctx.getBean("article", Article.class),
-//                new Article(title1, content1),
+                ctx.getBean("article", Article.class),
+                ctx.getBean("article", Article.class),
+                new Article(title1, content1),
                 new Article("Dependency Injection", "Should I use DI or lookup ..."),
                 new Article("Spring Beans and Wireing", "There are several ways to configure Spring beans.")
         );

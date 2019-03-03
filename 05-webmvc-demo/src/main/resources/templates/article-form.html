@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head('Add Article')" />
+<body>
+    <div th:replace="fragments/menu :: menu(${title})" />
+    <div class="container">
+        <h3>Add New Article</h3>
+        <form th:action="@{__${#request.contextPath}__/articles/submit-article}"
+              th:object="${article}" method="post"
+              class="form-horizontal col-md-9 col-lg-6" enctype="multipart/form-data">
+            <div class="form-group">
+                <label path="title" class="col-sm-2 control-label">Title</label>
+                <div class="col-sm-10">
+                    <input type="text" th:value="*{title}" id="title" name="title"
+                           class="form-control" title="Article title" th:errorclass="field-error">
+                </div>
+            </div>
+            <p th:if="${#fields.hasErrors('title')}" th:errors="*{title}"
+               class="errors alert alert-danger col-sm-offset-2 col-sm-10">
+                Incorrect title
+            </p>
+
+            <div class="form-group">
+                <label path="content" class="col-sm-2 control-label">Content</label>
+                <div class="col-sm-10">
+                    <input type="text" th:value="*{content}" id="content" name="content"
+                           class="form-control" title="Article content" th:errorclass="field-error">
+                </div>
+            </div>
+            <p th:if="${#fields.hasErrors('content')}" th:errors="*{content}"
+               class="errors alert alert-danger col-sm-offset-2 col-sm-10">
+                Content should not be blank.
+            </p>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary" id="submit" name="submit" value="submit">Submit</button>
+                    <button type="reset" class="btn btn-danger">Reset</button>
+                    <button type="submit" class="btn" id="cancel" name="cancel" value="cancel">Cancel</button>
+                </div>
+            </div>
+            <div class="col-xs-12 alert alert-danger" th:if="${myErrors != null}">
+                <p>Validation errors: </p>
+                <ul th:each="error: ${myErrors}">
+                    <li th:text="${error}"></li>
+                </ul>
+            </div>
+        </form>
+        <div  th:replace="fragments/foot :: foot" />
+    </div>
+
+
+</body>
+</html>

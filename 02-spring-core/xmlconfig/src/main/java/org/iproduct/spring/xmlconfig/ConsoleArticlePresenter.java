@@ -1,11 +1,12 @@
 package org.iproduct.spring.xmlconfig;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
-//@Service("presenter")
+@Service("presenter")
 public class ConsoleArticlePresenter implements ArticlePresenter {
 
     private ArticleProvider myProvider;
@@ -31,9 +32,8 @@ public class ConsoleArticlePresenter implements ArticlePresenter {
     }
 
 
-//    @Autowired
+    @Autowired
 // @Inject
-
     public void setArticleProvider(ArticleProvider provider) {
         this.myProvider = provider;
     }

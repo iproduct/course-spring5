@@ -9,10 +9,10 @@ public class CircularDependencyBeanA {
     private CircularDependencyBeanB beanB;
     private String message = "Hi from Bean A!";
 
-//    @Autowired
-//    public CircularDependencyBeanA(@Lazy CircularDependencyBeanB beanB) {
-//        this.beanB = beanB;
-//    }
+    @Autowired
+    public CircularDependencyBeanA(@Lazy CircularDependencyBeanB beanB) {
+        this.beanB = beanB;
+    }
 
     public String getMessage() {
         return message;

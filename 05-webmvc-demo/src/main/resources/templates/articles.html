@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head('Articles List')" />
+<body>
+    <div th:replace="fragments/menu :: menu(${title})" />
+    <div class="container">
+        <table class="article-table table table-striped">
+            <thead>
+            <th>Number</th>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Created</th>
+            <th>Modified</th>
+            </thead>
+            <tbody>
+            <tr th:each="row, rowStat : ${articles}">
+                <td th:text="${rowStat.index + 1}"></td>
+                <td th:text="${row.title}"></td>
+                <td th:text="${row.content}"></td>
+                <td th:text="${row.created}"></td>
+                <td th:text="${row.modified}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div th:replace="fragments/foot :: foot" />
+</body>
+</html>

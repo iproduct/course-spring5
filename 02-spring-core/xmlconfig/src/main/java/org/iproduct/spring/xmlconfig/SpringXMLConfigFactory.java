@@ -23,7 +23,7 @@ public class SpringXMLConfigFactory {
         XmlBeanDefinitionReader beanDefinitionReader = new XmlBeanDefinitionReader(beanFactory);
 //        beanDefinitionReader.loadBeanDefinitions(new ClassPathResource("spring/app-context.xml"));
         beanDefinitionReader.loadBeanDefinitions("spring/app-context.xml");
-//
+
         DefaultListableBeanFactory beanFactory1= new DefaultListableBeanFactory();
         XmlBeanDefinitionReader beanDefinitionReader1 = new XmlBeanDefinitionReader(beanFactory1);
         beanDefinitionReader1.loadBeanDefinitions(

@@ -8,7 +8,7 @@ import org.springframework.context.annotation.*;
 public class ProgrammaticAnnotationConfig {
 
     @Bean("provider")
-    @Scope("prototype")
+//    @Scope("prototype")
     public ArticleProvider getProvider() {
         return new AlternativeArticleProvider();
     }
