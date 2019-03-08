@@ -19,7 +19,7 @@ Or using *curl*:
 curl -X GET "http://localhost:8080/api/articles" -H "accept: */*"
 ```
 
-The IDs in the following PATCH requests should be changed accordinly (using results from the list)
+The IDs in the following PATCH requests should be changed accordinгly (using results listed by previous command)
 - for JSON Patch (RFC 6902):
 
 ```
