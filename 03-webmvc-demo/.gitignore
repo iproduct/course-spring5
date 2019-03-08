@@ -1,3 +1,4 @@
+HELP.md
 .gradle
 /build/
 !gradle/wrapper/gradle-wrapper.jar
@@ -16,10 +17,11 @@
 *.iws
 *.iml
 *.ipr
+/out/
+/tmp/
 
 ### NetBeans ###
 /nbproject/private/
-/build/
 /nbbuild/
 /dist/
 /nbdist/
