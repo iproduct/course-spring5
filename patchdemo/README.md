@@ -33,6 +33,6 @@ curl -X PATCH "http://localhost:8080/api/articles/5c82dc5f72d32136e4df77bf" -H "
 ```
 
 ## Tesing the demo
-There are some *JUnit 5 Jupiter* tests implemented in the class: *test/java/patchdemo/PatchDemoApplicationTests*
+There are some *JUnit 5 Jupiter* tests implemented in the class: *test/java/patchdemo/PatchDemoApplicationTests*.
 Both *TestRestTemplate (1 test)*, and new WebFlux *WebTestClient (3 tests)* are used for test implementation.
 
