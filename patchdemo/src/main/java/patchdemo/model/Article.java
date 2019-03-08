@@ -1,11 +1,14 @@
-package org.iproduct.spring.webmvcdemo.model;
+package patchdemo.model;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.validation.constraints.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.PastOrPresent;
+import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 
 @Document(collection = "articles")
@@ -29,4 +32,10 @@ public class Article {
     @PastOrPresent
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private LocalDateTime modified = LocalDateTime.now();
+
+    public Article(String id, @NonNull @NotNull @Size(min = 3, max = 60) String title, @NonNull @NotBlank String content) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+    }
 }
