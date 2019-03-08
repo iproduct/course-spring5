@@ -1,4 +1,4 @@
-#JSON PATCH Demo with Spring MVC, Spring Boot and WebTestClient (WebFlux)
+# JSON PATCH Demo with Spring MVC, Spring Boot and WebTestClient (WebFlux)
 
 The demo shows how to implement the [**RFC 6902 - JSON Patch**](http://tools.ietf.org/html/rfc6902), and [**RFC 7386 - JSON Merge Patch**](http://tools.ietf.org/html/rfc7386), using *Spring MVC* with *Jackson (2.2.x)* at its core.
 
