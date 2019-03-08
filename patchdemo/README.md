@@ -14,7 +14,7 @@ spring.data.mongodb.database=articles
 Just run the main Application class: *patchdemo/PatchDemoApplication*
 You can test the app using Swagger UI at: http://localhost:8080/swagger-ui.html
 
-Or using *curl* 
+Or using *curl*:
 ```
 curl -X GET "http://localhost:8080/api/articles" -H "accept: */*"
 ```
