@@ -86,9 +86,9 @@ public class ArticlesAPITests {
 
     @BeforeEach
     void setup(WebApplicationContext wac) throws Exception {
-        this.mockMvc = MockMvcBuilders.webAppContextSetup(wac)
-                .apply(springSecurity())
-                .build();
+            this.mockMvc = MockMvcBuilders.webAppContextSetup(wac)
+                    .apply(springSecurity())
+                    .build();
 
 //        MvcResult result = mockMvc.perform(post("/login")
 //                .accept("*/*")
