@@ -1,0 +1,53 @@
+group 'org.iproduct.spring'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'org.akhikhl.gretty'
+
+apply plugin: 'idea'
+idea {
+    module {
+        downloadJavadoc = true
+    }
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'org.akhikhl.gretty:gretty:+'
+    }
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url "https://repo.spring.io/release" }
+    maven { url "https://repo.spring.io/milestone" }
+}
+
+dependencies {
+    compile('ch.qos.logback:logback-classic:1.2.3')
+    compile('org.springframework:spring-webmvc:5.0.5.RELEASE')
+    compile('org.springframework:spring-orm:5.0.5.RELEASE')
+    compile('org.hibernate:hibernate-core:5.2.16.Final')
+    compile('com.zaxxer:HikariCP:3.3.1')
+    compile('javax.servlet:jstl:1.2')
+    compile("org.hibernate.validator:hibernate-validator:6.0.9.Final")
+    compile('org.projectlombok:lombok:1.16.20')
+    runtime('org.hsqldb:hsqldb:2.4.1')
+    compile('org.webjars:bootstrap:3.3.7-1')
+    compile('org.webjars:jquery:3.1.1')
+    compile('org.webjars:webjars-locator:0.33')
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+gretty{
+    httpPort = 8080
+    contextPath = 'mvc'
+    servletContainer = 'jetty9'
+}

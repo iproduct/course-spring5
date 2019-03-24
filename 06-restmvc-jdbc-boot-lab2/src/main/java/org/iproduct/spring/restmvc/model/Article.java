@@ -3,6 +3,7 @@ package org.iproduct.spring.restmvc.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 
+import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 
 @Data
@@ -14,6 +15,7 @@ public class Article {
 //    @Id
     private long id;
     @NonNull
+    @Size(min=3)
     private String title;
     @NonNull
     private String content;

@@ -128,24 +128,24 @@ public class ArticleRepositoryImpl implements ArticleRepository {
         int articlesCount = jdbcTemplate.queryForObject("SELECT COUNT(*) FROM articles", Integer.class);
         log.info("Articles count: {}", articlesCount);
 
-        if (articlesCount == 0) {
-            List<Article> articles = Arrays.asList(
-                    new Article("Welcome to Spring 5", "Spring 5 is great beacuse ..."),
-                    new Article("Dependency Injection", "Should I use DI or lookup ..."),
-                    new Article("Spring Beans and Wireing", "There are several ways to configure Spring beans.")
-            );
-
-            // Use a Java 8 stream to print out each tuple of the list
-            articles.forEach(article -> {
-                log.info(String.format("Inserting article record for %s %s",
-                        article.getTitle(), article.getContent()));
-                jdbcTemplate.update("INSERT INTO articles(id, title, content, picture_url, created, updated) VALUES (DEFAULT, ?, ?, ?, ?, ?)",
-                        article.getTitle(), article.getContent(), article.getPictureUrl(),
-                        article.getCreated(),
-                        article.getUpdated()
-                );
-            });
-        }
+//        if (articlesCount == 0) {
+//            List<Article> articles = Arrays.asList(
+//                    new Article("Welcome to Spring 5", "Spring 5 is great beacuse ..."),
+//                    new Article("Dependency Injection", "Should I use DI or lookup ..."),
+//                    new Article("Spring Beans and Wireing", "There are several ways to configure Spring beans.")
+//            );
+//
+//            // Use a Java 8 stream to print out each tuple of the list
+//            articles.forEach(article -> {
+//                log.info(String.format("Inserting article record for %s %s",
+//                        article.getTitle(), article.getContent()));
+//                jdbcTemplate.update("INSERT INTO articles(id, title, content, picture_url, created, updated) VALUES (DEFAULT, ?, ?, ?, ?, ?)",
+//                        article.getTitle(), article.getContent(), article.getPictureUrl(),
+//                        article.getCreated(),
+//                        article.getUpdated()
+//                );
+//            });
+//        }
 
         log.info("Querying for article records where title contains = 'Spring':");
         jdbcTemplate.query(

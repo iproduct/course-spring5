@@ -2,24 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17b5253f-a4e6-4f48-85a3-fb243b974c8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../04-webmvc-rest-lab2/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patchdemo/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patchdemo/src/main/java/patchdemo/PatchDemoApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patchdemo/src/main/java/patchdemo/config/SwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patchdemo/src/main/java/patchdemo/dao/ArticlesRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patchdemo/src/main/java/patchdemo/exception/EntityNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patchdemo/src/main/java/patchdemo/exception/InvalidEntityIdException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patchdemo/src/main/java/patchdemo/init/DataInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patchdemo/src/main/java/patchdemo/model/Article.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patchdemo/src/main/java/patchdemo/service/ArticlesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patchdemo/src/main/java/patchdemo/service/ArticlesServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patchdemo/src/main/java/patchdemo/web/ArticleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patchdemo/src/main/java/patchdemo/web/ExceptionHandlerControllerAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patchdemo/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04-webmvc-rest-lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../04-webmvc-rest-lab2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-spring-core/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-spring-core/aop/src/main/java/org/iproduct/spring/aop/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core/aop/src/main/java/org/iproduct/spring/aop/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-spring-core/spel/src/main/java/org/iproduct/spring/spel/HelloWorldSpringAnnotated.java" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core/spel/src/main/java/org/iproduct/spring/spel/HelloWorldSpringAnnotated.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../05-webmvc-demo/src/main/java/org/iproduct/spring/webmvcdemo/model/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-webmvc-demo/src/main/java/org/iproduct/spring/webmvcdemo/model/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-webmvc-rest-lab4/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../05-webmvc-rest-lab4/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-webmvc-rest-lab4/src/test/java/org/iproduct/spring/webmvcdemo/WebmvcDemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-webmvc-rest-lab4/src/test/java/org/iproduct/spring/webmvcdemo/WebmvcDemoApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06-restmvc-jdbc-boot-lab2/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../06-restmvc-jdbc-boot-lab2/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06-restmvc-jdbc-boot-lab2/src/main/java/org/iproduct/spring/restmvc/init/DataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../06-restmvc-jdbc-boot-lab2/src/main/java/org/iproduct/spring/restmvc/init/DataInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06-restmvc-jdbc-boot-lab2/src/main/java/org/iproduct/spring/restmvc/model/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/../06-restmvc-jdbc-boot-lab2/src/main/java/org/iproduct/spring/restmvc/model/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06-restmvc-jdbc-boot-lab2/src/main/java/org/iproduct/spring/restmvc/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../06-restmvc-jdbc-boot-lab2/src/main/java/org/iproduct/spring/restmvc/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06-restmvc-jdbc-boot-lab2/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../06-restmvc-jdbc-boot-lab2/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06-restmvc-jdbc-boot/src/main/java/org/iproduct/spring/restmvc/dao/ArticleRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../06-restmvc-jdbc-boot/src/main/java/org/iproduct/spring/restmvc/dao/ArticleRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06-restmvc-jdbc-boot/src/main/java/org/iproduct/spring/restmvc/service/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../06-restmvc-jdbc-boot/src/main/java/org/iproduct/spring/restmvc/service/ArticleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../08-webmvc-forms-jsp-jdbc/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../08-webmvc-forms-jsp-jdbc/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../08-webmvc-forms-jsp-jdbc/src/main/java/org/iproduct/spring/webmvc/dao/ArticleRepositoryJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/../08-webmvc-forms-jsp-jdbc/src/main/java/org/iproduct/spring/webmvc/dao/ArticleRepositoryJdbc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../08-webmvc-forms-jsp-jdbc/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../08-webmvc-forms-jsp-jdbc/src/main/resources/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate/src/main/resources/jdbc.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -104,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="58" selection-start-line="56" selection-start-column="1" selection-end-line="58" />
+            <state relative-caret-position="87">
+              <caret line="4" selection-start-line="4" selection-end-line="10" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -125,13 +125,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/spring/webmvc/initializer/ArticlesWebInitializer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
+            <state relative-caret-position="1430">
               <caret line="77" selection-start-line="77" selection-end-line="77" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/spring/webmvc/config/MongoConfig.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
@@ -187,10 +187,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="99" />
-    <option name="y" value="18" />
-    <option name="width" value="1401" />
-    <option name="height" value="822" />
+    <option name="x" value="98" />
+    <option name="y" value="17" />
+    <option name="width" value="1402" />
+    <option name="height" value="823" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -262,7 +262,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535135473955" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/org/iproduct/spring/webmvc" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -398,6 +398,7 @@
       <workItem from="1535013664915" duration="11877000" />
       <workItem from="1535136506602" duration="996000" />
       <workItem from="1552046626262" duration="652000" />
+      <workItem from="1553339147328" duration="36000" />
     </task>
     <task id="LOCAL-00001" summary="02-webmvc-rest initial commit">
       <created>1534412979959</created>
@@ -442,10 +443,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64321000" />
+    <option name="totallyTimeSpent" value="64357000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1721" height="935" extended-state="6" />
+    <frame x="-7" y="-7" width="1294" height="934" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
@@ -454,9 +455,8 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.27633956" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.27633712" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Spring" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.3007712" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5003032" side_tool="true" weight="0.32904884" />
@@ -472,7 +472,7 @@
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="14" />
-      <window_info anchor="right" id="Maven" />
+      <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Maven Projects" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
@@ -485,6 +485,7 @@
       <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
       <window_info anchor="right" id="Mongo Explorer" order="11" />
+      <window_info anchor="right" id="Maven" order="12" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -671,16 +672,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="58" selection-start-line="56" selection-start-column="1" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/spring/webmvc/initializer/ArticlesWebInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
+        <state relative-caret-position="1430">
           <caret line="77" selection-start-line="77" selection-end-line="77" />
         </state>
       </provider>
@@ -689,6 +683,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="39" column="54" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="4" selection-start-line="4" selection-end-line="10" selection-end-column="1" />
         </state>
       </provider>
     </entry>

@@ -25,6 +25,8 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.util.UriComponents;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import java.time.LocalDateTime;
 import java.util.Arrays;
@@ -34,6 +36,7 @@ import static com.google.common.collect.Range.greaterThan;
 import static java.time.LocalDateTime.now;
 import static org.mockito.BDDMockito.*;
 import static org.mockito.internal.verification.VerificationModeFactory.times;
+import static org.springframework.http.HttpHeaders.CONTENT_TYPE;
 import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -100,7 +103,50 @@ public class WebmvcDemoApplicationTests {
 		then(repository).should(times(1)).findAll();
 	}
 
-	    private static final List<Article> mockArticles = Arrays.asList(
+	@Test
+	public void givenArticles_whenGetArticles_thenStatus200andJsonArray_WebTestClient()
+			throws Exception {
+		given(repository.findAll()).willReturn(mockArticles);
+
+		List<Article> articleResponse =
+				webClient.get().uri("/api/articles").accept(MediaType.APPLICATION_JSON_UTF8)
+						.exchange()
+						.expectStatus().isOk()
+						.expectBodyList(Article.class).hasSize(3)
+						.contains(mockArticles.toArray(new Article[] {}))
+						.returnResult().getResponseBody();
+
+		log.info("Response {}", articleResponse);
+		Assertions.assertEquals(mockArticles, articleResponse);
+	}
+
+	@Test
+	public void givenArticles_whenPostArticle_thenStatus201andJsonObject()
+			throws Exception {
+		given(repository.insert(any(Article.class))).willReturn(newArticle);
+		UriComponentsBuilder postUriBuilder = UriComponentsBuilder.fromUriString(
+				"http://localhost:{port}/api/articles");
+
+		UriComponentsBuilder newArticleUriBuilder = postUriBuilder.cloneBuilder().pathSegment("{id}");
+
+		Article articleResponse =
+				webClient.post()
+						.uri(postUriBuilder.build(port))
+						.header(CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+						.accept(MediaType.APPLICATION_JSON_UTF8)
+						.syncBody(newArticle)
+						.exchange()
+						.expectStatus().isCreated()
+						.expectHeader().valueEquals("Location",
+							newArticleUriBuilder.build(port, newArticle.getId()).toString() )
+						.expectBody(Article.class).isEqualTo(newArticle)
+						.returnResult().getResponseBody();
+
+		log.info("Response: {}", articleResponse);
+	}
+
+
+	private static final List<Article> mockArticles = Arrays.asList(
             new Article("1111111111111111111111", "Welcome to Spring 5", "Spring 5 is great beacuse ...", null, now(), now()),
             new Article("2222222222222222222222", "Dependency Injection", "Should I use DI or lookup ...", null, now(), now()),
             new Article("3333333333333333333333", "Spring Beans and Wiring", "There are several ways to configure Spring beans.", null, now(), now())
