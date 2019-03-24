@@ -2,6 +2,8 @@ package org.iproduct.spring.webmvc.model;
 
 import org.hibernate.validator.constraints.Length;
 
+import javax.annotation.Generated;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
 import javax.validation.constraints.Size;
@@ -9,8 +11,11 @@ import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Objects;
 
-
+@Entity
+@Table(name = "ARTICLES")
 public class Article {
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     @NotNull
     private long id;
 
@@ -24,8 +29,10 @@ public class Article {
 
     @NotNull
     @PastOrPresent
+    @Column(name = "created_date")
     private Date createdDate;
 
+    @Column(name = "picture_url")
     private String pictureUrl;
 
     public Article() {

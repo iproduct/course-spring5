@@ -20,7 +20,8 @@ import java.io.IOException;
 import java.util.Properties;
 
 @Configuration
-@ComponentScan({"org.iproduct.spring.webmvc.service", "org.iproduct.spring.webmvc.dao"})
+@ComponentScan({"org.iproduct.spring.webmvc.service",
+        "org.iproduct.spring.webmvc.dao"})
 @PropertySource("classpath:jdbc.properties")
 @EnableTransactionManagement
 public class SpringRootConfig {
@@ -59,7 +60,8 @@ public class SpringRootConfig {
     LocalSessionFactoryBean getSessionFactory(DataSource dataSource) throws IOException {
         LocalSessionFactoryBean factory = new LocalSessionFactoryBean();
         factory.setDataSource(dataSource);
-        factory.setMappingResources("article.hbm.xml");
+//        factory.setMappingResources("article.hbm.xml");
+        factory.setPackagesToScan("org.iproduct.spring.webmvc.model");
         Properties hibernateProperties = new Properties();
         ClassPathResource resource = new ClassPathResource( "hibernate.properties" );
         hibernateProperties.load(resource.getInputStream());
