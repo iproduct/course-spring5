@@ -1,4 +1,4 @@
-package org.iproduct.demos.spring.streamingdemos.configuration;
+package org.iproduct.spring.streamingdemoslab4.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.CacheControl;
@@ -8,13 +8,13 @@ import org.springframework.web.reactive.config.ResourceHandlerRegistry;
 import org.springframework.web.reactive.config.WebFluxConfigurer;
 
 @Configuration
-//@EnableWebFlux
+@EnableWebFlux
 public class WebConfig implements WebFluxConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/**")
-                .addResourceLocations("/public", "classpath:/static/")
+                .addResourceLocations("classpath:/static/")
                 .setCacheControl(CacheControl.noCache());
     }
 

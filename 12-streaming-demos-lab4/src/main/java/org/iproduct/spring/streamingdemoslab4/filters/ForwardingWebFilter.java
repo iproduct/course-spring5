@@ -1,4 +1,4 @@
-package org.iproduct.demos.spring.streamingdemos.filters;
+package org.iproduct.spring.streamingdemoslab4.filters;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
@@ -12,7 +12,7 @@ public class ForwardingWebFilter implements WebFilter {
     public Mono<Void> filter(ServerWebExchange exchange, WebFilterChain chain) {
         if (exchange.getRequest().getURI().getPath().equals("/")) {
             return chain.filter(
-                    exchange.mutate().request(exchange.getRequest().mutate().path("/index.html").build())
+                    exchange.mutate().request(exchange.getRequest().mutate().path("/quotes.html").build())
                     .build());
         }
 
