@@ -1,5 +1,6 @@
 package course.spring.webfluxdemo.dao;
 
+import course.spring.webfluxdemo.exception.NonexistingEntityException;
 import course.spring.webfluxdemo.model.Article;
 import org.springframework.stereotype.Repository;
 
@@ -41,8 +42,11 @@ public class ArticlesRepositoryImpl implements ArticlesRepository {
     }
 
     @Override
-    public Article update(Article article) {
+    public Article update(Article article) throws NonexistingEntityException {
         Article old = articles.get(article.getId());
+        if(old == null)
+            throw new NonexistingEntityException(
+                    String.format("Article with ID:%s does not exist.", article.getId()));
         old.setTitle(article.getTitle());
         old.setContent(article.getContent());
         old.setModified(LocalDateTime.now());
@@ -50,7 +54,11 @@ public class ArticlesRepositoryImpl implements ArticlesRepository {
     }
 
     @Override
-    public Article delete(String articleId) {
-        return articles.remove(articleId);
+    public Article delete(String articleId) throws NonexistingEntityException{
+        Article result = articles.remove(articleId);
+        if(result == null)
+            throw new NonexistingEntityException(
+                    String.format("Article with ID:%s does not exist.", articleId));
+        return result;
     }
 }

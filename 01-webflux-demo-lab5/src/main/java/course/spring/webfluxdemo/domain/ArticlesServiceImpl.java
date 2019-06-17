@@ -1,6 +1,7 @@
 package course.spring.webfluxdemo.domain;
 
 import course.spring.webfluxdemo.dao.ArticlesRepository;
+import course.spring.webfluxdemo.exception.NonexistingEntityException;
 import course.spring.webfluxdemo.model.Article;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,12 +24,12 @@ public class ArticlesServiceImpl implements ArticlesService{
     }
 
     @Override
-    public Article update(Article article) {
+    public Article update(Article article) throws NonexistingEntityException {
         return repository.update(article);
     }
 
     @Override
-    public Article delete(String articleId) {
+    public Article delete(String articleId) throws NonexistingEntityException {
         return repository.delete(articleId);
     }
 
