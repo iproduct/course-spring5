@@ -14,7 +14,7 @@ import java.util.concurrent.atomic.AtomicLong;
 @Repository
 public class ArticlesRepositoryImpl implements ArticlesRepository {
     private List<Article> articles = new CopyOnWriteArrayList<>();
-    private AtomicLong nextId = new AtomicLong(0);
+    private AtomicLong nextId = new AtomicLong(1);
 
     public ArticlesRepositoryImpl() {
         articles = new CopyOnWriteArrayList<>(Arrays.asList(
