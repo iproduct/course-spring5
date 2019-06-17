@@ -2,8 +2,8 @@ package org.iproduct.spring.restmvc;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
-import org.iproduct.spring.restmvc.config.TestRootConfig;
 import org.iproduct.spring.restmvc.config.SpringSecurityConfig;
+import org.iproduct.spring.restmvc.config.TestRootConfig;
 import org.iproduct.spring.restmvc.config.TestWebConfig;
 import org.iproduct.spring.restmvc.dao.ArticleRepository;
 import org.iproduct.spring.restmvc.model.Article;
@@ -15,7 +15,6 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit.jupiter.web.SpringJUnitWebConfig;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
@@ -23,19 +22,18 @@ import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.CoreMatchers.containsString;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.BDDMockito.then;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
-import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.httpBasic;
-import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.user;
-import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.user;
 
 
 @SpringJUnitWebConfig(classes = {TestRootConfig.class, TestWebConfig.class, SpringSecurityConfig.class})
@@ -113,11 +111,11 @@ public class ArticlesAPITests {
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
                 .andDo(result -> log.info(result.getResponse().getContentAsString()))
-                .andExpect(jsonPath("$.length()").value(3))
+                .andExpect(jsonPath("$.content.length()").value(3))
 //                .andExpect(jsonPath("$.length()").value(greaterThan(2)))
-                .andExpect(jsonPath("$[0].title").value("Welcome to Spring 5"))
-                .andExpect(jsonPath("$[1].title").value("Dependency Injection"))
-                .andExpect(jsonPath("$[2].title").value("Spring Beans and Wireing"));
+                .andExpect(jsonPath("$.content[0].title").value("Welcome to Spring 5"))
+                .andExpect(jsonPath("$.content[1].title").value("Dependency Injection"))
+                .andExpect(jsonPath("$.content[2].title").value("Spring Beans and Wireing"));
 
         then(articleRepository).should(times(1)).findAll();
     }

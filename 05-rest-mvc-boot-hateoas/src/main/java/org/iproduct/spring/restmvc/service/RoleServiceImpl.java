@@ -3,7 +3,6 @@ package org.iproduct.spring.restmvc.service;
 import lombok.extern.slf4j.Slf4j;
 import org.iproduct.spring.restmvc.dao.RoleRepository;
 import org.iproduct.spring.restmvc.model.Role;
-import org.iproduct.spring.restmvc.model.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;

@@ -32,8 +32,8 @@ repositories {
 
 dependencies {
     compile('ch.qos.logback:logback-classic:1.2.3')
-    compile('org.springframework:spring-webmvc:5.0.5.RELEASE')
-    compile('org.springframework:spring-orm:5.0.5.RELEASE')
+    compile('org.springframework:spring-webmvc:5.1.5.RELEASE')
+    compile('org.springframework:spring-orm:5.1.5.RELEASE')
     compile('org.hibernate:hibernate-core:5.2.18.Final')
     compile('com.zaxxer:HikariCP:3.3.1')
     compile('javax.servlet:jstl:1.2')

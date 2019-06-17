@@ -2,8 +2,6 @@ package org.iproduct.spring.restmvc.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.iproduct.spring.restmvc.dao.PermissionRepository;
-import org.iproduct.spring.restmvc.exception.EntityNotFoundException;
-import org.iproduct.spring.restmvc.model.Article;
 import org.iproduct.spring.restmvc.model.Permission;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;

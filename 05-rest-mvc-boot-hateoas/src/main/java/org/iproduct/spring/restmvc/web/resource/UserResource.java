@@ -2,13 +2,9 @@ package org.iproduct.spring.restmvc.web.resource;
 
 import com.fasterxml.jackson.annotation.*;
 import lombok.*;
-import org.hibernate.validator.constraints.Length;
 import org.iproduct.spring.restmvc.model.Role;
-import org.springframework.data.annotation.Id;
-import org.springframework.hateoas.ResourceSupport;
 import org.springframework.hateoas.core.Relation;
 
-import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 import java.util.List;
 

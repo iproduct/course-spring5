@@ -53,7 +53,8 @@ public class ArticlesController {
     private ObjectMapper mapper;
 
     @GetMapping
-    public List<Article> getArticles(){
+    public List<Article> getArticles(HttpServletRequest req){
+        log.info(req.getRequestURI().toString());
         return articlesService.getArticles();
     }
 

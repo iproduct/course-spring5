@@ -2,74 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d9088d2-959f-4c6f-83b2-c801b4592846" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/Article.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/Car.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/CarPark.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/CircularDependencyBeanA.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/CircularDependencyBeanB.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/Engine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/LoggingAspect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/ProfilingAspect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/SpringProgrammaticAnnotationConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/SpringXMLConfigDI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/events/EntityCreationEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/events/EntityCreationEventListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/service/ArticlePresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/service/ArticleProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/service/ConsoleArticlePresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/service/MockArticleProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/articles.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/app-context.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-intro-gradle-lab2/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-intro-gradle-lab2/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-intro-gradle-lab2/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-intro-gradle-lab2/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-intro-gradle-lab2/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-intro-gradle-lab2/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-intro-gradle-lab2/src/main/java/org/iproduct/spring/beanconfig/AlternativeArticleProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-intro-gradle-lab2/src/main/java/org/iproduct/spring/beanconfig/AlternativeProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-intro-gradle-lab2/src/main/java/org/iproduct/spring/beanconfig/Article.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-intro-gradle-lab2/src/main/java/org/iproduct/spring/beanconfig/ArticlePresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-intro-gradle-lab2/src/main/java/org/iproduct/spring/beanconfig/ArticleProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-intro-gradle-lab2/src/main/java/org/iproduct/spring/beanconfig/ConsoleArticlePresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-intro-gradle-lab2/src/main/java/org/iproduct/spring/beanconfig/MockArticleProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-intro-gradle-lab2/src/main/java/org/iproduct/spring/beanconfig/MockProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-intro-gradle-lab2/src/main/java/org/iproduct/spring/beanconfig/SpringProgrammaticAnnotationConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-intro-gradle-lab2/src/main/java/org/iproduct/spring/beanconfig/SpringXMLConfigDI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-intro-gradle-lab2/src/main/resources/articles.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-intro-gradle-lab2/src/main/resources/spring/app-context.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-api-comments/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-api-comments/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-api-comments/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-api-comments/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-api-comments/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-api-comments/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-api-comments/src/main/java/org/iproduct/spring/comments/Comment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-api-comments/src/main/java/org/iproduct/spring/comments/CommentsConsoleLoggerImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-api-comments/src/main/java/org/iproduct/spring/comments/CommentsDemoAnnotationDI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-api-comments/src/main/java/org/iproduct/spring/comments/CommentsLoggerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-api-comments/src/main/java/org/iproduct/spring/comments/CommentsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-api-comments/src/main/java/org/iproduct/spring/comments/CommentsServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-api-comments/src/main/resources/comments.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-api-comments/src/main/resources/emails.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-webflux-hello/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-webflux-hello/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-webflux-hello/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-webflux-hello/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-webflux-hello/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-webflux-hello/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-webflux-hello/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-webflux-hello/src/main/java/org/iproduct/spring/webflux/WebfluxDemoApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-webflux-hello/src/main/java/org/iproduct/spring/webflux/hello/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-webflux-hello/src/main/java/org/iproduct/spring/webflux/reactive/ReactiveHello.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-webflux-hello/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-webflux-hello/src/test/java/org/iproduct/spring/webflux/WebfluxDemoApplicationTests.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kafka-demo/src/main/java/org/iproduct/kafka/DemoConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kafka-demo/src/main/java/org/iproduct/kafka/DemoProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-spring-core/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-spring-core/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-spring-core/programmaticconfig/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core/programmaticconfig/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-spring-core/xmlconfig/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core/xmlconfig/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-spring-core/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-spring-core/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/ConsoleArticlePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/ConsoleArticlePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-webmvc-rest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../04-webmvc-rest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/config/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/config/SpringSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/dao/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/dao/ArticleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/dao/PermissionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/dao/PermissionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/dao/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/dao/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/dao/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/dao/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/model/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/model/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/model/Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/model/Permission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/security/RestSavedRequestAwareAuthenticationSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/security/RestSavedRequestAwareAuthenticationSuccessHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/service/ArticleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/service/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/service/ArticleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/service/PermissionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/service/PermissionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/service/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/service/RoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/ArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/PersistentDataHealthIndicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/PersistentDataHealthIndicator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/resource/ArticleResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/resource/ArticleResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/resource/ArticleResourceAssembler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/resource/ArticleResourceAssembler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/resource/UserResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/resource/UserResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/resource/UserResourceAssembler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/resource/UserResourceAssembler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/test/java/org/iproduct/spring/restmvc/ArticlesAPITests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/test/java/org/iproduct/spring/restmvc/ArticlesAPITests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/test/java/org/iproduct/spring/restmvc/RestMvcApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/test/java/org/iproduct/spring/restmvc/RestMvcApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/test/java/org/iproduct/spring/restmvc/RestMvcBootApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/test/java/org/iproduct/spring/restmvc/RestMvcBootApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/test/java/org/iproduct/spring/restmvc/config/TestWebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-rest-mvc-boot-hateoas/src/test/java/org/iproduct/spring/restmvc/config/TestWebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-webmvc-rest-lab4/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../05-webmvc-rest-lab4/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-webmvc-rest-lab4/src/main/java/org/iproduct/spring/webmvcdemo/web/ArticlesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-webmvc-rest-lab4/src/main/java/org/iproduct/spring/webmvcdemo/web/ArticlesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-webmvc-rest-lab4/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../05-webmvc-rest-lab4/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate-annotations/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate-annotations/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -93,7 +68,17 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="708">
+              <caret line="37" selection-end-line="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -146,16 +131,16 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550409688720" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../01-spring-intro-gradle-lab2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -242,14 +227,16 @@
       <workItem from="1535351542496" duration="5401000" />
       <workItem from="1536765032853" duration="142000" />
       <workItem from="1550409234887" duration="603000" />
+      <workItem from="1559684476714" duration="287000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17952000" />
+    <option name="totallyTimeSpent" value="18239000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1721" height="935" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25346178" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -258,7 +245,6 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32904884" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.28393525" />
@@ -273,7 +259,7 @@
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32876712" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="right" id="Maven" />
+      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -285,6 +271,7 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info anchor="right" id="Mongo Explorer" order="10" />
+      <window_info anchor="right" id="Maven" order="11" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,13 +286,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/impl/ConsoleArticlePresenter.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/Car.java">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="34" column="41" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="34" selection-end-column="41" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/ArticleProvider.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/spring/demo/beanconfig/impl/MockArticleProvider.java" />
@@ -439,6 +419,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="37" selection-end-line="37" />
         </state>
       </provider>
     </entry>

@@ -11,7 +11,7 @@ import java.util.List;
 
 @AlternativeProvider
 @Component("alternativeProvider")
-@PropertySource("articles.properties")
+@PropertySource("classpath:articles.properties")
 public class AnotherArticleProvider implements ArticleProvider {
 
     @Value("${numberOfArticles}")

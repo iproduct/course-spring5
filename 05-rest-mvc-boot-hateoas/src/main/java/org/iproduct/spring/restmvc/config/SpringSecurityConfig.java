@@ -1,7 +1,6 @@
 package org.iproduct.spring.restmvc.config;
 
 import lombok.extern.slf4j.Slf4j;
-import org.iproduct.spring.restmvc.dao.UserRepository;
 import org.iproduct.spring.restmvc.model.User;
 import org.iproduct.spring.restmvc.security.RestAuthenticationEntryPoint;
 import org.iproduct.spring.restmvc.security.RestSavedRequestAwareAuthenticationSuccessHandler;
@@ -11,15 +10,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.userdetails.ReactiveUserDetailsService;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
 
 @Configuration

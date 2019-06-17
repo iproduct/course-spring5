@@ -26,7 +26,6 @@ class Article {
         this.content = content;
         this.createdDate = LocalDateTime.now();
     }
-
     public Article(String title, String content, LocalDateTime createdDate) {
         this.title = title;
         this.content = content;

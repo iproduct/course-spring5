@@ -2,29 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f7f8968-8f8b-4bb3-8491-8e2dd76e61f9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/java/org/iproduct/spring/streamingdemoslab4/ReactorDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/java/org/iproduct/spring/streamingdemoslab4/client/QuotesClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/java/org/iproduct/spring/streamingdemoslab4/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/java/org/iproduct/spring/streamingdemoslab4/filters/ForwardingWebFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/java/org/iproduct/spring/streamingdemoslab4/model/Quote.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/java/org/iproduct/spring/streamingdemoslab4/service/QuotesGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/resources/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/resources/static/javascripts/css/highcharts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/resources/static/javascripts/css/highcharts.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/resources/static/javascripts/custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/resources/static/javascripts/exporting.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/resources/static/javascripts/exporting.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/resources/static/javascripts/exporting.src.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/resources/static/javascripts/highcharts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/resources/static/javascripts/highcharts.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/resources/static/javascripts/highcharts.src.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/resources/static/javascripts/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/resources/static/quotes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/12-reactive-streaming-demos_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/12-reactive-streaming-demos_test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/client/ProfilerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/client/ProfilerClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/configuration/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/configuration/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/filters/ForwardingWebFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/filters/ForwardingWebFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kafka-demo/src/main/java/org/iproduct/kafka/DemoConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kafka-demo/src/main/java/org/iproduct/kafka/DemoProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-spring-core/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-spring-core/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-webmvc-rest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../04-webmvc-rest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-webmvc-rest-lab4/src/main/java/org/iproduct/spring/webmvcdemo/web/ArticlesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-webmvc-rest-lab4/src/main/java/org/iproduct/spring/webmvcdemo/web/ArticlesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-webmvc-rest-lab4/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../05-webmvc-rest-lab4/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate-annotations/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate-annotations/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -86,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/filters/ForwardingWebFilter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -121,7 +107,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/client/ProfilerClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
+            <state relative-caret-position="770">
               <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="52" selection-end-column="70" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -210,6 +196,12 @@
               <item name="streamingdemos" type="462c0819:PsiDirectoryNode" />
               <item name="filters" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="12-reactive-streaming-demos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="12-reactive-streaming-demos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -220,7 +212,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553445321662" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../08-webmvc-forms-jsp-jdbc" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15728477" />
     <property name="project.structure.side.proportion" value="0.23772103" />
@@ -326,6 +318,7 @@
       <workItem from="1553445393234" duration="18000" />
       <workItem from="1553445697531" duration="162000" />
       <workItem from="1553445876071" duration="13000" />
+      <workItem from="1558567469991" duration="36000" />
     </task>
     <task id="LOCAL-00001" summary="reactive webflux demo - user management with security added">
       <created>1527399441835</created>
@@ -338,11 +331,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11055000" />
+    <option name="totallyTimeSpent" value="11091000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1721" height="935" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17519566" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -475,7 +467,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/client/ProfilerClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
+        <state relative-caret-position="770">
           <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="52" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -493,7 +485,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/filters/ForwardingWebFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>

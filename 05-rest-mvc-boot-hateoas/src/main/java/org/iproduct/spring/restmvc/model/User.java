@@ -1,7 +1,6 @@
 package org.iproduct.spring.restmvc.model;
 
 import com.fasterxml.jackson.annotation.*;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NonNull;
 import org.hibernate.validator.constraints.Length;
@@ -13,7 +12,6 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.validation.constraints.NotNull;
-import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;

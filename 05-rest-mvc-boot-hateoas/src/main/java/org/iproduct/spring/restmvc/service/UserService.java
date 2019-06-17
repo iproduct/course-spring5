@@ -1,6 +1,5 @@
 package org.iproduct.spring.restmvc.service;
 
-import org.iproduct.spring.restmvc.model.Role;
 import org.iproduct.spring.restmvc.model.User;
 
 import javax.validation.Valid;
