@@ -5,7 +5,7 @@ import course.spring.webfluxdemo.model.Article;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.Collection;
 
 @Service
 public class ArticlesServiceImpl implements ArticlesService{
@@ -13,13 +13,23 @@ public class ArticlesServiceImpl implements ArticlesService{
     private ArticlesRepository repository;
 
     @Override
-    public List<Article> getAll() {
+    public Collection<Article> getAll() {
         return repository.findAll();
     }
 
     @Override
     public Article add(Article article) {
         return repository.create(article);
+    }
+
+    @Override
+    public Article update(Article article) {
+        return repository.update(article);
+    }
+
+    @Override
+    public Article delete(String articleId) {
+        return repository.delete(articleId);
     }
 
 
