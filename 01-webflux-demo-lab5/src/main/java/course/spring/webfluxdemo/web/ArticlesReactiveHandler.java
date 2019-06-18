@@ -12,6 +12,7 @@ import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;
 
+import java.net.URI;
 import java.util.Collection;
 
 @Component
@@ -21,6 +22,15 @@ public class ArticlesReactiveHandler {
 
     public Mono<ServerResponse> getAllArticles(ServerRequest req){
         return ServerResponse.ok().body(articlesService.getAll(), Article.class);
+    }
+
+    public Mono<ServerResponse> addArticle(ServerRequest request) {
+        return request.bodyToMono(Article.class)
+            .flatMap(article -> articlesService.add(article))
+            .flatMap(created -> ServerResponse.created(
+                    URI.create(request.path() + "/" + created.getId()))
+                    .build()
+            );
     }
 
 //    public Article addArticle(@RequestBody Article article){
