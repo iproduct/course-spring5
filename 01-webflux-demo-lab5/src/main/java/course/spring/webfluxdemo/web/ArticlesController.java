@@ -34,7 +34,7 @@ public class ArticlesController {
 
     @PutMapping("{id}")
     public Article updateArticle(@PathVariable("id") String id,
-                                        @RequestBody Article article)
+                                 @RequestBody Article article)
             throws NonexistingEntityException, IllegalEntityBodyException {
         if(!id.equals(article.getId())) {
             throw new IllegalEntityBodyException(
