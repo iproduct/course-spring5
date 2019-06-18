@@ -5,7 +5,9 @@ import course.spring.webfluxdemo.domain.ArticlesService;
 import course.spring.webfluxdemo.exception.IllegalEntityBodyException;
 import course.spring.webfluxdemo.exception.NonexistingEntityException;
 import course.spring.webfluxdemo.model.Article;
+import course.spring.webfluxdemo.model.HttpErrorResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.reactive.function.server.ServerRequest;
@@ -15,6 +17,8 @@ import reactor.core.publisher.Mono;
 import java.net.URI;
 import java.time.LocalDateTime;
 import java.util.Collection;
+
+import static io.netty.handler.codec.rtsp.RtspResponseStatuses.NOT_FOUND;
 
 @Component
 public class ArticlesReactiveHandler {
@@ -26,8 +30,11 @@ public class ArticlesReactiveHandler {
     }
 
     public Mono<ServerResponse> getArticleById(ServerRequest request) {
-        return ServerResponse.ok().body(
-            articlesService.getById(request.pathVariable("id")), Article.class);
+        return articlesService.getById(request.pathVariable("id"))
+            .flatMap(article -> ServerResponse.ok().syncBody(article))
+            .onErrorResume(exception -> ServerResponse.status(HttpStatus.NOT_FOUND).syncBody(
+                new HttpErrorResponse(HttpStatus.NOT_FOUND, exception.getMessage())
+            ));
     }
 
     public Mono<ServerResponse> addArticle(ServerRequest request) {
@@ -55,27 +62,14 @@ public class ArticlesReactiveHandler {
                 oldArt.setContent(newArt.getContent());
                 oldArt.setModified(LocalDateTime.now());
                 return articlesService.update(oldArt);
-            }).flatMap(article -> ServerResponse.ok().syncBody(article));
+            }).flatMap(article -> ServerResponse.ok().syncBody(article))
+            .onErrorResume(exception -> exception instanceof NonexistingEntityException ?
+                ServerResponse.status(HttpStatus.NOT_FOUND).syncBody(
+                    new HttpErrorResponse(HttpStatus.NOT_FOUND, exception.getMessage())
+                ) :
+                ServerResponse.status(HttpStatus.BAD_REQUEST).syncBody(
+                    new HttpErrorResponse(HttpStatus.BAD_REQUEST, exception.getMessage())
+                )
+            );
     }
-
-
-//    public Article addArticle(@RequestBody Article article){
-//        return articlesService.add(article);
-//    }
-//
-//    public Article updateArticle(@PathVariable("id") String id,
-//                                 @RequestBody Article article)
-//            throws NonexistingEntityException, IllegalEntityBodyException {
-//        if(!id.equals(article.getId())) {
-//            throw new IllegalEntityBodyException(
-//                    String.format("ID in body:'%s' different from path:'%s'",
-//                            article.getId() ,id));
-//        }
-//        return articlesService.update(article);
-//    }
-//
-//    public Article deleteArticle(@PathVariable("id") String id) throws NonexistingEntityException {
-//        return articlesService.delete(id);
-//    }
-
 }
