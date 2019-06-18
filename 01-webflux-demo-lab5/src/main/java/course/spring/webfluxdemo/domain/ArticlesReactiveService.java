@@ -9,6 +9,7 @@ import java.util.Collection;
 
 public interface ArticlesReactiveService {
     Flux<Article> getAll();
+    Mono<Article> getById(String id);
     Mono<Article> add(Article article);
     Mono<Article> update(Article article);
     Mono<Article> delete(String articleId);

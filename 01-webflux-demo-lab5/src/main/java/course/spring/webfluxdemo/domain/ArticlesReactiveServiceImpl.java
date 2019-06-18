@@ -22,6 +22,14 @@ public class ArticlesReactiveServiceImpl implements ArticlesReactiveService{
     }
 
     @Override
+    public Mono<Article> getById(String id) {
+        return repository.findById(id)
+            .switchIfEmpty(Mono.error(new NonexistingEntityException(
+                String.format("Article with ID:%s does not exist.", id)
+            )));
+    }
+
+    @Override
     public Mono<Article> add(Article article) {
         return repository.insert(article);
     }
