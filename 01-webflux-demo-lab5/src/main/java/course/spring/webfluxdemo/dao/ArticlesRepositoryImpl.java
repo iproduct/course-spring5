@@ -21,11 +21,11 @@ public class ArticlesRepositoryImpl implements ArticlesRepository {
 
     public ArticlesRepositoryImpl() {
         Arrays.asList(
-            new Article("111111111111111111111111", "New in Spring", "WebFlux is here ..."),
-            new Article("222222222222222222222222", "Dependency Injection", "DI is easy ..."),
-            new Article("333333333333333333333333", "What is REST?", "REST requires HATEOAS ...")
+            new Article("New in Spring", "WebFlux is here ..."),
+            new Article("Dependency Injection", "DI is easy ..."),
+            new Article("What is REST?", "REST requires HATEOAS ...")
         ).stream().forEach(a -> {
-            articles.put(a.getId(), a);
+            create(a);
         });
     }
     @Override
