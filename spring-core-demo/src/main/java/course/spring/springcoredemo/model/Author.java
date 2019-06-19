@@ -1,7 +1,10 @@
 package course.spring.springcoredemo.model;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Properties;
 
+@Component
 public class Author {
     private String name;
     private int age;

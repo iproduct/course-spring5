@@ -1,10 +1,32 @@
 package course.spring.springcoredemo.config;
 
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
+import course.spring.springcoredemo.dao.AlternativeArticleRepository;
+import course.spring.springcoredemo.dao.ArticlesRepository;
+import course.spring.springcoredemo.dao.ArticlesRepositoryImpl;
+import course.spring.springcoredemo.domain.ArticlePresenter;
+import course.spring.springcoredemo.domain.ConsoleArticlePresenter;
+import org.springframework.context.annotation.*;
 
 @Configuration
-@PropertySource("classpath:articles.properties")
+@PropertySource(value = "classpath:articles.properties", ignoreResourceNotFound = true)
+@ComponentScan("course.spring.springcoredemo")
 public class AppConfig {
+    @Bean(name="provider", initMethod = "init")
+    public ArticlesRepository getArticlesRepository() {
+        return new ArticlesRepositoryImpl();
+    }
+
+    @Bean(name="alternativeProvider")
+    public ArticlesRepository getAlternativeRepository() {
+        return new AlternativeArticleRepository();
+    }
+
+    @Bean("presenter")
+    @DependsOn("provider")
+    public ArticlePresenter getArticlePresenter() {
+        ConsoleArticlePresenter presenter = new ConsoleArticlePresenter();
+        presenter.setProvider(getAlternativeRepository());
+        return presenter;
+    }
 
 }

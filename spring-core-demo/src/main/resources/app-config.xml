@@ -57,6 +57,7 @@
                 articles.content2=DI is easy ...
             </value>
         </property>
+        <property name="ignoreResourceNotFound" value="true" />
     </bean>
 
 </beans>

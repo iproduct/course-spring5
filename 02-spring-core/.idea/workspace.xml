@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04ada577-88c3-4482-a6d0-c544e831a56d" name="Default" comment="XMLConfigFactory: autowireing bean postprocessor added, xml config changed">
-      <change afterPath="$PROJECT_DIR$/../spring-core-demo/src/main/resources/articles.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-core-demo/src/main/java/course/spring/springcoredemo/AnnotationContextDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-core-demo/src/main/java/course/spring/springcoredemo/dao/AlternativeArticleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-core-demo/src/main/java/course/spring/springcoredemo/qualifiers/AlternativeProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-core-demo/src/main/java/course/spring/springcoredemo/qualifiers/MockProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-core-demo/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-core-demo/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-core-demo/src/main/java/course/spring/springcoredemo/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-core-demo/src/main/java/course/spring/springcoredemo/config/AppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring-core-demo/src/main/java/course/spring/springcoredemo/dao/ArticlesRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-core-demo/src/main/java/course/spring/springcoredemo/dao/ArticlesRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-core-demo/src/main/java/course/spring/springcoredemo/domain/ConsoleArticlePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-core-demo/src/main/java/course/spring/springcoredemo/domain/ConsoleArticlePresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring-core-demo/src/main/java/course/spring/springcoredemo/model/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-core-demo/src/main/java/course/spring/springcoredemo/model/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-core-demo/src/main/java/course/spring/springcoredemo/model/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-core-demo/src/main/java/course/spring/springcoredemo/model/Author.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring-core-demo/src/main/resources/app-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-core-demo/src/main/resources/app-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-core-demo/src/main/resources/articles.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-core-demo/src/main/resources/articles.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -77,52 +85,64 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/SpringXMLConfigFactory.java">
+        <entry file="file://$PROJECT_DIR$/annotationconfig/src/main/java/org/iproduct/spring/programmatic/AnotherArticleProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-55">
-              <caret line="4" column="88" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="88" />
+            <state relative-caret-position="308">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xmlconfig/src/main/resources/spring/app-context.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="34" column="9" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="42" selection-end-column="11" />
-              <folding>
-                <marker date="1560923445499" expanded="true" signature="923:1083" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/ArticlePresenterFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/ConsoleArticlePresenter.java">
+        <entry file="file://$PROJECT_DIR$/annotationconfig/src/main/java/org/iproduct/spring/programmatic/AlternativeProvider.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
+              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/SpringXMLConfigDI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
               <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/annotationconfig/src/main/resources/articles.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" column="18" lean-forward="true" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/programmaticconfig/src/main/java/org/iproduct/spring/programmatic/SpringProgrammaticAnnotationConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/programmaticconfig/src/main/java/org/iproduct/spring/programmatic/SpringProgrammaticAnnotationConfigDI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="8" column="112" selection-start-line="8" selection-start-column="72" selection-end-line="8" selection-end-column="112" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/annotationconfig/src/main/java/org/iproduct/spring/programmatic/AnotherArticleProvider.java">
+        <entry file="file://$PROJECT_DIR$/annotationconfig-multiple/src/main/java/org/iproduct/spring/programmatic/AlternativeProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="88">
+              <caret line="9" selection-start-line="9" selection-end-line="11" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -137,28 +157,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/annotationconfig/src/main/java/org/iproduct/spring/programmatic/MockProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/annotationconfig/src/main/java/org/iproduct/spring/programmatic/SpringAnnotationsDI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="110">
               <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/annotationconfig/src/main/java/org/iproduct/spring/programmatic/Article.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-440">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -290,25 +292,25 @@
             <path>
               <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
               <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="annotationconfig" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="annotationconfig-multiple" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
               <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="annotationconfig" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="annotationconfig-multiple" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
               <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="annotationconfig" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="annotationconfig-multiple" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
               <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="annotationconfig" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="annotationconfig-multiple" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -316,7 +318,7 @@
             <path>
               <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
               <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="annotationconfig" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="annotationconfig-multiple" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -325,54 +327,37 @@
             <path>
               <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
               <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="xmlconfig" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="programmaticconfig" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
               <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="xmlconfig" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="programmaticconfig" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
               <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="xmlconfig" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="xmlconfig" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="programmaticconfig" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
               <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="xmlconfig" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="programmaticconfig" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="xmlconfig" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
               <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="xmlconfig" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="programmaticconfig" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="xmlconfig" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="programmatic" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -383,7 +368,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560937558831" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560948317152" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.16207455" />
@@ -586,7 +571,7 @@
       <workItem from="1559310013554" duration="4068000" />
       <workItem from="1559822680219" duration="1719000" />
       <workItem from="1560356632577" duration="135000" />
-      <workItem from="1560922878537" duration="5255000" />
+      <workItem from="1560922878537" duration="6981000" />
     </task>
     <task id="LOCAL-00001" summary="property file demo added">
       <created>1524303046269</created>
@@ -638,7 +623,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176591000" />
+    <option name="totallyTimeSpent" value="178317000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -698,41 +683,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="XMLConfigFactory: autowireing bean postprocessor added, xml config changed" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/circular_dependency/src/main/java/org/iproduct/spring/circular/CircularDependencyBeanB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#375#376#0" expanded="true" />
-            <element signature="e#409#410#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/Author.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/ArticleProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/SpringXMLConfigAnnotationsDI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/circular_dependency/src/main/java/org/iproduct/spring/circular/CircularDependencyBeanA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
@@ -886,13 +836,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/programmaticconfig/src/main/java/org/iproduct/spring/programmatic/SpringProgrammaticAnnotationConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/programmaticconfig/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -904,13 +847,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/programmaticconfig/src/main/java/org/iproduct/spring/programmatic/SpringProgrammaticAnnotationConfigDI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1032,24 +968,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/annotationconfig/src/main/java/org/iproduct/spring/programmatic/ConsoleArticlePresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-128">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annotationconfig/src/main/java/org/iproduct/spring/programmatic/MockArticleProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/annotationconfig/src/main/java/org/iproduct/spring/programmatic/MockProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/annotationconfig/src/main/java/org/iproduct/spring/programmatic/Article.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/annotationconfig/src/main/resources/articles.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="18" lean-forward="true" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1060,10 +996,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/annotationconfig/src/main/java/org/iproduct/spring/programmatic/Article.java">
+    <entry file="file://$PROJECT_DIR$/annotationconfig/src/main/java/org/iproduct/spring/programmatic/MockArticleProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-440">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="154">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/annotationconfig/src/main/java/org/iproduct/spring/programmatic/ConsoleArticlePresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-128">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1071,6 +1014,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/annotationconfig/src/main/java/org/iproduct/spring/programmatic/AlternativeProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/SpringXMLConfigDI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/programmaticconfig/src/main/java/org/iproduct/spring/programmatic/SpringProgrammaticAnnotationConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/programmaticconfig/src/main/java/org/iproduct/spring/programmatic/SpringProgrammaticAnnotationConfigDI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="8" column="112" selection-start-line="8" selection-start-column="72" selection-end-line="8" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/annotationconfig-multiple/src/main/java/org/iproduct/spring/programmatic/AlternativeProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="9" selection-start-line="9" selection-end-line="11" selection-end-column="41" />
         </state>
       </provider>
     </entry>

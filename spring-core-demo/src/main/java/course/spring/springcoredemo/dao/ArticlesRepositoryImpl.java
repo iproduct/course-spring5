@@ -2,17 +2,20 @@ package course.spring.springcoredemo.dao;
 
 import course.spring.springcoredemo.exception.NonexistingEntityException;
 import course.spring.springcoredemo.model.Article;
+import course.spring.springcoredemo.qualifiers.MockProvider;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
+import javax.annotation.PostConstruct;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.Collection;
@@ -20,6 +23,8 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
+//@Repository
+//@MockProvider
 public class ArticlesRepositoryImpl implements ArticlesRepository, ApplicationContextAware {
     private Map<String, Article> articles = new ConcurrentHashMap<>();
     private AtomicLong nextId = new AtomicLong(1);
@@ -40,6 +45,7 @@ public class ArticlesRepositoryImpl implements ArticlesRepository, ApplicationCo
         ctx = applicationContext;
     }
 
+//    @PostConstruct
     public void init() {
         Arrays.asList(
                 new Article(env.getProperty("articles.title"),
@@ -48,9 +54,7 @@ public class ArticlesRepositoryImpl implements ArticlesRepository, ApplicationCo
 //                ctx.getBean("article", Article.class),
 //                ctx.getBean("article", Article.class),
 //                ctx.getBean("article", Article.class)
-//    new Article("New in Spring", "WebFlux is here ..."),
-//            new Article("Dependency Injection", "DI is easy ..."),
-//            new Article("What is REST?", "REST requires HATEOAS ...")
+
         ).stream().forEach(a -> {
             create(a);
         });
