@@ -10,9 +10,12 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
     <context:annotation-config/>
     <context:component-scan base-package="course.spring.springcoredemo" />
+    <!--<context:property-placeholder location="classpath:articles.properties"/>-->
     <!--<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>-->
     <bean id="provider" name="provider"
           class="course.spring.springcoredemo.dao.ArticlesRepositoryImpl" init-method="init"/>
+    <bean id="alternativeProvider"
+          class="course.spring.springcoredemo.dao.AlternativeArticleRepository"/>
     <bean id="presenter" name="presenter"
           class="course.spring.springcoredemo.domain.ConsoleArticlePresenter" depends-on="provider" lazy-init="true">
         <!--<constructor-arg index="0" name="provider"-->
@@ -46,17 +49,19 @@
         scope="prototype">
         <!--<property name="author" ref="author"/>-->
     </bean>
+
     <bean id="mappings"
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <!--typed as a java.util.Properties-->
         <property name="properties">
             <value>
-                articles.title1=Welcome to Spring 5
-                articles.content1=Spring 5 is great beacuse ...
-                articles.title2=Dependency Injection
-                articles.content2=DI is easy ...
+                articles.title1=Welcome to Spring 5 - XML
+                articles.content1=Spring 5 is great beacuse ... - XML
+                articles.title2=Dependency Injection - XML
+                articles.content2=DI is easy ... - XML
             </value>
         </property>
+        <property name="locations" value="classpath:articles.properties"/>
         <property name="ignoreResourceNotFound" value="true" />
     </bean>
 

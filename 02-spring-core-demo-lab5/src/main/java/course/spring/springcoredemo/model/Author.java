@@ -1,10 +1,12 @@
 package course.spring.springcoredemo.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.Properties;
 
-@Component
+//@Component
 public class Author {
     private String name;
     private int age;
@@ -14,7 +16,8 @@ public class Author {
         return name;
     }
 
-    public void setName(String name) {
+    @Autowired
+    public void setName(@Value("${articles.author}")String name) {
         this.name = name;
     }
 

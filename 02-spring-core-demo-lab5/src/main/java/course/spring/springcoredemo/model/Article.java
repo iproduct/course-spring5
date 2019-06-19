@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -13,7 +14,7 @@ import javax.annotation.PostConstruct;
 import java.time.LocalDateTime;
 import java.util.concurrent.atomic.AtomicInteger;
 
-@Component
+//@Component
 @Scope("prototype")
 @Data
 @NoArgsConstructor

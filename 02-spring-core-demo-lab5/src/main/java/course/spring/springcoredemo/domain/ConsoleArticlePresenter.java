@@ -45,6 +45,12 @@ public class ConsoleArticlePresenter implements ArticlePresenter{
         return title;
     }
 
+    @Autowired
+    public void setPresenterData(ArticlesRepository provider, @Qualifier("title") String title){
+        this.provider = provider;
+        this.title = title;
+    }
+
     public void setTitle(String title) {
         this.title = title;
     }

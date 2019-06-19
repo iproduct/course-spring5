@@ -12,7 +12,7 @@ public class Car {
     @NonNull
     private String make;
     @NonNull
-    private int model;
+    private String model;
     private Engine engine;
     @NonNull
     private int horsePower;
