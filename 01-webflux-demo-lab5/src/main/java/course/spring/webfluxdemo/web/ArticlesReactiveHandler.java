@@ -31,10 +31,18 @@ public class ArticlesReactiveHandler {
 
     public Mono<ServerResponse> getArticleById(ServerRequest request) {
         return articlesService.getById(request.pathVariable("id"))
-            .flatMap(article -> ServerResponse.ok().syncBody(article))
-            .onErrorResume(exception -> ServerResponse.status(HttpStatus.NOT_FOUND).syncBody(
-                new HttpErrorResponse(HttpStatus.NOT_FOUND, exception.getMessage())
-            ));
+                .flatMap(article -> ServerResponse.ok().syncBody(article))
+                .onErrorResume(exception -> ServerResponse.status(HttpStatus.NOT_FOUND).syncBody(
+                        new HttpErrorResponse(HttpStatus.NOT_FOUND, exception.getMessage())
+                ));
+    }
+
+    public Mono<ServerResponse> deleteArticleById(ServerRequest request) {
+        return articlesService.delete(request.pathVariable("id"))
+                .flatMap(article -> ServerResponse.ok().syncBody(article))
+                .onErrorResume(exception -> ServerResponse.status(HttpStatus.NOT_FOUND).syncBody(
+                        new HttpErrorResponse(HttpStatus.NOT_FOUND, exception.getMessage())
+                ));
     }
 
     public Mono<ServerResponse> addArticle(ServerRequest request) {

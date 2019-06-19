@@ -17,9 +17,9 @@ import org.springframework.core.io.FileSystemResource;
 
 public class SpringXMLConfigFactory {
     public static void main(String[] args) {
-//        BeanFactory beanFactory=new XmlBeanFactory(new ClassPathResource("spring/app-context.xml"));
+        BeanFactory beanFactory=new XmlBeanFactory(new ClassPathResource("spring/app-context.xml"));
 //        BeanFactory beanFactory1=new XmlBeanFactory(new FileSystemResource("xmlconfig/src/main/resources/spring/app-context.xml"));
-        DefaultListableBeanFactory beanFactory= new DefaultListableBeanFactory();
+//        DefaultListableBeanFactory beanFactory= new DefaultListableBeanFactory();
         XmlBeanDefinitionReader beanDefinitionReader = new XmlBeanDefinitionReader(beanFactory);
 //        beanDefinitionReader.loadBeanDefinitions(new ClassPathResource("spring/app-context.xml"));
         beanDefinitionReader.loadBeanDefinitions("spring/app-context.xml");

@@ -23,7 +23,8 @@ public class Application {
 				route(GET("/"), handler::getAllArticles)
 				.andRoute(POST("/"), handler::addArticle)
 				.andRoute(GET("/{id}"), handler::getArticleById)
-				.andRoute(PUT("/{id}"), handler::updateArticle);
+				.andRoute(PUT("/{id}"), handler::updateArticle)
+				.andRoute(DELETE("/{id}"), handler::deleteArticleById);
 		return nest(RequestPredicates.path("/api/reactive/articles"), articleRoutes);
 	}
 

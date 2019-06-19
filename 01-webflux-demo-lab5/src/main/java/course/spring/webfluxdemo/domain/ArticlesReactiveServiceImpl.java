@@ -48,7 +48,7 @@ public class ArticlesReactiveServiceImpl implements ArticlesReactiveService{
     public Mono<Article> delete(String articleId) {
         return repository.findById(articleId)
             .doOnNext(found -> {
-                repository.deleteById(articleId);
+                repository.deleteById(articleId).subscribe();
             }).switchIfEmpty(Mono.error(new NonexistingEntityException(
                 String.format("Article with ID:%s does not exist.", articleId)
             )));

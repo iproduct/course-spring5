@@ -8,8 +8,8 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
-    <context:annotation-config />
-    <context:component-scan base-package="org.iproduct.spring.xmlconfig"/>
+    <!--<context:annotation-config />-->
+    <!--<context:component-scan base-package="org.iproduct.spring.xmlconfig"/>-->
     <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
     <bean id="provider" class="org.iproduct.spring.xmlconfig.MockArticleProvider"/>
     <!--<bean id="provider" factory-method="createInstance"-->
