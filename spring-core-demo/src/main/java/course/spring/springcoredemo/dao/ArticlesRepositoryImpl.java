@@ -2,6 +2,10 @@ package course.spring.springcoredemo.dao;
 
 import course.spring.springcoredemo.exception.NonexistingEntityException;
 import course.spring.springcoredemo.model.Article;
+import org.springframework.beans.BeansException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
@@ -11,19 +15,30 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
-public class ArticlesRepositoryImpl implements ArticlesRepository {
+public class ArticlesRepositoryImpl implements ArticlesRepository, ApplicationContextAware {
     private Map<String, Article> articles = new ConcurrentHashMap<>();
     private AtomicLong nextId = new AtomicLong(1);
+    private ApplicationContext ctx;
 
-    public ArticlesRepositoryImpl() {
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        ctx = applicationContext;
+    }
+
+    public void init() {
         Arrays.asList(
-            new Article("New in Spring", "WebFlux is here ..."),
-            new Article("Dependency Injection", "DI is easy ..."),
-            new Article("What is REST?", "REST requires HATEOAS ...")
+                ctx.getBean("article", Article.class),
+                ctx.getBean("article", Article.class),
+                ctx.getBean("article", Article.class)
+//    new Article("New in Spring", "WebFlux is here ..."),
+//            new Article("Dependency Injection", "DI is easy ..."),
+//            new Article("What is REST?", "REST requires HATEOAS ...")
         ).stream().forEach(a -> {
             create(a);
         });
     }
+
+    public ArticlesRepositoryImpl() {}
     @Override
     public Collection<Article> findAll() {
         return articles.values();
@@ -57,4 +72,6 @@ public class ArticlesRepositoryImpl implements ArticlesRepository {
                     String.format("Article with ID:%s does not exist.", articleId));
         return result;
     }
+
+
 }

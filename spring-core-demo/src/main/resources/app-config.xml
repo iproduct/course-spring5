@@ -8,5 +8,43 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
-    
+    <!--<context:annotation-config/>-->
+    <!--<context:component-scan base-package="course.spring.springcoredemo" />-->
+    <!--<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>-->
+    <bean id="provider" name="provider"
+          class="course.spring.springcoredemo.dao.ArticlesRepositoryImpl" init-method="init"/>
+    <bean id="presenter" name="presenter"
+          class="course.spring.springcoredemo.domain.ConsoleArticlePresenter" depends-on="provider" lazy-init="true">
+        <!--<constructor-arg index="0" name="provider"-->
+                         <!--type="course.spring.springcoredemo.dao.ArticlesRepository">-->
+            <!--<ref bean="provider" />-->
+        <!--</constructor-arg>-->
+        <property name="provider">
+            <ref bean="provider" />
+        </property>
+        <property name="title">
+            <value>Hello Spring DI</value>
+        </property>
+    </bean>
+    <bean id="parent" abstract="true" class="course.spring.springcoredemo.model.Author">
+        <property name="emails">
+            <props>
+                <prop key="admin">admin@example.com</prop>
+                <prop key="support">support@example.com</prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="author" parent="parent" scope="singleton" p:name="Ivan Petrov" p:age="38">
+        <property name="emails">
+            <props merge="true">
+                <prop key="sales">sales@example.com</prop>
+                <prop key="support">support@example.co.uk</prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="article" class="course.spring.springcoredemo.model.Article" p:author-ref="author"
+        p:title="New in Spring" p:content="WebFlux is here ...">
+        <!--<property name="author" ref="author"/>-->
+    </bean>
+
 </beans>
