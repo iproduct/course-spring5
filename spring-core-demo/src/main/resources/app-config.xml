@@ -8,8 +8,8 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
-    <!--<context:annotation-config/>-->
-    <!--<context:component-scan base-package="course.spring.springcoredemo" />-->
+    <context:annotation-config/>
+    <context:component-scan base-package="course.spring.springcoredemo" />
     <!--<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>-->
     <bean id="provider" name="provider"
           class="course.spring.springcoredemo.dao.ArticlesRepositoryImpl" init-method="init"/>
@@ -43,8 +43,20 @@
         </property>
     </bean>
     <bean id="article" class="course.spring.springcoredemo.model.Article" p:author-ref="author"
-        p:title="New in Spring" p:content="WebFlux is here ...">
+        scope="prototype">
         <!--<property name="author" ref="author"/>-->
+    </bean>
+    <bean id="mappings"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <!--typed as a java.util.Properties-->
+        <property name="properties">
+            <value>
+                articles.title1=Welcome to Spring 5
+                articles.content1=Spring 5 is great beacuse ...
+                articles.title2=Dependency Injection
+                articles.content2=DI is easy ...
+            </value>
+        </property>
     </bean>
 
 </beans>

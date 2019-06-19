@@ -3,8 +3,13 @@ package course.spring.springcoredemo.dao;
 import course.spring.springcoredemo.exception.NonexistingEntityException;
 import course.spring.springcoredemo.model.Article;
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
@@ -19,6 +24,16 @@ public class ArticlesRepositoryImpl implements ArticlesRepository, ApplicationCo
     private Map<String, Article> articles = new ConcurrentHashMap<>();
     private AtomicLong nextId = new AtomicLong(1);
     private ApplicationContext ctx;
+    @Value("${articles.title1}")
+    private String title1 = "Title 1";
+    @Value("${articles.content1}")
+    private String content1 = "Content 1";
+    @Value("${articles.title2}")
+    private String title2 = "Title 2";
+    @Value("${articles.content2}")
+    private String content2 = "Content 2";
+    @Autowired
+    Environment env;
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
@@ -27,9 +42,12 @@ public class ArticlesRepositoryImpl implements ArticlesRepository, ApplicationCo
 
     public void init() {
         Arrays.asList(
-                ctx.getBean("article", Article.class),
-                ctx.getBean("article", Article.class),
-                ctx.getBean("article", Article.class)
+                new Article(env.getProperty("articles.title"),
+                            env.getProperty("articles.content")   ),
+                new Article(title2, content2)
+//                ctx.getBean("article", Article.class),
+//                ctx.getBean("article", Article.class),
+//                ctx.getBean("article", Article.class)
 //    new Article("New in Spring", "WebFlux is here ..."),
 //            new Article("Dependency Injection", "DI is easy ..."),
 //            new Article("What is REST?", "REST requires HATEOAS ...")

@@ -17,4 +17,9 @@ public class Article {
     private LocalDateTime created = LocalDateTime.now();
     @Builder.Default
     private LocalDateTime modified = LocalDateTime.now();
+
+    public Article(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 }
