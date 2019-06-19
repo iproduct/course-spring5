@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04ada577-88c3-4482-a6d0-c544e831a56d" name="Default" comment="XMLConfigFactory: autowireing bean postprocessor added, xml config changed">
-      <change afterPath="$PROJECT_DIR$/../spring-core-demo/src/main/java/course/spring/springcoredemo/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-webflux-demo-lab5/src/main/java/course/spring/webfluxdemo/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-webflux-demo-lab5/src/main/java/course/spring/webfluxdemo/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-webflux-demo-lab5/src/main/java/course/spring/webfluxdemo/domain/ArticlesReactiveServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-webflux-demo-lab5/src/main/java/course/spring/webfluxdemo/domain/ArticlesReactiveServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-webflux-demo-lab5/src/main/java/course/spring/webfluxdemo/web/ArticlesReactiveHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-webflux-demo-lab5/src/main/java/course/spring/webfluxdemo/web/ArticlesReactiveHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-core-demo/src/main/java/course/spring/springcoredemo/XmlContextDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-core-demo/src/main/java/course/spring/springcoredemo/dao/ArticlesRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-core-demo/src/main/java/course/spring/springcoredemo/dao/ArticlesRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-core-demo/src/main/java/course/spring/springcoredemo/domain/ArticlePresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-core-demo/src/main/java/course/spring/springcoredemo/domain/ConsoleArticlePresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-core-demo/src/main/java/course/spring/springcoredemo/exception/NonexistingEntityException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-core-demo/src/main/resources/app-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/SpringXMLConfigFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/SpringXMLConfigFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xmlconfig/src/main/resources/spring/app-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xmlconfig/src/main/resources/spring/app-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-core-demo/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-core-demo/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-core-demo/src/main/java/course/spring/springcoredemo/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-core-demo/src/main/java/course/spring/springcoredemo/model/Article.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -141,7 +144,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/SpringXMLConfigFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="230">
@@ -150,11 +153,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/xmlconfig/src/main/resources/spring/app-context.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="12" column="87" selection-start-line="12" selection-start-column="87" selection-end-line="12" selection-end-column="87" />
+            <state>
+              <caret column="1" selection-end-line="71" />
               <folding>
                 <marker date="1560923445499" expanded="true" signature="923:1083" ph="..." />
               </folding>
@@ -286,6 +289,41 @@
               <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
               <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
+            <path>
+              <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="xmlconfig" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="xmlconfig" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="xmlconfig" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="xmlconfig" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="xmlconfig" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -295,7 +333,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560924289289" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560925863340" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.16207455" />
@@ -498,7 +536,7 @@
       <workItem from="1559310013554" duration="4068000" />
       <workItem from="1559822680219" duration="1719000" />
       <workItem from="1560356632577" duration="135000" />
-      <workItem from="1560922878537" duration="1410000" />
+      <workItem from="1560922878537" duration="1682000" />
     </task>
     <task id="LOCAL-00001" summary="property file demo added">
       <created>1524303046269</created>
@@ -550,7 +588,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172746000" />
+    <option name="totallyTimeSpent" value="173018000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -954,16 +992,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xmlconfig/src/main/resources/spring/app-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="87" selection-start-line="12" selection-start-column="87" selection-end-line="12" selection-end-column="87" />
-          <folding>
-            <marker date="1560923445499" expanded="true" signature="923:1083" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/MockArticleProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
@@ -975,6 +1003,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xmlconfig/src/main/resources/spring/app-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-end-line="71" />
+          <folding>
+            <marker date="1560923445499" expanded="true" signature="923:1083" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

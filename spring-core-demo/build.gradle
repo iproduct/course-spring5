@@ -28,7 +28,7 @@ repositories {
 
 dependencies {
     implementation 'org.springframework:spring-context:5.1.5.RELEASE'
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
+    compileOnly 'org.projectlombok:lombok:1.18.2'
+    annotationProcessor 'org.projectlombok:lombok:1.18.2'
     testImplementation 'junit:junit:4.12'
 }
