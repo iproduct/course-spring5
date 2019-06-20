@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head('Articles List')" />
+<body>
+    <div th:replace="fragments/menu :: menu(${path})" />
+    <div class="container">
+        <h3>Articles List</h3>
+        <table class="article-table table table-striped">
+            <thead>
+            <th th:text="#{lbl.number}">Number</th>
+            <th th:text="#{lbl.title}">Title</th>
+            <th th:text="#{lbl.content}">Content</th>
+            <th th:text="#{lbl.created}">Created</th>
+            <th th:text="#{lbl.modified}">Modified</th>
+            <th th:text="#{lbl.picture}">Picture</th>
+            </thead>
+            <tbody>
+            <form method="post">
+            <tr th:each="row, rowStat : ${articles}">
+                <td th:text="${rowStat.index + 1}"></td>
+                <td th:text="${row.title}"></td>
+                <td th:text="${row.content}"></td>
+                <td th:text="${row.created}"></td>
+                <td th:text="${row.modified}"></td>
+                <td>
+                    <a href="#"  data-toggle="modal" data-target="#exampleModal"
+                        th:data-image-url="${'/uploads/' + row.pictureUrl}"
+                        th:data-image-title="${row.title}">
+                        <img class="img-thumbnail" th:if="${row.pictureUrl != null}"
+                         th:src="${'/uploads/' + row.pictureUrl}">
+                    </a>
+                </td>
+                <td>
+                    <button type="submit" class="btn btn-primary" name="edit" th:value="${row.id}"><i class="fas fa-edit"></i></button>
+                    <button type="submit" class="btn btn-danger" name="delete" th:value="${row.id}"><i class="fas fa-trash-alt"></i></button>
+                </td>
+            </tr>
+            </form>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class="img-fluid" src="#" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div th:replace="fragments/foot :: foot" />
+</body>
+</html>

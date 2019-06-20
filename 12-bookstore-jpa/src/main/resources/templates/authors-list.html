@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head('Autors List')" />
+<body>
+    <div th:replace="fragments/menu :: menu(${path})"></div>
+    <div class="container">
+        <h3>Authors List</h3>
+        <table class="article-table table table-striped">
+            <thead>
+            <th th:text="#{lbl.number}">Number</th>
+            <th th:text="#{lbl.firstName}">Name</th>
+            <th th:text="#{lbl.lastName}">Name</th>
+            <th th:text="#{lbl.books}">Books</th>
+            </thead>
+            <tbody>
+            <form method="post">
+            <tr th:each="row, rowStat : ${authors}">
+                <td th:text="${rowStat.index + 1}"></td>
+                <td th:text="${row.firstName}"></td>
+                <td th:text="${row.lastName}"></td>
+                <td th:text="${row.booksAsString}"></td>
+                <td>
+                    <button type="submit" class="btn btn-primary" name="edit" th:value="${row.id}"><i class="fas fa-edit"></i></button>
+                    <button type="submit" class="btn btn-danger" name="delete" th:value="${row.id}"><i class="fas fa-trash-alt"></i></button>
+                </td>
+            </tr>
+            </form>
+            </tbody>
+        </table>
+        <a href="/authors/author-form" class="btn btn-primary">Add New Author</a>
+    </div>
+    
+    <div th:replace="fragments/foot :: foot" />
+</body>
+</html>

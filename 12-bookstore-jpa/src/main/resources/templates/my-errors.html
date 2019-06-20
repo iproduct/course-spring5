@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head('Articles List')" />
+<body>
+    <div th:replace="fragments/menu :: menu(${''})" />
+    <div class="container">
+        <!--/*@thymesVar id="message" type="String"*/-->
+        <div class="alert alert-danger" th:text="${message}!=null?${message}:'There was an error with the last request. Please, go back, change data, and try again.'"></div>
+        <div th:if="${exception}!=null" class="alert alert-danger" th:text="${exception}"></div>
+        <button type="button" class="btn btn-primary" onclick="history.back()">Go Back</button>
+    </div>
+    <div th:replace="fragments/foot :: foot" />
+</body>
+</html>

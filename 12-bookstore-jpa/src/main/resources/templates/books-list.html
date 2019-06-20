@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head('Autors List')" />
+<body>
+    <div th:replace="fragments/menu :: menu(${path})"></div>
+    <div class="container">
+        <h3 th:text="#{lbl.booksList}">Books List</h3>
+        <table class="book-table table table-striped">
+            <thead>
+            <th th:text="#{lbl.number}">Number</th>
+            <th th:text="#{lbl.title}">Title</th>
+           	<th th:text="#{lbl.authors}">Authors</th>
+            <th th:text="#{lbl.publisher}">Publisher</th>
+            <th th:text="#{lbl.format}">Format</th>
+            <th th:text="#{lbl.publishedDate}">Publishing Date</th>
+            <th th:text="#{lbl.isbn}">ISBN</th>
+            <th th:text="#{lbl.price}">Price</th>
+            </thead>
+            <tbody>
+            <form method="post">
+            <tr th:each="row, rowStat : ${books}">
+                <td th:text="${rowStat.index + 1}"></td>
+                <td th:text="${row.title}"></td>
+                <td th:text="${row.authorsAsString}"></td>
+                <td th:text="${row.publisher.name}"></td>
+                <td th:text="${row.format.name}"></td>
+                <td th:text="${row.publishedDate}"></td>
+                <td th:text="${row.isbn}"></td>
+                <td th:text="${row.price}"></td>
+                <td>
+                    <button type="submit" class="btn btn-primary" name="edit" th:value="${row.id}"><i class="fas fa-edit"></i></button>
+                    <button type="submit" class="btn btn-danger" name="delete" th:value="${row.id}"><i class="fas fa-trash-alt"></i></button>
+                </td>
+            </tr>
+            </form>
+            </tbody>
+        </table>
+        <a href="/books/book-form" class="btn btn-primary" th:text="#{lbl.addNewBook}">Add New Book</a>
+    </div>
+    
+    <div th:replace="fragments/foot :: foot" />
+</body>
+</html>

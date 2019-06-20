@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:cs="http://iproduct.org/course/spring-web-service">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <cs:getCountryRequest>
+            <cs:name>Spain</cs:name>
+        </cs:getCountryRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

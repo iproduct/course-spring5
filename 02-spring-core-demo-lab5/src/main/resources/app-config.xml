@@ -23,7 +23,7 @@
             <!--<ref bean="provider" />-->
         <!--</constructor-arg>-->
         <property name="provider">
-            <ref bean="provider" />
+            <ref bean="alternativeProvider" />
         </property>
         <property name="title">
             <value>Hello Spring DI</value>

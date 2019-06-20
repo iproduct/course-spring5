@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head('Add/Edit Book')" />
+<body>
+	<div th:replace="fragments/menu :: menu(${path})" />
+	<div class="container">
+		<h3 th:text="${#httpSession.getAttribute('title')}">Add New Book</h3>
+		<form th:object="${book}" method="post"
+			class="form-horizontal col-md-10 col-lg-8"
+			enctype="multipart/form-data">
+			<div th:if="${book.id} != 0" class="form-group row">
+				<label class="col-sm-2 col-form-label">ID</label>
+				<div class="col-sm-10">
+					<input type="text" th:value="*{id}" id="id" name="id"
+						class="form-control" title="Book Id" readonly>
+				</div>
+			</div>
+ 
+ 			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">
+					<span th:text="#{lbl.title}">Title</span>
+				</label>
+				<div class="col-sm-10">
+					<input type="text" th:value="*{title}" id="title" name="title"
+						class="form-control" title="Book title"
+						th:errorclass="field-error">
+				</div>
+			</div>
+			<p th:if="${#fields.hasErrors('title')}" th:errors="*{title}"
+				class="errors alert alert-danger offset-sm-2 col-sm-10">
+				Incorrect title</p>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">
+					<span th:text="#{lbl.authors}">Authors</span>
+				</label>
+				<div class="col-sm-8">
+					<div id="authors" class="form-control" title="Book authors">
+						<span class="author-badge badge badge-primary" th:each="author, rowStat : ${bookAuthors}">
+							<span th:text="${author.name}"></span>
+							<button type="submit" class="badge badge-pill badge-danger" id="removeAuthor"
+							name="removeAuthor" th:value="${author.id}">x</button>
+						</span>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-primary col-sm-2"
+					id="startAddAuthor" name="startAddAuthor" value="startAddAuthor">Add
+					Author</button>
+			</div>
+
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">
+					<span th:text="#{lbl.publisher}">Publisher</span>
+				</label>
+				<div class="col-sm-10">
+					<select th:field="*{publisherId}" class="form-control">
+						<option th:each="publisher, rowStat : ${publishers}"
+							th:value="${publisher.id}" th:text="${publisher.name}"></option>
+					</select>
+				</div>
+			</div>
+			<p th:if="${#fields.hasErrors('publisher')}" th:errors="*{publisher}"
+				class="errors alert alert-danger offset-sm-2 col-sm-10">
+				Incorrect publisher</p>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">
+					<span th:text="#{lbl.format}">Format</span>
+				</label>
+				<div class="col-sm-10">
+					<select th:field="*{formatId}" class="form-control">
+						<option th:each="format, rowStat : ${formats}"
+							th:value="${format.id}" th:text="${format.name}"></option>
+					</select>
+				</div>
+			</div>
+			<p th:if="${#fields.hasErrors('format')}" th:errors="*{format}"
+				class="errors alert alert-danger offset-sm-2 col-sm-10">
+				Incorrect format</p>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">
+					<span th:text="#{lbl.publishedDate}">Published Date</span>
+				</label>
+				<div class="col-sm-10">
+					<input type="date" th:value="*{publishedDate}" id="publishedDate"
+						name="publishedDate" class="form-control"
+						title="Book published date" th:errorclass="field-error">
+				</div>
+			</div>
+			<p th:if="${#fields.hasErrors('publishedDate')}"
+				th:errors="*{publishedDate}"
+				class="errors alert alert-danger offset-sm-2 col-sm-10">
+				Incorrect publishing date</p>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">
+					<span th:text="#{lbl.isbn}">ISBN</span>
+				</label>
+				<div class="col-sm-10">
+					<input type="text" th:value="*{isbn}" id="isbn" name="isbn"
+						class="form-control" title="Book isbn" th:errorclass="field-error">
+				</div>
+			</div>
+			<p th:if="${#fields.hasErrors('isbn')}" th:errors="*{isbn}"
+				class="errors alert alert-danger offset-sm-2 col-sm-10">
+				Incorrect ISBN</p>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">
+					<span th:text="#{lbl.price}">Price</span>
+				</label>
+				<div class="col-sm-10">
+					<input type="text" th:value="*{price}" id="price" name="price"
+						class="form-control" title="Book price"
+						th:errorclass="field-error">
+				</div>
+			</div>
+			<p th:if="${#fields.hasErrors('price')}" th:errors="*{price}"
+				class="errors alert alert-danger offset-sm-2 col-sm-10">
+				Incorrect price</p>
+
+			<div class="col-xs-12 alert alert-danger" th:if="${myErrors != null}">
+				<p>Errors:</p>
+				<ul th:each="error: ${myErrors}">
+					<li th:text="${error}"></li>
+				</ul>
+			</div>
+
+			<div class="form-group row">
+				<div class="offset-sm-2 col-sm-10">
+					<button type="submit" class="btn btn-primary" id="submit"
+						name="submit" value="submit">Submit</button>
+					<button type="reset" class="btn btn-danger">Reset</button>
+					<a th:href="${'/books'}" class="btn btn-secondary" id="cancel">Cancel</a>
+				</div>
+			</div>
+
+		</form>
+
+		<!--  Adding / selecting author form -->
+		<div th:if="${#httpSession.getAttribute('isAddingAuthor')}"
+			class="col-md-10 col-lg-8">
+			<hr>
+			<h4>Choose Existing Author</h4>
+			<form th:object="${selectedAuthor}" method="post" class="form-inline">
+				<select th:field="*{authorId}" class="form-control col-md-9">
+					<option th:each="author, rowStat : ${authors}"
+						th:value="${author.id}" th:text="${author.name}"></option>
+				</select>
+				<button type="submit" class="btn btn-primary offset-md-1 col-md-2"
+					id="chooseAuthor" name="chooseAuthor" value="chooseAuthor">Add
+					Author</button>
+			</form>
+			<hr>
+			<h4>OR Add New Author</h4>
+			<form th:object="${newAuthor}" method="post" class="form-horizontal">
+				<div class="form-group row">
+					<label path="title" class="col-sm-2 col-form-label">
+						<th th:text="#{lbl.firstName}">First Name</th>
+					</label>
+					<div class="col-sm-10">
+						<input type="text" th:value="*{firstName}" id="firstName"
+							name="firstName" class="form-control" title="Author first name"
+							th:errorclass="field-error">
+					</div>
+				</div>
+				<p th:if="${#fields.hasErrors('firstName')}"
+					th:errors="*{firstName}"
+					class="errors alert alert-danger offset-sm-2 col-sm-10">
+					Incorrect first name</p>
+
+				<div class="form-group row">
+					<label path="title" class="col-sm-2 col-form-label">
+						<th th:text="#{lbl.lastName}">Last Name</th>
+					</label>
+					<div class="col-sm-10">
+						<input type="text" th:value="*{lastName}" id="lastName"
+							name="lastName" class="form-control" title="Author last name"
+							th:errorclass="field-error">
+					</div>
+				</div>
+				<p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"
+					class="errors alert alert-danger offset-sm-2 col-sm-10">
+					Incorrect last name</p>
+				<div class="form-group row">
+					<div class="offset-sm-2 col-sm-10">
+						<button type="submit" class="btn btn-primary" id="addAuthor"
+							name="addAuthor" value="addAuthor">Add New Author</button>
+						<button type="reset" class="btn btn-danger">Reset</button>
+						<button type="submit" class="btn btn-secondary" id="cancelAuthor"
+							name="cancelAuthor" value="cancelAuthor">Cancel</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+
+		<div th:replace="fragments/foot :: foot" />
+	</div>
+
+</body>
+</html>
