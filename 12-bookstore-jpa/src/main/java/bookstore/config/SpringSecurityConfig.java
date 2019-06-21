@@ -26,9 +26,8 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.DELETE, "/**").hasRole("ADMIN")
                 .antMatchers("/**").permitAll()
                 .and()
-                .formLogin()
-                .and()
-                .httpBasic();
+                .formLogin();
+
     }
 	
     @Bean
