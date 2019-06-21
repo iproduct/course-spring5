@@ -4,7 +4,7 @@
 <body>
     <div th:replace="fragments/menu :: menu(${path})" />
     <div class="container">
-        <h3 th:text="${title}">Add New Article</h3>
+        <h3 th:text="#{${title}}">Add New Article</h3>
         <form th:object="${article}" method="post"
               class="form-horizontal col-md-9 col-lg-6" enctype="multipart/form-data">
             <div th:if="${article.id} != null" class="form-group row">
