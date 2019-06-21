@@ -1,0 +1,89 @@
+package org.iproduct.spring.restmvc.config;
+
+import org.iproduct.spring.restmvc.model.User;
+import org.iproduct.spring.restmvc.security.RestAuthenticationEntryPoint;
+import org.iproduct.spring.restmvc.security.RestSavedRequestAwareAuthenticationSuccessHandler;
+import org.iproduct.spring.restmvc.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Configuration
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(securedEnabled = true, jsr250Enabled = true, prePostEnabled = true)
+@ComponentScan("org.iproduct.spring.restmvc.security")
+@Slf4j
+public class SpringSecurityConfig extends WebSecurityConfigurerAdapter	 {
+    @Autowired
+    private RestAuthenticationEntryPoint restAuthenticationEntryPoint;
+
+    @Autowired
+    private RestSavedRequestAwareAuthenticationSuccessHandler authenticationSuccessHandler;
+
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+                .csrf().disable()
+                .exceptionHandling()
+                .authenticationEntryPoint(restAuthenticationEntryPoint)
+                .and()
+                    .authorizeRequests()
+                    .antMatchers("/actuator/info").permitAll()
+                    .antMatchers("/actuator/health").permitAll()
+                    .antMatchers("/v2/api-docs").permitAll()
+                    .antMatchers("/swagger*/**").permitAll()
+                    .antMatchers(HttpMethod.GET, "/api/**").authenticated()
+                    .antMatchers(HttpMethod.POST, "/**").hasAnyRole("USER", "ADMIN")
+                    .antMatchers(HttpMethod.PUT).hasAnyRole("USER", "ADMIN")
+                    .antMatchers(HttpMethod.DELETE).hasAnyRole("ADMIN")
+                .and()
+                    .formLogin()
+//                    	.loginPage("/login.html")
+//                    	.loginProcessingUrl("/login")
+//                    	.defaultSuccessUrl("/home")
+//                    	.failureUrl("/login.html")
+//                      .usernameParameter("username")
+//                      .passwordParameter("password")
+                    	.successHandler(authenticationSuccessHandler)
+                    	.failureHandler(new SimpleUrlAuthenticationFailureHandler())
+                .and()
+                    .logout();
+//                .and()
+//                    .rememberMe();
+    }
+
+    @Bean
+    public UserDetailsService userDetailsService(UserService users) {
+        return username -> {
+            User found = users.getUserByUsername(username);
+            log.debug(">>> User authenticated for username: {} is: {}", username, found);
+            log.debug(">>> Auhorities: " + found.getAuthorities());
+            return found;
+        };
+    }
+
+    @Bean
+    public RestSavedRequestAwareAuthenticationSuccessHandler mySuccessHandler(){
+        return new RestSavedRequestAwareAuthenticationSuccessHandler();
+    }
+    @Bean
+    public SimpleUrlAuthenticationFailureHandler myFailureHandler(){
+        return new SimpleUrlAuthenticationFailureHandler();
+    }
+
+//        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
+//        manager.createUser(User.withDefaultPasswordEncoder()
+//                .username("user").password("user").roles("USER").build());
+//        return manager;
+}

@@ -1,0 +1,15 @@
+package org.iproduct.spring.restmvc.service;
+
+import org.iproduct.spring.restmvc.model.Article;
+
+import javax.validation.Valid;
+import java.util.List;
+
+public interface ArticleService {
+    List<Article>  getArticles();
+    List<Article> getArticlesByAuthorId(String userId);
+    Article createArticle(Article article);
+    Article updateArticle(String authorId, Article article);
+    Article getArticleById(String id);
+    Article deleteArticle(String id);
+}
