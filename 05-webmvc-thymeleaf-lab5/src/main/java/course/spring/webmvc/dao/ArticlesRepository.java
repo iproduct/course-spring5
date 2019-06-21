@@ -8,4 +8,7 @@ import java.util.Optional;
 public interface ArticlesRepository {
     List<Article> findAll();
     Optional<Article> findById(String id);
+    Article insert(Article article);
+    Article save(Article article);
+    void deleteById(String articleId);
 }

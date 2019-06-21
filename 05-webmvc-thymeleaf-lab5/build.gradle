@@ -26,7 +26,7 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
-	implementation 'org.springframework.boot:spring-boot-starter.jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 	runtimeOnly 'mysql:mysql-connector-java:8.0.15'
 //	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
 //	implementation 'org.springframework.boot:spring-boot-starter-security'
