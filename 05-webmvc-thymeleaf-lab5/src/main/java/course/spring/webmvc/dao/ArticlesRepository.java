@@ -7,8 +7,9 @@ import java.util.Optional;
 
 public interface ArticlesRepository {
     List<Article> findAll();
-    Optional<Article> findById(String id);
+    Optional<Article> findById(Long id);
     Article insert(Article article);
     Article save(Article article);
-    void deleteById(String articleId);
+    boolean deleteById(Long articleId);
+    long count();
 }

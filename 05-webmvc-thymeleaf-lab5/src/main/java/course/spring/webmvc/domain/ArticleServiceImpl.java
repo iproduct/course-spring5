@@ -19,7 +19,7 @@ public class ArticleServiceImpl implements ArticlesService {
     }
 
     @Override
-    public Optional<Article> getArticleById(String articleId) {
+    public Optional<Article> getArticleById(Long articleId) {
         return repo.findById(articleId);
     }
 
@@ -34,7 +34,7 @@ public class ArticleServiceImpl implements ArticlesService {
     }
 
     @Override
-    public Optional<Article> delete(String articleId) {
+    public Optional<Article> delete(Long articleId) {
         Optional<Article> toBeDeleted = repo.findById(articleId);
         if(toBeDeleted.isPresent()) {
             repo.deleteById(articleId);

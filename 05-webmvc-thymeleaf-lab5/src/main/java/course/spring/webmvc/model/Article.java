@@ -15,12 +15,13 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 public class Article {
-    private String id;
+    private Long id;
     @NonNull @NotNull
     @Size(min=3, max=60)
     private String title;
     @NonNull @NotBlank
     private String content;
+    private long authorId;
     private String pictureUrl;
     @PastOrPresent
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
@@ -29,5 +30,5 @@ public class Article {
     @PastOrPresent
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     @Builder.Default
-    private LocalDateTime modified = LocalDateTime.now();
+    private LocalDateTime updated = LocalDateTime.now();
 }

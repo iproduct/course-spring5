@@ -58,7 +58,7 @@ public class ArticlesController {
     }
 
     @PostMapping(params = "delete")
-    public String editArticle(@RequestParam("delete") String articleId) {
+    public String editArticle(@RequestParam("delete") Long articleId) {
         if(articleId != null) {
            articlesService.delete(articleId);
         }
@@ -68,7 +68,7 @@ public class ArticlesController {
     @GetMapping("/article-form")
     public String getArticleForm(@ModelAttribute("article") Article article, ModelMap model,
             @RequestParam(value = "mode", required = false) String mode,
-             @RequestParam(value = "articleId", required = false) String articleId) throws NonexistingEntityException {
+             @RequestParam(value = "articleId", required = false) Long articleId) throws NonexistingEntityException {
         model.addAttribute("path", "articles/article-form");
         String title = "lbl.add.article";
         if(mode!=null && mode.equals("edit") && articleId != null) {
@@ -79,7 +79,7 @@ public class ArticlesController {
             model.put("article", art);
             title = "lbl.edit.article";
         }
-        model.put("title", title);
+        model.addAttribute("title", title);
         return "article-form";
     }
 
@@ -90,6 +90,8 @@ public class ArticlesController {
              @RequestParam("file") MultipartFile file,
              Model model) {
 //        if(cancelBtn != null) return "redirect:/articles";
+        String title = article.getId() == null ? "lbl.add.article" : "lbl.edit.article";
+        model.addAttribute("title", title);
         if(errors.hasErrors()) {
             List<String> errorMessages = errors.getAllErrors().stream().map(err -> {
                 ConstraintViolation cv = err.unwrap(ConstraintViolation.class);
@@ -114,7 +116,7 @@ public class ArticlesController {
                 log.info("ADD New Article: " + article);
                 articlesService.add(article);
             } else {
-                article.setModified(LocalDateTime.now());
+                article.setUpdated(LocalDateTime.now());
                 log.info("UPDATE Article: " + article);
                 articlesService.update(article);
             }
