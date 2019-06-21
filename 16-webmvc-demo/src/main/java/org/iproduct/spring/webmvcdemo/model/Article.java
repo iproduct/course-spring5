@@ -25,8 +25,10 @@ public class Article {
     private String pictureUrl;
     @PastOrPresent
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
+    @Builder.Default
     private LocalDateTime created = LocalDateTime.now();
     @PastOrPresent
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
+    @Builder.Default
     private LocalDateTime modified = LocalDateTime.now();
 }

@@ -63,13 +63,6 @@
                     <a th:href="${'/articles'}" class="btn btn-secondary" id="cancel">Cancel</a>
                 </div>
             </div>
-
-            <div class="col-xs-12 alert alert-danger" th:if="${myErrors != null}">
-                <p>Validation errors: </p>
-                <ul th:each="error: ${myErrors}">
-                    <li th:text="${error}"></li>
-                </ul>
-            </div>
         </form>
         <div  th:replace="fragments/foot :: foot" />
     </div>

@@ -85,16 +85,9 @@ public class ArticlesController {
     @PostMapping("/article-form")
     public String addArticle(@Valid @ModelAttribute ("article") Article article,
                              BindingResult errors,
-//                             @RequestParam(name = "cancel", required = false) String cancelBtn,
                              @RequestParam("file") MultipartFile file,
                              Model model) {
-//        if(cancelBtn != null) return "redirect:/articles";
         if(errors.hasErrors()) {
-            List<String> errorMessages = errors.getAllErrors().stream().map(err -> {
-                ConstraintViolation cv = err.unwrap(ConstraintViolation.class);
-                return String.format("Error in '%s' - invalid value: '%s'", cv.getPropertyPath(), cv.getInvalidValue());
-            }).collect(Collectors.toList());
-            model.addAttribute("myErrors", errorMessages);
             model.addAttribute("fileError", null);
             return "article-form";
         } else {
@@ -104,7 +97,6 @@ public class ArticlesController {
                     handleMultipartFile(file);
                     article.setPictureUrl(file.getOriginalFilename());
                 } else {
-                    model.addAttribute("myErrors", null);
                     model.addAttribute("fileError", "Submit picture [.jpg, .png]");
                     return "article-form";
                 }
