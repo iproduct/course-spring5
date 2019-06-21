@@ -1,0 +1,47 @@
+<div th:fragment="menu(path)" xmlns:th="http://www.thymeleaf.org">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="/img/logo.png" alt="IPT logo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" th:class="${path == 'articles'}? 'nav-item active' : 'nav-item'">
+                    <a class="nav-link" href="/articles">Articles</a>
+                </li>
+                <li class="nav-item" th:class="${path == 'article-form'}? 'nav-item active' : 'nav-item'">
+                    <a class="nav-link" href="/articles/article-form">Add Article</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            <form class="search-form form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <form class="language-form form-inline my-2 my-lg-0">
+                <div class="form-group language-selector">
+                    <label for="locales" class="menu-label col-form-label">Language</label>
+                    <select id="locales" class="form-control">
+                        <option value="en-US" th:selected="${#locale.toLanguageTag() == 'en-US'}">EN</option>
+                        <option value="bg-BG" th:selected="${#locale.toLanguageTag() == 'bg-BG'}">BG</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </nav>
+</div>

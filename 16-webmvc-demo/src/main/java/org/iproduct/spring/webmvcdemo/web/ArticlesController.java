@@ -51,7 +51,8 @@ public class ArticlesController {
     @PostMapping(params = "edit")
     public String editArticle(@RequestParam("edit") String editId, Model model, UriComponentsBuilder uriBuilder){
         log.info("Editing article: " + editId);
-        URI uri = uriBuilder.path("/articles/article-form?mode=edit&articleId={id}").buildAndExpand(editId).toUri();
+        URI uri = uriBuilder.path("/articles/article-form")
+                .query("mode=edit&articleId={id}").buildAndExpand(editId).toUri();
         return "redirect:" + uri.toString();
     }
 
