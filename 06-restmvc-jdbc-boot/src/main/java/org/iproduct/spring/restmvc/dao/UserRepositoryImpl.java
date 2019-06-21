@@ -87,8 +87,9 @@ public class UserRepositoryImpl implements UserRepository {
     public User save(User user) {
         SqlParameterSource namedParameters = new BeanPropertySqlParameterSource(user);
         int count = this.jdbcTemplate.update(
-                "update users set (username, password, fname, lname, roles, active, created, updated) = " +
-                        "(:username, :password, :fname, :lname, :roles, :active, :created, :updated) where id = :id",
+                "update users set username = :username, password = :password, fname = :fname, lname = :lname, " +
+                    "roles = :roles, active = :active, created = :created, updated = :updated) = " +
+                    "where id = :id",
                 namedParameters);
         log.info("User updated: {}", user);
         return user;

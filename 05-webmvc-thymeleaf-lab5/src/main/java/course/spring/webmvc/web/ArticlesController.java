@@ -54,15 +54,15 @@ public class ArticlesController {
                     .buildAndExpand(articleId).toUri();
             return "redirect:" + uri.toString();
         }
-        return "articles";
+        return "redirect:/articles";
     }
 
     @PostMapping(params = "delete")
-    public String editArticle(@RequestParam("delete") Long articleId) {
+    public String deleteArticle(@RequestParam("delete") Long articleId) {
         if(articleId != null) {
            articlesService.delete(articleId);
         }
-        return "articles";
+        return "redirect:/articles";
     }
 
     @GetMapping("/article-form")
@@ -103,7 +103,7 @@ public class ArticlesController {
         } else {
             log.info("POST Article: " + article);
             if (!file.isEmpty() && file.getOriginalFilename().length() > 0) {
-                if (Pattern.matches("\\w+\\.(jpg|png)", file.getOriginalFilename())) {
+                if (Pattern.matches("[\\w\\s]+\\.(jpg|png)", file.getOriginalFilename())) {
                     handleMultipartFile(file);
                     article.setPictureUrl(file.getOriginalFilename());
                 } else {

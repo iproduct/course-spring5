@@ -22,7 +22,7 @@ public class DataInitializer implements CommandLineRunner {
     private static final List<Article> mockArticles = Arrays.asList(
             new Article("Welcome to Spring 5", "Spring 5 is great beacuse ..."),
             new Article("Dependency Injection", "Should I use DI or lookup ..."),
-            new Article("Sp", "There are several ways to configure Spring beans.")
+            new Article("Spring", "There are several ways to configure Spring beans.")
     );
 
     @Autowired
@@ -69,8 +69,8 @@ public class DataInitializer implements CommandLineRunner {
         if (usersCount == 0) {
             List<User> users = Arrays.asList(new User[] {
                 new User("admin", "admin", "DEFAULT", "ADMIN", "ROLE_ADMIN"),
-                    new User("ivan", "ivan", "Ivan", "Petrov", "ROLE_USER")
-                    new User("p", "petar", "Petar", "Petrov", "ROLE_USER")
+                    new User("ivan", "ivan", "Ivan", "Petrov", "ROLE_USER"),
+                    new User("petar", "petar", "Petar", "Petrov", "ROLE_USER")
             });
 
             userService.createUsersBatch(users);

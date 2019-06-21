@@ -85,7 +85,7 @@ public class ArticleRepositoryImpl implements ArticleRepository {
     @Override
     public Article save(Article article) {
         int count = this.jdbcTemplate.update(
-            "update articles set (title, content, author_id, picture_url, created, updated) = (?, ?, ?, ?, ?, ?) where id = ?",
+            "update articles set title = ?, content = ? , author_id = ?, picture_url = ?, created, updated = ? where id = ?",
             article.getTitle(),
             article.getContent(),
             article.getAuthorId(),

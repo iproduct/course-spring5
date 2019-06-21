@@ -15,6 +15,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.time.ZoneId;
 import java.time.ZoneOffset;
 import java.util.List;
 import java.util.Optional;
@@ -24,6 +25,7 @@ import java.util.Optional;
 public class ArticleRepositoryJdbc implements ArticlesRepository {
     public static final String INSERT_SQL =
             "INSERT INTO articles2(id, title, content, author_id, picture_url, created, updated) VALUES (DEFAULT, ?, ?, ?, ?, ?, ?)";
+    public static final ZoneId ZONE_ID = ZoneId.of("Europe/Sofia");
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
@@ -48,6 +50,7 @@ public class ArticleRepositoryJdbc implements ArticlesRepository {
     @Override
     @Transactional
     public Article insert(@Valid Article article) {
+
         KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemplate.update(new PreparedStatementCreator() {
             public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
@@ -56,8 +59,8 @@ public class ArticleRepositoryJdbc implements ArticlesRepository {
                 ps.setString(2, article.getContent());
                 ps.setLong(3, article.getAuthorId());
                 ps.setString(4, article.getPictureUrl());
-                ps.setTimestamp(5, new Timestamp(article.getCreated().toInstant(ZoneOffset.UTC).toEpochMilli()));
-                ps.setTimestamp(6, new Timestamp(article.getCreated().toInstant(ZoneOffset.UTC).toEpochMilli()));
+                ps.setTimestamp(5, Timestamp.from(article.getCreated().toInstant(ZONE_ID.getRules().getOffset(article.getCreated()))));
+                ps.setTimestamp(6, Timestamp.from(article.getCreated().toInstant(ZONE_ID.getRules().getOffset(article.getCreated()))));
 
                 return ps;
             }
@@ -69,8 +72,9 @@ public class ArticleRepositoryJdbc implements ArticlesRepository {
 
     @Override
     public Article save(Article article) {
+        log.debug(">>>>>>>Article: {}", article);
         int count = this.jdbcTemplate.update(
-                "update articles2 set (title, content, author_id, picture_url, created, updated) = (?, ?, ?, ?, ?, ?) where id = ?",
+                "update articles2 set title = ?, content = ?, author_id = ? , picture_url = ?, created = ?, updated =? where id = ?",
                 article.getTitle(),
                 article.getContent(),
                 article.getAuthorId(),

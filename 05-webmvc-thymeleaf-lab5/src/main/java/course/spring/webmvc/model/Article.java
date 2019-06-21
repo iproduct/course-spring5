@@ -13,7 +13,6 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @AllArgsConstructor
-@Builder
 public class Article {
     private Long id;
     @NonNull @NotNull
@@ -25,10 +24,8 @@ public class Article {
     private String pictureUrl;
     @PastOrPresent
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-    @Builder.Default
     private LocalDateTime created = LocalDateTime.now();
     @PastOrPresent
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-    @Builder.Default
     private LocalDateTime updated = LocalDateTime.now();
 }
