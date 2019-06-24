@@ -4,11 +4,17 @@ import course.spring.webfluxdemo.domain.ArticleService;
 import course.spring.webfluxdemo.exception.InvalidEntityDataException;
 import course.spring.webfluxdemo.exception.NonexisitngEntityException;
 import course.spring.webfluxdemo.model.Article;
+import course.spring.webfluxdemo.model.ErrorResponse;
 import org.omg.CORBA.DynAnyPackage.Invalid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
+
+import static org.springframework.http.HttpStatus.BAD_REQUEST;
+import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @RestController
 @RequestMapping("/api/articles")

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f7f8968-8f8b-4bb3-8491-8e2dd76e61f9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../01-webflux-demo-lab6/src/main/java/course/spring/webfluxdemo/exception/InvalidEntityDataException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-webflux-demo-lab6/src/main/java/course/spring/webfluxdemo/dao/MockArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-webflux-demo-lab6/src/main/java/course/spring/webfluxdemo/dao/MockArticleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-webflux-demo-lab6/src/main/java/course/spring/webfluxdemo/model/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-webflux-demo-lab6/src/main/java/course/spring/webfluxdemo/web/ErrorHandlerAdvice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../01-webflux-demo-lab6/src/main/java/course/spring/webfluxdemo/web/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-webflux-demo-lab6/src/main/java/course/spring/webfluxdemo/web/ArticleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -135,7 +135,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="147" />
     <option name="y" value="27" />
     <option name="width" value="2103" />
@@ -330,7 +330,7 @@
     <option name="totallyTimeSpent" value="11695000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1721" height="935" extended-state="7" />
+    <frame x="-7" y="-7" width="1721" height="935" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17519566" />
