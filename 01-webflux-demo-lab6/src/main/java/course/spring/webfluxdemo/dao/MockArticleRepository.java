@@ -46,7 +46,8 @@ public class MockArticleRepository implements ArticleRepository {
 
     @Override
     public Article save(Article article) {
-        return articles.put(article.getId(), article);
+         articles.put(article.getId(), article);
+         return article;
     }
 
     @Override

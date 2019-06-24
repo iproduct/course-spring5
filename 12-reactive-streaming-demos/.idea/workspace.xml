@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f7f8968-8f8b-4bb3-8491-8e2dd76e61f9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../kafka-demo/src/main/java/org/iproduct/kafka/DemoConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../kafka-demo/src/main/java/org/iproduct/kafka/DemoProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-spring-core/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-spring-core/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04-webmvc-rest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../04-webmvc-rest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../05-webmvc-rest-lab4/src/main/java/org/iproduct/spring/webmvcdemo/web/ArticlesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-webmvc-rest-lab4/src/main/java/org/iproduct/spring/webmvcdemo/web/ArticlesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../05-webmvc-rest-lab4/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../05-webmvc-rest-lab4/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate-annotations/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate-annotations/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-webflux-demo-lab6/src/main/java/course/spring/webfluxdemo/exception/InvalidEntityDataException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-webflux-demo-lab6/src/main/java/course/spring/webfluxdemo/dao/MockArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-webflux-demo-lab6/src/main/java/course/spring/webfluxdemo/dao/MockArticleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-webflux-demo-lab6/src/main/java/course/spring/webfluxdemo/web/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-webflux-demo-lab6/src/main/java/course/spring/webfluxdemo/web/ArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -71,8 +66,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/filters/ForwardingWebFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="110">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -140,7 +135,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="147" />
     <option name="y" value="27" />
     <option name="width" value="2103" />
@@ -152,8 +147,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -206,13 +199,15 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553445321662" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../08-webmvc-forms-jsp-jdbc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15728477" />
     <property name="project.structure.side.proportion" value="0.23772103" />
@@ -319,6 +314,7 @@
       <workItem from="1553445697531" duration="162000" />
       <workItem from="1553445876071" duration="13000" />
       <workItem from="1558567469991" duration="36000" />
+      <workItem from="1561382306392" duration="604000" />
     </task>
     <task id="LOCAL-00001" summary="reactive webflux demo - user management with security added">
       <created>1527399441835</created>
@@ -331,10 +327,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11091000" />
+    <option name="totallyTimeSpent" value="11695000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1721" height="935" extended-state="6" />
+    <frame x="-7" y="-7" width="1721" height="935" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17519566" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -484,8 +481,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/filters/ForwardingWebFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="110">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
