@@ -5,12 +5,14 @@ import course.spring.webfluxdemo.exception.EntityExistsException;
 import course.spring.webfluxdemo.exception.NonexisitngEntityException;
 import course.spring.webfluxdemo.model.Article;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.util.function.Tuple2;
 
 import java.time.LocalDateTime;
 
+@Service
 public class ReactiveArticleServiceImpl implements  ReactiveArticleService{
     @Autowired
     private ReactiveArticleRepository repo;
