@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f7f8968-8f8b-4bb3-8491-8e2dd76e61f9" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../01-webflux-demo-lab6/src/main/java/course/spring/webfluxdemo/domain/QuotesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-webflux-demo-lab6/src/main/java/course/spring/webfluxdemo/model/Quote.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-webflux-demo-lab6/src/main/java/course/spring/webfluxdemo/web/ReactiveQuotesHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-webflux-demo-lab6/src/main/java/course/spring/webfluxdemo/WebfluxDemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-webflux-demo-lab6/src/main/java/course/spring/webfluxdemo/WebfluxDemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-webflux-demo-lab6/src/main/java/course/spring/webfluxdemo/web/ArticleRouterConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-webflux-demo-lab6/src/main/java/course/spring/webfluxdemo/web/ArticleRouterConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../01-webflux-demo-lab6/src/main/java/course/spring/webfluxdemo/web/GlobalErrorWebExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-webflux-demo-lab6/src/main/java/course/spring/webfluxdemo/web/GlobalErrorWebExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />

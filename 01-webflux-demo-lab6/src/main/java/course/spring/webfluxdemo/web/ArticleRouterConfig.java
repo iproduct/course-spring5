@@ -11,13 +11,13 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 @Configuration
 public class ArticleRouterConfig {
 
-    @Bean
-    public RouterFunction<ServerResponse> routes(ReactiveArticleHandler handler) {
-        return route(GET("/api/reactive/articles"), handler::getAllArticles)
-            .andRoute(GET("/api/reactive/articles/{id}"), handler::getArticleById)
-            .andRoute(POST("/api/reactive/articles"), handler::addArticle)
-            .andRoute(PUT("/api/reactive/articles/{id}"), handler::updateArticle)
-            .andRoute(DELETE("/api/reactive/articles/{id}"), handler::deleteArticleById);
+    @Bean("articleRoutes")
+    public RouterFunction<ServerResponse> articleRoutes(ReactiveArticleHandler handler) {
+        return route(GET("/"), handler::getAllArticles)
+            .andRoute(GET("/{id}"), handler::getArticleById)
+            .andRoute(POST("/"), handler::addArticle)
+            .andRoute(PUT("/{id}"), handler::updateArticle)
+            .andRoute(DELETE("/{id}"), handler::deleteArticleById);
 
     }
 }

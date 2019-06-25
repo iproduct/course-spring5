@@ -27,6 +27,7 @@ import java.util.Map;
 
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
+import static org.springframework.web.reactive.function.server.RequestPredicates.path;
 
 @Component
 @Order(-2)
@@ -43,7 +44,7 @@ public class GlobalErrorWebExceptionHandler extends AbstractErrorWebExceptionHan
     protected RouterFunction<ServerResponse> getRoutingFunction(
             ErrorAttributes errorAttributes) {
 
-        return RouterFunctions.route(RequestPredicates.all(), this::renderErrorResponse);
+        return RouterFunctions.route(path("/api/reactive/articles"), this::renderErrorResponse);
     }
 
     private Mono<ServerResponse> renderErrorResponse(ServerRequest req) {
