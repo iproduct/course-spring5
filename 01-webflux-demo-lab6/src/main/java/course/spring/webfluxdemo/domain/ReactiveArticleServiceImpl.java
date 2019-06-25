@@ -2,10 +2,14 @@ package course.spring.webfluxdemo.domain;
 
 import course.spring.webfluxdemo.dao.ReactiveArticleRepository;
 import course.spring.webfluxdemo.exception.EntityExistsException;
+import course.spring.webfluxdemo.exception.NonexisitngEntityException;
 import course.spring.webfluxdemo.model.Article;
 import org.springframework.beans.factory.annotation.Autowired;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import reactor.util.function.Tuple2;
+
+import java.time.LocalDateTime;
 
 public class ReactiveArticleServiceImpl implements  ReactiveArticleService{
     @Autowired
@@ -33,7 +37,19 @@ public class ReactiveArticleServiceImpl implements  ReactiveArticleService{
 
     @Override
     public Mono<Article> update(Article article) {
-        return null;
+        return repo.findById(article.getId())
+            .zipWith(Mono.just(article))
+            .flatMap(tuple -> {
+                Article old = tuple.getT1();
+                Article newArt = tuple.getT2();
+                old.setTitle(newArt.getTitle());
+                old.setContent(newArt.getContent());
+                old.setUpdated(LocalDateTime.now());
+                return repo.save(old);
+            }).switchIfEmpty(Mono.error(
+                new NonexisitngEntityException(
+                    String.format("Article with ID:%s does not exist.", article.getId()))
+            ));
     }
 
     @Override
