@@ -24,17 +24,17 @@ public class ReactiveArticleServiceImpl implements  ReactiveArticleService{
 
     @Override
     public Mono<Article> getById(String articleId) {
-        return repo.findById(articleId);
+        return repo.findById(articleId)
+            .switchIfEmpty(Mono.error(
+                new NonexisitngEntityException(
+                    String.format("Article with ID:%s does not exist.", articleId))
+            ));
     }
 
     @Override
     public Mono<Article> create(Article article) {
-        return repo.existsById(article.getId())
-            .flatMap(exists -> exists ? Mono.empty(): repo.insert(article))
-            .switchIfEmpty(Mono.error(
-                new EntityExistsException(
-                    String.format("Article with ID:%s already exists.", article.getId()))
-            ));
+        article.setId(null);
+        return repo.insert(article);
     }
 
     @Override

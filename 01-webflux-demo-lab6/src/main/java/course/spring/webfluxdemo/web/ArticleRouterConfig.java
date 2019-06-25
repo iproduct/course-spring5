@@ -6,6 +6,7 @@ import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.ServerResponse;
 
 import static org.springframework.web.reactive.function.server.RequestPredicates.GET;
+import static org.springframework.web.reactive.function.server.RequestPredicates.POST;
 import static org.springframework.web.reactive.function.server.RouterFunctions.route;
 
 @Configuration
@@ -13,6 +14,8 @@ public class ArticleRouterConfig {
 
     @Bean
     public RouterFunction<ServerResponse> routes(ReactiveArticleHandler handler) {
-        return route(GET("/api/reactive/articles"), handler::getAllArticles);
+        return route(GET("/api/reactive/articles"), handler::getAllArticles)
+            .andRoute(GET("/api/reactive/articles/{id}"), handler::getArticleById)
+            .andRoute(POST("/api/reactive/articles"), handler::addArticle);
     }
 }
