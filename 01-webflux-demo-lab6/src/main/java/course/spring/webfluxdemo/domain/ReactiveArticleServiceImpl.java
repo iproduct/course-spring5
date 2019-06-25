@@ -54,6 +54,11 @@ public class ReactiveArticleServiceImpl implements  ReactiveArticleService{
 
     @Override
     public Mono<Article> deleteById(String articleId) {
-        return null;
+        return repo.findById(articleId)
+            .flatMap(art -> repo.deleteById(articleId).thenReturn(art))
+            .switchIfEmpty(Mono.error(
+                new NonexisitngEntityException(
+                    String.format("Article with ID:%s does not exist.", articleId))
+            ));
     }
 }
