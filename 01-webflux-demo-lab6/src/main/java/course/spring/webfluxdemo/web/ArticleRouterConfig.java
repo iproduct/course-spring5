@@ -16,7 +16,8 @@ public class ArticleRouterConfig {
         return route(GET("/api/reactive/articles"), handler::getAllArticles)
             .andRoute(GET("/api/reactive/articles/{id}"), handler::getArticleById)
             .andRoute(POST("/api/reactive/articles"), handler::addArticle)
-            .andRoute(PUT("/api/reactive/articles/{id}"), handler::updateArticle);
+            .andRoute(PUT("/api/reactive/articles/{id}"), handler::updateArticle)
+            .andRoute(DELETE("/api/reactive/articles/{id}"), handler::deleteArticleById);
 
     }
 }
