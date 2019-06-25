@@ -5,6 +5,7 @@ import course.spring.webfluxdemo.exception.InvalidEntityDataException;
 import course.spring.webfluxdemo.model.Article;
 import course.spring.webfluxdemo.model.ErrorResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
@@ -49,6 +50,11 @@ public class ReactiveArticleHandler {
                         request.pathVariable("id"), article.getId())
                 ))
             ).flatMap(article -> ServerResponse.ok().syncBody(article));
+    }
+
+    public Mono<ServerResponse> deleteArticleById(ServerRequest request) {
+        return service.deleteById(request.pathVariable("id"))
+            .flatMap(article -> ServerResponse.ok().syncBody(article));
     }
 
 }
