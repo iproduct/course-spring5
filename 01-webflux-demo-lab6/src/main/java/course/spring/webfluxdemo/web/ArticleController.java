@@ -22,7 +22,7 @@ public class ArticleController {
     @Autowired
     private ArticleService service;
 
-    @GetMapping
+    @GetMapping("")
     public Collection<Article> getAllArticles() {
         return service.getAll();
     }

@@ -23,13 +23,13 @@ public class ReactiveQuotesHandler {
     public Mono<ServerResponse> streamQuotes(ServerRequest req) {
         return  ServerResponse.ok()
                 .contentType(APPLICATION_STREAM_JSON)
-                .body(generator.getQotesStream(Duration.ofMillis(500)), Quote.class);
+                .body(generator.getQotesStream(Duration.ofMillis(150)), Quote.class);
     }
 
     public Mono<ServerResponse> streamQuotesSSE(ServerRequest req) {
         return  ServerResponse.ok()
                 .contentType(TEXT_EVENT_STREAM)
-                .body(generator.getQotesStream(Duration.ofMillis(500)), Quote.class);
+                .body(generator.getQotesStream(Duration.ofMillis(150)), Quote.class);
     }
 
 }

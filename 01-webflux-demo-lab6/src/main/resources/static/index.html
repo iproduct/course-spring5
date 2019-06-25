@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SSE: Apache CXF example</title>
+    <link rel="stylesheet" href="javascripts/css/highcharts.css" />
+    <script src="./javascripts/jquery-3.3.1.min.js"></script>
+    <script src="./javascripts/highcharts.js"></script>
+    <script src="./javascripts/exporting.js"></script>
+    <script src="./javascripts/custom.js"></script>
+    <style type="text/css">
+.process-info {
+	font-family: sans-serif;
+}
+</style>
+</head>
+
+<body>
+<div id="content">
+    <div id="chart"></div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+	var api = "http://localhost:8080/api/";
+
+
+    var chart = new Highcharts.Chart( {
+        title: {
+            text: 'Option Quotes'
+        },
+        chart : {
+			renderTo : 'chart',
+			defaultSeriesType : 'spline'
+		},
+        yAxis: {
+            title: {
+                text: 'Stock Price'
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle'
+        },
+        xAxis: {
+            type: 'datetime',
+        },
+        series: [{
+            name: 'VMW',
+            data: []
+        }, {
+            name: 'CTXS',
+            data: []
+        }, {
+            name: 'MSFT',
+            data: []
+        }, {
+            name: 'DELL',
+            data: []
+        }, {
+            name: 'RHT',
+            data: []
+        }, {
+            name: 'ORCL',
+            data: []
+        }, {
+            name: 'GOOG',
+            data: []
+        }]
+
+    });
+
+
+	if (!!window.EventSource) {
+		var eventSource = new EventSource(api + "quotes");
+
+		eventSource.onmessage = function(e) {
+			var datapoint = JSON.parse(e.data)
+			console.log(datapoint);
+
+		chart.series
+            .filter(function (serie) {
+                return serie.name == datapoint.symbol
+            })
+            .forEach(function (serie) {
+                var shift = serie.data.length > 40;
+                serie.addPoint([datapoint.instant, datapoint.price], true, shift);
+            });
+
+
+			//var index = datapoint.id % chart.series.length;
+			//chart.series[index].addPoint({
+			//	x : datapoint.instant,
+			//	y : datapoint.price
+			//}, true, chart.series[index].data.length >= 50);
+
+		};
+
+		eventSource.addEventListener('open', function(e) {
+			console.log('Opened: ' +e);
+			}, false);
+		
+		$('#content').bind('unload', function() {
+			eventSource.close();
+		});
+	}
+</script>
