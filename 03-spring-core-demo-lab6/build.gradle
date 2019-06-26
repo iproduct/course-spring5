@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+}
+
+group 'course.spring'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework:spring-context:5.1.6.RELEASE'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
