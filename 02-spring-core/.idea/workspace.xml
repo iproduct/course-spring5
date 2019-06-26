@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04ada577-88c3-4482-a6d0-c544e831a56d" name="Default" comment="XMLConfigFactory: autowireing bean postprocessor added, xml config changed">
-      <change beforePath="$PROJECT_DIR$/../02-spring-core-demo-lab5/src/main/java/course/spring/springcoredemo/AnnotationContextDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core-demo-lab5/src/main/java/course/spring/springcoredemo/AnnotationContextDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-spring-core-demo-lab5/src/main/java/course/spring/springcoredemo/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core-demo-lab5/src/main/java/course/spring/springcoredemo/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-spring-core-demo-lab5/src/main/java/course/spring/springcoredemo/dao/AlternativeArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core-demo-lab5/src/main/java/course/spring/springcoredemo/dao/AlternativeArticleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-spring-core-demo-lab5/src/main/java/course/spring/springcoredemo/domain/ConsoleArticlePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core-demo-lab5/src/main/java/course/spring/springcoredemo/domain/ConsoleArticlePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-spring-core-demo-lab5/src/main/java/course/spring/springcoredemo/model/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core-demo-lab5/src/main/java/course/spring/springcoredemo/model/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-spring-core-demo-lab5/src/main/java/course/spring/springcoredemo/model/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core-demo-lab5/src/main/java/course/spring/springcoredemo/model/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-spring-core-demo-lab5/src/main/resources/app-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core-demo-lab5/src/main/resources/app-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-spring-core-demo-lab6/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-spring-core-demo-lab6/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-spring-core-demo-lab6/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-spring-core-demo-lab6/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-spring-core-demo-lab6/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-spring-core-demo-lab6/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-spring-core-demo-lab6/src/main/java/course/spring/coredemo/XmlConfigDemoApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-spring-core-demo-lab6/src/main/java/course/spring/coredemo/dao/ArticleRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-spring-core-demo-lab6/src/main/java/course/spring/coredemo/dao/MockArticleRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-spring-core-demo-lab6/src/main/java/course/spring/coredemo/domain/ArticlePresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-spring-core-demo-lab6/src/main/java/course/spring/coredemo/domain/ConsoleArticlePresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-spring-core-demo-lab6/src/main/java/course/spring/coredemo/model/Article.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-spring-core-demo-lab6/src/main/resources/app-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-spring-core-demo-lab6/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core-demo-lab6/build.gradle" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -390,7 +370,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561570234953" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561570511421" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../02-spring-core-demo-lab5" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.16207455" />
