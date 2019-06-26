@@ -8,4 +8,10 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean id="provider" class="course.spring.coredemo.dao.MockArticleRepository" />
+    <bean id="presenter" class="course.spring.coredemo.domain.ConsoleArticlePresenter">
+        <constructor-arg index="0" name="provider">
+            <ref bean="provider" />
+        </constructor-arg>
+    </bean>
 </beans>

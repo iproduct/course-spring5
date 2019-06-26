@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04ada577-88c3-4482-a6d0-c544e831a56d" name="Default" comment="XMLConfigFactory: autowireing bean postprocessor added, xml config changed">
-      <change afterPath="$PROJECT_DIR$/../03-spring-core-demo-lab6/src/main/java/course/spring/coredemo/dao/ArticleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-spring-core-demo-lab6/src/main/java/course/spring/coredemo/dao/MockArticleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-spring-core-demo-lab6/src/main/java/course/spring/coredemo/model/Article.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-spring-core-demo-lab6/src/main/resources/app-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-spring-core-demo-lab6/src/main/java/course/spring/coredemo/XmlConfigDemoApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-spring-core-demo-lab6/src/main/java/course/spring/coredemo/domain/ArticlePresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-spring-core-demo-lab6/src/main/java/course/spring/coredemo/domain/ConsoleArticlePresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-spring-core-demo-lab6/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../03-spring-core-demo-lab6/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-spring-core-demo-lab6/src/main/resources/app-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03-spring-core-demo-lab6/src/main/resources/app-config.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -551,7 +550,7 @@
       <workItem from="1560356632577" duration="135000" />
       <workItem from="1560922878537" duration="12548000" />
       <workItem from="1561010320715" duration="5259000" />
-      <workItem from="1561538977093" duration="645000" />
+      <workItem from="1561538977093" duration="1224000" />
     </task>
     <task id="LOCAL-00001" summary="property file demo added">
       <created>1524303046269</created>
@@ -603,7 +602,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189788000" />
+    <option name="totallyTimeSpent" value="190367000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -616,7 +615,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1721" height="935" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23479831" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
