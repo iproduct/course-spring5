@@ -2,11 +2,13 @@ package course.spring.springcoredemo.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.util.Properties;
 
-//@Component
+@Component("author")
+@Scope("prototype")
 public class Author {
     private String name;
     private int age;

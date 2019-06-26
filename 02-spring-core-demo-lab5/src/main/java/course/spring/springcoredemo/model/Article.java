@@ -14,7 +14,7 @@ import javax.annotation.PostConstruct;
 import java.time.LocalDateTime;
 import java.util.concurrent.atomic.AtomicInteger;
 
-//@Component
+@Component
 @Scope("prototype")
 @Data
 @NoArgsConstructor

@@ -14,10 +14,9 @@ import javax.annotation.Resource;
 import javax.inject.Inject;
 import java.util.Set;
 
-//@Component("presenter")
+//@Service("presenter")
 //@DependsOn({"provider"})
 //@Lazy
-//@Service("presenter")
 public class ConsoleArticlePresenter implements ArticlePresenter{
 //    @Autowired
 //    private Set<ArticlesRepository> providers;
@@ -32,11 +31,11 @@ public class ConsoleArticlePresenter implements ArticlePresenter{
         return provider;
     }
 
-//    @Resource(name="articlesRepositoryImpl")
+//    @Resource(name="alternativeRepo")
 //    @Inject
 //    @MockProvider
 //    @Autowired
-//    @Qualifier("alternativeRepo")
+//    @Qualifier("repo")
     public void setProvider(ArticlesRepository provider) {
         this.provider = provider;
     }
@@ -45,8 +44,9 @@ public class ConsoleArticlePresenter implements ArticlePresenter{
         return title;
     }
 
-    @Autowired
-    public void setPresenterData(ArticlesRepository provider, @Qualifier("title") String title){
+//    @Autowired
+    public void setPresenterData(@Qualifier("alternativeRepo") ArticlesRepository provider,
+                                 @Qualifier("title") String title){
         this.provider = provider;
         this.title = title;
     }

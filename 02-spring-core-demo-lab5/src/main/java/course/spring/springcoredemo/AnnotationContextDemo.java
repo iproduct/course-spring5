@@ -10,7 +10,7 @@ public class AnnotationContextDemo {
     public static void main(String[] args) {
         ApplicationContext ctx =
                 new AnnotationConfigApplicationContext(AppConfig.class);
-        ArticlePresenter presenter = ctx.getBean( "presenter", ArticlePresenter.class);
+        ArticlePresenter presenter = ctx.getBean( ArticlePresenter.class);
         System.out.println(presenter.getTitle());
         presenter.present();
     }
