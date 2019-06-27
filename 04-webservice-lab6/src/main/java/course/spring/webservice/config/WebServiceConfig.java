@@ -12,6 +12,8 @@ import org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition;
 import org.springframework.xml.xsd.SimpleXsdSchema;
 import org.springframework.xml.xsd.XsdSchema;
 
+import java.util.Properties;
+
 import static course.spring.webservice.web.CountryEndpoint.NAMESPACE_URI;
 
 @EnableWs
@@ -31,6 +33,9 @@ public class WebServiceConfig extends WsConfigurerAdapter {
         DefaultWsdl11Definition def = new DefaultWsdl11Definition();
         def.setPortTypeName("CountriesPort");
         def.setLocationUri("/ws");
+        Properties soapActions = new Properties();
+        soapActions.setProperty("getCountry", "http://iproduct.org/course/spring-web-service/GetCountryRequest");
+        def.setSoapActions(soapActions);
         def.setTargetNamespace(NAMESPACE_URI);
         def.setSchema(schema);
         return def;
