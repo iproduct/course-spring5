@@ -24,9 +24,16 @@ public class MainApplication {
 //
         System.out.println();
 
-        UsageTracked providerUsage =  (UsageTracked) ctx.getBean("provider");
-        log.info("Provider usages: {}", providerUsage.getUseCount());
-        UsageTracked presenterUsage =  (UsageTracked) ctx.getBean("presenter");
-        log.info("Presenter usages: {}", presenterUsage.getUseCount());
+        if(ctx.getBean("provider") instanceof UsageTracked) {
+            UsageTracked providerUsage = (UsageTracked) ctx.getBean("provider");
+            log.info("Provider usages: {}", providerUsage.getUseCount());
+
+        }
+        if(ctx.getBean("presenter") instanceof UsageTracked) {
+            UsageTracked presenterUsage =  (UsageTracked) ctx.getBean("presenter");
+            log.info("Presenter usages: {}", presenterUsage.getUseCount());
+        }
+
+
     }
 }

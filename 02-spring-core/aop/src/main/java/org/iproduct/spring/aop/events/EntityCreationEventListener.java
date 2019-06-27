@@ -14,6 +14,6 @@ public class EntityCreationEventListener implements ApplicationListener<EntityCr
 
     @Override
     public void onApplicationEvent(EntityCreationEvent event) {
-        log.info("Entity created [{}]: {}", event.getEntityName(), event.getEntity().toString());
+        log.info("!!!!!!! Entity created [{}]: {}", event.getEntityName(), event.getEntity().toString());
     }
 }
