@@ -15,8 +15,8 @@ public class SpringProgrammaticAnnotationConfig {
     @Autowired
     Environment env;
 
-//    @Value("${listOfValues}")
-//    private String[] articleTitles;
+    @Value("${listOfValues}")
+    private String[] articleTitles;
 
     @Bean
     public ArticleProvider provider() {
