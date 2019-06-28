@@ -15,6 +15,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
+import static org.springframework.http.HttpMethod.*;
+
 @Configuration
 @EnableWebSecurity
 @Slf4j
@@ -24,9 +26,9 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
         protected void configure (HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeRequests()
-                .antMatchers(HttpMethod.POST, "/**").hasAnyRole("USER", "ADMIN")
-                .antMatchers(HttpMethod.PUT, "/**").hasAnyRole("USER", "ADMIN")
-                .antMatchers(HttpMethod.DELETE, "/**").hasRole("ADMIN")
+                .antMatchers(POST, "/**").hasAnyRole("USER", "ADMIN")
+                .antMatchers(PUT, "/**").hasAnyRole("USER", "ADMIN")
+                .antMatchers(DELETE, "/**").hasRole("ADMIN")
                 .antMatchers("/**").permitAll()
                 .and()
                 .formLogin()

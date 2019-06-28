@@ -11,7 +11,7 @@ import org.springframework.web.servlet.View;
 
 import java.nio.file.FileSystemException;
 
-//@ControllerAdvice
+@ControllerAdvice
 @Slf4j
 public class ArticleControllerAdvice {
     @ExceptionHandler({ MaxUploadSizeExceededException.class, FileSystemException.class })

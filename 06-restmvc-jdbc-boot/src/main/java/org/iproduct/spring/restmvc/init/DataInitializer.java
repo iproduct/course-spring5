@@ -28,7 +28,7 @@ public class DataInitializer implements CommandLineRunner {
     private static final List<Article> mockArticles = Arrays.asList(
             new Article("Welcome to Spring 5", "Spring 5 is great beacuse ..."),
             new Article("Dependency Injection", "Should I use DI or lookup ..."),
-            new Article("Spring", "There are several ways to configure Spring beans.")
+            new Article("S", "There are several ways to configure Spring beans.")
     );
 
     @Autowired
@@ -43,19 +43,21 @@ public class DataInitializer implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         long countBefore = articleService.getArticlesCount();
-        try {
-            List<Article> created = articleService.createArticlesBatch(mockArticles);
-            log.info(">>> Articles batch created: {}", created);
-        } catch (ConstraintViolationException ex) {
-            log.error(">>> Constraint violation inserting articles: {} - {}", mockArticles, ex.getMessage());
+        if(countBefore == 0) {
+            try {
+                List<Article> created = articleService.createArticlesBatch(mockArticles);
+                log.info(">>> Articles batch created: {}", created);
+            } catch (ConstraintViolationException ex) {
+                log.error(">>> Constraint violation inserting articles: {} - {}", mockArticles, ex.getMessage());
+            }
+            long countAfter = articleService.getArticlesCount();
+            log.info(">>> Total count of articles created: {}", countAfter - countBefore);
         }
-        long countAfter = articleService.getArticlesCount();
-        log.info(">>> Total count of articles created: {}", countAfter - countBefore);
 
 
         // Users initialization
         log.info("Start data initialization  ...");
-        jdbcTemplate.getJdbcOperations().execute("DROP TABLE IF EXISTS users");
+//        jdbcTemplate.getJdbcOperations().execute("DROP TABLE IF EXISTS users");
         jdbcTemplate.getJdbcOperations().execute("CREATE TABLE IF NOT EXISTS users(" +
                 "id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY, " +
                 "username VARCHAR(40), " +

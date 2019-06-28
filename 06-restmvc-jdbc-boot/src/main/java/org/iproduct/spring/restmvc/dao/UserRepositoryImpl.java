@@ -99,7 +99,7 @@ public class UserRepositoryImpl implements UserRepository {
     public boolean deleteById(long id) {
         SqlParameterSource namedParameters = new MapSqlParameterSource().addValue("id", id);
         int count = this.jdbcTemplate.update(
-                "delete from users where id = ?", namedParameters);
+                "delete from users where id = :id", namedParameters);
         return count > 0;
     }
 

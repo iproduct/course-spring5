@@ -64,7 +64,7 @@ public class UserServiceImpl implements UserService {
         });
         user.setCreated(LocalDateTime.now());
         user.setUpdated(LocalDateTime.now());
-        if(user.getRoles().isEmpty()) {
+        if(user.getRoles() == null) {
             user.setRoles("ROLE_USER");
         }
         PasswordEncoder passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();

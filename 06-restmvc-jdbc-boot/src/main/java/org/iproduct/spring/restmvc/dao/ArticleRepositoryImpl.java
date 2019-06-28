@@ -43,6 +43,7 @@ public class ArticleRepositoryImpl implements ArticleRepository {
 //    }
 
     @Override
+    @Transactional(readOnly = true)
     public Collection<Article> findAll() {
         List<Article> articles = this.jdbcTemplate
                 .query("select * from articles", new ArticleMapper());
@@ -56,7 +57,7 @@ public class ArticleRepositoryImpl implements ArticleRepository {
                 "select * from articles where id = ?",
                 new Object[]{id}, new ArticleMapper());
         log.info("Article found: {}", article);
-        return Optional.of(article);
+        return Optional.ofNullable(article);
     }
 
     @Override
@@ -83,9 +84,10 @@ public class ArticleRepositoryImpl implements ArticleRepository {
 
 
     @Override
+    @Transactional
     public Article save(Article article) {
         int count = this.jdbcTemplate.update(
-            "update articles set title = ?, content = ? , author_id = ?, picture_url = ?, created, updated = ? where id = ?",
+            "update articles set title = ?, content = ? , author_id = ?, picture_url = ?, created = ?, updated = ? where id = ?",
             article.getTitle(),
             article.getContent(),
             article.getAuthorId(),
@@ -98,6 +100,7 @@ public class ArticleRepositoryImpl implements ArticleRepository {
     }
 
     @Override
+    @Transactional
     public boolean deleteById(long articleId) {
         int count = this.jdbcTemplate.update(
                 "delete from articles where id = ?",
