@@ -43,8 +43,9 @@ public class ArticleConroller {
     }
 
     @GetMapping("/new-article")
-    public ModelAndView showForm() {
-        return new ModelAndView("articleForm", "article", new Article());
+    public String showForm(@ModelAttribute("article") Article article) {
+//        return new ModelAndView("articleForm", "article", new Article());
+        return "articleForm";
     }
 
     @PostMapping(value = "/submit-article")

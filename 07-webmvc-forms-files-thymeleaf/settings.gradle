@@ -3,4 +3,4 @@ pluginManagement {
 		gradlePluginPortal()
 	}
 }
-rootProject.name = '14-webmvc-demo'
+rootProject.name = '07-webmvc-forms-files-thymeleaf'
