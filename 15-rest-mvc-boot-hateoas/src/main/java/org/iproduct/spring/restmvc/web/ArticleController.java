@@ -6,28 +6,17 @@ import org.iproduct.spring.restmvc.model.Article;
 import org.iproduct.spring.restmvc.service.ArticleService;
 import org.iproduct.spring.restmvc.web.resource.ArticleResource;
 import org.iproduct.spring.restmvc.web.resource.ArticleResourceAssembler;
-import org.iproduct.spring.restmvc.web.resource.UserResource;
-import org.iproduct.spring.restmvc.web.resource.UserResourceAssembler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.ExposesResourceFor;
 import org.springframework.hateoas.Link;
-import org.springframework.hateoas.Resource;
 import org.springframework.hateoas.Resources;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import org.springframework.web.util.UriComponentsBuilder;
 
-import javax.servlet.ServletRequest;
-import javax.servlet.http.HttpServletRequest;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
-
-import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
-import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
 @RestController
 @RequestMapping("/api/articles")

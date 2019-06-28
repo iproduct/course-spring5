@@ -1,14 +1,19 @@
 package org.iproduct.spring.restmvc;
 
-import static org.mockito.BDDMockito.given;
-import static org.springframework.security.test.web.reactive.server.SecurityMockServerConfigurers.mockUser;
-
-import java.time.LocalDateTime;
-import java.util.Arrays;
-import java.util.List;
-
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.jayway.jsonpath.Configuration;
+import com.jayway.jsonpath.JsonPath;
+import com.jayway.jsonpath.Option;
+import com.jayway.jsonpath.TypeRef;
+import com.jayway.jsonpath.spi.json.JacksonJsonProvider;
+import com.jayway.jsonpath.spi.json.JsonProvider;
+import com.jayway.jsonpath.spi.mapper.JacksonMappingProvider;
+import com.jayway.jsonpath.spi.mapper.MappingProvider;
+import lombok.extern.slf4j.Slf4j;
 import org.iproduct.spring.restmvc.dao.ArticleRepository;
 import org.iproduct.spring.restmvc.model.Article;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,17 +23,25 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.reactive.server.WebTestClient;
+import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.reactive.function.BodyInserters;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import java.time.LocalDateTime;
+import java.util.Arrays;
+import java.util.EnumSet;
+import java.util.List;
+import java.util.Set;
 
-import lombok.extern.slf4j.Slf4j;
-
+import static org.mockito.BDDMockito.given;
+import static org.springframework.http.MediaType.APPLICATION_FORM_URLENCODED;
 
 
 @ExtendWith(SpringExtension.class)
@@ -39,6 +52,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class RestMvcBootApplicationTests {
 
+    public static final String AUTH_TOKEN = "JSESSIONID";
+
 	@Autowired
 	private WebTestClient webClient;
 
@@ -47,6 +62,16 @@ public class RestMvcBootApplicationTests {
 
     @MockBean
     private ArticleRepository articleRepository;
+
+    private String authToken;
+
+    @BeforeEach
+    void setup(WebApplicationContext wac) throws Exception {
+        authToken = webClient.post().uri("/login").contentType(APPLICATION_FORM_URLENCODED)
+                .body(BodyInserters.fromFormData("username", "admin").with("password", "admin"))
+                .exchange().returnResult(String.class).getResponseCookies().get(AUTH_TOKEN).get(0).getValue();
+        log.info(">>> AUTH Token: {}", authToken);
+    }
 
     @org.junit.Test
     @Test
@@ -66,12 +91,22 @@ public class RestMvcBootApplicationTests {
         given(articleRepository.findAll()).willReturn(mockArticles);
 
         Object exchangeMutator;
-        webClient
+        WebTestClient.ResponseSpec response = webClient
 //        		.mutateWith(mockUser("admin").password("admin").roles("ADMIN"))
+                .mutate().defaultCookie(AUTH_TOKEN, authToken).build()
                 .get().uri("/api/articles").accept(MediaType.APPLICATION_JSON)
-                .exchange().expectStatus().isOk()
-                .expectBodyList(Article.class).hasSize(3);
-//                .returnResult(Article.class);
+                .exchange();
+
+//        log.info(">>>>> Result: {}", response.returnResult(String.class));
+
+        response.expectStatus().isOk()
+                .expectHeader().contentType(MediaType.APPLICATION_JSON_UTF8)
+                .expectBody()
+                .jsonPath("._embedded.articles").isArray()
+                .jsonPath("._embedded.articles.length()").isEqualTo(mockArticles.size())
+                .jsonPath("$._embedded.articles[0].title").isEqualTo(mockArticles.get(0).getTitle())
+                .jsonPath("$._embedded.articles[1].title").isEqualTo(mockArticles.get(1).getTitle())
+                .jsonPath("$._embedded.articles[2].title").isEqualTo(mockArticles.get(2).getTitle());
 
 //        result.getResponseBody().subscribe(article -> log.info(">>> {}", article));
 //                .expectBodyList(Article.class);
@@ -85,14 +120,47 @@ public class RestMvcBootApplicationTests {
     public void givenArticles_whenGetArticles_thenStatus200andJsonArray_RestTemplate() throws Exception {
 
         given(articleRepository.findAll()).willReturn(mockArticles);
+
+        HttpHeaders requestHeaders = new HttpHeaders();
+        requestHeaders.set("Cookie", AUTH_TOKEN + "=" + authToken);
+
         String response = restTemplate
         		.exchange("http://localhost:" + port + "/api/articles",
-                HttpMethod.GET, null, String.class).getBody();
+                HttpMethod.GET, new HttpEntity<Void>(null, requestHeaders), String.class).getBody();
 
 //        List<Article> response = restTemplate.exchange("http://localhost:" + port + "/api/articles",
 //                HttpMethod.GET, null, new ParameterizedTypeReference<List<Article>>() {}).getBody();
         log.info("Response: {}", response);
-//        Assertions.assertEquals(mockArticles, response);
+
+        Configuration.setDefaults(new Configuration.Defaults() {
+            private final JsonProvider jsonProvider = new JacksonJsonProvider();
+            private final MappingProvider mappingProvider = new JacksonMappingProvider();
+
+            @Override
+            public JsonProvider jsonProvider() {
+                return jsonProvider;
+            }
+
+            @Override
+            public MappingProvider mappingProvider() {
+                return mappingProvider;
+            }
+
+            @Override
+            public Set<Option> options() {
+                return EnumSet.noneOf(Option.class);
+            }
+        });
+
+        int articlesSize = JsonPath.parse(response).read("$._embedded.articles.length()", Integer.class );
+        String article0title = JsonPath.parse(response).read("$._embedded.articles[0].title", String.class );
+        String article1title = JsonPath.parse(response).read("$._embedded.articles[1].title", String.class );
+        String article2title = JsonPath.parse(response).read("$._embedded.articles[2].title", String.class );
+        log.info("Article titles [{}]: {}, {}, {}", articlesSize, article0title, article1title, article2title);
+        Assertions.assertEquals(mockArticles.size(), articlesSize);
+        Assertions.assertEquals(mockArticles.get(0).getTitle(), article0title);
+        Assertions.assertEquals(mockArticles.get(1).getTitle(), article1title);
+        Assertions.assertEquals(mockArticles.get(2).getTitle(), article2title);
     }
 
     private static final List<Article> mockArticles = Arrays.asList(

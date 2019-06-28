@@ -1,5 +1,6 @@
 package org.iproduct.spring.restmvc.config;
 
+import lombok.extern.slf4j.Slf4j;
 import org.iproduct.spring.restmvc.model.User;
 import org.iproduct.spring.restmvc.security.RestAuthenticationEntryPoint;
 import org.iproduct.spring.restmvc.security.RestSavedRequestAwareAuthenticationSuccessHandler;
@@ -16,14 +17,12 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
 
-import lombok.extern.slf4j.Slf4j;
-
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(securedEnabled = true, jsr250Enabled = true, prePostEnabled = true)
 @ComponentScan("org.iproduct.spring.restmvc.security")
 @Slf4j
-public class SpringSecurityConfig extends WebSecurityConfigurerAdapter	 {
+public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private RestAuthenticationEntryPoint restAuthenticationEntryPoint;
 
@@ -46,17 +45,12 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter	 {
                     .antMatchers(HttpMethod.GET, "/api/**").authenticated()
                     .antMatchers(HttpMethod.POST, "/**").hasAnyRole("USER", "ADMIN")
                     .antMatchers(HttpMethod.PUT).hasAnyRole("USER", "ADMIN")
-                    .antMatchers(HttpMethod.DELETE).hasAnyRole("ADMIN")
+                    .antMatchers(HttpMethod.DELETE).hasAnyRole("USER", "ADMIN")
                 .and()
                     .formLogin()
-//                    	.loginPage("/login.html")
-//                    	.loginProcessingUrl("/login")
-//                    	.defaultSuccessUrl("/home")
-//                    	.failureUrl("/login.html")
-//                      .usernameParameter("username")
-//                      .passwordParameter("password")
-                    	.successHandler(authenticationSuccessHandler)
-                    	.failureHandler(new SimpleUrlAuthenticationFailureHandler())
+                    .permitAll()
+                    .successHandler(authenticationSuccessHandler)
+                    .failureHandler(new SimpleUrlAuthenticationFailureHandler())
                 .and()
                     .logout();
 //                .and()

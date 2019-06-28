@@ -1,9 +1,6 @@
 package org.iproduct.spring.restmvc.model;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.annotation.JsonProperty.Access;
-
-import lombok.Builder;
 import lombok.Data;
 import lombok.NonNull;
 import org.hibernate.validator.constraints.Length;
@@ -15,7 +12,6 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.validation.constraints.NotNull;
-import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -96,11 +92,12 @@ public class User implements UserDetails, Identifiable<String> {
 //            return "{noop}"+ password;
 //    }
 
+    @JsonIgnore
     public String getPassword() {
         return password;
     }
 
-    @JsonProperty(access=Access.WRITE_ONLY)
+    @JsonProperty
     public void setPassword(String password) {
         this.password = password;
     }

@@ -1,5 +1,6 @@
 package org.iproduct.spring.restmvc.dao;
 
+import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
 import org.iproduct.spring.restmvc.exception.EntityNotFoundException;
 import org.iproduct.spring.restmvc.model.User;
@@ -12,7 +13,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.TransactionCallbackWithoutResult;
 import org.springframework.transaction.support.TransactionTemplate;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -35,7 +35,7 @@ public class UserRepositoryHibernate implements UserRepository {
 
     @Override
     @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
-    public List<User> findAll() {
+    public List<User> findAll() throws HibernateException {
         return this.sessionFactory.getCurrentSession()
                 .createQuery("select user from User user", User.class)
                 .list();

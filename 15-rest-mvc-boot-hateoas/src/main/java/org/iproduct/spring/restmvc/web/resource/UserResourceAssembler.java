@@ -9,10 +9,8 @@ import org.springframework.hateoas.EntityLinks;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.RelProvider;
 import org.springframework.hateoas.Resources;
-import org.springframework.hateoas.mvc.IdentifiableResourceAssemblerSupport;
 import org.springframework.stereotype.Component;
 
-import java.awt.print.Book;
 import java.util.List;
 
 @Component

@@ -18,7 +18,7 @@ public class CountryEndpoint {
     @Autowired
     private CountryRepository countryRepository;
 
-//    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getCountryRequest")
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getCountryRequest")
     @SoapAction("http://iproduct.org/course/spring-web-service/GetCountryRequest")
     @ResponsePayload
     public GetCountryResponse getCountry(@RequestPayload GetCountryRequest request) {

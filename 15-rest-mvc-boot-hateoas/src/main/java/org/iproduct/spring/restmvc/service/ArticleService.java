@@ -2,7 +2,6 @@ package org.iproduct.spring.restmvc.service;
 
 import org.iproduct.spring.restmvc.model.Article;
 
-import javax.validation.Valid;
 import java.util.List;
 
 public interface ArticleService {

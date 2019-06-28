@@ -3,12 +3,10 @@ package org.iproduct.spring.restmvc.model;
 import lombok.Data;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
-import lombok.ToString;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.NotNull;
-import java.util.Arrays;
 
 @Document(collection = "permissions")
 @Data

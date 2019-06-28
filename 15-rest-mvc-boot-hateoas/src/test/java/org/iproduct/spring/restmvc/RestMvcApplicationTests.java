@@ -88,7 +88,7 @@ public class RestMvcApplicationTests {
 		then(articleRepository).should(times(1)).findAll();
 	}
 
-	@org.junit.jupiter.api.Test
+	@Test
 	void givenArticles_whenPostArticle_thenStatus201andLocationHeader() throws Exception {
 
 		given(articleRepository.insert(any(Article.class))).willReturn(newArticle);

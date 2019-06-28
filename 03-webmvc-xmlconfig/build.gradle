@@ -32,7 +32,7 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
-// Don't use Jetty8, even it's a servlet 3.0+ container,
+// Don't use Jetty9, even it's a servlet 3.0+ container,
 // but not support non-jar WebApplicationInitializer scanning.
 // It will cause "No Spring WebApplicationInitializer types detected on classpath"
 gretty {

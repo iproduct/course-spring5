@@ -1,7 +1,6 @@
 package org.iproduct.spring.restmvc.dao;
 
 import org.iproduct.spring.restmvc.model.Permission;
-import org.iproduct.spring.restmvc.model.Role;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

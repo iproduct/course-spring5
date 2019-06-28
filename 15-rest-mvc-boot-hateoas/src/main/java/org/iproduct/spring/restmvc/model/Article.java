@@ -1,14 +1,12 @@
 package org.iproduct.spring.restmvc.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NonNull;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.hateoas.Identifiable;
-import org.springframework.hateoas.ResourceSupport;
 
 import java.time.LocalDateTime;
 

@@ -6,13 +6,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import org.hibernate.validator.constraints.Length;
-import org.iproduct.spring.restmvc.model.Role;
 import org.springframework.hateoas.core.Relation;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Relation(value="article", collectionRelation="articles")
 @JsonPropertyOrder({ "id", "title", "content", "authorId", "created", "updated"})

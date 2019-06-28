@@ -69,7 +69,7 @@ public class WebfluxUsersApplicationTests {
     public void cleanUpAfterClass() {
         client
                 .mutate()
-                .filter(adminCredentials())
+                .filter(springSecurity())
                 .build()
                 .delete()
                 .uri("/api/users/" + createdCustomer.getId())
@@ -93,7 +93,7 @@ public class WebfluxUsersApplicationTests {
     public void whenAdminCredentialsGetUsersShouldSucceed() throws Exception {
         client
             .mutate()
-            .filter(adminCredentials())
+            .filter(springSecurity())
             .build()
             .get()
             .uri("/api/users")
@@ -110,7 +110,7 @@ public class WebfluxUsersApplicationTests {
     public void whenAdminCredentialsGetUsersShouldSucceedWithHeaders() throws Exception {
         client
             .mutate()
-            .filter(adminCredentials())
+            .filter(springSecurity())
             .build()
             .get()
             .uri("/api/users")

@@ -5,7 +5,6 @@ import org.iproduct.spring.restmvc.exception.EntityNotFoundException;
 import org.iproduct.spring.restmvc.model.Article;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
-import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 

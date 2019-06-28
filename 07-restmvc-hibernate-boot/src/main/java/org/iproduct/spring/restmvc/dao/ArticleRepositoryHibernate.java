@@ -1,5 +1,6 @@
 package org.iproduct.spring.restmvc.dao;
 
+import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
 import org.iproduct.spring.restmvc.exception.EntityNotFoundException;
 import org.iproduct.spring.restmvc.model.Article;
@@ -35,22 +36,22 @@ public class ArticleRepositoryHibernate implements ArticleRepository {
 
     @Override
     @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
-    public Collection<Article> findAll() {
-        return this.sessionFactory.getCurrentSession()
+    public Collection<Article> findAll() throws HibernateException {
+        return sessionFactory.getCurrentSession()
                 .createQuery("select article from Article article", Article.class)
                 .list();
     }
 
     @Override
     @Transactional(readOnly = true)
-    public Optional<Article> findById(long id) {
-        return this.sessionFactory.getCurrentSession()
+    public Optional<Article> findById(long id) throws HibernateException {
+        return sessionFactory.getCurrentSession()
                 .byId(Article.class).loadOptional(id);
     }
 
     @Override
     public long count() {
-        return this.sessionFactory.getCurrentSession()
+        return sessionFactory.getCurrentSession()
                 .createQuery("select count(article) from Article article", Long.class)
                 .uniqueResult();
     }
