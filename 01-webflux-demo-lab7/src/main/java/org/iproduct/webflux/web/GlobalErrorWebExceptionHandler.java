@@ -1,11 +1,8 @@
-package course.spring.webfluxdemo.web;
+package org.iproduct.webflux.web;
 
-import course.spring.webfluxdemo.exception.InvalidEntityDataException;
-import course.spring.webfluxdemo.exception.NonexisitngEntityException;
-import course.spring.webfluxdemo.model.ErrorResponse;
-import io.netty.handler.codec.http.HttpResponse;
-import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.iproduct.webflux.exception.NonexisitngEntityException;
+import org.iproduct.webflux.model.ErrorResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.web.ResourceProperties;
 import org.springframework.boot.autoconfigure.web.reactive.error.AbstractErrorWebExceptionHandler;
@@ -13,17 +10,13 @@ import org.springframework.boot.web.reactive.error.ErrorAttributes;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.codec.ServerCodecConfigurer;
-import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.stereotype.Component;
-import org.springframework.web.reactive.function.BodyInserters;
-import org.springframework.web.reactive.function.server.*;
-import org.springframework.web.server.ServerWebExchange;
-import org.springframework.web.server.WebExceptionHandler;
+import org.springframework.web.reactive.function.server.RouterFunction;
+import org.springframework.web.reactive.function.server.RouterFunctions;
+import org.springframework.web.reactive.function.server.ServerRequest;
+import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;
-
-import java.util.Map;
 
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
@@ -35,7 +28,8 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 public class GlobalErrorWebExceptionHandler extends AbstractErrorWebExceptionHandler {
     @Autowired
     GlobalErrorWebExceptionHandler(ErrorAttributes errorAttributes,
-                                   ResourceProperties resourceProperties, ApplicationContext applicationContext, ServerCodecConfigurer configurer) {
+                                   ResourceProperties resourceProperties, ApplicationContext applicationContext,
+                                   ServerCodecConfigurer configurer) {
         super(errorAttributes, resourceProperties, applicationContext);
         this.setMessageWriters(configurer.getWriters());
     }
@@ -44,7 +38,7 @@ public class GlobalErrorWebExceptionHandler extends AbstractErrorWebExceptionHan
     protected RouterFunction<ServerResponse> getRoutingFunction(
             ErrorAttributes errorAttributes) {
 
-        return route(path("/api/reactive/articles/**"), this::renderErrorResponse);
+        return route(path("/api/articles/**"), this::renderErrorResponse);
     }
 
     private Mono<ServerResponse> renderErrorResponse(ServerRequest req) {
@@ -56,9 +50,5 @@ public class GlobalErrorWebExceptionHandler extends AbstractErrorWebExceptionHan
             return ServerResponse.status(HttpStatus.BAD_REQUEST)
                 .syncBody(new ErrorResponse(BAD_REQUEST, getError(req).getMessage()));
         }
-
-//        Map<String, Object> errorPropertiesMap = getErrorAttributes(req, false);
-
-
     }
 }

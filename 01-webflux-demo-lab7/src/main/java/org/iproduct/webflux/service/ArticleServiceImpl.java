@@ -1,6 +1,7 @@
 package org.iproduct.webflux.service;
 
 import org.iproduct.webflux.dao.ReactiveArticlesRepository;
+import org.iproduct.webflux.exception.NonexisitngEntityException;
 import org.iproduct.webflux.model.Article;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,7 +20,9 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public Mono<Article> findById(String id) {
-        return repo.findById(id);
+        return repo.findById(id)
+            .switchIfEmpty(Mono.error(new NonexisitngEntityException(
+                    String.format("Article with ID:%s does not exist.", id))));
     }
 
     @Override

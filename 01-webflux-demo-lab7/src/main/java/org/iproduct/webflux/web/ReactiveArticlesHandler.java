@@ -1,5 +1,6 @@
 package org.iproduct.webflux.web;
 
+import org.iproduct.webflux.exception.NonexisitngEntityException;
 import org.iproduct.webflux.model.Article;
 import org.iproduct.webflux.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,8 +30,8 @@ public class ReactiveArticlesHandler {
     }
 
     public Mono<ServerResponse> getArticleById(ServerRequest request) {
-        return ServerResponse.ok().body(
-                service.findById(request.pathVariable("id")), Article.class);
+        return service.findById(request.pathVariable("id"))
+            .flatMap(article -> ServerResponse.ok().syncBody(article));
     }
     public Mono<ServerResponse> deleteArticleById(ServerRequest request) {
         return ServerResponse.ok().body(
