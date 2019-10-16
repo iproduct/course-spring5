@@ -34,7 +34,7 @@ public class ReactiveArticlesHandler {
             .flatMap(article -> ServerResponse.ok().syncBody(article));
     }
     public Mono<ServerResponse> deleteArticleById(ServerRequest request) {
-        return ServerResponse.ok().body(
-                service.delete(request.pathVariable("id")), Article.class);
+        return service.delete(request.pathVariable("id"))
+            .flatMap(article -> ServerResponse.ok().syncBody(article));
     }
 }

@@ -38,7 +38,9 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public Mono<Article> delete(String articleId) {
         return repo.findById(articleId)
-        .flatMap(art -> repo.deleteById(articleId).thenReturn(art));
+        .flatMap(art -> repo.deleteById(articleId).thenReturn(art))
+        .switchIfEmpty(Mono.error(new NonexisitngEntityException(
+                String.format("Article with ID:%s does not exist.", articleId))));
     }
 
     @Override
