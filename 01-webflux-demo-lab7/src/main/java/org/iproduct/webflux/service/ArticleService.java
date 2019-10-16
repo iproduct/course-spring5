@@ -10,5 +10,5 @@ public interface ArticleService {
     Mono<Article> create(Article article);
     Mono<Article> update(Article article);
     Mono<Article> delete(String articleId);
-    Mono<Integer> getCount();
+    Mono<Long> getCount();
 }

@@ -6,7 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import static org.springframework.web.reactive.function.server.RequestPredicates.GET;
+import static org.springframework.web.reactive.function.server.RequestPredicates.*;
 import static org.springframework.web.reactive.function.server.RouterFunction.*;
 import static org.springframework.web.reactive.function.server.RouterFunctions.route;
 
@@ -25,7 +25,10 @@ public class WebfluxDemoLab7Application {
 
 	@Bean
 	RouterFunction<ServerResponse> router() {
-		return route(GET("/"), request -> handler.getAllArticles());
+		return route(GET("/api/articles"), handler::getAllArticles)
+			.andRoute(POST("/api/articles"), handler::addArticle)
+			.andRoute(GET("/api/articles/{id}"), handler::getArticleById)
+			.andRoute(DELETE("/api/articles/{id}"), handler::deleteArticleById);
 	}
 
 }

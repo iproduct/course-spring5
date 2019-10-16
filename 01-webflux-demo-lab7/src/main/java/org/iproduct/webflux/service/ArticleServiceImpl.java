@@ -19,26 +19,27 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public Mono<Article> findById(String id) {
-        return null;
+        return repo.findById(id);
     }
 
     @Override
     public Mono<Article> create(Article article) {
-        return null;
+        return repo.insert(article);
     }
 
     @Override
     public Mono<Article> update(Article article) {
-        return null;
+        return repo.save(article);
     }
 
     @Override
     public Mono<Article> delete(String articleId) {
-        return null;
+        return repo.findById(articleId)
+        .flatMap(art -> repo.deleteById(articleId).thenReturn(art));
     }
 
     @Override
-    public Mono<Integer> getCount() {
-        return null;
+    public Mono<Long> getCount() {
+        return repo.count();
     }
 }
