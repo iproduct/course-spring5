@@ -22,13 +22,10 @@ public class ConsoleArticlePresenter implements ArticlePresenter {
         provider.getArticles().forEach(System.out::println);
     }
 
-    @Override
-//    @Autowired
     public void setArticleProvider(ArticleProvider provider) {
         this.provider = provider;
     }
 
-    @Override
     public ArticleProvider getArticleProvider() {
         return provider;
     }

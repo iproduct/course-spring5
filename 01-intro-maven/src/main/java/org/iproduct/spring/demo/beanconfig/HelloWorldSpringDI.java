@@ -17,7 +17,7 @@ public class HelloWorldSpringDI {
                 () -> new ConsoleArticlePresenter(ctx.getBean("provider", ArticleProvider.class)));
         ctx.refresh();
 
-        ArticlePresenter mr = ctx.getBean("presenter", ArticlePresenter.class);
+        ArticlePresenter mr = ctx.getBean(ArticlePresenter.class);
 //        MessageRenderer mr = factory.getBean("renderer", MessageRenderer.class);
         mr.present();
     }

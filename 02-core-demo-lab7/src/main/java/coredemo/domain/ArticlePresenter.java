@@ -1,5 +1,5 @@
-package org.iproduct.spring.demo.beanconfig;
+package coredemo.domain;
 
 public interface ArticlePresenter {
     void present();
- }
+}

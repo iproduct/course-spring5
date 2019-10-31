@@ -2,38 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04ada577-88c3-4482-a6d0-c544e831a56d" name="Default" comment="XMLConfigFactory: autowireing bean postprocessor added, xml config changed">
+      <change afterPath="$PROJECT_DIR$/../core-demo/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../core-demo/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../core-demo/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../core-demo/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../core-demo/src/main/java/coredemo/AnnotationSpringDI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../core-demo/src/main/java/coredemo/HelloSpringDI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../core-demo/src/main/java/coredemo/domain/AnotherArticleProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../core-demo/src/main/java/coredemo/domain/ArticlePresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../core-demo/src/main/java/coredemo/domain/ArticleProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../core-demo/src/main/java/coredemo/domain/ConsoleArticlePresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../core-demo/src/main/java/coredemo/domain/MockArticleProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../core-demo/src/main/java/coredemo/domain/PresenterFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../core-demo/src/main/java/coredemo/model/Article.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../core-demo/src/main/resources/app-context.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../core-demo/src/main/resources/articles.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-intro-maven/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-intro-maven/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-intro-maven/src/main/java/org/iproduct/spring/demo/beanconfig/ArticlePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-intro-maven/src/main/java/org/iproduct/spring/demo/beanconfig/ArticlePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-intro-maven/src/main/java/org/iproduct/spring/demo/beanconfig/ConsoleArticlePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-intro-maven/src/main/java/org/iproduct/spring/demo/beanconfig/ConsoleArticlePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-intro-maven/src/main/java/org/iproduct/spring/demo/beanconfig/HelloWorldSpringDI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-intro-maven/src/main/java/org/iproduct/spring/demo/beanconfig/HelloWorldSpringDI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aop/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/aop/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/AppConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/AppConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/events/EntityCreationEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/events/EntityCreationEventListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spel/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/spel/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spel/src/main/java/org/iproduct/spring/spel/HelloWorldSpringAnnotated.java" beforeDir="false" afterPath="$PROJECT_DIR$/spel/src/main/java/org/iproduct/spring/spel/HelloWorldSpringAnnotated.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/.gradle/" />
-    <ignored path="$PROJECT_DIR$/build/" />
-    <ignored path="$PROJECT_DIR$/xmlconfig/.gradle/" />
-    <ignored path="$PROJECT_DIR$/xmlconfig/build/" />
-    <ignored path="$PROJECT_DIR$/xmlconfig/out/" />
-    <ignored path="$PROJECT_DIR$/annotationconfig/.gradle/" />
-    <ignored path="$PROJECT_DIR$/annotationconfig/build/" />
-    <ignored path="$PROJECT_DIR$/annotationconfig/out/" />
-    <ignored path="$PROJECT_DIR$/programmaticconfig/.gradle/" />
-    <ignored path="$PROJECT_DIR$/programmaticconfig/build/" />
-    <ignored path="$PROJECT_DIR$/programmaticconfig/out/" />
-    <ignored path="$PROJECT_DIR$/annotationconfig-multiple/.gradle/" />
-    <ignored path="$PROJECT_DIR$/annotationconfig-multiple/build/" />
-    <ignored path="$PROJECT_DIR$/annotationconfig-multiple/out/" />
-    <ignored path="$PROJECT_DIR$/circular_dependency/.gradle/" />
-    <ignored path="$PROJECT_DIR$/circular_dependency/build/" />
-    <ignored path="$PROJECT_DIR$/circular_dependency/out/" />
-    <ignored path="$PROJECT_DIR$/spel/.gradle/" />
-    <ignored path="$PROJECT_DIR$/spel/build/" />
-    <ignored path="$PROJECT_DIR$/spel/out/" />
-    <ignored path="$PROJECT_DIR$/aop/.gradle/" />
-    <ignored path="$PROJECT_DIR$/aop/build/" />
-    <ignored path="$PROJECT_DIR$/aop/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,106 +66,6 @@
       </state>
     </system>
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/DefaultUsageTracked.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
-              <folding>
-                <element signature="e#307#308#0" expanded="true" />
-                <element signature="e#355#356#0" expanded="true" />
-                <element signature="e#402#403#0" expanded="true" />
-                <element signature="e#438#439#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/MainApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/EntityCreationPublishingAspect222.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="49" column="69" lean-forward="true" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/events/EntityCreationEvent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="4" column="57" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/SystemArchitecture.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/service/MockArticleProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/UsageTracking.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="563">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="28" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/UsageTracked.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/MethodProfilerAspect.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/events/EntityCreationEventListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -203,158 +93,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/SpringProgrammaticAnnotationConfig.java" />
-        <option value="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/EntityCreationEvent.java" />
-        <option value="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/ArticleProvider.java" />
-        <option value="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/MockArticleProvider.java" />
-        <option value="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/Article.java" />
-        <option value="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/EntityCreationEventListener.java" />
-        <option value="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/ConsoleArticlePresenter.java" />
-        <option value="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/HelloWorldSpringAnnotated.java" />
-        <option value="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/AnnotationConfig.java" />
-        <option value="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/service/ArticlePresenter.java" />
-        <option value="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/UsageTracked.java" />
-        <option value="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/DefaultUsageTracked.java" />
-        <option value="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/service/ConsoleArticlePresenter.java" />
-        <option value="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/SystemArchitecture.java" />
-        <option value="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/EntityCreationPublishingAspect.java" />
-        <option value="$PROJECT_DIR$/annotationconfig/src/main/java/org/iproduct/spring/programmatic/Article.java" />
-        <option value="$PROJECT_DIR$/annotationconfig/src/main/java/org/iproduct/spring/programmatic/MockArticleProvider.java" />
-        <option value="$PROJECT_DIR$/annotationconfig/src/main/java/org/iproduct/spring/programmatic/ConsoleArticlePresenter.java" />
-        <option value="$PROJECT_DIR$/programmaticconfig/src/main/java/org/iproduct/spring/programmatic/MockArticleProvider.java" />
-        <option value="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/MethodProfilerAspect.java" />
-        <option value="$PROJECT_DIR$/aop/src/main/resources/META-INF/aop.xml" />
-        <option value="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/EntityCreationPublishingAspect222.java" />
-        <option value="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/UsageTracking.java" />
-        <option value="$PROJECT_DIR$/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/ArticlePresenter.java" />
-        <option value="$PROJECT_DIR$/settings.gradle" />
-        <option value="$PROJECT_DIR$/.idea/gradle.xml" />
-        <option value="$PROJECT_DIR$/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/SpringXMLConfigDI.java" />
-        <option value="$PROJECT_DIR$/circular_dependency/src/main/java/org/iproduct/spring/circular/CircularDependencyBeanA.java" />
-        <option value="$PROJECT_DIR$/circular_dependency/src/main/java/org/iproduct/spring/circular/CircularDependencyBeanB.java" />
-        <option value="$PROJECT_DIR$/spel/src/main/java/org/iproduct/spring/spel/ConsoleArticlePresenter.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/ConsoleArticlePresenter.java" />
-        <option value="$PROJECT_DIR$/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/Article.java" />
-        <option value="$PROJECT_DIR$/xmlconfig/build.gradle" />
-        <option value="$PROJECT_DIR$/programmaticconfig/build.gradle" />
-        <option value="$PROJECT_DIR$/annotationconfig/src/main/java/org/iproduct/spring/programmatic/AnotherArticleProvider.java" />
-        <option value="$PROJECT_DIR$/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/SpringXMLConfigFactory.java" />
-        <option value="$PROJECT_DIR$/xmlconfig/src/main/resources/spring/app-context.xml" />
-        <option value="$PROJECT_DIR$/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/MockArticleProvider.java" />
-        <option value="$PROJECT_DIR$/programmaticconfig/src/main/java/org/iproduct/spring/programmatic/SpringProgrammaticConfigDI.java" />
-        <option value="$PROJECT_DIR$/spel/src/main/java/org/iproduct/spring/spel/Car.java" />
-        <option value="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/LoggingAspect.java" />
-        <option value="$PROJECT_DIR$/programmaticconfig/src/main/java/org/iproduct/spring/programmatic/SpringProgrammaticAnnotationConfig.java" />
-        <option value="$PROJECT_DIR$/spel/build.gradle" />
-        <option value="$PROJECT_DIR$/aop/build.gradle" />
-        <option value="$PROJECT_DIR$/spel/src/main/java/org/iproduct/spring/spel/CircularDependencyBeanA.java" />
-        <option value="$PROJECT_DIR$/spel/src/main/java/org/iproduct/spring/spel/MockArticleProvider.java" />
-        <option value="$PROJECT_DIR$/spel/src/main/java/org/iproduct/spring/spel/HelloWorldSpringAnnotated.java" />
-        <option value="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/AppConfiguration.java" />
-        <option value="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/events/EntityCreationEventListener.java" />
-        <option value="$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/MainApplication.java" />
-      </list>
-    </option>
-  </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="78" />
-    <option name="y" value="15" />
-    <option name="width" value="1170" />
-    <option name="height" value="687" />
-  </component>
+  <component name="ProjectId" id="1Svulo36Me11EGzMdWRLJhk13o6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="aop" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="aop" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="aop" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="aop" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="aop" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="aop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="aop" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="aop" type="462c0819:PsiDirectoryNode" />
-              <item name="events" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="02-spring-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="02-spring-core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="aop" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="aop" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561628055052" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../04-webservice-lab6" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.16207455" />
     <property name="project.structure.side.proportion" value="0.53621495" />
@@ -478,6 +231,7 @@
       </method>
     </configuration>
     <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <properties />
       <listeners />
@@ -560,6 +314,8 @@
       <workItem from="1561010320715" duration="5259000" />
       <workItem from="1561538977093" duration="1894000" />
       <workItem from="1561559758067" duration="12084000" />
+      <workItem from="1572456544958" duration="732000" />
+      <workItem from="1572463202015" duration="858000" />
     </task>
     <task id="LOCAL-00001" summary="property file demo added">
       <created>1524303046269</created>
@@ -610,9 +366,6 @@
       <configuration name="CircularDependencyTest" configurationId="JUnit" />
     </history-entry>
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203121000" />
-  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -622,488 +375,26 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1721" height="935" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.052980132" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32904884" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.64009964" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3990025" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32904884" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.87522936" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32904884" />
-      <window_info anchor="bottom" id="Build" order="10" weight="0.40099627" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32503113" />
-      <window_info anchor="bottom" id="Spring" order="12" weight="0.32904884" />
-      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
-      <window_info anchor="right" id="Maven" order="0" />
-      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Gradle" order="6" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Maven Projects" order="9" />
-      <window_info anchor="right" id="Database" order="10" />
-      <window_info anchor="right" id="Mongo Explorer" order="11" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17399158" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32904884" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.8505604" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3990025" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32904884" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.87522936" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32904884" />
-      <window_info anchor="bottom" id="Build" order="10" weight="0.40099627" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32503113" />
-      <window_info anchor="bottom" id="Spring" order="12" weight="0.32904884" />
-      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
-      <window_info anchor="right" id="Maven" order="0" />
-      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Gradle" order="6" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Maven Projects" order="9" />
-      <window_info anchor="right" id="Database" order="10" />
-      <window_info anchor="right" id="Mongo Explorer" order="11" />
-    </layout-to-restore>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="property file demo added" />
     <MESSAGE value="XMLConfigFactory: autowireing bean postprocessor added, xml config changed" />
     <option name="LAST_COMMIT_MESSAGE" value="XMLConfigFactory: autowireing bean postprocessor added, xml config changed" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/programmaticconfig/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annotationconfig/src/main/java/org/iproduct/spring/programmatic/MockProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annotationconfig/src/main/java/org/iproduct/spring/programmatic/Article.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annotationconfig/src/main/resources/articles.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="18" lean-forward="true" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annotationconfig/src/main/java/org/iproduct/spring/programmatic/SpringAnnotationsDI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annotationconfig/src/main/java/org/iproduct/spring/programmatic/MockArticleProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annotationconfig/src/main/java/org/iproduct/spring/programmatic/ConsoleArticlePresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-128">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annotationconfig/src/main/java/org/iproduct/spring/programmatic/AnotherArticleProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annotationconfig/src/main/java/org/iproduct/spring/programmatic/AlternativeProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annotationconfig-multiple/src/main/java/org/iproduct/spring/programmatic/AlternativeProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="9" selection-start-line="9" selection-end-line="11" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/ArticlePresenterFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-          <folding>
-            <element signature="e#292#293#0" expanded="true" />
-            <element signature="e#332#333#0" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#441#442#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/ArticleProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/SpringXMLConfigDI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/ConsoleArticlePresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/MockArticleProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
-          <folding>
-            <element signature="e#605#606#0" expanded="true" />
-            <element signature="e#653#654#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/circular_dependency/src/main/java/org/iproduct/spring/circular/CircularDependencyBeanB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/circular_dependency/src/main/java/org/iproduct/spring/circular/CircularDependencyBeanA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="12" column="50" lean-forward="true" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spel/src/main/java/org/iproduct/spring/spel/Article.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spel/src/main/java/org/iproduct/spring/spel/ArticleProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spel/src/main/java/org/iproduct/spring/spel/Car.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/service/ConsoleArticlePresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="28" column="63" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xmlconfig/src/main/resources/spring/app-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
-          <folding>
-            <marker date="1560950512082" expanded="true" signature="923:1072" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xmlconfig/src/main/java/org/iproduct/spring/xmlconfig/SpringXMLConfigFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="26" column="82" selection-start-line="26" selection-start-column="82" selection-end-line="26" selection-end-column="82" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/programmaticconfig/src/main/java/org/iproduct/spring/programmatic/MockArticleProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="33" column="49" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
-          <folding>
-            <element signature="e#653#670#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/programmaticconfig/src/main/resources/articles.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/programmaticconfig/src/main/java/org/iproduct/spring/programmatic/SpringProgrammaticConfigDI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aop/src/main/resources/META-INF/aop.xml.old">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="78" selection-start-line="4" selection-start-column="78" selection-end-line="4" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aop/gradle/wrapper/gradle-wrapper.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spel/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="27" column="61" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aop/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1716">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spel/src/main/java/org/iproduct/spring/spel/CircularDependencyBeanB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-          <folding>
-            <element signature="e#637#638#0" expanded="true" />
-            <element signature="e#671#672#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spel/src/main/java/org/iproduct/spring/spel/CircularDependencyBeanA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="e#643#644#0" expanded="true" />
-            <element signature="e#677#678#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spel/src/main/java/org/iproduct/spring/spel/MockArticleProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spel/src/main/java/org/iproduct/spring/spel/CarPark.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="e#332#333#0" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spel/src/main/java/org/iproduct/spring/spel/HelloWorldSpringAnnotated.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3348">
-          <caret line="124" column="53" selection-start-line="124" selection-start-column="53" selection-end-line="124" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5744#5753#0" expanded="true" />
-            <marker date="1561623328839" expanded="true" signature="1379:1504" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spel/src/main/java/org/iproduct/spring/spel/ConsoleArticlePresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/programmaticconfig/src/main/java/org/iproduct/spring/programmatic/SpringProgrammaticAnnotationConfigDI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="8" column="112" selection-start-line="8" selection-start-column="72" selection-end-line="8" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/programmaticconfig/src/main/java/org/iproduct/spring/programmatic/SpringProgrammaticAnnotationConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="28" column="47" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/AppConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/LoggingAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" column="64" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/service/MockArticleProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/MethodProfilerAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/EntityCreationPublishingAspect222.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="49" column="69" lean-forward="true" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/events/EntityCreationEventListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/UsageTracked.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/DefaultUsageTracked.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
-          <folding>
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#355#356#0" expanded="true" />
-            <element signature="e#402#403#0" expanded="true" />
-            <element signature="e#438#439#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/SystemArchitecture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/events/EntityCreationEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="57" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/UsageTracking.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="28" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aop/src/main/java/org/iproduct/spring/aop/MainApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>
