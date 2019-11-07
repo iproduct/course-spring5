@@ -1,6 +1,9 @@
 package coredemo.domain;
 
+import coredemo.qualifiers.Alternative;
+import coredemo.qualifiers.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -10,7 +13,9 @@ import java.util.List;
 @Service("presenter")
 public class ConsoleArticlePresenter implements ArticlePresenter {
     @Autowired
-    private List<ArticleProvider> providers;
+    @Mock
+//    @Qualifier("mock")
+    private ArticleProvider provider;
 
     public ConsoleArticlePresenter() {
     }
@@ -21,12 +26,11 @@ public class ConsoleArticlePresenter implements ArticlePresenter {
 
     @Override
     public void present() {
-        if(providers.size() == 0) {
-            System.out.println("No providers!!!");
-            return;
-        }
-        providers.stream()
-                .flatMap(prov -> prov.getArticles().stream())
+//        if(providers.size() == 0) {
+//            System.out.println("No providers!!!");
+//            return;
+//        }
+        provider.getArticles()
                 .forEach(System.out::println);
     }
 

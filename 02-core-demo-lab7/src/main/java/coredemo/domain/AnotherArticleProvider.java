@@ -1,7 +1,9 @@
 package coredemo.domain;
 
 import coredemo.model.Article;
+import coredemo.qualifiers.Alternative;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.PropertySource;
@@ -13,6 +15,8 @@ import java.util.List;
 
 @Repository("alternativeProvider")
 @PropertySource("articles.properties")
+@Alternative
+//@Qualifier("alternative")
 public class AnotherArticleProvider implements ArticleProvider {
     @Value("${numberOfArticles}")
     private int articleCount;

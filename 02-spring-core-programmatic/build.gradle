@@ -1,0 +1,17 @@
+group 'org.iproduct.spring'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url "https://repo.spring.io/release" }
+    maven { url "https://repo.spring.io/milestone" }
+}
+
+dependencies {
+    compile ('org.springframework:spring-context:5.1.5.RELEASE')
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
