@@ -2,45 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9dbef7e8-e77c-4e9b-901d-dc0f486437f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../01-webflux-demo-lab7/src/main/java/org/iproduct/webflux/config/SwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/qualifiers/Alternative.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/qualifiers/Mock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/AnnotationConfigDI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/domain/AnotherArticleProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/domain/ArticlePresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/domain/ArticleProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/domain/ConsoleArticlePresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/domain/MockArticleProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/domain/PresenterFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/model/Article.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/resources/articles.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/02-spring-core.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo/src/main/java/course/spring/restmvc/config/SwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo/src/main/java/course/spring/restmvc/dao/ArticlesRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo/src/main/java/course/spring/restmvc/domain/ArticleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo/src/main/java/course/spring/restmvc/domain/ArticlesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo/src/main/java/course/spring/restmvc/exception/NonexisitngEntityException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo/src/main/java/course/spring/restmvc/model/Article.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo/src/main/java/course/spring/restmvc/model/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo/src/main/java/course/spring/restmvc/web/ArticlesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patchdemo/.idea/modules/org.iproduct.spring.patchdemo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patchdemo/.idea/modules/org.iproduct.spring.patchdemo.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patchdemo/.idea/modules/org.iproduct.spring.patchdemo.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/domain/AnotherArticleProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/domain/AnotherArticleProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/domain/ConsoleArticlePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/domain/ConsoleArticlePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/domain/MockArticleProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/domain/MockArticleProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/02-spring-core.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo-lab7/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo-lab7/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo-lab7/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo-lab7/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo-lab7/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo-lab7/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo-lab7/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo-lab7/src/main/java/course/spring/restmvc/RestmvcDemoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo-lab7/src/main/java/course/spring/restmvc/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo-lab7/src/main/java/course/spring/restmvc/dao/ArticlesRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo-lab7/src/main/java/course/spring/restmvc/domain/ArticleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo-lab7/src/main/java/course/spring/restmvc/domain/ArticlesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo-lab7/src/main/java/course/spring/restmvc/exception/NonexisitngEntityException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo-lab7/src/main/java/course/spring/restmvc/model/Article.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo-lab7/src/main/java/course/spring/restmvc/model/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo-lab7/src/main/java/course/spring/restmvc/web/ArticlesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo-lab7/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-demo-lab7/src/test/java/course/spring/restmvc/RestmvcDemoApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-lab8/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-lab8/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-lab8/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-lab8/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-lab8/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-lab8/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-lab8/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-lab8/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-lab8/src/main/java/course/spring/restmvc/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-lab8/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-restmvc-lab8/src/test/java/course/spring/restmvc/ApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-restmvc-demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-restmvc-demo/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-restmvc-demo/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-restmvc-demo/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-restmvc-demo/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-restmvc-demo/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-restmvc-demo/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-restmvc-demo/src/main/java/course/spring/restmvc/RestmvcDemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-restmvc-demo/src/main/java/course/spring/restmvc/config/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-restmvc-demo/src/main/java/course/spring/restmvc/dao/ArticlesRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-restmvc-demo/src/main/java/course/spring/restmvc/domain/ArticleServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-restmvc-demo/src/main/java/course/spring/restmvc/domain/ArticlesService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-restmvc-demo/src/main/java/course/spring/restmvc/exception/NonexisitngEntityException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-restmvc-demo/src/main/java/course/spring/restmvc/model/Article.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-restmvc-demo/src/main/java/course/spring/restmvc/model/ErrorResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-restmvc-demo/src/main/java/course/spring/restmvc/web/ArticlesController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-restmvc-demo/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-restmvc-demo/src/test/java/course/spring/restmvc/RestmvcDemoApplicationTests.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,12 +98,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1THZjvbuNH6kqSIlXiU66e3APhH" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/xmlconfig" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../03-restmvc-demo-lab7" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -147,7 +160,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1573119119927</updated>
-      <workItem from="1573119121144" duration="379000" />
+      <workItem from="1573119121144" duration="535000" />
+      <workItem from="1573654324324" duration="1684000" />
     </task>
     <servers />
   </component>
@@ -159,10 +173,15 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
