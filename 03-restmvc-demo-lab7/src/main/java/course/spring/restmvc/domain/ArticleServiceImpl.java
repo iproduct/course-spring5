@@ -1,13 +1,18 @@
 package course.spring.restmvc.domain;
 
 import course.spring.restmvc.dao.ArticlesRepository;
+import course.spring.restmvc.exception.NonexisitngEntityException;
 import course.spring.restmvc.model.Article;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @Service
+@Slf4j
 public class ArticleServiceImpl implements ArticlesService {
     @Autowired
     private ArticlesRepository repo;
@@ -19,7 +24,8 @@ public class ArticleServiceImpl implements ArticlesService {
 
     @Override
     public Article findById(String articleId) {
-        return null;
+        return repo.findById(articleId).orElseThrow(() -> new NonexisitngEntityException(
+                String.format("Article with ID='%s' does not exist.", articleId)));
     }
 
     @Override
@@ -29,11 +35,25 @@ public class ArticleServiceImpl implements ArticlesService {
 
     @Override
     public Article update(Article article) {
-        return null;
+        Optional<Article> old = repo.findById(article.getId());
+        if (!old.isPresent()) {
+            throw new NonexisitngEntityException(
+                    String.format("Article with ID='%s' does not exist.", article.getId()));
+        }
+        article.setCreated(old.get().getCreated());
+        article.setModified(LocalDateTime.now());
+        return repo.save(article);
     }
 
     @Override
     public Article remove(String articleId) {
-        return null;
+        Optional<Article> old = repo.findById(articleId);
+        log.info("!!!!!! ArticleID = " + articleId);
+        if (!old.isPresent()) {
+            throw new NonexisitngEntityException(
+                    String.format("Article with ID='%s' does not exist.", articleId));
+        }
+        repo.deleteById(articleId);
+        return old.get();
     }
 }

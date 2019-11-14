@@ -1,6 +1,6 @@
 package course.spring.restmvc.exception;
 
-public class NonexisitngEntityException extends Exception {
+public class NonexisitngEntityException extends RuntimeException {
     public NonexisitngEntityException() {
     }
 
