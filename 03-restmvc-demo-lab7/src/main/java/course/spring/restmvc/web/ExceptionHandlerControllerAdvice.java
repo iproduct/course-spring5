@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-@ControllerAdvice("course.spring.restmvc.web")
+@ControllerAdvice(basePackageClasses = {course.spring.restmvc.web.ArticlesController.class})
 public class ExceptionHandlerControllerAdvice {
     @ExceptionHandler
     public ResponseEntity<ErrorResponse> handleExceptions(NonexisitngEntityException ex) {
