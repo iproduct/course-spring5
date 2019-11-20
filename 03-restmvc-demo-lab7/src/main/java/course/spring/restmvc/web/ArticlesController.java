@@ -2,20 +2,14 @@ package course.spring.restmvc.web;
 
 import course.spring.restmvc.domain.ArticlesService;
 import course.spring.restmvc.exception.InvalidEntityException;
-import course.spring.restmvc.exception.NonexisitngEntityException;
 import course.spring.restmvc.model.Article;
-import course.spring.restmvc.model.ErrorResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.Errors;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import org.springframework.web.util.UriBuilder;
-import org.springframework.web.util.UriComponentsBuilder;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.List;
 
@@ -36,16 +30,23 @@ public class ArticlesController {
     }
 
     @PostMapping
-    public ResponseEntity<Article> addArticle(@Valid @RequestBody Article article, Errors errors) {
+    public ResponseEntity<Article> addArticle(@Valid @RequestBody Article article, BindingResult bindingResult) {
+        if(bindingResult.hasFieldErrors()) {
+            String  message = bindingResult.getFieldErrors().stream()
+                    .map(err -> String.format("Invalid '%s' -> '%s': %s\n",
+                            err.getField(), err.getRejectedValue(), err.getDefaultMessage()))
+                    .reduce("", (acc, errStr) -> acc + errStr );
+            throw new InvalidEntityException(message);
+        }
         Article created = articlesService.add(article);
         return ResponseEntity.created(
-                MvcUriComponentsBuilder.fromMethodName(ArticlesController.class, "addArticle", Article.class)
-                    .pathSegment("{id}").build(created.getId()))
-                .body(created);
+//                MvcUriComponentsBuilder.fromMethodName(ArticlesController.class, "addArticle", Article.class)
+//                    .pathSegment("{id}").build(created.getId()))
+//                .body(created);
 //        2) uriBuilder.path(req.getServletPath()).pathSegment("{id}").build(created.getId()))
 //                .body(created);
-//        1) ServletUriComponentsBuilder.fromCurrentRequest().pathSegment("{id}").build(created.getId()))
-//                .body(created);
+          ServletUriComponentsBuilder.fromCurrentRequest().pathSegment("{id}").build(created.getId()))
+                .body(created);
     }
 
     @PutMapping("{id}")
