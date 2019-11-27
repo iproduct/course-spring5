@@ -13,7 +13,7 @@ import java.util.Optional;
 
 @Service
 @Slf4j
-public class ArticleServiceImpl implements ArticlesService {
+public class ArticlesServiceImpl implements ArticlesService {
     @Autowired
     private ArticlesRepository repo;
 
@@ -55,5 +55,10 @@ public class ArticleServiceImpl implements ArticlesService {
         }
         repo.deleteById(articleId);
         return old.get();
+    }
+
+    @Override
+    public long count() {
+        return repo.count();
     }
 }

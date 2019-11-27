@@ -10,4 +10,5 @@ public interface ArticlesService {
     Article add(Article article);
     Article update(Article article);
     Article remove(String articleId);
+    long count();
 }

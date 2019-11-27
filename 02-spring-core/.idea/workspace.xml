@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9dbef7e8-e77c-4e9b-901d-dc0f486437f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../03-restmvc-lab8/src/main/java/course/spring/restmvc/config/SwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-restmvc-lab8/src/main/java/course/spring/restmvc/dao/ArticlesRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-restmvc-lab8/src/main/java/course/spring/restmvc/domain/ArticlesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-restmvc-lab8/src/main/java/course/spring/restmvc/domain/ArticlesServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-restmvc-lab8/src/main/java/course/spring/restmvc/model/Article.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-restmvc-lab8/src/main/java/course/spring/restmvc/model/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-restmvc-lab8/src/main/java/course/spring/restmvc/web/ArticlesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-restmvc-lab8/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../03-restmvc-lab8/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-restmvc-lab8/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../03-restmvc-lab8/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06-webmvc-xmlconfig-lab/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../06-webmvc-xmlconfig-lab/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06-webmvc-xmlconfig-lab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../06-webmvc-xmlconfig-lab/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,6 +79,20 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration name="HelloWorldSpringAnnotated" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.iproduct.spring.spel.HelloWorldSpringAnnotated" />
+      <module name="spel.main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iproduct.spring.spel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -112,6 +115,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.HelloWorldSpringAnnotated" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -125,6 +133,7 @@
       <updated>1573119119927</updated>
       <workItem from="1573119121144" duration="535000" />
       <workItem from="1573654324324" duration="2061000" />
+      <workItem from="1574864702662" duration="362000" />
     </task>
     <servers />
   </component>
