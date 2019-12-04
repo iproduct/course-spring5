@@ -25,7 +25,7 @@ public class HelloWorldSpringAnnotated {
         mr.present();
 
         //SpEL test
-        SpelParserConfiguration config = new SpelParserConfiguration(SpelCompilerMode.IMMEDIATE, HelloWorldSpringAnnotated.class.getClassLoader());
+        SpelParserConfiguration config = new SpelParserConfiguration();//SpelCompilerMode.IMMEDIATE, HelloWorldSpringAnnotated.class.getClassLoader());
         ExpressionParser parser = new SpelExpressionParser(config);
 
         double value = parser.parseExpression("((42 div 5) % 3 + 1) * 10").getValue(Double.class);

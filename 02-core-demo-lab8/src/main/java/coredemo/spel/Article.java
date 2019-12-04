@@ -1,45 +1,21 @@
-package org.iproduct.spring.programmatic;
+package coredemo.spel;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
-
-import javax.annotation.PostConstruct;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-@Component
-@Scope("prototype")
-@PropertySource("articles.properties")
-public class Article {
-    private static int nextArticle = 0;
 
-    @Autowired
-    protected Environment env;
-
-    @Value("${articleTitles}")
-    private String[] articleTitles;
-
-    @Value("${numberOfArticles}")
-    private int numberOfTitles;
-
+class Article {
     private String title;
     private String content;
-    private LocalDateTime createdDate = LocalDateTime.now();
+    private LocalDateTime createdDate;
 
     public Article() {
-    }
-
-    @PostConstruct
-    public void init() {
-        title = articleTitles[nextArticle++ % numberOfTitles];
-        content = title + " content";
     }
 
     public Article(String title, String content) {
         this.title = title;
         this.content = content;
+        this.createdDate = LocalDateTime.now();
     }
 
     public Article(String title, String content, LocalDateTime createdDate) {
@@ -77,7 +53,7 @@ public class Article {
         if (this == o) return true;
         if (!(o instanceof Article)) return false;
         Article article = (Article) o;
-        return Objects.equals(title, article.title);
+        return  Objects.equals(title, article.title);
     }
 
     @Override

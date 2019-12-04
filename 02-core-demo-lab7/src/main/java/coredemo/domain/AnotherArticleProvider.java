@@ -33,4 +33,9 @@ public class AnotherArticleProvider implements ArticleProvider {
         }
         return articles;
     }
+
+    @Override
+    public Article addArticle(Article article) {
+        return null;
+    }
 }
