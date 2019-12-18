@@ -2,72 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="807ffab5-5f7a-4ae3-9523-bcd68be47063" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_annotation_javax_annotation_api_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_aspectj_aspectjrt_1_9_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_aspectj_aspectjweaver_1_9_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_projectlombok_lombok_1_18_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_simple_1_7_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_aop_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_aspects_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_beans_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_context_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_core_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_expression_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_jcl_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/core-demo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/core-demo_main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/core-demo_test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coredemo/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coredemo/aop/EntityCreationPublishingAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coredemo/aop/LoggingAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coredemo/aop/MethodProfilerAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coredemo/aop/SystemArchitecture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coredemo/events/EntityCreationEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/coredemo/events/EntityCreationEventListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/02-core-demo-lab8.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/spel/Article.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/spel/ArticlePresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/spel/ArticleProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/spel/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/spel/CarPark.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/spel/CircularDependencyBeanA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/spel/CircularDependencyBeanB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/spel/ConsoleArticlePresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/spel/Engine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/spel/MockArticleProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/spel/SpelDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-spring-core/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-spring-core/.idea/02-spring-core.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-spring-core/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coredemo/AnnotationSpringDI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coredemo/AnnotationSpringDI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coredemo/domain/AnotherArticleProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coredemo/domain/AnotherArticleProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coredemo/domain/ArticleProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coredemo/domain/ArticleProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coredemo/domain/MockArticleProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coredemo/domain/MockArticleProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-spring-core/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-spring-core/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-spring-core/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-spring-core/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-spring-core/.idea/modules/02-spring-core.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-spring-core/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-spring-core/annotationconfig/src/main/java/org/iproduct/spring/programmatic/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core/annotationconfig/src/main/java/org/iproduct/spring/programmatic/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-spring-core/spel/src/main/java/org/iproduct/spring/spel/HelloWorldSpringAnnotated.java" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core/spel/src/main/java/org/iproduct/spring/spel/HelloWorldSpringAnnotated.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +58,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/coredemo/aop" />
+    <property name="last_opened_file_path" value="D:/Pulsar/git/pulsar-demos/pulsar-basic-demo" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -229,7 +165,8 @@
       <updated>1572454318142</updated>
       <workItem from="1572454323969" duration="9509000" />
       <workItem from="1573051358782" duration="5445000" />
-      <workItem from="1575478559427" duration="4520000" />
+      <workItem from="1575478559427" duration="4522000" />
+      <workItem from="1576055101920" duration="33000" />
     </task>
     <servers />
   </component>
@@ -262,22 +199,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="597" y="451" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1575478942129" />
-    <state width="1877" height="674" key="GridCell.Tab.0.bottom" timestamp="1575482785940">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="634" y="219" key="FileChooserDialogImpl" timestamp="1576055132423">
+      <screen x="0" y="0" width="1707" height="920" />
     </state>
+    <state x="634" y="219" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1576055132423" />
+    <state width="1877" height="674" key="GridCell.Tab.0.bottom" timestamp="1575529678711">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1877" height="674" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1575529678711" />
     <state width="1877" height="674" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1575482785940" />
-    <state width="1877" height="674" key="GridCell.Tab.0.center" timestamp="1575482785940">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="674" key="GridCell.Tab.0.center" timestamp="1575529678711">
+      <screen x="0" y="0" width="1707" height="920" />
     </state>
+    <state width="1877" height="674" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1575529678711" />
     <state width="1877" height="674" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1575482785940" />
-    <state width="1877" height="674" key="GridCell.Tab.0.left" timestamp="1575482785939">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="674" key="GridCell.Tab.0.left" timestamp="1575529678711">
+      <screen x="0" y="0" width="1707" height="920" />
     </state>
+    <state width="1877" height="674" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1575529678710" />
     <state width="1877" height="674" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1575482785939" />
-    <state width="1877" height="674" key="GridCell.Tab.0.right" timestamp="1575482785940">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="674" key="GridCell.Tab.0.right" timestamp="1575529678711">
+      <screen x="0" y="0" width="1707" height="920" />
     </state>
+    <state width="1877" height="674" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1575529678711" />
     <state width="1877" height="674" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1575482785940" />
+    <state x="576" y="289" key="com.intellij.ide.util.TipDialog" timestamp="1576055102808">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="576" y="289" key="com.intellij.ide.util.TipDialog/0.0.1707.920@0.0.1707.920" timestamp="1576055102808" />
   </component>
   <component name="masterDetails">
     <states>

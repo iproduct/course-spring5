@@ -1,0 +1,31 @@
+h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.navbar-brand {
+    height: 60px;
+    padding-top: 5px;
+    padding-left: 30px;
+}
+
+.img-thumbnail {
+    width:80px;
+}
+
+/* Main menu */
+.navbar{
+    padding: 0.1rem 1rem;
+}
+
+.navbar-nav>.nav-item>.nav-link {
+    padding-right: .8rem;
+    padding-left: .8rem;
+}
+
+.search-form {
+    padding-right: 50px;
+}
+
+.menu-label {
+    padding-right: 0.8rem;
+}

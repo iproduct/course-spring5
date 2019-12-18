@@ -11,10 +11,6 @@
 	<c:url value="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" var="bootstrapCss" />
 	<link rel="stylesheet" type="text/css" href="${bootstrapCss}" />
 
-	<!--
-	<spring:url value="/css/main.css" var="springCss" />
-	<link href="${springCss}" rel="stylesheet" />
-	 -->
 	<c:url value="/resources/css/main.css" var="mainCss" />
 	<link href="${mainCss}" rel="stylesheet" />
 
