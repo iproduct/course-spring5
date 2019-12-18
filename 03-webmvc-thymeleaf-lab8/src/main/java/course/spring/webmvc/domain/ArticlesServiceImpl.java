@@ -1,9 +1,8 @@
 package course.spring.webmvc.domain;
 
 import course.spring.restmvc.exception.NonexisitngEntityException;
-import course.spring.restmvc.model.Article;
 import course.spring.webmvc.dao.ArticlesRepository;
-import course.spring.webmvc.domain.ArticlesService;
+import course.spring.webmvc.model.Article;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

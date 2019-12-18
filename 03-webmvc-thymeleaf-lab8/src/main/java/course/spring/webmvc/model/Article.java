@@ -1,4 +1,4 @@
-package course.spring.restmvc.model;
+package course.spring.webmvc.model;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;

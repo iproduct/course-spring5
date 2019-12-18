@@ -1,6 +1,7 @@
 package course.spring.webmvc.domain;
 
-import course.spring.restmvc.model.Article;
+
+import course.spring.webmvc.model.Article;
 
 import java.util.List;
 
