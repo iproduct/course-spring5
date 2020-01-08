@@ -24,6 +24,7 @@ import java.util.Optional;
 @Repository
 @Validated
 @Slf4j
+@Transactional
 public class UserRepositoryImpl implements UserRepository {
     public static final String INSERT_SQL =
             "INSERT INTO users(id, username, password, fname, lname, roles, active, created, updated) VALUES " +

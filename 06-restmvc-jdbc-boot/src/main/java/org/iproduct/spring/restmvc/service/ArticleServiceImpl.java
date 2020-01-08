@@ -58,6 +58,7 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
     public Article addArticle(@Valid Article article) {
         article.setCreated(LocalDateTime.now());
         return repo.insert(article);
