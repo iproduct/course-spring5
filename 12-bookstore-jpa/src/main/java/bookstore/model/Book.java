@@ -51,16 +51,16 @@ public class Book {
 //	@NonNull
 //	@NotNull
 	@ManyToOne
-	@JoinColumn(name = "publisher", referencedColumnName = "id")
+	@JoinColumn(name = "PUBLISHER_ID", referencedColumnName = "ID")
 	private Publisher publisher;
 	
 //	@NonNull
 //	@NotNull
 	@ManyToOne
-	@JoinColumn(name = "format", referencedColumnName = "id")
+	@JoinColumn(name = "FORMAT_ID", referencedColumnName = "ID")
 	private Format format; 
 	
-	@Column(name = "published_date")
+	@Column(name = "PUBLISHED_DATE")
 	@JsonFormat(pattern = "dd.MM.uuuu")
 	@PastOrPresent
 	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
