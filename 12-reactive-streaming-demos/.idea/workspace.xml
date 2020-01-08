@@ -2,54 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f7f8968-8f8b-4bb3-8491-8e2dd76e61f9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/src/main/java/org/iproduct/spring/webmvc/web/GreetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/src/main/java/org/iproduct/spring/webmvc/web/GreetingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04-webservice-lab6/src/main/java/course/spring/webservice/web/CountryEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../04-webservice-lab6/src/main/java/course/spring/webservice/web/CountryEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../07-restmvc-hibernate-boot/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../07-restmvc-hibernate-boot/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../07-restmvc-hibernate-boot/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../07-restmvc-hibernate-boot/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../07-restmvc-hibernate-boot/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../07-restmvc-hibernate-boot/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../07-restmvc-hibernate-boot/src/main/java/org/iproduct/spring/restmvc/dao/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../07-restmvc-hibernate-boot/src/main/java/org/iproduct/spring/restmvc/dao/ArticleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../07-restmvc-hibernate-boot/src/main/java/org/iproduct/spring/restmvc/dao/ArticleRepositoryHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../07-restmvc-hibernate-boot/src/main/java/org/iproduct/spring/restmvc/dao/ArticleRepositoryHibernate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../07-restmvc-hibernate-boot/src/main/java/org/iproduct/spring/restmvc/dao/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../07-restmvc-hibernate-boot/src/main/java/org/iproduct/spring/restmvc/dao/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../07-restmvc-hibernate-boot/src/main/java/org/iproduct/spring/restmvc/dao/UserRepositoryHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../07-restmvc-hibernate-boot/src/main/java/org/iproduct/spring/restmvc/dao/UserRepositoryHibernate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08-restmvc-jpa-boot/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../08-restmvc-jpa-boot/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08-restmvc-jpa-boot/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../08-restmvc-jpa-boot/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08-restmvc-jpa-boot/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../08-restmvc-jpa-boot/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/src/main/java/course/spring/webmvc/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/uploads/IMG_0330_m - Copy.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/src/main/java/course/spring/webmvc/model/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/src/main/java/course/spring/webmvc/model/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/src/main/java/course/spring/webmvc/web/ArticlesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/src/main/java/course/spring/webmvc/web/ArticlesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/src/main/resources/templates/fragments/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/src/main/resources/templates/fragments/menu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate-annotations/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate-annotations/src/main/resources/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/config/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/config/SpringSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/config/WebConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/dao/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/dao/ArticleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/dao/PermissionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/dao/PermissionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/dao/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/dao/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/dao/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/dao/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/model/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/model/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/model/Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/model/Permission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/security/RestSavedRequestAwareAuthenticationSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/security/RestSavedRequestAwareAuthenticationSuccessHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/service/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/service/ArticleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/service/PermissionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/service/PermissionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/service/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/service/RoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/PersistentDataHealthIndicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/PersistentDataHealthIndicator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/resource/ArticleResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/resource/ArticleResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/resource/ArticleResourceAssembler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/resource/ArticleResourceAssembler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/resource/UserResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/resource/UserResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/resource/UserResourceAssembler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/java/org/iproduct/spring/restmvc/web/resource/UserResourceAssembler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/test/java/org/iproduct/spring/restmvc/ArticlesAPITests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/test/java/org/iproduct/spring/restmvc/ArticlesAPITests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/test/java/org/iproduct/spring/restmvc/RestMvcApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/test/java/org/iproduct/spring/restmvc/RestMvcApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/test/java/org/iproduct/spring/restmvc/config/TestWebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/test/java/org/iproduct/spring/restmvc/config/TestWebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/12-reactive-streaming-demos_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/12-reactive-streaming-demos_main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/12-reactive-streaming-demos_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/12-reactive-streaming-demos_test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/.gradle/" />
-    <ignored path="$PROJECT_DIR$/build/" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,115 +27,8 @@
       <ProjectState />
     </projectState>
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/domain/Quote.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/configuration/WebConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/filters/ForwardingWebFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/handlers/ReactiveProfilerHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/handlers/ReactiveQuotesHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/services/Profiler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1320">
-              <caret line="74" column="17" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/client/ProfilerClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="52" selection-end-column="70" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/quotes.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1694">
-              <caret line="77" column="27" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/client/ProfilerClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/configuration/WebConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/filters/ForwardingWebFilter.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-      </list>
-    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="63" />
@@ -176,107 +36,26 @@
     <option name="width" value="1626" />
     <option name="height" value="1227" />
   </component>
+  <component name="ProjectId" id="1W7LMvQDUEVC2htzOxAOYm8zdWe" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="12-reactive-streaming-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="12-reactive-streaming-demos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="12-reactive-streaming-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="12-reactive-streaming-demos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="12-reactive-streaming-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="12-reactive-streaming-demos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="12-reactive-streaming-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="12-reactive-streaming-demos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="12-reactive-streaming-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="12-reactive-streaming-demos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="streamingdemos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="12-reactive-streaming-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="12-reactive-streaming-demos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="streamingdemos" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="12-reactive-streaming-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="12-reactive-streaming-demos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="streamingdemos" type="462c0819:PsiDirectoryNode" />
-              <item name="filters" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="12-reactive-streaming-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="12-reactive-streaming-demos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="12-reactive-streaming-demos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="12-reactive-streaming-demos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561472109311" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../11-webflux-users" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15728477" />
     <property name="project.structure.side.proportion" value="0.23772103" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.ProfilerClient">
+  <component name="RunManager" selected="Application.ReactiveStreamingDemosApp">
     <configuration name="ProfilerClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.iproduct.demos.spring.streamingdemos.client.ProfilerClient" />
       <module name="12-reactive-streaming-demos_main" />
@@ -326,6 +105,7 @@
       </method>
     </configuration>
     <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <properties />
       <listeners />
@@ -344,6 +124,18 @@
         <item itemvalue="Application.ProfilerClient" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -367,6 +159,7 @@
       <workItem from="1558567469991" duration="36000" />
       <workItem from="1561382306392" duration="1722000" />
       <workItem from="1561658590778" duration="31000" />
+      <workItem from="1578495643672" duration="821000" />
     </task>
     <task id="LOCAL-00001" summary="reactive webflux demo - user management with security added">
       <created>1527399441835</created>
@@ -378,49 +171,6 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12844000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1721" height="935" extended-state="6" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17519566" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.22818792" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Build" order="11" weight="0.2278954" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32962447" />
-      <window_info anchor="bottom" id="Spring" order="13" />
-      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
-      <window_info anchor="right" id="Maven" order="0" />
-      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Gradle" order="6" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Maven Projects" order="9" />
-      <window_info anchor="right" id="Mongo Explorer" order="10" />
-      <window_info anchor="right" id="Database" order="11" />
-      <window_info anchor="right" id="Bean Validation" order="12" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -428,115 +178,23 @@
     <MESSAGE value="reactive webflux demo - user management with security added" />
     <option name="LAST_COMMIT_MESSAGE" value="reactive webflux demo - user management with security added" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/domain/CpuLoad.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/javascripts/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="57" column="39" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/services/QuotesGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/ReactiveStreamingDemosApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="19" selection-start-line="19" selection-end-line="19" selection-end-column="14" />
-          <folding>
-            <element signature="e#1869#1870#0" expanded="true" />
-            <element signature="e#1945#1946#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/domain/Quote.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/configuration/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/filters/ForwardingWebFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/handlers/ReactiveProfilerHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/handlers/ReactiveQuotesHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/services/Profiler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="74" column="17" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/quotes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1694">
-          <caret line="77" column="27" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/demos/spring/streamingdemos/client/ProfilerClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="52" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state width="1663" height="159" key="GridCell.Tab.0.bottom" timestamp="1578496465016">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1663" height="159" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1578496465016" />
+    <state width="1663" height="159" key="GridCell.Tab.0.center" timestamp="1578496465016">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1663" height="159" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1578496465016" />
+    <state width="1663" height="159" key="GridCell.Tab.0.left" timestamp="1578496465016">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1663" height="159" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1578496465016" />
+    <state width="1663" height="159" key="GridCell.Tab.0.right" timestamp="1578496465016">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1663" height="159" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1578496465016" />
   </component>
   <component name="masterDetails">
     <states>

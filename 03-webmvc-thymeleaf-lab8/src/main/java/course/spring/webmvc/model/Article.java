@@ -3,6 +3,7 @@ package course.spring.webmvc.model;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -24,9 +25,10 @@ public class Article {
     @NonNull
     @Size(min= 10, max = 2048)
     private String content;
-    @Size(min= 5)
-    private String author;
+    private User author;
     private String pictureUrl;
+    @DateTimeFormat(iso=DateTimeFormat.ISO.DATE_TIME)
     private LocalDateTime created = LocalDateTime.now();
+    @DateTimeFormat(iso=DateTimeFormat.ISO.DATE_TIME)
     private LocalDateTime modified = LocalDateTime.now();
 }
