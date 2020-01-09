@@ -1,4 +1,4 @@
-<div th:fragment="menu(path, currentUserNames)" xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="menu(path, currentUserName)" xmlns:th="http://www.thymeleaf.org">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
             <img src="/img/logo.png" alt="IPT logo" />
@@ -14,19 +14,15 @@
                 </li>
                 <li th:class="${path == '/articles/article-form'}? 'nav-item active' : 'nav-item'">
                     <a class="nav-link" href="/articles/article-form">Add Article</a></li>
-                <li class="nav-item dropdown">
+                <li th:class="${path != null && #strings.startsWith(path,'/users')}? 'nav-item dropdown active' : 'nav-item dropdown'">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
+                        Users
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="/users">List Users</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="/users/user-form">Add User</a>
                     </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li>
             </ul>
             <form class="search-form form-inline">
@@ -43,13 +39,13 @@
                     </select>
                 </div>
             </form>
-            <div th:if="${loggedUserNames} != null" class="form-inline">
-                <div class="user-welcome">Welcome, <span th:text ="${currentUserNames}"></span>!</div>
+            <div th:if="${loggedUserName} != null" class="form-inline">
+                <div class="user-welcome">Welcome, <span th:text ="${currentUserName}"></span>!</div>
                 <a class="btn-logout btn btn-outline-secondary my-2 my-sm-0" href="/logout">
                     Logout
                 </a>
             </div>
-            <div th:if="${loggedUserNames} == null">
+            <div th:if="${loggedUserName} == null">
                 <a class="btn-login btn btn-outline-primary my-2 my-sm-0" href="/login">
                     Login
                 </a>

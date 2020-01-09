@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head('Add User')" />
+<body>
+    <div th:replace="fragments/menu :: menu(${path}, ${loggedUserName})" />
+    <div class="container">
+        <h3 th:text="${title}">Add New User</h3>
+        <form th:object="${user}" method="post"
+              class="form-horizontal col-md-9 col-lg-6" enctype="multipart/form-data">
+            <div th:if="${user.id} != null" class="form-group row">
+                <label path="id" class="col-sm-2 col-form-label">ID</label>
+                <div class="col-sm-10">
+                    <input type="text" th:value="*{id}" id="id" name="id"
+                           class="form-control" title="User Id" readonly>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label path="username" class="col-sm-2 col-form-label" th:text="#{lbl.username}"></label>
+                <div class="col-sm-10">
+                    <input type="text" th:value="*{username}" id="username" name="username"
+                       class="form-control" th:title="#{lbl.username}" th:errorclass="field-error" th:readonly="${user.id} != null">
+                </div>
+            </div>
+            <p th:if="${#fields.hasErrors('username')}" th:errors="*{username}"
+               class="errors alert alert-danger offset-sm-2 col-sm-10">
+                Incorrect username
+            </p>
+
+            <div class="form-group row">
+                <label path="password" class="col-sm-2 col-form-label" th:text="#{lbl.password}"></label>
+                <div class="col-sm-10">
+                    <input type="text" th:value="*{password}" id="password" name="password"
+                           class="form-control" th:title="#{lbl.password}" th:errorclass="field-error">
+                </div>
+            </div>
+            <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}"
+               class="errors alert alert-danger offset-sm-2 col-sm-10">
+                Incorrect password
+            </p>
+
+            <div class="form-group row">
+                <label path="firstName" class="col-sm-2 col-form-label" th:text="#{lbl.firstName}"></label>
+                <div class="col-sm-10">
+                    <input type="text" th:value="*{firstName}" id="firstName" name="firstName"
+                           class="form-control" th:title="#{lbl.firstName}" th:errorclass="field-error">
+                </div>
+            </div>
+            <p th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"
+               class="errors alert alert-danger offset-sm-2 col-sm-10">
+                Incorrect first name
+            </p>
+
+            <div class="form-group row">
+                <label path="lastName" class="col-sm-2 col-form-label" th:text="#{lbl.lastName}"></label>
+                <div class="col-sm-10">
+                    <input type="text" th:value="*{lastName}" id="lastName" name="lastName"
+                           class="form-control" th:title="#{lbl.lastName}" th:errorclass="field-error">
+                </div>
+            </div>
+            <p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"
+               class="errors alert alert-danger offset-sm-2 col-sm-10">
+                Incorrect last name
+            </p>
+
+            <div class="form-group row">
+                <label path="roles" class="col-sm-2 col-form-label" th:text="#{lbl.roles}"></label>
+                <div class="col-sm-10">
+                    <input type="text" th:value="*{roles}" id="roles" name="roles"
+                           class="form-control" th:title="#{lbl.roles}" th:errorclass="field-error">
+                </div>
+            </div>
+            <p th:if="${#fields.hasErrors('roles')}" th:errors="*{roles}"
+               class="errors alert alert-danger offset-sm-2 col-sm-10">
+                Incorrect roles
+            </p>
+
+            <div class="form-group row">
+                <label path="active" class="col-sm-2 col-form-label" th:text="#{lbl.active}"></label>
+                <div class="col-sm-10">
+                    <input type="text" th:value="*{active}" id="active" name="active"
+                           class="form-control" th:title="#{lbl.active}" th:errorclass="field-error">
+                </div>
+            </div>
+            <p th:if="${#fields.hasErrors('active')}" th:errors="*{active}"
+               class="errors alert alert-danger offset-sm-2 col-sm-10">
+                Incorrect active status
+            </p>
+
+            <input type="hidden" th:value="*{pictureUrl}" id="pictureUrl" name="pictureUrl" title="User picture URL">
+            <input type="hidden" th:value="*{created}" id="created" name="created" title="User creation date and time">
+            <input type="hidden" th:value="*{modified}" id="modified" name="modified" title="User last modification date and time">
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Picture</label>
+                <div class="col-sm-10">
+                    <div class="custom-file">
+                        <input type="file" id="file" name="file" class="custom-file-input" th:value="*{pictureUrl}">
+                        <label th:text="${#strings.isEmpty(user.pictureUrl)}? 'Choose file' : *{pictureUrl}" class="custom-file-label" for="file">Choose picture file</label>
+                    </div>
+                </div>
+            </div>
+            <p th:if="${fileError != null}" class="errors alert alert-danger offset-sm-2 col-sm-10">
+                <span th:text="${fileError}"></span>
+            </p>
+
+            <div class="form-group row">
+                <div class="offset-sm-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary" id="submit" name="submit" value="submit">Submit</button>
+                    <button type="reset" class="btn btn-danger">Reset</button>
+                    <a th:href="${'/users'}" class="btn btn-secondary" id="cancel">Cancel</a>
+                </div>
+            </div>
+
+            <!--<div class="col-xs-12 alert alert-danger" th:if="${myErrors != null}">-->
+                <!--<p>Validation errors: </p>-->
+                <!--<ul th:each="error: ${myErrors}">-->
+                    <!--&lt;!&ndash;/*@thymesVar id="error" type=""*/&ndash;&gt;-->
+                    <!--<li th:text="${error}"></li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        </form>
+        <div  th:replace="fragments/foot :: foot" />
+    </div>
+
+</body>
+</html>

@@ -5,6 +5,7 @@ import lombok.*;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -30,9 +31,7 @@ public class User implements UserDetails {
     @NotNull
     @Length(min = 3, max = 16)
     private String username;
-    @NonNull
-    @NotNull
-    @Pattern(regexp = "((?=.*[a-z])(?=.*d)(?=.*[@#$%])(?=.*[A-Z]).{6,16})")
+    @Pattern(regexp = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{6,}$")
     @JsonProperty(access = WRITE_ONLY)
     private String password;
     @NonNull
@@ -45,8 +44,11 @@ public class User implements UserDetails {
     private String lastName;
     private String roles;
     private boolean active = true;
+    @DateTimeFormat(iso=DateTimeFormat.ISO.DATE_TIME)
     private LocalDateTime created = LocalDateTime.now();
+    @DateTimeFormat(iso=DateTimeFormat.ISO.DATE_TIME)
     private LocalDateTime modified = LocalDateTime.now();
+    private String pictureUrl;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -77,5 +79,8 @@ public class User implements UserDetails {
 
     public String getFullName() {
         return getFirstName() + " " + getLastName();
+    }
+    public boolean isInRole(String role) {
+        return roles.contains("ROLE_" + role);
     }
 }

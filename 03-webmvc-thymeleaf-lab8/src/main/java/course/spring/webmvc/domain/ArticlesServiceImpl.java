@@ -3,9 +3,16 @@ package course.spring.webmvc.domain;
 import course.spring.restmvc.exception.NonexisitngEntityException;
 import course.spring.webmvc.dao.ArticlesRepository;
 import course.spring.webmvc.dao.UsersRepository;
+import course.spring.webmvc.exception.UnauthorisedModificationException;
 import course.spring.webmvc.model.Article;
+import course.spring.webmvc.model.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.actuate.endpoint.SecurityContext;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -36,26 +43,31 @@ public class ArticlesServiceImpl implements ArticlesService {
     }
 
     @Override
+    @PreAuthorize("(#article.authorId == authentication.principal.id) or hasRole('ADMIN')")
     public Article update(Article article) {
-        Optional<Article> old = articlesRepository.findById(article.getId());
-        if (!old.isPresent()) {
-            throw new NonexisitngEntityException(
-                    String.format("Article with ID='%s' does not exist.", article.getId()));
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        User user = (User) authentication.getPrincipal();
+        Article old = findById(article.getId());
+        if(user == null ||
+                (!authentication.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_ADMIN")) && !old.getAuthorId().equals(user.getId())) ) {
+            throw new UnauthorisedModificationException("You have no permissions to edit article: " + old.getTitle());
         }
-        article.setCreated(old.get().getCreated());
+        article.setCreated(old.getCreated());
         article.setModified(LocalDateTime.now());
         return articlesRepository.save(article);
     }
 
     @Override
     public Article remove(String articleId) {
-        Optional<Article> old = articlesRepository.findById(articleId);
-        if (!old.isPresent()) {
-            throw new NonexisitngEntityException(
-                    String.format("Article with ID='%s' does not exist.", articleId));
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        User user = (User) authentication.getPrincipal();
+        Article old = findById(articleId);
+        if(user == null ||
+                (!authentication.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_ADMIN")) && !old.getAuthorId().equals(user.getId())) ) {
+            throw new UnauthorisedModificationException("You have no permissions to delete article: " + old.getTitle());
         }
         articlesRepository.deleteById(articleId);
-        return old.get();
+        return old;
     }
 
     @Override

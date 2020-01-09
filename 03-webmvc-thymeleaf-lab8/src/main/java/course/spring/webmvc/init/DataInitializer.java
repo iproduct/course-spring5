@@ -27,7 +27,7 @@ public class DataInitializer implements ApplicationRunner {
         log.info("Initializing application...");
         if (usersService.count() == 0) {
             User user = new User(null,"admin", "admin123&", "Admin", "Admin", "ROLE_ADMIN",
-                    true, LocalDateTime.now(), LocalDateTime.now());
+                    true, LocalDateTime.now(), LocalDateTime.now(), "/img/avatar.png");
             log.info("Creating root admin user: {}", user.getUsername());
             user = usersService.add(user);
         }

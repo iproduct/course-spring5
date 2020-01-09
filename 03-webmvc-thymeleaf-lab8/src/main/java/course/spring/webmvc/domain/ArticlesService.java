@@ -10,6 +10,6 @@ public interface ArticlesService {
     Article findById(String articleId);
     Article add(Article article);
     Article update(Article article);
-    Article remove(String articleId);
+    Article remove(String article);
     long count();
 }
