@@ -28,8 +28,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/actuator/info").permitAll()
                 .antMatchers("/actuator/health").permitAll()
-                .antMatchers("/v2/api-docs").permitAll()
-                .antMatchers("/swagger*/**").permitAll()
+                .antMatchers(HttpMethod.GET, "/articles").permitAll()
                 .antMatchers(HttpMethod.GET, "/articles/**", "/user/**").authenticated()
                 .antMatchers(HttpMethod.POST, "/**").hasAnyRole("AUTHOR", "ADMIN")
                 .antMatchers(HttpMethod.PUT).hasAnyRole("AUTHOR", "ADMIN")
@@ -44,7 +43,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .deleteCookies("JSESSIONID")
                     .clearAuthentication(true)
                     .invalidateHttpSession(true)
-                    .logoutUrl("/logout");
+                    .logoutUrl("/logout")
+                    .logoutSuccessUrl("/");
 //                .and()
 //                    .rememberMe();
     }

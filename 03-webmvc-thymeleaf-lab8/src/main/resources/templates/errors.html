@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/head :: head('Articles List')" />
 <body>
-    <div th:replace="fragments/menu :: menu(${''})" />
+    <div th:replace="fragments/menu :: menu(${''}, ${loggedUserNames})" />
     <div class="container">
         <!--/*@thymesVar id="message" type="String"*/-->
         <div class="alert alert-danger" th:text="${message}"></div>

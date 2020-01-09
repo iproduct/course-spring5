@@ -2,6 +2,7 @@ package course.spring.webmvc.domain;
 
 import course.spring.restmvc.exception.NonexisitngEntityException;
 import course.spring.webmvc.dao.ArticlesRepository;
+import course.spring.webmvc.dao.UsersRepository;
 import course.spring.webmvc.model.Article;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,50 +16,50 @@ import java.util.Optional;
 @Slf4j
 public class ArticlesServiceImpl implements ArticlesService {
     @Autowired
-    private ArticlesRepository repo;
+    private ArticlesRepository articlesRepository;
+    private UsersRepository usersRepository;
 
     @Override
     public List<Article> findAll() {
-        return repo.findAll();
+        return articlesRepository.findAll();
     }
 
     @Override
     public Article findById(String articleId) {
-        return repo.findById(articleId).orElseThrow(() -> new NonexisitngEntityException(
+        return articlesRepository.findById(articleId).orElseThrow(() -> new NonexisitngEntityException(
                 String.format("Article with ID='%s' does not exist.", articleId)));
     }
 
     @Override
     public Article add(Article article) {
-        return repo.insert(article);
+        return articlesRepository.insert(article);
     }
 
     @Override
     public Article update(Article article) {
-        Optional<Article> old = repo.findById(article.getId());
+        Optional<Article> old = articlesRepository.findById(article.getId());
         if (!old.isPresent()) {
             throw new NonexisitngEntityException(
                     String.format("Article with ID='%s' does not exist.", article.getId()));
         }
         article.setCreated(old.get().getCreated());
         article.setModified(LocalDateTime.now());
-        return repo.save(article);
+        return articlesRepository.save(article);
     }
 
     @Override
     public Article remove(String articleId) {
-        Optional<Article> old = repo.findById(articleId);
-        log.info("!!!!!! ArticleID = " + articleId);
+        Optional<Article> old = articlesRepository.findById(articleId);
         if (!old.isPresent()) {
             throw new NonexisitngEntityException(
                     String.format("Article with ID='%s' does not exist.", articleId));
         }
-        repo.deleteById(articleId);
+        articlesRepository.deleteById(articleId);
         return old.get();
     }
 
     @Override
     public long count() {
-        return repo.count();
+        return articlesRepository.count();
     }
 }

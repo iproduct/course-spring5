@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/head :: head('Add Article')" />
 <body>
-    <div th:replace="fragments/menu :: menu(${path})" />
+    <div th:replace="fragments/menu :: menu(${path}, ${loggedUserNames})" />
     <div class="container">
         <h3 th:text="${title}">Add New Article</h3>
         <form th:object="${article}" method="post"

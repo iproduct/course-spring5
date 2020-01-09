@@ -1,4 +1,4 @@
-<div th:fragment="menu(path)" xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="menu(path, currentUserNames)" xmlns:th="http://www.thymeleaf.org">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
             <img src="/img/logo.png" alt="IPT logo" />
@@ -9,10 +9,10 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item" th:class="${path == 'articles'}? 'nav-item active' : 'nav-item'">
+                <li th:class="${path == 'articles'}? 'nav-item active' : 'nav-item'">
                     <a class="nav-link" href="/articles">Articles</a>
                 </li>
-                <li class="nav-item" th:class="${path == '/articles/article-form'}? 'nav-item active' : 'nav-item'">
+                <li th:class="${path == '/articles/article-form'}? 'nav-item active' : 'nav-item'">
                     <a class="nav-link" href="/articles/article-form">Add Article</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -33,6 +33,7 @@
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
+
             <form class="language-form form-inline my-2 my-lg-0">
                 <div class="form-group language-selector">
                     <label for="locales" class="menu-label col-form-label">Language</label>
@@ -42,6 +43,18 @@
                     </select>
                 </div>
             </form>
+            <div th:if="${loggedUserNames} != null" class="form-inline">
+                <div class="user-welcome">Welcome, <span th:text ="${currentUserNames}"></span>!</div>
+                <a class="btn-logout btn btn-outline-secondary my-2 my-sm-0" href="/logout">
+                    Logout
+                </a>
+            </div>
+            <div th:if="${loggedUserNames} == null">
+                <a class="btn-login btn btn-outline-primary my-2 my-sm-0" href="/login">
+                    Login
+                </a>
+            </div>
+
         </div>
     </nav>
 </div>

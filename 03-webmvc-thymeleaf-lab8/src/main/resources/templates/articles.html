@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/head :: head('Articles List')" />
 <body>
-    <div th:replace="fragments/menu :: menu(${path})" />
+    <div th:replace="fragments/menu :: menu(${path}, ${loggedUserNames})" />
     <div class="container">
         <h3>Articles List</h3>
         <table class="article-table table table-striped">
@@ -10,6 +10,7 @@
             <th th:text="#{lbl.number}">Number</th>
             <th th:text="#{lbl.title}">Title</th>
             <th th:text="#{lbl.content}">Content</th>
+            <th th:text="#{lbl.author}">Author</th>
             <th th:text="#{lbl.created}">Created</th>
             <th th:text="#{lbl.modified}">Modified</th>
             <th th:text="#{lbl.picture}">Picture</th>
@@ -20,6 +21,7 @@
                 <td th:text="${rowStat.index + 1}"></td>
                 <td th:text="${row.title}"></td>
                 <td th:text="${row.content}"></td>
+                <td th:text="${row.authorName}"></td>
                 <td th:text="${row.created}"></td>
                 <td th:text="${row.modified}"></td>
                 <td>
@@ -27,7 +29,7 @@
                         th:data-image-url="${'/uploads/' + row.pictureUrl}"
                         th:data-image-title="${row.title}">
                         <img class="img-thumbnail" th:if="${row.pictureUrl != null}"
-                         th:src="${'/uploads/' + row.pictureUrl}">
+                            th:src="${'/uploads/' + row.pictureUrl}">
                     </a>
                 </td>
                 <td>

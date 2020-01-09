@@ -7,6 +7,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 
@@ -25,7 +26,11 @@ public class Article {
     @NonNull
     @Size(min= 10, max = 2048)
     private String content;
-    private User author;
+    @NonNull
+    @Pattern(regexp = "[0-9a-d]{24}")
+    private String authorId;
+    @NonNull
+    private String authorName;
     private String pictureUrl;
     @DateTimeFormat(iso=DateTimeFormat.ISO.DATE_TIME)
     private LocalDateTime created = LocalDateTime.now();

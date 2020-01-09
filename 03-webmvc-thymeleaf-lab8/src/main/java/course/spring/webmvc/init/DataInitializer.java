@@ -25,16 +25,11 @@ public class DataInitializer implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         log.info("Initializing application...");
-        if (articlesService.count() == 0) {
-            Article article = new Article("Article 1", "Article 1 content ...");
-            log.info("Creating new articles: {}", article);
-            articlesService.add(article);
-        }
         if (usersService.count() == 0) {
             User user = new User(null,"admin", "admin123&", "Admin", "Admin", "ROLE_ADMIN",
                     true, LocalDateTime.now(), LocalDateTime.now());
             log.info("Creating root admin user: {}", user.getUsername());
-            usersService.add(user);
+            user = usersService.add(user);
         }
     }
 
