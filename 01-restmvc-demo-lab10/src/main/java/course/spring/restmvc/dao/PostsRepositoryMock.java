@@ -1,13 +1,18 @@
 package course.spring.restmvc.dao;
 
 import course.spring.restmvc.model.Post;
+import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicLong;
 
+@Repository
 public class PostsRepositoryMock implements PostsRepository{
+    private AtomicLong nextId = new AtomicLong(0L);
     private Map<Long, Post> posts = new ConcurrentHashMap<>();
 
     public PostsRepositoryMock() {
@@ -20,7 +25,7 @@ public class PostsRepositoryMock implements PostsRepository{
 
     @Override
     public List<Post> findAll() {
-        return null;
+        return new ArrayList<>(posts.values());
     }
 
     @Override
@@ -30,7 +35,9 @@ public class PostsRepositoryMock implements PostsRepository{
 
     @Override
     public Post create(Post post) {
-        return null;
+        post.setId(nextId.incrementAndGet());
+        posts.put(post.getId(), post);
+        return post;
     }
 
     @Override
