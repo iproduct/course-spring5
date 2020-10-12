@@ -2,6 +2,9 @@ package course.spring.restmvc.web;
 
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
+import java.util.Enumeration;
+
 
 @RestController
 public class HelloMVC {
@@ -23,11 +26,14 @@ public class HelloMVC {
             @PathVariable long userId,
             @MatrixVariable(name = "mode", pathVar = "userId", defaultValue = "present") String userMode,
             @PathVariable long postId,
-            @MatrixVariable(name = "mode", pathVar = "postId", defaultValue = "present") String postMode){
-        return String.format("User: %d in mode: %s, Post: %d in mode: %s.", userId, userMode, postId, postMode);
+            @MatrixVariable(name = "mode", pathVar = "postId", defaultValue = "test") String postMode,
+            @CookieValue(name="JSESSIONID", defaultValue = "none") String cookie,
+            @RequestHeader("Accept") String accept,
+            HttpSession  session){
+        Enumeration<String> attributes = session.getAttributeNames();
+        session.invalidate();
+        return String.format("User: %d in mode: %s, Post: %d in mode: %s.<br>JSESSIONID=%s<br>Accept: %s",
+                userId, userMode, postId, postMode, cookie, accept);
     }
-
-
-
 
 }
