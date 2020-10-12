@@ -29,6 +29,9 @@ public class ArticleDaoHibernate implements ArticleDao {
     }
 
     @Autowired
+    private EntityManager em ;
+
+    @Autowired
     public void setTransactionManager(PlatformTransactionManager transactionManager) {
         this.transactionTemplate = new TransactionTemplate(transactionManager);
     }

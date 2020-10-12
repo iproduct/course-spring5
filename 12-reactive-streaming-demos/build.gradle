@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '2.1.6.RELEASE'
+		springBootVersion = '2.3.4.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -26,7 +26,7 @@ idea {
 
 group = 'org.iproduct.demos.spring'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 10
+sourceCompatibility = 13
 
 //moduleName = 'org.iproduct.demos.spring.reactivequotes'
 //
@@ -67,6 +67,7 @@ configurations.all {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-actuator')
 	compile('org.springframework.boot:spring-boot-starter-webflux')
+	compile group: 'org.hibernate', name: 'hibernate-validator', version: '6.1.6.Final'
 //	compile('org.springframework.boot:spring-boot-starter-websocket')
 //	compile("org.springframework.boot:spring-boot-starter-data-mongodb")
 //	compile('org.springframework.boot:spring-boot-starter-data-mongodb-reactive')

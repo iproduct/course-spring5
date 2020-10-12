@@ -1,11 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="7932b777-0c9a-482c-98d4-2415cfb29926" name="Default Changelist" comment="" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/.gradle/" />
-    <ignored path="$PROJECT_DIR$/build/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="7932b777-0c9a-482c-98d4-2415cfb29926" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../02-spring-core-lab4/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core-lab4/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-spring-core-lab4/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core-lab4/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-spring-core-lab4/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core-lab4/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-spring-core-lab4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core-lab4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-spring-core-programmatic/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core-programmatic/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-spring-core-programmatic/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core-programmatic/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-spring-core-programmatic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core-programmatic/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/src/main/java/course/spring/webmvc/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/uploads/IMG_0330_m - Copy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/uploads/controller_middle.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-restmvc-hibernate-boot/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../07-restmvc-hibernate-boot/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-restmvc-hibernate-boot/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../07-restmvc-hibernate-boot/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-webmvc-forms-files-thymeleaf/src/main/resources/templates/fragments/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/../07-webmvc-forms-files-thymeleaf/src/main/resources/templates/fragments/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate-annotations/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate-annotations/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate-annotations/src/main/java/org/iproduct/spring/webmvc/dao/ArticleDaoHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate-annotations/src/main/java/org/iproduct/spring/webmvc/dao/ArticleDaoHibernate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11-webflux-demo-lab3/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../11-webflux-demo-lab3/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11-webflux-demo-lab3/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../11-webflux-demo-lab3/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-bookstore-jpa/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../12-bookstore-jpa/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__com_fasterxml_classmate_1_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_core_2_9_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_databind_2_9_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__io_micrometer_micrometer_core_1_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__io_netty_netty_buffer_4_1_36_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__io_netty_netty_codec_4_1_36_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__io_netty_netty_codec_http2_4_1_36_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__io_netty_netty_codec_http_4_1_36_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__io_netty_netty_codec_socks_4_1_36_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__io_netty_netty_common_4_1_36_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__io_netty_netty_handler_4_1_36_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__io_netty_netty_handler_proxy_4_1_36_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__io_netty_netty_resolver_4_1_36_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__io_netty_netty_transport_4_1_36_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__io_netty_netty_transport_native_epoll_linux_x86_64_4_1_36_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__io_netty_netty_transport_native_unix_common_4_1_36_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__io_projectreactor_netty_reactor_netty_0_8_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__io_projectreactor_reactor_core_3_2_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__io_projectreactor_reactor_test_3_2_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__javax_annotation_javax_annotation_api_1_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__javax_validation_validation_api_2_0_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__net_bytebuddy_byte_buddy_1_9_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__net_bytebuddy_byte_buddy_agent_1_9_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_apache_logging_log4j_log4j_api_2_11_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_apache_logging_log4j_log4j_to_slf4j_2_11_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_assertj_assertj_core_3_11_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_glassfish_javax_el_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_hdrhistogram_HdrHistogram_2_1_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_hibernate_validator_hibernate_validator_6_0_17_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_jboss_logging_jboss_logging_3_3_2_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_mockito_mockito_core_2_23_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_reactivestreams_reactive_streams_1_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_slf4j_jcl_over_slf4j_1_7_26.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_slf4j_jul_to_slf4j_1_7_26.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_26.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_boot_spring_boot_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_boot_spring_boot_actuator_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_boot_spring_boot_actuator_autoconfigure_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_boot_spring_boot_autoconfigure_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_boot_spring_boot_devtools_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_actuator_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_json_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_logging_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_reactor_netty_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_test_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_webflux_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_boot_spring_boot_test_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_boot_spring_boot_test_autoconfigure_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_restdocs_spring_restdocs_core_2_0_3_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_restdocs_spring_restdocs_mockmvc_2_0_3_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_security_spring_security_core_5_1_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_security_spring_security_test_5_1_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_security_spring_security_web_5_1_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_spring_aop_5_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_spring_beans_5_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_spring_context_5_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_spring_core_5_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_spring_expression_5_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_spring_jcl_5_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_spring_test_5_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_spring_web_5_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_spring_webflux_5_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_springframework_spring_webmvc_5_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_xmlunit_xmlunit_core_2_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/libraries/Gradle__org_yaml_snakeyaml_1_23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/modules/12-reactive-streaming-demos_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/modules/12-reactive-streaming-demos_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/12-reactive-streaming-demos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../12-reactive-streaming-demos/12-reactive-streaming-demos.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../12-reactive-streaming-demos/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/java/org/iproduct/spring/streamingdemoslab4/client/QuotesClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/java/org/iproduct/spring/streamingdemoslab4/client/QuotesClient.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,105 +119,6 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/spring/comments/Comment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/comments.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="30" selection-start-column="30" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/emails.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="22" selection-start-column="22" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/spring/comments/CommentsService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="37" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/spring/comments/CommentsServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/spring/comments/CommentsLoggerService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/spring/comments/CommentsConsoleLoggerImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#504#505#0" expanded="true" />
-                <element signature="e#574#575#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/spring/comments/CommentsDemoAnnotationDI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -126,20 +131,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/iproduct/spring/comments/CommentsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/iproduct/spring/comments/CommentsServiceImpl.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/resources/comments.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/emails.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/org/iproduct/spring/comments/Comment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/iproduct/spring/comments/CommentsLoggerService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/iproduct/spring/comments/CommentsConsoleLoggerImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/iproduct/spring/comments/CommentsDemoAnnotationDI.java" />
-      </list>
-    </option>
+  <component name="KotlinMultiplatform">
+    <executables />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="99" />
@@ -147,58 +140,19 @@
     <option name="width" value="1401" />
     <option name="height" value="822" />
   </component>
+  <component name="ProjectId" id="1ilUgWcojZpvUH7ss93qeFHnoeR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="02-api-comments" type="b2602c69:ProjectViewProjectNode" />
-              <item name="02-spring-core-problem-comments" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="02-api-comments" type="b2602c69:ProjectViewProjectNode" />
-              <item name="02-spring-core-problem-comments" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="02-api-comments" type="b2602c69:ProjectViewProjectNode" />
-              <item name="02-spring-core-problem-comments" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="02-api-comments" type="b2602c69:ProjectViewProjectNode" />
-              <item name="02-spring-core-problem-comments" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="02-api-comments" type="b2602c69:ProjectViewProjectNode" />
-              <item name="02-spring-core-problem-comments" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="comments" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550411520005" />
-    <property name="last_opened_file_path" value="D:/CourseNodeExpressReact/workspace/react-todos" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../CourseNodeExpressReact/workspace/react-todos" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -210,18 +164,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\CourseSpring\git\course-spring5\02-api-comments\src\main\resources" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="CommentsDemoAnnotationDI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -252,6 +194,7 @@
       </method>
     </configuration>
     <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <properties />
       <listeners />
@@ -265,6 +208,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -281,166 +225,12 @@
       <workItem from="1540389174969" duration="1987000" />
       <workItem from="1550411504187" duration="27000" />
       <workItem from="1550678674062" duration="22000" />
+      <workItem from="1602481785143" duration="644000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11132000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1721" height="935" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24081878" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4996968" weight="0.9626401" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.32904884" />
-      <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.14209591" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003032" side_tool="true" weight="0.32904884" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32904884" />
-      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Gradle" order="6" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Mongo Explorer" order="10" />
-      <window_info anchor="right" id="Maven" order="11" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24129555" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4996968" weight="0.96447605" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.32904884" />
-      <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.14209591" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003032" side_tool="true" weight="0.32904884" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32904884" />
-      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Gradle" order="6" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Mongo Explorer" order="10" />
-    </layout-to-restore>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/spring/comments/Comment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/comments.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="30" selection-start-column="30" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/emails.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" selection-start-column="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/spring/comments/CommentsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="37" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/spring/comments/CommentsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/spring/comments/CommentsLoggerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/spring/comments/CommentsConsoleLoggerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#504#505#0" expanded="true" />
-            <element signature="e#574#575#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/iproduct/spring/comments/CommentsDemoAnnotationDI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <option name="version" value="3" />
   </component>
   <component name="masterDetails">
     <states>

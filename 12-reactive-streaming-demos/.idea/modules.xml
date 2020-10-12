@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/12-reactive-streaming-demos.iml" filepath="$PROJECT_DIR$/12-reactive-streaming-demos.iml" group="12-reactive-streaming-demos" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/12-reactive-streaming-demos_main.iml" filepath="$PROJECT_DIR$/.idea/modules/12-reactive-streaming-demos_main.iml" group="12-reactive-streaming-demos" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/12-reactive-streaming-demos_test.iml" filepath="$PROJECT_DIR$/.idea/modules/12-reactive-streaming-demos_test.iml" group="12-reactive-streaming-demos" />
+      <module fileurl="file://$PROJECT_DIR$/12-reactive-streaming-demos.iml" filepath="$PROJECT_DIR$/12-reactive-streaming-demos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/12-reactive-streaming-demos.main.iml" filepath="$PROJECT_DIR$/.idea/modules/12-reactive-streaming-demos.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/12-reactive-streaming-demos.test.iml" filepath="$PROJECT_DIR$/.idea/modules/12-reactive-streaming-demos.test.iml" />
     </modules>
   </component>
 </project>

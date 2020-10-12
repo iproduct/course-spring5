@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item" th:class="${path == 'articles'}? 'nav-item active' : 'nav-item'">
-                    <a class="nav-link" href="/articles">Articles</a>
+                    <a class="nav-link" th:href="@{/articles}">Articles</a>
                 </li>
                 <li class="nav-item" th:class="${path == 'article-form'}? 'nav-item active' : 'nav-item'">
                     <a class="nav-link" href="/articles/article-form">Add Article</a></li>

@@ -33,6 +33,6 @@ public class QuotesClient {
                 () -> System.out.println("Stream completed.")
             );
 
-        Thread.sleep(18000);
+        Thread.sleep(1000);
     }
 }
