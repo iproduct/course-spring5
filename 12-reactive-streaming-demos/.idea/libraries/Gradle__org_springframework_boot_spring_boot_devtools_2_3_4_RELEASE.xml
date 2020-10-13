@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.boot:spring-boot-devtools:2.3.4.RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-devtools/2.3.4.RELEASE/c904a412e16d5f5bf4399008e4683eeff21e61bf/spring-boot-devtools-2.3.4.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-devtools/2.3.4.RELEASE/12eff48e4bde190fef34693b70b8d4d62e29aead/spring-boot-devtools-2.3.4.RELEASE-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-devtools/2.3.4.RELEASE/cffb643b72a3ce67a17089a42ccc94a123f7623/spring-boot-devtools-2.3.4.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

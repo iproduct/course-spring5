@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:annotation-config />
+    <context:component-scan base-package="org.iproduct.spring.coredemo"/>
+    <!--<bean id="providers" class="org.iproduct.spring.coredemo.MockArticleProvider"-->
+        <!--factory-method="createInstance"/>-->
+    <!--<bean id="presenter" class="org.iproduct.spring.coredemo.ConsoleArticlePresenter"-->
+        <!--p:providers-ref="providers" p:message="Property DI: List of Articles:"/>-->
+        <!--<property name="providers">-->
+            <!--<ref bean="providers" />-->
+        <!--</property>-->
+        <!--<property name="message" value="Property DI: List of Articles:" />-->
+    <!--</bean>-->
+
+    <!--<bean id="presenterFactory" class="org.iproduct.spring.coredemo.PresenterFactory"-->
+          <!--c:providers-ref="providers" />-->
+    <!--<bean id="presenter" factory-bean="presenterFactory" factory-method="createPresenter"/>-->
+    <!--<bean id="presenter" class="org.iproduct.spring.coredemo.ConsoleArticlePresenter"-->
+          <!--c:providers-ref="providers" c:message="List of Articles:"/>-->
+        <!--<constructor-arg type="org.iproduct.spring.coredemo.ArticleProvider">-->
+            <!--<ref bean="providers" />-->
+        <!--</constructor-arg>-->
+        <!--<constructor-arg name="message">-->
+            <!--<value>List of Articles:</value>-->
+        <!--</constructor-arg>-->
+        <!--<constructor-arg type="org.iproduct.spring.coredemo.ArticleProvider" ref="providers" />-->
+        <!--<constructor-arg name="message" value="List of Articles:" />-->
+    <!--</bean>-->
+
+
+</beans>

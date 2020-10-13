@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: io.netty:netty-transport-native-epoll:linux-x86_64:4.1.52.Final">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-epoll/4.1.52.Final/5cfac181f741082a1e69ceecdf11e379abb0d136/netty-transport-native-epoll-4.1.52.Final-linux-x86_64.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-epoll/4.1.52.Final/3a6059ad2324d8967936419c2b7cf1b1e798cce5/netty-transport-native-epoll-4.1.52.Final-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-epoll/4.1.52.Final/ef90202a9f8570abf219bc9e86951d55fa5d8ab5/netty-transport-native-epoll-4.1.52.Final-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:hsqldb:file:D:/CourseSpring/hsqldb/data/student-db
+    username: sa
+    password:
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+
+  ## Hibernate Properties
+  # The SQL dialect makes Hibernate generate better SQL for the chosen database
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.HSQLDialect
+        show_sql: false
+        # Hibernate ddl auto (create, create-drop, validate, update)
+        hbm2ddl:
+          auto: update
+
+  # logging
+logging:
+  level:
+    org:
+      iproduct:
+        spring:
+          registration: DEBUG

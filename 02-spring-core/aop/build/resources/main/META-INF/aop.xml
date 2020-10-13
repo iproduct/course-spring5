@@ -1,0 +1,16 @@
+<aspectj>
+    <aspects>
+        <aspect name="org.iproduct.spring.aop.LoggingAspect"/>
+        <aspect name="org.iproduct.spring.aop.MethodProfilerAspect"/>
+        <aspect name="org.iproduct.spring.aop.EntityCreationPublishingAspect222222"/>
+        <aspect name="org.iproduct.spring.aop.SystemArchitecture"/>
+        <aspect name="org.iproduct.spring.aop.UsageTracking"/>
+        <weaver options="-verbose">
+            <include within="org.iproduct.spring.aop.*"/>
+            <exclude within="*..*CGLIB*" />
+            <!--<exclude within="*..*$$*" />-->
+            <!--<exclude within="*..access$*" />-->
+            <!--<exclude within="com.sun.proxy..*" />-->
+        </weaver>
+    </aspects>
+</aspectj>

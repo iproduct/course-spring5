@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head('My Blog Demo')"/>
+<body>
+<div th:replace="fragments/menu :: menu"/>
+<div class="container">
+    <div class="jumbotron">
+        <img src="/img/ipt-box.png" alt="My Blog - Spring 5 Demo" class="pull-left">
+        <h1>My Blog - Spring 5 Demo</h1>
+        <h2>Spring 5 Web MVC Application with Bootstrap Styling</h2>
+        <div class="learn-more"><a class="btn btn-primary btn-lg" href="https://github.com/iproduct/course-spring5/wiki"
+                                   role="button">
+            Learn More @ Github Wiki</a>
+        </div>
+    </div>
+
+    <p>
+        My Blog Demo shows how to build a <em>dynamic web application</em> using
+        <em>Spring Web MVC Controllers, Views, Forms, error handling, I18N & L10N, themes</em> etc.
+    </p>
+    <p>
+        Styling is done using Bootstrap responsive design framework.
+    </p>
+    <p>Application provides following functionality: </p>
+    <ul>
+        <li>Users can browse articles and view detailed information about each article.</li>
+        <li>Users can edit article information and add new articles to the blog.</li>
+        <li>Administrators can manage (create, edit user data and delete ) all <em>registered users</em>, as well as
+            <em>articles</em>.
+        </li>
+    </ul>
+</div>
+</body>
+</html>

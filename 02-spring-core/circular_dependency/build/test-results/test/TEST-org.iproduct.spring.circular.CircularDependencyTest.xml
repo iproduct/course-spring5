@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.iproduct.spring.circular.CircularDependencyTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-08-27T08:35:32" hostname="office27" time="0.007">
+  <properties/>
+  <testcase name="givenCircularDependency_whenSetterInjection_thenItWorks(ApplicationContext)" classname="org.iproduct.spring.circular.CircularDependencyTest" time="0.007"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[Test worker] INFO org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5b24526c, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1bb3d50b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@296b7b2e]
+[Test worker] INFO org.springframework.context.support.GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@46a73d64: startup date [Mon Aug 27 11:35:32 EEST 2018]; root of context hierarchy
+[Test worker] INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[Test worker] INFO org.iproduct.spring.circular.CircularDependencyTest - Hi from Bean A!
+[Test worker] INFO org.iproduct.spring.circular.CircularDependencyTest - Hi from Bean B!
+]]></system-err>
+</testsuite>

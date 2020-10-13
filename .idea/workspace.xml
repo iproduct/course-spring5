@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c0001d11-907d-4bf0-af89-4f1ebef4eac9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/uploads/IMG_0330_m - Copy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/uploads/controller_middle.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/09-webmvc-jsp-hibernate-annotations/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/09-webmvc-jsp-hibernate-annotations/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/09-webmvc-jsp-hibernate-annotations/src/main/java/org/iproduct/spring/webmvc/dao/ArticleDaoHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/09-webmvc-jsp-hibernate-annotations/src/main/java/org/iproduct/spring/webmvc/dao/ArticleDaoHibernate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/12-bookstore-jpa/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/12-bookstore-jpa/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/12-streaming-demos-lab4/src/main/java/org/iproduct/spring/streamingdemoslab4/client/QuotesClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/12-streaming-demos-lab4/src/main/java/org/iproduct/spring/streamingdemoslab4/client/QuotesClient.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="GOROOT" path="D:/CourseGO/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1VA2gZlkY74TkP684IC1QiUNZ1A" />
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.vendoring.notification.had.been.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.23772103" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebmvcThymeleafApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="webmvc-thymeleaf.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="course.spring.webmvc.WebmvcThymeleafApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c0001d11-907d-4bf0-af89-4f1ebef4eac9" name="Default Changelist" comment="" />
+      <created>1576681690491</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576681690491</updated>
+      <workItem from="1576681697778" duration="187000" />
+      <workItem from="1582811498695" duration="1547000" />
+      <workItem from="1582818866167" duration="132000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="634" y="219" key="FileChooserDialogImpl" timestamp="1576681881149">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="634" y="219" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1576681881149" />
+    <state x="564" y="223" width="578" height="474" key="find.popup" timestamp="1582811552351">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="564" y="223" width="578" height="474" key="find.popup/0.0.1707.920@0.0.1707.920" timestamp="1582811552351" />
+  </component>
+</project>

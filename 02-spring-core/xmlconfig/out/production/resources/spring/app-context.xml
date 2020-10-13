@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:annotation-config />
+    <context:component-scan base-package="org.iproduct.spring.xmlconfig"/>
+    <!--<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>-->
+    <!--<bean id="provider" class="org.iproduct.spring.xmlconfig.MockArticleProvider"/>-->
+    <bean id="provider" factory-method="createInstance"
+          class="org.iproduct.spring.xmlconfig.MockArticleProvider" autowire-candidate="true" />
+    <bean id="presenterFactory" name="presenterFactory" class="org.iproduct.spring.xmlconfig.ArticlePresenterFactory"
+          c:provider-ref="provider"/>
+    <bean id="presenter" name="presenter"  factory-bean="presenterFactory" factory-method="createPresenter" />
+    <!--<bean id="presenter" name="presenter"-->
+          <!--class="org.iproduct.spring.xmlconfig.ConsoleArticlePresenter"-->
+          <!--p:articleProvider-ref="provider" />-->
+        <!--<constructor-arg index="0" name="provider" >-->
+            <!--<ref bean="provider" />-->
+        <!--</constructor-arg>-->
+    <!--</bean>-->
+
+    <!--<context:component-scan base-package="org.example">
+        <context:include-filter type="regex"
+                                expression=".*Stub.*Repository"/>
+        <context:exclude-filter type="annotation"
+                                expression="org.springframework.stereotype.Repository"/>
+    </context:component-scan>-->
+    <bean id="mappings"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+         <!--typed as a java.util.Properties-->
+        <property name="properties">
+            <value>
+                articles.title1=Welcome to Spring 5
+                articles.content1=Spring 5 is great beacuse ...
+            </value>
+        </property>
+    </bean>
+    <bean id="article" class="org.iproduct.spring.xmlconfig.Article" scope="prototype">
+        <!-- instead of using a reference to a target bean, simply define the target bean inline -->
+        <property name="author">
+            <ref bean="author" />
+            <!--<bean class="org.iproduct.spring.xmlconfig.Author"> &lt;!&ndash; this is the inner bean &ndash;&gt;-->
+                <!--<property name="name" value="Fiona Apple"/>-->
+                <!--<property name="age" value="25"/>-->
+            <!--</bean>-->
+        </property>
+    </bean>
+    <bean id="parent" abstract="true" class="org.iproduct.spring.xmlconfig.Author">
+        <property name="emails">
+            <props>
+                <prop key="administrator">fiona@example.com</prop>
+                <prop key="support">support@example.com</prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="author" parent="parent">
+        <property name="emails">
+            <!-- the merge is specified on the child collection definition -->
+            <props merge="true">
+                <prop key="sales">f.apple@gmail.com</prop>
+                <prop key="support">support@example.co.uk</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

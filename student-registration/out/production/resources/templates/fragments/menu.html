@@ -1,0 +1,39 @@
+<nav class="navbar navbar-default" th:fragment="menu" xmlns:th="http://www.thymeleaf.org">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="/img/ipt-logo.png" alt="logo"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="home">Home</a></li>
+                <li class="dropdown">
+                    <a href="/users" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Users <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/users">List All Usetrs</a></li>
+                        <li><a href="/users/add">Add New User</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="language-form navbar-form navbar-right">
+                <div class="form-group language-selector">
+                    <label for="locales" class="menu-label">Language</label>
+                    <select id="locales" class="form-control">
+                        <option value="en_US" th:selected="${#request.getParameter('lang') == 'en_US'}">EN</option>
+                        <option value="bg_BG" th:selected="${#request.getParameter('lang') == 'bg_BG'}">BG</option>
+                    </select>
+                </div>
+            </form>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>

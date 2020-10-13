@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head('Articles List')" />
+<body>
+    <div th:replace="fragments/menu :: menu(${''}, ${loggedUserName})" />
+    <div class="container">
+        <!--/*@thymesVar id="message" type="String"*/-->
+        <div class="alert alert-danger" th:text="${message}"></div>
+        <a th:if="${continueUrl}" class="btn btn-primary" th:href="${continueUrl}" >OK</a>
+        <button th:unless="${continueUrl}" type="button" class="btn btn-primary" onclick="history.back()">Go Back</button>
+    </div>
+    <div th:replace="fragments/foot :: foot" />
+</body>
+</html>
