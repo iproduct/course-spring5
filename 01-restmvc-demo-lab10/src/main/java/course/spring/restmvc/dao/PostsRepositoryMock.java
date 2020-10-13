@@ -30,7 +30,7 @@ public class PostsRepositoryMock implements PostsRepository{
 
     @Override
     public Post findById(Long id) {
-        return null;
+        return posts.get(id);
     }
 
     @Override
@@ -42,16 +42,17 @@ public class PostsRepositoryMock implements PostsRepository{
 
     @Override
     public Post update(Post post) {
-        return null;
+        Post old = posts.replace(post.getId(), post);
+        return old != null ? post: null;
     }
 
     @Override
     public Post deleteById(Long id) {
-        return null;
+        return posts.remove(id);
     }
 
     @Override
     public long count() {
-        return 0;
+        return posts.size();
     }
 }

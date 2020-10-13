@@ -5,6 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8ebf402-5520-43cf-9795-bac223db3838" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../01-restmvc-demo-lab10/src/main/java/course/spring/restmvc/exception/InvalidEntityDataException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-restmvc-demo-lab10/src/main/java/course/spring/restmvc/exception/NonexistingEntityException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-restmvc-demo-lab10/src/main/java/course/spring/restmvc/model/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-restmvc-demo-lab10/src/main/java/course/spring/restmvc/service/PostsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-restmvc-demo-lab10/src/main/java/course/spring/restmvc/service/impl/PostsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-restmvc-demo-lab10/src/main/java/course/spring/restmvc/web/ExceptionHandlerAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-restmvc-demo-lab10/src/main/java/course/spring/restmvc/dao/PostsRepositoryMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-restmvc-demo-lab10/src/main/java/course/spring/restmvc/dao/PostsRepositoryMock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-restmvc-demo-lab10/src/main/java/course/spring/restmvc/model/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-restmvc-demo-lab10/src/main/java/course/spring/restmvc/model/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-restmvc-demo-lab10/src/main/java/course/spring/restmvc/web/PostsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-restmvc-demo-lab10/src/main/java/course/spring/restmvc/web/PostsResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../02-spring-core-lab4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core-lab4/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
