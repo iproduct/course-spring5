@@ -3,17 +3,21 @@ package course.spring.restmvc.service.impl;
 import course.spring.restmvc.dao.PostsRepository;
 import course.spring.restmvc.exception.InvalidEntityDataException;
 import course.spring.restmvc.exception.NonexistingEntityException;
+import course.spring.restmvc.exception.ValidationErrorsException;
 import course.spring.restmvc.model.Post;
 import course.spring.restmvc.service.PostsService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.validation.Valid;
+import javax.validation.ConstraintViolationException;
+import javax.validation.Validator;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @Service
+@Slf4j
 public class PostsServiceImpl implements PostsService {
     private PostsRepository postsRepo;
 
@@ -21,6 +25,9 @@ public class PostsServiceImpl implements PostsService {
     public PostsServiceImpl(PostsRepository postsRepo) {
         this.postsRepo = postsRepo;
     }
+
+    @Autowired
+    private Validator validator;
 
     @Override
     public List<Post> getAllPosts() {
@@ -38,9 +45,31 @@ public class PostsServiceImpl implements PostsService {
 
     @Override
     public Post createPost(Post post) {
+//        Errors errors = new BindException(post, "Post");
+//        Set<ConstraintViolation<Post>> violations = validator.validate(post);
+//        if(!violations.isEmpty()) {
+//            throw new ValidationErrorsException(violations);
+//        }
         post.setCreated(LocalDateTime.now());
         post.setModified(LocalDateTime.now());
-        return postsRepo.create(post);
+        Post result = null;
+        try {
+            result = postsRepo.create(post);
+        } catch(Throwable e) {
+            Throwable ex = e;
+            while(ex.getCause() != null && !(ex instanceof ConstraintViolationException) ) {
+                ex = ex.getCause();
+            }
+            if(ex instanceof ConstraintViolationException) {
+                ConstraintViolationException cvex = (ConstraintViolationException) ex;
+                throw new ValidationErrorsException(cvex.getConstraintViolations());
+            }else {
+                throw e;
+            }
+//            log.error("!!!!!!  Exception catched:", ex);
+        }
+
+        return result;
     }
 
     @Override

@@ -2,7 +2,9 @@ package course.spring.restmvc.dao;
 
 import course.spring.restmvc.model.Post;
 import org.springframework.stereotype.Repository;
+import org.springframework.validation.annotation.Validated;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -11,6 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
 @Repository
+@Validated
 public class PostsRepositoryMock implements PostsRepository{
     private AtomicLong nextId = new AtomicLong(0L);
     private Map<Long, Post> posts = new ConcurrentHashMap<>();
@@ -34,7 +37,7 @@ public class PostsRepositoryMock implements PostsRepository{
     }
 
     @Override
-    public Post create(Post post) {
+    public Post create(@Valid Post post) {
         post.setId(nextId.incrementAndGet());
         posts.put(post.getId(), post);
         return post;

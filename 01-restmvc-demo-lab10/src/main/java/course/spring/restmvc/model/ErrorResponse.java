@@ -20,5 +20,6 @@ public class ErrorResponse {
     Integer code;
     @NonNull
     String message;
-    List<ConstraintViolation> constraintViolations;
+    List<String> constraintViolations = new ArrayList<>();
+    List<String> exceptionMessages = new ArrayList<>();
 }
