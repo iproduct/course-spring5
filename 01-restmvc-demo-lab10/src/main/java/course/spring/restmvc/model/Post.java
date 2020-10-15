@@ -1,9 +1,9 @@
 package course.spring.restmvc.model;
 
-import lombok.Data;
-import lombok.NonNull;
+import lombok.*;
 import org.hibernate.validator.constraints.URL;
 
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
 import javax.validation.constraints.Pattern;
@@ -11,8 +11,16 @@ import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import static javax.persistence.TemporalType.TIMESTAMP;
+
+@Entity
 @Data
+@NoArgsConstructor
+@RequiredArgsConstructor
+@AllArgsConstructor
 public class Post {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NonNull
     @NotNull
@@ -26,11 +34,14 @@ public class Post {
     @NotNull
     @Pattern(regexp = "[A-Z][a-z]+\\s+[A-Z][a-z]+.*", message="First and last names should be provided.")
     private String author;
+    @ElementCollection
     private List<@Size(min=2, max=15) String> keywords;
     @URL
     private String imageUrl;
+    @Temporal(TIMESTAMP)
     @PastOrPresent
     private LocalDateTime created = LocalDateTime.now();
+    @Temporal(TIMESTAMP)
     @PastOrPresent
     private LocalDateTime modified = LocalDateTime.now();
 }
