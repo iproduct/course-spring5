@@ -1,0 +1,12 @@
+course/spring/coredemo/provider/MockArticleProvider.java
+ course.spring.coredemo.provider.MockArticleProvider
+course/spring/coredemo/consumer/ArticleConsumer.java
+ course.spring.coredemo.consumer.ArticleConsumer
+course/spring/coredemo/consumer/ConsoleArticleConsumer.java
+ course.spring.coredemo.consumer.ConsoleArticleConsumer
+course/spring/coredemo/model/Article.java
+ course.spring.coredemo.model.Article
+course/spring/coredemo/provider/ArticleProvider.java
+ course.spring.coredemo.provider.ArticleProvider
+course/spring/coredemo/XMLAppContextDemo.java
+ course.spring.coredemo.XMLAppContextDemo
