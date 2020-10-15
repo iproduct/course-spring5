@@ -7,6 +7,7 @@ import course.spring.restmvc.exception.NonexistingEntityException;
 import course.spring.restmvc.exception.ValidationErrorsException;
 import course.spring.restmvc.model.Post;
 import course.spring.restmvc.service.PostsService;
+import course.spring.restmvc.util.ExceptionHandlingUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -60,7 +61,7 @@ public class PostsServiceImpl implements PostsService {
             result = postsRepo.save(post);
         } catch(RuntimeException e) {
             // log.error("!!!!!!  Exception catched:", ex);
-            hanleConstraintViolationException(e);
+            ExceptionHandlingUtils.hanleConstraintViolationException(e);
         }
         return result;
     }
@@ -90,17 +91,5 @@ public class PostsServiceImpl implements PostsService {
         return postsRepo.count();
     }
 
-    // Implementation details
-    private void hanleConstraintViolationException(RuntimeException e) throws RuntimeException {
-        Throwable ex = e;
-        while(ex.getCause() != null && !(ex instanceof ConstraintViolationException) ) {
-            ex = ex.getCause();
-        }
-        if(ex instanceof ConstraintViolationException) {
-            ConstraintViolationException cvex = (ConstraintViolationException) ex;
-            throw new ValidationErrorsException(cvex.getConstraintViolations());
-        } else {
-            throw e;
-        }
-    }
+
 }

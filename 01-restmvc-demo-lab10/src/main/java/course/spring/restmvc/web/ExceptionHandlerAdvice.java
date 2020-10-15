@@ -4,11 +4,15 @@ import course.spring.restmvc.exception.InvalidEntityDataException;
 import course.spring.restmvc.exception.NonexistingEntityException;
 import course.spring.restmvc.exception.ValidationErrorsException;
 import course.spring.restmvc.model.ErrorResponse;
+import course.spring.restmvc.util.ExceptionHandlingUtils;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.TransactionSystemException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import javax.persistence.RollbackException;
 import javax.validation.ConstraintViolation;
+import javax.validation.ConstraintViolationException;
 
 @ControllerAdvice
 public class ExceptionHandlerAdvice {
@@ -22,8 +26,10 @@ public class ExceptionHandlerAdvice {
         }
     }
 
-    @ExceptionHandler
-    public ResponseEntity<ErrorResponse> handleValidationErrors(ValidationErrorsException ex) {
+    @ExceptionHandler({TransactionSystemException.class, ValidationErrorsException.class})
+    public ResponseEntity<ErrorResponse> handleValidationErrors(RuntimeException rtex) {
+        ValidationErrorsException ex = ExceptionHandlingUtils.extractConstraintViolationException(rtex);
+
         ErrorResponse errorResponse = new ErrorResponse(400, "Post not valid");
         if (ex.getErrors() != null) {
             ex.getErrors().getAllErrors().forEach(err -> {

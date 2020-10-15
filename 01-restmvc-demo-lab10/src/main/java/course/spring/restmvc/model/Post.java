@@ -20,7 +20,7 @@ import static javax.persistence.TemporalType.TIMESTAMP;
 @AllArgsConstructor
 public class Post {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Long id;
     @NonNull
     @NotNull
@@ -38,10 +38,8 @@ public class Post {
     private List<@Size(min=2, max=15) String> keywords;
     @URL
     private String imageUrl;
-    @Temporal(TIMESTAMP)
     @PastOrPresent
     private LocalDateTime created = LocalDateTime.now();
-    @Temporal(TIMESTAMP)
     @PastOrPresent
     private LocalDateTime modified = LocalDateTime.now();
 }
