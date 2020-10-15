@@ -55,18 +55,9 @@ public class PostsServiceImpl implements PostsService {
         Post result = null;
         try {
             result = postsRepo.create(post);
-        } catch(Throwable e) {
-            Throwable ex = e;
-            while(ex.getCause() != null && !(ex instanceof ConstraintViolationException) ) {
-                ex = ex.getCause();
-            }
-            if(ex instanceof ConstraintViolationException) {
-                ConstraintViolationException cvex = (ConstraintViolationException) ex;
-                throw new ValidationErrorsException(cvex.getConstraintViolations());
-            }else {
-                throw e;
-            }
-//            log.error("!!!!!!  Exception catched:", ex);
+        } catch(RuntimeException e) {
+            // log.error("!!!!!!  Exception catched:", ex);
+            hanleConstraintViolationException(e);
         }
 
         return result;
@@ -100,5 +91,19 @@ public class PostsServiceImpl implements PostsService {
     @Override
     public long count() {
         return postsRepo.count();
+    }
+
+    // Implementation details
+    private void hanleConstraintViolationException(RuntimeException e) throws RuntimeException {
+        Throwable ex = e;
+        while(ex.getCause() != null && !(ex instanceof ConstraintViolationException) ) {
+            ex = ex.getCause();
+        }
+        if(ex instanceof ConstraintViolationException) {
+            ConstraintViolationException cvex = (ConstraintViolationException) ex;
+            throw new ValidationErrorsException(cvex.getConstraintViolations());
+        } else {
+            throw e;
+        }
     }
 }
