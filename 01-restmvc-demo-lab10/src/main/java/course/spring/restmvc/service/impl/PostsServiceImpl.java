@@ -54,6 +54,7 @@ public class PostsServiceImpl implements PostsService {
 //        if(!violations.isEmpty()) {
 //            throw new ValidationErrorsException(violations);
 //        }
+        post.setId(null);
         post.setCreated(LocalDateTime.now());
         post.setModified(LocalDateTime.now());
         Post result = null;
