@@ -6,7 +6,7 @@ import course.spring.restmvc.model.Post;
 
 import java.util.List;
 
-public interface PostsService {
+public interface PostService {
     List<Post> getAllPosts();
     Post getPostById(Long id) throws NonexistingEntityException;
     Post createPost(Post post) throws InvalidEntityDataException;

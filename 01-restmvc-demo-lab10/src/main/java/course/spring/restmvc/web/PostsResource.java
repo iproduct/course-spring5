@@ -1,47 +1,40 @@
 package course.spring.restmvc.web;
 
 import course.spring.restmvc.exception.InvalidEntityDataException;
-import course.spring.restmvc.exception.NonexistingEntityException;
 import course.spring.restmvc.exception.ValidationErrorsException;
-import course.spring.restmvc.model.ErrorResponse;
 import course.spring.restmvc.model.Post;
-import course.spring.restmvc.service.PostsService;
+import course.spring.restmvc.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.validation.ConstraintViolation;
 import javax.validation.Valid;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.Positive;
 import java.util.List;
 
-import static org.springframework.http.HttpStatus.BAD_REQUEST;
 import static org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder.on;
 
 @RestController
 @RequestMapping("/api/posts")
 public class PostsResource {
     @Autowired
-    private PostsService postsService;
+    private PostService postService;
 
     @GetMapping
     public List<Post> getAllPosts() {
-        return postsService.getAllPosts();
+        return postService.getAllPosts();
     }
 
     @GetMapping("{id}")
     public Post getPostById(@PathVariable long id) {
-        return postsService.getPostById(id);
+        return postService.getPostById(id);
     }
 
     @PostMapping
     public ResponseEntity<Post> createPost(@RequestBody Post post, HttpServletRequest request) {
-        Post created = postsService.createPost(post);
+        Post created = postService.createPost(post);
         return ResponseEntity.created(
 //                ServletUriComponentsBuilder.fromRequest(request).pathSegment("{id}").build(created.getId())
 //                UriComponentsBuilder.fromUriString(request.getRequestURL().toString()).pathSegment("{id}").build(created.getId())
@@ -61,12 +54,12 @@ public class PostsResource {
             throw new InvalidEntityDataException(
                     String.format("Url ID:%d differs from body entity ID:%d", id, post.getId()));
         }
-        return postsService.updatePost(post);
+        return postService.updatePost(post);
     }
 
     @DeleteMapping("{id}")
     public Post deletePost(@PathVariable long id) {
-        return postsService.deletePost(id);
+        return postService.deletePost(id);
     }
 
 //    @ExceptionHandler

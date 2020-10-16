@@ -1,19 +1,16 @@
 package course.spring.restmvc.service.impl;
 
 import course.spring.restmvc.dao.PostsJpaRepository;
-import course.spring.restmvc.dao.PostsRepository;
 import course.spring.restmvc.exception.InvalidEntityDataException;
 import course.spring.restmvc.exception.NonexistingEntityException;
-import course.spring.restmvc.exception.ValidationErrorsException;
 import course.spring.restmvc.model.Post;
-import course.spring.restmvc.service.PostsService;
+import course.spring.restmvc.service.PostService;
 import course.spring.restmvc.util.ExceptionHandlingUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.validation.ConstraintViolationException;
 import javax.validation.Validator;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -24,11 +21,11 @@ import static org.springframework.transaction.annotation.Propagation.REQUIRED;
 @Service
 @Slf4j
 @Transactional(propagation=REQUIRED)
-public class PostsServiceImpl implements PostsService {
+public class PostServiceImpl implements PostService {
     private PostsJpaRepository postsRepo;
 
     @Autowired
-    public PostsServiceImpl(PostsJpaRepository postsRepo) {
+    public PostServiceImpl(PostsJpaRepository postsRepo) {
         this.postsRepo = postsRepo;
     }
 
