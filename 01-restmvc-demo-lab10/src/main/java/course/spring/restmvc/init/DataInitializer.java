@@ -5,16 +5,21 @@ import course.spring.restmvc.model.Role;
 import course.spring.restmvc.model.User;
 import course.spring.restmvc.service.PostService;
 import course.spring.restmvc.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import static course.spring.restmvc.model.Role.*;
 
+@Component
+@Slf4j
 public class DataInitializer implements CommandLineRunner {
     @Autowired
     UserService userService;
@@ -45,6 +50,17 @@ public class DataInitializer implements CommandLineRunner {
                         "https://www.publicdomainpictures.net/pictures/280000/nahled/electrical-wiring.jpg")
         });
 
-
+        if(userService.count() == 0) {
+            defaultUsers.stream().map(userService::createUser)
+                .map(user -> user.getId() + ": " + user.getUsername())
+                .forEach(log::info);
+        }
+        if(postService.count() == 0) {
+            User defaultAuthor = userService.getUserByUsername("author");
+            defaultPosts.forEach(post -> post.setAuthor(defaultAuthor));
+            defaultPosts.stream().map(postService::createPost)
+                    .map(post ->post.getId() + ": " + post.getTitle())
+                    .forEach(log::info);
+        }
     }
 }

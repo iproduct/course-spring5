@@ -39,7 +39,7 @@ public class Post {
     @Size(min=20, max = 2048)
     private String content;
 
-    @ManyToOne(targetEntity = User.class, optional = false, fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @ManyToOne(targetEntity = User.class, optional = false, fetch = FetchType.EAGER)
     @JoinColumn(name="AUTHOR_ID", nullable = false, updatable = false, referencedColumnName = "ID")
     @NonNull
     @NotNull
