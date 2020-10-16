@@ -1,6 +1,7 @@
 package course.spring.restmvc.dao;
 
 import course.spring.restmvc.model.Post;
+import course.spring.restmvc.model.User;
 import org.springframework.stereotype.Repository;
 import org.springframework.validation.annotation.Validated;
 
@@ -20,9 +21,9 @@ public class PostsRepositoryMock implements PostsRepository{
 
     public PostsRepositoryMock() {
         Arrays.asList(new Post[]{
-                new Post("New in Spring 5", "WebFlux is here ...", "Trayan Iliev"),
-                new Post("DI in Spring", "Many ways to do it ...", "Trayan Iliev"),
-                new Post("Autowiring", "To autowire or not to autowire ...", "Trayan Iliev")
+                new Post("New in Spring 5", "WebFlux is here ...", new User()),
+                new Post("DI in Spring", "Many ways to do it ...", new User()),
+                new Post("Autowiring", "To autowire or not to autowire ...", new User())
         }).forEach(post -> create(post));
     }
 

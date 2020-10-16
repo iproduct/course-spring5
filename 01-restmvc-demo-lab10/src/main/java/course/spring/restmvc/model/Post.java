@@ -14,13 +14,19 @@ import java.util.List;
 import static javax.persistence.TemporalType.TIMESTAMP;
 
 @Entity
+@Table(name ="POSTS")
 @Data
 @NoArgsConstructor
 @RequiredArgsConstructor
 @AllArgsConstructor
 public class Post {
     @Id
-    @GeneratedValue
+    @GeneratedValue(generator = "post_sequence", strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(
+            name = "post_sequence",
+            sequenceName = "post_sequence",
+            allocationSize = 3
+    )
     private Long id;
     @NonNull
     @NotNull
@@ -30,10 +36,13 @@ public class Post {
     @NotNull
     @Size(min=20, max = 2048)
     private String content;
+
+    @ManyToOne(targetEntity = User.class, optional = false, fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinColumn(name="AUTHOR_ID", nullable = false, updatable = false, referencedColumnName = "ID")
     @NonNull
     @NotNull
-    @Pattern(regexp = "[A-Z][a-z]+\\s+[A-Z][a-z]+.*", message="First and last names should be provided.")
-    private String author;
+    private User author;
+
     @ElementCollection
     private List<@Size(min=2, max=15) String> keywords;
     @URL
