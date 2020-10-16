@@ -46,7 +46,7 @@ public class Post {
     private User author;
 
     @ElementCollection
-    private List<@Size(min=2, max=15) String> keywords;
+    private List<@Size(min=2, max=30) String> keywords;
 
     @URL
     private String imageUrl;

@@ -39,10 +39,10 @@ public class DataInitializer implements CommandLineRunner {
         });
 
         List<Post> defaultPosts = Arrays.asList(new Post[]{
-                new Post("New in Spring 5", "WebFlux is here ...", defaultUsers.get(1),
+                new Post("New in Spring 5", "WebFlux is here and is haigh performace...", defaultUsers.get(1),
                         Arrays.asList(new String[]{"Spring", "WebFlux"}),
                         "https://p2.piqsels.com/preview/639/504/10/branch-engine-leaves-spring.jpg"),
-                new Post("DI in Spring", "Many ways to do it ...",
+                new Post("DI in Spring", "Many ways to do it, but what are advantages ...",
                         defaultUsers.get(1),Arrays.asList(new String[]{"Spring", "dependency injection", "DI"}),
                         "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRGq5nnPNS-nVHQWbwmKNtxhVs7hZkTD_VuYA&usqp=CAU"),
                 new Post("Autowiring", "To autowire or not to autowire ...", defaultUsers.get(1),
@@ -57,10 +57,15 @@ public class DataInitializer implements CommandLineRunner {
         }
         if(postService.count() == 0) {
             User defaultAuthor = userService.getUserByUsername("author");
-            defaultPosts.forEach(post -> post.setAuthor(defaultAuthor));
-            defaultPosts.stream().map(postService::createPost)
-                    .map(post ->post.getId() + ": " + post.getTitle())
-                    .forEach(log::info);
+            if(defaultAuthor != null) {
+                defaultPosts.forEach(post -> post.setAuthor(defaultAuthor));
+                List<Post> createdPosts = defaultPosts.stream().map(postService::createPost).collect(Collectors.toList());
+                createdPosts.stream()
+                        .map(post -> post.getId() + ": " + post.getTitle())
+                        .forEach(log::info);
+                defaultAuthor.setPosts(createdPosts);
+                userService.updateUser(defaultAuthor);
+            }
         }
     }
 }

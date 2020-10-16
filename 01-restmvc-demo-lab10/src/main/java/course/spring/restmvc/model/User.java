@@ -62,7 +62,7 @@ public class User implements UserDetails {
     private LocalDateTime modified = LocalDateTime.now();
 
     @OneToMany(targetEntity = Post.class, mappedBy = "author", fetch = FetchType.LAZY)
-    List<Post> posts;
+    List<Post> posts = new ArrayList<>();
 
     public User(@NonNull @NotNull @Size(min = 2, max = 50) String firstName, @NonNull @NotNull @Size(min = 2, max = 50) String lastName, @NonNull @NotNull @Email String email, @NonNull @NotNull @Size(min = 5, max = 30) String username, @NonNull @NotNull @Size(min = 5, max = 30) String password, Set<Role> roles, @URL String imageUrl) {
         this.firstName = firstName;
