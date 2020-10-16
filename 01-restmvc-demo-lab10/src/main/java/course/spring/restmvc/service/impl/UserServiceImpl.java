@@ -64,7 +64,6 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-
     public User updateUser(User user) throws InvalidEntityDataException, NonexistingEntityException {
         User result = userRepo.findById(user.getId()).orElseThrow(
                 ()->new NonexistingEntityException(String.format("User with ID:%d does not exist", user.getId())));

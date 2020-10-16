@@ -1,5 +1,7 @@
 package course.spring.restmvc.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 import org.hibernate.validator.constraints.URL;
 import org.springframework.security.core.GrantedAuthority;
@@ -12,6 +14,7 @@ import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static com.fasterxml.jackson.annotation.JsonProperty.Access.WRITE_ONLY;
 import static course.spring.restmvc.model.Role.READER;
 
 @Entity
@@ -20,6 +23,7 @@ import static course.spring.restmvc.model.Role.READER;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @AllArgsConstructor
+@JsonIgnoreProperties({"posts", "authorities", "accountNonExpired", "accountNonLocked", "credentialsNonExpired", "enabled"})
 public class User implements UserDetails {
     @Id
     @GeneratedValue(generator = "user_sequence", strategy = GenerationType.SEQUENCE)
@@ -29,39 +33,52 @@ public class User implements UserDetails {
             allocationSize = 3
     )
     private Long id;
+
     @NonNull
     @NotNull
     @Size(min=2, max = 50)
     private String firstName;
+
     @NonNull
     @NotNull
     @Size(min=2, max = 50)
     private String lastName;
+
     @NonNull
     @NotNull
     @Email
     private String email;
+
     @NonNull
     @NotNull
     @Size(min=3, max = 30)
     private String username;
+
+    @JsonProperty(access = WRITE_ONLY)
     @NonNull
     @NotNull
     @Size(min=5, max = 30)
     private String password;
+
     private boolean active = true;
+
     @ElementCollection
     private Set<Role> roles = new HashSet(Arrays.asList(new Role[]{READER}));
+
     @URL
     @Basic(optional = true)
     @Column(name = "IMAGE_URL")
     private String imageUrl;
+
     @PastOrPresent
     private LocalDateTime created = LocalDateTime.now();
+
     @PastOrPresent
     private LocalDateTime modified = LocalDateTime.now();
 
     @OneToMany(targetEntity = Post.class, mappedBy = "author", fetch = FetchType.LAZY)
+    @ToString.Exclude
+
     List<Post> posts = new ArrayList<>();
 
     public User(@NonNull @NotNull @Size(min = 2, max = 50) String firstName, @NonNull @NotNull @Size(min = 2, max = 50) String lastName, @NonNull @NotNull @Email String email, @NonNull @NotNull @Size(min = 5, max = 30) String username, @NonNull @NotNull @Size(min = 5, max = 30) String password, Set<Role> roles, @URL String imageUrl) {

@@ -42,7 +42,6 @@ public class Post {
     @ManyToOne(targetEntity = User.class, optional = false, fetch = FetchType.EAGER)
     @JoinColumn(name="AUTHOR_ID", nullable = false, updatable = false, referencedColumnName = "ID")
     @NonNull
-    @NotNull
     private User author;
 
     @ElementCollection

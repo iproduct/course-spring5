@@ -5,6 +5,7 @@ import course.spring.restmvc.exception.InvalidEntityDataException;
 import course.spring.restmvc.exception.NonexistingEntityException;
 import course.spring.restmvc.model.Post;
 import course.spring.restmvc.service.PostService;
+import course.spring.restmvc.service.UserService;
 import course.spring.restmvc.util.ExceptionHandlingUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,10 +24,12 @@ import static org.springframework.transaction.annotation.Propagation.REQUIRED;
 @Transactional(propagation=REQUIRED)
 public class PostServiceImpl implements PostService {
     private PostsJpaRepository postsRepo;
+    private UserService userService;
 
     @Autowired
-    public PostServiceImpl(PostsJpaRepository postsRepo) {
+    public PostServiceImpl(PostsJpaRepository postsRepo, UserService userService) {
         this.postsRepo = postsRepo;
+        this.userService = userService;
     }
 
     @Autowired
@@ -52,6 +55,7 @@ public class PostServiceImpl implements PostService {
 //            throw new ValidationErrorsException(violations);
 //        }
         post.setId(null);
+        post.setAuthor(userService.getUserByUsername("author")); // mock implementation
         post.setCreated(LocalDateTime.now());
         post.setModified(LocalDateTime.now());
         Post result = null;
