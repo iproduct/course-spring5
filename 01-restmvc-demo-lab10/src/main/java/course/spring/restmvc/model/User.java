@@ -43,7 +43,7 @@ public class User implements UserDetails {
     private String email;
     @NonNull
     @NotNull
-    @Size(min=5, max = 30)
+    @Size(min=3, max = 30)
     private String username;
     @NonNull
     @NotNull
@@ -63,6 +63,16 @@ public class User implements UserDetails {
 
     @OneToMany(targetEntity = Post.class, mappedBy = "author", fetch = FetchType.LAZY)
     List<Post> posts;
+
+    public User(@NonNull @NotNull @Size(min = 2, max = 50) String firstName, @NonNull @NotNull @Size(min = 2, max = 50) String lastName, @NonNull @NotNull @Email String email, @NonNull @NotNull @Size(min = 5, max = 30) String username, @NonNull @NotNull @Size(min = 5, max = 30) String password, Set<Role> roles, @URL String imageUrl) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.username = username;
+        this.password = password;
+        this.roles = roles;
+        this.imageUrl = imageUrl;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

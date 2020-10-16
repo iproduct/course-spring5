@@ -1,11 +1,10 @@
 package course.spring.restmvc.service.impl;
 
-import course.spring.restmvc.dao.UsersJpaRepository;
+import course.spring.restmvc.dao.UserRepository;
 import course.spring.restmvc.exception.InvalidEntityDataException;
 import course.spring.restmvc.exception.NonexistingEntityException;
 import course.spring.restmvc.model.User;
 import course.spring.restmvc.service.UserService;
-import course.spring.restmvc.service.UsersService;
 import course.spring.restmvc.util.ExceptionHandlingUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,10 +22,10 @@ import static org.springframework.transaction.annotation.Propagation.REQUIRED;
 @Slf4j
 @Transactional(propagation=REQUIRED)
 public class UserServiceImpl implements UserService {
-    private UsersJpaRepository userRepo;
+    private UserRepository userRepo;
 
     @Autowired
-    public UserServiceImpl(UsersJpaRepository userRepo) {
+    public UserServiceImpl(UserRepository userRepo) {
         this.userRepo = this.userRepo;
     }
 
@@ -46,12 +45,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User getUserByUsername(String username) throws NonexistingEntityException {
+        return userRepo.findByUsername(username).orElse(null);
+    }
+
+    @Override
     public User createUser(User user) {
-//        Errors errors = new BindException(user, "User");
-//        Set<ConstraintViolation<User>> violations = validator.validate(user);
-//        if(!violations.isEmpty()) {
-//            throw new ValidationErrorsException(violations);
-//        }
         user.setId(null);
         user.setCreated(LocalDateTime.now());
         user.setModified(LocalDateTime.now());
@@ -59,7 +58,6 @@ public class UserServiceImpl implements UserService {
         try {
             result = userRepo.save(user);
         } catch(RuntimeException e) {
-            // log.error("!!!!!!  Exception catched:", ex);
             ExceptionHandlingUtils.hanleConstraintViolationException(e);
         }
         return result;
