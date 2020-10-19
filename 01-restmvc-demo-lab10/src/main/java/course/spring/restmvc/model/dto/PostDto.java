@@ -28,7 +28,7 @@ public class PostDto {
     private String content;
 
     @NonNull
-    private UserDto author;
+    private AuthorDto author;
 
     private List<@Size(min=2, max=30) String> keywords;
 
@@ -41,7 +41,7 @@ public class PostDto {
     @PastOrPresent
     private LocalDateTime modified = LocalDateTime.now();
 
-    public PostDto(@NonNull @NotNull @Size(min = 2, max = 50) String title, @NonNull @NotNull @Size(min = 20, max = 2048) String content, @NonNull @NotNull UserDto author, List<@Size(min = 2, max = 15) String> keywords, @URL String imageUrl) {
+    public PostDto(@NonNull @NotNull @Size(min = 2, max = 50) String title, @NonNull @NotNull @Size(min = 20, max = 2048) String content, @NonNull @NotNull AuthorDto author, List<@Size(min = 2, max = 15) String> keywords, @URL String imageUrl) {
         this.title = title;
         this.content = content;
         this.author = author;

@@ -2,8 +2,10 @@ package course.spring.restmvc.web;
 
 import course.spring.restmvc.exception.InvalidEntityDataException;
 import course.spring.restmvc.exception.ValidationErrorsException;
+import course.spring.restmvc.model.dto.PostDto;
 import course.spring.restmvc.model.entity.Post;
 import course.spring.restmvc.service.PostService;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.*;
@@ -13,6 +15,7 @@ import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBui
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder.on;
 
@@ -22,14 +25,18 @@ public class PostsResource {
     @Autowired
     private PostService postService;
 
+    @Autowired
+    ModelMapper mapper;
+
     @GetMapping
-    public List<Post> getAllPosts() {
-        return postService.getAllPosts();
+    public List<PostDto> getAllPosts() {
+        return postService.getAllPosts().stream().map(this::convertToDto)
+                .collect(Collectors.toList());
     }
 
     @GetMapping("{id}")
-    public Post getPostById(@PathVariable long id) {
-        return postService.getPostById(id);
+    public PostDto getPostById(@PathVariable long id) {
+        return convertToDto(postService.getPostById(id));
     }
 
     @PostMapping
@@ -72,5 +79,16 @@ public class PostsResource {
 //        return ResponseEntity.status(404).body(new ErrorResponse(404, ex.getMessage()));
 //    }
 
+    private PostDto convertToDto(Post post){
+        PostDto postDto = mapper.map(post, PostDto.class);
+        //... setOtherProps
+        return postDto;
+    }
+
+    private Post convertToEntity(PostDto postDto){
+        Post post = mapper.map(postDto, Post.class);
+        //...
+        return post;
+    }
 
 }

@@ -41,7 +41,7 @@ public class Post {
     @NonNull
     private User author;
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     private List<@Size(min=2, max=30) String> keywords;
 
     @URL

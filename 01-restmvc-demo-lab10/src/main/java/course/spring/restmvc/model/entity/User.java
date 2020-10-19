@@ -63,7 +63,7 @@ public class User implements UserDetails {
 
     private boolean active = true;
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     private Set<Role> roles = new HashSet(Arrays.asList(new Role[]{READER}));
 
     @URL
