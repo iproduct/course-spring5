@@ -58,7 +58,8 @@ public class User implements UserDetails {
     @JsonProperty(access = WRITE_ONLY)
     @NonNull
     @NotNull
-    @Size(min=5, max = 30)
+    @Size(min=5)
+    @Column(length = 1024)
     private String password;
 
     private boolean active = true;
