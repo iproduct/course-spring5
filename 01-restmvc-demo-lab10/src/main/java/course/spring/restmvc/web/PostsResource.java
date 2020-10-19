@@ -2,7 +2,7 @@ package course.spring.restmvc.web;
 
 import course.spring.restmvc.exception.InvalidEntityDataException;
 import course.spring.restmvc.exception.ValidationErrorsException;
-import course.spring.restmvc.model.Post;
+import course.spring.restmvc.model.entity.Post;
 import course.spring.restmvc.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

@@ -1,6 +1,5 @@
 package course.spring.restmvc.exception;
 
-import course.spring.restmvc.model.Post;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

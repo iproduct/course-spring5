@@ -1,7 +1,8 @@
-package course.spring.restmvc.model;
+package course.spring.restmvc.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import course.spring.restmvc.model.Role;
 import lombok.*;
 import org.hibernate.validator.constraints.URL;
 import org.springframework.security.core.GrantedAuthority;
@@ -9,7 +10,10 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
-import javax.validation.constraints.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.PastOrPresent;
+import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -17,21 +21,12 @@ import java.util.stream.Collectors;
 import static com.fasterxml.jackson.annotation.JsonProperty.Access.WRITE_ONLY;
 import static course.spring.restmvc.model.Role.READER;
 
-@Entity
-@Table(name = "USERS")
 @Data
 @NoArgsConstructor
 @RequiredArgsConstructor
 @AllArgsConstructor
 @JsonIgnoreProperties({"posts", "authorities", "accountNonExpired", "accountNonLocked", "credentialsNonExpired", "enabled"})
-public class User implements UserDetails {
-    @Id
-    @GeneratedValue(generator = "user_sequence", strategy = GenerationType.SEQUENCE)
-    @SequenceGenerator(
-            name = "user_sequence",
-            sequenceName = "user_sequence",
-            allocationSize = 3
-    )
+public class UserDto implements UserDetails {
     private Long id;
 
     @NonNull
@@ -62,12 +57,9 @@ public class User implements UserDetails {
 
     private boolean active = true;
 
-    @ElementCollection
     private Set<Role> roles = new HashSet(Arrays.asList(new Role[]{READER}));
 
     @URL
-    @Basic(optional = true)
-    @Column(name = "IMAGE_URL")
     private String imageUrl;
 
     @PastOrPresent
@@ -76,12 +68,11 @@ public class User implements UserDetails {
     @PastOrPresent
     private LocalDateTime modified = LocalDateTime.now();
 
-    @OneToMany(targetEntity = Post.class, mappedBy = "author", fetch = FetchType.LAZY)
+
     @ToString.Exclude
+    List<PostDto> posts = new ArrayList<>();
 
-    List<Post> posts = new ArrayList<>();
-
-    public User(@NonNull @NotNull @Size(min = 2, max = 50) String firstName, @NonNull @NotNull @Size(min = 2, max = 50) String lastName, @NonNull @NotNull @Email String email, @NonNull @NotNull @Size(min = 5, max = 30) String username, @NonNull @NotNull @Size(min = 5, max = 30) String password, Set<Role> roles, @URL String imageUrl) {
+    public UserDto(@NonNull @NotNull @Size(min = 2, max = 50) String firstName, @NonNull @NotNull @Size(min = 2, max = 50) String lastName, @NonNull @NotNull @Email String email, @NonNull @NotNull @Size(min = 5, max = 30) String username, @NonNull @NotNull @Size(min = 5, max = 30) String password, Set<Role> roles, @URL String imageUrl) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;

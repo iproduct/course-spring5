@@ -2,7 +2,7 @@ package course.spring.restmvc.service;
 
 import course.spring.restmvc.exception.InvalidEntityDataException;
 import course.spring.restmvc.exception.NonexistingEntityException;
-import course.spring.restmvc.model.User;
+import course.spring.restmvc.model.entity.User;
 
 import java.util.List;
 

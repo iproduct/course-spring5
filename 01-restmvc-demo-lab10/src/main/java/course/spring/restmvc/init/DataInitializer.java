@@ -1,8 +1,8 @@
 package course.spring.restmvc.init;
 
-import course.spring.restmvc.model.Post;
+import course.spring.restmvc.model.entity.Post;
 import course.spring.restmvc.model.Role;
-import course.spring.restmvc.model.User;
+import course.spring.restmvc.model.entity.User;
 import course.spring.restmvc.service.PostService;
 import course.spring.restmvc.service.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -13,7 +13,6 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 import static course.spring.restmvc.model.Role.*;

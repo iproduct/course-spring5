@@ -3,7 +3,7 @@ package course.spring.restmvc.service.impl;
 import course.spring.restmvc.dao.UserRepository;
 import course.spring.restmvc.exception.InvalidEntityDataException;
 import course.spring.restmvc.exception.NonexistingEntityException;
-import course.spring.restmvc.model.User;
+import course.spring.restmvc.model.entity.User;
 import course.spring.restmvc.service.UserService;
 import course.spring.restmvc.util.ExceptionHandlingUtils;
 import lombok.extern.slf4j.Slf4j;

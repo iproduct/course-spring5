@@ -1,8 +1,6 @@
 package course.spring.restmvc.dao;
 
-import course.spring.restmvc.model.Post;
-import org.springframework.stereotype.Repository;
-import org.springframework.validation.annotation.Validated;
+import course.spring.restmvc.model.entity.Post;
 
 import javax.validation.Valid;
 import java.util.List;
