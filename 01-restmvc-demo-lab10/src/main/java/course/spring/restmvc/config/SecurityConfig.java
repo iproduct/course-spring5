@@ -21,11 +21,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .httpBasic(withDefaults())
                 .authorizeRequests()
+                    .antMatchers("/api/users/**").hasRole("ADMIN")
                     .antMatchers("/actuator/**").permitAll()
                     .antMatchers(HttpMethod.GET, "/api/posts/**").authenticated()
                     .antMatchers(HttpMethod.POST, "/api/posts").hasAnyRole("AUTHOR", "ADMIN")
                     .antMatchers(HttpMethod.PUT, "/api/posts/**").hasAnyRole("AUTHOR", "ADMIN")
                     .antMatchers(HttpMethod.DELETE).hasRole("ADMIN")
+
                 .and()
                     .formLogin()
                 .and()

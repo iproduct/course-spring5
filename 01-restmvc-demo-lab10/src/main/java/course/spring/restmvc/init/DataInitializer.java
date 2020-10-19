@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 
 import static course.spring.restmvc.model.Role.*;
 
-@Component
+//@Component
 @Slf4j
 public class DataInitializer implements CommandLineRunner {
     @Autowired

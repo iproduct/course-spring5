@@ -60,4 +60,11 @@ public class Post {
         this.keywords = keywords;
         this.imageUrl = imageUrl;
     }
+
+    public Post(long id, String title, String content, User user) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.author = user;
+    }
 }
