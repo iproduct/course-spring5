@@ -28,7 +28,8 @@ public class PostRepositoryMock implements PostRepository {
     @Override
     public Post create(Post post) {
         post.setId(String.format("%024d", nextId.incrementAndGet()));
-        return posts.put(post.getId(), post);
+        posts.put(post.getId(), post);
+        return post;
     }
 
     @Override
