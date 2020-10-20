@@ -27,5 +27,11 @@ public class HelloMVC {
         return String.format("Your JSESSIONID is: %s", jsessionid);
     }
 
+    @GetMapping("/hello-header")
+    public String sayHelloAcceptHeader(
+            @RequestHeader("accept") String acceptHeader
+    ) {
+        return String.format("ACCEPT header is: %s", acceptHeader);
+    }
 
 }
