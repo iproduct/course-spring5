@@ -1,6 +1,7 @@
 package course.spring.intro.dao;
 
 import course.spring.intro.model.Post;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,6 +10,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
+@Repository
 public class PostRepositoryMock implements PostRepository {
     private AtomicLong nextId = new AtomicLong(0L);
     private Map<String, Post> posts = new ConcurrentHashMap<>();
