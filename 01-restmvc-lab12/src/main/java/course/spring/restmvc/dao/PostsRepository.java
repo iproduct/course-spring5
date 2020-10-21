@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface PostsRepository {
     List<Post> findAll();
-    Post findById(Long id);
+    Post findById(String id);
     Post create(Post post);
     Post update(Post post);
-    Post deleteById(Long id);
+    Post deleteById(String id);
     long count();
 }
