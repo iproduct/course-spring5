@@ -7,8 +7,7 @@ import lombok.*;
 @RequiredArgsConstructor
 @AllArgsConstructor
 public class Article {
-    private static long nextId = 0L;
-    private Long id = ++nextId;
+    private Long id;
     @NonNull
     private String title;
     @NonNull
