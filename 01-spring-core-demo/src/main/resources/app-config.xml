@@ -12,7 +12,8 @@
           factory-method="createProvider" />
     <bean id="consumerFactory" class="course.spring.coredemo.consumer.ConsumerFactory"
           c:provider-ref="provider"/>
+<!--    <bean id="consumer" class="course.spring.coredemo.consumer.ConsoleArticleConsumer"-->
+<!--        factory-bean="consumerFactory" factory-method="createConsumer"/>-->
     <bean id="consumer" class="course.spring.coredemo.consumer.ConsoleArticleConsumer"
-        factory-bean="consumerFactory" factory-method="createConsumer"/>
-
+          p:provider-ref="provider" />
 </beans>

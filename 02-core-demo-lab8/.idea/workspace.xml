@@ -5,24 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="836fcf10-b2a1-40e5-9db2-bc9110c8eac1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../01-spring-core-demo/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01-spring-core-demo/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01-spring-core-demo/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01-spring-core-demo/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01-spring-core-demo/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01-spring-core-demo/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01-spring-core-demo/src/main/java/course/spring/coredemo/XMLAppContextDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01-spring-core-demo/src/main/java/course/spring/coredemo/consumer/ArticleConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01-spring-core-demo/src/main/java/course/spring/coredemo/consumer/ConsoleArticleConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01-spring-core-demo/src/main/java/course/spring/coredemo/model/Article.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01-spring-core-demo/src/main/java/course/spring/coredemo/provider/ArticleProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01-spring-core-demo/src/main/java/course/spring/coredemo/provider/MockArticleProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01-spring-core-demo/src/main/resources/app-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-intro-lab11/src/main/java/course/spring/intro/web/HelloMVC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-spring-intro-lab11/src/main/java/course/spring/intro/web/HelloMVC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,17 +111,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -177,6 +149,7 @@
       <workItem from="1575472337152" duration="4507000" />
       <workItem from="1575486108291" duration="520000" />
       <workItem from="1602692814207" duration="1496000" />
+      <workItem from="1603294583332" duration="41000" />
     </task>
     <servers />
   </component>

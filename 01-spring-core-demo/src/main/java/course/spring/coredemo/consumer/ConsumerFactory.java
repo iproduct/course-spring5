@@ -2,6 +2,7 @@ package course.spring.coredemo.consumer;
 
 import course.spring.coredemo.model.Article;
 import course.spring.coredemo.provider.ArticleProvider;
+import org.springframework.stereotype.Service;
 
 public class ConsumerFactory {
     private ArticleProvider provider;

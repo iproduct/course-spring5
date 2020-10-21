@@ -1,6 +1,7 @@
 package course.spring.coredemo.provider;
 
 import course.spring.coredemo.model.Article;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,6 +10,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
+@Repository("provider")
 public class MockArticleProvider implements ArticleProvider {
     private AtomicLong nextId = new AtomicLong(0L);
     private Map<Long, Article> articles = new ConcurrentHashMap<>();

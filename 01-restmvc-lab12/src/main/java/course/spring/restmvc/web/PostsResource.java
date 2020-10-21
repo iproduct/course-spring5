@@ -5,6 +5,7 @@ import course.spring.restmvc.model.Post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -36,4 +37,19 @@ public class PostsResource {
                         .buildAndExpand(created.getId()).toUri()
         ).body(created);
     }
+
+    @PutMapping("/{id}")
+    public Post updatePost(@PathVariable Long id, @RequestBody Post post) {
+//        if(!id.equals(post.getId())) {
+//            throw new InvalidEntityDataException(
+//                    String.format("Url ID:%d differs from body entity ID:%d", id, post.getId()));
+//        }
+        return postsRepository.update(post);
+    }
+
+    @DeleteMapping("/{id}")
+    public Post deletePost(@PathVariable String id) {
+        return postsRepository.deleteById(id);
+    }
+
 }
