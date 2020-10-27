@@ -21,12 +21,12 @@ public class PostController {
     private PostRepository postRepository;
 
     @GetMapping
-    List<Post> getAllPosts() {
+    public List<Post> getAllPosts() {
         return postRepository.findAll();
     }
 
     @GetMapping("/{id}")
-    ResponseEntity getAllPosts(@PathVariable("id") String id) {
+    public ResponseEntity getAllPosts(@PathVariable("id") String id) {
         Post found = postRepository.findById(id);
         if(found != null) {
             return ResponseEntity.ok(found);
@@ -37,7 +37,7 @@ public class PostController {
     }
 
     @PostMapping
-    ResponseEntity<Post> createPost(@RequestBody Post post) {
+    public ResponseEntity<Post> createPost(@RequestBody Post post) {
         Post created = postRepository.create(post);
         return ResponseEntity.created(
             ServletUriComponentsBuilder.fromCurrentRequest()
@@ -46,12 +46,12 @@ public class PostController {
     }
 
     @PutMapping("/{id}")
-    Post updatePost(@PathVariable("id") String id) {
+    public Post updatePost(@PathVariable("id") String id, @RequestBody Post post) {
         return null; // TODO implement it
     }
 
     @DeleteMapping("/{id}")
-    Post deletePost(@PathVariable("id") String id) {
+    public Post deletePost(@PathVariable("id") String id) {
         return null; // TODO implement it
     }
 }
