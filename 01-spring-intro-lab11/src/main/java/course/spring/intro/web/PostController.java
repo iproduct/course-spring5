@@ -44,4 +44,14 @@ public class PostController {
                 .pathSegment("{id}").buildAndExpand(created.getId()).toUri()
         ).body(created);
     }
+
+    @PutMapping("/{id}")
+    Post updatePost(@PathVariable("id") String id) {
+        return null; // TODO implement it
+    }
+
+    @DeleteMapping("/{id}")
+    Post deletePost(@PathVariable("id") String id) {
+        return null; // TODO implement it
+    }
 }
