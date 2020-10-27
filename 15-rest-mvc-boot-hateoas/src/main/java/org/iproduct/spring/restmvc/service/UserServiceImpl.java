@@ -16,6 +16,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 
+import javax.annotation.security.RolesAllowed;
 import javax.validation.Valid;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -95,7 +96,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-//    @RolesAllowed("ROLE_ADMIN")
+    @RolesAllowed("ADMIN")
     @Secured("ROLE_ADMIN")
     public User deleteUser(String id) {
         User old = repo.findById(id).orElseThrow( () ->
