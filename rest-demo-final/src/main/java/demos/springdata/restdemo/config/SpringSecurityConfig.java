@@ -5,6 +5,7 @@ import demos.springdata.restdemo.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -22,10 +23,11 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
         protected void configure (HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeRequests()
-//                .antMatchers(HttpMethod.POST, "/**").hasAnyRole("USER", "ADMIN")
-//                .antMatchers(HttpMethod.PUT, "/**").hasAnyRole("USER", "ADMIN")
-//                .antMatchers(HttpMethod.DELETE, "/**").hasRole("ADMIN")
-                .antMatchers("/**").permitAll();
+                .antMatchers(HttpMethod.POST, "/api/login").permitAll()
+                .antMatchers(HttpMethod.POST, "/**").hasAnyRole("USER", "ADMIN")
+                .antMatchers(HttpMethod.PUT, "/**").hasAnyRole("USER", "ADMIN")
+                .antMatchers(HttpMethod.DELETE, "/api/**").authenticated()
+                .antMatchers(HttpMethod.GET,"/**").permitAll();
 //                .and()
 //                .formLogin()
 //                .and()
