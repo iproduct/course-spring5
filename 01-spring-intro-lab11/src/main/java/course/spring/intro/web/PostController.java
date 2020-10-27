@@ -1,8 +1,10 @@
 package course.spring.intro.web;
 
 import course.spring.intro.dao.PostRepository;
+import course.spring.intro.exception.EntityNotFoundException;
 import course.spring.intro.model.ErrorResposnse;
 import course.spring.intro.model.Post;
+import course.spring.intro.service.PostService;
 import io.micrometer.core.ipc.http.HttpSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,16 +20,16 @@ import static org.springframework.http.HttpStatus.CREATED;
 @RequestMapping("/api/posts")
 public class PostController {
     @Autowired
-    private PostRepository postRepository;
+    private PostService postService;
 
     @GetMapping
     public List<Post> getAllPosts() {
-        return postRepository.findAll();
+        return postService.getAllPosts();
     }
 
     @GetMapping("/{id}")
     public ResponseEntity getAllPosts(@PathVariable("id") String id) {
-        Post found = postRepository.findById(id);
+        Post found = postService.getPostById(id);
         if(found != null) {
             return ResponseEntity.ok(found);
         } else {
@@ -38,7 +40,7 @@ public class PostController {
 
     @PostMapping
     public ResponseEntity<Post> createPost(@RequestBody Post post) {
-        Post created = postRepository.create(post);
+        Post created = postService.createPost(post);
         return ResponseEntity.created(
             ServletUriComponentsBuilder.fromCurrentRequest()
                 .pathSegment("{id}").buildAndExpand(created.getId()).toUri()
@@ -47,11 +49,12 @@ public class PostController {
 
     @PutMapping("/{id}")
     public Post updatePost(@PathVariable("id") String id, @RequestBody Post post) {
-        return null; // TODO implement it
+        return postService.updatePost(post);
     }
 
     @DeleteMapping("/{id}")
     public Post deletePost(@PathVariable("id") String id) {
-        return null; // TODO implement it
+        return postService.deletePostById(id);
     }
+
 }
