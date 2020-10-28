@@ -15,5 +15,5 @@
 <!--    <bean id="consumer" class="course.spring.coredemo.consumer.ConsoleArticleConsumer"-->
 <!--        factory-bean="consumerFactory" factory-method="createConsumer"/>-->
     <bean id="consumer" class="course.spring.coredemo.consumer.ConsoleArticleConsumer"
-          p:provider-ref="provider" />
+          p:provider-ref="provider" p:formatter-ref="formatter"/>
 </beans>

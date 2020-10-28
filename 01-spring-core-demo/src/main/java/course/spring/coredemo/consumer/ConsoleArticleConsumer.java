@@ -19,6 +19,11 @@ public class ConsoleArticleConsumer implements  ArticleConsumer {
         this.provider = provider;
     }
 
+    public ConsoleArticleConsumer(ArticleProvider provider, ArticleFormatter formatter) {
+        this.provider = provider;
+        this.formatter = formatter;
+    }
+
     public ArticleFormatter getFormatter() {
         return formatter;
     }

@@ -1,29 +1,33 @@
 package course.spring.coredemo.provider;
 
 import course.spring.coredemo.model.Article;
+import org.springframework.beans.BeansException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Repository;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicLong;
+import java.util.stream.IntStream;
 
 @Repository("provider")
-public class MockArticleProvider implements ArticleProvider{
+public class AlternativeArticleProvider implements ArticleProvider, ApplicationContextAware {
     private AtomicInteger nextId = new AtomicInteger(0);
     private Map<Integer, Article> articles = new ConcurrentHashMap<>();
+    private ApplicationContext ctx;
 
-    public MockArticleProvider() {
-        Article[] mockArticles = {
-                new Article("New Spring 5", "WebFlux is here ..."),
-                new Article("DI Basics", "There are many ways to DI in Spring ..."),
-                new Article("Reactive Spring", "WebFlux is based on project Ractor  ...")
-        };
+    public AlternativeArticleProvider() {
+    }
 
-        Arrays.stream(mockArticles).forEach(this::addArticle);
+    @PostConstruct
+    public void init() {
+        IntStream.range(0,5).mapToObj(n -> {
+            return ctx.getBean("post", Article.class);
+        }).forEach(this::addArticle);
     }
 
     @Override
@@ -38,8 +42,13 @@ public class MockArticleProvider implements ArticleProvider{
     }
 
     public static ArticleProvider createProvider() {
-        MockArticleProvider provider = new MockArticleProvider();
+        AlternativeArticleProvider provider = new AlternativeArticleProvider();
         provider.addArticle(new Article("Created by factory method", "Created by factory method content ..."));
         return provider;
+    }
+
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        ctx = applicationContext;
     }
 }
