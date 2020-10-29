@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, mappings, info, metrics, threaddump, heapdump, shutdown, beans
+  endpoint:
+    health:
+      show-details: always
+info:
+  app:
+    name: REST MVC Demo
+    description: REST MVC demo with Spring Boot and Spring Data JPA
+    version: 1.0-SNAPSHOT
+
+
