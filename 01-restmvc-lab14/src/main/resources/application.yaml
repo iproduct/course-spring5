@@ -15,4 +15,35 @@ info:
     description: REST MVC demo with Spring Boot and Spring Data JPA
     version: 1.0-SNAPSHOT
 
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/myblogs2
+    username: postgres
+    password: root
+    hikari:
+      maximum-pool-size: 10
+    schema:
+    properties:
+      javax:
+        persistence:
+          schema-generation:
+            scripts:
+              action: create
+              create-target: create.sql
+              create-source: metadata
 
+
+#javax:
+#  persistence:
+#    schema-generation:
+#      database:
+#        action: create
+#
+#spring.datasource.initialization-mode = always.data=classpath:insert-data.sql
