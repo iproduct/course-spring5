@@ -27,6 +27,7 @@ spring:
     url: jdbc:postgresql://localhost:5432/myblogs2
     username: postgres
     password: root
+    driver-class-name: org.postgresql.Driver
     hikari:
       maximum-pool-size: 10
     schema:
