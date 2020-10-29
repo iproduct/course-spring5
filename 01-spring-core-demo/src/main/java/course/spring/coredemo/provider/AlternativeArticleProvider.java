@@ -2,8 +2,10 @@ package course.spring.coredemo.provider;
 
 import course.spring.coredemo.model.Article;
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;
@@ -14,7 +16,9 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
-@Repository("provider")
+//@Primary
+@Repository("alternative")
+@Qualifier("alternativeProvider")
 public class AlternativeArticleProvider implements ArticleProvider, ApplicationContextAware {
     private AtomicInteger nextId = new AtomicInteger(0);
     private Map<Integer, Article> articles = new ConcurrentHashMap<>();

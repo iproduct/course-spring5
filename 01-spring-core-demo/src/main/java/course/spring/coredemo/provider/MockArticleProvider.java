@@ -1,6 +1,8 @@
 package course.spring.coredemo.provider;
 
 import course.spring.coredemo.model.Article;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -11,7 +13,9 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 
+//@Primary
 @Repository("provider")
+@Qualifier("mockProvider")
 public class MockArticleProvider implements ArticleProvider{
     private AtomicInteger nextId = new AtomicInteger(0);
     private Map<Integer, Article> articles = new ConcurrentHashMap<>();

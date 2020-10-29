@@ -7,9 +7,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.util.Set;
+
+@Service("presenter")
 public class ConsoleArticleConsumer implements  ArticleConsumer {
+    @Autowired
+    private Set<ArticleProvider> providers;
     private ArticleProvider provider;
     private String message;
+    @Autowired
     private ArticleFormatter formatter;
 
     public ConsoleArticleConsumer() {
@@ -62,7 +68,7 @@ public class ConsoleArticleConsumer implements  ArticleConsumer {
     @Override
     public void consume() {
         System.out.println(message);
-        provider.getAticles().forEach(article -> {
+        providers.stream().flatMap(prov -> prov.getAticles().stream()).forEach(article -> {
             System.out.println(formatter.formatArticle(article));
         });
     }
