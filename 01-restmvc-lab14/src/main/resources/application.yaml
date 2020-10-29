@@ -21,7 +21,7 @@ spring:
     show-sql: true
     generate-ddl: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
   datasource:
     platform: postgres
     url: jdbc:postgresql://localhost:5432/myblogs2
@@ -30,15 +30,17 @@ spring:
     hikari:
       maximum-pool-size: 10
     schema:
-    properties:
-      javax:
-        persistence:
-          schema-generation:
-            scripts:
-              action: create
-              create-target: create.sql
-              create-source: metadata
-
+#    properties:
+#      javax:
+#        persistence:
+#          schema-generation:
+#            scripts:
+#              action: create
+#              create-target: create.sql
+#              create-source: metadata
+    initialization-mode: always
+    data:
+      classpath: create.sql
 
 #javax:
 #  persistence:

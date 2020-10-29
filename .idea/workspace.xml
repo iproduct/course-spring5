@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0001d11-907d-4bf0-af89-4f1ebef4eac9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/uploads/IMG_0330_m - Copy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/uploads/controller_middle.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/09-webmvc-jsp-hibernate-annotations/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/09-webmvc-jsp-hibernate-annotations/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/09-webmvc-jsp-hibernate-annotations/src/main/java/org/iproduct/spring/webmvc/dao/ArticleDaoHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/09-webmvc-jsp-hibernate-annotations/src/main/java/org/iproduct/spring/webmvc/dao/ArticleDaoHibernate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/12-bookstore-jpa/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/12-bookstore-jpa/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/12-streaming-demos-lab4/src/main/java/org/iproduct/spring/streamingdemoslab4/client/QuotesClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/12-streaming-demos-lab4/src/main/java/org/iproduct/spring/streamingdemoslab4/client/QuotesClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-restmvc-lab14/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-restmvc-lab14/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/01-restmvc-lab14/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,18 +19,21 @@
       <ProjectState />
     </projectState>
   </component>
-  <component name="GOROOT" path="D:/CourseGO/go" />
+  <component name="GOROOT" path="$PROJECT_DIR$/../../../CourseGO/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KotlinMultiplatform">
+    <executables />
   </component>
   <component name="ProjectId" id="1VA2gZlkY74TkP684IC1QiUNZ1A" />
   <component name="ProjectViewState">
     <option name="abbreviatePackageNames" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -79,18 +79,6 @@
       </method>
     </configuration>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -104,6 +92,8 @@
       <workItem from="1576681697778" duration="187000" />
       <workItem from="1582811498695" duration="1547000" />
       <workItem from="1582818866167" duration="132000" />
+      <workItem from="1603967261825" duration="6000" />
+      <workItem from="1603967284101" duration="1000" />
     </task>
     <servers />
   </component>
