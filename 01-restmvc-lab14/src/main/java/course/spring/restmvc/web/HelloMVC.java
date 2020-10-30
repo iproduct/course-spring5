@@ -4,6 +4,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.Enumeration;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -42,6 +43,16 @@ public class HelloMVC {
                 });
         return headers;
     }
+
+    @GetMapping("/hello-cookie")
+    public String getJSessionId(
+            @CookieValue(name = "JSESSIONID", required = false,
+                defaultValue = "No session available")String sessionId,
+            HttpSession session){
+        session.invalidate();
+        return String.format("Session ID: %s", sessionId);
+    }
+
 
 
 
