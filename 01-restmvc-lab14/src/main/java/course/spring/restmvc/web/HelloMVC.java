@@ -3,6 +3,7 @@ package course.spring.restmvc.web;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/v2")
 public class HelloMVC {
 
     @GetMapping("/hello")
@@ -17,5 +18,7 @@ public class HelloMVC {
                               @MatrixVariable(name="mode", pathVar="postId") String postMode) {
         return String.format("User: %d in mode: %s -> Post: %d in mode: %s%n", userId, userMode, postId, postMode);
     }
+
+
 
 }

@@ -25,7 +25,7 @@ public class DbCreatorEnvironmentPostProcessor implements EnvironmentPostProcess
         String dbUrl = environment.getProperty("spring.datasource.url");
         String username = environment.getProperty("spring.datasource.username");
         String password = environment.getProperty("spring.datasource.password");
-        String dbDriver = environment.getProperty("spring.datasource.driver-class-name");
+//        String dbDriver = environment.getProperty("spring.datasource.driver-class-name");
 
         Pattern dbUrlWithoutDbNamePattern = Pattern.compile("((.*)//([\\w.]+)(:\\d+)?)/(.*)");
         Matcher matcher = dbUrlWithoutDbNamePattern.matcher(dbUrl);
