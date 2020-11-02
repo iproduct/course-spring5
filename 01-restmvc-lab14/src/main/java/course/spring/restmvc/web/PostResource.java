@@ -44,14 +44,15 @@ public class PostResource {
                 String.format("Post with ID:%s not found.", id)));
         if(!found.getId().equals(post.getId())) {
            throw new InvalidEntityDataException(
-                    String.format("Post with ID:%d is different from resource URL ID: %d.", post.getId(), id));
+                    String.format("Post ID:%d is different from resource URL ID: %d.", post.getId(), id));
         }
         return postRepo.save(post);
     }
 
     @DeleteMapping("/{id}")
     public Post deletePost(@PathVariable("id") Long id) {
-         Post deleted = postRepo.findById(id).orElseThrow();
+         Post deleted = postRepo.findById(id).orElseThrow(() -> new EntityNotFoundException(
+                 String.format("Post with ID:%s not found.", id)));
          postRepo.deleteById(id);
          return deleted;
     }
@@ -60,6 +61,12 @@ public class PostResource {
     public ResponseEntity<ErrorResponse> handleEntityNotFound(EntityNotFoundException ex) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(
                 new ErrorResponse(HttpStatus.NOT_FOUND.value(), ex.getMessage())
+        );
+    }
+    @ExceptionHandler
+    public ResponseEntity<ErrorResponse> handleInvalidEntityData(InvalidEntityDataException ex) {
+        return ResponseEntity.badRequest().body(
+                new ErrorResponse(HttpStatus.BAD_REQUEST.value(), ex.getMessage(), ex.getViolations())
         );
     }
 
