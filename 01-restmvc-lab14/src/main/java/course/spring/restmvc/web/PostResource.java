@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -33,9 +34,11 @@ public class PostResource {
     }
 
     @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    public Post addPost(@RequestBody Post post) {
-        return postRepo.save(post);
+    public ResponseEntity<Post> addPost(@RequestBody Post post) {
+        Post created = postRepo.save(post);
+        return ResponseEntity.created(
+            ServletUriComponentsBuilder.fromCurrentRequest().pathSegment("{id}").buildAndExpand(created.getId()).toUri()
+        ).body(created);
     }
 
     @PutMapping("/{id}")
@@ -57,17 +60,5 @@ public class PostResource {
          return deleted;
     }
 
-    @ExceptionHandler
-    public ResponseEntity<ErrorResponse> handleEntityNotFound(EntityNotFoundException ex) {
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(
-                new ErrorResponse(HttpStatus.NOT_FOUND.value(), ex.getMessage())
-        );
-    }
-    @ExceptionHandler
-    public ResponseEntity<ErrorResponse> handleInvalidEntityData(InvalidEntityDataException ex) {
-        return ResponseEntity.badRequest().body(
-                new ErrorResponse(HttpStatus.BAD_REQUEST.value(), ex.getMessage(), ex.getViolations())
-        );
-    }
 
 }
