@@ -21,7 +21,7 @@ spring:
     show-sql: true
     generate-ddl: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
   datasource:
     platform: postgres
     url: jdbc:postgresql://localhost:5432/myblogs2

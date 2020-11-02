@@ -26,7 +26,7 @@ public class Post {
     @NonNull
     private String author;
     @NonNull
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     private Set<String> keywords = new HashSet<>();
     LocalDateTime created = LocalDateTime.now();
     LocalDateTime modified = LocalDateTime.now();
