@@ -37,7 +37,7 @@ public class PostResource {
     @PutMapping("/{id}")
     public Post updatePost(@PathVariable("id") Long id, @RequestBody Post post) {
         Post found = postService.getPostById(id);
-        if(!found.getId().equals(post.getId())) {
+        if(!found.getId().equals(post.getId())) {         // or simpler alternative - use ResponseStatusException
            throw new InvalidEntityDataException(
                     String.format("Post ID:%d is different from resource URL ID: %d.", post.getId(), id));
         }
