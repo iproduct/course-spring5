@@ -6,11 +6,15 @@ import course.spring.restmvc.exception.EntityNotFoundException;
 import course.spring.restmvc.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.Collection;
 
 @Service
+@Transactional
 public class PostServiceImpl implements PostService {
     @Autowired
     private PostRepository postRepo;
@@ -21,6 +25,7 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
+    @Transactional(propagation = Propagation.REQUIRES_NEW, readOnly = true)
     public Post getPostById(Long id) {
         return postRepo.findById(id).orElseThrow(() -> new EntityNotFoundException(
                 String.format("Post with ID:%s not found.", id)));
