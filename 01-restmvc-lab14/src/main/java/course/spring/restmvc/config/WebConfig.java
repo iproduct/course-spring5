@@ -12,7 +12,7 @@ import org.springframework.web.util.UrlPathHelper;
 
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
-    @Value("${server.servlet.context-path}")
+    @Value("${server.servlet.context-path:'/'}")
     private String baseUrl;
 
     @Override
