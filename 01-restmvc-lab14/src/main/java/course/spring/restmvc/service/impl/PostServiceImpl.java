@@ -7,6 +7,7 @@ import course.spring.restmvc.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.Collection;
 
 @Service
@@ -27,17 +28,25 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public Post addPost(Post post) {
-        return null;
+        post.setId(null);
+        post.setCreated(LocalDateTime.now());
+        post.setModified(LocalDateTime.now());
+        return postRepo.save(post);
     }
 
     @Override
     public Post updatePost(Post post) {
-        return null;
+        Post found = getPostById(post.getId());
+        post.setModified(LocalDateTime.now());
+        return postRepo.save(post);
     }
 
     @Override
     public Post deletePost(Long id) {
-        return null;
+        Post deleted = postRepo.findById(id).orElseThrow(() -> new EntityNotFoundException(
+                String.format("Post with ID:%s not found.", id)));
+        postRepo.deleteById(id);
+        return deleted;
     }
 
     @Override
