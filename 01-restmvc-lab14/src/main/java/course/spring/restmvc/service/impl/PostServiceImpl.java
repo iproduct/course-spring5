@@ -56,6 +56,6 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public long getCount() {
-        return 0;
+        return postRepo.count();
     }
 }

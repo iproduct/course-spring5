@@ -26,7 +26,8 @@ public class Post {
 
     @NonNull
     @ManyToOne(optional = false)
-    @JoinColumn(name="author_id", nullable = false, updatable = false, referencedColumnName = "id", foreignKey = @ForeignKey(name="fkPostsUsersId"))
+    @JoinColumn(name="author_id", nullable = false, updatable = false, referencedColumnName = "id",
+            foreignKey = @ForeignKey(name="fkPostsUsersId"))
     private User author;
 
     @NonNull
