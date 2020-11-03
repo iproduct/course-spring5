@@ -19,10 +19,12 @@ import java.util.stream.Collectors;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class User implements UserDetails {
     @Id
     @SequenceGenerator(name = "userSeqGen", sequenceName = "userSeq", initialValue = 1, allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "userSeqGen")
+    @EqualsAndHashCode.Include
     private Long id;
     @NonNull
     private String firstName;

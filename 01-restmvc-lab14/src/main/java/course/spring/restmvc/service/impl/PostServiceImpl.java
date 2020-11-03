@@ -36,6 +36,8 @@ public class PostServiceImpl implements PostService {
         post.setId(null);
         post.setCreated(LocalDateTime.now());
         post.setModified(LocalDateTime.now());
+        post.getAuthor().getPosts().add(post);
+        post.getCategories().forEach(category -> category.getPosts().add(post));
         return postRepo.save(post);
     }
 
