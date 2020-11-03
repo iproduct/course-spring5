@@ -33,6 +33,7 @@ public class User {
     @NonNull
     private String password;
     private boolean active = true;
+
     @ElementCollection(fetch = FetchType.EAGER)
     private Set<Role> roles = Set.of(Role.READER);
 
@@ -42,5 +43,14 @@ public class User {
     LocalDateTime created = LocalDateTime.now();
     LocalDateTime modified = LocalDateTime.now();
 
+    public User(@NonNull String firstName, @NonNull String lastName, @NonNull String email,
+                @NonNull String username, @NonNull String password, Set<Role> roles) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.username = username;
+        this.password = password;
+        this.roles = roles;
     }
 }
+

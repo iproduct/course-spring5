@@ -3,9 +3,10 @@ package course.spring.restmvc.service;
 import course.spring.restmvc.entity.User;
 
 import java.util.Collection;
+import java.util.List;
 
 public interface UserService {
-    Collection<User>  getAllUsers();
+    List<User> getAllUsers();
     User getUserById(Long id);
     User getUserByUsername(String username);
     User addUser(User user);

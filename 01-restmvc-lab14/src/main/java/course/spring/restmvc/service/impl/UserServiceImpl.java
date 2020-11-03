@@ -11,20 +11,20 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.Collection;
+import java.util.List;
 
 @Service
-@Transactional
+@Transactional(readOnly = true)
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepo;
 
     @Override
-    public Collection<User> getAllUsers() {
+    public List<User> getAllUsers() {
         return userRepo.findAll();
     }
 
     @Override
-    @Transactional(propagation = Propagation.REQUIRES_NEW, readOnly = true)
     public User getUserById(Long id) {
         return userRepo.findById(id).orElseThrow(() -> new EntityNotFoundException(
                 String.format("User with ID:%s not found.", id)));
@@ -37,6 +37,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional
     public User addUser(User user) {
         user.setId(null);
         user.setCreated(LocalDateTime.now());
@@ -45,6 +46,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional
     public User updateUser(User user) {
         User found = getUserById(user.getId());
         user.setModified(LocalDateTime.now());
@@ -52,6 +54,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional
     public User deleteUser(Long id) {
         User deleted = userRepo.findById(id).orElseThrow(() -> new EntityNotFoundException(
                 String.format("User with ID:%s not found.", id)));
