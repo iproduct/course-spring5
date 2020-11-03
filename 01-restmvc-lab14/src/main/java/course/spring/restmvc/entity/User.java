@@ -42,6 +42,7 @@ public class User implements UserDetails {
     private boolean active = true;
 
     @ElementCollection(fetch = FetchType.EAGER)
+    @Enumerated(value = EnumType.STRING)
     private Set<Role> roles = Set.of(Role.READER);
 
     @OneToMany(mappedBy = "author", cascade = CascadeType.REMOVE)
