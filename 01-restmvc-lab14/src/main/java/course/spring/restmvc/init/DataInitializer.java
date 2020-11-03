@@ -18,10 +18,10 @@ public class DataInitializer implements CommandLineRunner {
     public void run(String... args) throws Exception {
         if(postRepo.count() == 0) {
             List.of(
-               new Post("New in Spring", "Spring 5 is here ...", "Trayan Iliev", Set.of("spring", "java", "webflux")),
-               new Post("DI in Spring", "Many ways to do it ...", "Trayan Iliev", Set.of("spring", "di")),
-               new Post("Reactive Web Programmiing", "Webflux uses Reactor ...", "Trayan Iliev", Set.of("spring", "reactor", "webflux")),
-               new Post("JPA Made Easy", "Spring Data DSL automates JPQL creation ...", "Trayan Iliev", Set.of("spring", "spring data", "jpql"))
+                    new Post("New in Spring", "Spring 5 is here ...", "Trayan Iliev", Set.of("spring", "java", "webflux")),
+                    new Post("DI in Spring", "Many ways to do it ...", "Trayan Iliev", Set.of("spring", "di")),
+                    new Post("Reactive Web Programmiing", "Webflux uses Reactor ...", "Trayan Iliev", Set.of("spring", "reactor", "webflux")),
+                    new Post("JPA Made Easy", "Spring Data DSL automates JPQL creation ...", "Trayan Iliev", Set.of("spring", "spring data", "jpql"))
             ).forEach(postRepo::save);
         }
     }

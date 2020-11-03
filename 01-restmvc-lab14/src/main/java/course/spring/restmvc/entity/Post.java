@@ -23,15 +23,20 @@ public class Post {
     private String title;
     @NonNull
     private String content;
+
     @NonNull
-    private String author;
+    @ManyToOne(optional = false)
+    @JoinColumn(name="author_id", nullable = false, updatable = false, referencedColumnName = "id", foreignKey = @ForeignKey(name="fkPostsUsersId"))
+    private User author;
+
     @NonNull
     @ElementCollection(fetch = FetchType.EAGER)
     private Set<String> keywords = new HashSet<>();
+
     LocalDateTime created = LocalDateTime.now();
     LocalDateTime modified = LocalDateTime.now();
 
-    public Post(@NonNull String title, @NonNull String content, @NonNull String author, @NonNull Set<String> keywords) {
+    public Post(@NonNull String title, @NonNull String content, @NonNull User author, @NonNull Set<String> keywords) {
         this.title = title;
         this.content = content;
         this.author = author;
