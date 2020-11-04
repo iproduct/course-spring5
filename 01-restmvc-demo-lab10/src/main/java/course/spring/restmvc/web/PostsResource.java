@@ -42,6 +42,7 @@ public class PostsResource {
     @PostMapping
     public ResponseEntity<Post> createPost(@RequestBody Post post, HttpServletRequest request) {
         Post created = postService.createPost(post);
+
         return ResponseEntity.created(
 //                ServletUriComponentsBuilder.fromRequest(request).pathSegment("{id}").build(created.getId())
 //                UriComponentsBuilder.fromUriString(request.getRequestURL().toString()).pathSegment("{id}").build(created.getId())
