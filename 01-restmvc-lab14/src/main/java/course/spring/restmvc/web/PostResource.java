@@ -6,9 +6,12 @@ import course.spring.restmvc.exception.InvalidEntityDataException;
 import course.spring.restmvc.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.util.Collection;
 
 @RestController
@@ -27,7 +30,8 @@ public class PostResource {
     }
 
     @PostMapping
-    public ResponseEntity<Post> addPost(@RequestBody Post post) {
+    public ResponseEntity<Post> addPost(@Valid @RequestBody Post post, Errors errors ) {
+
         Post created = postService.addPost(post);
         return ResponseEntity.created(
             ServletUriComponentsBuilder.fromCurrentRequest().pathSegment("{id}").buildAndExpand(created.getId()).toUri()

@@ -25,6 +25,9 @@ public class Post {
     @NonNull
     private String title;
     @NonNull
+    @Lob
+    @Basic(optional = false, fetch = FetchType.LAZY)
+    @Column(nullable = false)
     private String content;
 
     @NonNull

@@ -31,6 +31,11 @@ public class Category {
     @ToString.Exclude
     @JsonIgnore
     @ManyToMany
+    @JoinTable(
+            name = "categories_posts",
+            joinColumns = @JoinColumn(name = "category_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "post_id", referencedColumnName = "id")
+    )
 //    @JoinColumn(name="author_id", nullable = false, updatable = false, referencedColumnName = "id",
 //            foreignKey = @ForeignKey(name="fkPostsUsersId"))
     private Set<Post> posts = new LinkedHashSet<>();
