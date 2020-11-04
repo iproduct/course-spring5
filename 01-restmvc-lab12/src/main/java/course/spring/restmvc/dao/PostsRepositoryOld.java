@@ -4,7 +4,7 @@ import course.spring.restmvc.model.Post;
 
 import java.util.List;
 
-public interface PostsRepository {
+public interface PostsRepositoryOld {
     List<Post> findAll();
     Post findById(String id);
     Post create(Post post);

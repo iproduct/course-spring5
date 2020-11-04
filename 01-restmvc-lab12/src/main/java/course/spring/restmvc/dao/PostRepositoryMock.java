@@ -11,7 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
 @Repository
-public class PostRepositoryMock implements PostsRepository {
+public class PostRepositoryMock implements PostsRepositoryOld {
     private AtomicLong nextId = new AtomicLong(0L);
     private Map<String, Post> posts = new ConcurrentHashMap<>();
 
