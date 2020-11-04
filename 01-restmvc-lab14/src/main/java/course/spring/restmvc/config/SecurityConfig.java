@@ -11,6 +11,8 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
+import static org.springframework.http.HttpMethod.GET;
+
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -18,8 +20,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeRequests()
+                .antMatchers(GET, "/api/**").permitAll()
                 .antMatchers("/api/**").authenticated()
-                .antMatchers(HttpMethod.GET, "**").permitAll()
+                .antMatchers(GET, "**").permitAll()
                 .and()
                     .httpBasic()
                 .and()

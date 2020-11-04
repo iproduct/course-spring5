@@ -1,6 +1,7 @@
 package course.spring.restmvc.service;
 
 import course.spring.restmvc.entity.Post;
+import course.spring.restmvc.entity.User;
 
 import java.util.Collection;
 

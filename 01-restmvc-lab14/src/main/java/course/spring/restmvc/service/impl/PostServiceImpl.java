@@ -2,6 +2,7 @@ package course.spring.restmvc.service.impl;
 
 import course.spring.restmvc.dao.PostRepository;
 import course.spring.restmvc.entity.Post;
+import course.spring.restmvc.entity.User;
 import course.spring.restmvc.exception.EntityNotFoundException;
 import course.spring.restmvc.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;

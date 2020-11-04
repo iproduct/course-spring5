@@ -1,17 +1,18 @@
 package course.spring.restmvc.web;
 
 import course.spring.restmvc.entity.Post;
-import course.spring.restmvc.exception.EntityNotFoundException;
+import course.spring.restmvc.entity.User;
 import course.spring.restmvc.exception.InvalidEntityDataException;
 import course.spring.restmvc.service.PostService;
+import course.spring.restmvc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.BindingResult;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
+import java.security.Principal;
 import java.util.Collection;
 
 import static course.spring.restmvc.util.ErrorHandlingUtil.handleErrors;
@@ -21,6 +22,8 @@ import static course.spring.restmvc.util.ErrorHandlingUtil.handleErrors;
 public class PostResource {
     @Autowired
     private PostService postService;
+    @Autowired
+    private UserService userService;
     @GetMapping
     public Collection<Post> getAllPosts() {
         return postService.getAllPosts();
@@ -32,8 +35,9 @@ public class PostResource {
     }
 
     @PostMapping
-    public ResponseEntity<Post> addPost(@Valid @RequestBody Post post, Errors errors ) {
+    public ResponseEntity<Post> addPost(@Valid @RequestBody Post post, Errors errors, Principal principal) {
         handleErrors(errors);
+        post.setAuthor(userService.getUserByUsername(principal.getName()));
         Post created = postService.addPost(post);
         return ResponseEntity.created(
             ServletUriComponentsBuilder.fromCurrentRequest().pathSegment("{id}").buildAndExpand(created.getId()).toUri()

@@ -30,7 +30,6 @@ public class Post {
     @Column(nullable = false)
     private String content;
 
-    @NonNull
     @ManyToOne(optional = false)
     @JoinColumn(name="author_id", nullable = false, updatable = false, referencedColumnName = "id",
             foreignKey = @ForeignKey(name="fkPostsUsersId"))
