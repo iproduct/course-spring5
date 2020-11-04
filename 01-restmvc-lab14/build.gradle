@@ -40,7 +40,9 @@ dependencies {
 	implementation "io.springfox:springfox-boot-starter:3.0.0"
 	implementation 'io.springfox:springfox-swagger-ui:3.0.0'
 
-	implementation 'org.modelmapper:modelmapper:2.3.8'
+	compile 'com.github.jmnarloch:modelmapper-spring-boot-starter:1.1.0'
+//	implementation 'org.modelmapper:modelmapper:2.3.8'
+//	implementation group: 'com.github.chhsiao90', name: 'modelmapper-module-jsr310', version: '1.2.1', ext: 'pom'
 
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'

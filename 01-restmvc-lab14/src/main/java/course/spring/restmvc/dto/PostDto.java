@@ -1,23 +1,18 @@
 package course.spring.restmvc.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import course.spring.restmvc.entity.Category;
-import course.spring.restmvc.entity.User;
 import lombok.*;
 
-import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 //@Data
 //@NoArgsConstructor
 //@AllArgsConstructor
 //@EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class PostDTO {
+public class PostDto {
     @EqualsAndHashCode.Include
     private Long id;
     private String title;
@@ -29,7 +24,7 @@ public class PostDTO {
     private LocalDateTime created = LocalDateTime.now();
     private LocalDateTime modified = LocalDateTime.now();
 
-    public PostDTO() {
+    public PostDto() {
     }
 
     public Set<String> getCategoryTitles() {
@@ -99,8 +94,8 @@ public class PostDTO {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof PostDTO)) return false;
-        PostDTO postDTO = (PostDTO) o;
+        if (!(o instanceof PostDto)) return false;
+        PostDto postDTO = (PostDto) o;
         return Objects.equals(id, postDTO.id);
     }
 

@@ -3,7 +3,7 @@ package course.spring.restmvc.service.impl;
 import course.spring.restmvc.dao.CategoryRepository;
 import course.spring.restmvc.dao.PostRepository;
 import course.spring.restmvc.dao.UserRepository;
-import course.spring.restmvc.dto.PostDTO;
+import course.spring.restmvc.dto.PostDto;
 import course.spring.restmvc.entity.Category;
 import course.spring.restmvc.entity.Post;
 import course.spring.restmvc.entity.User;
@@ -14,7 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -29,6 +28,9 @@ import java.util.Set;
 @Transactional
 public class PostServiceImpl implements PostService {
     @Autowired
+    private ModelMapper mapper;
+
+    @Autowired
     private PostRepository postRepo;
     @Autowired
     private CategoryRepository categoryRepo;
@@ -41,7 +43,7 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    @Transactional(propagation = Propagation.REQUIRES_NEW, readOnly = true)
+    @Transactional(readOnly = true)
     public Post getPostById(Long id) {
         return postRepo.findById(id).orElseThrow(() -> new EntityNotFoundException(
                 String.format("Post with ID:%s not found.", id)));
@@ -58,22 +60,23 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public Post addPostDto(@Valid PostDTO postDto) {
-        ModelMapper mapper = new ModelMapper();
-        Post post = mapper.map(postDto, Post.class);
+    public Post addPostDto(@Valid PostDto postDto) {
+        Post post = getPostAndResolvePostCategories(postDto);
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (!(authentication instanceof AnonymousAuthenticationToken)) {
             Optional<User> author = userRepo.findByUsername(authentication.getName());
             post.setAuthor(author.get());
         }
-        Set<Category> categories = categoryRepo.findByTitleInIgnoreCase(postDto.getCategoryTitles());
-        post.setCategories(categories);
+
         return addPost(post);
     }
 
     @Override
-    public Post updatePost(Post post) {
-        Post found = getPostById(post.getId());
+    public Post updatePost(PostDto postDto) {
+        Post oldPost = getPostById(postDto.getId());
+        oldPost.getCategories().forEach(category -> category.getPosts().remove(oldPost));
+        Post post = getPostAndResolvePostCategories(postDto);
+        post.getCategories().forEach(category -> category.getPosts().add(post));
         post.setModified(LocalDateTime.now());
         return postRepo.save(post);
     }
@@ -82,6 +85,7 @@ public class PostServiceImpl implements PostService {
     public Post deletePost(Long id) {
         Post deleted = postRepo.findById(id).orElseThrow(() -> new EntityNotFoundException(
                 String.format("Post with ID:%s not found.", id)));
+        deleted.getCategories().forEach(category -> category.getPosts().remove(deleted));
         postRepo.deleteById(id);
         return deleted;
     }
@@ -89,5 +93,13 @@ public class PostServiceImpl implements PostService {
     @Override
     public long getCount() {
         return postRepo.count();
+    }
+
+    // Helper methods
+    private Post getPostAndResolvePostCategories(PostDto postDto) {
+        Post post = mapper.map(postDto, Post.class);
+        Set<Category> categories = categoryRepo.findByTitleInIgnoreCase(postDto.getCategoryTitles());
+        post.setCategories(categories);
+        return post;
     }
 }

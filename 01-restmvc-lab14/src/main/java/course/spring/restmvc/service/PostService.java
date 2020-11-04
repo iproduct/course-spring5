@@ -1,6 +1,6 @@
 package course.spring.restmvc.service;
 
-import course.spring.restmvc.dto.PostDTO;
+import course.spring.restmvc.dto.PostDto;
 import course.spring.restmvc.entity.Post;
 
 import javax.validation.Valid;
@@ -10,8 +10,8 @@ public interface PostService {
     Collection<Post>  getAllPosts();
     Post getPostById(Long id);
     Post addPost(Post post);
-    Post addPostDto(@Valid PostDTO postDto);
-    Post updatePost(Post post);
+    Post addPostDto(@Valid PostDto postDto);
+    Post updatePost(@Valid PostDto post);
     Post deletePost(Long id);
     long getCount();
 
