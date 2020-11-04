@@ -14,6 +14,8 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import javax.validation.Valid;
 import java.util.Collection;
 
+import static course.spring.restmvc.util.ErrorHandlingUtil.handleErrors;
+
 @RestController
 @RequestMapping("/api/posts")
 public class PostResource {
@@ -31,7 +33,7 @@ public class PostResource {
 
     @PostMapping
     public ResponseEntity<Post> addPost(@Valid @RequestBody Post post, Errors errors ) {
-
+        handleErrors(errors);
         Post created = postService.addPost(post);
         return ResponseEntity.created(
             ServletUriComponentsBuilder.fromCurrentRequest().pathSegment("{id}").buildAndExpand(created.getId()).toUri()
