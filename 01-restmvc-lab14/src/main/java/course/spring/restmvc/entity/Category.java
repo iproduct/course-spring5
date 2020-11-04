@@ -24,8 +24,8 @@ public class Category {
     @EqualsAndHashCode.Include
     private Long id;
     @NonNull
+    @Column(unique = true)
     private String title;
-    @NonNull
     private String description;
 
     @ToString.Exclude
@@ -43,4 +43,8 @@ public class Category {
     LocalDateTime created = LocalDateTime.now();
     LocalDateTime modified = LocalDateTime.now();
 
+    public Category(@NonNull String title, String description) {
+        this.title = title;
+        this.description = description;
+    }
 }

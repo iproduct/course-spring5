@@ -17,7 +17,7 @@ public class ErrorResponse {
     List<String> violations = new ArrayList<>();
     LocalDateTime timestamp = LocalDateTime.now();
 
-    public ErrorResponse(int status, @NonNull String message, List<String> violations) {
+    public ErrorResponse(int status, String message, List<String> violations) {
         this.status = status;
         this.message = message;
         this.violations = violations;

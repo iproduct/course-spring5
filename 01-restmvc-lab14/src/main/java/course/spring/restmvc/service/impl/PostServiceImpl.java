@@ -1,6 +1,8 @@
 package course.spring.restmvc.service.impl;
 
+import course.spring.restmvc.dao.CategoryRepository;
 import course.spring.restmvc.dao.PostRepository;
+import course.spring.restmvc.entity.Category;
 import course.spring.restmvc.entity.Post;
 import course.spring.restmvc.entity.User;
 import course.spring.restmvc.exception.EntityNotFoundException;
@@ -13,12 +15,16 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.Collection;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
 public class PostServiceImpl implements PostService {
     @Autowired
     private PostRepository postRepo;
+    @Autowired
+    private CategoryRepository categoryRepo;
 
     @Override
     public Collection<Post> getAllPosts() {
@@ -38,7 +44,9 @@ public class PostServiceImpl implements PostService {
         post.setCreated(LocalDateTime.now());
         post.setModified(LocalDateTime.now());
         post.getAuthor().getPosts().add(post);
-        post.getCategories().forEach(category -> category.getPosts().add(post));
+        Set<Category> categories = categoryRepo.findByTitleInIgnoreCase(post.getCategoryTitles());
+        post.setCategories(categories);
+        categories.forEach(category -> category.getPosts().add(post));
         return postRepo.save(post);
     }
 

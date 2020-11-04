@@ -36,7 +36,7 @@ public class PostResource {
 
     @PostMapping
     public ResponseEntity<Post> addPost(@Valid @RequestBody Post post, Errors errors, Principal principal) {
-        handleErrors(errors);
+        handleErrors("Validation errors creating post", errors);
         post.setAuthor(userService.getUserByUsername(principal.getName()));
         Post created = postService.addPost(post);
         return ResponseEntity.created(
