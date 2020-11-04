@@ -1,6 +1,5 @@
 package course.spring.restmvc.init;
 
-import course.spring.restmvc.dao.PostRepository;
 import course.spring.restmvc.entity.Category;
 import course.spring.restmvc.entity.Post;
 import course.spring.restmvc.entity.User;
@@ -10,7 +9,6 @@ import course.spring.restmvc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;

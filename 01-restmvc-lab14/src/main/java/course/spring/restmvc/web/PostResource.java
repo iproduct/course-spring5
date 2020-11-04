@@ -1,20 +1,32 @@
 package course.spring.restmvc.web;
 
+import course.spring.restmvc.dto.PostDTO;
+import course.spring.restmvc.dto.PostUserDTO;
+import course.spring.restmvc.entity.Category;
 import course.spring.restmvc.entity.Post;
 import course.spring.restmvc.entity.User;
 import course.spring.restmvc.exception.InvalidEntityDataException;
 import course.spring.restmvc.service.PostService;
 import course.spring.restmvc.service.UserService;
+import org.modelmapper.ModelMapper;
+import org.modelmapper.convention.MatchingStrategies;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.print.attribute.standard.Destination;
 import javax.validation.Valid;
 import java.security.Principal;
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+import java.util.stream.Collectors;
 
+import static course.spring.restmvc.util.DtoUtil.getPostDTO;
 import static course.spring.restmvc.util.ErrorHandlingUtil.handleErrors;
 
 @RestController
@@ -35,14 +47,15 @@ public class PostResource {
     }
 
     @PostMapping
-    public ResponseEntity<Post> addPost(@Valid @RequestBody Post post, Errors errors, Principal principal) {
+    public ResponseEntity<PostDTO> addPost(@Valid @RequestBody PostDTO post, Errors errors, Principal principal) {
         handleErrors("Validation errors creating post", errors);
-        post.setAuthor(userService.getUserByUsername(principal.getName()));
-        Post created = postService.addPost(post);
+        Post created = postService.addPostDto(post);
+        PostDTO postDto = getPostDTO(created);
         return ResponseEntity.created(
             ServletUriComponentsBuilder.fromCurrentRequest().pathSegment("{id}").buildAndExpand(created.getId()).toUri()
-        ).body(created);
+        ).body(postDto);
     }
+
 
     @PutMapping("/{id}")
     public Post updatePost(@PathVariable("id") Long id, @RequestBody Post post) {

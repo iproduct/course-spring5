@@ -2,7 +2,7 @@ package course.spring.restmvc.web;
 
 import course.spring.restmvc.exception.EntityNotFoundException;
 import course.spring.restmvc.exception.InvalidEntityDataException;
-import course.spring.restmvc.model.ErrorResponse;
+import course.spring.restmvc.dto.ErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

@@ -41,20 +41,20 @@ public class Post {
             foreignKey = @ForeignKey(name="fkPostsUsersId"))
     private User author;
 
-    @JsonIgnore
+//    @JsonIgnore
     @NonNull
     @ManyToMany(mappedBy = "posts", fetch = FetchType.EAGER)
     private Set<Category> categories = new HashSet<>();
 
-    @Transient
-    private Set<String> categoryTitles = new HashSet<>();
+//    @Transient
+//    private Set<String> categoryTitles = new HashSet<>();
 
     @NonNull
     @ElementCollection(fetch = FetchType.EAGER)
     private Set<String> keywords = new HashSet<>();
 
-    LocalDateTime created = LocalDateTime.now();
-    LocalDateTime modified = LocalDateTime.now();
+    private LocalDateTime created = LocalDateTime.now();
+    private LocalDateTime modified = LocalDateTime.now();
 
     public Post(@NonNull String title, @NonNull String content, @NonNull User author, @NonNull Set<String> keywords,
                 Set<Category> categories) {
@@ -65,13 +65,13 @@ public class Post {
         this.categories = categories;
     }
 
-    public Set<String> getCategoryTitles() {
-        return getCategories().isEmpty() ?
-                categoryTitles :
-                categories.stream().map(Category::getTitle).collect(Collectors.toSet());
-    }
+//    public Set<String> getCategoryTitles() {
+//        return getCategories().isEmpty() ?
+//                categoryTitles :
+//                categories.stream().map(Category::getTitle).collect(Collectors.toSet());
+//    }
 
-    public void setCategoryTitles(@Size(min=1, max=10) Set<String> categoryTitles) {
-        this.categoryTitles = categoryTitles;
-    }
+//    public void setCategoryTitles(@Size(min=1, max=10) Set<String> categoryTitles) {
+//        this.categoryTitles = categoryTitles;
+//    }
 }

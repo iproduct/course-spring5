@@ -1,4 +1,4 @@
-package course.spring.restmvc.model;
+package course.spring.restmvc.dto;
 
 import lombok.*;
 
