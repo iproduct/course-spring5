@@ -62,6 +62,16 @@ public class Post {
         this.categories = categories;
     }
 
+    public Post(Long id, @NonNull String title, @NonNull String content, @NonNull User author, @NonNull Set<String> keywords,
+                Set<Category> categories) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.author = author;
+        this.keywords = keywords;
+        this.categories = categories;
+    }
+
 //    public Set<String> getCategoryTitles() {
 //        return getCategories().isEmpty() ?
 //                categoryTitles :
