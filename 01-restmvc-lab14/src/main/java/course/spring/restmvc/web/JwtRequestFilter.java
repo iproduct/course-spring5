@@ -33,21 +33,23 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         final String authorizationHeader = request.getHeader("Authorization");
         String username = null;
         String jwtToken = null;
-        if(authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
-            jwtToken = authorizationHeader.substring(7);
-            try {
-                username = jwtUtils.getUsernameFromToken(jwtToken);
-            } catch (IllegalArgumentException ex) {
-                log.error("Unable to get JWT token.");
-                throw new BadCredentialsException("Unable to get JWT token.");
-            } catch (ExpiredJwtException ex) {
-                log.error("JWT token has expired.");
-                throw new BadCredentialsException("JWT token has expired.");
+        if(authorizationHeader != null) {
+            if (authorizationHeader.startsWith("Bearer ")) {
+                jwtToken = authorizationHeader.substring(7);
+                try {
+                    username = jwtUtils.getUsernameFromToken(jwtToken);
+                } catch (IllegalArgumentException ex) {
+                    log.error("Unable to get JWT token.");
+                    throw new BadCredentialsException("Unable to get JWT token.");
+                } catch (ExpiredJwtException ex) {
+                    log.error("JWT token has expired.");
+                    throw new BadCredentialsException("JWT token has expired.");
+                }
+            } else {
+                log.error("JWT token does not begin with 'Bearer ' prefix.");
             }
-        } else {
-            log.error("JWT token does not begin with 'Bearer ' prefix.");
-            throw new BadCredentialsException("JWT token does not begin with 'Bearer ' prefix.");
         }
+
         if(username != null) {
             User user = userService.getUserByUsername(username);
             if(jwtUtils.validateToken(jwtToken, user)) {
@@ -56,7 +58,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                 authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
                 SecurityContextHolder.getContext().setAuthentication(authenticationToken);
             }
-            filterChain.doFilter(request, response);
         }
+        filterChain.doFilter(request, response);
     }
 }
