@@ -44,6 +44,8 @@ spring:
     initialization-mode: always
     data:
       classpath: create.sql
+jwt:
+  secret: my_secret
 
 #javax:
 #  persistence:

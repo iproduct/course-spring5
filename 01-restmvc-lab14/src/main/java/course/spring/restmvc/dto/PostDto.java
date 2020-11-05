@@ -18,7 +18,7 @@ public class PostDto {
     @Size(min=2, max=80)
     private String title;
     private String content;
-    private PostUserDTO author;
+    private PostUserDto author;
     private Set<String> categoryTitles = new HashSet<>();
     private Set<String> keywords = new HashSet<>();
     private LocalDateTime created = LocalDateTime.now();
@@ -59,11 +59,11 @@ public class PostDto {
         this.content = content;
     }
 
-    public PostUserDTO getAuthor() {
+    public PostUserDto getAuthor() {
         return author;
     }
 
-    public void setAuthor(PostUserDTO author) {
+    public void setAuthor(PostUserDto author) {
         this.author = author;
     }
 

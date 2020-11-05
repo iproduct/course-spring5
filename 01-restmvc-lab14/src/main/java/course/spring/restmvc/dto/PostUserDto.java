@@ -16,7 +16,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class PostUserDTO {
+public class PostUserDto {
     @EqualsAndHashCode.Include
     private Long id;
     private String firstName;
