@@ -15,10 +15,10 @@ import java.util.Set;
 public class PostDto {
     @EqualsAndHashCode.Include
     private Long id;
+    @Size(min=2, max=80)
     private String title;
     private String content;
     private PostUserDTO author;
-    @Size(min=1, max=10)
     private Set<String> categoryTitles = new HashSet<>();
     private Set<String> keywords = new HashSet<>();
     private LocalDateTime created = LocalDateTime.now();

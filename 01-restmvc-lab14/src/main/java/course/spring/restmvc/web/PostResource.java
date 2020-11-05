@@ -51,7 +51,8 @@ public class PostResource {
 
 
     @PutMapping("/{id}")
-    public PostDto updatePost(@PathVariable("id") Long id, @RequestBody PostDto postDto) {
+    public PostDto updatePost(@PathVariable("id") Long id, @Valid @RequestBody PostDto postDto, Errors errors) {
+        handleErrors("Validation errors updating post", errors);
         Post found = postService.getPostById(id);
         if(!found.getId().equals(postDto.getId())) {         // or simpler alternative - use ResponseStatusException
            throw new InvalidEntityDataException(
