@@ -8,6 +8,9 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -27,12 +30,17 @@ public class User implements UserDetails {
     @EqualsAndHashCode.Include
     private Long id;
     @NonNull
+    @NotNull
     private String firstName;
     @NonNull
+    @NotNull
     private String lastName;
     @NonNull
+    @Email
+    @NotNull
     private String email;
     @NonNull
+    @NotNull
     @Basic(optional = false)
     @Column(nullable = false, updatable = false)
     private String username;
@@ -43,6 +51,7 @@ public class User implements UserDetails {
 
     @ElementCollection(fetch = FetchType.EAGER)
     @Enumerated(value = EnumType.STRING)
+    @Size(min = 1)
     private Set<Role> roles = Set.of(Role.READER);
 
     @OneToMany(mappedBy = "author", cascade = CascadeType.REMOVE)

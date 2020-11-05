@@ -26,6 +26,8 @@ import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
+import static course.spring.restmvc.util.ErrorHandlingUtil.hanleConstraintViolationException;
+
 @Service
 @Transactional
 public class PostServiceImpl implements PostService {
@@ -88,7 +90,12 @@ public class PostServiceImpl implements PostService {
         post.getCategories().forEach(category -> category.getPosts().add(post));
 
         post.setModified(LocalDateTime.now());
-        return postRepo.save(post);
+        try {
+            return postRepo.save(post);
+        } catch (RuntimeException ex) {
+            hanleConstraintViolationException(ex);
+            return null;
+        }
     }
 
     @Override
