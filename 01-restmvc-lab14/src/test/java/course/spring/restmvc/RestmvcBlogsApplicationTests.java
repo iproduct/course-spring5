@@ -1,6 +1,10 @@
 package course.spring.restmvc;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import course.spring.restmvc.dao.CategoryRepository;
 import course.spring.restmvc.dao.PostRepository;
+import course.spring.restmvc.dao.UserRepository;
+import course.spring.restmvc.dto.PostDto;
 import course.spring.restmvc.entity.Category;
 import course.spring.restmvc.entity.Post;
 import course.spring.restmvc.entity.Role;
@@ -8,6 +12,7 @@ import course.spring.restmvc.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,17 +20,18 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static course.spring.restmvc.entity.Role.*;
+import static org.hamcrest.Matchers.containsString;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.BDDMockito.then;
 import static org.mockito.Mockito.times;
+import static org.springframework.http.RequestEntity.post;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.user;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -42,12 +48,23 @@ public class RestmvcBlogsApplicationTests {
     @Autowired
     private MockMvc mockMvc;
 
+    @Autowired
+    private ObjectMapper mapper;
+
+    @Autowired
+    private ModelMapper modelMapper;
+
     @MockBean
     private PostRepository postRepository;
+    @MockBean
+    private UserRepository userRepository;
+    @MockBean
+    private CategoryRepository categoryRepository;
 
     @Test
     void contextLoads() {
     }
+
 
     @Test
     void givePosts_whenGetPosts_thenStatus200andJsonArray() throws Exception {
@@ -68,13 +85,29 @@ public class RestmvcBlogsApplicationTests {
         then(postRepository).should(times(1)).findAll();
     }
 
+    @Test
+    void givePosts_whenPostPost_thenStatus201andLocationHeader() throws Exception {
+        given(postRepository.save(any(Post.class))).willReturn(newPost);
+        given(userRepository.findByUsername(any(String.class))).willReturn(Optional.of(users.get(0)));
+        given(categoryRepository.findByTitleInIgnoreCase(any(Set.class))).willReturn(Set.of(categories.get(1)));
 
+        mockMvc.perform(MockMvcRequestBuilders.post("/api/posts")
+                    .with(user("admin").password("admin123").roles("ADMIN"))
+                    .accept(MediaType.APPLICATION_JSON)
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .content(mapper.writeValueAsString(modelMapper.map(newPost, PostDto.class))))
+                .andExpect(status().isCreated())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+                .andExpect(header().string("location",
+                        containsString("http://localhost/api/posts/" + newPost.getId())))
+                .andDo(result -> log.info(result.getResponse().getContentAsString()));
 
-
+//        then(postRepository).should(times(1)).findAll();
+    }
 
 
     private static List<User> users = List.of(
-            new User("Default", "Admin", "admin@mycompany.com", "admin", "admin",
+            new User("Default", "Admin", "admin@mycompany.com", "admin", "admin123",
                     Set.of(ADMIN)),
             new User("Default", "Author", "author@mycompany.com", "author", "author",
                     Set.of(AUTHOR, READER))
@@ -87,7 +120,7 @@ public class RestmvcBlogsApplicationTests {
     );
     private static final Post newPost =
             new Post(1L, "New Title", "New content ...", users.get(1),
-                    Set.of("spring", "di"), Set.of(categories.get(1)));
+                    Set.of("Spring"), Set.of(categories.get(1)));
 
     private static final List<Post> mockPosts = List.of(
             new Post("New in Spring", "Spring 5 is here ...", users.get(0),

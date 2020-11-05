@@ -33,14 +33,14 @@ public class Post {
     @Column(nullable = false)
     private String content;
 
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, cascade = CascadeType.PERSIST)
     @JoinColumn(name="author_id", nullable = false, updatable = false, referencedColumnName = "id",
             foreignKey = @ForeignKey(name="fkPostsUsersId"))
     private User author;
 
 //    @JsonIgnore
     @NonNull
-    @ManyToMany(mappedBy = "posts", fetch = FetchType.EAGER)
+    @ManyToMany(mappedBy = "posts", fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
     private Set<Category> categories = new HashSet<>();
 
 //    @Transient

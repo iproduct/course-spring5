@@ -40,7 +40,7 @@ public class PostResource {
     }
 
     @PostMapping
-    public ResponseEntity<PostDto> addPost(@Valid @RequestBody PostDto postDto, Errors errors, Principal principal) {
+    public ResponseEntity<PostDto> addPost(@Valid @RequestBody PostDto postDto, Errors errors) {
         handleErrors("Validation errors creating post", errors);
         Post created = postService.addPostDto(postDto);
         PostDto resultDto = mapper.map(created, PostDto.class);
