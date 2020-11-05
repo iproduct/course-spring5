@@ -11,7 +11,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ErrorResponse {
     @NonNull
-    int status;
+    Integer status;
     @NonNull
     String message;
     List<String> violations = new ArrayList<>();

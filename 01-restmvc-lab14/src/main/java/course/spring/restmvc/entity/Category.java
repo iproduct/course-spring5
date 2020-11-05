@@ -47,4 +47,9 @@ public class Category {
         this.title = title;
         this.description = description;
     }
+    public Category(Long id, @NonNull String title, String description) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+    }
 }
