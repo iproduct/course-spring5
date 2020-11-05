@@ -13,6 +13,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 import static org.springframework.http.HttpMethod.GET;
+import static org.springframework.http.HttpMethod.POST;
 
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -22,10 +23,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable()
                 .authorizeRequests()
                 .antMatchers(GET, "/api/**").permitAll()
+                .antMatchers(POST, "/api/login").permitAll()
                 .antMatchers("/api/**").authenticated()
                 .antMatchers(GET, "**").permitAll()
-                .and()
-                    .httpBasic()
+//                .and()
+//                    .httpBasic()
                 .and()
                     .logout();
     }
