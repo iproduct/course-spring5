@@ -8,6 +8,7 @@ import course.spring.restmvc.entity.Category;
 import course.spring.restmvc.entity.Post;
 import course.spring.restmvc.entity.User;
 import course.spring.restmvc.exception.EntityNotFoundException;
+import course.spring.restmvc.exception.InvalidEntityDataException;
 import course.spring.restmvc.service.PostService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -99,6 +100,11 @@ public class PostServiceImpl implements PostService {
     private Post getPostAndResolvePostCategories(PostDto postDto) {
         Post post = mapper.map(postDto, Post.class);
         Set<Category> categories = categoryRepo.findByTitleInIgnoreCase(postDto.getCategoryTitles());
+        if(categories.size() == 0) {
+            throw new InvalidEntityDataException(
+                    String.format("The post %d:%s must have at least one valid category, but none was found.",
+                            post.getId(), post.getTitle()));
+        }
         post.setCategories(categories);
         return post;
     }
