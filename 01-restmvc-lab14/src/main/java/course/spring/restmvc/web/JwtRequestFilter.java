@@ -6,6 +6,7 @@ import course.spring.restmvc.util.JwtUtils;
 import io.jsonwebtoken.ExpiredJwtException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.annotation.Order;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.AuthenticationException;
@@ -22,6 +23,7 @@ import java.io.IOException;
 
 @Component
 @Slf4j
+@Order
 public class JwtRequestFilter extends OncePerRequestFilter {
     @Autowired
     private UserService userService;
@@ -47,6 +49,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                 }
             } else {
                 log.error("JWT token does not begin with 'Bearer ' prefix.");
+                throw new BadCredentialsException("WT token does not begin with 'Bearer ' prefix.");
             }
         }
 
