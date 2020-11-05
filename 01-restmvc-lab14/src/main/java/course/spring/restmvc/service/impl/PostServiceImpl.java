@@ -22,6 +22,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.validation.Valid;
 import java.time.LocalDateTime;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
@@ -75,9 +76,17 @@ public class PostServiceImpl implements PostService {
     @Override
     public Post updatePost(PostDto postDto) {
         Post oldPost = getPostById(postDto.getId());
-        oldPost.getCategories().forEach(category -> category.getPosts().remove(oldPost));
         Post post = getPostAndResolvePostCategories(postDto);
+
+        // Remove old delta categories
+        Set<Category> categoriesToRemove = new HashSet<>( oldPost.getCategories());
+        categoriesToRemove.removeAll(post.getCategories());
+        categoriesToRemove.forEach(category -> category.getPosts().remove(oldPost));
+        // Add new delta categories
+        Set<Category> categoriesToAdd = new HashSet<>( post.getCategories());
+        categoriesToAdd.removeAll(oldPost.getCategories());
         post.getCategories().forEach(category -> category.getPosts().add(post));
+
         post.setModified(LocalDateTime.now());
         return postRepo.save(post);
     }
