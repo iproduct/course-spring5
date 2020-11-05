@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
@@ -45,7 +46,9 @@ public class PostResource {
         Post created = postService.addPostDto(postDto);
         PostDto resultDto = mapper.map(created, PostDto.class);
         return ResponseEntity.created(
-            ServletUriComponentsBuilder.fromCurrentRequest().pathSegment("{id}").buildAndExpand(created.getId()).toUri()
+//            ServletUriComponentsBuilder.fromCurrentRequest().pathSegment("{id}").buildAndExpand(created.getId()).toUri()
+                MvcUriComponentsBuilder.fromMethodName(PostResource.class, "addPost", postDto, errors)
+                        .pathSegment("{id}").buildAndExpand(created.getId()).toUri()
         ).body(resultDto);
     }
 
