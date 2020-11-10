@@ -1,5 +1,6 @@
 package course.spring.intro.service.impl;
 
+import course.spring.intro.dao.PostRepository;
 import course.spring.intro.dao.PostRepositoryOld;
 import course.spring.intro.exception.EntityNotFoundException;
 import course.spring.intro.model.Post;
@@ -11,10 +12,10 @@ import java.util.List;
 
 @Service
 public class PostServiceImpl implements PostService {
-    private PostRepositoryOld postRepository;
+    private PostRepository postRepository;
 
     @Autowired
-    public PostServiceImpl(PostRepositoryOld postRepository) {
+    public PostServiceImpl(PostRepository postRepository) {
         this.postRepository = postRepository;
     }
 
@@ -25,34 +26,26 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public Post getPostById(String id) {
-        Post found = postRepository.findById(id);
-        if (found == null) {
-            throw new EntityNotFoundException(String.format("Entity with ID: %s not found.", id));
-        }
-        return found;
+        return postRepository.findById(id).orElseThrow(()->
+                new EntityNotFoundException(String.format("Post with ID=%s not found.", id)));
     }
 
     @Override
     public Post createPost(Post post) {
-        return postRepository.create(post);
+        return postRepository.insert(post);
     }
 
     @Override
     public Post updatePost(Post post) {
-        Post updated = postRepository.update(post);
-        if (updated == null) {
-            throw new EntityNotFoundException(String.format("Entity with ID: %s not found.", post.getId()));
-        }
-        return updated;
+        getPostById(post.getId());
+        return postRepository.save(post);
     }
 
     @Override
     public Post deletePostById(String id) {
-        Post found = postRepository.deleteById(id);
-        if (found == null) {
-            throw new EntityNotFoundException(String.format("Entity with ID: %s not found.", id));
-        }
-        return found;
+        Post removed = getPostById(id);
+        postRepository.deleteById(id);
+        return removed;
     }
 
     @Override
