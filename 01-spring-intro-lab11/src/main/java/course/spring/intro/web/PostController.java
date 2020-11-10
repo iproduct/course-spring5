@@ -1,20 +1,14 @@
 package course.spring.intro.web;
 
-import course.spring.intro.dao.PostRepository;
-import course.spring.intro.exception.EntityNotFoundException;
 import course.spring.intro.model.ErrorResposnse;
 import course.spring.intro.model.Post;
 import course.spring.intro.service.PostService;
-import io.micrometer.core.ipc.http.HttpSender;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.util.List;
-
-import static org.springframework.http.HttpStatus.CREATED;
 
 @RestController
 @RequestMapping("/api/posts")

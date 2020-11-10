@@ -1,6 +1,6 @@
 package course.spring.intro;
 
-import course.spring.intro.dao.PostRepository;
+import course.spring.intro.dao.PostRepositoryOld;
 import course.spring.intro.model.Post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -11,7 +11,7 @@ import java.util.List;
 @Component
 public class DataInitializer implements CommandLineRunner {
     @Autowired
-    private PostRepository postRepository;
+    private PostRepositoryOld postRepository;
 
     private static final List<Post> SAMPLE_POSTS = List.of(
            new Post("New in Spring 5", "WebFlux is here ...", "Trayan Iliev"),

@@ -1,23 +1,20 @@
 package course.spring.intro.service.impl;
 
-import course.spring.intro.dao.PostRepository;
+import course.spring.intro.dao.PostRepositoryOld;
 import course.spring.intro.exception.EntityNotFoundException;
-import course.spring.intro.model.ErrorResposnse;
 import course.spring.intro.model.Post;
 import course.spring.intro.service.PostService;
-import lombok.ToString;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import java.util.List;
 
 @Service
 public class PostServiceImpl implements PostService {
-    private PostRepository postRepository;
+    private PostRepositoryOld postRepository;
 
     @Autowired
-    public PostServiceImpl(PostRepository postRepository) {
+    public PostServiceImpl(PostRepositoryOld postRepository) {
         this.postRepository = postRepository;
     }
 
