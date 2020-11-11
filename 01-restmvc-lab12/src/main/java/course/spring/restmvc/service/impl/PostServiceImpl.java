@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class PostServiceImpl implements PostService {
@@ -22,6 +23,11 @@ public class PostServiceImpl implements PostService {
     @Override
     public List<Post> getAllPosts() {
         return postRepo.findAll();
+    }
+
+    @Override
+    public List<Post> getAllPostsByKeywords(Set<String> keywords) {
+        return postRepo.findAllByKeywordsContaining(keywords);
     }
 
     @Override
