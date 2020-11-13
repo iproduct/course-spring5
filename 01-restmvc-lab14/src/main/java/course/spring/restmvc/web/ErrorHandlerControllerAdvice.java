@@ -28,13 +28,13 @@ public class ErrorHandlerControllerAdvice {
 
     @ExceptionHandler
     public ResponseEntity<ErrorResponse> handleAuthenticationException(AuthenticationException ex) {
-        return ResponseEntity.badRequest().body(
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(
                 new ErrorResponse(HttpStatus.UNAUTHORIZED.value(), ex.getMessage())
         );
     }
     @ExceptionHandler
     public ResponseEntity<ErrorResponse> handleAccessDeniedException(AccessDeniedException ex) {
-        return ResponseEntity.badRequest().body(
+        return ResponseEntity.status(HttpStatus.FORBIDDEN).body(
                 new ErrorResponse(HttpStatus.FORBIDDEN.value(), ex.getMessage())
         );
     }
