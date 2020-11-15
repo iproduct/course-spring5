@@ -24,7 +24,7 @@ repositories {
 
 dependencies {
     compile 'ch.qos.logback:logback-classic:1.2.3'
-    compile ('org.springframework:spring-webmvc:5.1.9.RELEASE')
+    compile ('org.springframework:spring-webmvc:5.2.9.RELEASE')
     compile ('javax.servlet:jstl:1.2')
     compile ('org.webjars:bootstrap:3.3.7-1')
     compile ('org.webjars:jquery:3.1.1')

@@ -73,7 +73,6 @@ public class RestMvcBootApplicationTests {
         log.info(">>> AUTH Token: {}", authToken);
     }
 
-    @org.junit.Test
     @Test
     public void contextLoads() {
     }

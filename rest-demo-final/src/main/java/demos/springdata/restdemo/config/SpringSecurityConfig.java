@@ -3,6 +3,7 @@ package demos.springdata.restdemo.config;
 import demos.springdata.restdemo.exception.EntityNotFoundException;
 import demos.springdata.restdemo.service.UserService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -13,11 +14,13 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.web.AuthenticationEntryPoint;
 
 @Configuration
 @EnableWebSecurity
 @Slf4j
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
+
 
         @Override
         protected void configure (HttpSecurity http) throws Exception {

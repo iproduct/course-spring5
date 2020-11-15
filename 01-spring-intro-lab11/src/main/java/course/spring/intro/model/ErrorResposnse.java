@@ -15,6 +15,12 @@ public class ErrorResposnse {
     Integer code;
     @NonNull
     String message;
-    LocalDateTime timestamp = LocalDateTime.now();
     List<String> violations = new ArrayList<>();
+    LocalDateTime timestamp = LocalDateTime.now();
+
+    public ErrorResposnse(@NonNull Integer code, @NonNull String message, List<String> violations) {
+        this.code = code;
+        this.message = message;
+        this.violations = violations;
+    }
 }
