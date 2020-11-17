@@ -6,6 +6,8 @@ import course.spring.intro.exception.InvalidEntityDataException;
 import course.spring.intro.model.User;
 import course.spring.intro.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -38,12 +40,16 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User createUser(User user) {
+        user.setId(null);
+        PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
+        user.setPassword(encoder.encode(user.getPassword()));
         return userRepository.insert(user);
     }
 
     @Override
     public User updateUser(User user) {
-        getUserById(user.getId());
+        User old = getUserById(user.getId());
+        user.setPassword(old.getPassword());
         return userRepository.save(user);
     }
 
