@@ -14,6 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static course.spring.intro.util.ErrorHandlingUtils.getErrors;
+
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
@@ -33,10 +35,7 @@ public class UserController {
     @PostMapping
     public ResponseEntity<User> createUser(@Valid @RequestBody User user, Errors errors) {
         if(errors.hasErrors()) {
-            throw new InvalidEntityDataException("Invalid User data: ",
-                    errors.getAllErrors().stream()
-                            .map(err -> err.getDefaultMessage())
-                            .collect(Collectors.toList()));
+            throw new InvalidEntityDataException("Invalid User data: ", getErrors(errors));
         }
         User created = userService.createUser(user);
         return ResponseEntity.created(
@@ -49,16 +48,7 @@ public class UserController {
     public User updateUser( @PathVariable("id") String id,
                             @Valid @RequestBody User user, Errors errors) {
         if(errors.hasErrors()) {
-            List<String> globalErr = errors.getGlobalErrors().stream()
-                    .map(err -> err.getDefaultMessage())
-                    .collect(Collectors.toList());
-            List<String> filedErr = errors.getFieldErrors().stream()
-                    .map(err -> String.format("%s='%s': %s", err.getField(), err.getRejectedValue(), err.getDefaultMessage()))
-                    .collect(Collectors.toList());
-            List<String> allErr = new ArrayList<>();
-            allErr.addAll(globalErr);
-            allErr.addAll(filedErr);
-            throw new InvalidEntityDataException("Invalid User data: ", allErr);
+            throw new InvalidEntityDataException("Invalid User data: ", getErrors(errors));
         }
         if(!id.equals(user.getId())) {
             throw new InvalidEntityDataException("User ID:%s in the URL differs from ID:%s in the body.");

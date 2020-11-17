@@ -14,6 +14,8 @@ import javax.validation.constraints.Pattern;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static course.spring.intro.util.ErrorHandlingUtils.getErrors;
+
 @RestController
 @RequestMapping("/api/posts")
 public class PostController {
@@ -33,10 +35,7 @@ public class PostController {
     @PostMapping
     public ResponseEntity<Post> createPost(@Valid @RequestBody Post post, Errors errors) {
         if(errors.hasErrors()) {
-            throw new InvalidEntityDataException("Invalid Post data: ",
-                    errors.getAllErrors().stream()
-                            .map(err -> err.getDefaultMessage())
-                            .collect(Collectors.toList()));
+            throw new InvalidEntityDataException("Invalid Post data: ", getErrors(errors));
         }
         Post created = postService.createPost(post);
         return ResponseEntity.created(
@@ -49,10 +48,7 @@ public class PostController {
     public Post updatePost( @PathVariable("id") String id,
                             @Valid @RequestBody Post post, Errors errors) {
         if(errors.hasErrors()) {
-            throw new InvalidEntityDataException("Invalid Post data: ",
-                    errors.getAllErrors().stream()
-                            .map(err -> err.getDefaultMessage())
-                            .collect(Collectors.toList()));
+            throw new InvalidEntityDataException("Invalid Post data: ", getErrors(errors));
         }
         if(!id.equals(post.getId())) {
             throw new InvalidEntityDataException("Post ID:%s in the URL differs from ID:%s in the body.");
