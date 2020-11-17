@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-@Document
+@Document(collection = "posts")
 @Data
 @NoArgsConstructor
 @RequiredArgsConstructor
@@ -29,10 +29,9 @@ public class Post {
     @NotNull
     @Size(min=2, max=2048)
     private String content;
-    @NonNull
     @NotNull
-    @Size(min=2, max=80)
-    private String author;
+    @Pattern(regexp = "^[A-Fa-f0-9]{24}$")
+    private String authorId;
     @URL
     private String imageUrl;
     private List<String> keywords = new ArrayList<>();

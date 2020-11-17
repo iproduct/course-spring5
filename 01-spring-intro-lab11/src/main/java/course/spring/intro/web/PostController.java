@@ -26,7 +26,7 @@ public class PostController {
     }
 
     @GetMapping("/{id:^[A-Fa-f0-9]{24}$}")
-    public Post getAllPosts(@PathVariable("id") String id) {
+    public Post getPostById(@PathVariable("id") String id) {
         return postService.getPostById(id);
     }
 
