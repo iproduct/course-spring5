@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21224d79-c8e5-4644-88cd-d1c88be148ca" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../04-webmvc-rest/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04-webmvc-rest/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../04-webmvc-rest/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04-webmvc-rest/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../04-webmvc-rest/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04-webmvc-rest/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../04-webmvc-rest/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04-webmvc-rest/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../04-webmvc-rest/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04-webmvc-rest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../04-webmvc-rest/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="21224d79-c8e5-4644-88cd-d1c88be148ca" name="Default" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -394,7 +383,7 @@
       <workItem from="1576088241840" duration="1135000" />
       <workItem from="1576316491993" duration="27000" />
       <workItem from="1605116746360" duration="1563000" />
-      <workItem from="1605717657150" duration="1455000" />
+      <workItem from="1605717657150" duration="1782000" />
     </task>
     <servers />
   </component>
