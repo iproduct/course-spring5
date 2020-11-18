@@ -9,9 +9,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21224d79-c8e5-4644-88cd-d1c88be148ca" name="Default" comment="context path changed to 'mvc' by renaming the artefact deployed to tomcat to 'mvc'">
-      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="21224d79-c8e5-4644-88cd-d1c88be148ca" name="Default" comment=".gitignore files added to project and repo">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,25 +123,27 @@
       <recent name="D:\CourseSpring\git\course-spring5\03-webmvc-xmlconfig\src\main\webapp" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.71">
+  <component name="RunManager" selected="JavaScript Debug.mvc">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="03-webmvc-xmlconfig [jettyRunWar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="03-webmvc-xmlconfig [appRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -141,7 +154,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="jettyRunWar" />
+            <option value="appRun" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -161,25 +174,6 @@
         <option name="taskNames">
           <list>
             <option value="jettyRun" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="03-webmvc-xmlconfig [tomcatRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="tomcatRun" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -221,6 +215,9 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="mvc" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/mvc">
+      <method v="2" />
     </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
@@ -366,19 +363,19 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.03-webmvc-xmlconfig [jettyRun]" />
-      <item itemvalue="Gradle.03-webmvc-xmlconfig [jettyRunWar]" />
-      <item itemvalue="Gradle.03-webmvc-xmlconfig [tomcatRun]" />
       <item itemvalue="Gradle.03-webmvc-xmlconfig [tomcatStop]" />
+      <item itemvalue="Gradle.03-webmvc-xmlconfig [appRun]" />
+      <item itemvalue="JavaScript Debug.mvc" />
       <item itemvalue="JUnit.All in webmvc-xmlconfig" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.71" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.mvc" />
+        <item itemvalue="Gradle.03-webmvc-xmlconfig [appRun]" />
+        <item itemvalue="Gradle.03-webmvc-xmlconfig [jettyRun]" />
         <item itemvalue="JUnit.All in webmvc-xmlconfig" />
         <item itemvalue="Gradle.03-webmvc-xmlconfig [tomcatStop]" />
-        <item itemvalue="Gradle.03-webmvc-xmlconfig [tomcatRun]" />
-        <item itemvalue="Gradle.03-webmvc-xmlconfig [jettyRunWar]" />
-        <item itemvalue="Gradle.03-webmvc-xmlconfig [jettyRun]" />
       </list>
     </recent_temporary>
   </component>
@@ -408,7 +405,8 @@
       <workItem from="1605719756273" duration="127000" />
       <workItem from="1605719915577" duration="1951000" />
       <workItem from="1605721888170" duration="2367000" />
-      <workItem from="1605730408317" duration="5318000" />
+      <workItem from="1605730408317" duration="6058000" />
+      <workItem from="1605736544737" duration="12000" />
     </task>
     <task id="LOCAL-00001" summary="gradlew version upgraded">
       <created>1605719465472</created>
@@ -438,7 +436,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605735554543</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary=".gitignore files added to project and repo">
+      <created>1605735825807</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1605735825807</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,7 +454,8 @@
     <MESSAGE value="gradlew version upgraded" />
     <MESSAGE value="tomat config updated to open /articles" />
     <MESSAGE value="context path changed to 'mvc' by renaming the artefact deployed to tomcat to 'mvc'" />
-    <option name="LAST_COMMIT_MESSAGE" value="context path changed to 'mvc' by renaming the artefact deployed to tomcat to 'mvc'" />
+    <MESSAGE value=".gitignore files added to project and repo" />
+    <option name="LAST_COMMIT_MESSAGE" value=".gitignore files added to project and repo" />
   </component>
   <component name="WindowStateProjectService">
     <state x="581" y="252" key="#BuildArtifactsBeforeRunChooser" timestamp="1605734522129">
@@ -472,62 +478,62 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="565" y="29" width="1112" height="891" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1707.920@0.0.1707.920" timestamp="1605734547290" />
-    <state x="344" y="0" key="CommitChangelistDialog2" timestamp="1605735616723">
+    <state x="344" y="0" key="CommitChangelistDialog2" timestamp="1605735825078">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="344" y="0" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1605735616723" />
+    <state x="344" y="0" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1605735825078" />
     <state x="581" y="187" key="FileChooserDialogImpl" timestamp="1605735034802">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="581" y="187" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1605735034802" />
-    <state width="1362" height="499" key="GridCell.Tab.0.bottom" timestamp="1605735437627">
+    <state width="1651" height="283" key="GridCell.Tab.0.bottom" timestamp="1605736518153">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1362" height="499" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1605735437627" />
-    <state width="1362" height="499" key="GridCell.Tab.0.center" timestamp="1605735437627">
+    <state width="1651" height="283" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1605736518153" />
+    <state width="1651" height="283" key="GridCell.Tab.0.center" timestamp="1605736518153">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1362" height="499" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1605735437627" />
-    <state width="1362" height="499" key="GridCell.Tab.0.left" timestamp="1605735437627">
+    <state width="1651" height="283" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1605736518153" />
+    <state width="1651" height="283" key="GridCell.Tab.0.left" timestamp="1605736518152">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1362" height="499" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1605735437627" />
-    <state width="1362" height="499" key="GridCell.Tab.0.right" timestamp="1605735437627">
+    <state width="1651" height="283" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1605736518152" />
+    <state width="1651" height="283" key="GridCell.Tab.0.right" timestamp="1605736518153">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1362" height="499" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1605735437627" />
-    <state width="1362" height="499" key="GridCell.Tab.1.bottom" timestamp="1605735437627">
+    <state width="1651" height="283" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1605736518153" />
+    <state width="1651" height="283" key="GridCell.Tab.1.bottom" timestamp="1605736518153">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1362" height="499" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1605735437627" />
-    <state width="1362" height="499" key="GridCell.Tab.1.center" timestamp="1605735437627">
+    <state width="1651" height="283" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1605736518153" />
+    <state width="1651" height="283" key="GridCell.Tab.1.center" timestamp="1605736518153">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1362" height="499" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1605735437627" />
-    <state width="1362" height="499" key="GridCell.Tab.1.left" timestamp="1605735437627">
+    <state width="1651" height="283" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1605736518153" />
+    <state width="1651" height="283" key="GridCell.Tab.1.left" timestamp="1605736518153">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1362" height="499" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1605735437627" />
-    <state width="1362" height="499" key="GridCell.Tab.1.right" timestamp="1605735437627">
+    <state width="1651" height="283" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1605736518153" />
+    <state width="1651" height="283" key="GridCell.Tab.1.right" timestamp="1605736518153">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1362" height="499" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1605735437627" />
-    <state width="1362" height="499" key="GridCell.Tab.2.bottom" timestamp="1605735437627">
+    <state width="1651" height="283" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1605736518153" />
+    <state width="1651" height="283" key="GridCell.Tab.2.bottom" timestamp="1605736518153">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1362" height="499" key="GridCell.Tab.2.bottom/0.0.1707.920@0.0.1707.920" timestamp="1605735437627" />
-    <state width="1362" height="499" key="GridCell.Tab.2.center" timestamp="1605735437627">
+    <state width="1651" height="283" key="GridCell.Tab.2.bottom/0.0.1707.920@0.0.1707.920" timestamp="1605736518153" />
+    <state width="1651" height="283" key="GridCell.Tab.2.center" timestamp="1605736518153">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1362" height="499" key="GridCell.Tab.2.center/0.0.1707.920@0.0.1707.920" timestamp="1605735437627" />
-    <state width="1362" height="499" key="GridCell.Tab.2.left" timestamp="1605735437627">
+    <state width="1651" height="283" key="GridCell.Tab.2.center/0.0.1707.920@0.0.1707.920" timestamp="1605736518153" />
+    <state width="1651" height="283" key="GridCell.Tab.2.left" timestamp="1605736518153">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1362" height="499" key="GridCell.Tab.2.left/0.0.1707.920@0.0.1707.920" timestamp="1605735437627" />
-    <state width="1362" height="499" key="GridCell.Tab.2.right" timestamp="1605735437627">
+    <state width="1651" height="283" key="GridCell.Tab.2.left/0.0.1707.920@0.0.1707.920" timestamp="1605736518153" />
+    <state width="1651" height="283" key="GridCell.Tab.2.right" timestamp="1605736518153">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1362" height="499" key="GridCell.Tab.2.right/0.0.1707.920@0.0.1707.920" timestamp="1605735437627" />
+    <state width="1651" height="283" key="GridCell.Tab.2.right/0.0.1707.920@0.0.1707.920" timestamp="1605736518153" />
     <state width="1389" height="360" key="GridCell.Tab.3.bottom" timestamp="1605723240557">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -548,10 +554,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="206" y="0" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1605735095562" />
-    <state x="346" y="128" key="Vcs.Push.Dialog.v2" timestamp="1605735556723">
+    <state x="346" y="128" key="Vcs.Push.Dialog.v2" timestamp="1605735827939">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="346" y="128" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1605735556723" />
+    <state x="346" y="128" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1605735827939" />
     <state x="421" y="96" key="com.intellij.javaee.view.ServerArtifactsDialog" timestamp="1605735430266">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
