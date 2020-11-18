@@ -1,23 +1,38 @@
-group 'org.iproduct.spring.webmvc.xmlconfig'
-version '1.0-SNAPSHOT'
-
-apply plugin: 'java'
-apply plugin: 'war'
-//apply plugin: 'jetty'
-apply plugin: 'org.akhikhl.gretty'
-
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
 
 buildscript {
     repositories {
         jcenter()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
     }
 
-    dependencies {
-        classpath 'org.akhikhl.gretty:gretty:+'
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'war' // optional if you use spring-boot
+apply from: 'https://raw.github.com/gretty-gradle-plugin/gretty/master/pluginScripts/gretty.plugin'
+
+gretty {
+    // supported values:
+    // 'jetty7', 'jetty8', 'jetty9', 'jetty9.3', 'jetty9.4', 'tomcat7', 'tomcat8'
+    servletContainer = 'jetty9'
+}
+
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
     }
 }
+
+group 'org.iproduct.spring.webmvc.xmlconfig'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
 
 repositories {
     mavenCentral()
@@ -28,6 +43,7 @@ repositories {
 dependencies {
     compile 'ch.qos.logback:logback-classic:1.2.3'
     compile ('org.springframework:spring-webmvc:5.2.9.RELEASE')
+//    compile 'org.gretty:gretty-runner-tomcat9:3.0.3'
     compile ('javax.servlet:jstl:1.2')
     compile ('org.webjars:bootstrap:3.3.7-1')
     compile ('org.webjars:jquery:3.1.1')
@@ -41,5 +57,5 @@ dependencies {
 gretty {
     httpPort = 8080
     contextPath = 'mvc'
-    servletContainer = 'tomcat8' //tomcat7 or tomcat8
+    servletContainer = 'jetty9' //tomcat7 or tomcat8
 }
