@@ -1,0 +1,37 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="mvc">
+    <output-path>$PROJECT_DIR$/out/artifacts/mvc</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="webmvc-xmlconfig.main" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: ch.qos.logback:logback-classic:1.2.3" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Gradle: org.webjars:bootstrap:3.3.7-1" />
+          <element id="library" level="project" name="Gradle: org.webjars:jquery:3.1.1" />
+          <element id="library" level="project" name="Gradle: org.webjars:webjars-locator:0.37" />
+          <element id="library" level="project" name="Gradle: ch.qos.logback:logback-core:1.2.3" />
+          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.25" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-context:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-aop:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-web:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-beans:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-expression:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-core:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.webjars:webjars-locator-core:0.39" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.9.9.3" />
+          <element id="library" level="project" name="Gradle: org.apache.commons:commons-lang3:3.8.1" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-jcl:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: io.github.classgraph:classgraph:4.8.44" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.9.9" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.9.0" />
+        </element>
+        <element id="file-copy" path="$PROJECT_DIR$/src/main/webapp/WEB-INF/tomcat-web.xml" />
+      </element>
+      <element id="javaee-facet-resources" facet="webmvc-xmlconfig.main/web/Web Gradle : webmvc-xmlconfig-1.0-SNAPSHOT.war" />
+    </root>
+  </artifact>
+</component>

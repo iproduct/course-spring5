@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="mvc" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21224d79-c8e5-4644-88cd-d1c88be148ca" name="Default" comment="tomat config updated to open /articles" />
+    <list default="true" id="21224d79-c8e5-4644-88cd-d1c88be148ca" name="Default" comment="tomat config updated to open /articles">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/mvc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tomcat-web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/webmvc-xmlconfig-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/webmvc-xmlconfig-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/META-INF/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/META-INF/context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +105,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561659692055" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tomcat-web.xml" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.16207455" />
@@ -92,14 +113,16 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\CourseSpring\git\course-spring5\03-webmvc-xmlconfig\src\main\webapp" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\CourseSpring\git\course-spring5\03-webmvc-xmlconfig\src\main\webapp\WEB-INF" />
       <recent name="C:\CourseSpring\git\course-spring5\06-webmvc-xmlconfig\src\main\webapp" />
       <recent name="C:\CourseSpring\git\course-spring5\06-webmvc-xmlconfig\src\main\java\org\iproduct\spring\webmvc" />
       <recent name="C:\CourseSpring\git\course-spring5\06-webmvc-xmlconfig\src\main" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CourseSpring\git\course-spring5\03-webmvc-xmlconfig\src\main\webapp\resources" />
+      <recent name="D:\CourseSpring\git\course-spring5\03-webmvc-xmlconfig\src\main\webapp\META-INF" />
+      <recent name="D:\CourseSpring\git\course-spring5\03-webmvc-xmlconfig\src\main\webapp" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.71">
@@ -109,15 +132,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -224,12 +245,12 @@
       </method>
     </configuration>
     <configuration name="Tomcat 9.0.71" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.71" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="15" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Gradle___org_iproduct_spring_webmvc_xmlconfig___webmvc_xmlconfig_1_0_SNAPSHOT_war/articles" />
-      <option name="UPDATING_POLICY" value="restart-server" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/mvc/articles" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
-        <artifact name="Gradle : org.iproduct.spring.webmvc.xmlconfig : webmvc-xmlconfig-1.0-SNAPSHOT.war">
+        <artifact name="mvc">
           <settings>
-            <option name="CONTEXT_PATH" value="/Gradle___org_iproduct_spring_webmvc_xmlconfig___webmvc_xmlconfig_1_0_SNAPSHOT_war" />
+            <option name="CONTEXT_PATH" value="/mvc" />
           </settings>
         </artifact>
       </deployment>
@@ -290,10 +311,7 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="Gradle : org.iproduct.spring.webmvc.xmlconfig : webmvc-xmlconfig-1.0-SNAPSHOT.war" />
-        </option>
+        <option name="BuildArtifacts" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.71" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8">
@@ -403,6 +421,7 @@
       <workItem from="1605719756273" duration="127000" />
       <workItem from="1605719915577" duration="1951000" />
       <workItem from="1605721888170" duration="2367000" />
+      <workItem from="1605730408317" duration="4867000" />
     </task>
     <task id="LOCAL-00001" summary="gradlew version upgraded">
       <created>1605719465472</created>
@@ -438,78 +457,82 @@
     <option name="LAST_COMMIT_MESSAGE" value="tomat config updated to open /articles" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="0" key="#Project_Structure" timestamp="1605723166509">
+    <state x="581" y="252" key="#BuildArtifactsBeforeRunChooser" timestamp="1605734522129">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="0" y="0" key="#Project_Structure/0.0.1707.920@0.0.1707.920" timestamp="1605723166509" />
+    <state x="581" y="252" key="#BuildArtifactsBeforeRunChooser/0.0.1707.920@0.0.1707.920" timestamp="1605734522129" />
+    <state x="0" y="0" width="1671" height="920" key="#Project_Structure" timestamp="1605733530587">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="0" y="0" width="1671" height="920" key="#Project_Structure/0.0.1707.920@0.0.1707.920" timestamp="1605733530587" />
     <state x="621" y="327" key="#Tomcat_Server" timestamp="1605722146884">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="621" y="327" key="#Tomcat_Server/0.0.1707.920@0.0.1707.920" timestamp="1605722146884" />
-    <state x="305" y="67" width="1097" height="853" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605724136862">
+    <state x="305" y="38" width="1121" height="882" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605735325934">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="305" y="67" width="1097" height="853" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.920@0.0.1707.920" timestamp="1605724136862" />
-    <state x="565" y="29" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1605722148791">
+    <state x="305" y="38" width="1121" height="882" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.920@0.0.1707.920" timestamp="1605735325934" />
+    <state x="565" y="29" width="1112" height="891" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1605734547290">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="565" y="29" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1707.920@0.0.1707.920" timestamp="1605722148791" />
+    <state x="565" y="29" width="1112" height="891" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1707.920@0.0.1707.920" timestamp="1605734547290" />
     <state x="344" y="0" key="CommitChangelistDialog2" timestamp="1605724193830">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="344" y="0" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1605724193830" />
-    <state x="581" y="187" key="FileChooserDialogImpl" timestamp="1605723212339">
+    <state x="581" y="187" key="FileChooserDialogImpl" timestamp="1605735034802">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="581" y="187" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1605723212339" />
-    <state width="1389" height="360" key="GridCell.Tab.0.bottom" timestamp="1605724256919">
+    <state x="581" y="187" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1605735034802" />
+    <state width="1362" height="499" key="GridCell.Tab.0.bottom" timestamp="1605735311339">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1389" height="360" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1605724256919" />
-    <state width="1389" height="360" key="GridCell.Tab.0.center" timestamp="1605724256919">
+    <state width="1362" height="499" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1605735311339" />
+    <state width="1362" height="499" key="GridCell.Tab.0.center" timestamp="1605735311339">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1389" height="360" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1605724256919" />
-    <state width="1389" height="360" key="GridCell.Tab.0.left" timestamp="1605724256919">
+    <state width="1362" height="499" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1605735311339" />
+    <state width="1362" height="499" key="GridCell.Tab.0.left" timestamp="1605735311339">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1389" height="360" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1605724256919" />
-    <state width="1389" height="360" key="GridCell.Tab.0.right" timestamp="1605724256919">
+    <state width="1362" height="499" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1605735311339" />
+    <state width="1362" height="499" key="GridCell.Tab.0.right" timestamp="1605735311339">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1389" height="360" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1605724256919" />
-    <state width="1389" height="360" key="GridCell.Tab.1.bottom" timestamp="1605724256920">
+    <state width="1362" height="499" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1605735311339" />
+    <state width="1362" height="499" key="GridCell.Tab.1.bottom" timestamp="1605735311340">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1389" height="360" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1605724256920" />
-    <state width="1389" height="360" key="GridCell.Tab.1.center" timestamp="1605724256920">
+    <state width="1362" height="499" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1605735311340" />
+    <state width="1362" height="499" key="GridCell.Tab.1.center" timestamp="1605735311339">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1389" height="360" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1605724256920" />
-    <state width="1389" height="360" key="GridCell.Tab.1.left" timestamp="1605724256920">
+    <state width="1362" height="499" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1605735311339" />
+    <state width="1362" height="499" key="GridCell.Tab.1.left" timestamp="1605735311339">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1389" height="360" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1605724256920" />
-    <state width="1389" height="360" key="GridCell.Tab.1.right" timestamp="1605724256920">
+    <state width="1362" height="499" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1605735311339" />
+    <state width="1362" height="499" key="GridCell.Tab.1.right" timestamp="1605735311340">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1389" height="360" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1605724256920" />
-    <state width="1389" height="360" key="GridCell.Tab.2.bottom" timestamp="1605724256921">
+    <state width="1362" height="499" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1605735311339" />
+    <state width="1362" height="499" key="GridCell.Tab.2.bottom" timestamp="1605735311340">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1389" height="360" key="GridCell.Tab.2.bottom/0.0.1707.920@0.0.1707.920" timestamp="1605724256921" />
-    <state width="1389" height="360" key="GridCell.Tab.2.center" timestamp="1605724256921">
+    <state width="1362" height="499" key="GridCell.Tab.2.bottom/0.0.1707.920@0.0.1707.920" timestamp="1605735311340" />
+    <state width="1362" height="499" key="GridCell.Tab.2.center" timestamp="1605735311340">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1389" height="360" key="GridCell.Tab.2.center/0.0.1707.920@0.0.1707.920" timestamp="1605724256921" />
-    <state width="1389" height="360" key="GridCell.Tab.2.left" timestamp="1605724256920">
+    <state width="1362" height="499" key="GridCell.Tab.2.center/0.0.1707.920@0.0.1707.920" timestamp="1605735311340" />
+    <state width="1362" height="499" key="GridCell.Tab.2.left" timestamp="1605735311340">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1389" height="360" key="GridCell.Tab.2.left/0.0.1707.920@0.0.1707.920" timestamp="1605724256920" />
-    <state width="1389" height="360" key="GridCell.Tab.2.right" timestamp="1605724256921">
+    <state width="1362" height="499" key="GridCell.Tab.2.left/0.0.1707.920@0.0.1707.920" timestamp="1605735311340" />
+    <state width="1362" height="499" key="GridCell.Tab.2.right" timestamp="1605735311340">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1389" height="360" key="GridCell.Tab.2.right/0.0.1707.920@0.0.1707.920" timestamp="1605724256921" />
+    <state width="1362" height="499" key="GridCell.Tab.2.right/0.0.1707.920@0.0.1707.920" timestamp="1605735311340" />
     <state width="1389" height="360" key="GridCell.Tab.3.bottom" timestamp="1605723240557">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -526,14 +549,18 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state width="1389" height="360" key="GridCell.Tab.3.right/0.0.1707.920@0.0.1707.920" timestamp="1605723240557" />
-    <state x="206" y="0" key="SettingsEditor" timestamp="1605722296540">
+    <state x="206" y="0" key="SettingsEditor" timestamp="1605735095562">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="206" y="0" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1605722296540" />
+    <state x="206" y="0" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1605735095562" />
     <state x="346" y="128" key="Vcs.Push.Dialog.v2" timestamp="1605724229827">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="346" y="128" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1605724229827" />
+    <state x="421" y="96" key="com.intellij.javaee.view.ServerArtifactsDialog" timestamp="1605735173706">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="421" y="96" key="com.intellij.javaee.view.ServerArtifactsDialog/0.0.1707.920@0.0.1707.920" timestamp="1605735173706" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
