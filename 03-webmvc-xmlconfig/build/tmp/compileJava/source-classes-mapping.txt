@@ -1,0 +1,10 @@
+org/iproduct/spring/webmvc/web/GreetingController.java
+ org.iproduct.spring.webmvc.web.GreetingController
+org/iproduct/spring/webmvc/model/Article.java
+ org.iproduct.spring.webmvc.model.Article
+org/iproduct/spring/webmvc/service/ArticleProvider.java
+ org.iproduct.spring.webmvc.service.ArticleProvider
+org/iproduct/spring/webmvc/web/HelloController.java
+ org.iproduct.spring.webmvc.web.HelloController
+org/iproduct/spring/webmvc/service/MockArticleProvider.java
+ org.iproduct.spring.webmvc.service.MockArticleProvider
