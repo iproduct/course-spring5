@@ -6,6 +6,9 @@ import lombok.*;
 import org.hibernate.validator.constraints.URL;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
@@ -13,15 +16,17 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Document(collection="users")
 @Data
 @NoArgsConstructor
 @RequiredArgsConstructor
 @AllArgsConstructor
-public class User {
+public class User implements UserDetails {
     @Id
     @Pattern(regexp = "[A-Za-z0-9]{24}") // Mongodb ObjectID
     private String id;
@@ -65,4 +70,29 @@ public class User {
         this.roles = roles;
     }
 
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return roles.stream().map(role -> new SimpleGrantedAuthority("ROLE_" + role.toString()))
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return active;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return active;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return active;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return active;
+    }
 }
