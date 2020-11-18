@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="17b5253f-a4e6-4f48-85a3-fb243b974c8d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../01-webflux-demo-lab7/src/main/java/org/iproduct/webflux/WebfluxDemoLab7Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-webflux-demo-lab7/src/main/java/org/iproduct/webflux/WebfluxDemoLab7Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-webflux-demo-lab7/src/main/java/org/iproduct/webflux/dao/ReactiveArticlesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-webflux-demo-lab7/src/main/java/org/iproduct/webflux/dao/ReactiveArticlesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-webflux-demo-lab7/src/main/java/org/iproduct/webflux/service/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-webflux-demo-lab7/src/main/java/org/iproduct/webflux/service/ArticleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-webflux-demo-lab7/src/main/java/org/iproduct/webflux/web/ReactiveArticlesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-webflux-demo-lab7/src/main/java/org/iproduct/webflux/web/ReactiveArticlesHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,12 +56,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="KotlinMultiplatform">
+    <executables />
+  </component>
   <component name="ProjectId" id="1SITZFdzK0Jiv5bIW34FQTe9q83" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559693646579" />
+    <property name="go.import.settings.migrated" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/org/iproduct/spring/webmvc" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -81,18 +98,6 @@
       <recent name="D:\CourseSpring\git\course-spring5\02-webmvc-rest\src\test\java\org\iproduct\spring\webmvc\config" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="JUnit.ArticlesAPITests.getAccount">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.iproduct.spring.webmvc.Application" />
@@ -110,6 +115,17 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -176,6 +192,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -200,6 +217,7 @@
       <workItem from="1559684290891" duration="1177000" />
       <workItem from="1559685490206" duration="3155000" />
       <workItem from="1571250165836" duration="193000" />
+      <workItem from="1605715886698" duration="1980000" />
     </task>
     <task id="LOCAL-00001" summary="02-webmvc-rest initial commit">
       <created>1534412979959</created>
@@ -211,40 +229,8 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="ArticlesAPITests_getAccount - 2018.08.20 at 01h 16m 18s.xml">
-      <configuration name="ArticlesAPITests.getAccount" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArticlesAPITests_getAccount - 2018.08.20 at 01h 16m 52s.xml">
-      <configuration name="ArticlesAPITests.getAccount" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArticlesAPITests_getAccount - 2018.08.20 at 01h 16m 53s.xml">
-      <configuration name="ArticlesAPITests.getAccount" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArticlesAPITests - 2018.08.20 at 01h 20m 56s.xml">
-      <configuration name="ArticlesAPITests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArticlesAPITests - 2018.08.20 at 01h 36m 51s.xml">
-      <configuration name="ArticlesAPITests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArticlesAPITests - 2019.06.05 at 01h 02m 14s.xml">
-      <configuration name="ArticlesAPITests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArticlesAPITests - 2019.06.05 at 01h 17m 52s.xml">
-      <configuration name="ArticlesAPITests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArticlesAPITests_getAccount - 2019.06.05 at 01h 19m 59s.xml">
-      <configuration name="ArticlesAPITests.getAccount" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArticlesAPITests_getAccount - 2019.06.05 at 01h 22m 45s.xml">
-      <configuration name="ArticlesAPITests.getAccount" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArticlesAPITests_getAccount - 2019.06.05 at 02h 17m 37s.xml">
-      <configuration name="ArticlesAPITests.getAccount" configurationId="JUnit" />
-    </history-entry>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -256,10 +242,17 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="02-webmvc-rest initial commit" />
     <option name="LAST_COMMIT_MESSAGE" value="02-webmvc-rest initial commit" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="581" y="156" key="FileChooserDialogImpl" timestamp="1605719169990">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="581" y="156" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1605719169990" />
   </component>
   <component name="masterDetails">
     <states>
