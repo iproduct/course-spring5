@@ -70,27 +70,32 @@ public class User implements UserDetails {
         this.roles = roles;
     }
 
+    @JsonIgnore
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return roles.stream().map(role -> new SimpleGrantedAuthority("ROLE_" + role.toString()))
                 .collect(Collectors.toList());
     }
 
+    @JsonIgnore
     @Override
     public boolean isAccountNonExpired() {
         return active;
     }
 
+    @JsonIgnore
     @Override
     public boolean isAccountNonLocked() {
         return active;
     }
 
+    @JsonIgnore
     @Override
     public boolean isCredentialsNonExpired() {
         return active;
     }
 
+    @JsonIgnore
     @Override
     public boolean isEnabled() {
         return active;
