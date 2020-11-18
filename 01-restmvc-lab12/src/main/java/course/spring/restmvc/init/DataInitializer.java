@@ -3,12 +3,14 @@ package course.spring.restmvc.init;
 import course.spring.restmvc.model.Post;
 import course.spring.restmvc.model.User;
 import course.spring.restmvc.service.PostService;
+import course.spring.restmvc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import static course.spring.restmvc.model.Role.*;
 
@@ -16,6 +18,8 @@ import static course.spring.restmvc.model.Role.*;
 public class DataInitializer implements CommandLineRunner {
     @Autowired
     private PostService postService;
+    @Autowired
+    private UserService userService;
 
     private static final List<User> SAMPLE_USERS = List.of(
             new User("Default", "Admin", "admin", "admin",
@@ -43,9 +47,13 @@ public class DataInitializer implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        if(postService.getCount() == 0) {
+        if (userService.getCount() == 0) {
+            SAMPLE_USERS.forEach(userService::addUser);
+        }
+
+        if (postService.getCount() == 0) {
             SAMPLE_POSTS.forEach(post -> {
-                post.setAuthorId("000000000000000000000001");
+                post.setAuthorId(userService.getUserByUsername("author").getId());
                 postService.addPost(post);
             });
         }

@@ -16,7 +16,7 @@ import java.util.*;
 
 @RestController
 @RequestMapping("/api/posts")
-public class PostsResource {
+public class PostResource {
     @Autowired
     private PostService postService;
 
@@ -49,7 +49,7 @@ public class PostsResource {
     public Post updatePost(@PathVariable String id, @RequestBody Post post) {
         if(!id.equals(post.getId())) {
             throw new InvalidEntityDataException(
-                    String.format("Url ID:%s differs from body entity ID:%s", id, post.getId()));
+                    String.format("Post URL ID:%s differs from body entity ID:%s", id, post.getId()));
         }
         return postService.updatePost(post);
     }

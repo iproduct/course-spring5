@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-@Document(collection="posts")
+@Document(collection="users")
 @Data
 @NoArgsConstructor
 @RequiredArgsConstructor
