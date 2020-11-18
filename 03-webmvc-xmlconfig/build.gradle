@@ -6,6 +6,9 @@ apply plugin: 'war'
 //apply plugin: 'jetty'
 apply plugin: 'org.akhikhl.gretty'
 
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
 buildscript {
     repositories {
         jcenter()

@@ -5,28 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21224d79-c8e5-4644-88cd-d1c88be148ca" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../01-spring-intro-lab11/src/main/java/course/spring/intro/exception/InvalidEntityDataException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-intro-lab11/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../01-spring-intro-lab11/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-intro-lab11/src/main/java/course/spring/intro/model/ErrorResposnse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-spring-intro-lab11/src/main/java/course/spring/intro/model/ErrorResposnse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-intro-lab11/src/main/java/course/spring/intro/model/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-spring-intro-lab11/src/main/java/course/spring/intro/model/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-intro-lab11/src/main/java/course/spring/intro/web/ExceptionHandlingControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-spring-intro-lab11/src/main/java/course/spring/intro/web/ExceptionHandlingControllerAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-intro-lab11/src/main/java/course/spring/intro/web/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../01-spring-intro-lab11/src/main/java/course/spring/intro/web/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileContent/annotation-processors.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileContent/fileContent.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04-webmvc-rest/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/webmvc-xmlconfig-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/webmvc-xmlconfig-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/test/java/org/iproduct/spring/restmvc/RestMvcBootApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15-rest-mvc-boot-hateoas/src/test/java/org/iproduct/spring/restmvc/RestMvcBootApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-demo-final/src/main/java/demos/springdata/restdemo/config/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-demo-final/src/main/java/demos/springdata/restdemo/config/SpringSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-webmvc-rest/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../04-webmvc-rest/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-webmvc-rest/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../04-webmvc-rest/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-webmvc-rest/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../04-webmvc-rest/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-webmvc-rest/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../04-webmvc-rest/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-webmvc-rest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../04-webmvc-rest/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,12 +43,6 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="webmvc-xmlconfig" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="webmvc-xmlconfig" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -102,7 +84,8 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561659692055" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../CourseGO/git/gopl.io" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.23772103" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
@@ -121,13 +104,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -233,7 +218,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 9.0.71" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.71" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.71" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.71" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="15" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/mvc/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="Gradle : org.iproduct.spring.webmvc.xmlconfig : webmvc-xmlconfig-1.0-SNAPSHOT.war">
@@ -408,6 +394,7 @@
       <workItem from="1576088241840" duration="1135000" />
       <workItem from="1576316491993" duration="27000" />
       <workItem from="1605116746360" duration="1563000" />
+      <workItem from="1605717657150" duration="1455000" />
     </task>
     <servers />
   </component>
@@ -415,6 +402,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="305" y="106" width="1097" height="737" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605718312422">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="305" y="106" width="1097" height="737" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.920@0.0.1707.920" timestamp="1605718312422" />
     <state width="1389" height="299" key="GridCell.Tab.0.bottom" timestamp="1605119526264">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -463,5 +454,9 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state width="1389" height="299" key="GridCell.Tab.2.right/0.0.1707.920@0.0.1707.920" timestamp="1605119526264" />
+    <state x="206" y="0" key="SettingsEditor" timestamp="1605719115387">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="206" y="0" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1605719115387" />
   </component>
 </project>
