@@ -1,8 +1,8 @@
 package course.spring.intro.web;
 
-import course.spring.restmvc.entity.User;
-import course.spring.restmvc.service.UserService;
-import course.spring.restmvc.util.JwtUtils;
+import course.spring.intro.model.User;
+import course.spring.intro.service.UserService;
+import course.spring.intro.util.JwtUtils;
 import io.jsonwebtoken.ExpiredJwtException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -33,7 +33,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .antMatchers("/api/users/**").hasRole(ADMIN.toString())
             .antMatchers("/**").permitAll()
             .and().exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint)
-            .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+            .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+            ;
     }
 
     @Bean
