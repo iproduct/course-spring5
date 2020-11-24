@@ -29,7 +29,7 @@ public class Post {
     @NotNull
     @Size(min=2, max=2048)
     private String content;
-    @NotNull
+
     @Pattern(regexp = "^[A-Fa-f0-9]{24}$")
     private String authorId;
     @URL

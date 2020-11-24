@@ -2,10 +2,14 @@ package course.spring.intro.service.impl;
 
 import course.spring.intro.dao.PostRepository;
 import course.spring.intro.dao.PostRepositoryOld;
+import course.spring.intro.dao.UserRepository;
 import course.spring.intro.exception.EntityNotFoundException;
 import course.spring.intro.model.Post;
+import course.spring.intro.model.User;
 import course.spring.intro.service.PostService;
+import course.spring.intro.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,10 +17,12 @@ import java.util.List;
 @Service
 public class PostServiceImpl implements PostService {
     private PostRepository postRepository;
+    private UserService userService;
 
     @Autowired
-    public PostServiceImpl(PostRepository postRepository) {
+    public PostServiceImpl(PostRepository postRepository, UserService userService) {
         this.postRepository = postRepository;
+        this.userService = userService;
     }
 
     @Override
@@ -32,6 +38,9 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public Post createPost(Post post) {
+        String username = SecurityContextHolder.getContext().getAuthentication().getName();
+        User author = userService.getUserByUsername(username);
+        post.setAuthorId(author.getId());
         return postRepository.insert(post);
     }
 
