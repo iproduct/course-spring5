@@ -1,6 +1,7 @@
 package course.spring.restmvc.config;
 
 import course.spring.restmvc.service.UserService;
+import course.spring.restmvc.web.FilterChainExceptionHandlerFilter;
 import course.spring.restmvc.web.JwtAuthenticationEntryPoint;
 import course.spring.restmvc.web.JwtRequestFilter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.authentication.logout.LogoutFilter;
 
 import static course.spring.restmvc.model.Role.ADMIN;
 import static course.spring.restmvc.model.Role.AUTHOR;
@@ -24,6 +26,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
     @Autowired
     private JwtRequestFilter jwtRequestFilter;
+
+    @Autowired
+    private FilterChainExceptionHandlerFilter filterChainExceptionHandlerFilter;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -40,6 +45,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
         http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
+        http.addFilterBefore(filterChainExceptionHandlerFilter, LogoutFilter.class);
     }
 
     @Bean
