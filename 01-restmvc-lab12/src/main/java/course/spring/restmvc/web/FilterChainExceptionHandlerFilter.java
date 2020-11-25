@@ -3,6 +3,8 @@ package course.spring.restmvc.web;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import course.spring.restmvc.model.ErrorResponse;
 import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.JwtException;
+import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.SignatureException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,7 +36,7 @@ public class FilterChainExceptionHandlerFilter extends OncePerRequestFilter {
             throws ServletException, IOException {
         try {
             filterChain.doFilter(request, response);
-        } catch (SignatureException | ExpiredJwtException | AuthenticationException e) {
+        } catch (JwtException | AuthenticationException e) {
             log.error("Spring Security Filter Chain Exception:", e);
             ResponseEntity<ErrorResponse> responseEntity = controllerAdvice.handleAuthenticationException(e);
             response.setStatus(responseEntity.getStatusCodeValue());

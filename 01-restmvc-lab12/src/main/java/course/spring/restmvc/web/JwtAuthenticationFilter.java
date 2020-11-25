@@ -23,7 +23,7 @@ import java.io.IOException;
 @Component
 @Slf4j
 @Order
-public class JwtRequestFilter extends OncePerRequestFilter {
+public class JwtAuthenticationFilter extends OncePerRequestFilter {
     @Autowired
     private UserService userService;
     @Autowired

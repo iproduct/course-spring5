@@ -4,6 +4,7 @@ import course.spring.restmvc.exception.InvalidEntityDataException;
 import course.spring.restmvc.exception.NonexistingEntityException;
 import course.spring.restmvc.model.ErrorResponse;
 import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.SignatureException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -34,7 +35,7 @@ public class ErrorHandlerControllerAdvice {
                 .body(new ErrorResponse(HttpStatus.BAD_REQUEST.value(), ex.getMessage()));
     }
 
-    @ExceptionHandler({SignatureException.class, ExpiredJwtException.class, AuthenticationException.class})
+    @ExceptionHandler({JwtException.class, AuthenticationException.class})
     public ResponseEntity<ErrorResponse> handleAuthenticationException(RuntimeException ex) {
         return ResponseEntity.badRequest()
                 .body(new ErrorResponse(HttpStatus.UNAUTHORIZED.value(), ex.getMessage()));

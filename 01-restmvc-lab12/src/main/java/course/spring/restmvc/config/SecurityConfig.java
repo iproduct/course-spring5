@@ -3,7 +3,7 @@ package course.spring.restmvc.config;
 import course.spring.restmvc.service.UserService;
 import course.spring.restmvc.web.FilterChainExceptionHandlerFilter;
 import course.spring.restmvc.web.JwtAuthenticationEntryPoint;
-import course.spring.restmvc.web.JwtRequestFilter;
+import course.spring.restmvc.web.JwtAuthenticationFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,7 +25,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
     @Autowired
-    private JwtRequestFilter jwtRequestFilter;
+    private JwtAuthenticationFilter jwtAuthenticationFilter;
 
     @Autowired
     private FilterChainExceptionHandlerFilter filterChainExceptionHandlerFilter;
@@ -44,7 +44,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and().exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint)
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
-        http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
+        http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
         http.addFilterBefore(filterChainExceptionHandlerFilter, LogoutFilter.class);
     }
 
