@@ -20,7 +20,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Post {
     @Id
-    @Pattern(regexp = "[A-Za-z0-9]{24}") // Mongodb ObjectID
+    @Pattern(regexp = "[A-Za-z0-9]{24}", message = "Invalid post ID") // Mongodb ObjectID
     private String id;
     @NonNull
     @NotNull
@@ -33,9 +33,9 @@ public class Post {
     @NonNull
     @URL
     private String imageUrl;
-    @Pattern(regexp = "[A-Za-z0-9]{24}")
+    @Pattern(regexp = "[A-Za-z0-9]{24}", message = "Invalid author ID")
     private String authorId;
-    private List<@Pattern(regexp = "^[\\w\\s-]+$") String> keywords = new ArrayList<>();
+    private List<@Pattern(regexp = "^[\\w\\s-]+$", message = "Invalid keyword - should contain only letters and digits") String> keywords = new ArrayList<>();
     @PastOrPresent
     private LocalDateTime created = LocalDateTime.now();
     @PastOrPresent

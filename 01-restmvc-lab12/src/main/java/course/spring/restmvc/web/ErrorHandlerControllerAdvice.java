@@ -21,7 +21,7 @@ public class ErrorHandlerControllerAdvice {
     @ExceptionHandler
     public ResponseEntity<ErrorResponse> handleInvalidEntityData(InvalidEntityDataException ex) {
         return ResponseEntity.badRequest()
-                .body(new ErrorResponse(HttpStatus.BAD_REQUEST.value(), ex.getMessage()));
+                .body(new ErrorResponse(HttpStatus.BAD_REQUEST.value(), ex.getMessage(), ex.getViolations()));
     }
 
     @ExceptionHandler

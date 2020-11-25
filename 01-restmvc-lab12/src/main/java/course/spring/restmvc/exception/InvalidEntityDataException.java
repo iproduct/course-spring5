@@ -37,4 +37,8 @@ public class InvalidEntityDataException extends RuntimeException {
         super(cause);
         this.violations = violations;
     }
+
+    public List<String> getViolations() {
+        return violations;
+    }
 }

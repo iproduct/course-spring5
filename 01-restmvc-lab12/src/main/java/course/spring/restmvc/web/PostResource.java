@@ -9,10 +9,15 @@ import course.spring.restmvc.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.util.*;
+import java.util.stream.Collectors;
+
+import static course.spring.restmvc.util.ErrorHandlingUtils.getViolationsAsStringList;
 
 @RestController
 @RequestMapping("/api/posts")
@@ -37,7 +42,10 @@ public class PostResource {
     }
 
     @PostMapping
-    public ResponseEntity<Post> createPost(@RequestBody Post post) {
+    public ResponseEntity<Post> createPost(@Valid @RequestBody Post post, Errors errors) {
+        if(errors.hasErrors()){
+            throw new InvalidEntityDataException("Invalid post data", getViolationsAsStringList(errors));
+        }
         Post created = postService.addPost(post);
         return ResponseEntity.created(
                 ServletUriComponentsBuilder.fromCurrentRequest().pathSegment("{id}")
@@ -46,13 +54,18 @@ public class PostResource {
     }
 
     @PutMapping("/{id}")
-    public Post updatePost(@PathVariable String id, @RequestBody Post post) {
+    public Post updatePost(@PathVariable String id, @Valid @RequestBody Post post, Errors errors) {
+        if(errors.hasErrors()){
+            throw new InvalidEntityDataException("Invalid post data", getViolationsAsStringList(errors));
+        }
         if(!id.equals(post.getId())) {
             throw new InvalidEntityDataException(
                     String.format("Post URL ID:%s differs from body entity ID:%s", id, post.getId()));
         }
         return postService.updatePost(post);
     }
+
+
 
     @DeleteMapping("/{id}")
     public Post deletePost(@PathVariable String id) {
