@@ -42,6 +42,7 @@ public class User implements UserDetails {
     @NotNull
     @Size(min=2, max=30)
     private String username;
+
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @NonNull
     @Size(min=6)
