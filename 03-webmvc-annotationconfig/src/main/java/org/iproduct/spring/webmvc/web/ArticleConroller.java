@@ -12,6 +12,7 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -43,13 +44,13 @@ public class ArticleConroller {
     }
 
     @GetMapping("/new-article")
-    public String showForm(@ModelAttribute("article") Article article) {
-//        return new ModelAndView("articleForm", "article", new Article());
-        return "articleForm";
+    public ModelAndView showForm() {
+        return new ModelAndView("articleForm", "article", new Article());
+//        return "articleForm";
     }
 
     @PostMapping(value = "/submit-article")
-    public String addArticle(@ModelAttribute("article") Article article, BindingResult result) {
+    public String addArticle(@Valid @ModelAttribute("article") Article article, BindingResult result) {
         if (result.hasErrors()) {
             return "articleForm";
         }

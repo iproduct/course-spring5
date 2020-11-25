@@ -13,14 +13,18 @@
 			<tr>
 				<td><form:label path="title">Title</form:label></td>
 				<td><form:input path="title" /></td>
+				<td><form:errors path="title" class="errors well col-sm-offset-2 col-sm-10"/></td>
 			</tr>
+
 			<tr>
 				<td><form:label path="content">Content</form:label></td>
 				<td><form:input path="content" /></td>
+				<td><form:errors path="content" class="errors well col-sm-offset-2 col-sm-10"/></td>
 			</tr>
 			<tr>
 				<td><form:label path="createdDate">Creation Date</form:label></td>
 				<td><form:input path="createdDate" /></td>
+				<td><form:errors path="createdDate" class="errors well col-sm-offset-2 col-sm-10"/></td>
 			</tr>
 			<tr>
 				<td><input type="submit" value="Submit" /></td>

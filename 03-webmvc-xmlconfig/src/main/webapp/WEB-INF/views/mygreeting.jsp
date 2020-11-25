@@ -41,7 +41,7 @@
             </c:if>
 
             <c:if test="${empty name}">
-                Welcome Spring User!
+                Welcome MVC User!
             </c:if>
             </h2>
 

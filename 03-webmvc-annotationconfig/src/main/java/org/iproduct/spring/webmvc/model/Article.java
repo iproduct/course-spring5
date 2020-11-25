@@ -1,14 +1,20 @@
 package org.iproduct.spring.webmvc.model;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Objects;
 
 
 public class Article {
+    @NotNull
+    @Size(min=2, max=80)
     private String title;
+    @NotNull
+    @Size(min=2, max=2048)
     private String content;
-    private Date createdDate;
+    private Date createdDate = new Date();
 
     public Article() {
     }
