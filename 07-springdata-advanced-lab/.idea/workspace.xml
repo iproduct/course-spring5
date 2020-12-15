@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c99c3bc1-3d8c-43b3-a064-a32062ad986c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../workshop1/shampoos-insert.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workshop1/shampoos.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/SpringdataAdvancedApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/dao/IngredientRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/dao/LabelRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/dao/ShampooRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Ingredient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Label.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Shampoo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Size.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/init/AppInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/util/PrintUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/shampoos-insert.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/course/springdata/advanced/SpringdataAdvancedApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myblogs-app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myblogs-app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myblogs-app/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myblogs-app/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myblogs-app/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myblogs-app/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myblogs-app/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myblogs-app/src/main/java/course/spring/myblogsapp/MyblogsAppApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myblogs-app/src/main/java/course/spring/myblogsapp/dao/PostRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myblogs-app/src/main/java/course/spring/myblogsapp/entity/Post.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myblogs-app/src/main/java/course/spring/myblogsapp/exception/NonExisitingEntityException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myblogs-app/src/main/java/course/spring/myblogsapp/init/DataInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myblogs-app/src/main/java/course/spring/myblogsapp/service/PostService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myblogs-app/src/main/java/course/spring/myblogsapp/service/PostServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myblogs-app/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myblogs-app/src/test/java/course/spring/myblogsapp/MyblogsAppApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="KotlinMultiplatform">
+    <allAvailableExecutables />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Users\office27\.m2\wrapper\dists\apache-maven-3.6.3-bin\1iopthnavndlasol9gbrbg6bf2\apache-maven-3.6.3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1jsbBTlSH8p7WjL5sMnxh9VDPaT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.23772103" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CourseSpringData\git\spring-data\07-springdata-advanced-lab\src\main\resources" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="course.springdata.advanced.entity" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="course.springdata.advanced.dao" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CourseSpringData\git\spring-data\07-springdata-advanced-lab" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringdataAdvancedApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="07-springdata-advanced-lab" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="course.springdata.advanced.SpringdataAdvancedApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c99c3bc1-3d8c-43b3-a064-a32062ad986c" name="Default Changelist" comment="" />
+      <created>1604595612593</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604595612593</updated>
+      <workItem from="1604595614078" duration="14216000" />
+      <workItem from="1604930358017" duration="32000" />
+      <workItem from="1608039235861" duration="1218000" />
+      <workItem from="1608048098481" duration="837000" />
+    </task>
+    <task id="LOCAL-00001" summary="07-springdata-advanced-lab initial commit">
+      <created>1604598525694</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604598525694</updated>
+    </task>
+    <task id="LOCAL-00002" summary="07-springdata-advanced-lab - get shampoos by size">
+      <created>1604599872907</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604599872907</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="07-springdata-advanced-lab initial commit" />
+    <MESSAGE value="07-springdata-advanced-lab - get shampoos by size" />
+    <option name="LAST_COMMIT_MESSAGE" value="07-springdata-advanced-lab - get shampoos by size" />
+  </component>
+</project>
