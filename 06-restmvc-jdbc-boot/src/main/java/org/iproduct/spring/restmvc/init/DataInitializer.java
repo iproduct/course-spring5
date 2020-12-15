@@ -28,7 +28,7 @@ public class DataInitializer implements CommandLineRunner {
     private static final List<Article> mockArticles = Arrays.asList(
             new Article("Welcome to Spring 5", "Spring 5 is great beacuse ..."),
             new Article("Dependency Injection", "Should I use DI or lookup ..."),
-            new Article("S", "There are several ways to configure Spring beans.")
+            new Article("Spring", "There are several ways to configure Spring beans.")
     );
 
     @Autowired

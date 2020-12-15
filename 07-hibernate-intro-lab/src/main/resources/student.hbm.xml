@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="course.springdata.hibernateintro.entity.Student" table="students">
+        <meta attribute="class-description">
+            This class models an active student in elearning system
+        </meta>
+        <id name="id" column="id" type="long">
+            <generator class="identity"></generator>
+        </id>
+        <property name="name" column="name" type="string"/>
+        <property name="registrationDate" column="registration_date" type="timestamp"/>
+    </class>
+</hibernate-mapping>

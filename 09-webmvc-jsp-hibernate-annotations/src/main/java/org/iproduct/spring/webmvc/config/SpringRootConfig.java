@@ -13,8 +13,6 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import javax.annotation.Resource;
-import javax.annotation.Resources;
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.util.Properties;

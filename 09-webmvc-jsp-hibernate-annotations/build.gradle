@@ -1,11 +1,27 @@
-group 'org.iproduct.spring'
-version '1.0-SNAPSHOT'
+buildscript {
+    repositories {
+        jcenter()
+        // enable this to use snapshot versions of Gretty:
+        // maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local' }
+    }
 
+    dependencies {
+        classpath 'org.gretty:gretty:+'
+    }
+}
+
+repositories {
+    jcenter()
+    // enable this to use snapshot versions of Gretty:
+    // maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local' }
+}
+
+apply plugin: 'org.gretty'
 apply plugin: 'java'
-apply plugin: 'war'
-apply plugin: 'org.akhikhl.gretty'
-
 apply plugin: 'idea'
+apply plugin: 'war' // optional if you use spring-boot
+//apply from: 'https://raw.github.com/gretty-gradle-plugin/gretty/master/pluginScripts/gretty.plugin'
+
 idea {
     module {
         downloadJavadoc = true
@@ -13,17 +29,16 @@ idea {
     }
 }
 
-buildscript {
-    repositories {
-        jcenter()
-    }
+group 'org.iproduct.spring.webmvc.xmlconfig'
+version '1.0-SNAPSHOT'
 
-    dependencies {
-        classpath 'org.akhikhl.gretty:gretty:+'
-    }
+sourceCompatibility = 11
+targetCompatibility = 11
+
+compileJava.options.encoding = 'UTF-8'
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
 }
-
-sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -33,13 +48,15 @@ repositories {
 
 dependencies {
     compile('ch.qos.logback:logback-classic:1.2.3')
-    compile('org.springframework:spring-webmvc:5.2.3.RELEASE')
-    compile('org.springframework:spring-orm:5.2.3.RELEASE')
-    compile('org.hibernate:hibernate-core:5.4.12.Final')
-    compile('com.zaxxer:HikariCP:3.4.2')
+    compile('org.springframework:spring-webmvc:5.3.2')
+    compile('org.springframework:spring-orm:5.3.2')
+    compile('org.hibernate:hibernate-core:5.4.25.Final')
+    compile 'mysql:mysql-connector-java:8.0.22'
+    compile('com.zaxxer:HikariCP:3.4.5')
     compile('javax.servlet:jstl:1.2')
     compile("org.hibernate.validator:hibernate-validator:6.1.2.Final")
-    compile('org.projectlombok:lombok:1.16.20')
+    compile('org.projectlombok:lombok:1.18.16')
+    compile 'javax.annotation:javax.annotation-api:1.3.2'
     runtime('org.hsqldb:hsqldb:2.5.0')
     compile('org.webjars:bootstrap:3.3.7-1')
     compile('org.webjars:jquery:3.1.1')
@@ -47,8 +64,8 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
-gretty{
+gretty {
     httpPort = 8080
     contextPath = 'mvc'
-    servletContainer = 'jetty9'
+    servletContainer = 'tomcat9'
 }

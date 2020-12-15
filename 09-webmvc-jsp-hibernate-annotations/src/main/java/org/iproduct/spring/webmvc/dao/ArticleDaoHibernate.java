@@ -28,8 +28,8 @@ public class ArticleDaoHibernate implements ArticleDao {
         this.sessionFactory = sessionFactory;
     }
 
-    @Autowired
-    private EntityManager em ;
+//    @Autowired
+//    private EntityManager em ;
 
     @Autowired
     public void setTransactionManager(PlatformTransactionManager transactionManager) {

@@ -124,7 +124,7 @@ public class ArticleServiceImpl implements ArticleService {
 //        });
 //    }
 
-    //    Programmatic transaction
+//    //    Programmatic transaction
 //    public List<Article> createArticlesBatch(List<Article> articles) {
 //        return transactionTemplate.execute(status -> {
 //                List<Article> created = articles.stream()

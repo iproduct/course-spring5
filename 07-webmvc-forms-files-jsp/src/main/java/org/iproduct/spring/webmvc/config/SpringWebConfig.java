@@ -1,5 +1,6 @@
 package org.iproduct.spring.webmvc.config;
 
+import org.iproduct.spring.webmvc.web.interceptors.LoggerInterceptor;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -98,6 +99,8 @@ public class SpringWebConfig implements WebMvcConfigurer {
         LocaleChangeInterceptor localeChangeInterceptor = new LocaleChangeInterceptor();
         localeChangeInterceptor.setParamName("lang");
         registry.addInterceptor(localeChangeInterceptor);
+
+//        registry.addInterceptor(new LoggerInterceptor());
     }
 
 }

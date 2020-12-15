@@ -3,8 +3,11 @@ package course.spring.restmvc.service.impl;
 import course.spring.restmvc.dao.PostRepository;
 import course.spring.restmvc.exception.NonexistingEntityException;
 import course.spring.restmvc.model.Post;
+import course.spring.restmvc.model.User;
 import course.spring.restmvc.service.PostService;
+import course.spring.restmvc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -14,10 +17,12 @@ import java.util.Set;
 @Service
 public class PostServiceImpl implements PostService {
     private PostRepository postRepo;
+    private UserService userService;
 
     @Autowired
-    public PostServiceImpl(PostRepository postRepo) {
+    public PostServiceImpl(PostRepository postRepo, UserService userService) {
         this.postRepo = postRepo;
+        this.userService = userService;
     }
 
     @Override
@@ -39,6 +44,9 @@ public class PostServiceImpl implements PostService {
     @Override
     public Post addPost(Post post) {
         post.setId(null);
+        String username = SecurityContextHolder.getContext().getAuthentication().getName();
+        User author = userService.getUserByUsername(username);
+        post.setAuthorId(author.getId());
         return postRepo.insert(post);
     }
 

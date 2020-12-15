@@ -2,11 +2,9 @@ package org.iproduct.spring.webmvc.model;
 
 import org.hibernate.validator.constraints.Length;
 
-import javax.annotation.Generated;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
-import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Objects;
