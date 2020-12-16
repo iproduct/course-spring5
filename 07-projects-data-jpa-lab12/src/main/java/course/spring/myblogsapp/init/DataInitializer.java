@@ -70,5 +70,9 @@ public class DataInitializer implements CommandLineRunner {
             users.forEach(u -> u.getProjects().add( projects.get(0)));
         }
 
+        companyRepository.findAll().forEach(System.out::println);
+        projectRepository.findAll().forEach(System.out::println);
+        userRepository.findAll().forEach(System.out::println);
+
     }
 }

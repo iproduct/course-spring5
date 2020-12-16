@@ -62,6 +62,7 @@ public class User extends BaseEntity{
 
 
     @ManyToMany(mappedBy = "users")
+    @ToString.Exclude
     private Set<Project> projects = new HashSet<>();
 
     public User(@NonNull @Size(min = 2, max = 20) String firstName, @NonNull @Size(min = 2, max = 20) String lastName, @NonNull @Email String email, @NonNull @Size(min = 2, max = 30) String username, @NonNull @Size(min = 5, max = 30) String password, Set<Role> roles) {

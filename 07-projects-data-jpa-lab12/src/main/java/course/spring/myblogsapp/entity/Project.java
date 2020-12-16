@@ -73,4 +73,19 @@ public class Project extends BaseEntity {
     public int hashCode() {
         return Objects.hash(super.hashCode(), getName());
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Project{");
+        sb.append("id=").append(id);
+        sb.append(", name='").append(name).append('\'');
+        sb.append(", description='").append(description).append('\'');
+        sb.append(", budget=").append(budget);
+        sb.append(", startDate=").append(startDate);
+        sb.append(", finished=").append(finished);
+        sb.append(", company=").append(company.getName());
+        sb.append(", users=").append(users);
+        sb.append('}');
+        return sb.toString();
+    }
 }
