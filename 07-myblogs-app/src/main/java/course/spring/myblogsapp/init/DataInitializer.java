@@ -29,6 +29,8 @@ public class DataInitializer implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        posts.forEach(postService::addPost);
+        if(postService.getPostsCount() == 0) {
+            posts.forEach(postService::addPost);
+        }
     }
 }

@@ -72,5 +72,6 @@
     <orderEntry type="library" name="Gradle: io.netty:netty-transport-native-unix-common:4.1.52.Final" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.boot:spring-boot-devtools:2.3.4.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.latencyutils:LatencyUtils:2.0.3" level="project" />
+    <orderEntry type="library" name="opencv-450" level="application" />
   </component>
 </module>

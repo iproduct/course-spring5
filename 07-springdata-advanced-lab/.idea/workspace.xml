@@ -5,44 +5,68 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c99c3bc1-3d8c-43b3-a064-a32062ad986c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../workshop1/shampoos-insert.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../workshop1/shampoos.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/SpringdataAdvancedApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/dao/IngredientRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/dao/LabelRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/dao/ShampooRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Ingredient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Label.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Shampoo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Size.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/init/AppInitializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/util/PrintUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/shampoos-insert.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/course/springdata/advanced/SpringdataAdvancedApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myblogs-app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myblogs-app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myblogs-app/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myblogs-app/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myblogs-app/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myblogs-app/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myblogs-app/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myblogs-app/src/main/java/course/spring/myblogsapp/MyblogsAppApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myblogs-app/src/main/java/course/spring/myblogsapp/dao/PostRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myblogs-app/src/main/java/course/spring/myblogsapp/entity/Post.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myblogs-app/src/main/java/course/spring/myblogsapp/exception/NonExisitingEntityException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myblogs-app/src/main/java/course/spring/myblogsapp/init/DataInitializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myblogs-app/src/main/java/course/spring/myblogsapp/service/PostService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myblogs-app/src/main/java/course/spring/myblogsapp/service/PostServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myblogs-app/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myblogs-app/src/test/java/course/spring/myblogsapp/MyblogsAppApplicationTests.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-spring-core-demo/.idea/01-spring-core-demo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/modules/core-demo.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/modules/core-demo.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-myblogs-app/SCHEMA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/SpringdataAdvancedApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/dao/IngredientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/dao/LabelRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/dao/ShampooRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Ingredient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Label.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Shampoo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Size.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/init/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/util/PrintUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/shampoos-insert.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/course/springdata/advanced/SpringdataAdvancedApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-spring-core-demo/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../01-spring-core-demo/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-spring-core-demo/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../01-spring-core-demo/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/libraries/Gradle__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/libraries/Gradle__junit_junit_4_12.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/modules/core-demo_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/modules/core-demo_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/02-core-demo-lab8.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/02-core-demo-lab8.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-myblogs-app/src/main/java/course/spring/myblogsapp/init/DataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../07-myblogs-app/src/main/java/course/spring/myblogsapp/init/DataInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-myblogs-app/work_shop_db.png" beforeDir="false" afterPath="$PROJECT_DIR$/../07-myblogs-app/work_shop_db.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-projects-data-jpa-lab11/src/main/java/course/spring/myblogsapp/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../07-projects-data-jpa-lab11/src/main/java/course/spring/myblogsapp/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate-annotations/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate-annotations/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/6.5/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/6.5/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/6.5/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/modules/12-reactive-streaming-demos.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/modules/12-reactive-streaming-demos.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/modules/12-reactive-streaming-demos.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/modules/12-reactive-streaming-demos.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/12-reactive-streaming-demos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../12-reactive-streaming-demos/12-reactive-streaming-demos.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +115,7 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
@@ -120,17 +145,6 @@
   <component name="RunManager">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -170,7 +184,7 @@
       <workItem from="1604595614078" duration="14216000" />
       <workItem from="1604930358017" duration="32000" />
       <workItem from="1608039235861" duration="1218000" />
-      <workItem from="1608048098481" duration="837000" />
+      <workItem from="1608740843967" duration="2722000" />
     </task>
     <task id="LOCAL-00001" summary="07-springdata-advanced-lab initial commit">
       <created>1604598525694</created>
@@ -197,5 +211,71 @@
     <MESSAGE value="07-springdata-advanced-lab initial commit" />
     <MESSAGE value="07-springdata-advanced-lab - get shampoos by size" />
     <option name="LAST_COMMIT_MESSAGE" value="07-springdata-advanced-lab - get shampoos by size" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="526" y="205" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604595801198">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="526" y="205" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.920@0.0.1707.920" timestamp="1604595801198" />
+    <state x="612" y="98" key="#com.intellij.ide.util.MemberChooser" timestamp="1604597557198">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="612" y="98" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1604597557198" />
+    <state x="286" y="0" key="CommitChangelistDialog2" timestamp="1604599871689">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="286" y="0" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1604599871689" />
+    <state width="1651" height="603" key="GridCell.Tab.0.bottom" timestamp="1604679985225">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1651" height="603" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1604679985225" />
+    <state width="1651" height="603" key="GridCell.Tab.0.center" timestamp="1604679985224">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1651" height="603" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1604679985224" />
+    <state width="1651" height="603" key="GridCell.Tab.0.left" timestamp="1604679985224">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1651" height="603" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1604679985224" />
+    <state width="1651" height="603" key="GridCell.Tab.0.right" timestamp="1604679985224">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1651" height="603" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1604679985224" />
+    <state width="1651" height="603" key="GridCell.Tab.1.bottom" timestamp="1604679985225">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1651" height="603" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1604679985225" />
+    <state width="1651" height="603" key="GridCell.Tab.1.center" timestamp="1604679985225">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1651" height="603" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1604679985225" />
+    <state width="1651" height="603" key="GridCell.Tab.1.left" timestamp="1604679985225">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1651" height="603" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1604679985225" />
+    <state width="1651" height="603" key="GridCell.Tab.1.right" timestamp="1604679985225">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1651" height="603" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1604679985225" />
+    <state x="246" y="19" key="SettingsEditor" timestamp="1604595644984">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="246" y="19" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1604595644984" />
+    <state x="346" y="128" key="Vcs.Push.Dialog.v2" timestamp="1604599874116">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="346" y="128" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1604599874116" />
+    <state x="672" y="267" width="367" height="387" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1604595818342">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="672" y="267" width="367" height="387" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1707.920@0.0.1707.920" timestamp="1604595818342" />
+    <state x="421" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604603788616">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="421" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1707.920@0.0.1707.920" timestamp="1604603788616" />
+    <state x="519" y="166" key="extract.method.dialog" timestamp="1604599593499">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="519" y="166" key="extract.method.dialog/0.0.1707.920@0.0.1707.920" timestamp="1604599593499" />
   </component>
 </project>
