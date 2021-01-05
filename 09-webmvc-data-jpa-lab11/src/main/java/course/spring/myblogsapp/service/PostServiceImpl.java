@@ -35,6 +35,7 @@ public class PostServiceImpl implements PostService{
     @Transactional
     public Post addPost(@Valid Post post) {
         post.setId(null);
+        post.getAuthor().getPosts().add(post);
         return postRepo.save(post);
     }
 

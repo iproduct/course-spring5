@@ -7,7 +7,9 @@ import course.spring.myblogsapp.dao.UserRepository;
 import course.spring.myblogsapp.entity.Company;
 import course.spring.myblogsapp.entity.Post;
 import course.spring.myblogsapp.entity.Project;
+import course.spring.myblogsapp.entity.User;
 import course.spring.myblogsapp.service.PostService;
+import course.spring.myblogsapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -18,18 +20,35 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import static course.spring.myblogsapp.entity.Role.*;
+
 @Component
 public class DataInitializer implements CommandLineRunner {
-    public static final List<Post> posts = List.of(
+    @Autowired
+    private UserService userService;
+
+    private static final List<User> SAMPLE_USERS = List.of(
+            new User("Default", "Admin", "admin@myblogs.com", "admin", "admin",
+                    "https://lh3.googleusercontent.com/proxy/cGNVbclL0E2LBuUnIxUaC7d-wP_K18xwNUMVzCHmtxgdEtaknGpKCZz-rBVUWP46jCXJSPq6Va7hZ__JZVjG4EKwLx-Kezlk9Qtb5NDc9Gb-E1oq85KV",
+                    Set.of(READER, AUTHOR, ADMIN)),
+            new User("Default", "Author", "author@myblogs.com", "author", "author",
+                    "https://cdn.iconscout.com/icon/premium/png-512-thumb/public-domain-user-618551.png",
+                    Set.of(AUTHOR)),
+            new User("Default", "Reader", "reader@myblogs.com", "reader", "reader",
+                    "https://www.publicdomainpictures.net/pictures/230000/velka/computer-user.jpg",
+                    Set.of(READER))
+    );
+
+    public static final List<Post> SAMPLE_POSTS = List.of(
             new Post("New in Spring 5", "WebFlux is here and is haigh performace...",
                     "https://p2.piqsels.com/preview/639/504/10/branch-engine-leaves-spring.jpg",
-                    "admin", Set.of("Spring", "WebFlux")),
+                    Set.of("Spring", "WebFlux")),
             new Post("DI in Spring", "Many ways to do it, but what are advantages ...",
                     "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRGq5nnPNS-nVHQWbwmKNtxhVs7hZkTD_VuYA&usqp=CAU",
-                    "admin", Set.of("Spring", "dependency injection", "DI")),
+                    Set.of("Spring", "dependency injection", "DI")),
             new Post("Autowiring", "To autowire or not to autowire ...",
                     "https://www.publicdomainpictures.net/pictures/280000/nahled/electrical-wiring.jpg",
-                    "admin", Set.of("Spring", "Autowire"))
+                    Set.of("Spring", "Autowire"))
     );
 
     public static final List<Company> companies = List.of(
@@ -63,15 +82,30 @@ public class DataInitializer implements CommandLineRunner {
     @Override
     @Transactional
     public void run(String... args) throws Exception {
-        if(postService.getPostsCount() == 0) {
-            posts.forEach(postService::addPost);
+        if (userService.getCount() == 0) {
+            List<User> users = SAMPLE_USERS.stream().map(userService::createUser).collect(Collectors.toList());
+            users.forEach(System.out::println);
         }
-        companies.forEach(companyRepository::save);
-        List<Project> created = projects.stream().map(projectRepository::save).collect(Collectors.toList());
-        created.forEach(proj -> proj.getCompany().getProjects().add(proj)); // !!! TODO: second direction -> move to service
+        if (postService.getPostsCount() == 0) {
+            List<Post> posts = SAMPLE_POSTS.stream()
+                    .map(post -> {
+                        post.setAuthor(userService.getUserByUsername("author"));
+                        return post;
+                    })
+                    .map(postService::addPost)
+                    .collect(Collectors.toList());
+            posts.forEach(System.out::println);
+        }
 
-        companyRepository.findAll().forEach(System.out::println);
-        System.out.println();
-        projectRepository.findAll().forEach(System.out::println);
+        if (companyRepository.count() == 0) {
+            companies.forEach(companyRepository::save);
+            List<Project> created = projects.stream().map(projectRepository::save).collect(Collectors.toList());
+            created.forEach(proj -> proj.getCompany().getProjects().add(proj)); // !!! TODO: second direction -> move to service
+            companyRepository.findAll().forEach(System.out::println);
+        }
+        if (projectRepository.count() == 0) {
+            System.out.println();
+            projectRepository.findAll().forEach(System.out::println);
+        }
     }
 }

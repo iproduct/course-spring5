@@ -37,10 +37,9 @@ public class Post {
     @URL
     private String pictureUrl;
 
-    @NonNull
     @NotNull
-    @Size(min=3, max=80)
-    private String author;
+    @ManyToOne
+    private User author;
 
     @NonNull
     @ElementCollection
@@ -55,7 +54,7 @@ public class Post {
     private LocalDateTime modified = LocalDateTime.now();
 
     public Post(@NonNull @Size(min = 3, max = 80) String title, @NonNull @Size(min = 3, max = 2048) String content,
-                @NonNull @URL String pictureUrl, @NonNull @Size(min = 3, max = 80) String author,
+                @NonNull @URL String pictureUrl,
                 @NonNull Set<@Size(min = 2, max = 30) String> tags) {
         this.title = title;
         this.content = content;
