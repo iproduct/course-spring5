@@ -61,7 +61,7 @@ public class User extends BaseEntity  implements UserDetails {
     @ToString.Exclude
     private List<Post> posts = new ArrayList<>();
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     private Set<Role> roles = Set.of(Role.READER);
 
     private LocalDateTime created = LocalDateTime.now();
