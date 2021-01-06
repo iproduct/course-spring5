@@ -44,8 +44,6 @@ public class DataInitializer implements CommandLineRunner {
                     Set.of(Role.EMPLOYEE, Role.MANAGER, Role.ADMIN))
     );
 
-
-
     @Autowired
     private CompanyRepository companyRepository;
     @Autowired
@@ -59,20 +57,18 @@ public class DataInitializer implements CommandLineRunner {
         if(companyRepository.count() == 0) {
             companyRepository.saveAll(companies);
 //            companies.forEach(companyRepository::save);
+            companyRepository.findAll().forEach(System.out::println);
         }
         if(projectRepository.count() == 0) {
             projectRepository.saveAll(projects);
             projects.forEach(p -> p.getCompany().getProjects().add(p));
+            projectRepository.findAll().forEach(System.out::println);
         }
         if(userRepository.count() == 0) {
             userRepository.saveAll(users);
             projects.get(0).getUsers().addAll(users);
             users.forEach(u -> u.getProjects().add( projects.get(0)));
+            userRepository.findAll().forEach(System.out::println);
         }
-
-        companyRepository.findAll().forEach(System.out::println);
-        projectRepository.findAll().forEach(System.out::println);
-        userRepository.findAll().forEach(System.out::println);
-
     }
 }

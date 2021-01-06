@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head::head('Projects List')"></head>
+<body>
+<div th:replace="fragments/menu::menu(${path})"></div>
+<div class="container">
+    <h3>Projects List</h3>
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Budget</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="row, rowStat: ${projects}">
+            <td th:text="${rowStat.index + 1}"></td>
+            <td th:text="${row.name}"></td>
+            <td th:text="${row.description}"></td>
+            <td th:text="${row.budget}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div th:replace="fragments/foot::foot"></div>
+</body>
+</html>
