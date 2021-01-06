@@ -1,12 +1,12 @@
 package course.spring.myblogsapp.init;
 
 import course.spring.myblogsapp.dao.CompanyRepository;
-import course.spring.myblogsapp.dao.ProjectRepository;
-import course.spring.myblogsapp.dao.UserRepository;
 import course.spring.myblogsapp.entity.Company;
 import course.spring.myblogsapp.entity.Project;
 import course.spring.myblogsapp.entity.Role;
 import course.spring.myblogsapp.entity.User;
+import course.spring.myblogsapp.service.ProjectService;
+import course.spring.myblogsapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -47,9 +47,9 @@ public class DataInitializer implements CommandLineRunner {
     @Autowired
     private CompanyRepository companyRepository;
     @Autowired
-    private ProjectRepository projectRepository;
+    private ProjectService projectService;
     @Autowired
-    private UserRepository userRepository;
+    private UserService userService;
 
     @Override
     @Transactional
@@ -59,16 +59,16 @@ public class DataInitializer implements CommandLineRunner {
 //            companies.forEach(companyRepository::save);
             companyRepository.findAll().forEach(System.out::println);
         }
-        if(projectRepository.count() == 0) {
-            projectRepository.saveAll(projects);
+        if(projectService.getProjectsCount() == 0) {
+            projects.forEach(projectService::addProject);
             projects.forEach(p -> p.getCompany().getProjects().add(p));
-            projectRepository.findAll().forEach(System.out::println);
+            projectService.getAllProjects().forEach(System.out::println);
         }
-        if(userRepository.count() == 0) {
-            userRepository.saveAll(users);
+        if(userService.getUsersCount() == 0) {
+            users.forEach(userService::addUser);
             projects.get(0).getUsers().addAll(users);
             users.forEach(u -> u.getProjects().add( projects.get(0)));
-            userRepository.findAll().forEach(System.out::println);
+            userService.getAllUsers().forEach(System.out::println);
         }
     }
 }

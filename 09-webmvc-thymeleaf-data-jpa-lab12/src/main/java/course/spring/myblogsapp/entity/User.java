@@ -47,7 +47,7 @@ public class User extends BaseEntity implements UserDetails {
     @NotNull
     private String password;
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     @Enumerated(EnumType.STRING)
     private Set<Role> roles = Set.of(Role.EMPLOYEE);
 
