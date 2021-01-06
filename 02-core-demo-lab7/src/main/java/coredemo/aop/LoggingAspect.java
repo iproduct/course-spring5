@@ -10,8 +10,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
+
 @Component
 @Aspect
+@Order(2)
 //@Slf4j
 public class LoggingAspect {
     final static Logger log = LoggerFactory.getLogger(LoggingAspect.class);
@@ -21,8 +24,9 @@ public class LoggingAspect {
     }
 
     @Before("repositoryMethods()")
+
     public void logMethodCall(JoinPoint jp) {
         String methodName = jp.getSignature().getName();
-        log.info("!!! Before invoking: " + methodName + " with args: " + jp.getArgs());
+        log.info("!!! Before invoking: " + methodName + " with args: " + Arrays.toString(jp.getArgs()));
     }
 }

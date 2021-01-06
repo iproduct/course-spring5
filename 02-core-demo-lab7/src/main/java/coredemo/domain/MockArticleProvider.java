@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 @Repository("provider")
-@Order(-1)
 @Mock
 //@Qualifier("mock")
 public class MockArticleProvider implements ArticleProvider {

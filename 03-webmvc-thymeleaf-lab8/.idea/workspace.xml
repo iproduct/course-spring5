@@ -1,21 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c0001d11-907d-4bf0-af89-4f1ebef4eac9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/course/spring/webmvc/config/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/IMG_0330_m - Copy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/controller_middle.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../07-restmvc-hibernate-boot/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../07-restmvc-hibernate-boot/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../07-restmvc-hibernate-boot/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../07-restmvc-hibernate-boot/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate-annotations/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate-annotations/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate-annotations/src/main/java/org/iproduct/spring/webmvc/dao/ArticleDaoHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate-annotations/src/main/java/org/iproduct/spring/webmvc/dao/ArticleDaoHibernate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-bookstore-jpa/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../12-bookstore-jpa/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/java/org/iproduct/spring/streamingdemoslab4/client/QuotesClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../12-streaming-demos-lab4/src/main/java/org/iproduct/spring/streamingdemoslab4/client/QuotesClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/03-webmvc-thymeleaf-lab8.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../09-webmvc-thymeleaf-data-jpa-lab12/src/main/java/course/spring/myblogsapp/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/AnnotationSpringDI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/AnnotationSpringDI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/aop/LoggingAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/aop/LoggingAspect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/aop/MethodProfilerAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/aop/MethodProfilerAspect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/domain/MockArticleProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/domain/MockArticleProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/AnnotationSpringDI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/AnnotationSpringDI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/aop/LoggingAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/aop/LoggingAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/aop/MethodProfilerAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/aop/MethodProfilerAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/domain/MockArticleProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/domain/MockArticleProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
@@ -78,6 +100,12 @@
   <component name="GOROOT" path="$PROJECT_DIR$/../../../../CourseGO/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="KotlinMultiplatform">
+    <allAvailableExecutables />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1VA2gZlkY74TkP684IC1QiUNZ1A" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -178,6 +206,7 @@
       </method>
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -193,11 +222,12 @@
       <workItem from="1578486387613" duration="39796000" />
       <workItem from="1591281380733" duration="4898000" />
       <workItem from="1591299920517" duration="1902000" />
+      <workItem from="1609950076599" duration="702000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
