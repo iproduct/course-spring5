@@ -27,7 +27,7 @@
                         th:data-image-url="${'/uploads/' + row.pictureUrl}"
                         th:data-image-title="${row.title}">
                         <img class="img-thumbnail" th:if="${row.pictureUrl != null}"
-                         th:src="${'/uploads/' + row.pictureUrl}">
+                         th:src="@{'/uploads/' + row.pictureUrl}">
                     </a>
                 </td>
                 <td>

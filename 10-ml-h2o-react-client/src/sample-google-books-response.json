@@ -1,0 +1,835 @@
+{
+    "kind": "books#volumes",
+    "totalItems": 442,
+    "items": [
+      {
+        "kind": "books#volume",
+        "id": "GJTTDwAAQBAJ",
+        "etag": "fEakkLARzKU",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/GJTTDwAAQBAJ",
+        "volumeInfo": {
+          "title": "Architecture Ethereum DApp with Angular, Angular Material and NgRx",
+          "authors": [
+            "Alex Yevseyevich",
+            "Daniel Yevseyevich"
+          ],
+          "publisher": "Alex Yevseyevich",
+          "publishedDate": "2020-02-29",
+          "description": "The book is a step-by-step guide demonstrating how to build a modern Ethereum blockchain DApp with Ethers.js and IPFS using Angular and NgRx. You'll learn first hand how to harness the power of these exciting technologies by building your own complete application named FleaMarket that runs on Ethereum blockchain and implements the functionality of the Safe Remote Purchase contract.",
+          "readingModes": {
+            "text": true,
+            "image": true
+          },
+          "pageCount": 180,
+          "printType": "BOOK",
+          "categories": [
+            "Computers"
+          ],
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "1.2.1.0.preview.3",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=GJTTDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=GJTTDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com/books?id=GJTTDwAAQBAJ&pg=PT33&dq=angular+material&hl=&cd=1&source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=GJTTDwAAQBAJ&source=gbs_api",
+          "canonicalVolumeLink": "https://play.google.com/store/books/details?id=GJTTDwAAQBAJ"
+        },
+        "saleInfo": {
+          "country": "BG",
+          "saleability": "FOR_SALE",
+          "isEbook": true,
+          "listPrice": {
+            "amount": 17.15,
+            "currencyCode": "BGN"
+          },
+          "retailPrice": {
+            "amount": 17.15,
+            "currencyCode": "BGN"
+          },
+          "buyLink": "https://play.google.com/store/books/details?id=GJTTDwAAQBAJ&rdid=book-GJTTDwAAQBAJ&rdot=1&source=gbs_api",
+          "offers": [
+            {
+              "finskyOfferType": 1,
+              "listPrice": {
+                "amountInMicros": 17150000,
+                "currencyCode": "BGN"
+              },
+              "retailPrice": {
+                "amountInMicros": 17150000,
+                "currencyCode": "BGN"
+              }
+            }
+          ]
+        },
+        "accessInfo": {
+          "country": "BG",
+          "viewability": "PARTIAL",
+          "embeddable": true,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.com/books/download/Architecture_Ethereum_DApp_with_Angular-sample-epub.acsm?id=GJTTDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+          },
+          "pdf": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.com/books/download/Architecture_Ethereum_DApp_with_Angular-sample-pdf.acsm?id=GJTTDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=GJTTDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "SAMPLE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "... in the root folder of your Truffle project and create a new Angular project by \u003cbr\u003e\nrunning the following CLI command: ng new ClientApp --skip-install=true -- \u003cbr\u003e\nminimal=true --style=css --routing=true -- skipGit=true Next, install the \u003cb\u003eAngular\u003c/b\u003e \u003cbr\u003e\n\u003cb\u003eMaterial\u003c/b\u003e,&nbsp;..."
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "SS5HygEACAAJ",
+        "etag": "NXnbAsneKH0",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/SS5HygEACAAJ",
+        "volumeInfo": {
+          "title": "Angular: Material Design",
+          "publishedDate": "2018",
+          "description": "Get started with Angular Material. Learn how to install this UI component framework and use layouts, components, and theming features.",
+          "industryIdentifiers": [
+            {
+              "type": "OTHER",
+              "identifier": "OCLC:1117082493"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": false
+          },
+          "printType": "BOOK",
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "preview-1.0.0",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com/books?id=SS5HygEACAAJ&dq=angular+material&hl=&cd=2&source=gbs_api",
+          "infoLink": "http://books.google.com/books?id=SS5HygEACAAJ&dq=angular+material&hl=&source=gbs_api",
+          "canonicalVolumeLink": "https://books.google.com/books/about/Angular_Material_Design.html?hl=&id=SS5HygEACAAJ"
+        },
+        "saleInfo": {
+          "country": "BG",
+          "saleability": "NOT_FOR_SALE",
+          "isEbook": false
+        },
+        "accessInfo": {
+          "country": "BG",
+          "viewability": "NO_PAGES",
+          "embeddable": false,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=SS5HygEACAAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "NONE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "Get started with Angular Material. Learn how to install this UI component framework and use layouts, components, and theming features."
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "CTbDDwAAQBAJ",
+        "etag": "RLwLu3Y6Q/k",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/CTbDDwAAQBAJ",
+        "volumeInfo": {
+          "title": "Angular for Material Design",
+          "subtitle": "Leverage Angular Material and TypeScript to Build a Rich User Interface for Web Apps",
+          "authors": [
+            "Venkata Keerti Kotaru"
+          ],
+          "publisher": "Apress",
+          "publishedDate": "2019-12-09",
+          "description": "Build Angular applications faster and better with TypeScript and Material Design. You will learn how to build a web interface and use Google's open source Angular Material library of ready-made and easy-to-use components. This book uses Angular with TypeScript (a superset to JavaScript) to enable use of data types and take advantage of programming constructs such as classes, interfaces, generic templates, and more. You also will utilize various Angular features, including data binding, components, services, etc. You will build a single page application with the help of routing capabilities available out of the box (Angular CLI) and interface with remote services over HTTP. What You Will Learn Build an application using Angular, TypeScript, and Angular Material Understand Angular concepts such as components, directives, services, and more Use TypeScript features, including data types, classes, interfaces, generic templates, etc. Build a single page application (SPA) with routing features and integrate it with server-side remote services Who This Book Is For Beginning to intermediate level professionals will learn about web development using Angular, TypeScript, and Angular Material. Patterns and practices are recommended to be a successful developer. Basic knowledge of JavaScript is helpful.",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9781484254349"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "1484254341"
+            }
+          ],
+          "readingModes": {
+            "text": true,
+            "image": true
+          },
+          "pageCount": 364,
+          "printType": "BOOK",
+          "categories": [
+            "Computers"
+          ],
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "preview-1.0.0",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=CTbDDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=CTbDDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com/books?id=CTbDDwAAQBAJ&printsec=frontcover&dq=angular+material&hl=&cd=3&source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=CTbDDwAAQBAJ&source=gbs_api",
+          "canonicalVolumeLink": "https://play.google.com/store/books/details?id=CTbDDwAAQBAJ"
+        },
+        "saleInfo": {
+          "country": "BG",
+          "saleability": "FOR_SALE",
+          "isEbook": true,
+          "listPrice": {
+            "amount": 81.13,
+            "currencyCode": "BGN"
+          },
+          "retailPrice": {
+            "amount": 81.13,
+            "currencyCode": "BGN"
+          },
+          "buyLink": "https://play.google.com/store/books/details?id=CTbDDwAAQBAJ&rdid=book-CTbDDwAAQBAJ&rdot=1&source=gbs_api",
+          "offers": [
+            {
+              "finskyOfferType": 1,
+              "listPrice": {
+                "amountInMicros": 81130000,
+                "currencyCode": "BGN"
+              },
+              "retailPrice": {
+                "amountInMicros": 81130000,
+                "currencyCode": "BGN"
+              }
+            }
+          ]
+        },
+        "accessInfo": {
+          "country": "BG",
+          "viewability": "PARTIAL",
+          "embeddable": true,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.com/books/download/Angular_for_Material_Design-sample-epub.acsm?id=CTbDDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+          },
+          "pdf": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.com/books/download/Angular_for_Material_Design-sample-pdf.acsm?id=CTbDDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=CTbDDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "SAMPLE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "This book uses Angular with TypeScript (a superset to JavaScript) to enable use of data types and take advantage of programming constructs such as classes, interfaces, generic templates, and more."
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "3gvpDAAAQBAJ",
+        "etag": "pybGOtR323M",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/3gvpDAAAQBAJ",
+        "volumeInfo": {
+          "title": "Material Design Implementation with AngularJS",
+          "subtitle": "UI Component Framework",
+          "authors": [
+            "V. Keerti Kotaru"
+          ],
+          "publisher": "Apress",
+          "publishedDate": "2016-08-25",
+          "description": "Build high-quality web and mobile user interfaces (UI) that are interactive, fluid, and provide a consistent experience across devices from desktops to tablets to smartphones. Use a Material Design approach to position elements and create animations along with principles of the sophisticated AngularJS JavaScript framework. Take advantage of Angular Material, a UI component framework that works out of the box to design web pages that adapt to various screen sizes and adhere to Material Design specifications. What You Will Learn: Develop a UI that adheres to Material Design principles using Angular Material, a UI component framework Use various Angular Material elements, directives, and services in conjunction with CSS3 Flexbox for layout management Use best practice design techniques to develop a responsive UI to fit multiple devices and screen sizes from desktop to tablet to mobile phone Develop web apps for both mobile and desktop form factors and screen sizes using HTML, CSS, and JavaScript Who This Book Is For: Web and mobile app developers with a basic understanding of JavaScript, HTML, and CSS",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9781484221907"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "1484221907"
+            }
+          ],
+          "readingModes": {
+            "text": true,
+            "image": true
+          },
+          "pageCount": 194,
+          "printType": "BOOK",
+          "categories": [
+            "Computers"
+          ],
+          "averageRating": 5,
+          "ratingsCount": 1,
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": true,
+          "contentVersion": "1.1.1.0.preview.3",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=3gvpDAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=3gvpDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com/books?id=3gvpDAAAQBAJ&pg=PA4&dq=angular+material&hl=&cd=4&source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=3gvpDAAAQBAJ&source=gbs_api",
+          "canonicalVolumeLink": "https://play.google.com/store/books/details?id=3gvpDAAAQBAJ"
+        },
+        "saleInfo": {
+          "country": "BG",
+          "saleability": "FOR_SALE",
+          "isEbook": true,
+          "listPrice": {
+            "amount": 54.82,
+            "currencyCode": "BGN"
+          },
+          "retailPrice": {
+            "amount": 54.82,
+            "currencyCode": "BGN"
+          },
+          "buyLink": "https://play.google.com/store/books/details?id=3gvpDAAAQBAJ&rdid=book-3gvpDAAAQBAJ&rdot=1&source=gbs_api",
+          "offers": [
+            {
+              "finskyOfferType": 1,
+              "listPrice": {
+                "amountInMicros": 54820000,
+                "currencyCode": "BGN"
+              },
+              "retailPrice": {
+                "amountInMicros": 54820000,
+                "currencyCode": "BGN"
+              }
+            }
+          ]
+        },
+        "accessInfo": {
+          "country": "BG",
+          "viewability": "PARTIAL",
+          "embeddable": true,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.com/books/download/Material_Design_Implementation_with_Angu-sample-epub.acsm?id=3gvpDAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+          },
+          "pdf": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.com/books/download/Material_Design_Implementation_with_Angu-sample-pdf.acsm?id=3gvpDAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=3gvpDAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "SAMPLE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "For implementing Material Design on AngularJS application, \u003cb\u003eAngular Material\u003c/b\u003e is \u003cbr\u003e\na great choice. It is a Google open source project. It provides ready-made \u003cbr\u003e\ncontrols and services for Material Design. There are advantages using AngularJS\u003cbr\u003e\n."
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "qJ4XzAEACAAJ",
+        "etag": "stkjjYSUYyo",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/qJ4XzAEACAAJ",
+        "volumeInfo": {
+          "title": "Angular: Material Design",
+          "authors": [
+            "Robby Millsap"
+          ],
+          "publishedDate": "2018",
+          "industryIdentifiers": [
+            {
+              "type": "OTHER",
+              "identifier": "OCLC:1125942068"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": false
+          },
+          "printType": "BOOK",
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "preview-1.0.0",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com/books?id=qJ4XzAEACAAJ&dq=angular+material&hl=&cd=5&source=gbs_api",
+          "infoLink": "http://books.google.com/books?id=qJ4XzAEACAAJ&dq=angular+material&hl=&source=gbs_api",
+          "canonicalVolumeLink": "https://books.google.com/books/about/Angular_Material_Design.html?hl=&id=qJ4XzAEACAAJ"
+        },
+        "saleInfo": {
+          "country": "BG",
+          "saleability": "NOT_FOR_SALE",
+          "isEbook": false
+        },
+        "accessInfo": {
+          "country": "BG",
+          "viewability": "NO_PAGES",
+          "embeddable": false,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=qJ4XzAEACAAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "NONE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "Instructor Robby Millsap helps to familiarize you with Material Design by covering the core concepts behind it, as well as walking through how to install Angular Material."
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "WMxPDwAAQBAJ",
+        "etag": "2QpccGqKu10",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/WMxPDwAAQBAJ",
+        "volumeInfo": {
+          "title": "Learning Angular",
+          "subtitle": "A no-nonsense guide to building real-world apps with Angular 5",
+          "authors": [
+            "Christoffer Noring",
+            "Pablo Deeleman"
+          ],
+          "publisher": "Packt Publishing Ltd",
+          "publishedDate": "2017-12-08",
+          "description": "Build modern SPAs by learning the latest and powerful features of Angular 5 and TypeScript 2.x About This Book The best overview of Angular 5 on the market, this guide gathers together everything there is to know about Angular 5 and groups it into intuitive sections. Learn to build, grow and test powerful and scalable mobile and desktop web applications with Angular Explore the latest features of Angular 5 and TypeScript 2.4 by building a complete responsive application from scratch. Deliver seamless web navigation experiences with application routing and state handling common features with ease The author has done all the hard work of fitting everything Angular 5 means for developers, making this book the quickest way to learn Angular 5 from scratch. Who This Book Is For This book is for web developers who want to build the next generation of state-of-the-art mobile and desktop web applications with Angular. This book does not require you to have prior exposure to either Angular 1.x, 2 or 4, although comprehensive knowledge of JavaScript is assumed. What You Will Learn Set up the workspace and the project using webpack and Angular-Cli Explore the features of TypeScript and organize the code in ES6 modules Work with HTTP and Data Services and understand how data can flow in the app Create multiple views and learn how to navigate between them Make the app beautiful by adding Material Design Implement two different types of form handling and its validation Add animation to some standard events such as route change, initialization, data load, and so on Discover how to bulletproof your applications by introducing smart unit testing techniques and debugging tools In Detail The latest version of Angular comes with a lot of new features that help you to make your applications smaller and faster. This book will show you how to set up an Angular project, and you'll build Angular components right from the beginning. Moving on, you'll explore and work with the components to build your app. Next, you'll find out more about TypeScript and see how to use it to build apps in the best way possible. You'll then be introduced to the building blocks - Properties, Events, Directives, and Pipes - and how it can be used to implement and enhance the components. Additionally, you'll be using Angular components to organize your components in a scalable way. Then you'll understand how to get data in your app and add navigation to it. Furthermore, you'll deep dive and work with Forms, Authentication, and see how Material design will help you make your app beautiful in just a few short lines of code. Lastly, you'll see how to use animating components with Angular, and test and debug the app. All in all, the overall mission is to give you a great start when developing apps using Angular and TypeScript. Style and approach This book tells you everything there is to know about getting well-acquainted with Angular without bogging you down. Everything is neatly laid out under clear headings for quick consultation, giving you the information required to understand a concept immediately. You'll also get full coverage of the TypeScript syntax required to follow the examples included.",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9781787125940"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "1787125947"
+            }
+          ],
+          "readingModes": {
+            "text": true,
+            "image": true
+          },
+          "pageCount": 456,
+          "printType": "BOOK",
+          "categories": [
+            "Computers"
+          ],
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": true,
+          "contentVersion": "1.1.2.0.preview.3",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=WMxPDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=WMxPDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com/books?id=WMxPDwAAQBAJ&pg=PA315&dq=angular+material&hl=&cd=6&source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=WMxPDwAAQBAJ&source=gbs_api",
+          "canonicalVolumeLink": "https://play.google.com/store/books/details?id=WMxPDwAAQBAJ"
+        },
+        "saleInfo": {
+          "country": "BG",
+          "saleability": "FOR_SALE",
+          "isEbook": true,
+          "listPrice": {
+            "amount": 75.17,
+            "currencyCode": "BGN"
+          },
+          "retailPrice": {
+            "amount": 75.17,
+            "currencyCode": "BGN"
+          },
+          "buyLink": "https://play.google.com/store/books/details?id=WMxPDwAAQBAJ&rdid=book-WMxPDwAAQBAJ&rdot=1&source=gbs_api",
+          "offers": [
+            {
+              "finskyOfferType": 1,
+              "listPrice": {
+                "amountInMicros": 75170000,
+                "currencyCode": "BGN"
+              },
+              "retailPrice": {
+                "amountInMicros": 75170000,
+                "currencyCode": "BGN"
+              }
+            }
+          ]
+        },
+        "accessInfo": {
+          "country": "BG",
+          "viewability": "PARTIAL",
+          "embeddable": true,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": true
+          },
+          "pdf": {
+            "isAvailable": true
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=WMxPDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "SAMPLE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "It works to be used as a standalone, but there are also bindings to frameworks \u003cbr\u003e\nsuch as AngularJS and React. It offers navigation elements, components, and \u003cbr\u003e\nmuch more, a good choice. \u003cb\u003eAngularJS Material\u003c/b\u003e, https://material.angularjs.org/\u003cbr\u003e\nlatest/,&nbsp;..."
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "xdyZDwAAQBAJ",
+        "etag": "FkFwPkP9tZA",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/xdyZDwAAQBAJ",
+        "volumeInfo": {
+          "title": "Progressive Web Apps with Angular",
+          "subtitle": "Create Responsive, Fast and Reliable PWAs Using Angular",
+          "authors": [
+            "Majid Hajian"
+          ],
+          "publisher": "Apress",
+          "publishedDate": "2019-05-22",
+          "description": "Harness the power of Angular to build fast, high performance progressive web apps that work offline. Learn exactly how to create an Angular Progressive Web App (PWA) from scratch, how you can use different tools to audit and improve it, and leverage Angular CLI or Workbox to turn your app into a PWA. Using browser APIs – including the Credential Management, Payment Request, Geolocation, Web Bluetooth, WebUSB and Generic Sensors APIs – you can unleash the potential of PWAs and build applications that enhance user experience. Angular’s game-changing built-in features, including the Angular service worker module, can be leveraged to construct responsive and reliable PWAs that can look and feel just like native mobile apps. You'll learn how to boost your app speed, how to increase user engagement using push notifications, and how to implement offline storage and different caching APIs in Angular. You'll even see how to convert an existing Angular app into a PWA. Whether you’re new to building PWAs, or want to learn how to use Angular to improve your app development, Progressive Web Apps with Angular provides the know-how to build and deploy an Angular PWA. What Readers Will Learn Build an Angular app that looks and feels just like a native mobile app Audit and improve an Angular PWA with different tools Increase user engagement by using push notifications Offline storage and different caching APIs in Angular Implement modern technologies into an Angular PWA Who This Book Is For Developers with basic knowledge of HTML, JavaScript and Angular",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9781484244487"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "1484244486"
+            }
+          ],
+          "readingModes": {
+            "text": true,
+            "image": true
+          },
+          "pageCount": 380,
+          "printType": "BOOK",
+          "categories": [
+            "Computers"
+          ],
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": true,
+          "contentVersion": "0.1.1.0.preview.3",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=xdyZDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=xdyZDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com/books?id=xdyZDwAAQBAJ&pg=PA30&dq=angular+material&hl=&cd=7&source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=xdyZDwAAQBAJ&source=gbs_api",
+          "canonicalVolumeLink": "https://play.google.com/store/books/details?id=xdyZDwAAQBAJ"
+        },
+        "saleInfo": {
+          "country": "BG",
+          "saleability": "FOR_SALE",
+          "isEbook": true,
+          "listPrice": {
+            "amount": 87.7,
+            "currencyCode": "BGN"
+          },
+          "retailPrice": {
+            "amount": 87.7,
+            "currencyCode": "BGN"
+          },
+          "buyLink": "https://play.google.com/store/books/details?id=xdyZDwAAQBAJ&rdid=book-xdyZDwAAQBAJ&rdot=1&source=gbs_api",
+          "offers": [
+            {
+              "finskyOfferType": 1,
+              "listPrice": {
+                "amountInMicros": 87700000,
+                "currencyCode": "BGN"
+              },
+              "retailPrice": {
+                "amountInMicros": 87700000,
+                "currencyCode": "BGN"
+              }
+            }
+          ]
+        },
+        "accessInfo": {
+          "country": "BG",
+          "viewability": "PARTIAL",
+          "embeddable": true,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.com/books/download/Progressive_Web_Apps_with_Angular-sample-epub.acsm?id=xdyZDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+          },
+          "pdf": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.com/books/download/Progressive_Web_Apps_with_Angular-sample-pdf.acsm?id=xdyZDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=xdyZDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "SAMPLE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "Setting. Up. \u003cb\u003eAngular\u003c/b\u003e. \u003cb\u003eMaterial\u003c/b\u003e,. CDK,. and. Animations. \u003cb\u003eAngular\u003c/b\u003e CLI 6+ provides a \u003cbr\u003e\nnew command ng add in order to update an \u003cb\u003eAngular\u003c/b\u003e project with correct \u003cbr\u003e\ndependencies, perform configuration changes, and execute initialization code, if \u003cbr\u003e\nany."
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "JyIYBwAAQBAJ",
+        "etag": "ByibzrZ4QcI",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/JyIYBwAAQBAJ",
+        "volumeInfo": {
+          "title": "Materials Testing",
+          "authors": [
+            "Department of the Army"
+          ],
+          "publisher": "Lulu.com",
+          "publishedDate": "2014-08-24",
+          "description": "This manual provides the technical information necessary for military and other personnel to obtain samples and perform engineering tests and calculations on soils, bituminous paving mixtures, and concrete. These tests and calculations are required to achieve proper design with these materials and adequate control over their use in military and other construction. This manual covers soils, aggregates, bituminous cements, bituminous paving mixtures, Portland cement concrete, and stabilized soil including stabilizing agents such as bitumens, cements, lime, fly ash, and chemical modifiers. The manual gives detailed instructions for taking adequate representative test samples and step-by-step procedures for making physical properties tests and for recording, calculating, and evaluating the test results. The manual describes the tools and equipment for performing these tests and contains general instructions for the care, calibration, and use of test equipment.",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9781312426795"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "1312426799"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": true
+          },
+          "pageCount": 376,
+          "printType": "BOOK",
+          "categories": [
+            "Technology & Engineering"
+          ],
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "preview-1.0.0",
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=JyIYBwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=JyIYBwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com/books?id=JyIYBwAAQBAJ&pg=SL2-PA17&dq=angular+material&hl=&cd=8&source=gbs_api",
+          "infoLink": "http://books.google.com/books?id=JyIYBwAAQBAJ&dq=angular+material&hl=&source=gbs_api",
+          "canonicalVolumeLink": "https://books.google.com/books/about/Materials_Testing.html?hl=&id=JyIYBwAAQBAJ"
+        },
+        "saleInfo": {
+          "country": "BG",
+          "saleability": "NOT_FOR_SALE",
+          "isEbook": false
+        },
+        "accessInfo": {
+          "country": "BG",
+          "viewability": "PARTIAL",
+          "embeddable": true,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=JyIYBwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "SAMPLE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "Processed base materials and other \u003cb\u003eangular material\u003c/b\u003e. Steel-wheeled and rubber-\u003cbr\u003e\ntired rollers are recommended for hard, \u003cb\u003eangular materials\u003c/b\u003e with limited fines or \u003cbr\u003e\nscreenings. Rubber-tired equipment is recommended for softer materials subject \u003cbr\u003e\nto&nbsp;..."
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "oZ8L7j5OAmQC",
+        "etag": "ik/QdHi3mI8",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/oZ8L7j5OAmQC",
+        "volumeInfo": {
+          "title": "High Angular Resolution Studies of the Structure and Evolution of Protoplanetary Disks",
+          "authors": [
+            "Joshua Eisner"
+          ],
+          "publisher": "Universal-Publishers",
+          "publishedDate": "2005",
+          "description": "Young stars are surrounded by massive, rotating disks of dust and gas, which supply a reservoir of material that may be incorporated into planets or accreted onto the central star. In this dissertation, I use high angular resolution observations at a range of wavelengths to understand the structure, ubiquity, and evolutionary timescales of protoplanetary disks. First, I describe a study of Class I protostars, objects believed to be at an evolutionary stage between collapsing spherical clouds and fully-assembled young stars surrounded by protoplanetary disks. I use a Monte Carlo radiative transfer code to model new 0.9 micron scattered light images, 1.3 mm continuum images, and broadband spectral energy distributions. This modeling shows that Class I sources are probably surrounded by massive protoplanetary disks embedded in massive infalling envelopes. For the best-fitting models of the circumstellar dust distributions, I determine several important properties, including envelope and disk masses, mass infall rates, and system inclinations, and I use these results to constrain the evolutionary stage of these objects. Second, I discuss observations of the innermost regions of more evolved disks around T Tauri and Herbig Ae/Be stars, obtained with the Palomar Testbed and Keck Interferometers. I constrain the spatial and temperature structure of the circumstellar material at sub-AU radii, and demonstrate that lower-mass stars are surrounded by inclined disks with puffed-up inner edges 0.1-1 AU from the star. In contrast, the truncated inner disks around more massive stars may not puff-up, indicating that disk structure depends on stellar properties. I discuss the implications of these results for disk accretion, terrestrial planet formation and giant planet migration. Finally, I put these detailed studies of disk structure into a broader context by constraining the mass distribution and evolutionary timescales of circumstellar disks. Using the Owens Valley Millimeter Array, I mapped the millimeter continuum emission toward \u003e300 low-mass stars in the NGC 2024 and Orion Nebula clusters. These observations demonstrate that the average disk mass in each cluster is comparable to the \"minimum-mass protosolar nebula,\" and that there may be disk evolution on one million year timescales.",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9781581122800"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "1581122802"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": true
+          },
+          "pageCount": 240,
+          "printType": "BOOK",
+          "categories": [
+            "Science"
+          ],
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "preview-1.0.0",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=oZ8L7j5OAmQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=oZ8L7j5OAmQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com/books?id=oZ8L7j5OAmQC&pg=PA4&dq=angular+material&hl=&cd=9&source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=oZ8L7j5OAmQC&source=gbs_api",
+          "canonicalVolumeLink": "https://play.google.com/store/books/details?id=oZ8L7j5OAmQC"
+        },
+        "saleInfo": {
+          "country": "BG",
+          "saleability": "FOR_SALE",
+          "isEbook": true,
+          "listPrice": {
+            "amount": 50.13,
+            "currencyCode": "BGN"
+          },
+          "retailPrice": {
+            "amount": 50.13,
+            "currencyCode": "BGN"
+          },
+          "buyLink": "https://play.google.com/store/books/details?id=oZ8L7j5OAmQC&rdid=book-oZ8L7j5OAmQC&rdot=1&source=gbs_api",
+          "offers": [
+            {
+              "finskyOfferType": 1,
+              "listPrice": {
+                "amountInMicros": 50130000,
+                "currencyCode": "BGN"
+              },
+              "retailPrice": {
+                "amountInMicros": 50130000,
+                "currencyCode": "BGN"
+              }
+            }
+          ]
+        },
+        "accessInfo": {
+          "country": "BG",
+          "viewability": "PARTIAL",
+          "embeddable": true,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.com/books/download/High_Angular_Resolution_Studies_of_the_S-sample-pdf.acsm?id=oZ8L7j5OAmQC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=oZ8L7j5OAmQC&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "SAMPLE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "During the various phases of disk evolution, \u003cb\u003ematerial\u003c/b\u003e in the disk accretes inward \u003cbr\u003e\nonto the central star, losing \u003cb\u003eangular\u003c/b\u003e momentum in the process (e.g., Shakura &amp; \u003cbr\u003e\nSunyaev 1973; Lynden- Bell &amp; Pringle 1974). Various mechanisms have been&nbsp;..."
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "Z_vwAAAAMAAJ",
+        "etag": "7ZlQuAhSZKE",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/Z_vwAAAAMAAJ",
+        "volumeInfo": {
+          "title": "Soil Survey",
+          "publishedDate": "1923",
+          "industryIdentifiers": [
+            {
+              "type": "OTHER",
+              "identifier": "UOM:39015050446031"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": true
+          },
+          "printType": "BOOK",
+          "categories": [
+            "Soil surveys"
+          ],
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "0.1.2.0.full.1",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=Z_vwAAAAMAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=Z_vwAAAAMAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com/books?id=Z_vwAAAAMAAJ&pg=PA13&dq=angular+material&hl=&cd=10&source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=Z_vwAAAAMAAJ&source=gbs_api",
+          "canonicalVolumeLink": "https://play.google.com/store/books/details?id=Z_vwAAAAMAAJ"
+        },
+        "saleInfo": {
+          "country": "BG",
+          "saleability": "FREE",
+          "isEbook": true,
+          "buyLink": "https://play.google.com/store/books/details?id=Z_vwAAAAMAAJ&rdid=book-Z_vwAAAAMAAJ&rdot=1&source=gbs_api"
+        },
+        "accessInfo": {
+          "country": "BG",
+          "viewability": "ALL_PAGES",
+          "embeddable": true,
+          "publicDomain": true,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false,
+            "downloadLink": "http://books.google.com/books/download/Soil_Survey.epub?id=Z_vwAAAAMAAJ&hl=&output=epub&source=gbs_api"
+          },
+          "pdf": {
+            "isAvailable": true,
+            "downloadLink": "http://books.google.com/books/download/Soil_Survey.pdf?id=Z_vwAAAAMAAJ&hl=&output=pdf&sig=ACfU3U3_oX8QN87brFpAewbUeCJY9UZV4w&source=gbs_api"
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=Z_vwAAAAMAAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "FULL_PUBLIC_DOMAIN",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "... there are some angular fragments and pebbles of limestone ; below a depth of \u003cbr\u003e\n3 feet lighter colored more calcareous material containing more pebbles and \u003cbr\u003e\n\u003cb\u003eangular material\u003c/b\u003e . The lower clay subsoil is glacial till or heavy lacustrine material \u003cbr\u003e\n."
+        }
+      }
+    ]
+  }
+  
