@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
+import static org.springframework.http.HttpMethod.GET;
 import static org.springframework.http.HttpMethod.POST;
 
 @Configuration
@@ -18,7 +19,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable()
             .authorizeRequests()
             .antMatchers(POST,"/login", "/register").permitAll()
-            .antMatchers("/").permitAll()
+                .antMatchers(POST, "/projects").hasAnyRole("MANAGER", "ADMIN")
+                .antMatchers(GET, "/projects").authenticated()
+                .antMatchers("/").permitAll()
         .and()
         .formLogin();
     }

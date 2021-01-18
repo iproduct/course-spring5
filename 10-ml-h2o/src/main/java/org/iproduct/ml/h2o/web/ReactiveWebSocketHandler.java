@@ -66,7 +66,7 @@ public class ReactiveWebSocketHandler implements WebSocketHandler {
                 .log().share();
 
         Mono<Void> output = webSocketSession.send(recognitions
-                .map(RecognitionResult::toString)
+//                .map(RecognitionResult::toString)
                 .map(result -> {
                     try {
                         return mapper.writeValueAsString(result);
@@ -81,23 +81,32 @@ public class ReactiveWebSocketHandler implements WebSocketHandler {
     }
 
 
-    public Mono<Void> handle2(WebSocketSession webSocketSession) {
-        return webSocketSession.send(Flux.interval(Duration.ofMillis(1000))
-                .map(n -> n+ "")
-                .map(webSocketSession::textMessage))
-                .and(webSocketSession.receive()
-                        .map(WebSocketMessage::getPayloadAsText)
-                        .log());
-    }
+//    public Mono<Void> handle(WebSocketSession webSocketSession) {
+//        return webSocketSession.send(Flux.interval(Duration.ofMillis(1000))
+//                .map(n -> n+ "")
+//                .map(webSocketSession::textMessage))
+//                .and(webSocketSession.receive()
+//                        .map(WebSocketMessage::getPayloadAsText)
+//                        .log());
+//    }
+
+//    public Mono<Void> handle(WebSocketSession webSocketSession) {
+//        return webSocketSession.send(
+//                generator.getQuoteStream(Duration.ofMillis(5000))
+//                .map(obj -> {
+//                    try {
+//                        return mapper.writeValueAsString(obj);
+//                    } catch (JsonProcessingException e) {
+//                        log.error("Error mapping value to JSON:", e);
+//                        throw new RuntimeException(e);
+//                    }
+//                })
+//                .map(n -> n + "")
+//                .map(webSocketSession::textMessage))
+//                .and(webSocketSession.receive()
+//                        .map(WebSocketMessage::getPayloadAsText)
+//                        .log());
+//    }
 
 }
 
-//generator.getQuoteStream(Duration.ofMillis(5000))
-//        .map(obj -> {
-//        try {
-//        return mapper.writeValueAsString(obj);
-//        } catch (JsonProcessingException e) {
-//        log.error("Error mapping value to JSON:", e);
-//        throw new RuntimeException(e);
-//        }
-//        })

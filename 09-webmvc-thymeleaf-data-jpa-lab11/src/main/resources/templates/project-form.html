@@ -9,7 +9,7 @@
         <div class="form-group">
             <label for="name">Name</label>
             <input id="name" type="text" th:field="*{name}"
-                   placeholder="Enter project name ..."/>
+                   placeholder="Enter project name ..." class="form-control"/>
             <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="errors alert alert-danger">
                 Incorrect name
             </p>
@@ -17,14 +17,14 @@
         <div class="form-group">
             <label for="description">Description</label>
             <input id="description" type="text" th:field="*{description}"
-                   placeholder="Enter project description ..."/>
+                   placeholder="Enter project description ..." class="form-control"/>
             <p th:if="${#fields.hasErrors('description')}" th:errors="*{description}" class="errors alert alert-danger">
                 Incorrect description
             </p>
         </div>
         <div class="form-group">Budget</label>
             <input id="budget" type="text" th:field="*{budget}"
-                   placeholder="Enter project budget ..."/>
+                   placeholder="Enter project budget ..." class="form-control"/>
             <p th:if="${#fields.hasErrors('budget')}" th:errors="*{budget}" class="errors alert alert-danger">
                 Incorrect budget
             </p>
