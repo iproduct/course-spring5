@@ -5,37 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f7f8968-8f8b-4bb3-8491-8e2dd76e61f9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../07-myblogs-app/SCHEMA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07-springdata-advanced-lab/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07-springdata-advanced-lab/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../07-myblogs-app/src/main/java/course/spring/myblogsapp/init/DataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../07-myblogs-app/src/main/java/course/spring/myblogsapp/init/DataInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../07-myblogs-app/work_shop_db.png" beforeDir="false" afterPath="$PROJECT_DIR$/../07-myblogs-app/work_shop_db.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../07-springdata-advanced-lab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../07-springdata-advanced-lab/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate-annotations/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate-annotations/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../09-webmvc-thymeleaf-data-jpa-lab11/projects_lab12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../09-webmvc-thymeleaf-data-jpa-lab12/projects_lab12.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/12-reactive-streaming-demos.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/12-reactive-streaming-demos.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/12-reactive-streaming-demos.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/12-reactive-streaming-demos.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/12-reactive-streaming-demos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/12-reactive-streaming-demos.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -64,6 +46,9 @@
   </component>
   <component name="KotlinMultiplatform">
     <allAvailableExecutables />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1W7LMvQDUEVC2htzOxAOYm8zdWe" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -180,6 +165,11 @@
       <workItem from="1602009230000" duration="1429000" />
       <workItem from="1608573729057" duration="4082000" />
       <workItem from="1608640306951" duration="607000" />
+      <workItem from="1620235610804" duration="62000" />
+      <workItem from="1620267608451" duration="614000" />
+      <workItem from="1621408994503" duration="1173000" />
+      <workItem from="1621411490711" duration="198000" />
+      <workItem from="1621411793810" duration="192000" />
     </task>
     <task id="LOCAL-00001" summary="reactive webflux demo - user management with security added">
       <created>1527399441835</created>

@@ -17,13 +17,13 @@ public class WebClientApplication {
 	public static void main(String[] args) {
 //		SpringApplication.run(WebClientApplication.class, args);
 		ApplicationContext ctx = new AnnotationConfigApplicationContext(WebClientApplication.class);
-		CountryClient quoteClient = ctx.getBean(CountryClient.class);
+		CountryClient countryClient = ctx.getBean(CountryClient.class);
 		String country = "Bulgaria";
 
 		if (args.length > 0) {
 			country = args[0];
 		}
-		GetCountryResponse response = quoteClient.getCountry(country);
+		GetCountryResponse response = countryClient.getCountry(country);
 		Country respCountry = new Country(response.getCountry());
 		System.err.println(respCountry);
 	}
