@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import static org.springframework.http.MediaType.TEXT_PLAIN_VALUE;
@@ -25,7 +26,8 @@ public class HelloMVC {
             @RequestHeader("Accept") String accept,
             @CookieValue(value = "JSESSIONID", required = false) String sessionId,
             HttpSession session,
-            HttpServletRequest request
+            HttpServletRequest request,
+            HttpServletResponse response
     ) {
         StringBuilder sb = new StringBuilder(
                 String.format("<h2>Welcome, %s!</h2>", username == null ? "User" : username));
@@ -45,6 +47,7 @@ public class HelloMVC {
         }
         sb.append("</ul>");
         session.invalidate();
+        response.addCookie(new Cookie("MyCustomCookie", "MyCustomValue"));
         return sb.toString();
     }
 }
