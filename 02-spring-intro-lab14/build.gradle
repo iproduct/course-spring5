@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'idea'
+    id 'application'
 }
 
 idea {
@@ -15,6 +16,14 @@ configurations {
         extendsFrom annotationProcessor
     }
 }
+
+mainClassName = 'course.spring.coredemo.SpringAnnotationConfigDI'
+
+task runApp(type : JavaExec ) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'course.spring.coredemo.SpringAnnotationConfigDI'
+}
+
 
 group 'course.spring'
 version '1.0-SNAPSHOT'
