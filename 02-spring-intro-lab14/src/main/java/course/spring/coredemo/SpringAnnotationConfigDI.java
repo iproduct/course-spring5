@@ -2,10 +2,14 @@ package course.spring.coredemo;
 
 import course.spring.coredemo.dao.ArticleProvider;
 import course.spring.coredemo.dao.impl.MockArticleProvider;
+import course.spring.coredemo.service.ArticlePresenter;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class SpringAnnotationConfigDI {
     public static void main(String[] args) {
-        ArticleProvider provider = new MockArticleProvider();
-        System.out.println(provider.getArticles());
+        ApplicationContext ctx = new AnnotationConfigApplicationContext("course.spring.coredemo");
+        ArticlePresenter presenter = ctx.getBean("presenter", ArticlePresenter.class); // Service locator pattern
+        presenter.present();
     }
 }
