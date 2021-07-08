@@ -8,16 +8,17 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 @Service("presenter")
-@DependsOn("mockArticleProvider")
+//@DependsOn("mockArticleProvider")
 //@Scope("prototype")
 public class ConsoleArticlePresenter implements ArticlePresenter {
-    private Set<ArticleProvider> providers;
+    private List<ArticleProvider> providers;
 
     @Autowired
-    public ConsoleArticlePresenter(Set<ArticleProvider> provider) {
+    public ConsoleArticlePresenter(List<ArticleProvider> provider) {
         this.providers = provider;
     }
 

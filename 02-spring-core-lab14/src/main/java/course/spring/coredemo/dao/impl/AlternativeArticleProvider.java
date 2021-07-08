@@ -11,6 +11,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;
@@ -22,6 +23,7 @@ import java.util.stream.Collectors;
 @Primary
 @Repository
 @PropertySource("classpath:articles.properties")
+@Order(1)
 @Slf4j
 public class AlternativeArticleProvider implements ArticleProvider, ApplicationContextAware {
 //    @Value("${articles.titles}") // SpEL expression
