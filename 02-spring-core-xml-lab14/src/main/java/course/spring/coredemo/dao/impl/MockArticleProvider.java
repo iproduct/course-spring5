@@ -7,8 +7,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
-@Scope("singleton")
 public class MockArticleProvider implements ArticleProvider {
     @Override
     public List<Article> getArticles() {

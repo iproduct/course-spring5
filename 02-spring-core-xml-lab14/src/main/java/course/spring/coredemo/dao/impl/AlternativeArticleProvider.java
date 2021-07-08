@@ -19,9 +19,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Primary
-@Repository
-@PropertySource("classpath:articles.properties")
 @Slf4j
 public class AlternativeArticleProvider implements ArticleProvider, ApplicationContextAware {
 //    @Value("${articles.titles}") // SpEL expression
@@ -32,20 +29,20 @@ public class AlternativeArticleProvider implements ArticleProvider, ApplicationC
     public AlternativeArticleProvider() {
     }
 
-    @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         this.ctx = applicationContext;
     }
 
-    @PostConstruct
+    public void setArticleTitles(String titles) {
+        this.articleTitles = titles.split("\\s*,\\s*");
+    }
+
     public void init() throws Exception {
-        articleTitles = ctx.getEnvironment().getProperty("articles.titles").split("\\s*,\\s*");
         articles = Arrays.stream(articleTitles).map(title -> new Article(title, title + " content ..."))
                 .collect(Collectors.toList());
         log.info("Init: Created " + articles.size() + " articles.");
     }
 
-    @PreDestroy
     public void cleanup() throws Exception {
         log.info("Destroy: Destroying " + articles.size() + " articles.");
     }
