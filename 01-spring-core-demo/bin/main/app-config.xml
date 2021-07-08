@@ -8,6 +8,12 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
-
-
+    <bean id="provider" class="course.spring.coredemo.provider.MockArticleProvider"
+          factory-method="createProvider" />
+    <bean id="consumerFactory" class="course.spring.coredemo.consumer.ConsumerFactory"
+          c:provider-ref="provider"/>
+<!--    <bean id="consumer" class="course.spring.coredemo.consumer.ConsoleArticleConsumer"-->
+<!--        factory-bean="consumerFactory" factory-method="createConsumer"/>-->
+    <bean id="consumer" class="course.spring.coredemo.consumer.ConsoleArticleConsumer"
+          p:provider-ref="provider" p:formatter-ref="formatter"/>
 </beans>
