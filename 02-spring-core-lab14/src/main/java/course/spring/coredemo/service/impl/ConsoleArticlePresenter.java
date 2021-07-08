@@ -8,15 +8,17 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
+import java.util.Set;
+
 @Service("presenter")
 @DependsOn("mockArticleProvider")
 //@Scope("prototype")
 public class ConsoleArticlePresenter implements ArticlePresenter {
-    private ArticleProvider provider;
+    private Set<ArticleProvider> providers;
 
     @Autowired
-    public ConsoleArticlePresenter(@Lazy ArticleProvider provider) {
-        this.provider = provider;
+    public ConsoleArticlePresenter(Set<ArticleProvider> provider) {
+        this.providers = provider;
     }
 
 //    @Autowired // Dependency Injection pattern - property based DI
@@ -26,6 +28,6 @@ public class ConsoleArticlePresenter implements ArticlePresenter {
 
     @Override
     public void present() {
-        provider.getArticles().forEach(System.out::println);
+        providers.stream().flatMap(p -> p.getArticles().stream()).forEach(System.out::println);
     }
 }
