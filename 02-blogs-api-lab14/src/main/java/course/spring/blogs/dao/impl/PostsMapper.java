@@ -16,7 +16,7 @@ public class PostsMapper implements RowMapper<Post> {
                 rs.getLong("id"),
                 rs.getString("title"),
                 rs.getString("content"),
-                rs.getLong("authorId"),
+                rs.getLong("author_id"),
                 rs.getTimestamp("created").toLocalDateTime(),
                 rs.getTimestamp("modified").toLocalDateTime()
         );
