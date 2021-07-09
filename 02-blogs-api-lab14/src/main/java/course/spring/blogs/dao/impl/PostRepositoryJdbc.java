@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 public class PostRepositoryJdbc implements PostRepository {
@@ -18,7 +19,8 @@ public class PostRepositoryJdbc implements PostRepository {
 
     @Override
     public Collection<Post> findAll() {
-        return null;
+        List<Post> posts = jdbcTemplate.query("select * from posts", new PostsMapper());
+        return posts;
     }
 
     @Override

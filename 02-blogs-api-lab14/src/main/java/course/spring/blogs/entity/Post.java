@@ -2,6 +2,7 @@ package course.spring.blogs.entity;
 
 import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Data
@@ -15,6 +16,6 @@ public class Post {
     @NonNull
     private String content;
     private Long authorId;
-    private Date created = new Date();
-    private Date modified = new Date();
+    private LocalDateTime created = LocalDateTime.now();
+    private LocalDateTime modified = LocalDateTime.now();
 }
