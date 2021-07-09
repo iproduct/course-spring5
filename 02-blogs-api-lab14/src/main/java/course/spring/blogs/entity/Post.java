@@ -15,6 +15,7 @@ public class Post {
     private String title;
     @NonNull
     private String content;
+    @NonNull
     private Long authorId;
     private LocalDateTime created = LocalDateTime.now();
     private LocalDateTime modified = LocalDateTime.now();

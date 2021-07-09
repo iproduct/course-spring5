@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
+import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -14,9 +15,12 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
+@Repository
 public class PostRepositoryJdbc implements PostRepository {
-    public static final String SELECT_SQL = "select * from posts;";
-    public static final String INSERT_SQL = "INSERT INTO posts(title, content, author_id, created, modified) VALUES (?, ?, ?, ?, ?);";
+    public static final String SELECT_SQL = "SELECT * FROM posts;";
+    public static final String COUNT_SQL = "SELECT COUNT(*) from posts;";
+    public static final String INSERT_SQL = "INSERT INTO posts(id, title, content, author_id, created, modified)" +
+            " VALUES (DEFAULT, ?, ?, ?, ?, ?);";
     private JdbcTemplate jdbcTemplate;
 
     @Autowired
@@ -63,6 +67,6 @@ public class PostRepositoryJdbc implements PostRepository {
 
         @Override
         public long count () {
-            return 0;
+            return jdbcTemplate.queryForObject(COUNT_SQL, Long.class);
         }
     }
