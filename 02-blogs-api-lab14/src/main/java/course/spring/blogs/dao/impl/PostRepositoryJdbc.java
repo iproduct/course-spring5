@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class PostRepositoryJdbc implements PostRepository {
+    public static final String SELECT_SQL = "select * from posts;";
     public static final String INSERT_SQL = "INSERT INTO posts(title, content, author_id, created, modified) VALUES (?, ?, ?, ?, ?);";
     private JdbcTemplate jdbcTemplate;
 
@@ -25,7 +26,7 @@ public class PostRepositoryJdbc implements PostRepository {
 
     @Override
     public Collection<Post> findAll() {
-        List<Post> posts = jdbcTemplate.query("select * from posts", new PostMapper());
+        List<Post> posts = jdbcTemplate.query(SELECT_SQL, new PostMapper());
         return posts;
     }
 
