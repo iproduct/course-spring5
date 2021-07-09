@@ -4,6 +4,10 @@ import course.spring.blogs.dao.PostRepository;
 import course.spring.blogs.entity.Post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
@@ -20,11 +24,11 @@ public class PostRepositoryJdbc implements PostRepository {
     public static final String SELECT_SQL = "SELECT * FROM posts;";
     public static final String COUNT_SQL = "SELECT COUNT(*) from posts;";
     public static final String INSERT_SQL = "INSERT INTO posts(id, title, content, author_id, created, modified)" +
-            " VALUES (DEFAULT, ?, ?, ?, ?, ?);";
-    private JdbcTemplate jdbcTemplate;
+            " VALUES (DEFAULT, :title, :content, :authorId, :created, :modified);";
+    private NamedParameterJdbcTemplate jdbcTemplate;
 
     @Autowired
-    public PostRepositoryJdbc(JdbcTemplate jdbcTemplate) {
+    public PostRepositoryJdbc(NamedParameterJdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 
@@ -42,31 +46,24 @@ public class PostRepositoryJdbc implements PostRepository {
     @Override
     public Post create(Post post) {
         KeyHolder keyHolder = new GeneratedKeyHolder();
-        jdbcTemplate.update((Connection connection) -> {
-                    PreparedStatement ps = connection.prepareStatement(INSERT_SQL, new String[]{"id"});
-                    ps.setString(1, post.getTitle());
-                    ps.setString(2, post.getContent());
-                    ps.setLong(3, post.getAuthorId());
-                    ps.setTimestamp(4, Timestamp.valueOf(post.getCreated()));
-                    ps.setTimestamp(5, Timestamp.valueOf(post.getModified()));
-                    return ps;
-                }, keyHolder);
-            post.setId(keyHolder.getKey().longValue());
-            return post;
-        }
-
-        @Override
-        public Post update (Post post){
-            return null;
-        }
-
-        @Override
-        public Post deleteById (Long id){
-            return null;
-        }
-
-        @Override
-        public long count () {
-            return jdbcTemplate.queryForObject(COUNT_SQL, Long.class);
-        }
+        SqlParameterSource namedParams = new BeanPropertySqlParameterSource(post);
+        jdbcTemplate.update(INSERT_SQL, namedParams, keyHolder, new String[] {"id"});
+        post.setId(keyHolder.getKey().longValue());
+        return post;
     }
+
+    @Override
+    public Post update(Post post) {
+        return null;
+    }
+
+    @Override
+    public Post deleteById(Long id) {
+        return null;
+    }
+
+    @Override
+    public long count() {
+        return jdbcTemplate.queryForObject(COUNT_SQL, new MapSqlParameterSource(), Long.class);
+    }
+}
