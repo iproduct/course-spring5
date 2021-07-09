@@ -29,7 +29,7 @@ public class PostRepositoryJdbc implements PostRepository {
     }
 
     @Override
-    public Collection<Post> findAll() {
+    public List<Post> findAll() {
         List<Post> posts = jdbcTemplate.query(SELECT_SQL, new PostMapper());
         return posts;
     }

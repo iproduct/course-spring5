@@ -30,7 +30,7 @@ public class UserRepositoryJdbc implements UserRepository {
     }
 
     @Override
-    public Collection<User> findAll() {
+    public List<User> findAll() {
         List<User> users = jdbcTemplate.query(SELECT_SQL, new UserMapper());
         return users;
     }
