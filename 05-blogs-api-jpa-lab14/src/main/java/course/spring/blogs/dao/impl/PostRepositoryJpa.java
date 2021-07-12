@@ -4,6 +4,7 @@ import course.spring.blogs.dao.PostRepository;
 import course.spring.blogs.entity.Post;
 import course.spring.blogs.exception.NonexistingEntityException;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -11,17 +12,20 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
+@Transactional(timeout = 5)
 public class PostRepositoryJpa implements PostRepository {
     @PersistenceContext
     private EntityManager em;
 
     @Override
+    @Transactional(readOnly = true)
     public List<Post> findAll() {
         return em.createQuery("select p from Post p", Post.class)
                 .getResultList();
     }
 
     @Override
+    @Transactional(readOnly = true)
     public Optional<Post> findById(Long id) {
         return Optional.ofNullable(em.find(Post.class, id));
     }
@@ -48,6 +52,7 @@ public class PostRepositoryJpa implements PostRepository {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public long count() {
         return em.createQuery("select count(p) from Post p", Long.class)
                 .getSingleResult();

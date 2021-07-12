@@ -4,6 +4,7 @@ import course.spring.blogs.dao.UserRepository;
 import course.spring.blogs.entity.User;
 import course.spring.blogs.exception.NonexistingEntityException;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -11,17 +12,20 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
+@Transactional(timeout = 5)
 public class UserRepositoryJpa implements UserRepository {
     @PersistenceContext
     private EntityManager em;
 
     @Override
+    @Transactional(readOnly = true)
     public List<User> findAll() {
         return em.createQuery("select u from User u", User.class)
                 .getResultList();
     }
 
     @Override
+    @Transactional(readOnly = true)
     public Optional<User> findById(Long id) {
         return Optional.ofNullable(em.find(User.class, id));
     }
@@ -48,6 +52,7 @@ public class UserRepositoryJpa implements UserRepository {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public long count() {
         return em.createQuery("select count(u) from User u", Long.class)
                 .getSingleResult();
