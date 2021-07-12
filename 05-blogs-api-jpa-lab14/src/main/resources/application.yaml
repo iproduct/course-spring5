@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/myblogs3_jpa
+    url: jdbc:postgresql://localhost:5432/myblogs3
     username: postgres
     password: root
     hikari:
@@ -21,3 +21,8 @@ management:
   endpoint:
     health:
       show-details: always
+info:
+  app:
+    name: MyBlogs Spring JPA
+    description: REST MVC demo with Spring Boot and JPA
+    version: 1.0-SNAPSHOT
