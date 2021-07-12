@@ -1,15 +1,14 @@
 package course.spring.blogs.init;
 
-import course.spring.blogs.dao.PostRepository;
-import course.spring.blogs.dao.UserRepository;
 import course.spring.blogs.entity.Post;
 import course.spring.blogs.entity.User;
+import course.spring.blogs.service.PostService;
+import course.spring.blogs.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import java.util.Collection;
 import java.util.List;
 
 @Component
@@ -27,25 +26,25 @@ public class DataInitializer implements CommandLineRunner {
     );
 
     @Autowired
-    private UserRepository userRepository;
+    private UserService userService;
     @Autowired
-    private PostRepository postRepository;
+    private PostService postService;
 
     @Override
     public void run(String... args) throws Exception {
-        if (userRepository.count() == 0) {
+        if (userService.getCount() == 0) {
             log.info("!!! Creating sample users: {}", SAMPLE_USERS);
-            SAMPLE_USERS.forEach(userRepository::create);
+            SAMPLE_USERS.forEach(userService::addUser);
         }
-        List<User> users = userRepository.findAll();
+        List<User> users = userService.getAllUsers();
         log.info("Users available: {}", users);
-        if (postRepository.count() == 0) {
+        if (postService.getCount() == 0) {
             log.info("!!! Creating sample posts: {}", SAMPLE_POSTS);
             SAMPLE_POSTS.forEach(post -> {
                 post.setAuthor(users.get(0));
-                postRepository.create(post);
+                postService.addPost(post);
             });
         }
-        log.info("Posts available: {}", postRepository.findAll());
+        log.info("Posts available: {}", postService.getAllPosts());
     }
 }

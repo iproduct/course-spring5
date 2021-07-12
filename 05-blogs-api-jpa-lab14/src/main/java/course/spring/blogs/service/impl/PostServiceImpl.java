@@ -1,6 +1,7 @@
 package course.spring.blogs.service.impl;
 
 import course.spring.blogs.dao.PostRepository;
+import course.spring.blogs.dao.UserRepository;
 import course.spring.blogs.entity.Post;
 import course.spring.blogs.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,8 @@ import java.util.List;
 public class PostServiceImpl implements PostService {
     @Autowired
     private PostRepository postRepository;
+    @Autowired
+    private UserRepository userRepository;
 
     @Override
     public List<Post> getAllPosts() {
@@ -22,6 +25,16 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public Post addPost(Post post) {
-        return postRepository.create(post);
+        if(post.getAuthor() == null) {
+            post.setAuthor(userRepository.findAll().get(0)); // set admin user as default author
+        }
+        Post created = postRepository.create(post);
+        post.getAuthor().getPosts().add(post);
+        return created;
+    }
+
+    @Override
+    public long getCount() {
+        return postRepository.count();
     }
 }

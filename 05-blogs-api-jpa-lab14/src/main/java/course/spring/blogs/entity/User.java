@@ -5,6 +5,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -37,7 +38,7 @@ public class User {
     @OneToMany(mappedBy = "author", fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
     @ToString.Exclude
     @JsonIgnore
-    private List<Post> posts;
+    private List<Post> posts = new ArrayList<>();
 
     private LocalDateTime created = LocalDateTime.now();
     private LocalDateTime modified = LocalDateTime.now();
