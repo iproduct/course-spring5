@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/myblogs3_jpa
+    username: postgres
+    password: root
+    hikari:
+      maximum-pool-size: 10
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, mappings, info, metrics, threaddump, heapdump, shutdown, beans
+  endpoint:
+    health:
+      show-details: always
+info:
+  app:
+    name: MyBlogs Spring JPA
+    description: REST MVC demo with Spring Boot and JPA
+    version: 1.0-SNAPSHOT
