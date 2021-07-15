@@ -13,6 +13,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.util.List;
 
+import static org.springframework.http.HttpStatus.BAD_REQUEST;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 import static org.springframework.web.bind.annotation.RequestMethod.*;
 
@@ -57,9 +58,18 @@ public class PostController {
     }
 
     @ExceptionHandler
-    public ResponseEntity<ErrorResponse> handleNonexisitngEntityException(NonexistingEntityException e) {
+    public ResponseEntity<ErrorResponse> handleNonexisitngEntityException(
+            NonexistingEntityException e) {
         return ResponseEntity.status(NOT_FOUND).body(
                 new ErrorResponse(NOT_FOUND.value(), e.getMessage())
+        );
+    }
+
+    @ExceptionHandler
+    public ResponseEntity<ErrorResponse> handleInvalidEntityDataException(
+           InvalidEntityDataException e) {
+        return ResponseEntity.badRequest().body(
+                new ErrorResponse(BAD_REQUEST.value(), e.getMessage())
         );
     }
 
