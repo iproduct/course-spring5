@@ -1,17 +1,24 @@
 package course.spring.blogs.web;
 
+import course.spring.blogs.dto.ErrorResponse;
 import course.spring.blogs.entity.Post;
 import course.spring.blogs.exception.InvalidEntityDataException;
+import course.spring.blogs.exception.NonexistingEntityException;
 import course.spring.blogs.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.util.List;
 
+import static org.springframework.http.HttpStatus.NOT_FOUND;
+import static org.springframework.web.bind.annotation.RequestMethod.*;
+
 @RestController
 @RequestMapping("/api/posts")
+@CrossOrigin(origins = "http://localhost:3000", maxAge = 3600, methods = {GET, POST, PUT, DELETE, OPTIONS})
 public class PostController {
     @Autowired
     private PostService postService;
@@ -47,6 +54,13 @@ public class PostController {
     @DeleteMapping("/{id}")
     public Post deletePost(@PathVariable Long id) {
         return postService.deletePostById(id);
+    }
+
+    @ExceptionHandler
+    public ResponseEntity<ErrorResponse> handleNonexisitngEntityException(NonexistingEntityException e) {
+        return ResponseEntity.status(NOT_FOUND).body(
+                new ErrorResponse(NOT_FOUND.value(), e.getMessage())
+        );
     }
 
 }

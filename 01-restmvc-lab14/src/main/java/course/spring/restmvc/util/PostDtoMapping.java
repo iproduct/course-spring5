@@ -19,11 +19,11 @@ public class PostDtoMapping extends PropertyMapConfigurerSupport<Post, PostDto> 
         return new PropertyMap<Post, PostDto>() {
             @Override
             protected void configure() {
-//                Set<String> titles = new LinkedHashSet<String>();
-//                for (Category c : source.getCategories()) {
-//                    titles.add(c.getTitle());
-//                }
-//                map().setCategoryTitles(titles);
+                Set<String> titles = new LinkedHashSet<String>();
+                for (Category c : source.getCategories()) {
+                    titles.add(c.getTitle());
+                }
+                map().setCategoryTitles(titles);
             }
         };
     }
