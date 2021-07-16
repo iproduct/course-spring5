@@ -39,7 +39,7 @@ public class ErrorHandlerControllerAdvice {
                 e.getBindingResult().getAllErrors().stream().map(err -> {
                             if (err instanceof FieldError) {
                                 FieldError ferr = (FieldError) err;
-                                return String.format("'%s=%s': %s",
+                                return String.format("%s='%s': %s",
                                         ferr.getField(), ferr.getRejectedValue(), ferr.getDefaultMessage());
                             } else {
                                 return err.getDefaultMessage();

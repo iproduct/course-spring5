@@ -15,8 +15,8 @@ import java.util.List;
 @Slf4j
 public class DataInitializer implements CommandLineRunner {
     public static final List<User> SAMPLE_USERS = List.of(
-            new User("Default", "Admin", "admin", "admin", "admin@mycompany.com"),
-            new User("Default", "User", "user", "user", "user@mycompany.com")
+            new User("Default", "Admin", "admin", "admin123", "admin@mycompany.com"),
+            new User("Default", "User", "user", "user1234", "user@mycompany.com")
     );
 
     public static final List<Post> SAMPLE_POSTS = List.of(

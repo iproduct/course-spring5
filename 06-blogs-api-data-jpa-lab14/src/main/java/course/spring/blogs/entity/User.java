@@ -37,7 +37,7 @@ public class User {
     @Column(unique = true, nullable = false, length = 20)
     @NonNull
     @NotNull
-    @Size(min=5, max=30)
+    @Size(min=4, max=30)
     private String username;
     @NonNull
     @NotNull
