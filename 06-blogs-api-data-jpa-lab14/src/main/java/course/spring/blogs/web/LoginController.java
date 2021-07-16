@@ -3,6 +3,7 @@ package course.spring.blogs.web;
 
 import course.spring.blogs.dto.Credentials;
 import course.spring.blogs.dto.JwtResponse;
+import course.spring.blogs.dto.UserDto;
 import course.spring.blogs.entity.User;
 import course.spring.blogs.service.UserService;
 import course.spring.blogs.util.JwtUtils;
@@ -34,7 +35,7 @@ public class LoginController {
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
                 credentials.getUsername(), credentials.getPassword()
         ));
-        final User user = userService.getUserByUsername(credentials.getUsername());
+        final UserDto user = userService.getUserByUsername(credentials.getUsername());
         final String token = jwtUtils.generateToken(user);
         log.info("Login successful for {}: {}", user, token); // don't do it in production code!
         return ResponseEntity.ok(new JwtResponse(user, token));

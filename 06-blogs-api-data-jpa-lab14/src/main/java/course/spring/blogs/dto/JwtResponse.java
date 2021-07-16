@@ -8,6 +8,6 @@ import lombok.Value;
 
 @Value
 public class JwtResponse {
-    private User user;
+    private UserDto user;
     private String token;
 }

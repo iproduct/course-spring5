@@ -29,7 +29,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public User getUserById(@PathVariable Long id) {
+    public UserDto getUserById(@PathVariable Long id) {
         return userService.getUserById(id);
     }
 
@@ -43,7 +43,7 @@ public class UserController {
     }
 
     @PutMapping("/{id}")
-    public User updateUser(@PathVariable Long id, @Valid @RequestBody User user) {
+    public UserDto updateUser(@PathVariable Long id, @Valid @RequestBody UserDto user) {
         if(! id.equals(user.getId())) {
             throw new InvalidEntityDataException(String.format("User ID=%d is different from URL ID=%d",
                     user.getId(), id));
@@ -52,7 +52,7 @@ public class UserController {
     }
 
     @DeleteMapping("/{id}")
-    public User deleteUser(@PathVariable Long id) {
+    public UserDto deleteUser(@PathVariable Long id) {
         return userService.deleteUserById(id);
     }
 

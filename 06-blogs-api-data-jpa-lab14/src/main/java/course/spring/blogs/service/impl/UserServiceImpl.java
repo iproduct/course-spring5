@@ -1,7 +1,6 @@
 package course.spring.blogs.service.impl;
 
 import course.spring.blogs.dao.UserRepository;
-import course.spring.blogs.dao.UserRepository;
 import course.spring.blogs.dto.UserCreateDto;
 import course.spring.blogs.dto.UserDto;
 import course.spring.blogs.entity.User;
@@ -11,7 +10,6 @@ import course.spring.blogs.service.UserService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationCredentialsNotFoundException;
-import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -25,7 +23,7 @@ import java.util.stream.Collectors;
 @Transactional
 public class UserServiceImpl implements UserService {
     @Autowired
-    private UserRepository userRepository;
+    private UserRepository userRepo;
 
     @Autowired
     private ModelMapper mapper;
@@ -33,23 +31,23 @@ public class UserServiceImpl implements UserService {
     @Override
     @Transactional(readOnly = true)
     public List<UserDto> getAllUsers() {
-        return userRepository.findAll().stream()
+        return userRepo.findAll().stream()
                 .map(user -> mapper.map(user, UserDto.class))
                 .collect(Collectors.toList());
     }
 
     @Override
     @Transactional(readOnly = true)
-    public User getUserById(Long id) {
-        return userRepository.findById(id).orElseThrow(() ->
+    public UserDto getUserById(Long id) {
+        return mapper.map(userRepo.findById(id).orElseThrow(() ->
                 new NonexistingEntityException(String.format("User with ID=%d does not exist", id))
-        );
+        ), UserDto.class);
     }
 
     @Override
-    public User getUserByUsername(String username) {
-        return userRepository.findByUsername(username).orElseThrow(() ->
-                new AuthenticationCredentialsNotFoundException("Username not valid"));
+    public UserDto getUserByUsername(String username) {
+        return mapper.map(userRepo.findByUsername(username).orElseThrow(() ->
+                new AuthenticationCredentialsNotFoundException("Username not valid")), UserDto.class);
     }
 
     @Override
@@ -60,12 +58,14 @@ public class UserServiceImpl implements UserService {
         user.setPassword(encoder.encode(user.getPassword()));
         user.setCreated(LocalDateTime.now());
         user.setModified(LocalDateTime.now());
-        return mapper.map(userRepository.save(user), UserDto.class);
+        return mapper.map(userRepo.save(user), UserDto.class);
     }
 
     @Override
-    public User updateUser(User user) {
-        User old = getUserById(user.getId());
+    public UserDto updateUser(UserDto userDto) {
+        User user = mapper.map(userDto, User.class);
+        User old = userRepo.findById(user.getId()).orElseThrow(() ->
+                new NonexistingEntityException(String.format("User with ID=%d does not exist", user.getId())));
         if (user.getPosts() != null) {
             throw new InvalidEntityDataException(String.format("User posts should not be changed here: %s",
                     user.getPosts()));
@@ -73,19 +73,19 @@ public class UserServiceImpl implements UserService {
         user.setPosts(old.getPosts());
         user.setPassword(old.getPassword());
         user.setModified(LocalDateTime.now());
-        User updated = userRepository.save(user);
-        return updated;
+        User updated = userRepo.save(user);
+        return mapper.map(updated, UserDto.class);
     }
 
     @Override
-    public User deleteUserById(Long id) {
-        User deleted = getUserById(id);
-        userRepository.deleteById(id);
+    public UserDto deleteUserById(Long id) {
+        UserDto deleted = getUserById(id);
+        userRepo.deleteById(id);
         return deleted;
     }
 
     @Override
     public long getUsersCount() {
-        return userRepository.count();
+        return userRepo.count();
     }
 }

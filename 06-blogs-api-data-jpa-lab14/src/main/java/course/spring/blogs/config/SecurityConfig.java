@@ -1,5 +1,7 @@
 package course.spring.blogs.config;
 
+import course.spring.blogs.dao.UserRepository;
+import course.spring.blogs.exception.NonexistingEntityException;
 import course.spring.blogs.service.UserService;
 import course.spring.blogs.web.JwtAuthenticationEntryPoint;
 import course.spring.blogs.web.JwtRequestFilter;
@@ -47,8 +49,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
-    public UserDetailsService userDetailsService(UserService userService) {
-        return userService::getUserByUsername;
+    public UserDetailsService userDetailsService(UserRepository userRepo) {
+        return username -> {
+            return userRepo.findByUsername(username).orElseThrow(
+                   ()-> new NonexistingEntityException(String.format("User with username='%s' does not exist", username)));
+        };
     }
 
     @Bean

@@ -1,6 +1,8 @@
 package course.spring.blogs.web;
 
+import course.spring.blogs.dao.UserRepository;
 import course.spring.blogs.entity.User;
+import course.spring.blogs.exception.NonexistingEntityException;
 import course.spring.blogs.service.UserService;
 import course.spring.blogs.util.JwtUtils;
 import io.jsonwebtoken.ExpiredJwtException;
@@ -25,7 +27,7 @@ import java.io.IOException;
 @Order
 public class JwtRequestFilter extends OncePerRequestFilter {
     @Autowired
-    private UserService userService;
+    private UserRepository userRepo;
     @Autowired
     private JwtUtils jwtUtils;
 
@@ -53,7 +55,8 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         }
 
         if(username != null) {
-            User user = userService.getUserByUsername(username);
+            User user = userRepo.findByUsername(username).orElseThrow(
+                    ()-> new NonexistingEntityException("User with does not exist"));
             if(jwtUtils.validateToken(jwtToken, user)) {
                 UsernamePasswordAuthenticationToken authenticationToken =
                         new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
