@@ -4,6 +4,7 @@ import course.spring.blogs.dto.ErrorResponse;
 import course.spring.blogs.exception.InvalidEntityDataException;
 import course.spring.blogs.exception.NonexistingEntityException;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.validation.Errors;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -12,8 +13,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import java.util.stream.Collectors;
 
-import static org.springframework.http.HttpStatus.BAD_REQUEST;
-import static org.springframework.http.HttpStatus.NOT_FOUND;
+import static org.springframework.http.HttpStatus.*;
 
 @ControllerAdvice(basePackages = "course.spring.blogs.web")
 public class ErrorHandlerControllerAdvice {
@@ -46,5 +46,13 @@ public class ErrorHandlerControllerAdvice {
                             }
                         }
                 ).collect(Collectors.toList())));
+    }
+
+    @ExceptionHandler
+    public ResponseEntity<ErrorResponse> handleInvalidEntityDataException(
+            AuthenticationException e) {
+        return ResponseEntity.status(UNAUTHORIZED.value()).body(
+                new ErrorResponse(UNAUTHORIZED.value(), e.getMessage())
+        );
     }
 }

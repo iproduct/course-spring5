@@ -7,9 +7,14 @@ import course.spring.blogs.exception.InvalidEntityDataException;
 import course.spring.blogs.exception.NonexistingEntityException;
 import course.spring.blogs.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationCredentialsNotFoundException;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -33,8 +38,18 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User getUserByUsername(String username) {
+        return userRepository.findByUsername(username).orElseThrow(() ->
+                new AuthenticationCredentialsNotFoundException("Username not valid"));
+    }
+
+    @Override
     public User addUser(User user) {
         user.setId(null);
+        PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
+        user.setPassword(encoder.encode(user.getPassword()));
+        user.setCreated(LocalDateTime.now());
+        user.setModified(LocalDateTime.now());
         return userRepository.save(user);
     }
 
@@ -46,6 +61,8 @@ public class UserServiceImpl implements UserService {
                     user.getPosts()));
         }
         user.setPosts(old.getPosts());
+        user.setPassword(old.getPassword());
+        user.setModified(LocalDateTime.now());
         User updated = userRepository.save(user);
         return updated;
     }
