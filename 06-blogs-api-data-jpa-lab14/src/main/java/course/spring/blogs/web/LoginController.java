@@ -36,7 +36,7 @@ public class LoginController {
         ));
         final User user = userService.getUserByUsername(credentials.getUsername());
         final String token = jwtUtils.generateToken(user);
-        log.info("Login successful for {}: {}", user, token);
+        log.info("Login successful for {}: {}", user, token); // don't do it in production code!
         return ResponseEntity.ok(new JwtResponse(user, token));
     }
 }

@@ -1,6 +1,7 @@
 package course.spring.blogs.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import static com.fasterxml.jackson.annotation.JsonProperty.Access.WRITE_ONLY;
 import static course.spring.blogs.entity.Role.AUTHOR;
 
 @Entity
@@ -47,6 +49,7 @@ public class User implements UserDetails {
     private String username;
     @NonNull
     @NotNull
+    @JsonProperty(access = WRITE_ONLY)
 //    @Pattern(regexp = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$",
 //            message = "password must be at least 8 characters with at least 1 digit")
     private String password;
