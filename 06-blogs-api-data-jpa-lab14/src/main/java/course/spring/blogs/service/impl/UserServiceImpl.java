@@ -2,10 +2,12 @@ package course.spring.blogs.service.impl;
 
 import course.spring.blogs.dao.UserRepository;
 import course.spring.blogs.dao.UserRepository;
+import course.spring.blogs.dto.UserDto;
 import course.spring.blogs.entity.User;
 import course.spring.blogs.exception.InvalidEntityDataException;
 import course.spring.blogs.exception.NonexistingEntityException;
 import course.spring.blogs.service.UserService;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationCredentialsNotFoundException;
 import org.springframework.security.core.AuthenticationException;
@@ -16,6 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -23,10 +26,15 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private ModelMapper mapper;
+
     @Override
     @Transactional(readOnly = true)
-    public List<User> getAllUsers() {
-        return userRepository.findAll();
+    public List<UserDto> getAllUsers() {
+        return userRepository.findAll().stream()
+                .map(user -> mapper.map(user, UserDto.class))
+                .collect(Collectors.toList());
     }
 
     @Override

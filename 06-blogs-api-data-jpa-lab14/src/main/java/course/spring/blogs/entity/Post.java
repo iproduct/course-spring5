@@ -37,4 +37,11 @@ public class Post {
     private LocalDateTime created = LocalDateTime.now();
     @PastOrPresent
     private LocalDateTime modified = LocalDateTime.now();
+
+    public Post(Long id, @NonNull String title, @NonNull String content, User author) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.author = author;
+    }
 }

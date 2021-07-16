@@ -57,6 +57,8 @@ public class User implements UserDetails {
     @NotNull
     @Email
     private String email;
+    @NonNull
+    @Enumerated(EnumType.STRING)
     private Role role = AUTHOR;
     private boolean active = true;
 
@@ -67,6 +69,15 @@ public class User implements UserDetails {
 
     private LocalDateTime created = LocalDateTime.now();
     private LocalDateTime modified = LocalDateTime.now();
+
+    public User(@NonNull String firstName, @NonNull String lastName, @NonNull String username, @NonNull String password, @NonNull String email, @NonNull Role role) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.role = role;
+    }
 
     @Override
     @JsonIgnore

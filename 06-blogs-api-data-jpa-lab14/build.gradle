@@ -39,12 +39,18 @@ dependencies {
 	implementation 'io.springfox:springfox-swagger-ui:3.0.0'
 	implementation 'com.github.jmnarloch:modelmapper-spring-boot-starter:1.1.0'
 	compileOnly 'org.projectlombok:lombok'
+	testCompileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'org.postgresql:postgresql'
 	annotationProcessor 'org.projectlombok:lombok'
+	testAnnotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.security:spring-security-test'
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.3'
+	testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.6.3'
+	testImplementation 'org.hamcrest:hamcrest-library:2.2'
+	testImplementation 'com.jayway.jsonpath:json-path-assert:2.4.0'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'io.projectreactor:reactor-test'
-	testImplementation 'org.springframework.security:spring-security-test'
 }
 
 test {

@@ -1,8 +1,10 @@
 package course.spring.blogs.web;
 
+import course.spring.blogs.dto.UserDto;
 import course.spring.blogs.entity.User;
 import course.spring.blogs.exception.InvalidEntityDataException;
 import course.spring.blogs.service.UserService;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +23,7 @@ public class UserController {
     private UserService userService;
 
     @GetMapping
-    public List<User> getAllUsers() {
+    public List<UserDto> getAllUsers() {
         return userService.getAllUsers();
     }
 
