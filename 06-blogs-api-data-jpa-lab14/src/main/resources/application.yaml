@@ -1,3 +1,6 @@
+jwt:
+  secret: mysecret
+
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
@@ -26,3 +29,5 @@ info:
     name: MyBlogs Spring JPA
     description: REST MVC demo with Spring Boot and JPA
     version: 1.0-SNAPSHOT
+
+
