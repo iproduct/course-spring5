@@ -15,6 +15,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -40,6 +41,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
         webEnvironment = SpringBootTest.WebEnvironment.MOCK,
         classes = Application.class
 )
+@ActiveProfiles("test")
 @AutoConfigureMockMvc
 @Slf4j
 public class RestmvcBlogsApplicationTests {
@@ -87,6 +89,7 @@ public class RestmvcBlogsApplicationTests {
     @Test
     void givePosts_whenPostPost_thenStatus201andLocationHeader() throws Exception {
         given(postRepository.save(any(Post.class))).willReturn(newPost);
+        given(userRepository.findAll()).willReturn(users);
         given(userRepository.findByUsername(any(String.class))).willReturn(Optional.of(users.get(0)));
 
         mockMvc.perform(MockMvcRequestBuilders.post("/api/posts")
@@ -94,12 +97,13 @@ public class RestmvcBlogsApplicationTests {
                     .accept(MediaType.APPLICATION_JSON)
                     .contentType(MediaType.APPLICATION_JSON)
 //                    .content(mapper.writeValueAsString(modelMapper.map(newPost, PostDto.class))))
-                    .content(mapper.writeValueAsString(Post.class)))
+                    .content(mapper.writeValueAsString(newPost)))
+                .andDo(result -> log.info(result.getResponse().getContentAsString()))
                 .andExpect(status().isCreated())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(header().string("location",
-                        containsString("http://localhost/api/posts/" + newPost.getId())))
-                .andDo(result -> log.info(result.getResponse().getContentAsString()));
+                        containsString("http://localhost/api/posts/" + newPost.getId())));
+
 
 //        then(postRepository).should(times(1)).findAll();
     }

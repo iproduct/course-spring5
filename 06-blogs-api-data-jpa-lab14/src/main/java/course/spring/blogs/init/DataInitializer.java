@@ -9,6 +9,7 @@ import course.spring.blogs.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -18,6 +19,7 @@ import static course.spring.blogs.entity.Role.AUTHOR;
 
 @Component
 @Slf4j
+@Profile("!test")
 public class DataInitializer implements CommandLineRunner {
     public static final List<User> SAMPLE_USERS = List.of(
             new User("Default", "Admin", "admin", "admin123", "admin@mycompany.com", ADMIN),
@@ -41,19 +43,19 @@ public class DataInitializer implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-//        if (userService.getUsersCount() == 0) {
-//            log.info("!!! Creating sample users: {}", SAMPLE_USERS);
-//            SAMPLE_USERS.forEach(userService::addUser);
-//        }
-//        List<User> users = userRepo.findAll();
-//        log.info("Users available: {}", users);
-//        if (postService.getPostsCount() == 0) {
-//            log.info("!!! Creating sample posts: {}", SAMPLE_POSTS);
-//            SAMPLE_POSTS.forEach(post -> {
-//                post.setAuthor(users.get(0));
-//                postService.addPost(post);
-//            });
-//        }
+        if (userService.getUsersCount() == 0) {
+            log.info("!!! Creating sample users: {}", SAMPLE_USERS);
+            SAMPLE_USERS.forEach(userService::addUser);
+        }
+        List<User> users = userRepo.findAll();
+        log.info("Users available: {}", users);
+        if (postService.getPostsCount() == 0) {
+            log.info("!!! Creating sample posts: {}", SAMPLE_POSTS);
+            SAMPLE_POSTS.forEach(post -> {
+                post.setAuthor(users.get(0));
+                postService.addPost(post);
+            });
+        }
         log.info("Posts available: {}", postService.getAllPosts());
     }
 }
