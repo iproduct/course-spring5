@@ -1,6 +1,7 @@
 package course.spring.blogs.init;
 
 import course.spring.blogs.dao.UserRepository;
+import course.spring.blogs.dto.UserCreateDto;
 import course.spring.blogs.dto.UserDto;
 import course.spring.blogs.entity.Post;
 import course.spring.blogs.entity.User;
@@ -21,9 +22,9 @@ import static course.spring.blogs.entity.Role.AUTHOR;
 @Slf4j
 @Profile("!test")
 public class DataInitializer implements CommandLineRunner {
-    public static final List<User> SAMPLE_USERS = List.of(
-            new User("Default", "Admin", "admin", "admin123", "admin@mycompany.com", ADMIN),
-            new User("Default", "User", "user", "user1234", "user@mycompany.com", AUTHOR)
+    public static final List<UserCreateDto> SAMPLE_USERS = List.of(
+            new UserCreateDto("Default", "Admin", "admin", "admin123", "admin@mycompany.com", ADMIN),
+            new UserCreateDto("Default", "User", "user", "user1234", "user@mycompany.com", AUTHOR)
     );
 
     public static final List<Post> SAMPLE_POSTS = List.of(

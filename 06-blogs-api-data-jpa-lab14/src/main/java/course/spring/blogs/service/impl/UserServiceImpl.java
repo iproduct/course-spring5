@@ -2,6 +2,7 @@ package course.spring.blogs.service.impl;
 
 import course.spring.blogs.dao.UserRepository;
 import course.spring.blogs.dao.UserRepository;
+import course.spring.blogs.dto.UserCreateDto;
 import course.spring.blogs.dto.UserDto;
 import course.spring.blogs.entity.User;
 import course.spring.blogs.exception.InvalidEntityDataException;
@@ -52,13 +53,14 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User addUser(User user) {
+    public UserDto addUser(UserCreateDto userDto) {
+        User user = mapper.map(userDto, User.class);
         user.setId(null);
         PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
         user.setPassword(encoder.encode(user.getPassword()));
         user.setCreated(LocalDateTime.now());
         user.setModified(LocalDateTime.now());
-        return userRepository.save(user);
+        return mapper.map(userRepository.save(user), UserDto.class);
     }
 
     @Override

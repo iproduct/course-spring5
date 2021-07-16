@@ -1,5 +1,6 @@
 package course.spring.blogs.web;
 
+import course.spring.blogs.dto.UserCreateDto;
 import course.spring.blogs.dto.UserDto;
 import course.spring.blogs.entity.User;
 import course.spring.blogs.exception.InvalidEntityDataException;
@@ -33,8 +34,8 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<User> addUser(@Valid @RequestBody User user) {
-        User created = userService.addUser(user);
+    public ResponseEntity<UserDto> addUser(@Valid @RequestBody UserCreateDto user) {
+        UserDto created = userService.addUser(user);
         return ResponseEntity.created(
                 ServletUriComponentsBuilder.fromCurrentRequest().
                         pathSegment("{id}").buildAndExpand(created.getId()).toUri())

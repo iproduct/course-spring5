@@ -42,9 +42,19 @@ public class UserCreateDto {
     @NotNull
     @Email
     private String email;
+    @NonNull
     private Role role = AUTHOR;
     private boolean active = true;
 
     private LocalDateTime created = LocalDateTime.now();
     private LocalDateTime modified = LocalDateTime.now();
+
+    public UserCreateDto(@NonNull String firstName, @NonNull String lastName, @NonNull String username, @NonNull String password, @NonNull String email, @NonNull Role role) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.role = role;
+    }
 }

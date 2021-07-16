@@ -3,6 +3,7 @@ package course.spring.blogs.web;
 import course.spring.blogs.dto.ErrorResponse;
 import course.spring.blogs.exception.InvalidEntityDataException;
 import course.spring.blogs.exception.NonexistingEntityException;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.validation.Errors;
@@ -47,6 +48,17 @@ public class ErrorHandlerControllerAdvice {
                             }
                         }
                 ).collect(Collectors.toList())));
+    }
+
+    @ExceptionHandler
+    public ResponseEntity<ErrorResponse> handleDbConstraintViolations(DataIntegrityViolationException ex) {
+        Throwable cause = ex;
+        while (cause.getCause() != null) {
+            cause = cause.getCause();
+        }
+        return ResponseEntity.badRequest().body(
+                new ErrorResponse(BAD_REQUEST.value(), cause.getMessage())
+        );
     }
 
     @ExceptionHandler
