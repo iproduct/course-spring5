@@ -57,20 +57,4 @@ public class PostController {
         return postService.deletePostById(id);
     }
 
-    @ExceptionHandler
-    public ResponseEntity<ErrorResponse> handleNonexisitngEntityException(
-            NonexistingEntityException e) {
-        return ResponseEntity.status(NOT_FOUND).body(
-                new ErrorResponse(NOT_FOUND.value(), e.getMessage())
-        );
-    }
-
-    @ExceptionHandler
-    public ResponseEntity<ErrorResponse> handleInvalidEntityDataException(
-           InvalidEntityDataException e) {
-        return ResponseEntity.badRequest().body(
-                new ErrorResponse(BAD_REQUEST.value(), e.getMessage())
-        );
-    }
-
 }
