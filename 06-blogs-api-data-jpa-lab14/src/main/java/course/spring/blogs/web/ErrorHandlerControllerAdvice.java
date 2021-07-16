@@ -4,6 +4,7 @@ import course.spring.blogs.dto.ErrorResponse;
 import course.spring.blogs.exception.InvalidEntityDataException;
 import course.spring.blogs.exception.NonexistingEntityException;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -26,5 +27,10 @@ public class ErrorHandlerControllerAdvice {
         return ResponseEntity.badRequest().body(
                 new ErrorResponse(BAD_REQUEST.value(), e.getMessage())
         );
+    }
+
+    @ExceptionHandler()
+    public ResponseEntity<ErrorResponse> handleValidationErrors(MethodArgumentNotValidException e) {
+        ResponseEntity.badRequest().body(new ErrorResponse())
     }
 }

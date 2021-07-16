@@ -4,6 +4,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,16 +26,26 @@ public class User {
     @EqualsAndHashCode.Include
     private Long id;
     @NonNull
+    @NotNull
+    @Size(min=1, max=30)
     private String firstName;
     @NonNull
+    @NotNull
+    @Size(min=1, max=30)
     private String lastName;
     @Basic(optional = false)
     @Column(unique = true, nullable = false, length = 20)
     @NonNull
+    @NotNull
+    @Size(min=5, max=30)
     private String username;
     @NonNull
+    @NotNull
+    @Pattern(regexp = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$")
     private String password;
     @NonNull
+    @NotNull
+    @Email
     private String email;
     private boolean active = true;
 

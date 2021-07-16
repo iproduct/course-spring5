@@ -8,9 +8,13 @@ import course.spring.blogs.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.validation.Valid;
+import javax.validation.constraints.Positive;
 import java.util.List;
 
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
@@ -35,7 +39,7 @@ public class PostController {
     }
 
     @PostMapping
-    public ResponseEntity<Post> addPost(@RequestBody Post post) {
+    public ResponseEntity<Post> addPost(@Valid @RequestBody Post post) {
         Post created = postService.addPost(post);
         return ResponseEntity.created(
                 ServletUriComponentsBuilder.fromCurrentRequest().
@@ -44,7 +48,7 @@ public class PostController {
     }
 
     @PutMapping("/{id}")
-    public Post updatePost(@PathVariable Long id, @RequestBody Post post) {
+    public Post updatePost(@PathVariable Long id, @Valid @RequestBody Post post) {
         if(! id.equals(post.getId())) {
             throw new InvalidEntityDataException(String.format("Post ID=%d is different from URL ID=%d",
                     post.getId(), id));
