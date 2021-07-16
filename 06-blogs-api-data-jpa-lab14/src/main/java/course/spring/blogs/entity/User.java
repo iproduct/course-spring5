@@ -69,26 +69,31 @@ public class User implements UserDetails {
     private LocalDateTime modified = LocalDateTime.now();
 
     @Override
+    @JsonIgnore
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority("ROLE_" + getRole().toString()));
     }
 
     @Override
+    @JsonIgnore
     public boolean isAccountNonExpired() {
         return active;
     }
 
     @Override
+    @JsonIgnore
     public boolean isAccountNonLocked() {
         return active;
     }
 
     @Override
+    @JsonIgnore
     public boolean isCredentialsNonExpired() {
         return active;
     }
 
     @Override
+    @JsonIgnore
     public boolean isEnabled() {
         return active;
     }
