@@ -9,12 +9,16 @@ import course.spring.blogs.exception.NonexistingEntityException;
 import course.spring.blogs.service.UserService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PostFilter;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationCredentialsNotFoundException;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.security.RolesAllowed;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -30,6 +34,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional(readOnly = true)
+    @PostFilter("filterObject.id == authentication.principal.id or hasRole('ADMIN')")
     public List<UserDto> getAllUsers() {
         return userRepo.findAll().stream()
                 .map(user -> mapper.map(user, UserDto.class))
@@ -38,6 +43,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional(readOnly = true)
+    @PreAuthorize("#id == authentication.principal.id or hasRole('ADMIN')")
     public UserDto getUserById(Long id) {
         return mapper.map(userRepo.findById(id).orElseThrow(() ->
                 new NonexistingEntityException(String.format("User with ID=%d does not exist", id))
@@ -45,12 +51,14 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @RolesAllowed("ADMIN")
     public UserDto getUserByUsername(String username) {
         return mapper.map(userRepo.findByUsername(username).orElseThrow(() ->
                 new AuthenticationCredentialsNotFoundException("Username not valid")), UserDto.class);
     }
 
     @Override
+    @RolesAllowed("ADMIN")
     public UserDto addUser(UserCreateDto userDto) {
         User user = mapper.map(userDto, User.class);
         user.setId(null);
@@ -62,6 +70,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @PreAuthorize("#userDto.id == authentication.principal.id or hasRole('ADMIN')")
     public UserDto updateUser(UserDto userDto) {
         User user = mapper.map(userDto, User.class);
         User old = userRepo.findById(user.getId()).orElseThrow(() ->
@@ -78,6 +87,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @RolesAllowed("ADMIN")
+    @Secured("ROLE_ADMIN")
     public UserDto deleteUserById(Long id) {
         UserDto deleted = getUserById(id);
         userRepo.deleteById(id);

@@ -9,6 +9,7 @@ import course.spring.blogs.exception.NonexistingEntityException;
 import course.spring.blogs.exception.AuthorNotFoundException;
 import course.spring.blogs.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -59,6 +60,7 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
+    @PreAuthorize("#post.author.id == authentication.principal.id or hasRole('ADMIN')")
     public Post updatePost(Post post) {
         Post old = getPostById(post.getId());
         if (!post.getAuthor().equals(old.getAuthor())) {

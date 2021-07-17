@@ -5,6 +5,7 @@ import course.spring.blogs.dto.UserDto;
 import course.spring.blogs.entity.User;
 import course.spring.blogs.exception.InvalidEntityDataException;
 import course.spring.blogs.service.UserService;
+import lombok.val;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -44,7 +45,7 @@ public class UserController {
 
     @PutMapping("/{id}")
     public UserDto updateUser(@PathVariable Long id, @Valid @RequestBody UserDto user) {
-        if(! id.equals(user.getId())) {
+        if (!id.equals(user.getId())) {
             throw new InvalidEntityDataException(String.format("User ID=%d is different from URL ID=%d",
                     user.getId(), id));
         }

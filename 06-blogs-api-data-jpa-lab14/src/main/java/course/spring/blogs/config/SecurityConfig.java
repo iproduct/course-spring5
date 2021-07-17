@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -22,6 +23,10 @@ import static org.springframework.http.HttpMethod.*;
 import static org.springframework.security.config.http.SessionCreationPolicy.STATELESS;
 
 @Configuration
+@EnableGlobalMethodSecurity(
+        prePostEnabled = true,
+        securedEnabled = true,
+        jsr250Enabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
@@ -38,8 +43,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(PUT, "/api/posts").hasAnyRole(AUTHOR.name(), ADMIN.name())
                 .antMatchers(DELETE, "/api/posts").hasAnyRole(AUTHOR.name(), ADMIN.name())
                 .antMatchers(GET, "/api/posts").permitAll()
-                .antMatchers(GET,"/api/users").hasRole(ADMIN.name())
+                .antMatchers(GET,"/api/users").hasAnyRole(AUTHOR.name(), ADMIN.name())
                 .antMatchers(POST,"/api/users").hasRole(ADMIN.name())
+                .antMatchers(PUT,"/api/users").hasAnyRole(AUTHOR.name(), ADMIN.name())
+                .antMatchers(DELETE,"/api/users").hasRole(ADMIN.name())
                 .antMatchers("/**").permitAll()
             .and()
                 .exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint)
