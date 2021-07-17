@@ -3,10 +3,15 @@ package course.spring.blogs.service.impl;
 import course.spring.blogs.dao.PostRepository;
 import course.spring.blogs.dao.UserRepository;
 import course.spring.blogs.entity.Post;
+import course.spring.blogs.entity.User;
 import course.spring.blogs.exception.InvalidEntityDataException;
 import course.spring.blogs.exception.NonexistingEntityException;
+import course.spring.blogs.exception.AuthorNotFoundException;
 import course.spring.blogs.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -37,7 +42,15 @@ public class PostServiceImpl implements PostService {
     @Override
     public Post addPost(Post post) {
         if (post.getAuthor() == null) {
-            post.setAuthor(userRepository.findAll().get(0)); // set admin user as default author
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            if (!(authentication instanceof AnonymousAuthenticationToken)) {
+                String username = authentication.getName();
+                User currentUser = userRepository.findByUsername(username).orElseThrow(() ->
+                        new AuthorNotFoundException(String.format("User '%s' can not be found", username)));
+                post.setAuthor(currentUser);
+            } else {
+                throw new AuthorNotFoundException("Anonymous users can not create posts.");
+            }
         }
         post.setId(null);
         Post created = postRepository.save(post);

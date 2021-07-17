@@ -5,6 +5,7 @@ import course.spring.blogs.exception.InvalidEntityDataException;
 import course.spring.blogs.exception.NonexistingEntityException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.validation.Errors;
 import org.springframework.validation.FieldError;
@@ -62,16 +63,14 @@ public class ErrorHandlerControllerAdvice {
     }
 
     @ExceptionHandler
-    public ResponseEntity<ErrorResponse> handleInvalidEntityDataException(
-            AuthenticationException e) {
+    public ResponseEntity<ErrorResponse> handleAuthenticationException(AuthenticationException e) {
         return ResponseEntity.status(UNAUTHORIZED.value()).body(
                 new ErrorResponse(UNAUTHORIZED.value(), e.getMessage())
         );
     }
 
     @ExceptionHandler
-    public ResponseEntity<ErrorResponse> handleAccessDeniedException(
-            AccessDeniedException e) {
+    public ResponseEntity<ErrorResponse> handleAccessDeniedException(AccessDeniedException e) {
         return ResponseEntity.status(FORBIDDEN.value()).body(
                 new ErrorResponse(FORBIDDEN.value(), e.getMessage())
         );
