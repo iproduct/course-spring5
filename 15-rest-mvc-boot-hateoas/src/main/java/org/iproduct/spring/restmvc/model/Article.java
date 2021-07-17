@@ -6,7 +6,6 @@ import lombok.NonNull;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.hateoas.Identifiable;
 
 import java.time.LocalDateTime;
 

@@ -3,12 +3,10 @@ package org.iproduct.spring.restmvc.config;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import org.springframework.hateoas.config.EnableEntityLinks;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @EnableWebMvc
-@EnableEntityLinks
 @Configuration
 @ComponentScan("org.iproduct.spring.restmvc.web")
 @Import({ SwaggerConfig.class, RestConfiguration.class  })
