@@ -51,14 +51,14 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @RolesAllowed("ADMIN")
+//    @RolesAllowed("ADMIN")
     public UserDto getUserByUsername(String username) {
         return mapper.map(userRepo.findByUsername(username).orElseThrow(() ->
                 new AuthenticationCredentialsNotFoundException("Username not valid")), UserDto.class);
     }
 
     @Override
-    @RolesAllowed("ADMIN")
+//    @RolesAllowed("ADMIN")
     public UserDto addUser(UserCreateDto userDto) {
         User user = mapper.map(userDto, User.class);
         user.setId(null);
