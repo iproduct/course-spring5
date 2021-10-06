@@ -1,4 +1,4 @@
-package course.spring.introlab15;
+package course.spring.intro;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
