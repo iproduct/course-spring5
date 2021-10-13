@@ -5,7 +5,7 @@ plugins {
 	id 'idea'
 }
 
-group = 'course.dml'
+group = 'course.spring'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
@@ -22,7 +22,6 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive'
-	implementation('org.springframework.boot:spring-boot-starter-security')
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
@@ -37,8 +36,7 @@ test {
 
 idea {
 	module {
-		downloadJavadoc = true
-		downloadSources = true
+		downloadJavadoc(true)
+		downloadSources(true)
 	}
 }
-
