@@ -7,10 +7,11 @@ import course.spring.service.ArticleProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.util.Collection;
 import java.util.List;
 
-@Service
+@Service("provider")
 public class MockArticleProvider implements ArticleProvider {
     public static final List<Article> MOCK_ARTICLES =List.of(
         new Article("New in Spring", "Web Flux is here ..."),
@@ -21,7 +22,8 @@ public class MockArticleProvider implements ArticleProvider {
     @Autowired
     private ArticleRepository articleRepo;
 
-    public MockArticleProvider() {
+    @PostConstruct
+    public void init() {
         MOCK_ARTICLES.forEach(articleRepo::create);
     }
 

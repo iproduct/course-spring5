@@ -7,7 +7,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class AnnotationConfigDemo {
     public static void main(String[] args) {
         ApplicationContext ctx = new AnnotationConfigApplicationContext("course.spring");
-        ArticlePresenter presenter = ctx.getBean(ArticlePresenter.class);
+        ArticlePresenter presenter = ctx.getBean("presenter", ArticlePresenter.class);
         presenter.present();
     }
 }

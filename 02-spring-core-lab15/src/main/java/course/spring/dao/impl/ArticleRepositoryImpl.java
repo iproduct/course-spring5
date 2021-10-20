@@ -12,7 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicLongArray;
 
-@Repository
+@Repository("articleRepo")
 public class ArticleRepositoryImpl implements ArticleRepository {
     private Map<Long, Article> articles = new ConcurrentHashMap<>();
     private AtomicLong nextId = new AtomicLong();
