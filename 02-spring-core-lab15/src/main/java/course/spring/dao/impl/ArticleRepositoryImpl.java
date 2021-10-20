@@ -2,6 +2,7 @@ package course.spring.dao.impl;
 
 import course.spring.dao.ArticleRepository;
 import course.spring.model.Article;
+import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicLongArray;
 
+@Repository
 public class ArticleRepositoryImpl implements ArticleRepository {
     private Map<Long, Article> articles = new ConcurrentHashMap<>();
     private AtomicLong nextId = new AtomicLong();
