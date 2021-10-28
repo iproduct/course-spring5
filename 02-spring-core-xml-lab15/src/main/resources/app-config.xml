@@ -4,9 +4,40 @@
        xmlns:p="http://www.springframework.org/schema/p"
        xmlns:c="http://www.springframework.org/schema/c"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
-        http://www.springframework.org/schema/context/spring-context.xsd">
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        https://www.springframework.org/schema/util/spring-util.xsd">
 
+    <context:annotation-config />
+    <context:component-scan base-package="course.spring" />
+    <context:property-placeholder location="articles.properties" />
+    <bean id="articleRepository" class="course.spring.dao.impl.ArticleRepositoryImpl"/>
+    <bean id="provider" name="articleProvider" class="course.spring.service.impl.MockArticleProvider"
+          c:articleRepo-ref="articleRepository">
+        <property name="sampleTitles">
+            <value>Post A, Post B, Post C, Post D</value>
+        </property>
+<!--            <property name="sampleArticles">-->
+<!--                <map>-->
+<!--                    <entry key="New in Spring" value="Web Flux is here ..."/>-->
+<!--                    <entry key="DI in Action" value="Should I use DI or Service Locator? ..."/>-->
+<!--                    <entry key="Bean Scopes" value="Singleton, Prototype, ..."/>-->
+<!--                </map>-->
+<!--            </property>-->
+    <!--        <property name="articleRepo" ref="articleRepository" />-->
+    <!--        <property name="articleRepo">-->
+    <!--            <ref bean="articleRepository" />-->
+    <!--        </property>-->
+        </bean>
+    <bean id="presenter" class="course.spring.service.impl.ConsoleArticlePresenter"
+          c:aProvider-ref="provider" />
+<!--          c:_0-ref="provider" />-->
+        <!--        <constructor-arg index="0" name="aProvider" type="course.spring.service.ArticleProvider">-->
+        <!--            <ref bean="provider"/>-->
+        <!--        </constructor-arg>-->
+<!--    </bean>-->
 </beans>

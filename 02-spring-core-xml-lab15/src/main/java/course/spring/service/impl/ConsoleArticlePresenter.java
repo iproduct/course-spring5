@@ -6,8 +6,8 @@ import course.spring.service.ArticleProvider;
 public class ConsoleArticlePresenter implements ArticlePresenter {
     private ArticleProvider provider;
 
-    public ConsoleArticlePresenter(ArticleProvider provider){
-        this.provider = provider;
+    public ConsoleArticlePresenter(ArticleProvider aProvider){
+        this.provider = aProvider;
     }
 
     @Override
