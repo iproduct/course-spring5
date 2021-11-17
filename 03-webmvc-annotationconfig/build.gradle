@@ -1,40 +1,28 @@
-buildscript {
-    repositories {
-        jcenter()
-        // enable this to use snapshot versions of Gretty:
-        // maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local' }
-    }
-
-    dependencies {
-        classpath 'org.gretty:gretty:+'
-    }
-}
-
-repositories {
-    jcenter()
-    // enable this to use snapshot versions of Gretty:
-    // maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local' }
-}
-
-apply plugin: 'org.gretty'
-apply plugin: 'java'
-apply plugin: 'idea'
-apply plugin: 'war' // optional if you use spring-boot
-//apply from: 'https://raw.github.com/gretty-gradle-plugin/gretty/master/pluginScripts/gretty.plugin'
-
-idea {
-    module {
-        downloadJavadoc = true
-        downloadSources = true
-    }
-}
-
-
 group 'org.iproduct.spring'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 11
-targetCompatibility = 11
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'org.akhikhl.gretty'
+
+apply plugin: 'idea'
+idea {
+    module {
+        downloadJavadoc = true
+    }
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'org.akhikhl.gretty:gretty:+'
+    }
+}
+
+sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -43,19 +31,20 @@ repositories {
 }
 
 dependencies {
-    implementation('ch.qos.logback:logback-classic:1.2.3')
-    implementation('org.springframework:spring-webmvc:5.0.5.RELEASE')
-    implementation('javax.servlet:jstl:1.2')
+    compile('ch.qos.logback:logback-classic:1.2.7')
+    compile('org.springframework:spring-webmvc:5.3.12')
+    compile('javax.servlet:jstl:1.2')
+    compile('org.webjars:bootstrap:3.3.7-1')
+    compile('org.hibernate:hibernate-validator:7.0.1.Final')
+    implementation 'javax.inject:javax.inject:1'
     implementation 'javax.annotation:javax.annotation-api:1.3.2'
-    implementation 'org.hibernate:hibernate-validator:6.1.6.Final'
-    implementation('org.webjars:bootstrap:3.3.7-1')
-    implementation('org.webjars:jquery:3.1.1')
-    implementation('org.webjars:webjars-locator:0.33')
+    compile('org.webjars:jquery:3.1.1')
+    compile('org.webjars:webjars-locator:0.33')
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
 gretty{
     httpPort = 8080
     contextPath = 'mvc'
-    servletContainer = 'tomcat9'
+    servletContainer = 'jetty9'
 }

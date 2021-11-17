@@ -1,5 +1,6 @@
 package org.iproduct.spring.webmvc.web;
 
+import jakarta.validation.Valid;
 import org.iproduct.spring.webmvc.model.Article;
 import org.iproduct.spring.webmvc.service.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,11 +9,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.validation.Valid;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -50,8 +51,8 @@ public class ArticleConroller {
     }
 
     @PostMapping(value = "/submit-article")
-    public String addArticle(@Valid @ModelAttribute("article") Article article, BindingResult result) {
-        if (result.hasErrors()) {
+    public String addArticle(@Valid @ModelAttribute("article") Article article, Errors errors) {
+        if (errors.hasErrors()) {
             return "articleForm";
         }
         repository.create(article);
