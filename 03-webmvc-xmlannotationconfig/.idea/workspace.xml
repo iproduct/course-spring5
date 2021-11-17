@@ -10,50 +10,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80bbdc10-2998-4229-bf0a-b5903d1807d5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/course-spring5.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01-spring-core-demo/.idea/01-spring-core-demo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/src/main/webapp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-core-demo/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../01-spring-core-demo/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-core-demo/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../01-spring-core-demo/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.idea/03-webmvc-thymeleaf-lab8.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.idea/modules.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.idea/artifacts/mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-spring-core-lab15/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core-lab15/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/6.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/6.6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/6.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/6.6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/6.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/6.6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/6.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/6.6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-annotationconfig/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-annotationconfig/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.gradle/6.0.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.gradle/6.0.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.gradle/6.0.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.gradle/6.0.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.gradle/6.0.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.gradle/6.0.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.gradle/6.0.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.gradle/6.0.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.gradle/6.0.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.gradle/6.0.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/META-INF/webmvc-thymeleaf.main.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/restmvc/exception/InvalidEntityException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/restmvc/exception/InvalidEntityException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/restmvc/exception/NonexisitngEntityException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/restmvc/exception/NonexisitngEntityException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/restmvc/model/ErrorResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/restmvc/model/ErrorResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/ServletInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/ServletInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/WebmvcThymeleafApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/WebmvcThymeleafApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/dao/UsersRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/dao/UsersRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/ArticlesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/ArticlesService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/ArticlesServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/ArticlesServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/UsersService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/UsersService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/UsersServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/UsersServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/exception/UnauthorisedModificationException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/exception/UnauthorisedModificationException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/init/DataInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/init/DataInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/model/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/model/Article.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/web/ArticleControllerAdvice.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/web/ArticleControllerAdvice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/web/ArticlesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/web/ArticlesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/web/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/web/UsersController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.idea/03-webmvc-xmlconfig.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/build/libs/webmvc-xmlconfig-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/build/libs/webmvc-xmlconfig-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../05-webmvc-rest-lab15/src/main/java/course/spring/rest/web/ArticlesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-webmvc-rest-lab15/src/main/java/course/spring/rest/web/ArticlesController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -332,7 +327,7 @@
       <workItem from="1576085827588" duration="514000" />
       <workItem from="1606323012066" duration="1440000" />
       <workItem from="1637092168627" duration="462000" />
-      <workItem from="1637168270663" duration="2499000" />
+      <workItem from="1637168270663" duration="5256000" />
     </task>
     <servers />
   </component>

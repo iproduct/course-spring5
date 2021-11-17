@@ -1,8 +1,10 @@
 package course.spring.rest.web;
 
 import course.spring.exception.EntityNotFoundException;
+import course.spring.exception.InvalidClientDataException;
 import course.spring.rest.dao.ArticleRepository;
 import course.spring.rest.model.Article;
+import course.spring.rest.model.ErorResposnse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -40,6 +42,15 @@ public class ArticlesController {
 //                        fromMethodName(ArticlesController.class, "addArticle", Article.class)
 //                        .pathSegment("{id}").buildAndExpand(created.getId()).toUri()
         ).body(created);
+    }
+
+    @PutMapping("/{id}")
+    public Article updateArticle(@PathVariable String id, @RequestBody Article article) {
+        if(!id.equals(article.getId())) throw new InvalidClientDataException(
+                String.format("ID %s from request URL is different from ID %s in request body.", id, article.getId()));
+        articleRepo.findById(id).orElseThrow(() -> new EntityNotFoundException(
+                String.format("Article with ID %s not found.", id)));
+        return articleRepo.save(article);
     }
 
 }

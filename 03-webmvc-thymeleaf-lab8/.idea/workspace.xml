@@ -5,49 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0001d11-907d-4bf0-af89-4f1ebef4eac9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/course-spring5.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01-spring-core-demo/.idea/01-spring-core-demo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-webmvc-xmlannotationconfig/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-webmvc-xmlannotationconfig/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-webmvc-xmlannotationconfig/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/src/main/webapp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-core-demo/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../01-spring-core-demo/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-core-demo/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../01-spring-core-demo/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/03-webmvc-thymeleaf-lab8.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.idea/artifacts/mvc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-webmvc-rest-lab15/src/main/java/course/spring/exception/InvalidClientDataException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-webmvc-rest-lab15/src/main/java/course/spring/rest/model/ErorResposnse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-spring-core-lab15/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core-lab15/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/6.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/6.6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/6.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/6.6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/6.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/6.6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/6.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/6.6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-annotationconfig/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-annotationconfig/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-annotationconfig/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/META-INF/webmvc-thymeleaf.main.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlannotationconfig/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlannotationconfig/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlannotationconfig/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlannotationconfig/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/restmvc/exception/InvalidEntityException.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/restmvc/exception/InvalidEntityException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/restmvc/exception/NonexisitngEntityException.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/restmvc/exception/NonexisitngEntityException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/restmvc/model/ErrorResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/restmvc/model/ErrorResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/ServletInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/ServletInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/WebmvcThymeleafApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/WebmvcThymeleafApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/dao/UsersRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/dao/UsersRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/domain/ArticlesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/domain/ArticlesService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/domain/ArticlesServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/domain/ArticlesServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/domain/UsersService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/domain/UsersService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/domain/UsersServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/domain/UsersServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/exception/UnauthorisedModificationException.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/exception/UnauthorisedModificationException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/init/DataInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/init/DataInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/model/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/model/Article.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/web/ArticleControllerAdvice.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/web/ArticleControllerAdvice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/web/ArticlesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/web/ArticlesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/web/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/web/UsersController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlannotationconfig/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlannotationconfig/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlannotationconfig/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlannotationconfig/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/6.6.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.idea/03-webmvc-xmlconfig.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/build/libs/webmvc-xmlconfig-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/build/libs/webmvc-xmlconfig-1.0-SNAPSHOT.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../05-webmvc-rest-lab15/src/main/java/course/spring/rest/web/ArticlesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-webmvc-rest-lab15/src/main/java/course/spring/rest/web/ArticlesController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -244,7 +242,7 @@
       <workItem from="1591281380733" duration="4898000" />
       <workItem from="1591299920517" duration="1902000" />
       <workItem from="1609950076599" duration="1962000" />
-      <workItem from="1637165276146" duration="1821000" />
+      <workItem from="1637165276146" duration="2494000" />
     </task>
     <servers />
   </component>
@@ -253,108 +251,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="446" y="123" key="#Project_Structure" timestamp="1576682394976">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="446" y="123" key="#Project_Structure/0.0.1707.920@0.0.1707.920" timestamp="1576682394976" />
-    <state x="680" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1578576733049">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="680" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1578576733049" />
-    <state x="765" y="231" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1576693374910" />
-    <state x="585" y="243" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1578576673182">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="585" y="243" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1707.920@0.0.1707.920" timestamp="1578576673182" />
-    <state x="497" y="392" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1576682471983">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="497" y="392" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1707.920@0.0.1707.920" timestamp="1576682471983" />
-    <state x="584" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576682085627">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="584" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1707.920@0.0.1707.920" timestamp="1576682085627" />
-    <state x="837" y="230" width="673" height="580" key="#xdebugger.evaluate" timestamp="1576692700604">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="837" y="230" width="673" height="580" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1576692700604" />
-    <state width="935" height="466" key="DebuggerActiveHint" timestamp="1578578863873">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="935" height="466" key="DebuggerActiveHint/0.0.1707.920@0.0.1707.920" timestamp="1578578863873" />
-    <state x="634" y="219" key="FileChooserDialogImpl" timestamp="1578524513758">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="634" y="219" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1578524513758" />
-    <state width="1663" height="284" key="GridCell.Tab.0.bottom" timestamp="1578581743818">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1663" height="284" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1578581743818" />
-    <state width="1877" height="836" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1578501603065" />
-    <state width="1663" height="284" key="GridCell.Tab.0.center" timestamp="1578581743818">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1663" height="284" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1578581743818" />
-    <state width="1877" height="836" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1578501603065" />
-    <state width="1663" height="284" key="GridCell.Tab.0.left" timestamp="1578581743818">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1663" height="284" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1578581743818" />
-    <state width="1877" height="836" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1578501603065" />
-    <state width="1663" height="284" key="GridCell.Tab.0.right" timestamp="1578581743818">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1663" height="284" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1578581743818" />
-    <state width="1877" height="836" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1578501603065" />
-    <state width="1663" height="284" key="GridCell.Tab.1.bottom" timestamp="1578581743818">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1663" height="284" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1578581743818" />
-    <state width="1877" height="836" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1578501603065" />
-    <state width="1663" height="284" key="GridCell.Tab.1.center" timestamp="1578581743818">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1663" height="284" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1578581743818" />
-    <state width="1877" height="836" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1578501603065" />
-    <state width="1663" height="284" key="GridCell.Tab.1.left" timestamp="1578581743818">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1663" height="284" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1578581743818" />
-    <state width="1877" height="836" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1578501603065" />
-    <state width="1663" height="284" key="GridCell.Tab.1.right" timestamp="1578581743818">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1663" height="284" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1578581743818" />
-    <state width="1877" height="836" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1578501603065" />
-    <state width="1663" height="284" key="GridCell.Tab.2.bottom" timestamp="1578581743819">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1663" height="284" key="GridCell.Tab.2.bottom/0.0.1707.920@0.0.1707.920" timestamp="1578581743819" />
-    <state width="1877" height="286" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1576693084779" />
-    <state width="1663" height="284" key="GridCell.Tab.2.center" timestamp="1578581743818">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1663" height="284" key="GridCell.Tab.2.center/0.0.1707.920@0.0.1707.920" timestamp="1578581743818" />
-    <state width="1877" height="286" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1576693084779" />
-    <state width="1663" height="284" key="GridCell.Tab.2.left" timestamp="1578581743818">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1663" height="284" key="GridCell.Tab.2.left/0.0.1707.920@0.0.1707.920" timestamp="1578581743818" />
-    <state width="1877" height="286" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1576693084779" />
-    <state width="1663" height="284" key="GridCell.Tab.2.right" timestamp="1578581743818">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1663" height="284" key="GridCell.Tab.2.right/0.0.1707.920@0.0.1707.920" timestamp="1578581743818" />
-    <state width="1877" height="286" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1576693084779" />
-    <state x="372" y="107" key="SettingsEditor" timestamp="1576684251766">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="372" y="107" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1576684251766" />
-    <state x="576" y="289" key="com.intellij.ide.util.TipDialog" timestamp="1578486387851">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="576" y="289" key="com.intellij.ide.util.TipDialog/0.0.1707.920@0.0.1707.920" timestamp="1578486387851" />
   </component>
 </project>
