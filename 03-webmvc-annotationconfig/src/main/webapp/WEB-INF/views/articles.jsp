@@ -15,7 +15,7 @@
 	<spring:url value="/css/main.css" var="springCss" />
 	<link href="${springCss}" rel="stylesheet" />
 	 -->
-	<c:url value="/resources/css/main.css" var="mainCss" />
+	<c:url value="/static/css/main.css" var="mainCss" />
 	<link href="${mainCss}" rel="stylesheet" />
 
 </head>

@@ -10,45 +10,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80bbdc10-2998-4229-bf0a-b5903d1807d5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-spring-core-lab15/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core-lab15/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/03-webmvc-annotationconfig.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.gradle/6.0.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.gradle/6.0.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.gradle/6.0.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.gradle/6.0.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.gradle/6.0.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.gradle/6.0.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.gradle/6.0.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.gradle/6.0.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.gradle/6.0.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.gradle/6.0.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/iproduct/spring/webmvc/config/SpringWebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/iproduct/spring/webmvc/config/SpringWebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/iproduct/spring/webmvc/initializer/ArticlesWebInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/iproduct/spring/webmvc/initializer/ArticlesWebInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iproduct/spring/webmvc/config/SpringWebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iproduct/spring/webmvc/config/SpringWebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iproduct/spring/webmvc/initializer/ArticlesWebInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iproduct/spring/webmvc/initializer/ArticlesWebInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/articles.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/articles.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/restmvc/exception/InvalidEntityException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/restmvc/exception/InvalidEntityException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/restmvc/exception/NonexisitngEntityException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/restmvc/exception/NonexisitngEntityException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/restmvc/model/ErrorResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/restmvc/model/ErrorResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/ServletInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/ServletInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/WebmvcThymeleafApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/WebmvcThymeleafApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/config/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/dao/UsersRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/dao/UsersRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/ArticlesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/ArticlesService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/ArticlesServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/ArticlesServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/UsersService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/UsersService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/UsersServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/UsersServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/exception/UnauthorisedModificationException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/exception/UnauthorisedModificationException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/init/DataInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/init/DataInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/model/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/model/Article.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/web/ArticleControllerAdvice.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/web/ArticleControllerAdvice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/web/ArticlesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/web/ArticlesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/web/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/web/UsersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlannotationconfig/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlannotationconfig/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-xmlconfig/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-xmlconfig/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-webmvc-rest-lab15/src/main/java/course/spring/rest/init/DataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05-webmvc-rest-lab15/src/main/java/course/spring/rest/init/DataInitializer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +63,21 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="03-webmvc-annotationconfig" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="03-webmvc-annotationconfig" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="03-webmvc-annotationconfig" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="03-webmvc-annotationconfig" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
             <select />
@@ -113,20 +116,23 @@
     <option name="height" value="1233" />
   </component>
   <component name="ProjectId" id="1kn5Qi1aYgCLb9MCV3DVuWdjLEs" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="abbreviatePackageNames" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561038283647" />
     <property name="go.formatter.settings.were.checked" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../03-webmvc-demo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15728477" />
@@ -148,7 +154,7 @@
       <recent name="D:\CourseSpring\git\course-spring5\06-webmvc-annotationconfig\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.71">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.55">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -187,6 +193,27 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="03-webmvc-annotationconfig [appRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="appRun" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="03-webmvc-annotationconfig [appStart]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -199,6 +226,27 @@
         <option name="taskNames">
           <list>
             <option value="appStart" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="03-webmvc-annotationconfig [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -245,7 +293,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 9.0.71" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.71" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.55" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.71" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/mvc/articles" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -335,15 +383,19 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.03-webmvc-annotationconfig [jettyRun]" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.71" />
       <item itemvalue="Gradle.03-webmvc-annotationconfig [appStart]" />
       <item itemvalue="Gradle.03-webmvc-annotationconfig [appRunWar]" />
+      <item itemvalue="Gradle.03-webmvc-annotationconfig [dependencies]" />
+      <item itemvalue="Gradle.03-webmvc-annotationconfig [appRun]" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.55" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.03-webmvc-annotationconfig [appRunWar]" />
-        <item itemvalue="Gradle.03-webmvc-annotationconfig [appStart]" />
         <item itemvalue="Gradle.03-webmvc-annotationconfig [jettyRun]" />
+        <item itemvalue="Gradle.03-webmvc-annotationconfig [appRunWar]" />
+        <item itemvalue="Gradle.03-webmvc-annotationconfig [appRun]" />
+        <item itemvalue="Gradle.03-webmvc-annotationconfig [dependencies]" />
+        <item itemvalue="Gradle.03-webmvc-annotationconfig [appStart]" />
       </list>
     </recent_temporary>
   </component>
@@ -370,6 +422,7 @@
       <workItem from="1606326553244" duration="1317000" />
       <workItem from="1625728405479" duration="216000" />
       <workItem from="1637172673963" duration="3350000" />
+      <workItem from="1637179528736" duration="3087000" />
     </task>
     <task id="LOCAL-00001" summary="adding simple form with @ModelAttribute handling">
       <created>1526126970482</created>
@@ -399,6 +452,7 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="adding simple form with @ModelAttribute handling" />
     <MESSAGE value="SimpleDateFormat extended with time" />
     <MESSAGE value="project updated" />
