@@ -4,6 +4,7 @@ import course.spring.exception.EntityNotFoundException;
 import course.spring.rest.dao.ArticleRepository;
 import course.spring.rest.model.Article;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
@@ -29,6 +30,7 @@ public class ArticlesController {
     }
 
     @PostMapping
+//    @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Article> addArticle(@RequestBody Article article) {
         Article created = articleRepo.insert(article);
         return ResponseEntity.created(

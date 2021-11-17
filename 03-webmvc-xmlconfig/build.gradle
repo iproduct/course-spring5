@@ -6,7 +6,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'org.gretty:gretty:+'
+        classpath 'org.akhikhl.gretty:gretty:+'
     }
 }
 
@@ -16,7 +16,7 @@ repositories {
     // maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local' }
 }
 
-apply plugin: 'org.gretty'
+apply plugin: 'org.akhikhl.gretty'
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'war' // optional if you use spring-boot
@@ -44,8 +44,8 @@ repositories {
 
 dependencies {
     compile 'ch.qos.logback:logback-classic:1.2.3'
-    compile ('org.springframework:spring-webmvc:5.2.9.RELEASE')
-//    compile 'org.gretty:gretty-runner-tomcat9:3.0.3'
+    compile ('org.springframework:spring-webmvc:5.3.12')
+    compile 'org.gretty:gretty-runner-tomcat9:3.0.7'
     compile ('javax.servlet:jstl:1.2')
     compile ('org.webjars:bootstrap:3.3.7-1')
     compile ('org.webjars:jquery:3.1.1')
@@ -56,8 +56,8 @@ dependencies {
 // Don't use Jetty9, even it's a servlet 3.0+ container,
 // but not support non-jar WebApplicationInitializer scanning.
 // It will cause "No Spring WebApplicationInitializer types detected on classpath"
-gretty {
+gretty{
     httpPort = 8080
     contextPath = 'mvc'
-    servletContainer = 'tomcat9' //tomcat7 or tomcat8
+    servletContainer = 'jetty9'
 }
