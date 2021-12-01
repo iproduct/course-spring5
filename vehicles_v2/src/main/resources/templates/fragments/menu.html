@@ -1,0 +1,62 @@
+<div th:fragment="menu" xmlns:th="http://www.thymeleaf.org">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" th:href="@{/}"><img th:src="@{/img/car.png}" class="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto col-12 justify-content-between">
+                <li class="nav-item" th:classappend="${#request.getServletPath() == '/brands'}? 'active'">
+                    <a class="nav-link" th:href="@{/brands}">All Brands</a>
+                </li>
+<!--                <li class="nav-item" th:classappend="${#request.getServletPath() == '/brands/add'}? 'active'">-->
+<!--                    <a class="nav-link" th:href="@{/}">Add Brand</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item" th:classappend="${#request.getServletPath() == '/brands/model/add'}? 'active'">-->
+<!--                    <a class="nav-link" th:href="@{/}">Add Model</a>-->
+<!--                </li>-->
+                <li class="nav-item" th:classappend="${#request.getServletPath() == '/offers/add'}? 'active'">
+                    <a class="nav-link" th:href="@{/offers/add}">Add Offer</a>
+                </li>
+                <li class="nav-item" th:classappend="${#request.getServletPath() == '/offers'}? 'active'">
+                    <a class="nav-link" th:href="@{/offers}">All Offers</a>
+                </li>
+                <li class="nav-item" th:classappend="${#request.getServletPath() == '/offers/favs'}? 'active'">
+                    <a class="nav-link" th:href="@{/offers/favs}">Favourites</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" th:href="@{/}" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" th:href="@{/}">Action</a>
+                        <a class="dropdown-item" th:href="@{/}">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" th:href="@{/}">Something else here</a>
+                    </div>
+                </li>
+                <li th:if="${session.user}" class="nav-item" th:classappend="${#request.getServletPath() == '/auth/logaout'}? 'active'">
+                   <div class="form-inline my-2 my-lg-0 border px-3">
+                        <div class="logged-user" th:text="|Wellcome, ${session.user.firstName}|" />
+                        <a class="nav-link" th:href="@{/auth/logout}">Logout</a>
+                   </div>
+                </li>
+                <li th:unless="${session.user}" class="nav-item" th:classappend="${#request.getServletPath() == '/auth/register'}? 'active'">
+                    <a class="nav-link" th:href="@{/auth/register}">Register</a>
+                </li>
+                <li th:unless="${session.user}" class="nav-item" th:classappend="${#request.getServletPath() == '/auth/login'}? 'active'">
+                    <a class="nav-link" th:href="@{/auth/login}">Login</a>
+                </li>
+<!--                <li>-->
+<!--                    <form class="form-inline my-2 my-lg-0">-->
+<!--                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+<!--                    </form>-->
+<!--                </li>-->
+            </ul>
+        </div>
+    </nav>
+</div>

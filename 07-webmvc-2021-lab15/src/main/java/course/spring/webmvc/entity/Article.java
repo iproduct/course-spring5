@@ -1,7 +1,9 @@
 package course.spring.webmvc.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -29,6 +31,8 @@ public class Article {
     private String content;
     @Pattern(regexp = "[0-9a-f]{24}")
     private String authorId;
+    @Transient
+    private String authorName;
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private LocalDateTime created = LocalDateTime.now();
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)

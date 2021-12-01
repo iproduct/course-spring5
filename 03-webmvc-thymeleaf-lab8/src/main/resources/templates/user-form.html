@@ -10,7 +10,7 @@
             <div th:if="${user.id} != null" class="form-group row">
                 <label path="id" class="col-sm-2 col-form-label">ID</label>
                 <div class="col-sm-10">
-                    <input type="text" th:value="*{id}" id="id" name="id"
+                    <input type="text" th:field="*{id}"
                            class="form-control" title="User Id" readonly>
                 </div>
             </div>
@@ -18,7 +18,7 @@
             <div class="form-group row">
                 <label path="username" class="col-sm-2 col-form-label" th:text="#{lbl.username}"></label>
                 <div class="col-sm-10">
-                    <input type="text" th:value="*{username}" id="username" name="username"
+                    <input type="text" th:field="*{username}"
                        class="form-control" th:title="#{lbl.username}" th:errorclass="field-error" th:readonly="${user.id} != null">
                 </div>
             </div>
@@ -30,7 +30,7 @@
             <div class="form-group row">
                 <label path="password" class="col-sm-2 col-form-label" th:text="#{lbl.password}"></label>
                 <div class="col-sm-10">
-                    <input type="text" th:value="*{password}" id="password" name="password"
+                    <input type="text" th:field="*{password}"
                            class="form-control" th:title="#{lbl.password}" th:errorclass="field-error">
                 </div>
             </div>
@@ -42,7 +42,7 @@
             <div class="form-group row">
                 <label path="firstName" class="col-sm-2 col-form-label" th:text="#{lbl.firstName}"></label>
                 <div class="col-sm-10">
-                    <input type="text" th:value="*{firstName}" id="firstName" name="firstName"
+                    <input type="text" th:field="*{firstName}"
                            class="form-control" th:title="#{lbl.firstName}" th:errorclass="field-error">
                 </div>
             </div>
@@ -54,7 +54,7 @@
             <div class="form-group row">
                 <label path="lastName" class="col-sm-2 col-form-label" th:text="#{lbl.lastName}"></label>
                 <div class="col-sm-10">
-                    <input type="text" th:value="*{lastName}" id="lastName" name="lastName"
+                    <input type="text" th:field="*{lastName}"
                            class="form-control" th:title="#{lbl.lastName}" th:errorclass="field-error">
                 </div>
             </div>
@@ -66,7 +66,7 @@
             <div class="form-group row">
                 <label path="roles" class="col-sm-2 col-form-label" th:text="#{lbl.roles}"></label>
                 <div class="col-sm-10">
-                    <input type="text" th:value="*{roles}" id="roles" name="roles"
+                    <input type="text" th:field="*{roles}"
                            class="form-control" th:title="#{lbl.roles}" th:errorclass="field-error">
                 </div>
             </div>
@@ -78,7 +78,7 @@
             <div class="form-group row">
                 <label path="active" class="col-sm-2 col-form-label" th:text="#{lbl.active}"></label>
                 <div class="col-sm-10">
-                    <input type="text" th:value="*{active}" id="active" name="active"
+                    <input type="text" th:field="*{active}"
                            class="form-control" th:title="#{lbl.active}" th:errorclass="field-error">
                 </div>
             </div>
@@ -87,9 +87,9 @@
                 Incorrect active status
             </p>
 
-            <input type="hidden" th:value="*{pictureUrl}" id="pictureUrl" name="pictureUrl" title="User picture URL">
-            <input type="hidden" th:value="*{created}" id="created" name="created" title="User creation date and time">
-            <input type="hidden" th:value="*{modified}" id="modified" name="modified" title="User last modification date and time">
+            <input type="hidden" th:field="*{pictureUrl}" title="User picture URL">
+            <input type="hidden" th:field="*{created}" title="User creation date and time">
+            <input type="hidden" th:field="*{modified}" title="User last modification date and time">
 
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Picture</label>

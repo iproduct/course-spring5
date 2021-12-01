@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Spring MVC Blogs</h2>
+    <div class="container">
+        <h3>Articles List</h3>
+        <table class="article-table table table-striped">
+            <thead>
+            <th>Number</th>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Author</th>
+            <th>Created</th>
+            <th>Modified</th>
+            <th>Picture</th>
+            </thead>
+            <tbody>
+            <form method="post">
+                <tr th:each="row, rowStat : ${articles}">
+                    <td th:text="${rowStat.index + 1}"></td>
+                    <td th:text="${row.title}"></td>
+                    <td th:text="${row.content}"></td>
+                    <td th:text="${row.authorName}"></td>
+                    <td th:text="${row.created}"></td>
+                    <td th:text="${row.modified}"></td>
+                    <td>
+                        <button th:if="${loggedUser != null && (loggedUser.isInRole('ADMIN') || loggedUser.id == row.authorId)}"
+                                type="submit" class="btn btn-primary" name="edit" th:value="${row.id}"><i class="fas fa-edit"></i></button>
+                        <button th:if="${loggedUser != null && loggedUser.isInRole('ADMIN')}"
+                                type="submit" class="btn btn-danger" name="delete" th:value="${row.id}"><i class="fas fa-trash-alt"></i></button>
+                    </td>
+                </tr>
+            </form>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

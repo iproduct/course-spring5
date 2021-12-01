@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head('Auto Dealer Shop: All Offers')" />
+<body>
+<div th:replace="fragments/menu :: menu" />
+
+<div class="container">
+    <h2 class="text-center text-white mt-5">Auto Dealer Shop Offers</h2>
+    <!--        <div class="offer row mx-auto d-flex flex-row justify-content-center">-->
+    <div class="details-offer card col-md-6 mx-auto p-3">
+        <div class="details-card-img-top-wrapper">
+            <img class="details-card-img-top img-fluid" th:if="${offer.imageUrl}" th:src="${offer.imageUrl}" alt="Car image">
+        </div>
+        <div class="card-body pb-1">
+            <h5 class="card-title" th:text="|${offer.year} ${offer.model.brand.name} ${offer.model.name}|">Car brand</h5>
+        </div>
+        <ul class="offer-details list-group list-group-flush">
+            <li class="list-group-item">
+                <div class="card-text"><span th:text="'$' + ${#numbers.formatInteger(offer.price, 1)} + ' • ' + ${offer.mileage} +' km'"></span></div>
+                <div class="card-text"
+                     th:text="|${#strings.capitalize(#strings.toLowerCase(offer.engine))}, ${#strings.capitalize(#strings.toLowerCase(offer.transmission))} transmission|"></div>
+            </li>
+            <li class="list-group-item">
+                <div class="card-text" th:text="${offer.description}"></span></div>
+                <div class="card-text" th:text="|Offer created: ${#dates.format(offer.created, 'dd MMM, yyyy')}|"></div>
+            </li>
+        </ul>
+        <div class="details-card-body p-3">
+            <a class="btn btn-dark" th:href="@{/offers}">BACK</a>
+            <a class="btn btn-primary" th:href="@{/offers/favs/add/{offerId}(offerId=${offer.id})}">ADD TO FAVS</a>
+        </div>
+    </div>
+    <!--        </div>-->
+</div>
+
+<div  th:replace="fragments/foot :: foot" />
+</body>
+</html>

@@ -1,8 +1,10 @@
 package course.spring.webmvc.domain.impl;
 
 import course.spring.webmvc.dao.ArticleRepository;
+import course.spring.webmvc.dao.UserRepository;
 import course.spring.webmvc.domain.ArticleService;
 import course.spring.webmvc.entity.Article;
+import course.spring.webmvc.entity.User;
 import course.spring.webmvc.exception.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
@@ -15,29 +17,42 @@ import java.util.List;
 @Service
 public class ArticleServiceImpl implements ArticleService {
     private ArticleRepository articleRepo;
+    private UserRepository userRepo;
 
     @Autowired
-    public ArticleServiceImpl(ArticleRepository articleRepo) {
+    public ArticleServiceImpl(ArticleRepository articleRepo, UserRepository userRepository) {
         this.articleRepo = articleRepo;
+        this.userRepo = userRepository;
     }
 
     @Override
     public List<Article> findAll() {
-        return articleRepo.findAll();
+        List<Article> articles = articleRepo.findAll();
+        articles.forEach(article -> article.setAuthorName(
+                userRepo.findById(article.getAuthorId()).orElseGet(
+                        () ->new User("", "", "", "")).getName())
+        );
+        return articles;
     }
 
     @Override
     public Article findById(String articleId) {
-        return articleRepo.findById(articleId).orElseThrow(() ->
+        Article article = articleRepo.findById(articleId).orElseThrow(() ->
                 new EntityNotFoundException(
                         String.format("Article with ID=%s not found.", articleId)));
+        article.setAuthorName(userRepo.findById(article.getAuthorId()).orElseGet(
+                () ->new User("", "", "", "")).getName());
+        return article;
     }
 
     @Override
     public Article findByArticlename(String articlename) {
-        return articleRepo.findById(articlename).orElseThrow(() ->
+        Article article = articleRepo.findById(articlename).orElseThrow(() ->
                 new EntityNotFoundException(
                         String.format("Article '%s' not found.", articlename)));
+        article.setAuthorName(userRepo.findById(article.getAuthorId()).orElseGet(
+                () ->new User("", "", "", "")).getName());
+        return article;
     }
 
     @Override

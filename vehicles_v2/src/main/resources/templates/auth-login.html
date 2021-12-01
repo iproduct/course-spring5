@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head('Auto Dealer Shop: Add Offer')" />
+<body>
+    <div th:replace="fragments/menu :: menu" />
+
+    <div class="container">
+        <h2 class="text-center text-white">Login</h2>
+        <form method="POST" class="main-form mx-auto col-md-8 d-flex flex-column justify-content-center">
+            <div class="form-group">
+                <label for="username" class="text-white font-weight-bold">Username</label>
+                <input th:value="${username}" id="username" name="username" type="text" min="2" max="50" class="form-control"
+                       placeholder="Username" />
+            </div>
+            <div class="form-group">
+                <label for="password" class="text-white font-weight-bold">Password</label>
+                <input th:value="${password}" id="password" name="password" type="password" min="2" max="20" class="form-control"
+                       placeholder="Password"/>
+
+            </div>
+            <!--/*@thymesVar id="errors" type="String"*/-->
+            <p th:if="${errors}" class="errors alert alert-danger" th:text="${errors}">
+                Invalid username or password.
+            </p>
+
+            <div class="row">
+                <div class="col col-md-4">
+                    <div class="button-holder d-flex">
+                        <input type="submit" class="btn btn-info btn-lg" value="Submit Offer"/>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div  th:replace="fragments/foot :: foot" />
+</body>
+</html>

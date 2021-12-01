@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head('Auto Dealer Shop: Add Offer')" />
+<body>
+    <div th:replace="fragments/menu :: menu" />
+
+    <div class="container">
+        <h2 class="text-center text-white">Register</h2>
+        <form th:object="${user}" method="POST" class="main-form mx-auto col-md-8 d-flex flex-column justify-content-center">
+            <div class="row">
+                <div class="form-group col-md-6 mb-3">
+                    <label for="firstName" class="text-white font-weight-bold">First Name</label>
+                    <input th:field="*{firstName}" id="firstName" type="text" min="2" max="20" class="form-control"
+                           placeholder="First name" th:errorclass="field-error" />
+                    <p th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"
+                       class="errors alert alert-danger">
+                        First name is required.
+                    </p>
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                    <label for="lastName" class="text-white font-weight-bold">Last Name</label>
+                    <input th:field="*{lastName}" id="lastName" type="text" min="2" max="20" class="form-control"
+                           placeholder="First name" th:errorclass="field-error" />
+                    <p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"
+                       class="errors alert alert-danger">
+                        Last name is required.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 mb-3">
+                    <label for="username" class="text-white font-weight-bold">Username</label>
+                    <input th:field="*{username}" id="username" type="text" min="2" max="20" class="form-control"
+                           placeholder="Username" th:errorclass="field-error" />
+                    <p th:if="${#fields.hasErrors('username')}" th:errors="*{username}"
+                       class="errors alert alert-danger">
+                        Username is required.
+                    </p>
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                    <label for="password" class="text-white font-weight-bold">Password</label>
+                    <input th:field="*{password}" id="password" type="text" min="2" max="20" class="form-control"
+                           placeholder="Password" th:errorclass="field-error" />
+                    <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}"
+                       class="errors alert alert-danger">
+                        Password is required.
+                    </p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="text-center text-white font-weight-bold" for="roles">Engine</label>
+                <select th:field="*{roles}" id="roles" class="form-control" multiple th:errorclass="field-error">
+                    <option th:each="role : ${T(demos.spring.vehicles.model.Role).values()}" th:value="${role}"
+                            th:text="${role}" th:selected="${#sets.contains(user.roles, role)}">
+                        User roles
+                    </option>
+                </select>
+                <p th:if="${#fields.hasErrors('roles')}" th:errors="*{roles}"
+                   class="errors alert alert-danger">
+                    Selecting a role is required.
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="col col-md-4">
+                    <div class="button-holder d-flex">
+                        <input type="submit" class="btn btn-info btn-lg" value="Submit Offer"/>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div  th:replace="fragments/foot :: foot" />
+</body>
+</html>

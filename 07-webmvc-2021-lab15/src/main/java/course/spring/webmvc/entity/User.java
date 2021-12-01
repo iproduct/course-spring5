@@ -41,7 +41,7 @@ public class User implements UserDetails {
     @Pattern(regexp = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\\\S+$).{8,}")
     private String password;
     private String roles = "AUTHOR";
-    private boolean active;
+    private boolean active = true;
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private LocalDateTime created = LocalDateTime.now();
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
@@ -73,6 +73,10 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return isActive();
+    }
+
+    public String getName() {
+        return firstName + " " + lastName;
     }
 }
 

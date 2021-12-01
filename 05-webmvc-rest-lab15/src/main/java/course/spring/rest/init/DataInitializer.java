@@ -19,6 +19,8 @@ public class DataInitializer implements CommandLineRunner {
     private ArticleRepository articleRepository;
     @Override
     public void run(String... args) throws Exception {
-        SAMPLE_ARTICLES.forEach(articleRepository::insert);
+        if(articleRepository.count() == 0) {
+            SAMPLE_ARTICLES.forEach(articleRepository::insert);
+        }
     }
 }

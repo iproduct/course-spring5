@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head('Auto Dealer Shop: Brands')" />
+<body>
+    <div th:replace="fragments/menu :: menu" />
+
+    <div class="container">
+        <h2 class="text-center text-white m-3">Auto Dealer Shop Offers</h2>
+        <div class='row mb-4 d-flex justify-content-around'>
+            <div th:each="brand, brandStat: ${brands}" class="brand-section col-md-5 mr-auto d-flex flex-column">
+                <h2>Car brand:
+                    <span th:text="${brand.name}"/>
+                </h2>
+                <div>Models:
+                    <table>
+                        <tr>
+                            <th>No</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Start Year</th>
+                            <th>End Year</th>
+                            <th>Picture</th>
+                        </tr>
+                        <tr th:each="model, modelStat: ${brand.models}">
+                            <th th:text="${modelStat.index + 1}">No</th>
+                            <th th:text="${model.name}">Name</th>
+                            <th th:text="${model.category}">Category</th>
+                            <th th:text="${model.startYear}">Start Year</th>
+                            <th th:text="${model.endYear}">End Year</th>
+                            <th><img th:src="${model.imageUrl}" class="img-thumbnail rounded"></th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div  th:replace="fragments/foot :: foot" />
+</body>
+</html>
