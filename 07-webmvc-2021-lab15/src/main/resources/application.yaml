@@ -1,7 +1,7 @@
 spring:
   data:
     mongodb:
-      database: articles
+      database: webmvc_articles_2021
       host: localhost
       port: 27017
 management:
