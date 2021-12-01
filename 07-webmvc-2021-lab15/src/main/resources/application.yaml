@@ -1,0 +1,24 @@
+spring:
+  data:
+    mongodb:
+      database: articles
+      host: localhost
+      port: 27017
+management:
+  info:
+    env:
+      enabled: true
+    java:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: info, health, httptrace, metrics, threaddump, heapdump, shutdown, beans, logging
+  endpoint:
+    health:
+      show-details: always
+info:
+  app:
+    name: Web MVC Blogs
+    descritpion: Spring Web MVC demo using Spring Boot, Spring Data MongoDB, Sping Security and Domain Driven Design
+    version: 0.1.0.SNAPSHOT
