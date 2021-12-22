@@ -5,7 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0001d11-907d-4bf0-af89-4f1ebef4eac9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/.idea/dataSources/68d97674-fe15-482a-9e9a-7450d63b58f5/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/.idea/dataSources/68d97674-fe15-482a-9e9a-7450d63b58f5/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/.idea/dataSources/68d97674-fe15-482a-9e9a-7450d63b58f5/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/.idea/jpa-buddy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/restmvc/exception/InvalidEntityException.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/restmvc/exception/InvalidEntityException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/restmvc/exception/NonexisitngEntityException.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/restmvc/exception/NonexisitngEntityException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/restmvc/model/ErrorResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/restmvc/model/ErrorResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/ServletInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/ServletInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/WebmvcThymeleafApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/WebmvcThymeleafApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/dao/UsersRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/dao/UsersRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/domain/ArticlesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/domain/ArticlesService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/domain/ArticlesServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/domain/ArticlesServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/domain/UsersService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/domain/UsersService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/domain/UsersServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/domain/UsersServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/exception/UnauthorisedModificationException.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/exception/UnauthorisedModificationException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/init/DataInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/init/DataInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/model/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/model/Article.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/web/ArticleControllerAdvice.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/web/ArticleControllerAdvice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/web/ArticlesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/web/ArticlesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/web/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/course/spring/webmvc/web/UsersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/article-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/article-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-jpa-codefirst-lab/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-jpa-codefirst-lab/.idea/dataSources/68d97674-fe15-482a-9e9a-7450d63b58f5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/.idea/dataSources/68d97674-fe15-482a-9e9a-7450d63b58f5.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,8 +105,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
   <component name="KotlinMultiplatform">
     <allAvailableExecutables />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -103,6 +137,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="go.format.on.save.advertiser.fired" value="true" />
     <property name="go.formatter.settings.were.checked" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
@@ -205,6 +240,7 @@
       <workItem from="1637770743784" duration="4470000" />
       <workItem from="1638143482840" duration="8408000" />
       <workItem from="1638375227219" duration="3371000" />
+      <workItem from="1639595778388" duration="670000" />
     </task>
     <task id="LOCAL-00001" summary="demos updated">
       <created>1638388807049</created>
@@ -223,6 +259,9 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="demos updated" />
     <option name="LAST_COMMIT_MESSAGE" value="demos updated" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

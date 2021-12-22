@@ -43,12 +43,15 @@ public class DataInitializer implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         long countBefore = articleService.getArticlesCount();
+        log.info(">>>BATCH CREATING ARTICLES - Articles count before: {}", countBefore);
         if(countBefore == 0) {
             try {
                 List<Article> created = articleService.createArticlesBatch(mockArticles);
                 log.info(">>> Articles batch created: {}", created);
             } catch (ConstraintViolationException ex) {
                 log.error(">>> Constraint violation inserting articles: {} - {}", mockArticles, ex.getMessage());
+            } catch (Exception ex) {
+                log.error(">>> Exception inserting articles: {} - {}", mockArticles, ex.getMessage());
             }
             long countAfter = articleService.getArticlesCount();
             log.info(">>> Total count of articles created: {}", countAfter - countBefore);
@@ -75,8 +78,8 @@ public class DataInitializer implements CommandLineRunner {
 
         if (usersCount == 0) {
             List<User> users = Arrays.asList(new User[] {
-                new User("admin", "admin", "DEFAULT", "ADMIN", "ROLE_ADMIN"),
-                new User("ivan", "ivan", "Ivan", "Petrov", "ROLE_USER")
+                new User("admin", "admin", "DEFAULT", "ADMIN", "ADMIN"),
+                new User("ivan", "ivan", "Ivan", "Petrov", "USER")
             });
 
             users.stream().forEach(user -> userService.createUser(user));

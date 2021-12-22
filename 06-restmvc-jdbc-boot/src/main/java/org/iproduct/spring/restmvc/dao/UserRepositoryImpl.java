@@ -29,6 +29,9 @@ public class UserRepositoryImpl implements UserRepository {
     public static final String INSERT_SQL =
             "INSERT INTO users(id, username, password, fname, lname, roles, active, created, updated) VALUES " +
                     "(DEFAULT, :username, :password, :fname, :lname, :roles, :active, :created, :updated)";
+    public static final String UPDATE_SQL ="update users set username = :username, password = :password, fname = :fname, lname = :lname, " +
+            "roles = :roles, active = :active, created = :created, updated = :updated " +
+            "where id = :id";
 
     @Autowired
     private NamedParameterJdbcTemplate jdbcTemplate;
@@ -87,11 +90,7 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public User save(User user) {
         SqlParameterSource namedParameters = new BeanPropertySqlParameterSource(user);
-        int count = this.jdbcTemplate.update(
-                "update users set username = :username, password = :password, fname = :fname, lname = :lname, " +
-                    "roles = :roles, active = :active, created = :created, updated = :updated " +
-                    "where id = :id",
-                namedParameters);
+        int count = this.jdbcTemplate.update(UPDATE_SQL, namedParameters);
         log.info("User updated: {}", user);
         return user;
     }

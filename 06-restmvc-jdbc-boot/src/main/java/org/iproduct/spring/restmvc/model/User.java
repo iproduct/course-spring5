@@ -1,9 +1,6 @@
 package org.iproduct.spring.restmvc.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.*;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NonNull;
@@ -24,8 +21,8 @@ import static com.fasterxml.jackson.annotation.JsonProperty.Access.WRITE_ONLY;
 
 
 @JsonIgnoreProperties({"authorities", "accountNonExpired", "accountNonLocked", "credentialsNonExpired", "enabled"})
+//@JsonPropertyOrder(alphabetic=true)
 @Data
-@Builder
 public class User implements UserDetails {
 //    @Id
     private long id;
@@ -38,6 +35,7 @@ public class User implements UserDetails {
     @NotNull
     @Length(min = 4, max = 80)
     @NonNull
+    @JsonProperty(access = WRITE_ONLY)
     private String password;
 
     @NotNull
@@ -113,6 +111,7 @@ public class User implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Arrays.asList(roles.split("\\s*,\\s*")).stream()
+                .map(rolename -> "ROLE_" + rolename)
                 .map(SimpleGrantedAuthority::new)
                 .collect(Collectors.toList());
     }

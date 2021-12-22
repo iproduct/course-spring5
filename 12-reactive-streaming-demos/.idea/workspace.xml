@@ -5,7 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f7f8968-8f8b-4bb3-8491-8e2dd76e61f9" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/.idea/dataSources/68d97674-fe15-482a-9e9a-7450d63b58f5/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/.idea/dataSources/68d97674-fe15-482a-9e9a-7450d63b58f5/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/.idea/dataSources/68d97674-fe15-482a-9e9a-7450d63b58f5/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-ml-h2o-react-client/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-ml-h2o-react-client/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/restmvc/exception/InvalidEntityException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/restmvc/exception/InvalidEntityException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/restmvc/exception/NonexisitngEntityException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/restmvc/exception/NonexisitngEntityException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/restmvc/model/ErrorResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/restmvc/model/ErrorResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/ServletInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/ServletInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/WebmvcThymeleafApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/WebmvcThymeleafApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/dao/UsersRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/dao/UsersRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/ArticlesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/ArticlesService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/ArticlesServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/ArticlesServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/UsersService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/UsersService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/UsersServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/UsersServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/exception/UnauthorisedModificationException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/exception/UnauthorisedModificationException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/init/DataInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/init/DataInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/model/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/model/Article.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/web/ArticleControllerAdvice.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/web/ArticleControllerAdvice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/web/ArticlesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/web/ArticlesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/web/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/web/UsersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/src/main/resources/templates/article-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/../03-webmvc-thymeleaf-lab8/src/main/resources/templates/article-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-jpa-codefirst-lab/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-jpa-codefirst-lab/.idea/dataSources/68d97674-fe15-482a-9e9a-7450d63b58f5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/.idea/dataSources/68d97674-fe15-482a-9e9a-7450d63b58f5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/quotes.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/quotes.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +79,9 @@
   <component name="KotlinMultiplatform">
     <allAvailableExecutables />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
@@ -57,6 +96,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561472109311" />
+    <property name="go.format.on.save.advertiser.fired" value="true" />
     <property name="go.formatter.settings.were.checked" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../CourseDML/git/course-ml/10-ml-h2o/libs/x64/opencv_java450.dll" />
@@ -169,6 +209,11 @@
       <workItem from="1621411793810" duration="192000" />
       <workItem from="1633533073277" duration="673000" />
       <workItem from="1635066821602" duration="651000" />
+      <workItem from="1639651003679" duration="834000" />
+      <workItem from="1639661019849" duration="637000" />
+      <workItem from="1639662656509" duration="800000" />
+      <workItem from="1639664593036" duration="2120000" />
+      <workItem from="1639674430846" duration="17000" />
     </task>
     <task id="LOCAL-00001" summary="reactive webflux demo - user management with security added">
       <created>1527399441835</created>
@@ -186,15 +231,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="reactive webflux demo - user management with security added" />
     <option name="LAST_COMMIT_MESSAGE" value="reactive webflux demo - user management with security added" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="312" y="0" key="#Project_Structure" timestamp="1633539727902">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="312" y="0" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1633539727902" />
-    <state x="336" y="77" key="SettingsEditor" timestamp="1633539751151">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="336" y="77" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1633539751151" />
   </component>
 </project>

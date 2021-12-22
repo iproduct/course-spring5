@@ -32,6 +32,7 @@ import java.util.stream.Collectors;
 @Primary
 @Slf4j
 @Validated
+@Transactional
 public class ArticleServiceImpl implements ArticleService {
 
     @Autowired
@@ -53,6 +54,7 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public Collection<Article> getArticles() {
         return repo.findAll();
     }
@@ -85,6 +87,7 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public long getArticlesCount() {
         return repo.count();
     }
@@ -124,7 +127,7 @@ public class ArticleServiceImpl implements ArticleService {
 //        });
 //    }
 
-//    //    Programmatic transaction
+    //    Programmatic transaction
 //    public List<Article> createArticlesBatch(List<Article> articles) {
 //        return transactionTemplate.execute(status -> {
 //                List<Article> created = articles.stream()
@@ -172,7 +175,7 @@ public class ArticleServiceImpl implements ArticleService {
 
     @TransactionalEventListener
     public void handleArticleCreatedTransactionCommit(ArticleCreationEvent creationEvent) {
-        log.info(">>> Transaction COMMIT for article: {}", creationEvent.getArticle());
+        log.info(">>> Transaction COMMITED for article: {}", creationEvent.getArticle());
     }
 
     @TransactionalEventListener(phase = TransactionPhase.AFTER_ROLLBACK)

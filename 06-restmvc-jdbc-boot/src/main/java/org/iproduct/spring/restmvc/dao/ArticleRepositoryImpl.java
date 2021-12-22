@@ -30,6 +30,7 @@ import java.util.stream.Collectors;
 @Repository
 @Validated
 @Slf4j
+@Transactional
 public class ArticleRepositoryImpl implements ArticleRepository {
     public static final String INSERT_SQL =
             "INSERT INTO articles(id, title, content, author_id, picture_url, created, updated) VALUES (DEFAULT, ?, ?, ?, ?, ?, ?)";
@@ -78,7 +79,7 @@ public class ArticleRepositoryImpl implements ArticleRepository {
             }
         }, keyHolder);
         article.setId(keyHolder.getKey().longValue());
-        log.info("Article created: {}", article);
+        log.info("Article attempted to be created: {}", article);
         return article;
     }
 
