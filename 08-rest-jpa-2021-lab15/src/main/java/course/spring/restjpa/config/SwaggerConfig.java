@@ -1,4 +1,4 @@
-package org.iproduct.spring.restmvc.config;
+package course.spring.restjpa.config;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;

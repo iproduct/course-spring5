@@ -1,0 +1,52 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring-jpa-fmi-2021?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  #JPA Properties
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        #spring.jpa.show-sql=true
+        format_sql: TRUE
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, mappings, metrics, threaddump, heapdump, shutdown, beans, logfile, loggers
+  endpoint:
+    health:
+      show-details: always
+  info:
+    defaults:
+      enabled: true
+    java:
+      enabled: true
+    build:
+      enabled: true
+    env:
+      enabled: true
+info:
+  app:
+    encoding: "UTF-8"
+    name: REST MVC Demo
+    description: REST MVC demo with Spring Boot and Spring Data JPA
+    version: 1.0-SNAPSHOT
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        test:
+          context:
+            support: INFO
