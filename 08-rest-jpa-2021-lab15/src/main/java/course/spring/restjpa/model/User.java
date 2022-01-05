@@ -11,21 +11,26 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import static com.fasterxml.jackson.annotation.JsonProperty.Access.WRITE_ONLY;
 
-
+@Entity
+@Table(name = "users")
 @JsonIgnoreProperties({"authorities", "accountNonExpired", "accountNonLocked", "credentialsNonExpired", "enabled"})
 //@JsonPropertyOrder(alphabetic=true)
 @Data
 public class User implements UserDetails {
-//    @Id
-    private long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @NotNull
     @Length(min = 3, max = 30)
@@ -48,6 +53,9 @@ public class User implements UserDetails {
     @NonNull
     private String lname;
 
+    @OneToMany(mappedBy = "author")
+    private List<Article> articles = new ArrayList<>();
+
     @NonNull
     @Builder.Default
     private String roles;
@@ -59,7 +67,7 @@ public class User implements UserDetails {
     private LocalDateTime created = LocalDateTime.now();
 
     @JsonFormat(pattern = "uuuu-MM-dd HH:mm:ss")
-    private LocalDateTime updated = LocalDateTime.now();
+    private LocalDateTime modified = LocalDateTime.now();
 
     public User(long id,
                 @NotNull @Length(min = 3, max = 30) String username,
@@ -78,7 +86,7 @@ public class User implements UserDetails {
         this.roles = roles;
         this.active = active;
         this.created = created;
-        this.updated = updated;
+        this.modified = updated;
     }
 
     public User() {
