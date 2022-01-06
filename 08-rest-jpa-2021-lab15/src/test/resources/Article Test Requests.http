@@ -1,0 +1,32 @@
+###
+
+GET http://localhost:8080/api/articles
+Accept: application/json
+
+###
+
+GET http://localhost:8080/api/articles/9
+Accept: application/json
+
+###
+POST http://localhost:8080/api/articles
+Content-Type: application/json
+
+{
+  "title": "Spring Security",
+  "content": "Easy to integrate ...",
+  "tags": ["spring", "security"]
+}
+
+###
+
+POST http://localhost:8080/api/articles
+Content-Type: application/json
+
+{
+  "title": "S",
+  "content": "Easy to integrate ...",
+  "tags": ["spring", "security"]
+}
+
+###

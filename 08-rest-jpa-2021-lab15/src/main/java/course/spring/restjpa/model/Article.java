@@ -15,7 +15,6 @@ import java.util.List;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @AllArgsConstructor
-@Builder
 public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,7 +34,7 @@ public class Article {
     @Length(min=3, max=256)
     private String pictureUrl;
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     private List<String> tags = new ArrayList();
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "uuuu-MM-dd HH:mm:ss")
@@ -43,4 +42,11 @@ public class Article {
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "uuuu-MM-dd HH:mm:ss")
     private LocalDateTime modified = LocalDateTime.now();
+
+    public Article(@NonNull String title, @NonNull String content, List<String> tags) {
+        this.title = title;
+        this.content = content;
+        this.author = author;
+        this.tags = tags;
+    }
 }

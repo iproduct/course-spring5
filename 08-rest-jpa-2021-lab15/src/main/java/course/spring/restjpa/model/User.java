@@ -1,11 +1,10 @@
 package course.spring.restjpa.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NonNull;
+import lombok.*;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -27,6 +26,9 @@ import static com.fasterxml.jackson.annotation.JsonProperty.Access.WRITE_ONLY;
 @JsonIgnoreProperties({"authorities", "accountNonExpired", "accountNonLocked", "credentialsNonExpired", "enabled"})
 //@JsonPropertyOrder(alphabetic=true)
 @Data
+@NoArgsConstructor
+@RequiredArgsConstructor
+@AllArgsConstructor
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,7 +40,6 @@ public class User implements UserDetails {
     private String username;
 
     @NotNull
-    @Length(min = 4, max = 80)
     @NonNull
     @JsonProperty(access = WRITE_ONLY)
     private String password;
@@ -54,13 +55,12 @@ public class User implements UserDetails {
     private String lname;
 
     @OneToMany(mappedBy = "author")
+    @JsonIgnore
+    @ToString.Exclude
     private List<Article> articles = new ArrayList<>();
 
-    @NonNull
-    @Builder.Default
-    private String roles;
+    private String roles = "AUTHOR";
 
-    @Builder.Default
     private boolean active = true;
 
     @JsonFormat(pattern = "uuuu-MM-dd HH:mm:ss")
@@ -89,9 +89,6 @@ public class User implements UserDetails {
         this.modified = updated;
     }
 
-    public User() {
-    }
-
     @java.beans.ConstructorProperties({"username", "password", "fname", "lname", "roles"})
     public User(@NotNull @Length(min = 3, max = 30) String username,
                 @NotNull @Length(min = 4, max = 80) String password,
@@ -106,17 +103,7 @@ public class User implements UserDetails {
     }
 
     @Override
-    public String getPassword() {
-        return password;
-    }
-
-    @JsonProperty(access=WRITE_ONLY)
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-
-    @Override
+    @Transient
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Arrays.asList(roles.split("\\s*,\\s*")).stream()
                 .map(rolename -> "ROLE_" + rolename)
@@ -125,26 +112,25 @@ public class User implements UserDetails {
     }
 
     @Override
-    public String getUsername() {
-        return username;
-    }
-
-    @Override
+    @Transient
     public boolean isAccountNonExpired() {
         return active;
     }
 
     @Override
+    @Transient
     public boolean isAccountNonLocked() {
         return active;
     }
 
     @Override
+    @Transient
     public boolean isCredentialsNonExpired() {
         return active;
     }
 
     @Override
+    @Transient
     public boolean isEnabled() {
         return active;
     }
