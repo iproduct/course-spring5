@@ -15,7 +15,7 @@ import javax.validation.constraints.Size;
 public class Credentials {
     @NotNull
     @Size(min=5, max=20)
-    private User username;
+    private String username;
     @NotNull
     @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$")
     private String password;

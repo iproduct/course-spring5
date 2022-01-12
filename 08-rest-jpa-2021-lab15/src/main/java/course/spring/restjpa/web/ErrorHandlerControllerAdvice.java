@@ -6,6 +6,7 @@ import course.spring.restjpa.exception.UnauthorisedException;
 import course.spring.restjpa.model.ErrorResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.weaver.ast.Not;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.AuthenticationException;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import java.nio.file.AccessDeniedException;
+import java.sql.SQLIntegrityConstraintViolationException;
 
 @ControllerAdvice
 @Slf4j
@@ -36,6 +38,19 @@ public class ErrorHandlerControllerAdvice {
         return ResponseEntity.badRequest().body(
                 new ErrorResponse(HttpStatus.BAD_REQUEST.value(), ex.getMessage())
         );
+    }
+    @ExceptionHandler({DataIntegrityViolationException.class})
+    public ResponseEntity<ErrorResponse> handleMethodArgNotValidEntityData(Throwable ex) throws Throwable {
+        while(!(ex instanceof SQLIntegrityConstraintViolationException) && ex.getCause() != null) {
+            ex = ex.getCause();
+        }
+        if(ex instanceof SQLIntegrityConstraintViolationException) {
+            return ResponseEntity.badRequest().body(
+                    new ErrorResponse(HttpStatus.BAD_REQUEST.value(), "Invalid constraint: " + ex.getMessage())
+            );
+        } else {
+            throw ex;
+        }
     }
 
     @ExceptionHandler({AuthenticationException.class, UnauthorisedException.class})

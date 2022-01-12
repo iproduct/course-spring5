@@ -38,6 +38,7 @@ public class User implements UserDetails {
     @NotNull
     @Length(min = 5, max = 20)
     @NonNull
+    @Column(unique = true)
     private String username;
 
     @NotNull

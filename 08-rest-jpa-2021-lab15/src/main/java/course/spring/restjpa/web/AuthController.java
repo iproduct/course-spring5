@@ -4,6 +4,7 @@ import course.spring.restjpa.exception.InvalidEntityDataException;
 import course.spring.restjpa.entity.User;
 import course.spring.restjpa.model.Credentials;
 import course.spring.restjpa.model.LoginResponse;
+import course.spring.restjpa.service.JwtUtils;
 import course.spring.restjpa.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -26,6 +27,8 @@ public class AuthController {
     private UserService userService;
     @Autowired
     private AuthenticationManager authenticationManager;
+    @Autowired
+    private JwtUtils jwtUtils;
 
     @PostMapping("register")
     public ResponseEntity<User> findByTitle(@Valid @RequestBody User user, Errors errors){
@@ -52,8 +55,9 @@ public class AuthController {
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
                 credentials.getUsername(), credentials.getPassword()
         ));
-
-        return null;
+        final User user = userService.findByUsername(credentials.getUsername());
+        final String token = jwtUtils.generateToken(user);
+        return new LoginResponse(user, token);
     }
 }
 

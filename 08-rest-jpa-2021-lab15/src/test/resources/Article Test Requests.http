@@ -7,6 +7,7 @@ Accept: application/json
 
 GET http://localhost:8080/api/users
 Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY0MjAxNTU3MiwiaWF0IjoxNjQyMDExOTcyfQ.ZrgDtXbah9FYGEv6ZxxaVL99qJN5EYy53c9va3sUvuTHK1bQghBvoJiOe0NVEOmBXJnBiI7ixR9t_yPo8ahg6w
 
 ###
 
@@ -32,6 +33,42 @@ Content-Type: application/json
   "title": "Spring is Easy",
   "content": "Easy to integrate ...",
   "tags": ["spring", "security"]
+}
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "Admin123&"
+}
+
+###
+
+POST http://localhost:8080/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "johny",
+  "password": "Johny123&",
+  "fname": "John",
+  "lname": "Smith",
+  "roles": "READER"
+}
+
+###
+
+POST http://localhost:8080/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "marys",
+  "password": "Marys123&",
+  "fname": "Mary",
+  "lname": "Smith",
+  "roles": "READER"
 }
 
 ###
