@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.aspectj.weaver.ast.Not;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -35,7 +36,7 @@ public class ErrorHandlerControllerAdvice {
     }
     @ExceptionHandler
     public ResponseEntity<ErrorResponse> handleMethodArgNotValidEntityData(MethodArgumentNotValidException ex) {
-        return ResponseEntity.badRequest().body(
+        return ResponseEntity.badRequest().contentType(MediaType.APPLICATION_JSON).body(
                 new ErrorResponse(HttpStatus.BAD_REQUEST.value(), ex.getMessage())
         );
     }
@@ -55,7 +56,7 @@ public class ErrorHandlerControllerAdvice {
 
     @ExceptionHandler({AuthenticationException.class, UnauthorisedException.class})
     public ResponseEntity<ErrorResponse> handleAuthenticationException(Exception ex) {
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).contentType(MediaType.APPLICATION_JSON).body(
                 new ErrorResponse(HttpStatus.UNAUTHORIZED.value(), ex.getMessage())
         );
     }
