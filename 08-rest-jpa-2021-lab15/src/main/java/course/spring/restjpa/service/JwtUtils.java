@@ -1,4 +1,4 @@
-package course.spring.restjpa.utils;
+package course.spring.restjpa.service;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -6,6 +6,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.util.Date;
@@ -13,14 +14,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
-@Component
+@Service
 public class JwtUtils {
     public static final long JWT_TOKEN_VALIDITY = 60 * 60; //1 hour
 
     // Demo only - don't use this in production => get secret from environment variable instead
 //    @Value("jwt.secret")
 //    private String secret;
-
 
     private String getSecret(){
         Map<String, String> env = System.getenv();
