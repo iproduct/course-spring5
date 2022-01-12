@@ -1,15 +1,13 @@
 package course.spring.restjpa.web;
 
 import course.spring.restjpa.exception.InvalidEntityDataException;
-import course.spring.restjpa.model.Article;
+import course.spring.restjpa.entity.Article;
 import course.spring.restjpa.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.validation.Valid;
 import java.util.Arrays;

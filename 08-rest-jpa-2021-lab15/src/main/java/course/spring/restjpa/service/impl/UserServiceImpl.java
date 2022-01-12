@@ -2,10 +2,9 @@ package course.spring.restjpa.service.impl;
 
 
 import course.spring.restjpa.dto.UserRepository;
-import course.spring.restjpa.model.User;
+import course.spring.restjpa.entity.User;
 import course.spring.restjpa.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Transient;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

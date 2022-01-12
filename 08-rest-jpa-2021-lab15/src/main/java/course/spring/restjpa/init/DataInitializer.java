@@ -1,7 +1,7 @@
 package course.spring.restjpa.init;
 
-import course.spring.restjpa.model.Article;
-import course.spring.restjpa.model.User;
+import course.spring.restjpa.entity.Article;
+import course.spring.restjpa.entity.User;
 import course.spring.restjpa.service.ArticleService;
 import course.spring.restjpa.service.UserService;
 import lombok.extern.slf4j.Slf4j;

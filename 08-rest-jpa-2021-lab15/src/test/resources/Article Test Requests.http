@@ -5,6 +5,11 @@ Accept: application/json
 
 ###
 
+GET http://localhost:8080/api/users
+Accept: application/json
+
+###
+
 GET http://localhost:8080/api/articles/9
 Accept: application/json
 
@@ -24,7 +29,7 @@ POST http://localhost:8080/api/articles
 Content-Type: application/json
 
 {
-  "title": "S",
+  "title": "Spring is Easy",
   "content": "Easy to integrate ...",
   "tags": ["spring", "security"]
 }

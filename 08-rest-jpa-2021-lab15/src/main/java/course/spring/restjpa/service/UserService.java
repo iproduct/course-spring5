@@ -1,7 +1,7 @@
 package course.spring.restjpa.service;
 
 
-import course.spring.restjpa.model.User;
+import course.spring.restjpa.entity.User;
 
 import java.util.List;
 

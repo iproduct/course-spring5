@@ -1,7 +1,7 @@
 package course.spring.restjpa.service;
 
 
-import course.spring.restjpa.model.Article;
+import course.spring.restjpa.entity.Article;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package course.spring.restjpa.model;
+package course.spring.restjpa.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;

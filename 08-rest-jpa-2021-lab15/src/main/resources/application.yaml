@@ -13,7 +13,7 @@ spring:
         #spring.jpa.show-sql=true
         format_sql: TRUE
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     open-in-view: false
   mvc:
     pathmatch:

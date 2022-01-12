@@ -1,9 +1,10 @@
-package course.spring.restjpa.model;
+package course.spring.restjpa.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import course.spring.restjpa.entity.Article;
 import lombok.*;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.security.core.GrantedAuthority;
@@ -35,7 +36,7 @@ public class User implements UserDetails {
     private Long id;
 
     @NotNull
-    @Length(min = 3, max = 30)
+    @Length(min = 5, max = 20)
     @NonNull
     private String username;
 

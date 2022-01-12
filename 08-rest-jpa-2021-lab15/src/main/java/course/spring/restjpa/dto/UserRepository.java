@@ -1,6 +1,6 @@
 package course.spring.restjpa.dto;
 
-import course.spring.restjpa.model.User;
+import course.spring.restjpa.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
