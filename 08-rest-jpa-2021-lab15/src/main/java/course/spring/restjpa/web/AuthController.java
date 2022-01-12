@@ -7,6 +7,8 @@ import course.spring.restjpa.model.LoginResponse;
 import course.spring.restjpa.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,6 +24,8 @@ import java.util.stream.Collectors;
 public class AuthController {
     @Autowired
     private UserService userService;
+    @Autowired
+    private AuthenticationManager authenticationManager;
 
     @PostMapping("register")
     public ResponseEntity<User> findByTitle(@Valid @RequestBody User user, Errors errors){
@@ -45,6 +49,22 @@ public class AuthController {
             throw new InvalidEntityDataException("Invalid user data",
                     errors.getAllErrors().stream().map(e -> e.toString()).collect(Collectors.toList()));
         }
+        authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
+                credentials.getUsername(), credentials.getPassword()
+        ));
+
         return null;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
