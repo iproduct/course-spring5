@@ -6,7 +6,7 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/hibernate_blogs2?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/ws_spring_intro?createDatabaseIfNotExist=true
     username: root
     password: root
   #JPA Properties
@@ -17,7 +17,7 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
         format_sql: true
         generate_statistics: true
-        metadata_builder_contributor: course.hibernate.spring.util.SqlFunctionsMetadataBuilderContributor
+#        metadata_builder_contributor: course.hibernate.spring.util.SqlFunctionsMetadataBuilderContributor
     hibernate:
       ddl-auto: update
     open-in-view: false
