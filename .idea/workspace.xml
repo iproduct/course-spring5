@@ -2,42 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be1c92a1-ceba-4d42-a5f5-e75e7604e336" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/07-jpa-codefirst-lab/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07-jpa-codefirst-lab/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07-jpa-codefirst-lab/.idea/dataSources/68d97674-fe15-482a-9e9a-7450d63b58f5/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07-jpa-codefirst-lab/.idea/dataSources/68d97674-fe15-482a-9e9a-7450d63b58f5/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07-jpa-codefirst-lab/.idea/dataSources/68d97674-fe15-482a-9e9a-7450d63b58f5/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07-jpa-codefirst-lab/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10-ml-h2o-react-client/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10-ml-h2o-react-client/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08-rest-jpa-2021-lab15/src/main/java/course/spring/restjpa/util/ExceptionHandlingUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/restmvc/exception/InvalidEntityException.class" beforeDir="false" afterPath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/restmvc/exception/InvalidEntityException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/restmvc/exception/NonexisitngEntityException.class" beforeDir="false" afterPath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/restmvc/exception/NonexisitngEntityException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/restmvc/model/ErrorResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/restmvc/model/ErrorResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/ServletInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/ServletInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/WebmvcThymeleafApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/WebmvcThymeleafApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/config/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/dao/UsersRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/dao/UsersRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/ArticlesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/ArticlesService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/ArticlesServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/ArticlesServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/UsersService.class" beforeDir="false" afterPath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/UsersService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/UsersServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/domain/UsersServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/exception/UnauthorisedModificationException.class" beforeDir="false" afterPath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/exception/UnauthorisedModificationException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/init/DataInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/init/DataInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/model/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/model/Article.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/web/ArticleControllerAdvice.class" beforeDir="false" afterPath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/web/ArticleControllerAdvice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/web/ArticlesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/web/ArticlesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/web/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/build/classes/java/main/course/spring/webmvc/web/UsersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/src/main/resources/templates/article-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/03-webmvc-thymeleaf-lab8/src/main/resources/templates/article-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07-jpa-codefirst-lab/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/07-jpa-codefirst-lab/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07-jpa-codefirst-lab/.idea/dataSources/68d97674-fe15-482a-9e9a-7450d63b58f5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/07-jpa-codefirst-lab/.idea/dataSources/68d97674-fe15-482a-9e9a-7450d63b58f5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/12-reactive-streaming-demos/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/12-reactive-streaming-demos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/12-reactive-streaming-demos/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07-hibernate-intro-lab/.idea/dataSources/becc3ac4-09be-49bf-bb21-1cbac41df5d2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/07-hibernate-intro-lab/.idea/dataSources/becc3ac4-09be-49bf-bb21-1cbac41df5d2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/08-rest-jpa-2021-lab15/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/08-rest-jpa-2021-lab15/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +35,9 @@
   </component>
   <component name="KotlinMultiplatform">
     <allAvailableExecutables />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -116,6 +96,7 @@
       <updated>1637165310171</updated>
       <workItem from="1637165311739" duration="5000" />
       <workItem from="1639650865837" duration="598000" />
+      <workItem from="1643111110001" duration="309000" />
     </task>
     <servers />
   </component>
