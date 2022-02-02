@@ -29,6 +29,11 @@ public class ArticleController {
         return articleService.getAll();
     }
 
+    @GetMapping("/{id:[\\d]+}")
+    public Article getArticle(@PathVariable("id") Long id) {
+        return articleService.getById(id);
+    }
+
     @PostMapping
     //@ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Article> addArticle(@RequestBody Article article) {
@@ -48,8 +53,8 @@ public class ArticleController {
         return articleService.update(article);
     }
 
-    @DeleteMapping("/{id:[/d]+}")
-    public Article updateArticle(@PathVariable("id") Long id, BindingResult bindingResult) {
+    @DeleteMapping("/{id:[\\d]+}")
+    public Article updateArticle(@PathVariable("id") Long id) {
         return articleService.deleteById(id);
     }
 

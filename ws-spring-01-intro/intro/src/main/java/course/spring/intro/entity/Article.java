@@ -2,9 +2,7 @@ package course.spring.intro.entity;
 
 import lombok.*;
 
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Set;
 
@@ -15,6 +13,7 @@ import java.util.Set;
 @AllArgsConstructor
 public class Article {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @NonNull
     private Long id;
     @NonNull
@@ -22,8 +21,8 @@ public class Article {
     @NonNull
     private String content;
     @NonNull
-    private String auhor;
-    @ElementCollection
+    private String author;
+    @ElementCollection(fetch = FetchType.EAGER)
     @NonNull
     private Set<String> keywords = Set.of();
     private LocalDateTime created = LocalDateTime.now();
