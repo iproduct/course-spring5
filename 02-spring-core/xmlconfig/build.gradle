@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    compile ('org.springframework:spring-context:5.1.5.RELEASE')
+    compile ('org.springframework:spring-context:5.3.15')
     compile 'javax.inject:javax.inject:1@jar'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
