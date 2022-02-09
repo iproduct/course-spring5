@@ -9,8 +9,11 @@ import javax.annotation.Resource;
 
 //@Component
 public class ConsoleArticlePresenter implements ArticlePresenter {
-//    @Resource(name = "repoProvider")
     private ArticleProvider provider;
+
+    public ConsoleArticlePresenter(ArticleProvider provider) {
+        this.provider = provider;
+    }
 
     @Override
     public void present() {

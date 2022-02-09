@@ -9,7 +9,7 @@ import ws.spring.client.ArticlePresenter;
 public class MainApp {
     public static void main(String[] args) {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("app-context.xml");
-        ArticlePresenter presenter = ctx.getBean(ArticlePresenter.class);
+        ArticlePresenter presenter = ctx.getBean("presenter", ArticlePresenter.class);
         presenter.present();
     }
 }
