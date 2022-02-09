@@ -12,11 +12,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-//@Service("repoProvider")
+@Service("repoArticleProvider")
 public class RepositoryArticleProvider implements ArticleProvider {
     private ArticleRepository articleRepository;
 
-//    @PostConstruct
+    @PostConstruct
     public void init() {
         List.of(
                 new Article(1L, "Spring Data is Awesome", "Spring Data is great beacuse ..."),
@@ -25,7 +25,7 @@ public class RepositoryArticleProvider implements ArticleProvider {
         ).forEach(articleRepository::create);
     }
 
-//    @Autowired
+    @Autowired
     public void setArticleRepository(ArticleRepository articleRepository) {
         this.articleRepository = articleRepository;
     }
