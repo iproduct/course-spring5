@@ -1,13 +1,11 @@
 package ws.spring.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
+import lombok.*;
 import ws.spring.dao.Identifiable;
 
 @Data
 @NoArgsConstructor
+@RequiredArgsConstructor
 @AllArgsConstructor
 public class Article implements Identifiable<Long> {
     private Long id;
@@ -15,5 +13,6 @@ public class Article implements Identifiable<Long> {
     private String title;
     @NonNull
     private String content;
+    private User author;
 
 }

@@ -13,9 +13,9 @@ import java.util.List;
 //@Order(2)
 public class MockArticleProvider implements ArticleProvider {
     public static final List<Article> MOCK_ARTICLES = List.of(
-        new Article(1L, "New in Spring", "Spring 5 is great beacuse ..."),
-        new Article(2L, "Spring DI", "Should I use DI or lookup ..."),
-        new Article(3L, "Spring Autowiring", "There are several ways to configure Spring beans.")
+        new Article(1L, "New in Spring", "Spring 5 is great beacuse ...", null),
+        new Article(2L, "Spring DI", "Should I use DI or lookup ...", null),
+        new Article(3L, "Spring Autowiring", "There are several ways to configure Spring beans.", null)
     );
 
     @Override
