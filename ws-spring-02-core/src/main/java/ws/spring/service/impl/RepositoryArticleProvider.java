@@ -1,6 +1,9 @@
 package ws.spring.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Service;
 import ws.spring.dao.ArticleRepository;
 import ws.spring.model.Article;
@@ -12,6 +15,8 @@ import java.util.Collection;
 import java.util.List;
 
 @Service("repoProvider")
+@Primary
+//@Order(1)
 public class RepositoryArticleProvider implements ArticleProvider {
     private ArticleRepository articleRepository;
 

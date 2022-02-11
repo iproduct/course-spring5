@@ -6,14 +6,22 @@ import ws.spring.client.ArticlePresenter;
 import ws.spring.service.ArticleProvider;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Component
 public class ConsoleArticlePresenter implements ArticlePresenter {
-    @Resource(name = "repoProvider")
+    @Autowired
     private ArticleProvider provider;
+//    @Autowired
+//    private List<ArticleProvider> providers;
 
     @Override
     public void present() {
         provider.getArticles().forEach(System.out::println);
     }
+//    @Override
+//    public void present() {
+//        providers.stream().flatMap(p -> p.getArticles().stream())
+//                .forEach(System.out::println);
+//    }
 }
