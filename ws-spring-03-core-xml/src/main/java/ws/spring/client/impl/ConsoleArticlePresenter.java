@@ -21,7 +21,7 @@ public class ConsoleArticlePresenter implements ArticlePresenter {
 
     private ArticleProvider provider;
 
-    ConsoleArticlePresenter(ArticleProvider provider) {
+    public ConsoleArticlePresenter(ArticleProvider provider) {
         this.provider = provider;
     }
 

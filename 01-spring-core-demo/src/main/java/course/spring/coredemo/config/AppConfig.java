@@ -17,7 +17,7 @@ import java.util.Set;
 
 @Configuration
 @ComponentScan(basePackageClasses = AnnotationAppContextDemo.class)
-@PropertySource("article.properties")
+@PropertySource("article.yaml")
 public class AppConfig {
     @Bean(name="formatter")
     public ArticleFormatter createFormatter() {
