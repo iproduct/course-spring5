@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import ws.spring.client.ArticlePresenter;
+import ws.spring.qualifier.MockProvider;
+import ws.spring.qualifier.RepositoryProvider;
 import ws.spring.service.ArticleProvider;
 import ws.spring.service.UserService;
 
@@ -14,6 +16,7 @@ import java.util.List;
 public class ConsoleArticlePresenter implements ArticlePresenter {
     @Autowired
 //    @Qualifier("repoProvider")
+    @RepositoryProvider
     private ArticleProvider provider;
     @Autowired
     private UserService userService;

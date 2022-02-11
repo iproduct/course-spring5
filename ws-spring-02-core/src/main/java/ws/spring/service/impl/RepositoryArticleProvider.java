@@ -10,6 +10,7 @@ import ws.spring.dao.ArticleRepository;
 import ws.spring.dao.UserRepository;
 import ws.spring.model.Article;
 import ws.spring.model.User;
+import ws.spring.qualifier.RepositoryProvider;
 import ws.spring.service.ArticleProvider;
 
 import javax.annotation.PostConstruct;
@@ -19,6 +20,7 @@ import java.util.List;
 
 @Service("repoProvider")
 //@Primary
+@RepositoryProvider
 @DependsOn("userService")
 public class RepositoryArticleProvider implements ArticleProvider {
     private ArticleRepository articleRepository;

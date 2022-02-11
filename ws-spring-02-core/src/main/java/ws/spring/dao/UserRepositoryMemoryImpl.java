@@ -1,12 +1,7 @@
-package ws.spring.dao.impl;
+package ws.spring.dao;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import ws.spring.dao.ArticleRepository;
-import ws.spring.dao.IdGenerator;
-import ws.spring.dao.UserRepository;
-import ws.spring.model.Article;
 import ws.spring.model.User;
 
 import java.util.Optional;

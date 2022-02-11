@@ -1,4 +1,4 @@
-package ws.spring.dao.impl;
+package ws.spring.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import ws.spring.dao.GenericRepository;

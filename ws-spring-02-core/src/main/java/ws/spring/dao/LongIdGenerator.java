@@ -1,4 +1,4 @@
-package ws.spring.dao.impl;
+package ws.spring.dao;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;

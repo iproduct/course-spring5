@@ -4,12 +4,14 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Service;
 import ws.spring.model.Article;
+import ws.spring.qualifier.MockProvider;
 import ws.spring.service.ArticleProvider;
 
 import java.util.Collection;
 import java.util.List;
 
 @Service
+@MockProvider
 //@Order(2)
 public class MockArticleProvider implements ArticleProvider {
     public static final List<Article> MOCK_ARTICLES = List.of(

@@ -1,9 +1,7 @@
-package ws.spring.dao.impl;
+package ws.spring.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import ws.spring.dao.ArticleRepository;
-import ws.spring.dao.IdGenerator;
 import ws.spring.model.Article;
 
 @Repository("articleRepo")
