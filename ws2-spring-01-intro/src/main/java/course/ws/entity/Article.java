@@ -15,7 +15,6 @@ import java.util.Set;
 public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @NonNull
     private Long id;
     @NonNull
     private String title;
@@ -23,7 +22,7 @@ public class Article {
     private String content;
     @NonNull
     private String author;
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name="article_keywords")
     @NonNull
     private Set<String> keywords;

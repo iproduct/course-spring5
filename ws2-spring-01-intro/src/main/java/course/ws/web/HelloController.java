@@ -17,7 +17,7 @@ public class HelloController {
 
     @GetMapping("/article")
     public Article getArticle() {
-        return new Article(1L, "Intro to Spring", "Spring MVC is easy ...",
+        return new Article("Intro to Spring", "Spring MVC is easy ...",
                 "Trayan Iliev", Set.of("spring", "mvc", "boot", "inro"));
     }
 }
