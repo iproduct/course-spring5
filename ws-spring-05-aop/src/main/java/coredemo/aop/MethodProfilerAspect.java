@@ -13,7 +13,7 @@ import org.springframework.util.StopWatch;
 
 import java.util.concurrent.TimeUnit;
 
-@Aspect
+//@Aspect
 @Order(1)
 @Component
 //@Slf4j
@@ -25,7 +25,6 @@ public class MethodProfilerAspect {
 //    }
 
     @Around("coredemo.aop.SystemArchitecture.inDaoLayer()")
-
     public Object measureMethodExecutionTime(ProceedingJoinPoint pjp) throws Throwable {
         String methodName = pjp.getSignature().getName();
         log.info("Starting profiling for method: " + methodName );

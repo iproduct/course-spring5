@@ -24,7 +24,6 @@ public class LoggingAspect {
     }
 
     @Before("repositoryMethods()")
-
     public void logMethodCall(JoinPoint jp) {
         String methodName = jp.getSignature().getName();
         log.info("!!! Before invoking: " + methodName + " with args: " + Arrays.toString(jp.getArgs()));
