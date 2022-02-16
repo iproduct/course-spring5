@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="807ffab5-5f7a-4ae3-9523-bcd68be47063" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/5.2.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/5.2.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/5.2.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/libraries/Gradle__javax_annotation_javax_annotation_api_1_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/libraries/Gradle__javax_inject_javax_inject_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/libraries/Gradle__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/libraries/Gradle__org_aspectj_aspectjrt_1_9_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/libraries/Gradle__org_aspectj_aspectjweaver_1_9_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/libraries/Gradle__org_projectlombok_lombok_1_18_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/libraries/Gradle__org_slf4j_slf4j_simple_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/libraries/Gradle__org_springframework_spring_aop_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/libraries/Gradle__org_springframework_spring_aspects_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/libraries/Gradle__org_springframework_spring_beans_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/libraries/Gradle__org_springframework_spring_context_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/libraries/Gradle__org_springframework_spring_core_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/libraries/Gradle__org_springframework_spring_expression_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/libraries/Gradle__org_springframework_spring_jcl_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/modules/core-demo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/modules/core-demo.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/modules/core-demo.test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/AnnotationSpringDI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/AppConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/HelloSpringDI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/aop/EntityCreationPublishingAspect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/aop/LoggingAspect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/aop/MethodProfilerAspect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/aop/SystemArchitecture.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/domain/AnotherArticleProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/domain/ArticlePresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/domain/ArticleProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/domain/ConsoleArticlePresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/domain/MockArticleProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/domain/PresenterFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/events/EntityCreationEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/events/EntityCreationEventListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/model/Article.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/qualifiers/Alternative.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build/classes/java/main/coredemo/qualifiers/Mock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build/resources/main/app-context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/build/resources/main/articles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/AnnotationSpringDI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/HelloSpringDI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/aop/EntityCreationPublishingAspect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/aop/LoggingAspect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/aop/MethodProfilerAspect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/aop/SystemArchitecture.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/domain/AnotherArticleProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/domain/ArticlePresenter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/domain/ArticleProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/domain/ConsoleArticlePresenter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/domain/MockArticleProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/domain/PresenterFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/events/EntityCreationEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/events/EntityCreationEventListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/model/Article.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/qualifiers/Alternative.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/java/coredemo/qualifiers/Mock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/resources/app-context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/src/main/resources/articles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.gradle/5.2.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.gradle/5.2.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.gradle/5.2.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/02-core-demo-lab8.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/build/classes/java/main/coredemo/AnnotationConfigDI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/build/classes/java/main/coredemo/domain/AnotherArticleProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/build/classes/java/main/coredemo/domain/ArticlePresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/build/classes/java/main/coredemo/domain/ArticleProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/build/classes/java/main/coredemo/domain/ConsoleArticlePresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/build/classes/java/main/coredemo/domain/MockArticleProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/build/classes/java/main/coredemo/domain/PresenterFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/build/classes/java/main/coredemo/model/Article.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/build/classes/java/main/coredemo/spel/Article.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/build/classes/java/main/coredemo/spel/ArticlePresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/build/classes/java/main/coredemo/spel/ArticleProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/build/classes/java/main/coredemo/spel/Car.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/build/classes/java/main/coredemo/spel/CarPark.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/build/classes/java/main/coredemo/spel/CircularDependencyBeanA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/build/classes/java/main/coredemo/spel/CircularDependencyBeanB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/build/classes/java/main/coredemo/spel/ConsoleArticlePresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/build/classes/java/main/coredemo/spel/Engine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/build/classes/java/main/coredemo/spel/MockArticleProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/build/classes/java/main/coredemo/spel/SpelDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/build/resources/main/articles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/AnnotationConfigDI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/domain/AnotherArticleProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/domain/ArticlePresenter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/domain/ArticleProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/domain/ConsoleArticlePresenter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/domain/MockArticleProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/domain/PresenterFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/model/Article.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/spel/Article.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/spel/ArticlePresenter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/spel/ArticleProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/spel/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/spel/CarPark.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/spel/CircularDependencyBeanA.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/spel/CircularDependencyBeanB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/spel/ConsoleArticlePresenter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/spel/Engine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/spel/MockArticleProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/java/coredemo/spel/SpelDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/src/main/resources/articles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-spring-core/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-spring-core/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core/.idea/misc.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="spring-beans.schema" />
+        <option value="AnnotationType" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$" value="6295858768977" />
+        <entry key="$PROJECT_DIR$/.gradle" value="0" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="998898557" />
+        <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="408007245" />
+        <entry key="$PROJECT_DIR$/settings.gradle" value="4057716117" />
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+      </map>
+    </option>
+  </component>
+  <component name="KotlinMultiplatform">
+    <allAvailableExecutables />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="99" />
+    <option name="y" value="18" />
+    <option name="width" value="1401" />
+    <option name="height" value="822" />
+  </component>
+  <component name="ProjectId" id="1SvqGDbxjuXjwzRZ1oolQerjKJR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="go.format.on.save.advertiser.fired" value="true" />
+    <property name="go.formatter.settings.were.checked" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Pulsar/git/pulsar-demos/pulsar-basic-demo" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.23772103" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="coredemo.qualifiers" />
+      <recent name="coredemo.model" />
+      <recent name="coredemo.domain" />
+      <recent name="coredemo" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CourseSpring\git\course-spring5\02-core-demo-lab7\src\main\java\coredemo\aop" />
+      <recent name="D:\CourseSpring\git\course-spring5\02-core-demo-lab7\src\main\java\coredemo" />
+      <recent name="D:\CourseSpring\git\course-spring5\02-core-demo-lab7" />
+      <recent name="D:\CourseSpring\git\course-spring5\core-demo\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.AnnotationSpringDI">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnnotationSpringDI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="15" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="coredemo.AnnotationSpringDI" />
+      <module name="core-demo.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="coredemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HelloSpringDI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="coredemo.HelloSpringDI" />
+      <module name="core-demo.main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="coredemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.AnnotationSpringDI" />
+      <item itemvalue="Application.HelloSpringDI" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AnnotationSpringDI" />
+        <item itemvalue="Application.HelloSpringDI" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="807ffab5-5f7a-4ae3-9523-bcd68be47063" name="Default Changelist" comment="" />
+      <created>1572454318142</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572454318142</updated>
+      <workItem from="1572454323969" duration="9509000" />
+      <workItem from="1573051358782" duration="5445000" />
+      <workItem from="1575478559427" duration="4522000" />
+      <workItem from="1576055101920" duration="33000" />
+      <workItem from="1608740078780" duration="1361000" />
+      <workItem from="1609950184414" duration="3410000" />
+      <workItem from="1644414270290" duration="2116000" />
+      <workItem from="1645023038051" duration="19000" />
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1721" height="935" extended-state="6" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Problems" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Build" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Gradle" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.23772103" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.23772103" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
