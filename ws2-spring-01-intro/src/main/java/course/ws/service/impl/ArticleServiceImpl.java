@@ -6,10 +6,15 @@ import course.ws.exception.EntityNotFoundException;
 import course.ws.exception.InvalidEntityDataException;
 import course.ws.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Service
+@Transactional
 public class ArticleServiceImpl implements ArticleService {
     private ArticleRepository articleRepo;
 
@@ -19,11 +24,13 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public List<Article> findAllArticles() {
         return articleRepo.findAll();
     }
 
     @Override
+    @Transactional(readOnly = true)
     public Article findArticleById(Long id) {
         return articleRepo.findById(id).orElseThrow(()->new EntityNotFoundException(
                 String.format("Article with ID='%d' not found.", id)
@@ -54,6 +61,7 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public long count() {
         return articleRepo.count();
     }

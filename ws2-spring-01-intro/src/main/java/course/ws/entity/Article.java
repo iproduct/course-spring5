@@ -1,14 +1,20 @@
 package course.ws.entity;
 
-import lombok.Data;
-import lombok.NonNull;
+import lombok.*;
 
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
+@Entity
 @Data
+@NoArgsConstructor
+@RequiredArgsConstructor
+@AllArgsConstructor
 public class Article {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @NonNull
     private Long id;
     @NonNull
@@ -17,6 +23,8 @@ public class Article {
     private String content;
     @NonNull
     private String author;
+    @ElementCollection
+    @CollectionTable(name="article_keywords")
     @NonNull
     private Set<String> keywords;
     private LocalDateTime created = LocalDateTime.now();
