@@ -40,6 +40,14 @@ public class InvalidEntityDataException extends RuntimeException {
         this.violations = violations;
     }
 
+    public List<String> getViolations() {
+        return violations;
+    }
+
+    public void setViolations(List<String> violations) {
+        this.violations = violations;
+    }
+
     @Override
     public String getMessage() {
         return super.getMessage() + " Violations: "

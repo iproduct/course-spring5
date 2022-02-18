@@ -1,0 +1,12 @@
+POST http://localhost:8080/api/articles
+Content-Type: application/json
+
+{
+  "title": "Posted from IntelliJ",
+  "content": "Posted from IntelliJ content ...",
+  "author": "Joshua Bloch"
+}
+
+###
+GET http://localhost:8080/api/articles
+Accept: application/json

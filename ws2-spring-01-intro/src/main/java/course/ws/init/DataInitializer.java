@@ -17,11 +17,11 @@ import java.util.stream.Collectors;
 public class DataInitializer implements ApplicationRunner {
     public static final List<Article> SAMPLE_ARTICLES = List.of(
             new Article("Intro to Spring", "Spring MVC is easy ...",
-                    "Trayan Iliev", Set.of("spring", "mvc", "boot", "inro")),
+                    "Trayan Iliev", Set.of("spring", "mvc", "boot", "intro")),
             new Article("Hibernate Performance", "Hibernate provides powerful ORM implementation ...",
                     "Georgi Petrov", Set.of("hibernate", "performance")),
             new Article( "Spring Boot is Easy", "Spring Boot makes bootstrapping new Spring projects easy ...",
-                    "Trayan Iliev", Set.of("spring", "boot", "inro"))
+                    "Trayan Iliev", Set.of("spring", "boot", "intro"))
     );
 
     private ArticleService articleService;
