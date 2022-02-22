@@ -12,12 +12,10 @@ import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
-@org.springframework.stereotype.Repository
 public class RepositoryMemoryImpl<K, V extends Identifiable<K>> implements Repository<K, V> {
     private Map<K, V> entities = new ConcurrentHashMap<>();
     private IdGenerator<K> idGenerator;
 
-    @Autowired
     public RepositoryMemoryImpl(IdGenerator<K> idGenerator) {
         this.idGenerator = idGenerator;
     }
