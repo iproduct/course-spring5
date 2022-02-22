@@ -1,4 +1,4 @@
-package course.ws.client.config;
+package course.ws.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;

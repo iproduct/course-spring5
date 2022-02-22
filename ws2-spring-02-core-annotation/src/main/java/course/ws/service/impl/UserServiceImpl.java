@@ -5,6 +5,7 @@ import course.ws.exception.EntityNotFoundException;
 import course.ws.model.Role;
 import course.ws.model.User;
 import course.ws.service.UserService;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +14,7 @@ import java.util.List;
 import java.util.Set;
 
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl implements UserService, InitializingBean {
     @Value("${users.default.admin}")
     private String[] defaultAdminData;
     @Value("${users.default.author}")
@@ -25,6 +26,10 @@ public class UserServiceImpl implements UserService {
 
     public UserServiceImpl(UserRepository userRepo) {
         this.userRepo = userRepo;
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
         List.of(defaultAdminData, defaultAuthorData, defaultReaderData).stream()
                 .map(data -> new User(data[0], data[1], data[2], data[3], Set.of(Role.valueOf(data[4]))))
                 .forEach(userRepo::create);
@@ -51,4 +56,5 @@ public class UserServiceImpl implements UserService {
     public User createUser(User user) {
         return userRepo.create(user);
     }
+
 }

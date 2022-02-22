@@ -2,6 +2,7 @@ package course.ws.service.impl;
 
 import course.ws.dao.ArticleRepository;
 import course.ws.model.Article;
+import course.ws.qualifiers.Default;
 import course.ws.service.ArticleProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,7 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-@Service
+@Service("defaultArticleProvider")
+@Default
 public class ArticleProviderImpl implements ArticleProvider {
     public static final List<Article> SAMPLE_ARTICLES = List.of(
             new Article("Spring Data JPA Intro", "Spring Data JPA is easy ...",
