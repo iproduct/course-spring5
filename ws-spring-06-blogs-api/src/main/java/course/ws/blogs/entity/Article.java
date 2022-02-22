@@ -9,23 +9,23 @@ import java.util.Set;
 @Entity
 @Data
 @NoArgsConstructor
-@RequiredArgsConstructor
 @AllArgsConstructor
 public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @NonNull
     private Long id;
-    @NonNull
     private String title;
-    @NonNull
     private String content;
-    @NonNull
     private String author;
     @ElementCollection(fetch = FetchType.EAGER)
-    @NonNull
     private Set<String> keywords = Set.of();
     private LocalDateTime created = LocalDateTime.now();
     private LocalDateTime modified = LocalDateTime.now();
 
+    public Article(String title, String content, String author, Set<String> keywords) {
+        this.title = title;
+        this.content = content;
+        this.author = author;
+        this.keywords = keywords;
+    }
 }
