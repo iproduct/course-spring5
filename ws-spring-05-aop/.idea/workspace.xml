@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="807ffab5-5f7a-4ae3-9523-bcd68be47063" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coredemo/aop/EntityCreationPublishingAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coredemo/aop/EntityCreationPublishingAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coredemo/aop/MethodProfilerAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coredemo/aop/MethodProfilerAspect.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,6 +225,7 @@
       <workItem from="1609950184414" duration="3410000" />
       <workItem from="1644414270290" duration="2116000" />
       <workItem from="1645023038051" duration="3647000" />
+      <workItem from="1645193160140" duration="2782000" />
     </task>
     <task id="LOCAL-00001" summary="demo projects renamed">
       <created>1645023126204</created>

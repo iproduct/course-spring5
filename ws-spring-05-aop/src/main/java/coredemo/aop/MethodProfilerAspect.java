@@ -13,7 +13,7 @@ import org.springframework.util.StopWatch;
 
 import java.util.concurrent.TimeUnit;
 
-//@Aspect
+@Aspect
 @Order(1)
 @Component
 //@Slf4j
