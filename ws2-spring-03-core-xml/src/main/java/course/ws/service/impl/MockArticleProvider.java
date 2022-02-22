@@ -3,6 +3,7 @@ package course.ws.service.impl;
 import course.ws.model.Article;
 import course.ws.qualifiers.Mock;
 import course.ws.service.ArticleProvider;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,6 +18,11 @@ public class MockArticleProvider implements ArticleProvider {
             new Article( "Spring Boot is Easy", "Spring Boot makes bootstrapping new Spring projects easy ...",
                     "Trayan Iliev", Set.of("spring", "boot", "intro"))
     );
+
+
+    public static MockArticleProvider createProvider(){
+        return new MockArticleProvider();
+    }
 
     @Override
     public List<Article> getArticles() {

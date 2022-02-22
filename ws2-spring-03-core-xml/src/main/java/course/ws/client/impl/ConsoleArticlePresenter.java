@@ -7,23 +7,29 @@ import course.ws.service.ArticleProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import javax.inject.Inject;
 import java.util.List;
 
 
+@Service("presenter")
 public class ConsoleArticlePresenter implements ArticlePresenter {
 //    private List<ArticleProvider> providers;
     private ArticleProvider provider;
+
+    public ConsoleArticlePresenter() {
+    }
 
     public ConsoleArticlePresenter(ArticleProvider repositoryArticleProvider) {
         this.provider = repositoryArticleProvider;
     }
 
-//    public void setProvider(ArticleProvider provider) {
-//        this.provider = provider;
-//    }
+    @Autowired
+    public void setProvider(@Default ArticleProvider provider) {
+        this.provider = provider;
+    }
 
     @Override
     public void present() {

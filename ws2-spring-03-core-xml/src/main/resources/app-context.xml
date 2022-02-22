@@ -8,12 +8,17 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
-    <bean id="provider" class="course.ws.service.impl.MockArticleProvider" />
-    <bean name="presenter" class="course.ws.client.impl.ConsoleArticlePresenter">
-        <constructor-arg index="0" name="repositoryArticleProvider" type="course.ws.service.ArticleProvider">
-            <ref bean="provider"/>
-        </constructor-arg>
-    </bean>
+    <context:annotation-config></context:annotation-config>
+    <context:component-scan base-package="course.ws" />
+    <context:property-placeholder location="classpath:config.properties" />
+    <bean id="provider" class="course.ws.service.impl.MockArticleProvider" factory-method="createProvider"/>
+    <bean id="presenterFactory" class="course.ws.client.impl.ArticlePresenterFactory" p:provider-ref="provider" />
+<!--        <property name="provider" ref="provider" />-->
+<!--    </bean>-->
+    <bean id="presenter" class="course.ws.client.impl.ConsoleArticlePresenter" p:provider-ref="provider" />
+<!--          factory-bean="presenterFactory" factory-method="createPresenter"/>-->
+    <!--        <constructor-arg index="0" name="repositoryArticleProvider" type="course.ws.service.ArticleProvider" ref="provider" />-->
+    <!--    </bean>-->
 
 
 </beans>

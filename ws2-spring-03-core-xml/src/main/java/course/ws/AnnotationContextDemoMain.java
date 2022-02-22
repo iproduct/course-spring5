@@ -11,8 +11,8 @@ public class AnnotationContextDemoMain {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("app-context.xml");
         ArticlePresenter presenter = ctx.getBean(ArticlePresenter.class);
         presenter.present();
-//        System.out.println();
-//        UserService userService = ctx.getBean(UserService.class);
-//        userService.getAllUsers().forEach(System.out::println);
+        System.out.println();
+        UserService userService = ctx.getBean(UserService.class);
+        userService.getAllUsers().forEach(System.out::println);
     }
 }

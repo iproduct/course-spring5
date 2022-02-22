@@ -6,6 +6,7 @@ import course.ws.model.Role;
 import course.ws.model.User;
 import course.ws.service.UserService;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+@Service
 public class UserServiceImpl implements UserService, InitializingBean {
     @Value("${users.default.admin}")
     private String[] defaultAdminData;
@@ -23,6 +25,7 @@ public class UserServiceImpl implements UserService, InitializingBean {
 
     private UserRepository userRepo;
 
+    @Autowired
     public UserServiceImpl(UserRepository userRepo) {
         this.userRepo = userRepo;
     }
