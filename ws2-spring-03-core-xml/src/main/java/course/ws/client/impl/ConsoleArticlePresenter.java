@@ -12,17 +12,15 @@ import javax.annotation.Resource;
 import javax.inject.Inject;
 import java.util.List;
 
-@Component
+
 public class ConsoleArticlePresenter implements ArticlePresenter {
 //    private List<ArticleProvider> providers;
     private ArticleProvider provider;
 
-    @Inject
-    public ConsoleArticlePresenter(@Default ArticleProvider repositoryArticleProvider) {
+    public ConsoleArticlePresenter(ArticleProvider repositoryArticleProvider) {
         this.provider = repositoryArticleProvider;
     }
 
-//    @Inject
 //    public void setProvider(ArticleProvider provider) {
 //        this.provider = provider;
 //    }

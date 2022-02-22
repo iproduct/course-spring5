@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-@Service
 public class UserServiceImpl implements UserService, InitializingBean {
     @Value("${users.default.admin}")
     private String[] defaultAdminData;
