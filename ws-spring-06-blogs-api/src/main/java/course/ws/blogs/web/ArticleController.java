@@ -5,10 +5,13 @@ import course.ws.blogs.exception.InvalidEntityDataException;
 import course.ws.blogs.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/articles")
@@ -32,7 +35,11 @@ public class ArticleController {
 
     @PostMapping
     //@ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<Article> addArticle(@RequestBody Article article) {
+    public ResponseEntity<Article> addArticle(@Valid @RequestBody Article article, Errors errors) {
+        if(errors.hasErrors()) {
+            List<String> violations = errors.getAllErrors().stream().map(err -> err.toString()).collect(Collectors.toList());
+            throw new InvalidEntityDataException("Invalid article data", violations);
+        }
         Article created = articleService.create(article);
         return ResponseEntity.created(
                 ServletUriComponentsBuilder.fromCurrentRequest().pathSegment("{id}")

@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -42,12 +44,20 @@ public class ArticleServiceImpl implements ArticleService {
                     String.format("Article %d: '%s' should not have ID during creation.",
                             article.getId(), article.getTitle()));
         }
+        LocalDateTime now = LocalDateTime.now();
+        article.setCreated(now);
+        article.setModified(now);
         return articleRepository.save(article);
     }
 
     @Override
     public Article update(Article article) {
         Article old = getById(article.getId());
+        if(!old.getAuthor().equals(article.getAuthor())) {
+            throw new InvalidEntityDataException("Article author can not be modified.");
+        }
+        article.setCreated(old.getCreated());
+        article.setModified(LocalDateTime.now());
         return articleRepository.save(article);
     }
 

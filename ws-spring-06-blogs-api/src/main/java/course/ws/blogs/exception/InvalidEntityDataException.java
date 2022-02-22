@@ -3,7 +3,7 @@ package course.ws.blogs.exception;
 import java.util.List;
 
 public class InvalidEntityDataException extends RuntimeException {
-    private List<String> violations;
+    private List<String> violations = List.of();
     public InvalidEntityDataException() {
     }
 
