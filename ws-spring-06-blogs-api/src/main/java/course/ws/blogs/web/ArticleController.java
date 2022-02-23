@@ -37,7 +37,14 @@ public class ArticleController {
     //@ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Article> addArticle(@Valid @RequestBody Article article, Errors errors) {
         if(errors.hasErrors()) {
-            List<String> violations = errors.getAllErrors().stream().map(err -> err.toString()).collect(Collectors.toList());
+            List<String> fieldViolations = errors.getFieldErrors().stream()
+                    .map(err -> String.format("Invalid field value: %s='%s' : %s",
+                            err.getField(), err.getRejectedValue(), err.getDefaultMessage()))
+                    .collect(Collectors.toList());
+            List<String> violations = errors.getGlobalErrors().stream()
+                    .map(err -> err.getObjectName() + ": " + err.getDefaultMessage())
+                    .collect(Collectors.toList());
+            violations.addAll(fieldViolations);
             throw new InvalidEntityDataException("Invalid article data", violations);
         }
         Article created = articleService.create(article);
@@ -48,10 +55,21 @@ public class ArticleController {
     }
 
     @PutMapping("/{id}")
-    public Article updateArticle(@RequestBody Article article, @PathVariable("id") Long id) {
-        if(!id.equals(article.getId())){
+    public Article updateArticle(@RequestBody Article article, Errors errors, @PathVariable("id") Long id) {
+        if (!id.equals(article.getId())) {
             throw new InvalidEntityDataException(
                     String.format("ID in URI: '%d' id different from ID in body: '%d'", id, article.getId()));
+        }
+        if (errors.hasErrors()) {
+            List<String> fieldViolations = errors.getFieldErrors().stream()
+                    .map(err -> String.format("Invalid field value: %s='%s' : %s",
+                            err.getField(), err.getRejectedValue(), err.getDefaultMessage()))
+                    .collect(Collectors.toList());
+            List<String> violations = errors.getGlobalErrors().stream()
+                    .map(err -> err.getObjectName() + ": " + err.getDefaultMessage())
+                    .collect(Collectors.toList());
+            violations.addAll(fieldViolations);
+            throw new InvalidEntityDataException("Invalid article data", violations);
         }
         return articleService.update(article);
     }
