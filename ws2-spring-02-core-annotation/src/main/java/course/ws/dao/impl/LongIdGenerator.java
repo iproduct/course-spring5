@@ -6,8 +6,8 @@ import org.springframework.stereotype.Component;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-@Component
-@Scope("prototype")
+//@Component
+//@Scope("prototype")
 public class LongIdGenerator implements IdGenerator<Long> {
     private AtomicLong idGenerator = new AtomicLong();
 

@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Set;
 
-@Service
-@Mock
+//@Service
+//@Mock
 public class MockArticleProvider implements ArticleProvider {
     public static final List<Article> SAMPLE_ARTICLES = List.of(
             new Article("Intro to Spring", "Spring MVC is easy ...",

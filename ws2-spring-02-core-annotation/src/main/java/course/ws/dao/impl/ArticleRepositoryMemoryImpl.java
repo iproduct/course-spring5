@@ -6,9 +6,9 @@ import course.ws.model.Article;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-@Repository("articleRepo")
+//@Repository("articleRepo")
 public class ArticleRepositoryMemoryImpl extends RepositoryMemoryImpl<Long, Article> implements ArticleRepository {
-    @Autowired
+//    @Autowired
     public ArticleRepositoryMemoryImpl(IdGenerator<Long> idGenerator) {
         super(idGenerator);
     }

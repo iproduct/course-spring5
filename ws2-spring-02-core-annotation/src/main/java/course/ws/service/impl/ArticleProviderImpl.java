@@ -11,8 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-@Service("defaultArticleProvider")
-@Default
+//@Service("defaultArticleProvider")
+//@Default
 public class ArticleProviderImpl implements ArticleProvider {
     public static final List<Article> SAMPLE_ARTICLES = List.of(
             new Article("Spring Data JPA Intro", "Spring Data JPA is easy ...",

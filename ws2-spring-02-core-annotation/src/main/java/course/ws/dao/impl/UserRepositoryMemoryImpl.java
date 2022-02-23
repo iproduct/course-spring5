@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
-@Repository("userRepo")
+//@Repository("userRepo")
 public class UserRepositoryMemoryImpl extends RepositoryMemoryImpl<Long, User> implements UserRepository {
     @Autowired
     public UserRepositoryMemoryImpl(IdGenerator<Long> idGenerator) {
