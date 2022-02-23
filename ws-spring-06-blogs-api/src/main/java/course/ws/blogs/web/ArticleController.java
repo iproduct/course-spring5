@@ -55,7 +55,7 @@ public class ArticleController {
     }
 
     @PutMapping("/{id}")
-    public Article updateArticle(@RequestBody Article article, Errors errors, @PathVariable("id") Long id) {
+    public Article updateArticle(@Valid @RequestBody Article article, Errors errors, @PathVariable("id") Long id) {
         if (!id.equals(article.getId())) {
             throw new InvalidEntityDataException(
                     String.format("ID in URI: '%d' id different from ID in body: '%d'", id, article.getId()));
