@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807ffab5-5f7a-4ae3-9523-bcd68be47063" name="Default Changelist" comment="" />
+    <list default="true" id="807ffab5-5f7a-4ae3-9523-bcd68be47063" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coredemo/AnnotationSpringDI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coredemo/AnnotationSpringDI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coredemo/aop/LoggingAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coredemo/aop/LoggingAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coredemo/aop/MethodProfilerAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coredemo/aop/MethodProfilerAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ws-spring-05-spel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws2-spring-01-intro/src/main/java/course/ws/init/DataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ws2-spring-01-intro/src/main/java/course/ws/init/DataInitializer.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -222,7 +229,7 @@
       <workItem from="1644414270290" duration="2116000" />
       <workItem from="1645023038051" duration="3647000" />
       <workItem from="1645193160140" duration="2782000" />
-      <workItem from="1645605641013" duration="1122000" />
+      <workItem from="1645605641013" duration="3481000" />
     </task>
     <task id="LOCAL-00001" summary="demo projects renamed">
       <created>1645023126204</created>

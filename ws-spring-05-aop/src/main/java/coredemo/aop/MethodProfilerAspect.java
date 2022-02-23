@@ -14,7 +14,7 @@ import org.springframework.util.StopWatch;
 import java.util.concurrent.TimeUnit;
 
 @Aspect
-@Order(1)
+@Order(2)
 @Component
 //@Slf4j
 public class MethodProfilerAspect {

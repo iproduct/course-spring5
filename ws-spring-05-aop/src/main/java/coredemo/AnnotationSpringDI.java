@@ -13,6 +13,7 @@ public class AnnotationSpringDI {
                 new AnnotationConfigApplicationContext(AppConfig.class);
         ArticlePresenter presenter = ctx.getBean("presenter", ArticlePresenter.class);
         presenter.present();
+        System.out.println();
         ArticleProvider provider = ctx.getBean("provider", ArticleProvider.class);
         provider.addArticle(new Article("New Article 1", "New Content 1..."));
         provider.addArticle(new Article("New Post 06.Jan.2021", "New Content 06.Jan.2021 ..."));

@@ -14,7 +14,7 @@ import java.util.Arrays;
 
 @Component
 @Aspect
-@Order(2)
+@Order(1)
 //@Slf4j
 public class LoggingAspect {
     final static Logger log = LoggerFactory.getLogger(LoggingAspect.class);
