@@ -15,7 +15,7 @@ public class Car {
     private String model;
     private Engine engine;
     @NonNull
-    private int horsePower;
+    private Integer horsePower;
     @NonNull
-    private int yearOfProduction;
+    private Integer yearOfProduction;
 }
