@@ -5,71 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="836fcf10-b2a1-40e5-9db2-bc9110c8eac1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../02-spring-core-lab14/.idea/02-spring-core-lab14.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-spring-core-lab14/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-spring-core-lab4/.idea/02-spring-core-lab4.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-spring-core-lab4/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-spring-core-lab4/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-spring-core-lab4/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/.idea/modules/ws-spring-02-core.test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/.idea/modules/ws-spring-03-core-xml.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-spring-core-lab15/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core-lab15/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-spring-core-lab4/.gradle/4.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core-lab4/.gradle/4.10/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-spring-core-lab4/.gradle/4.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core-lab4/.gradle/4.10/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-spring-core-lab4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-spring-core-lab4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.gradle/7.1/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.gradle/7.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.gradle/7.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.idea/modules/ws-spring-02-core.test.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.idea/modules/ws-spring-03-core-xml.test.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/src/main/java/ws/spring/GenericAppContextDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/src/main/java/ws/spring/MainApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/src/main/java/ws/spring/client/ArticlePresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/src/main/java/ws/spring/client/impl/ConsoleArticlePresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/src/main/java/ws/spring/client/impl/PresenterFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/src/main/java/ws/spring/config/ApplicationConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/src/main/java/ws/spring/dao/ArticleRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/src/main/java/ws/spring/dao/impl/ArticleRepositoryMemoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/src/main/java/ws/spring/model/Article.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/src/main/java/ws/spring/qualifier/MockProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/src/main/java/ws/spring/qualifier/RepositoryProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/src/main/java/ws/spring/service/ArticleProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/src/main/java/ws/spring/service/impl/FromPropertyFileArticleProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/src/main/java/ws/spring/service/impl/MockArticleProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/src/main/java/ws/spring/service/impl/RepositoryArticleProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/src/main/resources/blogs-config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-progrmmatic/src/main/resources/blogs.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ws-spring-05-aop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ws-spring-05-aop/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coredemo/spel/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coredemo/spel/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coredemo/spel/CircularDependencyBeanA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coredemo/spel/CircularDependencyBeanA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coredemo/spel/SpelDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coredemo/spel/SpelDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,8 +134,7 @@
     </configuration>
     <configuration name="SpelDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="coredemo.spel.SpelDemo" />
-      <module name="02-core-demo-lab8.main" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <module name="ws-spring-05-spel.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="coredemo.spel.*" />
@@ -249,8 +194,23 @@
       <workItem from="1644414278494" duration="2078000" />
       <workItem from="1644940250668" duration="1681000" />
       <workItem from="1645020451336" duration="2497000" />
-      <workItem from="1645606199325" duration="541000" />
+      <workItem from="1645606199325" duration="3329000" />
     </task>
+    <task id="LOCAL-00001" summary="project renamed">
+      <created>1645606774086</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1645606774086</updated>
+    </task>
+    <task id="LOCAL-00002" summary="presentation added">
+      <created>1645607057047</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1645607057047</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,6 +229,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="project renamed" />
+    <MESSAGE value="presentation added" />
+    <option name="LAST_COMMIT_MESSAGE" value="presentation added" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

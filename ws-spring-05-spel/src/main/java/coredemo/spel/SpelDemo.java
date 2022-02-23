@@ -57,7 +57,7 @@ public class SpelDemo {
         System.out.println(result3);
 
         String springThirdTitle = expressionParser.parseExpression(
-                "@provider.articles[1]?.title ?: 'no title'")
+                "@provider.articles[2]?.title ?: 'no title'")
                 .getValue(context, String.class);
         System.out.println(springThirdTitle);
 
@@ -66,7 +66,7 @@ public class SpelDemo {
                 .getValue(context, List.class);
         System.out.println(springBooks);
 
-//        //collections and properties
+        //collections and properties
         CarPark park = new CarPark();
         park.getCars().add(new Car("Opel", "Astra",
                 new Engine(4, 2500, 16, "engine model1"),2500, 2013 ));
@@ -79,14 +79,14 @@ public class SpelDemo {
 
         StandardEvaluationContext carParkContext = new StandardEvaluationContext(park);
         List<String> result4 = expressionParser.parseExpression(
-                "cars.![model][1]")
+                "cars.![model + ': ' + model.length() ]")
                 .getValue(carParkContext, List.class);
         System.out.println(result4);
 
         // #this
         List<Integer> primes = new ArrayList<Integer>();
         primes.addAll(Arrays.asList(2,3,5,7,11,13,17));
-
+//
         carParkContext.setVariable("primes", primes);
         List<Integer> result5 = expressionParser.parseExpression(
                 "#primes.?[#this > 4]")
