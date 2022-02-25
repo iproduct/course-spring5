@@ -32,8 +32,13 @@ public class UserController {
     }
 
     @GetMapping("/{id:[\\d]+}")
-    public User getUser(@PathVariable("id") Long id) {
+    public User getUserById(@PathVariable("id") Long id) {
         return userService.getById(id);
+    }
+
+    @GetMapping(params = "username")
+    public User getUserByUsername(@RequestParam("username") String username) {
+        return userService.getByUsername(username);
     }
 
     @PostMapping
