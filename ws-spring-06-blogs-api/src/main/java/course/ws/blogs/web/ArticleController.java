@@ -13,6 +13,8 @@ import javax.validation.Valid;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static course.ws.blogs.util.ValidationErrorUtil.handleValidationErrors;
+
 @RestController
 @RequestMapping("/api/articles")
 public class ArticleController {
@@ -36,17 +38,7 @@ public class ArticleController {
     @PostMapping
     //@ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Article> addArticle(@Valid @RequestBody Article article, Errors errors) {
-        if(errors.hasErrors()) {
-            List<String> fieldViolations = errors.getFieldErrors().stream()
-                    .map(err -> String.format("Invalid field value: %s='%s' : %s",
-                            err.getField(), err.getRejectedValue(), err.getDefaultMessage()))
-                    .collect(Collectors.toList());
-            List<String> violations = errors.getGlobalErrors().stream()
-                    .map(err -> err.getObjectName() + ": " + err.getDefaultMessage())
-                    .collect(Collectors.toList());
-            violations.addAll(fieldViolations);
-            throw new InvalidEntityDataException("Invalid article data", violations);
-        }
+        handleValidationErrors(errors);
         Article created = articleService.create(article);
         return ResponseEntity.created(
                 ServletUriComponentsBuilder.fromCurrentRequest().pathSegment("{id}")
@@ -60,22 +52,12 @@ public class ArticleController {
             throw new InvalidEntityDataException(
                     String.format("ID in URI: '%d' id different from ID in body: '%d'", id, article.getId()));
         }
-        if (errors.hasErrors()) {
-            List<String> fieldViolations = errors.getFieldErrors().stream()
-                    .map(err -> String.format("Invalid field value: %s='%s' : %s",
-                            err.getField(), err.getRejectedValue(), err.getDefaultMessage()))
-                    .collect(Collectors.toList());
-            List<String> violations = errors.getGlobalErrors().stream()
-                    .map(err -> err.getObjectName() + ": " + err.getDefaultMessage())
-                    .collect(Collectors.toList());
-            violations.addAll(fieldViolations);
-            throw new InvalidEntityDataException("Invalid article data", violations);
-        }
+        handleValidationErrors(errors);
         return articleService.update(article);
     }
 
     @DeleteMapping("/{id:[\\d]+}")
-    public Article updateArticle(@PathVariable("id") Long id) {
+    public Article deleteArticle(@PathVariable("id") Long id) {
         return articleService.deleteById(id);
     }
 
