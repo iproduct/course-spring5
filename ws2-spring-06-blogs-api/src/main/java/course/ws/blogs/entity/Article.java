@@ -31,7 +31,7 @@ public class Article {
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name="article_keywords")
     @NonNull
-    private Set<@Pattern(regexp = "^[\\w\\s]+$") String> keywords;
+    private Set<@Pattern(regexp = "^[\\w\\s\\+-]+$") String> keywords;
     @PastOrPresent
     private LocalDateTime created = LocalDateTime.now();
     @PastOrPresent
