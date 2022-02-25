@@ -1,17 +1,17 @@
 package course.ws.blogs.web;
 
-import course.ws.blogs.dto.ErrorResponse;
 import course.ws.blogs.entity.Article;
-import course.ws.blogs.exception.EntityNotFoundException;
 import course.ws.blogs.exception.InvalidEntityDataException;
 import course.ws.blogs.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/articles")
@@ -28,22 +28,32 @@ public class ArticleController {
        return articleService.findAllArticles();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{id:\\d+}")
     public Article  getArticleById(@PathVariable Long id) {
        return articleService.findArticleById(id);
     }
 
     @PostMapping
 //    @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<Article> addNewArticle(@RequestBody Article article) {
+    public ResponseEntity<Article> addNewArticle(@Valid @RequestBody Article article, Errors errors) {
+        if (errors.hasErrors()) {
+            List<String> filedViolations = errors.getFieldErrors().stream()
+                    .map(err ->
+                            String.format("%s = '%s': %s", err.getField(), err.getRejectedValue(), err.getDefaultMessage()))
+                    .collect(Collectors.toList());
+            List<String> violations = errors.getGlobalErrors().stream()
+                    .map(err -> err.toString()).collect(Collectors.toList());
+            violations.addAll(filedViolations);
+            throw new InvalidEntityDataException("Invalid article data", violations);
+        }
         Article newArticle = articleService.create(article);
         return ResponseEntity.created(
-                ServletUriComponentsBuilder.fromCurrentRequest().pathSegment("{id}")
-                        .buildAndExpand(newArticle.getId()).toUri())
+                        ServletUriComponentsBuilder.fromCurrentRequest().pathSegment("{id}")
+                                .buildAndExpand(newArticle.getId()).toUri())
                 .body(newArticle);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{id:\\d+}")
     public Article updateArticle(@RequestBody Article article, @PathVariable Long id) {
         if(!id.equals(article.getId())){
             throw new InvalidEntityDataException(
@@ -52,7 +62,7 @@ public class ArticleController {
         return articleService.update(article);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{id:\\d+}")
     public Article  deleteArticleById(@PathVariable Long id) {
         return articleService.deleteArticleById(id);
     }

@@ -50,7 +50,6 @@ public class InvalidEntityDataException extends RuntimeException {
 
     @Override
     public String getMessage() {
-        return super.getMessage() + " Violations: "
-                + violations.stream().collect(Collectors.joining(", "));
+        return super.getMessage();
     }
 }
