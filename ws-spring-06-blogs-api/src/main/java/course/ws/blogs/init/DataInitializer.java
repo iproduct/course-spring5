@@ -1,7 +1,10 @@
 package course.ws.blogs.init;
 
 import course.ws.blogs.entity.Article;
+import course.ws.blogs.entity.Role;
+import course.ws.blogs.entity.User;
 import course.ws.blogs.service.ArticleService;
+import course.ws.blogs.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
@@ -27,11 +30,19 @@ public class DataInitializer implements ApplicationRunner {
                     "Trayan Iliev", Set.of("spring", "boot", "intro"))
 
     );
+    private static final List<User> SAMPLE_USERS = List.of(
+            new User("Default", "Admin", "admin", "admin123", Role.ADMIN),
+            new User("Default", "Author", "author", "admin123", Role.AUTHOR),
+            new User("Default", "Reader", "reader", "reader123", Role.READER)
+    );
+
     private ArticleService articleService;
+    private UserService userService;
 
     @Autowired
-    public DataInitializer(ArticleService articleService) {
+    public DataInitializer(ArticleService articleService, UserService userService) {
         this.articleService = articleService;
+        this.userService = userService;
     }
 
     @Override
@@ -39,6 +50,10 @@ public class DataInitializer implements ApplicationRunner {
         if(articleService.getCount() == 0) {
             SAMPLE_ARTICLES.forEach(articleService::create);
             log.info("Sample articles created: {}", articleService.getAll());
+        }
+        if(userService.getCount() == 0) {
+            SAMPLE_USERS.forEach(userService::create);
+            log.info("Sample users created: {}", userService.getAll());
         }
     }
 }

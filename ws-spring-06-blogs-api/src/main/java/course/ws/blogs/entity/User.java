@@ -27,9 +27,12 @@ public class User {
     @NotNull
     @Size(min=8)
     private String password;
+
     @Enumerated(EnumType.STRING)
     private Role role = Role.READER;
+
     private boolean active = true;
+
     private LocalDateTime created = LocalDateTime.now();
     private LocalDateTime modified = LocalDateTime.now();
 
