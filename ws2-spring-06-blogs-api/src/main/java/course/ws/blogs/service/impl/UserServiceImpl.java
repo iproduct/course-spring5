@@ -6,11 +6,13 @@ import course.ws.blogs.exception.EntityNotFoundException;
 import course.ws.blogs.exception.InvalidEntityDataException;
 import course.ws.blogs.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Service
 @Transactional
 public class UserServiceImpl implements UserService {
     private UserRepository userRepo;
