@@ -1,5 +1,7 @@
 package course.ws.blogs.web;
 
+import course.ws.blogs.dto.Credentials;
+import course.ws.blogs.dto.LoginResponse;
 import course.ws.blogs.entity.Role;
 import course.ws.blogs.entity.User;
 import course.ws.blogs.exception.InvalidEntityDataException;
@@ -54,16 +56,13 @@ public class AuthController {
 
     @PostMapping("login")
     public LoginResponse login(@Valid @RequestBody Credentials credentials, Errors errors) {
-        if (errors.hasErrors()) {
-            throw new InvalidClientDataException("Invalid user data",
-                    errors.getAllErrors().stream().map(e -> e.toString()).collect(Collectors.toList()));
-        }
+        checkErrors(errors);
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
-                credentials.getUsername(), credentials.getPassword()
+                credentials.getEmail(), credentials.getPassword()
         ));
-        final User user = userService.findByUsername(credentials.getUsername());
+        final User user = userService.findUserByEmail(credentials.getEmail());
         final String token = jwtUtils.generateToken(user);
-        return new LoginResponse(user, token);
+        return new LoginResponse(token, user);
     }
 }
 
