@@ -7,6 +7,8 @@ import course.ws.blogs.exception.InvalidEntityDataException;
 import course.ws.blogs.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -50,6 +52,8 @@ public class UserServiceImpl implements UserService {
         if(user.getId() != null) {
             throw new InvalidEntityDataException("User ID should NOT be set when creating new user.");
         }
+        PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
+        user.setPassword(encoder.encode(user.getPassword()));
         var now = LocalDateTime.now();
         user.setCreated(now);
         user.setModified(now);

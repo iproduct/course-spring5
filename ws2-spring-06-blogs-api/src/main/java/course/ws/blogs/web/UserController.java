@@ -45,8 +45,6 @@ public class UserController {
                 .body(newUser);
     }
 
-
-
     @PutMapping("/{id:\\d+}")
     public User updateUser(@Valid @RequestBody User user, Errors errors, @PathVariable Long id) {
         if(!id.equals(user.getId())){
