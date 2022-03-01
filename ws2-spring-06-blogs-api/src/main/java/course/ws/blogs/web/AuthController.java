@@ -2,6 +2,7 @@ package course.ws.blogs.web;
 
 import course.ws.blogs.entity.Role;
 import course.ws.blogs.entity.User;
+import course.ws.blogs.exception.InvalidEntityDataException;
 import course.ws.blogs.service.UserService;
 import course.ws.blogs.web.jwt.JwtUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,8 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import javax.validation.Valid;
 import java.util.Set;
 import java.util.stream.Collectors;
+
+import static course.ws.blogs.util.ErrorHandlingUtils.checkErrors;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -36,17 +39,14 @@ public class AuthController {
     }
 
     @PostMapping("register")
-    public ResponseEntity<User> findByTitle(@Valid @RequestBody User userDto, Errors errors) {
-        if (errors.hasErrors()) {
-            throw new InvalidClientDataException("Invalid user data",
-                    errors.getAllErrors().stream().map(e -> e.toString()).collect(Collectors.toList()));
-        }
-        if (!userDto.getRoles().equals(Set.of(Role.READER))) {
-            throw new InvalidClientDataException(
+    public ResponseEntity<User> registerReader(@Valid @RequestBody User user, Errors errors) {
+        checkErrors(errors);
+        if (!user.getRole().equals(Role.READER)) {
+            throw new InvalidEntityDataException(
                     String.format("Role: '%s' is invalid. You can self-register only in 'READER' role.",
-                            userDto.getRoles()));
+                            user.getRole()));
         }
-        User created = userService.create(mapper.map(userDto, User.class));
+        User created = userService.create(user);
         return ResponseEntity.created(
                 ServletUriComponentsBuilder.fromCurrentRequest().pathSegment("{id}").build(created.getId())
         ).body(created);
