@@ -37,8 +37,8 @@ public class User implements UserDetails {
     @Email
 //    @Column(unique = true)
     private String email;
-    @NotBlank
-    @Size(min=8)
+//    @NotBlank
+//    @Size(min=8)
     @JsonProperty(access = WRITE_ONLY)
     private String password;
     @NotNull
