@@ -1,5 +1,7 @@
 package course.ws.blogs.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -35,6 +37,7 @@ public class User implements UserDetails {
     private String email;
     @NotBlank
     @Size(min=8)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
     @NotNull
     private Role role = Role.READER;
@@ -60,31 +63,37 @@ public class User implements UserDetails {
     }
 
     @Override
+    @JsonIgnore
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority("ROLE_" + getRole()));
     }
 
     @Override
+    @JsonIgnore
     public String getUsername() {
         return getEmail();
     }
 
     @Override
+    @JsonIgnore
     public boolean isAccountNonExpired() {
         return active;
     }
 
     @Override
+    @JsonIgnore
     public boolean isAccountNonLocked() {
         return active;
     }
 
     @Override
+    @JsonIgnore
     public boolean isCredentialsNonExpired() {
         return active;
     }
 
     @Override
+    @JsonIgnore
     public boolean isEnabled() {
         return active;
     }
