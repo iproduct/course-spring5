@@ -41,6 +41,9 @@ public class ArticleServiceImpl implements ArticleService {
         if(article.getId() != null) {
             throw new InvalidEntityDataException("New Article ID should be NULL.");
         }
+        var now = LocalDateTime.now();
+        article.setCreated(now);
+        article.setModified(now);
         return articleRepo.save(article);
     }
 
