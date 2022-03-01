@@ -13,6 +13,8 @@ import javax.validation.Valid;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static course.ws.blogs.util.ErrorHandlingUtils.checkErrors;
+
 @RestController
 @RequestMapping("/api/articles")
 public class ArticleController {
@@ -36,16 +38,7 @@ public class ArticleController {
     @PostMapping
 //    @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Article> addNewArticle(@Valid @RequestBody Article article, Errors errors) {
-        if (errors.hasErrors()) {
-            List<String> filedViolations = errors.getFieldErrors().stream()
-                    .map(err ->
-                            String.format("%s = '%s': %s", err.getField(), err.getRejectedValue(), err.getDefaultMessage()))
-                    .collect(Collectors.toList());
-            List<String> violations = errors.getGlobalErrors().stream()
-                    .map(err -> err.toString()).collect(Collectors.toList());
-            violations.addAll(filedViolations);
-            throw new InvalidEntityDataException("Invalid article data", violations);
-        }
+        checkErrors(errors);
         Article newArticle = articleService.create(article);
         return ResponseEntity.created(
                         ServletUriComponentsBuilder.fromCurrentRequest().pathSegment("{id}")
@@ -54,11 +47,12 @@ public class ArticleController {
     }
 
     @PutMapping("/{id:\\d+}")
-    public Article updateArticle(@RequestBody Article article, @PathVariable Long id) {
+    public Article updateArticle(@Valid @RequestBody Article article, Errors errors, @PathVariable Long id) {
         if(!id.equals(article.getId())){
             throw new InvalidEntityDataException(
                     String.format("ID='%s' in path differs from ID='%s' in message body", id, article.getId()));
         }
+        checkErrors(errors);
         return articleService.update(article);
     }
 
