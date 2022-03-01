@@ -15,6 +15,8 @@ import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
 
+import static com.fasterxml.jackson.annotation.JsonProperty.Access.WRITE_ONLY;
+
 @Entity
 @Table(name="users", indexes = @Index(name = "idx_user_email", columnList = "email", unique = true))
 //   uniqueConstraints = @UniqueConstraint(name = "uc_user_email", columnNames = "email"))
@@ -37,7 +39,7 @@ public class User implements UserDetails {
     private String email;
     @NotBlank
     @Size(min=8)
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @JsonProperty(access = WRITE_ONLY)
     private String password;
     @NotNull
     private Role role = Role.READER;

@@ -22,8 +22,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeRequests()
-                .antMatchers(GET, "/**").permitAll()
-                .antMatchers(POST, "/**").hasAnyRole(ADMIN.toString(), AUTHOR.toString());
+                .mvcMatchers(GET, "/api/articles","/api/articles/**").permitAll()
+                .mvcMatchers(GET, "/api/users","/api/users/**").hasRole(ADMIN.name())
+                .mvcMatchers("/**").hasAnyRole(ADMIN.name(), AUTHOR.name());
     }
 
     @Bean
