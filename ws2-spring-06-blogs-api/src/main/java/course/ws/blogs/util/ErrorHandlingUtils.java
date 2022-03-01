@@ -19,4 +19,12 @@ public class ErrorHandlingUtils {
             throw new InvalidEntityDataException("Invalid "+ errors.getObjectName() + " data", violations);
         }
     }
+
+    public static <T extends Throwable> T extractExceptionCauseFromClass(Throwable ex,
+                                                           Class<T> targetExceptionClass){
+        while(ex != null && !targetExceptionClass.isInstance(ex)) {
+            ex = ex.getCause();
+        }
+        return (T) ex;
+    }
 }

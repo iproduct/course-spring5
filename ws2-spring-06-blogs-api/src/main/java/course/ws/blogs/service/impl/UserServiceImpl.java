@@ -6,11 +6,15 @@ import course.ws.blogs.exception.EntityNotFoundException;
 import course.ws.blogs.exception.InvalidEntityDataException;
 import course.ws.blogs.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.time.LocalDateTime;
 import java.util.List;
+
+import static course.ws.blogs.util.ErrorHandlingUtils.extractExceptionCauseFromClass;
 
 @Service
 @Transactional
@@ -49,7 +53,17 @@ public class UserServiceImpl implements UserService {
         var now = LocalDateTime.now();
         user.setCreated(now);
         user.setModified(now);
-        return userRepo.save(user);
+        try {
+            return userRepo.save(user);
+        } catch(DataAccessException ex) {
+            SQLIntegrityConstraintViolationException icve =
+                    extractExceptionCauseFromClass(ex, SQLIntegrityConstraintViolationException.class);
+            if(icve != null) {
+               throw new InvalidEntityDataException(icve.getMessage());
+            }
+            throw ex;
+        }
+
     }
 
     @Override
