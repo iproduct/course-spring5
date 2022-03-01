@@ -20,7 +20,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
 
-import static course.ws.blogs.util.ErrorHandlingUtils.checkErrors;
+import static course.ws.blogs.util.ValidationErrorUtil.handleValidationErrors;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -40,7 +40,7 @@ public class AuthController {
 
     @PostMapping("register")
     public ResponseEntity<User> registerReader(@Valid @RequestBody User user, Errors errors) {
-        checkErrors(errors);
+        handleValidationErrors(errors);
         if (!user.getRole().equals(Role.READER)) {
             throw new InvalidEntityDataException(
                     String.format("Role: '%s' is invalid. You can self-register only in 'READER' role.",
@@ -54,11 +54,11 @@ public class AuthController {
 
     @PostMapping("login")
     public LoginResponse login(@Valid @RequestBody Credentials credentials, Errors errors) {
-        checkErrors(errors);
+        handleValidationErrors(errors);
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
-                credentials.getEmail(), credentials.getPassword()
+                credentials.getUsername(), credentials.getPassword()
         ));
-        final User user = userService.findUserByEmail(credentials.getEmail());
+        final User user = userService.getByUsername(credentials.getUsername());
         final String token = jwtUtils.generateToken(user);
         return new LoginResponse(token, user);
     }
