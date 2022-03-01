@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Transactional
 public class UserServiceImpl implements UserService {
     private UserRepository userRepo;
 
@@ -51,7 +52,20 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User update(User user) {
-        return null;
+        var old = findUserById(user.getId());
+        if(!user.getEmail().equals(old.getEmail())){
+            throw new InvalidEntityDataException(
+                    String.format("User email can not be changed from '%s' to '%s'.",
+                            old.getEmail(), user.getEmail()));
+        }
+        if(user.getPassword() != null){
+            throw new InvalidEntityDataException(
+                    String.format("User password can not be changed using this endpoint."));
+        }
+        user.setPassword(old.getPassword());
+        user.setCreated(old.getCreated());
+        user.setModified(LocalDateTime.now());
+        return userRepo.save(user);
     }
 
     @Override

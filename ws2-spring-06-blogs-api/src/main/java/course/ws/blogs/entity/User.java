@@ -4,14 +4,13 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.*;
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name="users", indexes = @Index(name = "idx_user_email", columnList = "email", unique = true))
+//   uniqueConstraints = @UniqueConstraint(name = "uc_user_email", columnNames = "email"))
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @NoArgsConstructor
@@ -27,6 +26,7 @@ public class User {
     private String lastName;
     @NotBlank
     @Email
+//    @Column(unique = true)
     private String email;
     @NotBlank
     @Size(min=8)

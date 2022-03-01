@@ -8,6 +8,7 @@ import java.time.LocalDateTime;
 import java.util.Set;
 
 @Entity
+@Table(name="articles")
 @Data
 @NoArgsConstructor
 @RequiredArgsConstructor
