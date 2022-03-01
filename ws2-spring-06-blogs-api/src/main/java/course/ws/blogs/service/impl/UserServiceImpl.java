@@ -70,12 +70,14 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User deleteUserById(Long id) {
-        return null;
+        var old = findUserById(id);
+        userRepo.deleteById(id);
+        return old;
     }
 
     @Override
     @Transactional(readOnly = true)
     public long count() {
-        return 0;
+        return userRepo.count();
     }
 }

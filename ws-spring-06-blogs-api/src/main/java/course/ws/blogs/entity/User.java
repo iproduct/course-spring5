@@ -1,5 +1,9 @@
 package course.ws.blogs.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIncludeProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
@@ -26,6 +30,7 @@ public class User {
     private String username;
     @NotNull
     @Size(min=8)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
 
     @Enumerated(EnumType.STRING)
@@ -33,7 +38,10 @@ public class User {
 
     private boolean active = true;
 
+    @JsonFormat(pattern="dd.MM.yyyy HH:mm:ss", timezone="Europe/Sofia")
     private LocalDateTime created = LocalDateTime.now();
+
+    @JsonFormat(pattern="dd.MM.yyyy HH:mm:ss", timezone="Europe/Sofia")
     private LocalDateTime modified = LocalDateTime.now();
 
     public User(String firstName, String lastName, String username, String password, Role role) {

@@ -6,6 +6,9 @@ import course.ws.blogs.entity.User;
 import course.ws.blogs.exception.EntityNotFoundException;
 import course.ws.blogs.exception.InvalidEntityDataException;
 import course.ws.blogs.service.UserService;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
+import org.springframework.security.crypto.password.DelegatingPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -43,6 +46,8 @@ public class UserServiceImpl implements UserService {
                     String.format("User %d: '%s' should not have ID during creation.",
                             user.getId(), user.getUsername()));
         }
+        PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
+        user.setPassword(encoder.encode(user.getPassword()));
         var now = LocalDateTime.now();
         user.setCreated(now);
         user.setModified(now);
