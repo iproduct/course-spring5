@@ -63,7 +63,6 @@ public class UserServiceImpl implements UserService {
             }
             throw ex;
         }
-
     }
 
     @Override
