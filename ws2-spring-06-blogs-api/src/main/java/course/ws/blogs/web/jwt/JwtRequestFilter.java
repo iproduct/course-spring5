@@ -1,8 +1,7 @@
 package course.ws.blogs.web.jwt;
 
-import course.hibernate.spring.entity.User;
-import course.hibernate.spring.service.UserService;
-import course.hibernate.spring.util.JwtUtils;
+import course.ws.blogs.entity.User;
+import course.ws.blogs.service.UserService;
 import io.jsonwebtoken.ExpiredJwtException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,7 +52,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         }
 
         if(username != null) {
-            User user = userService.findByUsername(username);
+            User user = userService.findUserByEmail(username);
             if(jwtUtils.validateToken(jwtToken, user)) {
                 UsernamePasswordAuthenticationToken authenticationToken =
                         new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
