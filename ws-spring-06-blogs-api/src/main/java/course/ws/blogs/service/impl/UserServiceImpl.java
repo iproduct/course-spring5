@@ -60,6 +60,9 @@ public class UserServiceImpl implements UserService {
         if(!old.getUsername().equals(user.getUsername())) {
             throw new InvalidEntityDataException("Username can not be changed.");
         }
+        if(user.getPassword() != null) {
+            throw new InvalidEntityDataException("User password can not be changed using 'update' endpoint.");
+        }
         user.setPassword(old.getPassword());
         user.setCreated(old.getCreated());
         user.setModified(LocalDateTime.now());
