@@ -1,7 +1,9 @@
 package course.ws.blogs.service.impl;
 
 import course.ws.blogs.dao.ArticleRepository;
+import course.ws.blogs.dao.UserRepository;
 import course.ws.blogs.entity.Article;
+import course.ws.blogs.entity.User;
 import course.ws.blogs.exception.EntityNotFoundException;
 import course.ws.blogs.exception.InvalidEntityDataException;
 import course.ws.blogs.service.ArticleService;
@@ -16,10 +18,12 @@ import java.util.List;
 @Transactional
 public class ArticleServiceImpl implements ArticleService {
     private ArticleRepository articleRepo;
+    private UserRepository userRepo;
 
     @Autowired
-    public ArticleServiceImpl(ArticleRepository articleRepo) {
+    public ArticleServiceImpl(ArticleRepository articleRepo, UserRepository userRepo) {
         this.articleRepo = articleRepo;
+        this.userRepo = userRepo;
     }
 
     @Override
@@ -44,7 +48,12 @@ public class ArticleServiceImpl implements ArticleService {
         var now = LocalDateTime.now();
         article.setCreated(now);
         article.setModified(now);
-        return articleRepo.save(article);
+        article = articleRepo.save(article);
+        User author = userRepo.findById(article.getAuthor().getId()).orElseThrow(()->
+                new EntityNotFoundException("Author not found."));
+        var articles = author.getArticles();
+        articles.add(article); // Don't forget to set the second end of the relation (if needed)!
+        return article;
     }
 
     @Override

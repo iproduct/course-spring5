@@ -13,9 +13,11 @@ import java.util.Set;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include
     private Long id;
     @NonNull
     @NotBlank
@@ -25,10 +27,13 @@ public class Article {
     @NotEmpty
     @Size(min=15, max=2048)
     private String content;
+
     @NonNull
     @NotNull
-    @Pattern(regexp = "^([A-Za-z]+).*\\s([A-Za-z]+)$", message = "Invalid author name - at least two names should be given")
-    private String author;
+    @ManyToOne
+    @JoinColumn(name = "author_id")
+    private User author;
+
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name="article_keywords")
     @NonNull
