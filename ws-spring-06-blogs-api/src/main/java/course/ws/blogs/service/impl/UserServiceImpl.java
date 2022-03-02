@@ -10,11 +10,13 @@ import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.DelegatingPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
+@Transactional
 public class UserServiceImpl implements UserService {
     private UserRepository userRepo;
 
@@ -23,17 +25,20 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public List<User> getAll() {
         return userRepo.findAll();
     }
 
     @Override
+    @Transactional(readOnly = true)
     public User getById(Long id) {
         return userRepo.findById(id).orElseThrow(() ->
                 new EntityNotFoundException("User with ID ='" + id + "' does not exist."));
     }
 
     @Override
+    @Transactional(readOnly = true)
     public User getByUsername(String username) {
         return userRepo.findByUsername(username).orElseThrow(() ->
                 new EntityNotFoundException("User with username ='" + username + "' does not exist."));
@@ -77,6 +82,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public long getCount() {
         return userRepo.count();
     }
