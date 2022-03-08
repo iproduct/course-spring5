@@ -42,4 +42,12 @@ public class Article {
         this.author = author;
         this.keywords = keywords;
     }
+
+    public Article(Long id, String title, String content, User author, Set<String> keywords) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.author = author;
+        this.keywords = keywords;
+    }
 }
