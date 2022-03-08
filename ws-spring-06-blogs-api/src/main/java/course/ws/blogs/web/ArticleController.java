@@ -2,12 +2,14 @@ package course.ws.blogs.web;
 
 import course.ws.blogs.dto.ArticleCreateDto;
 import course.ws.blogs.dto.ArticleDetailDto;
+import course.ws.blogs.dto.ArticleUpdateDto;
 import course.ws.blogs.dto.mapping.ArticleMapper;
 import course.ws.blogs.entity.Article;
 import course.ws.blogs.entity.User;
 import course.ws.blogs.exception.InvalidEntityDataException;
 import course.ws.blogs.exception.UnauthorizedException;
 import course.ws.blogs.service.ArticleService;
+import course.ws.blogs.util.UserUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -20,8 +22,7 @@ import java.security.Principal;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static course.ws.blogs.dto.mapping.ArticleMapper.mapArticleCreateDtoToAtricle;
-import static course.ws.blogs.dto.mapping.ArticleMapper.mapArticleToArticleDetailDto;
+import static course.ws.blogs.dto.mapping.ArticleMapper.*;
 import static course.ws.blogs.util.UserUtil.getUser;
 import static course.ws.blogs.util.ValidationErrorUtil.handleValidationErrors;
 
@@ -37,7 +38,8 @@ public class ArticleController {
 
     @GetMapping
     public List<ArticleDetailDto> getAllArticles() {
-        return articleService.getAll();
+        return articleService.getAll().stream().map(ArticleMapper::mapArticleToArticleDetailDto)
+                .collect(Collectors.toList());
     }
 
     @GetMapping("/{id:[\\d]+}")
@@ -63,13 +65,14 @@ public class ArticleController {
 
 
     @PutMapping("/{id}")
-    public Article updateArticle(@Valid @RequestBody Article article, Errors errors, @PathVariable("id") Long id) {
-        if (!id.equals(article.getId())) {
+    public ArticleDetailDto updateArticle(@Valid @RequestBody ArticleUpdateDto articleDto, Errors errors, @PathVariable("id") Long id) {
+        if (!id.equals(articleDto.getId())) {
             throw new InvalidEntityDataException(
-                    String.format("ID in URI: '%d' id different from ID in body: '%d'", id, article.getId()));
+                    String.format("ID in URI: '%d' id different from ID in body: '%d'", id, articleDto.getId()));
         }
         handleValidationErrors(errors);
-        return articleService.update(article);
+        Article article = mapArticleUpdateDtoToAtricle(articleDto);
+        return mapArticleToArticleDetailDto(articleService.update(article));
     }
 
     @DeleteMapping("/{id:[\\d]+}")
