@@ -9,14 +9,17 @@ import course.ws.blogs.exception.InsufficientPrivilegiesException;
 import course.ws.blogs.exception.InvalidEntityDataException;
 import course.ws.blogs.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.security.RolesAllowed;
 import java.time.LocalDateTime;
 import java.util.List;
 
 import static course.ws.blogs.entity.Role.ADMIN;
+import static course.ws.blogs.entity.Role.AUTHOR;
 import static course.ws.blogs.util.UserUtils.getUser;
 
 @Service
@@ -62,6 +65,8 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
+//    @PreAuthorize("authentication.principal.id == #article.author.id or hasRole('ADMIN')")
+    @RolesAllowed({"AUTHOR", "ADMIN"})
     public Article update(Article article) {
         Article old = findArticleById(article.getId());
         User authenticated = getUser(SecurityContextHolder.getContext().getAuthentication());

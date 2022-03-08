@@ -71,8 +71,9 @@ public class ArticleController {
                     String.format("ID='%s' in path differs from ID='%s' in message body", id, articleDto.getId()));
         }
         checkErrors(errors);
+        Article article = mapArticleUpdateDtoToArticle(articleDto);
         return mapArticleToArticleDetailDto(
-                articleService.update(mapArticleUpdateDtoToArticle(articleDto))
+                articleService.update(article)
         );
     }
 
