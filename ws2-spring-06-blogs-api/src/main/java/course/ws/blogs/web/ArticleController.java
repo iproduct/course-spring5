@@ -3,6 +3,7 @@ package course.ws.blogs.web;
 import course.ws.blogs.entity.Article;
 import course.ws.blogs.exception.InvalidEntityDataException;
 import course.ws.blogs.service.ArticleService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.Errors;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
+import java.security.Principal;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -17,6 +19,7 @@ import static course.ws.blogs.util.ErrorHandlingUtils.checkErrors;
 
 @RestController
 @RequestMapping("/api/articles")
+@Slf4j
 public class ArticleController {
     private ArticleService articleService;
 
@@ -37,7 +40,9 @@ public class ArticleController {
 
     @PostMapping
 //    @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<Article> addNewArticle(@Valid @RequestBody Article article, Errors errors) {
+    public ResponseEntity<Article> addNewArticle(@Valid @RequestBody Article article, Errors errors,
+                                                 Principal principal) {
+        log.info("Logged User: {}", principal.getName());
         checkErrors(errors);
         Article newArticle = articleService.create(article);
         return ResponseEntity.created(
