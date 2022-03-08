@@ -43,8 +43,8 @@ public class ArticleController {
     }
 
     @GetMapping("/{id:[\\d]+}")
-    public Article getArticle(@PathVariable("id") Long id) {
-        return articleService.getById(id);
+    public ArticleDetailDto getArticle(@PathVariable("id") Long id) {
+        return mapArticleToArticleDetailDto(articleService.getById(id));
     }
 
     @PostMapping
