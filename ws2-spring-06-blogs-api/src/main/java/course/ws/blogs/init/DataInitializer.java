@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -19,6 +20,7 @@ import static course.ws.blogs.entity.Role.*;
 
 @Component
 @Slf4j
+@Profile("!test")
 public class DataInitializer implements ApplicationRunner {
     public static final List<User> DEFAULT_USERS = List.of(
             new User("Default", "Admin", "admin@mydomain.com", "admin", ADMIN),
