@@ -20,8 +20,9 @@ public class ArticleDtoMappers {
     public static ArticleDetailDto mapArticleToArticleDetailDto(Article source) {
         ArticleDetailDto result = new ArticleDetailDto();
         BeanUtils.copyProperties(source, result);
-        result.setAuthor(
-                source.getAuthor().getFirstName() + " " +  source.getAuthor().getLastName()
+        result.setAuthor(source.getAuthor() != null ?
+                source.getAuthor().getFirstName() + " " +  source.getAuthor().getLastName() :
+                "No author"
         );
         return result;
     }

@@ -12,7 +12,7 @@ public class UserUtils {
             throw new UnautorizedException("Unauthorised. No authenticated user.");
         }
         UsernamePasswordAuthenticationToken token = (UsernamePasswordAuthenticationToken) principal;
-        if(!(token.getPrincipal() instanceof User)) {
+        if(!(token.getPrincipal() instanceof User || (User)token.getPrincipal() == null)) {
             throw new UnautorizedException("Unauthorised. No authenticated user.");
         }
         User user = (User)token.getPrincipal();

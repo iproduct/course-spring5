@@ -2,6 +2,7 @@ package course.ws.blogs.web;
 
 import course.ws.blogs.dto.ErrorResponse;
 import course.ws.blogs.exception.EntityNotFoundException;
+import course.ws.blogs.exception.InsufficientPrivilegiesException;
 import course.ws.blogs.exception.InvalidEntityDataException;
 import course.ws.blogs.exception.UnautorizedException;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -35,6 +36,12 @@ public class ExceptionHandlerControllerAdvice {
     public ResponseEntity<ErrorResponse> handleUnautorizedException(UnautorizedException ex){
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
                 .body(new ErrorResponse(HttpStatus.UNAUTHORIZED.value(), ex.getMessage()));
+    }
+
+    @ExceptionHandler
+    public ResponseEntity<ErrorResponse> handleInsufficientPrivilegiesException(InsufficientPrivilegiesException ex){
+        return ResponseEntity.status(HttpStatus.FORBIDDEN)
+                .body(new ErrorResponse(HttpStatus.FORBIDDEN.value(), ex.getMessage()));
     }
 
 }

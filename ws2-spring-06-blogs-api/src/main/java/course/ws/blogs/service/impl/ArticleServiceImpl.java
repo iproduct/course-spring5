@@ -5,6 +5,7 @@ import course.ws.blogs.dao.UserRepository;
 import course.ws.blogs.entity.Article;
 import course.ws.blogs.entity.User;
 import course.ws.blogs.exception.EntityNotFoundException;
+import course.ws.blogs.exception.InsufficientPrivilegiesException;
 import course.ws.blogs.exception.InvalidEntityDataException;
 import course.ws.blogs.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import static course.ws.blogs.entity.Role.ADMIN;
 import static course.ws.blogs.util.UserUtils.getUser;
 
 @Service
@@ -62,7 +64,12 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public Article update(Article article) {
         Article old = findArticleById(article.getId());
-        User user = getUser(SecurityContextHolder.getContext().getAuthentication());
+        User authenticated = getUser(SecurityContextHolder.getContext().getAuthentication());
+        if(!old.getAuthor().getId().equals(authenticated.getId()) && !authenticated.getRole().equals(ADMIN)) {
+            throw new InsufficientPrivilegiesException(
+                    "You have are not allowed to edit atricle '"+ article.getTitle() +"'");
+        }
+        article.setAuthor(old.getAuthor());
         article.setCreated(old.getCreated());
         article.setModified(LocalDateTime.now());
         return articleRepo.save(article);
