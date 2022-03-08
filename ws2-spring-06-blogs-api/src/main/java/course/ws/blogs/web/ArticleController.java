@@ -1,10 +1,15 @@
 package course.ws.blogs.web;
 
 import course.ws.blogs.dto.ArticleCreateDto;
+import course.ws.blogs.dto.ArticleDetailDto;
 import course.ws.blogs.entity.Article;
+import course.ws.blogs.entity.User;
 import course.ws.blogs.exception.InvalidEntityDataException;
+import course.ws.blogs.exception.UnautorizedException;
 import course.ws.blogs.service.ArticleService;
 import lombok.extern.slf4j.Slf4j;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.Errors;
@@ -23,10 +28,12 @@ import static course.ws.blogs.util.ErrorHandlingUtils.checkErrors;
 @Slf4j
 public class ArticleController {
     private ArticleService articleService;
+    private ModelMapper mapper;
 
     @Autowired
-    public ArticleController(ArticleService articleService) {
+    public ArticleController(ArticleService articleService, ModelMapper mapper) {
         this.articleService = articleService;
+        this.mapper = mapper;
     }
 
     @GetMapping
@@ -41,15 +48,23 @@ public class ArticleController {
 
     @PostMapping
 //    @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<ArticleCreateDto> addNewArticle(@Valid @RequestBody Article article, Errors errors,
+    public ResponseEntity<ArticleDetailDto> addNewArticle(@Valid @RequestBody ArticleCreateDto articleDto, Errors errors,
                                                           Principal principal) {
-        log.info("Logged User: {}", principal.getName());
         checkErrors(errors);
+        Article article = mapper.map(articleDto, Article.class);
+        if(principal == null || !(principal instanceof User)) {
+            throw new UnautorizedException("Unauthorised. No authenticated user.");
+        }
+        article.setAuthor((User)principal);
+        log.info("Logged User: {}", principal.getName());
+//        Article article1 = new Article();
+//        BeanUtils.copyProperties(articleDto, article1);
+
         Article newArticle = articleService.create(article);
         return ResponseEntity.created(
                         ServletUriComponentsBuilder.fromCurrentRequest().pathSegment("{id}")
                                 .buildAndExpand(newArticle.getId()).toUri())
-                .body(newArticle);
+                .body(mapper.map(newArticle, ArticleDetailDto.class));
     }
 
     @PutMapping("/{id:\\d+}")
