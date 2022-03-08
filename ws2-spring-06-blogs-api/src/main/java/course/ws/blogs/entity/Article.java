@@ -29,7 +29,6 @@ public class Article {
     private String content;
 
     @NonNull
-    @NotNull
     @ManyToOne
     @JoinColumn(name = "author_id")
     private User author;

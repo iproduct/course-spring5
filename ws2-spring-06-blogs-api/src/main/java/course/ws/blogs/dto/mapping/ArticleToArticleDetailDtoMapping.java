@@ -6,7 +6,7 @@ import course.ws.blogs.entity.Article;
 import org.modelmapper.PropertyMap;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class ArticleToArticleDetailDtoMapping extends PropertyMapConfigurerSupport<Article, ArticleDetailDto> {
 
     @Override
