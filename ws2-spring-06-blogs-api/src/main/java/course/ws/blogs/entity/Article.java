@@ -41,4 +41,12 @@ public class Article {
     private LocalDateTime created = LocalDateTime.now();
     @PastOrPresent
     private LocalDateTime modified = LocalDateTime.now();
+
+    public Article(Long id, @NonNull String title, @NonNull String content, @NonNull User author, @NonNull Set<@Pattern(regexp = "^[\\w\\s\\+-]+$") String> keywords) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.author = author;
+        this.keywords = keywords;
+    }
 }
