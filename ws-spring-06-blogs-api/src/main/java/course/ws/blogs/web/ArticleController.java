@@ -21,6 +21,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static course.ws.blogs.dto.mapping.ArticleMapper.mapArticleCreateDtoToAtricle;
+import static course.ws.blogs.dto.mapping.ArticleMapper.mapArticleToArticleDetailDto;
 import static course.ws.blogs.util.UserUtil.getUser;
 import static course.ws.blogs.util.ValidationErrorUtil.handleValidationErrors;
 
@@ -35,7 +36,7 @@ public class ArticleController {
     }
 
     @GetMapping
-    public List<Article> getAllArticles() {
+    public List<ArticleDetailDto> getAllArticles() {
         return articleService.getAll();
     }
 
@@ -56,7 +57,7 @@ public class ArticleController {
         return ResponseEntity.created(
                 ServletUriComponentsBuilder.fromCurrentRequest().pathSegment("{id}")
                         .buildAndExpand(created.getId()).toUri()
-        ).body(created);
+        ).body(mapArticleToArticleDetailDto(created));
     }
 
 
