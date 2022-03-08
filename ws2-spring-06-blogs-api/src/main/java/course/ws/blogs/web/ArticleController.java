@@ -1,5 +1,6 @@
 package course.ws.blogs.web;
 
+import course.ws.blogs.dto.ArticleCreateDto;
 import course.ws.blogs.entity.Article;
 import course.ws.blogs.exception.InvalidEntityDataException;
 import course.ws.blogs.service.ArticleService;
@@ -40,8 +41,8 @@ public class ArticleController {
 
     @PostMapping
 //    @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<Article> addNewArticle(@Valid @RequestBody Article article, Errors errors,
-                                                 Principal principal) {
+    public ResponseEntity<ArticleCreateDto> addNewArticle(@Valid @RequestBody Article article, Errors errors,
+                                                          Principal principal) {
         log.info("Logged User: {}", principal.getName());
         checkErrors(errors);
         Article newArticle = articleService.create(article);
