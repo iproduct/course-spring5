@@ -2,6 +2,8 @@ package course.ws.blogs.web;
 
 import course.ws.blogs.dto.ArticleCreateDto;
 import course.ws.blogs.dto.ArticleDetailDto;
+import course.ws.blogs.dto.ArticleUpdateDto;
+import course.ws.blogs.dto.mapping.ArticleDtoMappers;
 import course.ws.blogs.entity.Article;
 import course.ws.blogs.entity.User;
 import course.ws.blogs.exception.InvalidEntityDataException;
@@ -16,9 +18,9 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import javax.validation.Valid;
 import java.security.Principal;
 import java.util.List;
+import java.util.stream.Collectors;
 
-import static course.ws.blogs.dto.mapping.ArticleDtoMappers.mapArticleCreateDtoToArticle;
-import static course.ws.blogs.dto.mapping.ArticleDtoMappers.mapArticleToArticleDetailDto;
+import static course.ws.blogs.dto.mapping.ArticleDtoMappers.*;
 import static course.ws.blogs.util.ErrorHandlingUtils.checkErrors;
 import static course.ws.blogs.util.UserUtils.getUser;
 
@@ -34,13 +36,15 @@ public class ArticleController {
     }
 
     @GetMapping
-    public List<Article>  getAllArticles() {
-       return articleService.findAllArticles();
+    public List<ArticleDetailDto>  getAllArticles() {
+       return articleService.findAllArticles().stream()
+               .map(ArticleDtoMappers::mapArticleToArticleDetailDto)
+               .collect(Collectors.toList());
     }
 
     @GetMapping("/{id:\\d+}")
-    public Article  getArticleById(@PathVariable Long id) {
-       return articleService.findArticleById(id);
+    public ArticleDetailDto  getArticleById(@PathVariable Long id) {
+       return mapArticleToArticleDetailDto(articleService.findArticleById(id));
     }
 
     @PostMapping
@@ -61,13 +65,15 @@ public class ArticleController {
 
 
     @PutMapping("/{id:\\d+}")
-    public Article updateArticle(@Valid @RequestBody Article article, Errors errors, @PathVariable Long id) {
-        if(!id.equals(article.getId())){
+    public ArticleDetailDto updateArticle(@Valid @RequestBody ArticleUpdateDto articleDto, Errors errors, @PathVariable Long id) {
+        if(!id.equals(articleDto.getId())){
             throw new InvalidEntityDataException(
-                    String.format("ID='%s' in path differs from ID='%s' in message body", id, article.getId()));
+                    String.format("ID='%s' in path differs from ID='%s' in message body", id, articleDto.getId()));
         }
         checkErrors(errors);
-        return articleService.update(article);
+        return mapArticleToArticleDetailDto(
+                articleService.update(mapArticleUpdateDtoToArticle(articleDto))
+        );
     }
 
     @DeleteMapping("/{id:\\d+}")

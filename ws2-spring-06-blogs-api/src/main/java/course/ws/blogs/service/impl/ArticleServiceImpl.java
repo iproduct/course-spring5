@@ -8,11 +8,14 @@ import course.ws.blogs.exception.EntityNotFoundException;
 import course.ws.blogs.exception.InvalidEntityDataException;
 import course.ws.blogs.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
+
+import static course.ws.blogs.util.UserUtils.getUser;
 
 @Service
 @Transactional
@@ -59,6 +62,7 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public Article update(Article article) {
         Article old = findArticleById(article.getId());
+        User user = getUser(SecurityContextHolder.getContext().getAuthentication());
         article.setCreated(old.getCreated());
         article.setModified(LocalDateTime.now());
         return articleRepo.save(article);
