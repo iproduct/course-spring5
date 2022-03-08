@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be1c92a1-ceba-4d42-a5f5-e75e7604e336" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08-rest-jpa-2021-lab15/src/main/java/course/spring/restjpa/util/ExceptionHandlingUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07-hibernate-intro-lab/.idea/dataSources/becc3ac4-09be-49bf-bb21-1cbac41df5d2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/07-hibernate-intro-lab/.idea/dataSources/becc3ac4-09be-49bf-bb21-1cbac41df5d2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/07-restmvc-hibernate-boot-jta/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/08-rest-jpa-2021-lab15/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/08-rest-jpa-2021-lab15/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +86,7 @@
       <workItem from="1637165311739" duration="5000" />
       <workItem from="1639650865837" duration="598000" />
       <workItem from="1643111110001" duration="309000" />
+      <workItem from="1646393696463" duration="707000" />
     </task>
     <servers />
   </component>
