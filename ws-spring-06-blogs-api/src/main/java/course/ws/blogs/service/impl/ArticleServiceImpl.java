@@ -72,7 +72,7 @@ public class ArticleServiceImpl implements ArticleService {
         // method level programmatic security
         if(!old.getAuthor().equals(user) && !user.getRole().equals(ADMIN)){
             throw new ForbiddenException(
-                "To update the article '"+ article.getTitle() +"' you should be author or Administrator");
+                "To update the article '"+ article.getTitle() +"' you should be author or administrator");
         }
         article.setAuthor(old.getAuthor());
         article.setCreated(old.getCreated());

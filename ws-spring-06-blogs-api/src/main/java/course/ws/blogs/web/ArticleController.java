@@ -62,8 +62,6 @@ public class ArticleController {
         ).body(mapArticleToArticleDetailDto(created));
     }
 
-
-
     @PutMapping("/{id}")
     public ArticleDetailDto updateArticle(@Valid @RequestBody ArticleUpdateDto articleDto, Errors errors, @PathVariable("id") Long id) {
         if (!id.equals(articleDto.getId())) {
