@@ -1,0 +1,25 @@
+
+server:
+  application:
+    name: REST MVC Demo
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring_blogs_2022?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  #JPA Properties
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+        enable_lazy_load_no_trans: true
+    #        generate_statistics: true
+    #        metadata_builder_contributor: course.hibernate.spring.util.SqlFunctionsMetadataBuilderContributor
+    hibernate:
+      ddl-auto: update
+    open-in-view: false

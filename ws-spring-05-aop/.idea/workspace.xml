@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807ffab5-5f7a-4ae3-9523-bcd68be47063" name="Default Changelist" comment="" />
+    <list default="true" id="807ffab5-5f7a-4ae3-9523-bcd68be47063" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/ws-spring-05-aop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/ws-spring-05-aop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ws-spring-05-spel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws2-spring-02-core-annotation/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ws2-spring-02-core-annotation/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws2-spring-02-core-annotation/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ws2-spring-02-core-annotation/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws2-spring-03-core-xml/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ws2-spring-03-core-xml/.idea/compiler.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +56,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="modificationStamps">
       <map>
@@ -61,9 +74,6 @@
         <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
       </map>
     </option>
-  </component>
-  <component name="KotlinMultiplatform">
-    <allAvailableExecutables />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -86,22 +96,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="go.format.on.save.advertiser.fired" value="true" />
-    <property name="go.formatter.settings.were.checked" value="true" />
-    <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Pulsar/git/pulsar-demos/pulsar-basic-demo" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.23772103" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;1096dc303d6041dade43c0613d03c54a&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="coredemo.qualifiers" />
@@ -223,6 +227,8 @@
       <workItem from="1645023038051" duration="3647000" />
       <workItem from="1645193160140" duration="2782000" />
       <workItem from="1645605641013" duration="4101000" />
+      <workItem from="1652248190135" duration="1370000" />
+      <workItem from="1652271985896" duration="8000" />
     </task>
     <task id="LOCAL-00001" summary="demo projects renamed">
       <created>1645023126204</created>
@@ -299,6 +305,10 @@
     <MESSAGE value="demo projects renamed" />
     <MESSAGE value="aop demo added" />
     <option name="LAST_COMMIT_MESSAGE" value="aop demo added" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
   </component>
   <component name="masterDetails">
     <states>
