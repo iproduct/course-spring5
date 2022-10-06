@@ -61,7 +61,7 @@ logging:
     root: INFO
     course:
       spring:
-        blogs: DEBUG
+        demo: DEBUG
     org:
       springframework:
         test:
