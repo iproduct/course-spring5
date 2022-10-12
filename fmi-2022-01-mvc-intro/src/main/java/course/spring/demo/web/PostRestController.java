@@ -1,9 +1,10 @@
 package course.spring.demo.web;
 
+import course.spring.demo.dao.PostRepository;
 import course.spring.demo.entity.Post;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Set;
@@ -11,15 +12,19 @@ import java.util.Set;
 @RestController
 @RequestMapping("/api/posts")
 public class PostRestController {
-    public static  final List<Post> posts = List.of(
-            new Post(1L, "Novelties in Spring 5", "WebFlux is new reactive web API in Spring 5 ...",
-                    Set.of("spring", "novelty", "webflux")),
-            new Post(2L, "Spring Data is Easy", "Spring Data generates your queris automatically ...",
-                    Set.of("spring data", "spring", "intro")),
-            new Post(3L, "Spring Boot", "Spring Boot allows easy configuration of your project ...")
-    );
+
+    @Autowired
+    private PostRepository postsRepo;
+
     @GetMapping
     public List<Post> getAllPosts() {
-        return posts;
+        return postsRepo.findAll();
     }
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public Post addNewPost(@RequestBody Post post) {
+        return null;
+    }
+
 }

@@ -21,7 +21,7 @@ spring:
     #        generate_statistics: true
     #        metadata_builder_contributor: course.hibernate.spring.util.SqlFunctionsMetadataBuilderContributor
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     #open-in-view: false
 #    mongodb:
 #      host: localhost
