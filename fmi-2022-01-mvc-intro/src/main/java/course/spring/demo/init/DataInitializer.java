@@ -27,7 +27,7 @@ public class DataInitializer implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         if(postsRepo.count() == 0) {
-            SAMPLE_POSTS.forEach(postsRepo::save);
+            postsRepo.saveAll(SAMPLE_POSTS);
         }
     }
 }
