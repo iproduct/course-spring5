@@ -1,0 +1,15 @@
+GET http://localhost:8080/api/posts
+Accept: application/json
+
+###
+POST http://localhost:8080/api/posts
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title":"Web Service Clients",
+  "content":"Alternatives to Postman ...",
+  "tags":["spring","rest","test"]
+}
+
+###

@@ -11,7 +11,6 @@ import java.util.List;
 import java.util.Set;
 
 @Component
-@Slf4j
 public class DataInitializer implements CommandLineRunner {
     public static  final List<Post> SAMPLE_POSTS = List.of(
             new Post("Novelties in Spring 5", "WebFlux is new reactive web API in Spring 5 ...",
