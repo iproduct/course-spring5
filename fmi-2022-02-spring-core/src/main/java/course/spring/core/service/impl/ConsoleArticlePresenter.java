@@ -19,6 +19,6 @@ public class ConsoleArticlePresenter implements ArticleConsumer {
 
     @Override
     public void consume() {
-        provider.getArticles().forEach(article -> log.info(article.toString()));
+        provider.getArticles().forEach(System.out::println);
     }
 }

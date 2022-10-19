@@ -10,7 +10,6 @@ import java.util.Set;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @AllArgsConstructor
-@ToString
 public class Article {
     private Long id;
     @NonNull
