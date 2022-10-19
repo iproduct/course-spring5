@@ -1,0 +1,14 @@
+org/iproduct/spring/webmvc/model/Article.java
+ org.iproduct.spring.webmvc.model.Article
+org/iproduct/spring/webmvc/initializer/ArticlesWebInitializer.java
+ org.iproduct.spring.webmvc.initializer.ArticlesWebInitializer
+org/iproduct/spring/webmvc/service/MockArticleRepository.java
+ org.iproduct.spring.webmvc.service.MockArticleRepository
+org/iproduct/spring/webmvc/config/SpringRootConfig.java
+ org.iproduct.spring.webmvc.config.SpringRootConfig
+org/iproduct/spring/webmvc/service/ArticleRepository.java
+ org.iproduct.spring.webmvc.service.ArticleRepository
+org/iproduct/spring/webmvc/web/ArticleConroller.java
+ org.iproduct.spring.webmvc.web.ArticleConroller
+org/iproduct/spring/webmvc/config/SpringWebConfig.java
+ org.iproduct.spring.webmvc.config.SpringWebConfig

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:annotation-config />
+    <context:component-scan base-package="course.spring.coredemo" />
+    <context:property-placeholder location="classpath:articles.properties" />
+    <bean id="provider" class="course.spring.coredemo.dao.impl.MockArticleProvider" />
+    <bean id="author" class="course.spring.coredemo.model.Author" scope="prototype" p:name="Trayan Iliev" />
+    <bean id="alternativeProvider" class="course.spring.coredemo.dao.impl.AlternativeArticleProvider"
+          init-method="init" destroy-method="cleanup" p:articleTitles="Post A, Post B, Post C, Post D">
+<!--            <property name="articleTitles" >-->
+<!--                <value>Post A, Post B, Post C, Post D</value>-->
+<!--            </property>-->
+    </bean>
+    <bean id="presenter" class="course.spring.coredemo.service.impl.ConsoleArticlePresenter" />
+<!--          factory-method="createInstance" c:_0-ref="provider"/>-->
+<!--          p:provider-ref="alternativeProvider"/>-->
+<!--        <constructor-arg index="0" type="course.spring.coredemo.dao.ArticleProvider" name="provider" ref="alternativeProvider" />-->
+<!--        <constructor-arg index="0" type="course.spring.coredemo.dao.ArticleProvider" name="provider">-->
+<!--            <ref bean="alternativeProvider" />-->
+<!--        </constructor-arg>-->
+<!--    </bean>-->
+
+</beans>

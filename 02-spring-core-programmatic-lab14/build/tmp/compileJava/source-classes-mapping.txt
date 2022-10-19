@@ -1,0 +1,22 @@
+course/spring/coredemo/service/impl/ConsoleArticlePresenter.java
+ course.spring.coredemo.service.impl.ConsoleArticlePresenter
+course/spring/coredemo/qualifiers/AlternativeProvider.java
+ course.spring.coredemo.qualifiers.AlternativeProvider
+course/spring/coredemo/model/Article.java
+ course.spring.coredemo.model.Article
+course/spring/coredemo/model/Author.java
+ course.spring.coredemo.model.Author
+course/spring/coredemo/dao/ArticleProvider.java
+ course.spring.coredemo.dao.ArticleProvider
+course/spring/coredemo/service/ArticlePresenter.java
+ course.spring.coredemo.service.ArticlePresenter
+course/spring/coredemo/qualifiers/DefaultProvider.java
+ course.spring.coredemo.qualifiers.DefaultProvider
+course/spring/coredemo/dao/impl/MockArticleProvider.java
+ course.spring.coredemo.dao.impl.MockArticleProvider
+course/spring/coredemo/dao/impl/AlternativeArticleProvider.java
+ course.spring.coredemo.dao.impl.AlternativeArticleProvider
+course/spring/coredemo/SpringXmlConfigDI.java
+ course.spring.coredemo.SpringXmlConfigDI
+course/spring/coredemo/config/ProgrammaticAnnotationConfig.java
+ course.spring.coredemo.config.ProgrammaticAnnotationConfig
