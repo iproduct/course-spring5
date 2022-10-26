@@ -10,7 +10,7 @@ import java.util.Set;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @AllArgsConstructor
-public class Article {
+public class Article implements Identifiable<Long> {
     private Long id;
     @NonNull
     private String title;
