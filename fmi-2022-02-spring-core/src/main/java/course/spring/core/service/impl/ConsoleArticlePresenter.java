@@ -12,8 +12,13 @@ import org.springframework.stereotype.Service;
 public class ConsoleArticlePresenter implements ArticleConsumer {
     private ArticleProvider provider;
 
+
+//    public ConsoleArticlePresenter(ArticleProvider provider) {
+//        this.provider = provider;
+//    }
+
     @Autowired
-    public ConsoleArticlePresenter(ArticleProvider provider) {
+    public void setProvider(ArticleProvider provider) {
         this.provider = provider;
     }
 
