@@ -1,12 +1,15 @@
 package course.spring.core.service.impl;
 
+import course.spring.core.dao.qualifiers.MockProvider;
 import course.spring.core.model.Article;
 import course.spring.core.service.ArticleProvider;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Set;
-
+//@Qualifier("mockProvider")
+@MockProvider
 @Service
 public class MockArticleProvider implements ArticleProvider {
     public static final List<Article> SAMPLE_ARTICLES = List.of(

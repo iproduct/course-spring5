@@ -1,19 +1,25 @@
 package course.spring.core.dao.impl;
 
 import course.spring.core.dao.IdGenerator;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.util.concurrent.atomic.AtomicLong;
 
+@Component
+@PropertySource("classpath:article.properties")
 public class LongIdGenerator implements IdGenerator<Long> {
     private AtomicLong sequence;
+    @Value("${initialArticleId}")
+    private long initialId;
 
-    public LongIdGenerator() {
-        this.sequence =  new AtomicLong();
+    @PostConstruct
+    public void init() {
+        this.sequence =  new AtomicLong(initialId);
     }
 
-    public LongIdGenerator(long initialValue) {
-        this.sequence = new AtomicLong(initialValue);
-    }
 
     @Override
     public Long getNextId() {
