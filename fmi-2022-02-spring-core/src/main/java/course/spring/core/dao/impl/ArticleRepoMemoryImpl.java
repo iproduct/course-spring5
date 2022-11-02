@@ -10,10 +10,10 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Repository
+//@Repository
 public class ArticleRepoMemoryImpl extends RepositoryImpl<Article, Long> implements ArticleRepository  {
 
-    @Autowired
+//    @Autowired
     public ArticleRepoMemoryImpl(IdGenerator<Long> idGen) {
         super(idGen);
     }

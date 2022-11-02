@@ -13,8 +13,8 @@ import java.util.List;
 import java.util.Set;
 
 //@Qualifier("repoProvider")
-@RepoProvider
-@Service
+//@RepoProvider
+//@Service
 public class RepositoryArticleProvider implements ArticleProvider, InitializingBean {
     public static final List<Article> SAMPLE_REPO_ARTICLES = List.of(
             new Article("New in Spring Data", "WebFlux is here ...",
@@ -35,7 +35,7 @@ public class RepositoryArticleProvider implements ArticleProvider, InitializingB
         SAMPLE_REPO_ARTICLES.forEach(articleRepo::create);
     }
 
-    @Autowired
+//    @Autowired
     public void setArticleRepo(ArticleRepository articleRepo) {
         this.articleRepo = articleRepo;
     }

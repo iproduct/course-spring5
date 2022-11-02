@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Set;
 //@Qualifier("mockProvider")
-@MockProvider
-@Service
+//@MockProvider
+//@Service
 public class MockArticleProvider implements ArticleProvider {
     public static final List<Article> SAMPLE_ARTICLES = List.of(
             new Article(1L, "New in Spring 5", "WebFlux is here ...",
