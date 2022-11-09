@@ -15,7 +15,7 @@ import java.util.Set;
 //@Qualifier("repoProvider")
 //@RepoProvider
 //@Service
-public class RepositoryArticleProvider implements ArticleProvider, InitializingBean {
+public class RepositoryArticleProvider implements ArticleProvider {
     public static final List<Article> SAMPLE_REPO_ARTICLES = List.of(
             new Article("New in Spring Data", "WebFlux is here ...",
             "https://st.depositphotos.com/1642482/1904/i/950/depositphotos_19049237-stock-photo-leaf.jpg",
@@ -30,8 +30,7 @@ public class RepositoryArticleProvider implements ArticleProvider, InitializingB
 
     private ArticleRepository articleRepo;
 
-    @Override
-    public void afterPropertiesSet() throws Exception {
+    public void init() throws Exception {
         SAMPLE_REPO_ARTICLES.forEach(articleRepo::create);
     }
 

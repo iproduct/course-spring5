@@ -8,4 +8,27 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:annotation-config />
+    <context:component-scan base-package="course.spring.core" />
+    <context:property-placeholder location="classpath:article.properties" />
+    <bean id="idGenerator" class="course.spring.core.dao.impl.LongIdGenerator" scope="prototype"
+          init-method="init">
+        <property name="initialId">
+            <value>${initialGeneratedId}</value>
+        </property>
+    </bean>
+    <bean id="articleRepository" class="course.spring.core.dao.impl.ArticleRepoMemoryImpl">
+        <constructor-arg index="0" name="idGen" type="course.spring.core.dao.IdGenerator">
+            <ref bean="idGenerator"/>
+        </constructor-arg>
+    </bean>
+    <bean id="repoArticleProvider" class="course.spring.core.service.impl.RepositoryArticleProvider"
+          init-method="init">
+        <property name="articleRepo">
+            <ref bean="articleRepository"/>
+        </property>
+    </bean>
+    <bean id="articleConsumer" class="course.spring.core.service.impl.ConsoleArticlePresenter">
+        <constructor-arg index="0" ref="repoArticleProvider"/>
+    </bean>
 </beans>

@@ -16,8 +16,8 @@ public class ConsoleArticlePresenter implements Consumer {
 //    private List<ArticleProvider> providers;
 
 
-    @Autowired
-    public ConsoleArticlePresenter(@RepoProvider ArticleProvider provider) {
+//    @Autowired
+    public ConsoleArticlePresenter(ArticleProvider provider) {
         this.provider = provider;
     }
 

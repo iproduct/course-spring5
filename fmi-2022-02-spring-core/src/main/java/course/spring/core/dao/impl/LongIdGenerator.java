@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import java.util.concurrent.atomic.AtomicLong;
 
-//@Component
+//@Component("idGenerator")
 //@Scope("prototype")
 //@PropertySource("classpath:article.properties")
 public class LongIdGenerator implements IdGenerator<Long> {
@@ -21,7 +21,15 @@ public class LongIdGenerator implements IdGenerator<Long> {
 //    @Autowired
 //    private Environment environment;
 
-    @PostConstruct
+    public long getInitialId() {
+        return initialId;
+    }
+
+    public void setInitialId(long initialId) {
+        this.initialId = initialId;
+    }
+
+//    @PostConstruct
     public void init() {
 //        initialId = Integer.parseInt(environment.getProperty("initialGeneratedId"));
         this.sequence =  new AtomicLong(initialId);
