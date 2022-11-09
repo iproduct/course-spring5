@@ -22,13 +22,12 @@
             <ref bean="idGenerator"/>
         </constructor-arg>
     </bean>
-    <bean id="repoArticleProvider" class="course.spring.core.service.impl.RepositoryArticleProvider"
-          init-method="init">
-        <property name="articleRepo">
-            <ref bean="articleRepository"/>
-        </property>
-    </bean>
-    <bean id="articleConsumer" class="course.spring.core.service.impl.ConsoleArticlePresenter">
-        <constructor-arg index="0" ref="repoArticleProvider"/>
-    </bean>
+<!--    <bean id="repoArticleProvider" class="course.spring.core.service.impl.RepositoryArticleProvider"-->
+<!--          init-method="init" p:articleRepo-ref="articleRepository" />-->
+    <bean id="mockArticleProvider" class="course.spring.core.service.impl.MockArticleProvider"
+          factory-method="createArticleProvider" />
+<!--    <bean id="articleConsumerFactory" class="course.spring.core.service.impl.ArticleConsumerFactory"-->
+<!--        c:provider-ref="mockArticleProvider"/>-->
+<!--    <bean id="articleConsumer" class="course.spring.core.service.impl.ConsoleArticlePresenter"-->
+<!--          factory-bean="articleConsumerFactory" factory-method="createArticleConsumer" />-->
 </beans>

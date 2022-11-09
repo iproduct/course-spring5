@@ -4,6 +4,7 @@ import course.spring.core.dao.qualifiers.MockProvider;
 import course.spring.core.model.Article;
 import course.spring.core.service.ArticleProvider;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -23,6 +24,11 @@ public class MockArticleProvider implements ArticleProvider {
         "https://st.depositphotos.com/1642482/1904/i/950/depositphotos_19049237-stock-photo-leaf.jpg",
                 Set.of("spring", "reactor", "webflux"), "Trayan Iliev")
             );
+
+    private MockArticleProvider() {}
+    public static ArticleProvider createArticleProvider() {
+        return new MockArticleProvider();
+    }
     @Override
     public List<Article> getArticles() {
         return SAMPLE_ARTICLES;
