@@ -20,12 +20,15 @@ public class Post {
     @NonNull
     private String content;
 
+    @NonNull
+    private String imageUrl;
     @ElementCollection
     private Set<String> tags = Set.of();
 
-    public Post(@NonNull String title, @NonNull String content, Set<String> tags) {
+    public Post(@NonNull String title, @NonNull String content, @NonNull String imageUrl, Set<String> tags) {
         this.title = title;
         this.content = content;
+        this.imageUrl = imageUrl;
         this.tags = tags;
     }
 
