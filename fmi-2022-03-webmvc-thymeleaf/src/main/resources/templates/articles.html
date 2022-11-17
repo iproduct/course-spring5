@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="container">
+    <h3>Posts List</h3>
+    <table>
+        <thead>
+        <th>Number</th>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Tags</th>
+        <th>Created</th>
+        <th>Modified</th>
+        <th>Image</th>
+        </thead>
+        <tbody>
+        <tr th:each="row, rowStat : ${posts}">
+            <td th:text="${rowStat.index + 1}"></td>
+            <td th:text="${row.title}"></td>
+            <td th:text="${row.content}"></td>
+            <td th:text="${row.tags}"></td>
+            <td th:text="${row.created}"></td>
+            <td th:text="${row.modified}"></td>
+            <td>
+                <img class="img-thumbnail" th:src="${row.imageUrl}" >
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
