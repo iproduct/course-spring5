@@ -38,3 +38,8 @@ h3 {
 .img-thumbnail {
     width: 250px;
 }
+
+.active {
+    color: black;
+    font-weight: bold;
+}
