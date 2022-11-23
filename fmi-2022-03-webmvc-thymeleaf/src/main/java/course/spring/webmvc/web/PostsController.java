@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/posts")
@@ -18,8 +19,9 @@ public class PostsController {
     }
 
     @GetMapping
-    public String getArticles(Model model) {
-        model.addAttribute("posts", postsService.getAllPosts());
-        return "articles";
+    public ModelAndView getArticles() {
+        var modelAndView = new ModelAndView("posts");
+        modelAndView.addObject("posts", postsService.getAllPosts());
+        return modelAndView;
     }
 }
