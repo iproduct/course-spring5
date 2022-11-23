@@ -26,6 +26,10 @@ h3 {
     padding-right: 50px;
 }
 
+.language-form {
+    min-width: 500px;
+}
+
 .menu-label {
     padding-right: 0.8rem;
 }
