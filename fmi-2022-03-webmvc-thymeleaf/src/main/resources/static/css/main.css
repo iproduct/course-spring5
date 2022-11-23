@@ -22,24 +22,14 @@ h3 {
     padding-left: .8rem;
 }
 
-.search-form {
-    padding-right: 50px;
-}
-
-.language-form {
-    min-width: 500px;
-}
-
 .menu-label {
     padding-right: 0.8rem;
 }
-
 
 .img-thumbnail {
     width: 250px;
 }
 
 .active {
-    color: black;
     font-weight: bold;
 }

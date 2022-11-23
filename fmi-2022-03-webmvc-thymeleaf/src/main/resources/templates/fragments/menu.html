@@ -1,55 +1,48 @@
 <div th:fragment="menu(path)" xmlns:th="http://www.thymeleaf.org">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-            <img src="/img/logo.png" alt="IPT logo"/>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="/img/logo.png" alt="IPT logo"/>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item" th:class="${path == 'posts'}? 'nav-item active' : 'nav-item'">
-                    <a class="nav-link" th:href="@{/posts}">Posts</a>
-                </li>
-                <li class="nav-item" th:class="${path == 'post-form'}? 'nav-item active' : 'nav-item'">
-                    <a class="nav-link" href="/posts/post-form">Add New Post</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
-            <form class="search-form row row-cols-lg-auto g-3 align-items-center">
-                <div class="">
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                </div>
-                <div class="col-6">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </div>
-            </form>
-            <form class="language-form row row-cols-lg-auto g-3 align-items-center">
-                <div class="row mb-6 language-selector">
-                    <label for="locales" class="col-sm-3 col-form-label">Language</label>
-                    <div class="col-sm-6">
-                        <select id="locales" class="form-control">">
-                            <option value="en-US" th:selected="${#locale.toLanguageTag() == 'en-US'}">EN</option>
-                            <option value="bg-BG" th:selected="${#locale.toLanguageTag() == 'bg-BG'}">BG</option>
-                        </select>
-                    </div>
-                </div>
-            </form>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item" th:class="${path == 'posts'}? 'nav-item active' : 'nav-item'">
+                        <a class="nav-link" th:href="@{/posts}">Posts</a>
+                    </li>
+                    <li class="nav-item" th:class="${path == 'post-form'}? 'nav-item active' : 'nav-item'">
+                        <a class="nav-link" href="/posts/post-form">Add New Post</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="search-form d-flex me-4" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <form class="language-form d-flex">
+                    <label for="locales" class="pe-2 col-form-label">Language</label>
+                    <select id="locales" class="form-control">">
+                        <option value="en-US" th:selected="${#locale.toLanguageTag() == 'en-US'}">EN</option>
+                        <option value="bg-BG" th:selected="${#locale.toLanguageTag() == 'bg-BG'}">BG</option>
+                    </select>
+                </form>
+            </div>
         </div>
     </nav>
 </div>
