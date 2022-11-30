@@ -9,6 +9,8 @@ import java.util.List;
 
 public interface PostsService {
     List<Post> getAllPosts();
+    Post getPostById(Long id);;
     Post add(Post post);
     Post update(Post post);
+    Post deleteById(Long id);
 }
