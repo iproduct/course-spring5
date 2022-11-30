@@ -2,13 +2,17 @@ package course.spring.webmvc.web;
 
 import course.spring.webmvc.entity.Post;
 import course.spring.webmvc.service.PostsService;
+import course.spring.webmvc.util.TagsEditor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.beans.propertyeditors.StringArrayPropertyEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
@@ -17,8 +21,10 @@ import javax.validation.Valid;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.util.Optional;
+import java.util.Set;
 import java.util.regex.Pattern;
 
 @Controller
@@ -27,6 +33,12 @@ import java.util.regex.Pattern;
 public class PostsController {
     private static final String UPLOADS_DIR = "tmp";
     private PostsService postsService;
+
+    @InitBinder
+    public void initBinder(WebDataBinder binder) {
+        binder.registerCustomEditor(Set.class, new TagsEditor());
+    }
+
 
     @Autowired
     public PostsController(PostsService postsService) {
@@ -62,7 +74,7 @@ public class PostsController {
     }
 
     @PostMapping("/post-form")
-    public String addArticle(@Valid @ModelAttribute ("article") Post post,
+    public String addArticle(@Valid @ModelAttribute ("post") Post post,
                              BindingResult errors,
                              @RequestParam("file") MultipartFile file,
                              Model model) {
@@ -74,10 +86,10 @@ public class PostsController {
             if (!file.isEmpty() && file.getOriginalFilename().length() > 0) {
                 if (Pattern.matches("\\w+\\.(jpg|png)", file.getOriginalFilename())) {
                     handleMultipartFile(file);
-                    post.setImageUrl(file.getOriginalFilename());
+                    post.setImageUrl("uploads/" + file.getOriginalFilename());
                 } else {
                     model.addAttribute("fileError", "Submit picture [.jpg, .png]");
-                    return "article-form";
+                    return "posts-form";
                 }
             }
             if (post.getId() == null) {

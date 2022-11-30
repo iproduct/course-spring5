@@ -14,7 +14,7 @@
                         <a class="nav-link" th:href="@{/posts}">Posts</a>
                     </li>
                     <li class="nav-item" th:class="${path == 'post-form'}? 'nav-item active' : 'nav-item'">
-                        <a class="nav-link" href="/posts/post-form">Add New Post</a>
+                        <a class="nav-link" th:href="@{/posts/post-form}">Add New Post</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"

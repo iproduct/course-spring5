@@ -43,12 +43,13 @@
                 <label path="tags" class="col-sm-2 col-form-label">Tags</label>
                 <div class="col-sm-10">
                     <input type="text" th:field="*{tags}"
-                           class="form-control" title="Article content" th:errorclass="field-error">
+                           class="form-control" title="Post tags" th:errorclass="field-error">
                 </div>
             </div>
-            <p th:if="${#fields.hasErrors('content')}" th:errors="*{content}"
+            <p th:if="${#fields.detailedErrors()}"
+            th:text="${#fields.detailedErrors()}"
                class="errors alert alert-danger offset-sm-2 col-sm-10">
-                Content should not be blank.
+                Tags should be valid
             </p>
 
             <input type="hidden" th:field="*{imageUrl}" title="Post picture URL">
@@ -72,7 +73,7 @@
                 <div class="offset-sm-2 col-sm-10">
                     <button type="submit" class="btn btn-primary" id="submit" name="submit" value="submit">Submit</button>
                     <button type="reset" class="btn btn-danger">Reset</button>
-                    <a th:href="${'/articles'}" class="btn btn-secondary" id="cancel">Cancel</a>
+                    <a th:href="${'/posts'}" class="btn btn-secondary" id="cancel">Cancel</a>
                 </div>
             </div>
 
