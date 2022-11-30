@@ -13,7 +13,7 @@ public class TagsEditor extends PropertyEditorSupport {
         public String getAsText() {
             Set<String> tags = (Set<String>) getValue();
 
-            return tags == null ? "" : tags.stream().collect(Collectors.joining());
+            return tags == null ? "" : tags.stream().collect(Collectors.joining(", "));
         }
 
         @Override

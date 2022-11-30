@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0001d11-907d-4bf0-af89-4f1ebef4eac9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fmi-2022-03-webmvc-thymeleaf/src/main/java/course/spring/webmvc/web/PostsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2022-03-webmvc-thymeleaf/src/main/java/course/spring/webmvc/web/PostsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fmi-2022-03-webmvc-thymeleaf/src/main/java/course/spring/webmvc/entity/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2022-03-webmvc-thymeleaf/src/main/java/course/spring/webmvc/entity/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fmi-2022-03-webmvc-thymeleaf/src/main/resources/templates/post-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2022-03-webmvc-thymeleaf/src/main/resources/templates/post-form.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

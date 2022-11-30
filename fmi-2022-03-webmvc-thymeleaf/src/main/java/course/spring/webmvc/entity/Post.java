@@ -4,6 +4,7 @@ import lombok.*;
 import org.hibernate.validator.constraints.URL;
 
 import javax.persistence.*;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
@@ -33,7 +34,8 @@ public class Post {
 //    @NotBlank
     private String imageUrl;
     @ElementCollection
-    private Set<@Pattern(regexp = "\\w+") String> tags = Set.of();
+    @Valid
+    private Set<@Pattern(regexp = "\\w+", message="tags should contain only word characters: a-z,A-Z,_,0-9") String> tags = Set.of();
 
     public Post(@NonNull String title, @NonNull String content, @NonNull String imageUrl, Set<String> tags) {
         this.title = title;
