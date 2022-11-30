@@ -39,7 +39,6 @@ public class PostsController {
         binder.registerCustomEditor(Set.class, new TagsEditor());
     }
 
-
     @Autowired
     public PostsController(PostsService postsService) {
         this.postsService = postsService;
