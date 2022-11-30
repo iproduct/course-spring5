@@ -9,4 +9,6 @@ import java.util.List;
 
 public interface PostsService {
     List<Post> getAllPosts();
+    Post add(Post post);
+    Post update(Post post);
 }

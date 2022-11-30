@@ -25,6 +25,7 @@ import java.util.regex.Pattern;
 @RequestMapping("/posts")
 @Slf4j
 public class PostsController {
+    private static final String UPLOADS_DIR = "tmp";
     private PostsService postsService;
 
     @Autowired
@@ -60,6 +61,54 @@ public class PostsController {
         return  "post-form";
     }
 
+    @PostMapping("/post-form")
+    public String addArticle(@Valid @ModelAttribute ("article") Post post,
+                             BindingResult errors,
+                             @RequestParam("file") MultipartFile file,
+                             Model model) {
+        if(errors.hasErrors()) {
+            model.addAttribute("fileError", null);
+            return "post-form";
+        } else {
+            log.info("POST-ing  new Post: " + post);
+            if (!file.isEmpty() && file.getOriginalFilename().length() > 0) {
+                if (Pattern.matches("\\w+\\.(jpg|png)", file.getOriginalFilename())) {
+                    handleMultipartFile(file);
+                    post.setImageUrl(file.getOriginalFilename());
+                } else {
+                    model.addAttribute("fileError", "Submit picture [.jpg, .png]");
+                    return "article-form";
+                }
+            }
+            if (post.getId() == null) {
+                log.info("ADD New Article: " + post);
+                postsService.add(post);
+            } else {
+                post.setModified(LocalDateTime.now());
+                log.info("UPDATE Article: " + post);
+                postsService.update(post);
+            }
+            return "redirect:/posts";
+        }
+    }
 
+    private void handleMultipartFile(MultipartFile file) {
+        String name = file.getOriginalFilename();
+        long size = file.getSize();
+        log.info("File: " + name + ", Size: " + size);
+        try {
+            File currentDir = new File(UPLOADS_DIR);
+            if(!currentDir.exists()) {
+                currentDir.mkdirs();
+            }
+            String path = currentDir.getAbsolutePath() + "/" + file.getOriginalFilename();
+            path = new File(path).getAbsolutePath();
+            log.info(path);
+            File f = new File(path);
+            FileCopyUtils.copy(file.getInputStream(), new FileOutputStream(f));
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
 
 }

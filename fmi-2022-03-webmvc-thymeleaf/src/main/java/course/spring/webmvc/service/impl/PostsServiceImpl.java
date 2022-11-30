@@ -21,4 +21,14 @@ public class PostsServiceImpl implements PostsService {
         return postRepo.findAll();
     }
 
+    @Override
+    public Post add(Post post) {
+        return postRepo.save(post);
+    }
+
+    @Override
+    public Post update(Post post) {
+        return postRepo.save(post);
+    }
+
 }
