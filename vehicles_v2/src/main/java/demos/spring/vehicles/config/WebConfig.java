@@ -24,6 +24,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("redirect:/offers");
+        registry.addViewController("/error").setViewName("");
     }
 
     @Override
