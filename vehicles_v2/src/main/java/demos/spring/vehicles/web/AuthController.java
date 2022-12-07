@@ -81,6 +81,7 @@ public class AuthController {
             String errors = "Invalid username or password.";
             redirectAttributes.addFlashAttribute("username", username);
             redirectAttributes.addFlashAttribute("errors", errors);
+            redirectAttributes.addAttribute("redirectUrl", redirectUrl);
             return "redirect:login";
         } else {
             session.setAttribute("user", loggedUser);
