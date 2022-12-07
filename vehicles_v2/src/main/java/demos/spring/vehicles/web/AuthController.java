@@ -74,7 +74,8 @@ public class AuthController {
     public String login(@RequestParam("username") String username,
                         @RequestParam("password") String password,
                         @ModelAttribute("redirectUrl") String redirectUrl,
-                        RedirectAttributes redirectAttributes, HttpSession session) {
+                        RedirectAttributes redirectAttributes,
+                        HttpSession session) {
         User loggedUser = authService.login(username, password);
         if (loggedUser == null) {
             String errors = "Invalid username or password.";
@@ -92,8 +93,9 @@ public class AuthController {
     }
 
     @RequestMapping("/logout")
-    public String logout(HttpSession session) {
+    public String logout(HttpSession session) { // OR SessionStatus status
         session.invalidate();
+//        status.setComplete();
         return "redirect:/";
     }
 
