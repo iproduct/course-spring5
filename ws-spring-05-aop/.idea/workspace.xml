@@ -5,15 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="807ffab5-5f7a-4ae3-9523-bcd68be47063" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/ws-spring-05-aop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/ws-spring-05-aop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/Spring_2018_4.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_aspectj_aspectjrt_1_9_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_aspectj_aspectjweaver_1_9_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_projectlombok_lombok_1_18_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_simple_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_aop_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_aspects_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_beans_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_context_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_core_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_expression_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_jcl_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/ws-spring-05-aop.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/ws-spring-05-aop.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/ws-spring-05-aop.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/ws-spring-05-aop.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ws-spring-05-spel/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ws-spring-05-spel/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws2-spring-02-core-annotation/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ws2-spring-02-core-annotation/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws2-spring-02-core-annotation/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ws2-spring-02-core-annotation/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws2-spring-03-core-xml/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ws2-spring-03-core-xml/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../ws-spring-05-spel/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/build/classes/java/main/coredemo/AnnotationConfigDI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/build/classes/java/main/coredemo/domain/AnotherArticleProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/build/classes/java/main/coredemo/domain/ArticlePresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/build/classes/java/main/coredemo/domain/ArticleProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/build/classes/java/main/coredemo/domain/ConsoleArticlePresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/build/classes/java/main/coredemo/domain/MockArticleProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/build/classes/java/main/coredemo/domain/PresenterFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/build/classes/java/main/coredemo/model/Article.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/build/classes/java/main/coredemo/spel/Article.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/build/classes/java/main/coredemo/spel/ArticlePresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/build/classes/java/main/coredemo/spel/ArticleProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/build/classes/java/main/coredemo/spel/Car.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/build/classes/java/main/coredemo/spel/CarPark.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/build/classes/java/main/coredemo/spel/CircularDependencyBeanA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/build/classes/java/main/coredemo/spel/CircularDependencyBeanB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/build/classes/java/main/coredemo/spel/ConsoleArticlePresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/build/classes/java/main/coredemo/spel/Engine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/build/classes/java/main/coredemo/spel/MockArticleProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/build/classes/java/main/coredemo/spel/SpelDemo.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,6 +261,7 @@
       <workItem from="1645605641013" duration="4101000" />
       <workItem from="1652248190135" duration="1370000" />
       <workItem from="1652271985896" duration="8000" />
+      <workItem from="1670955707681" duration="1027000" />
     </task>
     <task id="LOCAL-00001" summary="demo projects renamed">
       <created>1645023126204</created>
