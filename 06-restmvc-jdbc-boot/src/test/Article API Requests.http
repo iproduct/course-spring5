@@ -8,7 +8,6 @@ Cookie: JSESSIONID=2ADD254B485148E5FF510B0694A5CF63
 ###
 POST http://localhost:8080/api/articles
 Content-Type: application/json
-Cookie: JSESSIONID=2ADD254B485148E5FF510B0694A5CF63
 
 {
   "authorId": 2,

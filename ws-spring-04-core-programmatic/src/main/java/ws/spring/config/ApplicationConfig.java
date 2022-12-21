@@ -31,22 +31,19 @@ public class ApplicationConfig {
         return new ArticleRepositoryMemoryImpl();
     }
 
-    @Bean(name = "repoProvider", initMethod = "init")
-    @RepositoryProvider
-    public RepositoryArticleProvider repoArticleProvider() {
-        RepositoryArticleProvider provider = new RepositoryArticleProvider();
-        provider.setArticleRepository(articleRepository());
-        return provider;
-    }
+//    @Bean(name = "repoProvider", initMethod = "init")
+//    @RepositoryProvider
+//    public RepositoryArticleProvider repoArticleProvider() {
+//        RepositoryArticleProvider provider = new RepositoryArticleProvider();
+//        provider.setArticleRepository(articleRepository());
+//        return provider;
+//    }
 
 //    @Bean(name = "fromPropertyFileProvider")
 //    @RepositoryProvider
 //    @Qualifier("fromPropertyProvider")
 //    public FromPropertyFileArticleProvider fromPropertyFileArticleProvider() {
 //        return new FromPropertyFileArticleProvider();
-//                Arrays.asList(titles).stream().map(
-//                        title -> new Article(System.nanoTime() & (new Random().nextLong()),
-//                                title, title + " content ...")).collect(Collectors.toList()));
 //    }
 
     @Bean(name = "presenter")
