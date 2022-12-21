@@ -32,7 +32,7 @@ public class SpelDemo {
 
         ExpressionParser expressionParser = new SpelExpressionParser(config);
 
-        double value = expressionParser.parseExpression("((42 div 5) % 3 + 1) * 10").getValue(Double.class);
+        int value = expressionParser.parseExpression("((42 div 5) % 3 + 1) * 10").getValue(Integer.class);
         System.out.println(value);
 
         StandardEvaluationContext context = new StandardEvaluationContext();
@@ -61,10 +61,12 @@ public class SpelDemo {
                 .getValue(context, String.class);
         System.out.println(springThirdTitle);
 
-        List<Book> springBooks = expressionParser.parseExpression(
-                "@provider.articles.?[#this.title matches '.*Spring.*'].![new coredemo.spel.Article(#this['title'], #this['content'])]")
+        List<Article> springBooks = expressionParser.parseExpression(
+//                        "@provider.articles.?[title matches '.*Spring.*'].![title]")
+                "@provider.articles.?[#this.title matches '.*Spring.*'].![new coredemo.spel.Article(#this['title'], #this['content'] + 'NEW!!!')]")
                 .getValue(context, List.class);
-        System.out.println(springBooks);
+        System.out.println();
+        springBooks.forEach(System.out::println);
 
         //collections and properties
         CarPark park = new CarPark();
@@ -79,14 +81,15 @@ public class SpelDemo {
 
         StandardEvaluationContext carParkContext = new StandardEvaluationContext(park);
         List<String> result4 = expressionParser.parseExpression(
-                "cars.![model + ': ' + model.length() ]")
+//                "cars.![model + ': ' + model.length() ]")
+                "cars.![model + ': ' + make ]")
                 .getValue(carParkContext, List.class);
         System.out.println(result4);
 
         // #this
         List<Integer> primes = new ArrayList<Integer>();
         primes.addAll(Arrays.asList(2,3,5,7,11,13,17));
-//
+
         carParkContext.setVariable("primes", primes);
         List<Integer> result5 = expressionParser.parseExpression(
                 "#primes.?[#this > 4]")
@@ -103,6 +106,7 @@ public class SpelDemo {
                 "}");
 
         List listOfMaps = (List) teslaExpr.getValue(context4);
+        System.out.println();
         System.out.println(listOfMaps);
         context4.setVariable("names", listOfMaps);
 //        EvaluationContext context6 = new StandardEvaluationContext(listOfMaps);

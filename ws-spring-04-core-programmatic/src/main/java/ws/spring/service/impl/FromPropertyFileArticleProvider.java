@@ -2,6 +2,7 @@ package ws.spring.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 import ws.spring.model.Article;
@@ -17,18 +18,20 @@ import java.util.stream.Collectors;
 @Service
 @Qualifier("fromPropertyProvider")
 public class FromPropertyFileArticleProvider implements ArticleProvider {
+    @Value("${blogs.titles}")
+    private String[] titles;
     private List<Article> articles;
-    private Environment environment;
+//    private Environment environment;
 
-    @Autowired
-    public FromPropertyFileArticleProvider(Environment environment) {
-        this.environment = environment;
-    }
+//    @Autowired
+//    public FromPropertyFileArticleProvider(Environment environment) {
+//        this.environment = environment;
+//    }
 
     @PostConstruct
     public void init(){
-       String titles = environment.getProperty("blogs.titles");
-       articles = Arrays.asList(titles.split(", ")).stream().map(
+//       String titles = environment.getProperty("blogs.titles");
+       articles = Arrays.stream(titles).map(
                         title -> new Article(System.nanoTime() & (new Random().nextLong()),
                                 title, title + " content ...")).collect(Collectors.toList());
     }
