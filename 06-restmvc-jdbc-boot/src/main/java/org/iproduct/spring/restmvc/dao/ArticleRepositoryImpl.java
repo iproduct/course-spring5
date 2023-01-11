@@ -55,8 +55,7 @@ public class ArticleRepositoryImpl implements ArticleRepository {
     @Override
     public Optional<Article> findById(long id) {
         Article article = this.jdbcTemplate.queryForObject(
-                "select * from articles where id = ?",
-                new Object[]{id}, new ArticleMapper());
+                "select * from articles where id = ?", new ArticleMapper(), id);
         log.info("Article found: {}", article);
         return Optional.ofNullable(article);
     }
@@ -67,7 +66,7 @@ public class ArticleRepositoryImpl implements ArticleRepository {
         KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemplate.update(new PreparedStatementCreator() {
             public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
-                               PreparedStatement ps = connection.prepareStatement(INSERT_SQL, new String[] {"id"});
+                PreparedStatement ps = connection.prepareStatement(INSERT_SQL, new String[] {"id"});
                 ps.setString(1, article.getTitle());
                 ps.setString(2, article.getContent());
                 ps.setLong(3, article.getAuthorId());
@@ -153,7 +152,7 @@ public class ArticleRepositoryImpl implements ArticleRepository {
 
         log.info("Querying for article records where title contains = 'Spring':");
         jdbcTemplate.query(
-                "SELECT id, title, content, author_id, picture_url, created, updated FROM articles WHERE title LIKE ?", new Object[]{"%Spring%"},
+                "SELECT id, title, content, author_id, picture_url, created, updated FROM articles WHERE title LIKE ?",
                 (rs, rowNum) -> new Article(
                         rs.getLong("id"),
                         rs.getString("title"),
@@ -161,7 +160,8 @@ public class ArticleRepositoryImpl implements ArticleRepository {
                         rs.getLong("author_id"),
                         rs.getString("picture_url"),
                         rs.getTimestamp("created").toLocalDateTime(),
-                        rs.getTimestamp("updated").toLocalDateTime())
+                        rs.getTimestamp("updated").toLocalDateTime()),
+               "%Spring%"
         ).forEach(article -> log.info(article.toString()));
     }
 

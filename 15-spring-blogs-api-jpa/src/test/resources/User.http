@@ -1,0 +1,18 @@
+GET http://localhost:8080/api/users
+Accept: application/json
+
+###
+
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+  "firstName": "Default",
+  "lastName": "Admin",
+  "username": "admin",
+  "password": "admin123",
+  "role": "ADMIN",
+  "imageUrl": "https://www.freeiconspng.com/uploads/icon-user-blue-symbol-people-person-generic--public-domain--21.png"
+}
+
+###

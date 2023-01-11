@@ -1,0 +1,75 @@
+server:
+  application:
+    name: REST MVC Demo
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hibernate_blogs2?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  #JPA Properties
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+        generate_statistics: true
+        metadata_builder_contributor: course.hibernate.spring.util.SqlFunctionsMetadataBuilderContributor
+
+    hibernate:
+      ddl-auto: create
+    open-in-view: false
+
+#    mongodb:
+#      host: localhost
+#      port: 27017
+#      database: articles_spring_2021
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, mappings, metrics, threaddump, heapdump, shutdown, beans, logfile, loggers
+  endpoint:
+    health:
+      show-details: always
+    info:
+      enabled: true
+      cache:
+        time-to-live: -1
+  info:
+    defaults:
+      enabled: true
+    java:
+      enabled: true
+    build:
+      enabled: true
+    env:
+      enabled: true
+info:
+  app:
+    encoding: "UTF-8"
+    name: REST MVC Demo
+    description: REST MVC demo with Spring Boot and Spring Data JPA
+    version: 1.0-SNAPSHOT
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        test:
+          context:
+            support: INFO
+      hibernate:
+#        type: trace
+#        stat: debug
+blog:
+  api:
+    prefix: /api/v2
+
+jwt:
+  secret: ${JWT_SECRET:not_a_secret}
+

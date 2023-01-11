@@ -73,6 +73,7 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public Article getArticleById(long id) {
         return repo.findById(id).orElseThrow(() ->
                 new EntityNotFoundException(String.format("Article with ID=%s not found.", id)));
@@ -105,7 +106,7 @@ public class ArticleServiceImpl implements ArticleService {
         return created;
     }
 
-//    //    Programmatic transaction
+    //    Programmatic transaction
 //    public List<Article> createArticlesBatch(List<Article> articles) {
 //        return transactionTemplate.execute(new TransactionCallback<List<Article>>() {
 //            // the code in this method executes in a transactional context

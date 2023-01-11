@@ -1,0 +1,14 @@
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        test:
+          context:
+            support: INFO
+      hibernate:
+        # logs the SQL statements
+#        SQL: debug
+        # Logs the JDBC parameters passed to a query
+        type: trace
+        stat: debug

@@ -1,0 +1,56 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--<property name="hibernate.dialect">
+           org.hibernate.dialect.MySQL8Dialect
+       </property>
+
+       <property name="hibernate.connection.driver_class">
+            com.mysql.cj.jdbc.Driver
+        </property>
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost:3306/school?createDatabaseIfNotExist=true
+        </property>
+
+        <property name="hibernate.connection.username">
+            root
+        </property>
+
+        <property name="hibernate.connection.password">
+            root
+        </property> -->
+
+       <!--<property name="hibernate.connection.provider_class">
+            org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+        </property>
+        <property name="hibernate.hikari.dataSourceClassName">
+            com.mysql.cj.jdbc.MysqlDataSource
+        </property>
+        <property name="hibernate.hikari.dataSource.url">
+            jdbc:mysql://localhost:3306/school?createDatabaseIfNotExist=true
+        </property>
+        <property name="hibernate.hikari.dataSource.user">root</property>
+        <property name="hibernate.hikari.dataSource.password">root</property>
+
+        <property name="hibernate.hikari.minimumIdle">20</property>
+        <property name="hibernate.hikari.maximumPoolSize">100</property>
+
+        <property name="hibernate.current_session_context_class">
+            org.hibernate.context.internal.ThreadLocalSessionContext
+        </property> -->
+
+        <property name="hibernate.hbm2ddl.auto">
+            update
+        </property>
+
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="use_sql_comments">true</property>
+
+        <!-- List of XML mapping files -->
+        <mapping resource="student.hbm.xml"/>
+
+    </session-factory>
+</hibernate-configuration>
