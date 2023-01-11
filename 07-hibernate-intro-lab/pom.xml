@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <hibernate.version>5.4.22.Final</hibernate.version>
+        <hibernate.version>5.4.24.Final</hibernate.version>
     </properties>
 
     <dependencies>
