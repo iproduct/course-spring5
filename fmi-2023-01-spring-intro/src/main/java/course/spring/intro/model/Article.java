@@ -1,9 +1,6 @@
 package course.spring.intro.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
@@ -11,6 +8,7 @@ import java.util.Set;
 
 @Data
 @NoArgsConstructor(force = true)
+@RequiredArgsConstructor
 @AllArgsConstructor
 public class Article {
     @NonNull
