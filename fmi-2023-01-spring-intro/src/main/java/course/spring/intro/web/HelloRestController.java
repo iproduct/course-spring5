@@ -18,6 +18,7 @@ public class HelloRestController {
 
     @GetMapping("/article")
     public Article getArticle() {
-        return new Article(1L, "Spring Intro", "Spring is developer friendly web service platform", "T. Iliev");
+        return new Article("Spring Intro", "Spring is developer friendly web service platform", "T. Iliev");
     }
+
 }

@@ -11,7 +11,6 @@ import java.util.Set;
 @RequiredArgsConstructor
 @AllArgsConstructor
 public class Article {
-    @NonNull
     private Long id;
     @NonNull
     private String title;
@@ -19,15 +18,15 @@ public class Article {
     private String content;
     @NonNull
     private String author;
-    private Set<String> keywords = Set.of();
+    private Set<String> tags = Set.of();
     private LocalDateTime created = LocalDateTime.now();
     private LocalDateTime modified = LocalDateTime.now();
 
-    public Article(@NonNull Long id, @NonNull String title, @NonNull String content, @NonNull String author, Set<String> keywords) {
+    public Article(@NonNull String title, @NonNull String content, @NonNull String author, Set<String> tags) {
         this.id = id;
         this.title = title;
         this.content = content;
         this.author = author;
-        this.keywords = keywords;
+        this.tags = tags;
     }
 }
