@@ -19,7 +19,7 @@ spring:
         generate_statistics: true
 
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     open-in-view: false
 
 #    mongodb:
