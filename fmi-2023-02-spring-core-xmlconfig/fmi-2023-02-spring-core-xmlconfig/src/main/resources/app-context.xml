@@ -9,9 +9,13 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
     <bean id="articleProvider" class="course.spring.provider.impl.DefaultArticleProvider" />
+    <bean id="longIdGen" class="course.spring.dao.impl.LongIdGenerator" />
+    <bean id="articleRepository" class="course.spring.dao.impl.ArticleRepositoryImpl" c:idGen-ref="longIdGen" />
+    <bean id="repoArticleProvider" class="course.spring.provider.impl.RepoArticleProvider" p:repository-ref="articleRepository"/>
+
     <bean id="articlePresenter" class="course.spring.presenter.impl.ConsoleArticlePresenter">
         <constructor-arg index="0">
-            <ref bean="articleProvider" />
+            <ref bean="repoArticleProvider" />
         </constructor-arg>
     </bean>
 

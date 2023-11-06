@@ -8,7 +8,7 @@ import java.util.Set;
 @RequiredArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Article {
+public class Article implements Identifiable<Long>{
     @EqualsAndHashCode.Include
     private Long id;
     @NonNull
