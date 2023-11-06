@@ -13,11 +13,11 @@
     <bean id="idGenFactory" class="course.spring.dao.impl.LongIdGenFactoryImpl" />
     <bean id="longIdGen" scope="prototype" factory-bean="idGenFactory" factory-method="createIdGenerator"  />
     <bean id="userRepository" class="course.spring.dao.impl.UserRepositoryImpl"
-          c:idGen-ref="longIdGen" />
+          c:_0-ref="longIdGen" />
     <bean id="articleRepository" class="course.spring.dao.impl.ArticleRepositoryImpl"
-          c:idGen-ref="longIdGen" p:userRepo-ref="userRepository"/>
+          c:_0-ref="longIdGen" p:userRepo-ref="userRepository"/>
     <bean id="repoArticleProvider" class="course.spring.provider.impl.RepoArticleProvider"
-          factory-method="create" c:repository-ref="articleRepository"/>
+          factory-method="create" c:_0-ref="articleRepository"/>
 
     <bean id="articlePresenter" class="course.spring.presenter.impl.ConsoleArticlePresenter">
         <constructor-arg index="0">
