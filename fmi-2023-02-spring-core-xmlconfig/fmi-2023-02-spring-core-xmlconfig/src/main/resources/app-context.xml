@@ -8,6 +8,11 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
-
+    <bean id="articleProvider" class="course.spring.provider.impl.DefaultArticleProvider" />
+    <bean id="articlePresenter" class="course.spring.presenter.impl.ConsoleArticlePresenter">
+        <constructor-arg index="0">
+            <ref bean="articleProvider" />
+        </constructor-arg>
+    </bean>
 
 </beans>
