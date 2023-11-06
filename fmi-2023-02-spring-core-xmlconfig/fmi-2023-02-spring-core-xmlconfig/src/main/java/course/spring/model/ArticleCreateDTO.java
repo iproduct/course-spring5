@@ -8,7 +8,7 @@ import java.util.Set;
 @RequiredArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Article implements Identifiable<Long>{
+public class ArticleCreateDTO implements Identifiable<Long>{
     @EqualsAndHashCode.Include
     private Long id;
     @NonNull
@@ -16,7 +16,7 @@ public class Article implements Identifiable<Long>{
     @NonNull
     private String content;
     @NonNull
-    private User author;
+    private String authorUsername;
     @NonNull
     private Set<String> keywords;
 
