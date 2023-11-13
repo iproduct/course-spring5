@@ -1,8 +1,9 @@
 package course.spring.dao.impl;
 
 import course.spring.dao.IdGenerator;
-import course.spring.dao.Repository;
+import course.spring.dao.MyRepository;
 import course.spring.model.Identifiable;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +11,8 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class RepositoryImpl<V extends Identifiable<K>, K> implements Repository<V, K> {
+@Repository
+public class RepositoryImpl<V extends Identifiable<K>, K> implements MyRepository<V, K> {
     private Map<K, V> entities = new ConcurrentHashMap<>();
     private IdGenerator<K> idGen;
 

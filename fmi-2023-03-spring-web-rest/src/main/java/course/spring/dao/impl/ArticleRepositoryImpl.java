@@ -6,17 +6,21 @@ import course.spring.dao.UserRepository;
 import course.spring.model.Article;
 import course.spring.model.ArticleCreateDTO;
 import course.spring.presenter.ArticlePresenter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+@Repository("articleRepo")
 public class ArticleRepositoryImpl extends RepositoryImpl<Article, Long> implements ArticleRepository {
     private UserRepository userRepo;
     public ArticleRepositoryImpl(IdGenerator<Long> idGen) {
         super(idGen);
     }
 
+    @Autowired
     public void setUserRepo(UserRepository userRepo) {
         this.userRepo = userRepo;
     }

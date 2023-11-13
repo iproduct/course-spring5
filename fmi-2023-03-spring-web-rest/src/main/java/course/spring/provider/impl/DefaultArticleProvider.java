@@ -3,12 +3,18 @@ package course.spring.provider.impl;
 import course.spring.model.Article;
 import course.spring.model.User;
 import course.spring.provider.ArticleProvider;
+import course.spring.qualifiers.Default;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Set;
 
 import static course.spring.model.Role.*;
 
+@Service
+@Qualifier("defaultProvider")
+@Default
 public class DefaultArticleProvider implements ArticleProvider {
     @Override
     public List<Article> getArticles() {

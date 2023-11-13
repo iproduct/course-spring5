@@ -2,11 +2,11 @@ package course.spring;
 
 import course.spring.dao.ArticleRepository;
 import course.spring.dao.UserRepository;
-import course.spring.model.Article;
 import course.spring.model.ArticleCreateDTO;
 import course.spring.model.User;
 import course.spring.presenter.ArticlePresenter;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.List;
@@ -26,10 +26,11 @@ public class Main {
             new User("Jane Doe", "jane", "jane123", Set.of(READER, AUTHOR))
     );
     public static void main(String[] args) {
-        ApplicationContext ctx = new ClassPathXmlApplicationContext("app-context.xml");
+        ApplicationContext ctx = new AnnotationConfigApplicationContext("course.spring");
         // Lookup presenter using Service Locator pattern
         UserRepository userRepo = ctx.getBean(UserRepository.class);
         repoUsers.forEach(userRepo::create);
+        System.out.println(userRepo.findAll());
         ArticleRepository repo = ctx.getBean(ArticleRepository.class);
         repoArticles.forEach(repo::create);
 
