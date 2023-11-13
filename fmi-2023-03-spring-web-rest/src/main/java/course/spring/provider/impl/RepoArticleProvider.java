@@ -4,10 +4,10 @@ import course.spring.dao.ArticleRepository;
 import course.spring.model.Article;
 import course.spring.provider.ArticleProvider;
 import course.spring.qualifiers.RepoBacked;
+import jakarta.inject.Inject;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import javax.inject.Inject;
 import java.util.List;
 import java.util.Set;
 
