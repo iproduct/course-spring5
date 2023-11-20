@@ -45,4 +45,9 @@ public class RepositoryImpl<V extends Identifiable<K>, K> implements MyRepositor
     public Optional<V> deleteById(K id) {
         return Optional.empty();
     }
+
+    @Override
+    public int count() {
+        return entities.size();
+    }
 }

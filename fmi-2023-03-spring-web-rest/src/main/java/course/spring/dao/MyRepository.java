@@ -11,4 +11,6 @@ public interface MyRepository<V extends Identifiable<K>, K> {
     V create(V  entity);
     Optional<V> update(V  entity);
     Optional<V> deleteById(K id);
+
+    int count();
 }

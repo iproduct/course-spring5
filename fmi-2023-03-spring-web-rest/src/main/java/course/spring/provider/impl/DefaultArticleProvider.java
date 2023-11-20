@@ -17,6 +17,16 @@ import static course.spring.model.Role.*;
 @Default
 public class DefaultArticleProvider implements ArticleProvider {
     @Override
+    public Article createArticle(Article article) {
+        throw new RuntimeException("Method not implemented yet.");
+    }
+
+    @Override
+    public int getArticlesCount() {
+        return 3;
+    }
+
+    @Override
     public List<Article> getArticles() {
         var user = new User(1L, "Default Admin", "default", "default123", Set.of(READER, AUTHOR, ADMIN));
         return List.of(
@@ -24,5 +34,10 @@ public class DefaultArticleProvider implements ArticleProvider {
                 new Article(2L, "Spring Data JPA", "Spring Data makes data management much simpler ...",user, Set.of("spring data", "jpa", "db")),
                 new Article(3L, "Spring Security", "Spring provides a comprehensive security implementations for your web apps and services ...",user, Set.of("spring", "security", "web"))
         );
+    }
+
+    @Override
+    public Article getArticleById(long id) {
+        throw new RuntimeException("Method not implemented yet.");
     }
 }

@@ -5,19 +5,21 @@ import lombok.*;
 import java.util.Set;
 
 @Data
-@RequiredArgsConstructor
+@NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Article implements Identifiable<Long>{
     @EqualsAndHashCode.Include
     private Long id;
-    @NonNull
     private String title;
-    @NonNull
     private String content;
-    @NonNull
     private User author;
-    @NonNull
     private Set<String> keywords;
 
+    public Article(String title, String content, User author, Set<String> keywords) {
+        this.title = title;
+        this.content = content;
+        this.author = author;
+        this.keywords = keywords;
+    }
 }

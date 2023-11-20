@@ -40,4 +40,5 @@ public class ArticleRepositoryImpl extends RepositoryImpl<Article, Long> impleme
             return !kwds.isEmpty();
         }).collect(Collectors.toList());
     }
+
 }
