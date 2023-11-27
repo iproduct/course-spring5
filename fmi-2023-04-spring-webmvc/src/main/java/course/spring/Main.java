@@ -16,9 +16,9 @@ import static course.spring.model.Role.*;
 
 public class Main {
     static final List<ArticleCreateDTO> repoArticles = java.util.List.of(
-            new ArticleCreateDTO("Article 1", "Article 1 content ...", "trayan", Set.of("article 1")),
-            new ArticleCreateDTO("Article 2", "Article 2 content ...", "john", Set.of("article 2")),
-            new ArticleCreateDTO("Article 3", "Article 3 content ...", "jane", Set.of("article 3"))
+            new ArticleCreateDTO("Article 1", "Article 1 content ...", "", "trayan", Set.of("article 1")),
+            new ArticleCreateDTO("Article 2", "Article 2 content ...", "", "john", Set.of("article 2")),
+            new ArticleCreateDTO("Article 3", "Article 3 content ...", "", "jane", Set.of("article 3"))
     );
     static final List<User> repoUsers = List.of(
             new User("Trayan Iliev", "trayan", "trayan123", Set.of(READER, AUTHOR, ADMIN)),

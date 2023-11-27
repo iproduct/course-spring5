@@ -13,12 +13,14 @@ public class Article implements Identifiable<Long>{
     private Long id;
     private String title;
     private String content;
+    private String imageUrl;
     private User author;
     private Set<String> keywords;
 
-    public Article(String title, String content, User author, Set<String> keywords) {
+    public Article(String title, String content, String imageUrl, User author, Set<String> keywords) {
         this.title = title;
         this.content = content;
+        this.imageUrl = imageUrl;
         this.author = author;
         this.keywords = keywords;
     }

@@ -5,3 +5,24 @@ a {
 .learn-more {
     font-size: 2em;
 }
+
+#logo-container i.brand-logo {
+    font-size: 2em;
+}
+
+
+nav ul a {
+    font-size: 1.3rem;
+}
+
+.card {
+  height: 500px;
+}
+
+.card .card-image img {
+    height: 350px;
+}
+
+.card .card-content {
+    height: 150px;
+}

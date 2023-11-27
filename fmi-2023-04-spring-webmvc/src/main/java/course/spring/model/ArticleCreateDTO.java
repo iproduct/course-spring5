@@ -16,6 +16,8 @@ public class ArticleCreateDTO implements Identifiable<Long>{
     @NonNull
     private String content;
     @NonNull
+    private String imageUrl;
+    @NonNull
     private String authorUsername;
     @NonNull
     private Set<String> keywords;

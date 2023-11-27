@@ -28,7 +28,7 @@ public class ArticleRepositoryImpl extends RepositoryImpl<Article, Long> impleme
     @Override
     public Article create(ArticleCreateDTO createDto) {
         var author = userRepo.findByUsername(createDto.getAuthorUsername());
-        var article = new Article(createDto.getTitle(), createDto.getContent(), author.get(), createDto.getKeywords());
+        var article = new Article(createDto.getTitle(), createDto.getContent(), createDto.getImageUrl(), author.get(), createDto.getKeywords());
         return create(article);
     }
 
