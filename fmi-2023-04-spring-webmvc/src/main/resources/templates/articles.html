@@ -7,9 +7,9 @@
 <div class="container">
     <br><br>
     <h1 class="header orange-text">Articles</h1>
-    <h4 th:text="'Articels count: ' + ${articles.size()}"></h4>
+    <h3 th:text="'Articels count: ' + ${articles.size()}"></h3>
     <div class="row">
-        <div class="col s12 m6" th:each="row,rowStat : ${articles}">
+        <div class="col s12 l6" th:each="row,rowStat : ${articles}">
             <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
                     <img class="activator" th:src="${row.imageUrl}">

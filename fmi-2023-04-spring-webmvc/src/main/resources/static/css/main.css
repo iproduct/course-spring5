@@ -1,5 +1,13 @@
-a {
-    color: white;
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
 }
 
 .learn-more {
@@ -16,7 +24,7 @@ nav ul a {
 }
 
 .card {
-  height: 500px;
+    height: 500px;
 }
 
 .card .card-image img {
