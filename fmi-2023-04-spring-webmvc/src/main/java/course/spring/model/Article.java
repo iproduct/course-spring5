@@ -1,5 +1,6 @@
 package course.spring.model;
 
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
@@ -8,19 +9,26 @@ import org.hibernate.validator.constraints.URL;
 
 import java.util.Set;
 
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Article implements Identifiable<Long>{
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
     @EqualsAndHashCode.Include
     private Long id;
     @Size(min= 2, max = 60)
+    @Column(length = 60)
     private String title;
+    @Column(length = 2048)
     @Size(min= 10, max = 2048)
     private String content;
     private String imageUrl;
+    @ManyToOne
     private User author;
+    @ElementCollection(fetch = FetchType.EAGER)
     private Set<String> keywords;
 
     public Article(String title, String content, String imageUrl, User author, Set<String> keywords) {

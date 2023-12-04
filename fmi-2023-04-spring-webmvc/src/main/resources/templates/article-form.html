@@ -32,14 +32,22 @@
 
         <div class="input-field col s12">
             <input type="text" th:field="*{keywords}" id="keywords" name="keywords"
-                  title="Article content" th:errorclass="field-error">
+                  title="Article keywords" th:errorclass="field-error">
             <label for="keywords">Keywords</label>
         </div>
         <p th:if="${#fields.hasErrors('keywords')}" th:errors="*{keywords}" class="errors">
             Keywords errors
         </p>
 
-        <input type="hidden" th:value="*{imageUrl}" id="imageUrl" name="imageUrl" title="Article picture URL">
+        <div class="input-field col s12">
+            <input type="text" th:field="*{imageUrl}" id="imageUrl" name="imageUrl"
+                   title="Article picture URL" th:errorclass="field-error">
+            <label for="keywords">Image URL</label>
+        </div>
+        <p th:if="${#fields.hasErrors('imageUrl')}" th:errors="*{imageUrl}" class="errors">
+            Image URL errors
+        </p>
+
         <div class="file-field input-field">
             <div class="btn">
                 <span>File</span>
@@ -70,7 +78,6 @@
         <!--</div>-->
     </form>
     <div th:replace="~{fragments/foot :: foot}"></footer>
-        " />
     </div>
 
 </body>
