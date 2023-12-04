@@ -13,7 +13,7 @@
         </div>
 
         <div class="input-field col s12">
-            <input type="text" th:value="*{title}" id="title" name="title"
+            <input type="text" th:field="*{title}" id="title" name="title"
                    title="Article title" th:errorclass="field-error">
             <label path="title" for="title">Title</label>
         </div>
@@ -22,7 +22,7 @@
         </p>
 
         <div class="input-field col s12">
-            <input type="text" th:value="*{content}" id="content" name="content"
+            <input type="text" th:field="*{content}" id="content" name="content"
                    title="Article content" th:errorclass="field-error">
             <label for="content">Content</label>
         </div>
@@ -31,16 +31,7 @@
         </p>
 
         <div class="input-field col s12">
-            <input type="text" th:value="*{author}" id="author" name="author"
-                  title="Author name" th:errorclass="field-error">
-            <label for="author">Author</label>
-        </div>
-        <p th:if="${#fields.hasErrors('author')}" th:errors="*{author}" class="errors">
-            Author should not be blank.
-        </p>
-
-        <div class="input-field col s12">
-            <input type="text" th:value="*{keywords}" id="keywords" name="keywords"
+            <input type="text" th:field="*{keywords}" id="keywords" name="keywords"
                   title="Article content" th:errorclass="field-error">
             <label for="keywords">Keywords</label>
         </div>
@@ -48,7 +39,21 @@
             Keywords errors
         </p>
 
-        <div class="form-group row">
+        <input type="hidden" th:value="*{imageUrl}" id="imageUrl" name="imageUrl" title="Article picture URL">
+        <div class="file-field input-field">
+            <div class="btn">
+                <span>File</span>
+                <input type="file" id="file" name="file"  multiple class="custom-file-input" th:value="*{imageUrl}">
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text" placeholder="Upload one or more files" th:value="${#strings.isEmpty(article.imageUrl)}? 'Choose file' : *{imageUrl}">
+            </div>
+        </div>
+        <p th:if="${fileError != null}" class="errors">
+            <span th:text="${fileError}"></span>
+        </p>
+
+        <div>
             <div class="offset-sm-2 col-sm-10">
                 <button type="submit" class="btn btn-primary" id="submit" name="submit" value="submit">Submit</button>
                 <button type="reset" class="btn red">Reset</button>

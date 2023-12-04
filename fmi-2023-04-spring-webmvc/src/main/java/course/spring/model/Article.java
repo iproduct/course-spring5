@@ -19,9 +19,7 @@ public class Article implements Identifiable<Long>{
     private String title;
     @Size(min= 10, max = 2048)
     private String content;
-    @URL
     private String imageUrl;
-    @Pattern(regexp = "[A-Za-z\\s]{5,}")
     private User author;
     private Set<String> keywords;
 
