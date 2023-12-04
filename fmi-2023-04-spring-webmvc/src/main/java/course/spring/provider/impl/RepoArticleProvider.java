@@ -18,7 +18,7 @@ import static course.spring.model.Role.*;
 @Qualifier("repoProvider")
 @RepoBacked
 public class RepoArticleProvider implements ArticleProvider {
-    public static final User DEFAULT_USER = new User("Trayan Iliev", "trayan", "trayan123", Set.of(READER, AUTHOR, ADMIN));
+    public static final User DEFAULT_USER = new User("Trayan", "Iliev", "trayan", "trayan123", Set.of(READER, AUTHOR, ADMIN));
     public static RepoArticleProvider create(ArticleRepository repository) {
         var provider =  new RepoArticleProvider();
         provider.setRepository(repository);

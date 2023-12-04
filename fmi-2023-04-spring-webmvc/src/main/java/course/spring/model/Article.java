@@ -6,7 +6,9 @@ import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 import org.hibernate.validator.constraints.URL;
+import org.springframework.format.annotation.DateTimeFormat;
 
+import java.time.LocalDateTime;
 import java.util.Set;
 
 @Entity
@@ -30,6 +32,10 @@ public class Article implements Identifiable<Long>{
     private User author;
     @ElementCollection(fetch = FetchType.EAGER)
     private Set<String> keywords;
+    @DateTimeFormat(iso=DateTimeFormat.ISO.DATE_TIME)
+    private LocalDateTime created = LocalDateTime.now();
+    @DateTimeFormat(iso=DateTimeFormat.ISO.DATE_TIME)
+    private LocalDateTime modified = LocalDateTime.now();
 
     public Article(String title, String content, String imageUrl, User author, Set<String> keywords) {
         this.title = title;

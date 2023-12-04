@@ -4,10 +4,12 @@ import course.spring.exception.FileUploadException;
 import course.spring.model.Article;
 import course.spring.provider.ArticleProvider;
 import course.spring.qualifiers.RepoBacked;
+import course.spring.service.ArticleService;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -28,10 +30,13 @@ import java.util.regex.Pattern;
 @RequestMapping("/")
 @Slf4j
 public class ArticlesController {
-    @Inject
-    @Qualifier("repoProvider")
-    @RepoBacked
-    private ArticleProvider articleProvider;
+//    @Inject
+//    @Qualifier("repoProvider")
+//    @RepoBacked
+//    private ArticleProvider articleProvider;
+
+    @Autowired
+    private ArticleService articleService;
 
     @Value("${uploads.directory}")
     private String uploadsDir;
@@ -46,7 +51,7 @@ public class ArticlesController {
     @GetMapping("/articles")
     public String getArticles(Model model){
         model.addAttribute("path", "/articles");
-        model.addAttribute("articles", articleProvider.getArticles());
+        model.addAttribute("articles", articleService.getArticles());
         return "articles";
     }
 
@@ -88,7 +93,7 @@ public class ArticlesController {
         }
         if(article.getId() == null) {  // create
             log.info("Create new article: {}", article);
-            articleProvider.createArticle(article);
+            articleService.createArticle(article);
         }
 //        } else { //edit
 //            log.info("Edit article: {}", article);

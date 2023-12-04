@@ -21,9 +21,9 @@ public class Main {
             new ArticleCreateDTO("Article 3", "Article 3 content ...", "", "jane", Set.of("article 3"))
     );
     static final List<User> repoUsers = List.of(
-            new User("Trayan Iliev", "trayan", "trayan123", Set.of(READER, AUTHOR, ADMIN)),
-            new User("John Doe", "john", "john123", Set.of(READER)),
-            new User("Jane Doe", "jane", "jane123", Set.of(READER, AUTHOR))
+            new User("Trayan", "Iliev", "trayan", "trayan123", Set.of(READER, AUTHOR, ADMIN)),
+            new User("John", "Doe", "john", "john123", Set.of(READER)),
+            new User("Jane", "Doe", "jane", "jane123", Set.of(READER, AUTHOR))
     );
     public static void main(String[] args) {
         ApplicationContext ctx = new AnnotationConfigApplicationContext("course.spring");
