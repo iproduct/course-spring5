@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0001d11-907d-4bf0-af89-4f1ebef4eac9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../fmi-2023-04-spring-webmvc/src/main/resources/templates/article-form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fmi-2022-03-webmvc-thymeleaf/tmp/java2days.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fmi-2022-03-webmvc-thymeleaf/tmp/pulsar01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fmi-2023-04-spring-webmvc/src/main/resources/templates/fragments/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2023-04-spring-webmvc/src/main/resources/templates/fragments/head.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,9 +82,6 @@
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
   </component>
-  <component name="KotlinMultiplatform">
-    <allAvailableExecutables />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -102,8 +99,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "WebServerToolWindowFactoryState": "false",
-    "spring.configuration.checksum": "c2e6db822db323c5253eb11b09fd1e12"
+    "go.import.settings.migrated": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "c2e6db822db323c5253eb11b09fd1e12",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -127,6 +132,12 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="03-webmvc-thymeleaf-lab8" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -145,12 +156,6 @@
       <filePath value="$PROJECT_DIR$/" />
       <framework value="gotest" />
       <method v="2" />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
@@ -199,6 +204,7 @@
       <workItem from="1638375227219" duration="3371000" />
       <workItem from="1639595778388" duration="670000" />
       <workItem from="1669830207004" duration="1267000" />
+      <workItem from="1701707826666" duration="559000" />
     </task>
     <task id="LOCAL-00001" summary="demos updated">
       <created>1638388807049</created>
@@ -219,7 +225,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="demos updated" />
   </component>
   <component name="VgoProject">
-    <integration-enabled>true</integration-enabled>
+    <settings-migrated>true</settings-migrated>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

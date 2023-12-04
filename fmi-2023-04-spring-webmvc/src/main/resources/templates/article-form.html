@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head('Add Article')}"/>
+<body>
+<div th:replace="~{fragments/nav :: nav(${path}, ${loggedUserName})}"/>
+<div class="container">
+    <h3 th:text="${title}">Add New Article</h3>
+    <form th:object="${article}" th:method="post" class="col s12" enctype="multipart/form-data">
+        <div th:if="${article.id} != null" class="input-field col s12">
+            <input type="text" th:value="*{id}" id="id" name="id"
+                   class="input-field col s12" title="Article Id" readonly>
+            <label for="id" class="col-sm-2 col-form-label">ID</label>
+        </div>
+
+        <div class="input-field col s12">
+            <input type="text" th:value="*{title}" id="title" name="title"
+                   title="Article title" th:errorclass="field-error">
+            <label path="title" for="title">Title</label>
+        </div>
+        <p th:if="${#fields.hasErrors('title')}" th:errors="*{title}"
+           class="errors">
+            Incorrect title
+        </p>
+
+        <div class="input-field col s12">
+            <input type="text" th:value="*{content}" id="content" name="content"
+                   title="Article content" th:errorclass="field-error">
+            <label for="content">Content</label>
+        </div>
+        <p th:if="${#fields.hasErrors('content')}" th:errors="*{content}"
+           class="errors">
+            Content should not be blank.
+        </p>
+
+        <div class="input-field col s12">
+            <input type="text" th:value="*{author}" id="author" name="author"
+                  title="Author name" th:errorclass="field-error">
+            <label for="author">Author</label>
+        </div>
+        <p th:if="${#fields.hasErrors('author')}" th:errors="*{author}"
+           class="errors">
+            Author should not be blank.
+        </p>
+
+        <div class="input-field col s12">
+            <input type="text" th:value="*{keywords}" id="keywords" name="keywords"
+                  title="Article content" th:errorclass="field-error">
+            <label for="keywords">Keywords</label>
+        </div>
+        <p th:if="${#fields.hasErrors('keywords')}" th:errors="*{keywords}"
+           class="errors">
+            Keywords errors
+        </p>
+
+        <div class="form-group row">
+            <div class="offset-sm-2 col-sm-10">
+                <button type="submit" class="btn btn-primary" id="submit" name="submit" value="submit">Submit</button>
+                <button type="reset" class="btn red">Reset</button>
+                <a th:href="${'/articles'}" class="btn btn-secondary orange" id="cancel">Cancel</a>
+            </div>
+        </div>
+
+        <!--<div class="col-xs-12 alert alert-danger" th:if="${myErrors != null}">-->
+        <!--<p>Validation errors: </p>-->
+        <!--<ul th:each="error: ${myErrors}">-->
+        <!--&lt;!&ndash;/*@thymesVar id="error" type=""*/&ndash;&gt;-->
+        <!--<li th:text="${error}"></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+    </form>
+    <div th:replace="~{fragments/foot :: foot}"></footer>
+        " />
+    </div>
+
+</body>
+</html>

@@ -1,11 +1,11 @@
-<head th:fragment="head">
+<head th:fragment="head(title)">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>My Blog - Spring MVC Demo</title>
-  <link rel="stylesheet" type="text/css" href="webjars/materializecss/1.0.0/css/materialize.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <title th:text="${title}">My Blog - Spring MVC Demo</title>
+  <link rel="stylesheet" type="text/css" href="/webjars/materializecss/1.0.0/css/materialize.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <script src="webjars/materializecss/1.0.0/js/materialize.js"></script>
-  <script src="js/init.js" defer></script>
+  <script src="/webjars/materializecss/1.0.0/js/materialize.js"></script>
+  <script src="/js/init.js" defer></script>
 </head>

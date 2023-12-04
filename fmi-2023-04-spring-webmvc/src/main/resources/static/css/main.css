@@ -34,3 +34,7 @@ nav ul a {
 .card .card-content {
     height: 150px;
 }
+
+nav a.active {
+    font-weight: bold;
+}

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-<head th:replace="fragments/head :: head"></head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head('Articles List')}"></head>
 <body>
-<nav th:replace="fragments/nav :: nav"></nav>
+<div th:replace="~{fragments/nav :: nav(${path}, ${loggedUserName})}" />
 
 <div class="container">
     <br><br>
@@ -31,6 +31,6 @@
         </div>
     </div>
 </div>
-<footer th:replace="fragments/foot :: foot"></footer>
+<footer th:replace="~{fragments/foot :: foot}"></footer>
 </body>
 </html>
