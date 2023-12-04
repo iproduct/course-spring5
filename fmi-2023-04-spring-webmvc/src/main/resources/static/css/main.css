@@ -38,3 +38,11 @@ nav ul a {
 nav a.active {
     font-weight: bold;
 }
+
+.errors {
+    padding: 10px 20px;
+    color: #e51c23;
+    background-color: lightpink;
+    border: 1px solid #e51c23;
+    border-radius: 5px;
+}

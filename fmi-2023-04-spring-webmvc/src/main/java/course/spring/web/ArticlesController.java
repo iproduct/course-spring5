@@ -44,11 +44,11 @@ public class ArticlesController {
         return "article-form";
     }
 
-    @PostMapping("/article-form")
+    @PostMapping("/articles/add")
     public String addArticle(
             @Valid @ModelAttribute ("article") Article article,
             BindingResult errors,
-            @RequestParam("file") MultipartFile file,
+            @RequestParam(value = "file", required = false) MultipartFile file,
             Model model) {
 //            ,@NotNull
 //            Authentication auth) {

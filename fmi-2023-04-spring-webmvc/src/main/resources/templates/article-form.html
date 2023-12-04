@@ -17,8 +17,7 @@
                    title="Article title" th:errorclass="field-error">
             <label path="title" for="title">Title</label>
         </div>
-        <p th:if="${#fields.hasErrors('title')}" th:errors="*{title}"
-           class="errors">
+        <p th:if="${#fields.hasErrors('title')}" th:errors="*{title}" class="errors">
             Incorrect title
         </p>
 
@@ -27,8 +26,7 @@
                    title="Article content" th:errorclass="field-error">
             <label for="content">Content</label>
         </div>
-        <p th:if="${#fields.hasErrors('content')}" th:errors="*{content}"
-           class="errors">
+        <p th:if="${#fields.hasErrors('content')}" th:errors="*{content}" class="errors">
             Content should not be blank.
         </p>
 
@@ -37,8 +35,7 @@
                   title="Author name" th:errorclass="field-error">
             <label for="author">Author</label>
         </div>
-        <p th:if="${#fields.hasErrors('author')}" th:errors="*{author}"
-           class="errors">
+        <p th:if="${#fields.hasErrors('author')}" th:errors="*{author}" class="errors">
             Author should not be blank.
         </p>
 
@@ -47,8 +44,7 @@
                   title="Article content" th:errorclass="field-error">
             <label for="keywords">Keywords</label>
         </div>
-        <p th:if="${#fields.hasErrors('keywords')}" th:errors="*{keywords}"
-           class="errors">
+        <p th:if="${#fields.hasErrors('keywords')}" th:errors="*{keywords}" class="errors">
             Keywords errors
         </p>
 

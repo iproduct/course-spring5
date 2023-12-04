@@ -1,6 +1,10 @@
 package course.spring.model;
 
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 import lombok.*;
+import org.hibernate.validator.constraints.URL;
 
 import java.util.Set;
 
@@ -11,9 +15,13 @@ import java.util.Set;
 public class Article implements Identifiable<Long>{
     @EqualsAndHashCode.Include
     private Long id;
+    @Size(min= 2, max = 60)
     private String title;
+    @Size(min= 10, max = 2048)
     private String content;
+    @URL
     private String imageUrl;
+    @Pattern(regexp = "[A-Za-z\\s]{5,}")
     private User author;
     private Set<String> keywords;
 
