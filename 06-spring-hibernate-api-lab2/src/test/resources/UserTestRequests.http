@@ -1,0 +1,100 @@
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "Admin123&"
+}
+
+###
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "trayan",
+  "password": "Trayan123&"
+}
+
+###
+GET http://localhost:8080/api/users
+Accept: application/json
+#Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY0NTcxNDAwMywiaWF0IjoxNjQ1NzEwNDAzfQ.fZT5vq0jLBfWmO5L5zjG-SCbhH0OjDJfzwpx3P2T4FcrE7QJeDq6-jEF8cn694fR2VQwo6yWWYsqp8afUdME5w
+
+###
+GET http://localhost:8080/api/users/3
+Accept: application/json
+#Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY0NTcxNDAwMywiaWF0IjoxNjQ1NzEwNDAzfQ.fZT5vq0jLBfWmO5L5zjG-SCbhH0OjDJfzwpx3P2T4FcrE7QJeDq6-jEF8cn694fR2VQwo6yWWYsqp8afUdME5w
+
+###
+
+POST http://localhost:8080/api/users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY0NTcxNDAwMywiaWF0IjoxNjQ1NzEwNDAzfQ.fZT5vq0jLBfWmO5L5zjG-SCbhH0OjDJfzwpx3P2T4FcrE7QJeDq6-jEF8cn694fR2VQwo6yWWYsqp8afUdME5w
+
+{
+  "firstName": "Trayan",
+  "lastName": "Iliev",
+  "username": "trayan",
+  "password": "Trayan123&",
+  "roles": [
+    "READER",
+    "AUTHOR",
+    "ADMIN"
+  ]
+}
+
+###
+
+POST http://localhost:8080/api/users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY0NTcxNDAwMywiaWF0IjoxNjQ1NzEwNDAzfQ.fZT5vq0jLBfWmO5L5zjG-SCbhH0OjDJfzwpx3P2T4FcrE7QJeDq6-jEF8cn694fR2VQwo6yWWYsqp8afUdME5w
+
+{
+  "firstName": "Georgi",
+  "lastName": "Petrov",
+  "username": "george",
+  "password": "George123&",
+  "roles": [
+    "READER",
+    "AUTHOR"
+  ]
+}
+
+###
+PUT http://localhost:8080/api/users/3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY0NTcxNDAwMywiaWF0IjoxNjQ1NzEwNDAzfQ.fZT5vq0jLBfWmO5L5zjG-SCbhH0OjDJfzwpx3P2T4FcrE7QJeDq6-jEF8cn694fR2VQwo6yWWYsqp8afUdME5w
+
+{
+  "id": 4,
+  "firstName": "Hristo",
+  "lastName": "Hristov Petrov",
+  "username": "george",
+  "roles": [
+    "READER",
+    "ADMIN"
+  ]
+}
+
+###
+PUT http://localhost:8080/api/users/3
+Content-Type: application/json
+#Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY0NTcxNDAwMywiaWF0IjoxNjQ1NzEwNDAzfQ.fZT5vq0jLBfWmO5L5zjG-SCbhH0OjDJfzwpx3P2T4FcrE7QJeDq6-jEF8cn694fR2VQwo6yWWYsqp8afUdME5w
+
+{
+  "id": 3,
+  "firstName": "Ivan",
+  "lastName": "Petrov",
+  "username": "reader",
+  "roles": [
+    "READER",
+    "ADMIN"
+  ]
+}
+
+###
+
+DELETE http://localhost:8080/api/users/3
+Content-Type: application/json
+#Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY0NTcxNDAwMywiaWF0IjoxNjQ1NzEwNDAzfQ.fZT5vq0jLBfWmO5L5zjG-SCbhH0OjDJfzwpx3P2T4FcrE7QJeDq6-jEF8cn694fR2VQwo6yWWYsqp8afUdME5w
+

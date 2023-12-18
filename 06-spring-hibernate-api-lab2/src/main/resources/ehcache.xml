@@ -1,0 +1,68 @@
+<config
+        xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+        xmlns='http://www.ehcache.org/v3'
+        xmlns:jcache="http://www.ehcache.org/v3/jsr107"
+        xsi:schemaLocation="
+            http://www.ehcache.org/v3
+            http://www.ehcache.org/schema/ehcache-core-3.9.xsd">
+    <service>
+        <jcache:defaults default-template="default">
+<!--            <jcache:cache name="course.hibernate.spring.entity.Book" template="hibernateEntityTemplate"/>-->
+<!--            <jcache:cache name="course.hibernate.spring.entity.Person" template="hibernateEntityTemplate"/>-->
+        </jcache:defaults>
+    </service>
+    <!-- Persistent cache directory -->
+    <persistence directory="spring-boot-ehcache/cache"/>
+    <!-- Default cache template -->
+    <cache-template name="default">
+        <expiry>
+            <ttl unit="seconds">30</ttl>
+        </expiry>
+        <listeners>
+            <listener>
+                <class>course.hibernate.spring.cache.CacheLogger</class>
+                <event-firing-mode>SYNCHRONOUS</event-firing-mode>
+                <event-ordering-mode>UNORDERED</event-ordering-mode>
+                <events-to-fire-on>CREATED</events-to-fire-on>
+                <events-to-fire-on>UPDATED</events-to-fire-on>
+                <events-to-fire-on>REMOVED</events-to-fire-on>
+                <events-to-fire-on>EXPIRED</events-to-fire-on>
+                <events-to-fire-on>EVICTED</events-to-fire-on>
+            </listener>
+        </listeners>
+        <resources>
+            <heap unit="entries">1000</heap>
+            <offheap unit="MB">10</offheap>
+            <disk persistent="true" unit="MB">20</disk>
+        </resources>
+    </cache-template>
+    <cache-template name="hibernateEntityTemplate">
+        <key-type copier="org.ehcache.impl.copy.SerializingCopier">java.lang.Object</key-type>
+        <value-type copier="org.ehcache.impl.copy.SerializingCopier">java.lang.Object</value-type>
+        <expiry>
+            <ttl unit="seconds">30</ttl>
+        </expiry>
+        <listeners>
+            <listener>
+                <class>course.hibernate.spring.cache.CacheLogger</class>
+                <event-firing-mode>SYNCHRONOUS</event-firing-mode>
+                <event-ordering-mode>UNORDERED</event-ordering-mode>
+                <events-to-fire-on>CREATED</events-to-fire-on>
+                <events-to-fire-on>UPDATED</events-to-fire-on>
+                <events-to-fire-on>REMOVED</events-to-fire-on>
+                <events-to-fire-on>EXPIRED</events-to-fire-on>
+                <events-to-fire-on>EVICTED</events-to-fire-on>
+            </listener>
+        </listeners>
+        <resources>
+            <heap unit="entries">1000</heap>
+            <offheap unit="MB">10</offheap>
+            <disk persistent="true" unit="MB">20</disk>
+        </resources>
+    </cache-template>
+
+    <cache alias="course.hibernate.spring.entity.Book" uses-template="hibernateEntityTemplate" />
+    <cache alias="course.hibernate.spring.entity.Person" uses-template="hibernateEntityTemplate" />
+    <cache alias="course.hibernate.spring.entity.Person.books" uses-template="hibernateEntityTemplate" />
+
+</config>
