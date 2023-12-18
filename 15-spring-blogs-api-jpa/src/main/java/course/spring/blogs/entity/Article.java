@@ -3,8 +3,8 @@ package course.spring.blogs.entity;
 import lombok.*;
 import org.hibernate.validator.constraints.URL;
 
-import javax.persistence.*;
-import javax.validation.constraints.*;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;

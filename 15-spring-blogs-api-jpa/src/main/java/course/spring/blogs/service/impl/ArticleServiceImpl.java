@@ -31,9 +31,9 @@ import org.springframework.transaction.support.DefaultTransactionDefinition;
 import org.springframework.transaction.support.TransactionCallback;
 import org.springframework.transaction.support.TransactionTemplate;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.security.RolesAllowed;
-import javax.validation.ConstraintViolationException;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.security.RolesAllowed;
+import jakarta.validation.ConstraintViolationException;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;

@@ -9,11 +9,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -43,22 +43,30 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.csrf().disable()
-                .authorizeRequests()
-                .mvcMatchers(POST, "/api/auth/login","/api/auth/register").permitAll()
-                .mvcMatchers(GET, "/swagger-ui", "/swagger-ui/**", "/swagger-resources/**", "/v2/**").permitAll()
-                .mvcMatchers(GET, "/api/articles").permitAll()
-                .mvcMatchers(GET, "/api/users", "api/users/**").authenticated() //.hasRole(ADMIN.name())
-                .mvcMatchers("/api/users", "api/users/**").hasRole(ADMIN.name())
-                .mvcMatchers("/**").hasAnyRole(ADMIN.name(), AUTHOR.name(), READER.name())
-//                .mvcMatchers(GET,"/**").hasAnyRole(ADMIN.name(), AUTHOR.name(), READER.name())
-//                .mvcMatchers(POST, "/**").hasAnyRole(ADMIN.name(), AUTHOR.name())
-//                .mvcMatchers(PUT, "/**").hasAnyRole(ADMIN.name(), AUTHOR.name())
-//                .mvcMatchers(DELETE, "/**").hasAnyRole(ADMIN.name(), AUTHOR.name())
-                .and()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
-                .exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint);
+        http.csrf(csrf -> csrf.disable())
+                .authorizeHttpRequests(authorizeHttpRequests ->
+                                authorizeHttpRequests
+                                        .requestMatchers(POST, "/api/auth/login", "/api/auth/register").permitAll()
+                                        .requestMatchers(GET, "/swagger-ui", "/swagger-ui/**", "/swagger-resources/**", "/v2/**").permitAll()
+                                        .requestMatchers(GET, "/api/articles").permitAll()
+                                        .requestMatchers(GET, "/api/users", "api/users/**").authenticated() //.hasRole(ADMIN.name())
+                                        .requestMatchers("/api/users", "api/users/**").hasRole(ADMIN.name())
+                                        .requestMatchers("/**").hasAnyRole(ADMIN.name(), AUTHOR.name(), READER.name())
+//                                .requestMatchers(GET, "/**").hasAnyRole(ADMIN.name(), AUTHOR.name(), READER.name())
+//                                .requestMatchers(POST, "/**").hasAnyRole(ADMIN.name(), AUTHOR.name())
+//                                .requestMatchers(PUT, "/**").hasAnyRole(ADMIN.name(), AUTHOR.name())
+//                                .requestMatchers(DELETE, "/**").hasAnyRole(ADMIN.name(), AUTHOR.name())
+                )
+
+
+                .sessionManagement(sessionManagement ->
+                        sessionManagement
+                                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+
+
+                ).exceptionHandling(exceptionHandling ->
+                        exceptionHandling.authenticationEntryPoint(jwtAuthenticationEntryPoint)
+                );
 
         http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
 
@@ -68,11 +76,11 @@ public class SecurityConfig {
     @Bean
     public AuthenticationManager authManager(HttpSecurity http, UserDetailsService userDetailsService)
             throws Exception {
-        return http.getSharedObject(AuthenticationManagerBuilder.class)
+        var authManagerBuilder = http.getSharedObject(AuthenticationManagerBuilder.class);
+        authManagerBuilder
                 .userDetailsService(userDetailsService)
-                .passwordEncoder(PasswordEncoderFactories.createDelegatingPasswordEncoder())
-                .and()
-                .build();
+                .passwordEncoder(PasswordEncoderFactories.createDelegatingPasswordEncoder());
+        return authManagerBuilder.build();
     }
 
     @Bean
@@ -84,11 +92,11 @@ public class SecurityConfig {
 
     @Bean
     public WebSecurityCustomizer ignoringCustomizer() {
-        return (web) -> web.ignoring().antMatchers("/**");
+        return (web) -> web.ignoring().requestMatchers("/**");
     }
 
     @Bean
-    UserDetailsService userDetailsService(UserService userService){
+    UserDetailsService userDetailsService(UserService userService) {
         return (String username) -> {
             try {
                 return userService.getUserByUsername(username);

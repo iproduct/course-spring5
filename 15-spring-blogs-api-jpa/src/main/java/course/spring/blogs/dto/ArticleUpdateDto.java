@@ -4,7 +4,7 @@ import lombok.NonNull;
 import lombok.Value;
 import org.hibernate.validator.constraints.URL;
 
-import javax.validation.constraints.*;
+import jakarta.validation.constraints.*;
 import java.util.Set;
 
 public record ArticleUpdateDto(
