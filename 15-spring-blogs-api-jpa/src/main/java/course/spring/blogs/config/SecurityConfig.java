@@ -47,11 +47,11 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorizeHttpRequests ->
                                 authorizeHttpRequests
                                         .requestMatchers(POST, "/api/auth/login", "/api/auth/register").permitAll()
-                                        .requestMatchers(GET, "/swagger-ui", "/swagger-ui/**", "/swagger-resources/**", "/v2/**").permitAll()
+                                        .requestMatchers(GET, "/swagger-ui.html", "/swagger-ui/**", "/swagger-resources/**", "/v2/**").permitAll()
                                         .requestMatchers(GET, "/api/articles").permitAll()
                                         .requestMatchers(GET, "/api/users", "api/users/**").authenticated() //.hasRole(ADMIN.name())
                                         .requestMatchers("/api/users", "api/users/**").hasRole(ADMIN.name())
-                                        .requestMatchers("/**").hasAnyRole(ADMIN.name(), AUTHOR.name(), READER.name())
+                                        .requestMatchers("/**").permitAll() //hasAnyRole(ADMIN.name(), AUTHOR.name(), READER.name())
 //                                .requestMatchers(GET, "/**").hasAnyRole(ADMIN.name(), AUTHOR.name(), READER.name())
 //                                .requestMatchers(POST, "/**").hasAnyRole(ADMIN.name(), AUTHOR.name())
 //                                .requestMatchers(PUT, "/**").hasAnyRole(ADMIN.name(), AUTHOR.name())
@@ -90,10 +90,10 @@ public class SecurityConfig {
         return strictHttpFirewall;
     }
 
-    @Bean
-    public WebSecurityCustomizer ignoringCustomizer() {
-        return (web) -> web.ignoring().requestMatchers("/**");
-    }
+//    @Bean
+//    public WebSecurityCustomizer ignoringCustomizer() {
+//        return (web) -> web.ignoring().requestMatchers("/**");
+//    }
 
     @Bean
     UserDetailsService userDetailsService(UserService userService) {

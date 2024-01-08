@@ -1,5 +1,7 @@
 package course.spring.blogs.config;
 
+import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
+import io.swagger.v3.oas.annotations.security.SecurityScheme;
 import org.springframework.boot.actuate.autoconfigure.endpoint.web.CorsEndpointProperties;
 import org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties;
 import org.springframework.boot.actuate.autoconfigure.web.server.ManagementPortType;
@@ -25,10 +27,16 @@ import org.springframework.util.StringUtils;
 
 import java.util.*;
 
-//@Configuration
+@Configuration
+@SecurityScheme(
+        name = "bearerAuth",
+        type = SecuritySchemeType.HTTP,
+        bearerFormat = "JWT",
+        scheme = "bearer"
+)
 //@EnableSwagger2
 public class SwaggerConfig {
-    private static final String AUTH_SERVER = "http://localhost:8080/api/auth";
+//    private static final String AUTH_SERVER = "http://localhost:8080/api/auth";
 
 //    @Bean
 //    public Docket api() {

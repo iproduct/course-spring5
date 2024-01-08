@@ -28,6 +28,11 @@ spring:
     pathmatch:
       matching-strategy: ant_path_matcher
 
+# swagger-ui custom path
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
 #    mongodb:
 #      host: localhost
 #      port: 27017

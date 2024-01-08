@@ -1,13 +1,13 @@
 package course.spring.blogs.web.jwt;
 
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.*;
+import io.jsonwebtoken.impl.TextCodec;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
+import javax.crypto.SecretKey;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -19,8 +19,15 @@ public class JwtUtils {
     public static final long JWT_TOKEN_VALIDITY = 1 * 60 * 60; //1 hour
 
     // get secret from environment variable instead
-    @Value("${jwt.secret}")
-    private String secret;
+//    @Value("${jwt.secret}")
+    private SecretKey secret = io.jsonwebtoken.security.Keys.secretKeyFor(SignatureAlgorithm.HS512);
+
+//    private SigningKeyResolver signingKeyResolver = new SigningKeyResolverAdapter() {
+//        @Override
+//        public byte[] resolveSigningKeyBytes(JwsHeader header, Claims claims) {
+//            return TextCodec.BASE64.decode(secret);
+//        }
+//    };
 
 //    @PostConstruct
 //    public void init() {
@@ -44,7 +51,11 @@ public class JwtUtils {
 
     //for retrieveing any information from token we will need the secret key
     private Claims getAllClaimsFromToken(String token) {
-        return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
+        return Jwts.parser()
+                .verifyWith(secret)
+//                .setSigningKeyResolver(signingKeyResolver)
+                .build()
+                .parseClaimsJws(token).getPayload();
     }
 
     //check if the token has expired

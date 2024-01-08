@@ -4,6 +4,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import course.spring.blogs.entity.User;
 import course.spring.blogs.exception.InvalidEntityDataException;
 import course.spring.blogs.service.UserService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +20,8 @@ import static course.spring.blogs.utils.ErrorHandlingUtils.handleValidationError
 
 @RestController
 @RequestMapping("/api/users")
+@SecurityRequirement(name = "bearerAuth")
+@Tag(name = "User", description = "The User API. Contains all the operations that can be performed on a user.")
 public class UserRestController {
 
     @Autowired
