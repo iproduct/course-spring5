@@ -18,7 +18,6 @@ import java.util.List;
 
 @Entity
 @Data
-@NoArgsConstructor
 @RequiredArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
@@ -68,6 +67,9 @@ public class User implements UserDetails {
     private LocalDateTime created = LocalDateTime.now();
     @PastOrPresent
     private LocalDateTime modified = LocalDateTime.now();
+
+    public User() {
+    }
 
     public User(@NonNull String firstName, @NonNull String lastName, @NonNull String username, @NonNull String password, @NonNull Role role) {
         this.firstName = firstName;

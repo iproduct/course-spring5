@@ -10,7 +10,6 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
 public class Credentials {
     @Size(min=2, max=30)
@@ -19,4 +18,7 @@ public class Credentials {
     @NotBlank
 //    @Pattern(regexp = "(?=^.{8,}$)((?=.*\\d)|(?=.*\\W+))(?![.\\n])(?=.*[A-Z])(?=.*[a-z]).*$")
     private String password;
+
+    public Credentials() {
+    }
 }

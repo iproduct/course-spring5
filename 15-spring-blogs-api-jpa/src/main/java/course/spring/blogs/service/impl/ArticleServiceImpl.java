@@ -1,5 +1,6 @@
 package course.spring.blogs.service.impl;
 
+import com.zaxxer.hikari.util.IsolationLevel;
 import course.spring.blogs.dao.UserRepository;
 import course.spring.blogs.entity.Article;
 import course.spring.blogs.entity.User;
@@ -42,6 +43,7 @@ import java.util.stream.Collectors;
 import static course.spring.blogs.dto.mapping.ArticleDtoMapper.mapArticleCreateDtoToArticle;
 import static org.springframework.transaction.TransactionDefinition.ISOLATION_REPEATABLE_READ;
 import static org.springframework.transaction.annotation.Isolation.REPEATABLE_READ;
+import static org.springframework.transaction.annotation.Isolation.SERIALIZABLE;
 
 /**
  * ArticleService default implementation
@@ -98,7 +100,7 @@ public class ArticleServiceImpl implements ArticleService {
      * @return
      */
     @Override
-    @Transactional(propagation = Propagation.REQUIRES_NEW)
+    @Transactional(propagation = Propagation.REQUIRES_NEW, isolation = SERIALIZABLE)
 //    @Secured({"ROLE_ADMIN", "ROLE_AUTHOR"})
 //    @RolesAllowed({"ADMIN", "AUTHOR"})
 //    @PreAuthorize("hasAnyRole('ADMIN', 'AUTHOR')")
@@ -175,6 +177,7 @@ public class ArticleServiceImpl implements ArticleService {
      * @param article
      * @return
      */
+    @PreAuthorize("(#article.authorId == authentication.principal.id) or hasRole('ADMIN')")
     @Override
     public Article update(Article article) throws NonexistingEntityException, InvalidEntityDataException {
         var old = getArticleById(article.getId());

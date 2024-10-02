@@ -23,11 +23,6 @@ spring:
       ddl-auto: update
     open-in-view: false
 
-
-  mvc:
-    pathmatch:
-      matching-strategy: ant_path_matcher
-
 # swagger-ui custom path
 springdoc:
   swagger-ui:

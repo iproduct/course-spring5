@@ -1,46 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="be1c92a1-ceba-4d42-a5f5-e75e7604e336" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-spring-core-problem-comments/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/02-spring-core-problem-comments/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-spring-core-problem-comments/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/02-spring-core-problem-comments/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-spring-core-problem-comments/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/02-spring-core-problem-comments/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-spring-core-programmatic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/02-spring-core-programmatic/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-spring-core/.gradle/4.6/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-spring-core/.gradle/4.6/fileContent/annotation-processors.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-spring-core/.gradle/4.6/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-spring-core/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-spring-core/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-spring-core/.gradle/4.6/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-spring-core/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-spring-core/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-spring-core/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/02-spring-core/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-spring-core/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/02-spring-core/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-spring-core/.idea/02-spring-core.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-webmvc-rest/.gradle/4.8/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-webmvc-rest/.gradle/4.8/fileContent/annotation-processors.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-webmvc-rest/.gradle/4.8/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-webmvc-rest/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-webmvc-rest/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-webmvc-rest/.gradle/4.8/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-webmvc-rest/.gradle/4.8/taskHistory/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-webmvc-rest/.gradle/4.8/taskHistory/taskHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-webmvc-rest/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/04-webmvc-rest/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-webmvc-rest/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/04-webmvc-rest/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-webmvc-rest/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/04-webmvc-rest/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-webmvc-rest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/04-webmvc-rest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/12-reactive-streaming-demos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/12-reactive-streaming-demos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/12-streaming-demos-lab4/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/12-streaming-demos-lab4/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ws-spring-04-core-programmatic/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ws-spring-04-core-programmatic/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ws-spring-04-core-programmatic/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ws-spring-04-core-programmatic/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ws-spring-04-core-programmatic/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ws-spring-04-core-programmatic/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ws-spring-05-aop/.idea/modules/ws-spring-05-aop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ws-spring-05-aop/.idea/modules/ws-spring-05-aop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ws-spring-05-aop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ws-spring-05-aop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ws-spring-05-spel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ws-spring-05-spel/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ws2-spring-02-core-annotation/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ws2-spring-02-core-annotation/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ws2-spring-02-core-annotation/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ws2-spring-02-core-annotation/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ws2-spring-03-core-xml/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ws2-spring-03-core-xml/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15-spring-blogs-api-jpa/src/main/java/course/spring/blogs/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/15-spring-blogs-api-jpa/src/main/java/course/spring/blogs/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15-spring-blogs-api-jpa/src/main/java/course/spring/blogs/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/15-spring-blogs-api-jpa/src/main/java/course/spring/blogs/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15-spring-blogs-api-jpa/src/main/java/course/spring/blogs/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/15-spring-blogs-api-jpa/src/main/java/course/spring/blogs/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15-spring-blogs-api-jpa/src/main/java/course/spring/blogs/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/15-spring-blogs-api-jpa/src/main/java/course/spring/blogs/service/impl/ArticleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15-spring-blogs-api-jpa/src/main/java/course/spring/blogs/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/15-spring-blogs-api-jpa/src/main/java/course/spring/blogs/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15-spring-blogs-api-jpa/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/15-spring-blogs-api-jpa/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +46,18 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "WebServerToolWindowFactoryState": "false"
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.vendoring.notification.had.been.shown": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager">
@@ -115,10 +97,15 @@
       <workItem from="1643111110001" duration="309000" />
       <workItem from="1646393696463" duration="707000" />
       <workItem from="1662736637506" duration="1352000" />
+      <workItem from="1704741262116" duration="671000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
   </component>
 </project>

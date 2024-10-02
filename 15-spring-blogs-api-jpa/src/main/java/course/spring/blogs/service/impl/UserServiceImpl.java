@@ -29,7 +29,7 @@ public class UserServiceImpl implements UserService {
      * @return list all {@link User} entities
      */
     @Override
-//    @PostFilter("filterObject.id == authentication.principal.id or hasRole('ADMIN')")
+    @PostFilter("filterObject.id == authentication.principal.id or hasRole('ADMIN')")
     public List<User> getAllUsers() {
         return userRepo.findAll();
     }
