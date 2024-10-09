@@ -27,17 +27,19 @@ spring:
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
-
+  show-actuator: true
 #    mongodb:
 #      host: localhost
 #      port: 27017
 #      database: articles_spring_2021
 
 management:
+  server:
+    port: 8080
   endpoints:
     web:
       exposure:
-        include: info, health, mappings, metrics, threaddump, heapdump, shutdown, beans, logfile, loggers
+        include: info, health, mappings, metrics, threaddump, heapdump, shutdown, beans, logfile, loggers, openapi, swagger-ui
   endpoint:
     health:
       show-details: always
