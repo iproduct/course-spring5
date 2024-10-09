@@ -38,11 +38,11 @@ public class PostRestController {
         return new ArrayList<>(posts.values());
     }
 
-    @GetMapping(path = "/{pid}")
-    public Post getPostById(@PathVariable(name = "pid") Long pid) {
-        var post = posts.get(pid);
+    @GetMapping(path = "/{id}")
+    public Post getPostById(@PathVariable(name="id") Long id) {
+        var post = posts.get(id);
         if(post == null) {
-            throw new EntityNotFoundException(String.format("Post with id=%d not found", pid));
+            throw new EntityNotFoundException(String.format("Post with id=%d not found", id));
         }
         return post;
     }
@@ -60,10 +60,28 @@ public class PostRestController {
 
     }
 
+    @PutMapping(path = "/{id}")
+    public Post update(@RequestBody Post post, @PathVariable(name="id") Long id) {
+        var old = posts.get(id);
+        if(old == null) {
+            throw new EntityNotFoundException(String.format("Post with id=%d not found", id));
+        }
+        posts.put(id, post);
+        return post;
+    }
+
+    @DeleteMapping(path = "/{id}")
+    public Post update(@PathVariable(name="id") Long id) {
+        var removed = posts.remove(id);
+        if(removed == null) {
+            throw new EntityNotFoundException(String.format("Post with id=%d not found", id));
+        }
+        return removed;
+    }
+
     @ExceptionHandler
     public ResponseEntity<ErrorResponse> handelEntityNotFoundException(EntityNotFoundException ex){
         return ResponseEntity.status(NOT_FOUND).body(new ErrorResponse(NOT_FOUND.value(), ex.getMessage()));
     }
-
 
 }
