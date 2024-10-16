@@ -19,6 +19,11 @@ repositories {
 
 dependencies {
     implementation 'org.springframework:spring-context:6.1.13'
+    implementation 'javax.inject:javax.inject:1'
+    implementation 'javax.annotation:javax.annotation-api:1.3.2'
+    implementation 'org.projectlombok:lombok:1.18.34'
+    implementation 'org.slf4j:slf4j-simple:2.0.16'
+    annotationProcessor 'org.projectlombok:lombok:1.18.34'
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
