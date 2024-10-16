@@ -8,4 +8,7 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean id="provider" class="course.spring.domain.impl.SimplePostProvider" />
+    <bean id="presenter" class="course.spring.presenter.impl.ConsolePostPresenter" scope="singleton"
+        p:postProvider-ref="provider" />
 </beans>

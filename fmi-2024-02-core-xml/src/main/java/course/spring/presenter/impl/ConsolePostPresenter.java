@@ -9,7 +9,15 @@ import java.util.List;
 public class ConsolePostPresenter implements PostPresenter {
     private PostProvider postProvider;
 
-    public ConsolePostPresenter(PostProvider postProvider) {
+//    public ConsolePostPresenter(PostProvider postProvider) {
+//        this.postProvider = postProvider;
+//    }
+
+//    public PostProvider getPostProvider() {
+//        return postProvider;
+//    }
+
+    public void setPostProvider(PostProvider postProvider) {
         this.postProvider = postProvider;
     }
 
