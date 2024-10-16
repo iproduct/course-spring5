@@ -1,6 +1,5 @@
 package course.spring.model;
 
-import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Collections;
