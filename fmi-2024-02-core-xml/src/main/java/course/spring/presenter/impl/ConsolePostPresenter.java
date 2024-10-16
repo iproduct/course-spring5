@@ -1,19 +1,20 @@
 package course.spring.presenter.impl;
 
+import course.spring.domain.PostProvider;
 import course.spring.model.Post;
 import course.spring.presenter.PostPresenter;
 
 import java.util.List;
 
 public class ConsolePostPresenter implements PostPresenter {
-    private List<Post> posts;
+    private PostProvider postProvider;
 
-    public ConsolePostPresenter(List<Post> posts) {
-        this.posts = posts;
+    public ConsolePostPresenter(PostProvider postProvider) {
+        this.postProvider = postProvider;
     }
 
     @Override
     public void present() {
-        posts.forEach(System.out::println);
+        postProvider.getAllPosts().forEach(System.out::println);
     }
 }
