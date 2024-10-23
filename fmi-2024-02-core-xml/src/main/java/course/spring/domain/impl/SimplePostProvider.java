@@ -2,11 +2,18 @@ package course.spring.domain.impl;
 
 import course.spring.domain.PostProvider;
 import course.spring.model.Post;
+import lombok.extern.java.Log;
 
 import java.util.List;
 import java.util.Set;
 
+@Log
 public class SimplePostProvider implements PostProvider {
+
+    public static PostProvider createProvider(){
+        log.info("Provider created by factory method.");
+        return new SimplePostProvider();
+    }
     @Override
     public List<Post> getAllPosts() {
         return List.of(
