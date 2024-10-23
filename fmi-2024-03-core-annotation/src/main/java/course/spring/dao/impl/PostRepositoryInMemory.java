@@ -6,6 +6,7 @@ import course.spring.model.Post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
@@ -17,7 +18,11 @@ public class PostRepositoryInMemory extends InMemoryRepository<Post, Long> imple
     }
 
     @Override
-    public List<Post> findByTags(Set<String> tags) {
-        return null;
+    public List<Post> findByTags(Collection<String> tags) {
+        var tagsSet = Set.copyOf(tags);
+        return findAll().stream().filter(p -> {
+            tagsSet.retainAll(p.getTags());
+            return !tagsSet.isEmpty();
+        }).toList();
     }
 }
