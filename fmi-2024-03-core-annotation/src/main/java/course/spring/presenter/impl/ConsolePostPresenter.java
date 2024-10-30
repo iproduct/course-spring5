@@ -11,19 +11,20 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
+import java.util.Arrays;
 import java.util.List;
 
 @Component("presenter")
 public class ConsolePostPresenter implements PostPresenter {
 //    @Resource(name = "repoProvider")
-    private PostProvider postProvider;
+    private PostProvider[] postProviders;
 
     @Value("${presenter.title}")
     private String title;
 
     @Autowired
-    public ConsolePostPresenter(@RepoProvider PostProvider postProvider) {
-        this.postProvider = postProvider;
+    public ConsolePostPresenter(PostProvider[] postProvider) {
+        this.postProviders = postProvider;
     }
 
     public void setTitle(String title) {
@@ -42,6 +43,7 @@ public class ConsolePostPresenter implements PostPresenter {
     @Override
     public void present() {
         System.out.printf("Title: %s\n", title);
-        postProvider.getAllPosts().forEach(System.out::println);
+        var allPosts = Arrays.stream(postProviders).flatMap(p -> p.getAllPosts().stream()).toList();
+        allPosts.forEach(System.out::println);
     }
 }

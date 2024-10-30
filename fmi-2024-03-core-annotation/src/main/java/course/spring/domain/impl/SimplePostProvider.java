@@ -4,6 +4,7 @@ import course.spring.domain.PostProvider;
 import course.spring.model.Post;
 import course.spring.qualifiers.SimpleProvider;
 import lombok.extern.java.Log;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Qualifier;
@@ -14,6 +15,7 @@ import java.util.Set;
 @Log
 @Service("simpleProvider")
 @SimpleProvider
+@Order(1)
 public class SimplePostProvider implements PostProvider {
 
     public static PostProvider createProvider(){
