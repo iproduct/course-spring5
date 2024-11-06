@@ -5,25 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="836fcf10-b2a1-40e5-9db2-bc9110c8eac1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/src/main/java/ws/spring/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/src/main/java/ws/spring/config/ApplicationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/src/main/java/ws/spring/service/impl/FromPropertyFileArticleProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ws-spring-04-core-programmatic/src/main/java/ws/spring/service/impl/FromPropertyFileArticleProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-05-aop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ws-spring-05-aop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/domain/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/domain/impl/PropertyFilePostProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/domain/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fmi-2024-05-core-spel-aop/src/main/java/course/spring/SpelDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fmi-2024-05-core-spel-aop/src/main/java/course/spring/model/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fmi-2024-05-core-spel-aop/src/main/java/course/spring/model/CarPark.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fmi-2024-05-core-spel-aop/src/main/java/course/spring/model/CircularDependencyBeanA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fmi-2024-05-core-spel-aop/src/main/java/course/spring/model/CircularDependencyBeanB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fmi-2024-05-core-spel-aop/src/main/java/course/spring/model/Engine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/dao/impl/LongKeyGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/dao/impl/LongKeyGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/resources/posts.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/resources/posts.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coredemo/spel/ConsoleArticlePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coredemo/spel/ConsoleArticlePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coredemo/spel/SpelDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coredemo/spel/SpelDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,8 +90,13 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;39d44a0200827acff311a9bd053a81c2&quot;
+    &quot;spring.configuration.checksum&quot;: &quot;39d44a0200827acff311a9bd053a81c2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -196,6 +196,9 @@
       <workItem from="1645606199325" duration="3704000" />
       <workItem from="1652247933197" duration="1610000" />
       <workItem from="1670955710952" duration="5393000" />
+      <workItem from="1730911922179" duration="501000" />
+      <workItem from="1730913347470" duration="185000" />
+      <workItem from="1730915120831" duration="37000" />
     </task>
     <task id="LOCAL-00001" summary="project renamed">
       <created>1645606774086</created>

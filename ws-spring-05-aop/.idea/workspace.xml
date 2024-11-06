@@ -5,6 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="807ffab5-5f7a-4ae3-9523-bcd68be47063" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/domain/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/domain/impl/PropertyFilePostProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/domain/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fmi-2024-05-core-spel-aop/src/main/java/course/spring/SpelDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fmi-2024-05-core-spel-aop/src/main/java/course/spring/model/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fmi-2024-05-core-spel-aop/src/main/java/course/spring/model/CarPark.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fmi-2024-05-core-spel-aop/src/main/java/course/spring/model/CircularDependencyBeanA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fmi-2024-05-core-spel-aop/src/main/java/course/spring/model/CircularDependencyBeanB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fmi-2024-05-core-spel-aop/src/main/java/course/spring/model/Engine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/dao/impl/LongKeyGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/dao/impl/LongKeyGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/resources/posts.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/resources/posts.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coredemo/aop/EntityCreationPublishingAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coredemo/aop/EntityCreationPublishingAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coredemo/aop/MethodProfilerAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coredemo/aop/MethodProfilerAspect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ws-spring-05-spel/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,21 +104,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "spring.configuration.checksum": "1096dc303d6041dade43c0613d03c54a",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;1096dc303d6041dade43c0613d03c54a&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="coredemo.qualifiers" />
@@ -228,6 +244,7 @@
       <workItem from="1652271985896" duration="8000" />
       <workItem from="1670955707681" duration="4700000" />
       <workItem from="1730300672881" duration="663000" />
+      <workItem from="1730917190054" duration="185000" />
     </task>
     <task id="LOCAL-00001" summary="demo projects renamed">
       <created>1645023126204</created>
