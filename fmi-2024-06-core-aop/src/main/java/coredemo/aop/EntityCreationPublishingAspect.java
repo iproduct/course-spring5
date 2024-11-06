@@ -20,7 +20,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @Component
-//@Aspect
+@Aspect
 public class EntityCreationPublishingAspect implements  ApplicationContextAware{
     final static Logger log = LoggerFactory.getLogger(EntityCreationPublishingAspect.class);
 
@@ -31,7 +31,7 @@ public class EntityCreationPublishingAspect implements  ApplicationContextAware{
     public void repositoryMethods() {
     }
 
-    @Pointcut("(execution(* *..add*(..)) || execution(* *..create*(..))) && args(article, ..)")
+    @Pointcut("(execution(* *..add*(coredemo.model.Article,..)) || execution(* *..create*(..))) && args(article, ..)")
     public void addMethods(Article article) {
     }
 
