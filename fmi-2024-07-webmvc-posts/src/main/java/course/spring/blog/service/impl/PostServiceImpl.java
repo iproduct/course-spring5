@@ -1,7 +1,6 @@
 package course.spring.blog.service.impl;
 
 import course.spring.blog.dao.PostRepository;
-import course.spring.blog.dto.PostCreateDto;
 import course.spring.blog.entity.Post;
 import course.spring.blog.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,12 +28,12 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public Post addPost(PostCreateDto post) {
+    public Post addPost(Post post) {
         return null;
     }
 
     @Override
-    public Post updatePost(PostCreateDto post) {
+    public Post updatePost(Post post) {
         return null;
     }
 

@@ -2,10 +2,11 @@ package course.spring.blog.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.stereotype.Component;
 
 import java.util.Collections;
 import java.util.Set;
-
+@Component
 @Entity
 @Data
 @AllArgsConstructor

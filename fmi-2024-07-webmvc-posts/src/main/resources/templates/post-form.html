@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="~{fragments/head :: head('All Posts')}"/>
+<body>
+<div class="container">
+    <h3 th:text="${title}">Add New Article</h3>
+    <form th:object="${post}" th:method="post" class="col s12" enctype="multipart/form-data">
+
+        <div class="input-field col s12">
+            <input type="text" th:field="*{title}" id="title" name="title"
+                   title="Article title" th:errorclass="field-error">
+            <label path="title" for="title">Title</label>
+        </div>
+        <p th:if="${#fields.hasErrors('title')}" th:errors="*{title}" class="errors">
+            Incorrect title
+        </p>
+
+        <div class="input-field col s12">
+            <input type="text" th:field="*{content}" id="content" name="content"
+                   title="Article content" th:errorclass="field-error">
+            <label for="content">Content</label>
+        </div>
+        <p th:if="${#fields.hasErrors('content')}" th:errors="*{content}" class="errors">
+            Content should not be blank.
+        </p>
+
+        <div class="input-field col s12">
+            <input type="text" th:field="*{tags}" id="keywords" name="keywords"
+                   title="Article keywords" th:errorclass="field-error">
+            <label for="keywords">Keywords</label>
+        </div>
+        <p th:if="${#fields.hasErrors('tags')}" th:errors="*{tags}" class="errors">
+            Keywords errors
+        </p>
+
+<!--        <div class="input-field col s12">-->
+<!--            <input type="text" th:field="*{imageUrl}" id="imageUrl" name="imageUrl"-->
+<!--                   title="Article picture URL" th:errorclass="field-error">-->
+<!--            <label for="keywords">Image URL</label>-->
+<!--        </div>-->
+<!--        <p th:if="${#fields.hasErrors('imageUrl')}" th:errors="*{imageUrl}" class="errors">-->
+<!--            Image URL errors-->
+<!--        </p>-->
+
+<!--        <div class="file-field input-field">-->
+<!--            <div class="btn">-->
+<!--                <span>File</span>-->
+<!--                <input type="file" id="file" name="file" multiple class="custom-file-input" th:value="*{imageUrl}">-->
+<!--            </div>-->
+<!--            <div class="file-path-wrapper">-->
+<!--                <input class="file-path validate" type="text" placeholder="Upload one or more files"-->
+<!--                       th:value="${#strings.isEmpty(article.imageUrl)}? 'Choose file' : *{imageUrl}">-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <p th:if="${fileError != null}" class="errors">-->
+<!--            <span th:text="${fileError}"></span>-->
+<!--        </p>-->
+
+        <div>
+            <div class="offset-sm-2 col-sm-10">
+                <button type="submit" class="btn btn-primary" id="submit" name="submit" value="submit">Submit</button>
+                <button type="reset" class="btn red">Reset</button>
+                <a th:href="${'/articles'}" class="btn btn-secondary orange" id="cancel">Cancel</a>
+            </div>
+        </div>
+
+        <!--<div class="col-xs-12 alert alert-danger" th:if="${myErrors != null}">-->
+        <!--<p>Validation errors: </p>-->
+        <!--<ul th:each="error: ${myErrors}">-->
+        <!--&lt;!&ndash;/*@thymesVar id="error" type=""*/&ndash;&gt;-->
+        <!--<li th:text="${error}"></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+    </form>
+<!--    <div th:replace="~{fragments/foot :: foot}"></footer>-->
+    </div>
+
+</body>
+</html>
