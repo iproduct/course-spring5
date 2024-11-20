@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Blog</title>
+</head>
+<body>
+<h2>All Posts</h2>
+<table>
+    <thead>
+    <th>Number</th>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Tags</th>
+    <th>Created</th>
+    <th>Modified</th>
+    <th>Image</th>
+    </thead>
+    <tbody>
+    <tr th:each="row, rowStat: ${posts}">
+        <td th:text="${rowStat.index + 1}"/>
+        <td th:text="${row.title}"/>
+        <td th:text="${row.content}"/>
+        <td th:text='${#strings.listJoin(row.tags, ", ")}'></td>
+        <td />
+        <td />
+        <td />
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
