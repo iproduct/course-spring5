@@ -37,15 +37,7 @@ public class PostController {
     }
 
     @PostMapping("/add")
-    public String addPost(
-            @Valid @ModelAttribute("post") Post post,
-            BindingResult errors,
-            @RequestParam(value = "file", required = false) MultipartFile file,
-            Model model) {
-        model.addAttribute("fileError", null);
-        if(errors.hasErrors()) {
-            return "post-form";
-        }
+    public String addPost(@ModelAttribute("post") Post post) {
         if(post.getId() == null) {  // create
             log.info("Create new post:" + post);
             postService.addPost(post);
