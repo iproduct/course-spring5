@@ -21,6 +21,7 @@ import java.util.stream.Collectors;
 
 @Service
 @Slf4j
+@Transactional
 public class BrandServiceImpl implements BrandService {
 
     @Autowired

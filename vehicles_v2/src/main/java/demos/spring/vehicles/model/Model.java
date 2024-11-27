@@ -15,11 +15,9 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 @Data
 @NoArgsConstructor(force = true)
 @AllArgsConstructor
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Model implements Comparable<Model>{
     @Id
     @GeneratedValue(strategy = IDENTITY)
-    @EqualsAndHashCode.Include
     private Long id;
 
     @NonNull
