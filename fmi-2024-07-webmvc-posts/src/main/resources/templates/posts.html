@@ -2,6 +2,8 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="~{fragments/head :: head('All Posts')}" />
 <body>
+<div th:replace="~{fragments/menu :: menu(${path},'')}"></div>
+<div class="container">
 <h1>All Posts</h1>
 <table>
     <thead>
@@ -18,16 +20,16 @@
         <td th:text="${rowStat.index + 1}"/>
         <td th:text="${row.title}"/>
         <td th:text="${row.content}"/>
-        <td th:text='${#strings.listJoin(row.tags, ", ")}'></td>
+        <td th:text='${#strings.listJoin(row.tags, ", ")}'/>
         <td th:text='${#temporals.format(row.created, "dd.MM.YYYY")}'></td>
         <td th:text='${#temporals.format(row.modified, "dd.MM.YYYY")}'></td>
-        <td th:text='${row.imageUrl}'></td>
-        <td />
-        <td />
-        <td />
+        <td>
+            <img class="img-thumbnail" th:src="${row.imageUrl}" />
+        </td>
     </tr>
     </tbody>
 </table>
-
+</div>
+<div th:replace="~{fragments/foot :: foot}"></div>
 </body>
 </html>

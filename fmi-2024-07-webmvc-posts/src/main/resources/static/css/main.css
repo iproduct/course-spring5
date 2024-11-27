@@ -46,3 +46,7 @@ nav a.active {
     border: 1px solid #e51c23;
     border-radius: 5px;
 }
+
+.img-thumbnail {
+    height: 100px;
+}
