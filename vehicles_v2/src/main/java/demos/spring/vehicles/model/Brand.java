@@ -4,14 +4,14 @@ import lombok.*;
 import org.hibernate.annotations.SortComparator;
 import org.hibernate.validator.constraints.Length;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.*;
 
-import static javax.persistence.GenerationType.IDENTITY;
+import static jakarta.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Data
-@NoArgsConstructor
+@NoArgsConstructor(force = true)
 @RequiredArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)

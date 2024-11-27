@@ -2,6 +2,7 @@ package demos.spring.vehicles.service.impl;
 
 
 import demos.spring.vehicles.dao.UserRepository;
+import demos.spring.vehicles.exception.EntityNotFoundException;
 import demos.spring.vehicles.exception.InvalidEntityException;
 import demos.spring.vehicles.model.Offer;
 import demos.spring.vehicles.model.Role;
@@ -16,7 +17,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.event.TransactionPhase;
 import org.springframework.transaction.event.TransactionalEventListener;
 
-import javax.persistence.EntityNotFoundException;
 import java.util.*;
 import java.util.stream.Collectors;
 

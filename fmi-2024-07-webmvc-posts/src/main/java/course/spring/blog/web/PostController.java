@@ -18,6 +18,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.UUID;
 import java.util.regex.Pattern;
 
 @Controller
@@ -55,9 +56,15 @@ public class PostController {
             return "post-form";
         }
         if (!file.isEmpty() && file.getOriginalFilename().length() > 0) {
-            if (Pattern.matches(".+\\.(jpg|png)", file.getOriginalFilename())) {
-                if (handleMultipartFile(file)) {
-                    post.setImageUrl("uploads/" + file.getOriginalFilename());
+            var imgFilenamePattern = Pattern.compile(".+\\.(jpg|png)");
+            var matcher = imgFilenamePattern.matcher(file.getOriginalFilename());
+            if (matcher.matches()) {
+                var ext = matcher.group(1);
+                UUID uuid = UUID.randomUUID();
+                var filename = uuid.toString() + "." + ext;
+                log.info(filename);
+                if (handleMultipartFile(file, filename)) {
+                    post.setImageUrl("uploads/" + filename);
                 } else {
                     model.addAttribute("fileError", "Error saving image: "+ file.getOriginalFilename());
                 }
@@ -72,16 +79,15 @@ public class PostController {
         return "redirect:/posts";
     }
 
-    private boolean handleMultipartFile(MultipartFile file) {
-        String name = file.getOriginalFilename();
+    private boolean handleMultipartFile(MultipartFile file, String filename) {
         long size = file.getSize();
-        log.info("File: " + name + ", size: " + size);
+        log.info("File: " + filename + ", size: " + size);
         try {
             File currentDir = new File(UPLOADS_DIR);
             if (!currentDir.exists()) {
                 currentDir.mkdirs();
             }
-            String path = currentDir.getAbsolutePath() + "/" + file.getOriginalFilename();
+            String path = currentDir.getAbsolutePath() + "/" + filename;
             var imageFile = new File(path);
             FileCopyUtils.copy(file.getInputStream(), new FileOutputStream(imageFile));
             return true;

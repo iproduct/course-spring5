@@ -9,13 +9,13 @@ import demos.spring.vehicles.model.Model;
 import demos.spring.vehicles.model.Offer;
 import demos.spring.vehicles.model.User;
 import demos.spring.vehicles.service.OfferService;
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.validation.Valid;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;

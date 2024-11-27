@@ -8,7 +8,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto col-12 justify-content-between">
-                <li class="nav-item" th:classappend="${#request.getServletPath() == '/brands'}? 'active'">
+                <li class="nav-item" th:classappend="${servletPath == '/brands'}? 'active'">
                     <a class="nav-link" th:href="@{/brands}">All Brands</a>
                 </li>
 <!--                <li class="nav-item" th:classappend="${#request.getServletPath() == '/brands/add'}? 'active'">-->
@@ -17,13 +17,13 @@
 <!--                <li class="nav-item" th:classappend="${#request.getServletPath() == '/brands/model/add'}? 'active'">-->
 <!--                    <a class="nav-link" th:href="@{/}">Add Model</a>-->
 <!--                </li>-->
-                <li class="nav-item" th:classappend="${#request.getServletPath() == '/offers/add'}? 'active'">
+                <li class="nav-item" th:classappend="${servletPath == '/offers/add'}? 'active'">
                     <a class="nav-link" th:href="@{/offers/add}">Add Offer</a>
                 </li>
-                <li class="nav-item" th:classappend="${#request.getServletPath() == '/offers'}? 'active'">
+                <li class="nav-item" th:classappend="${servletPath == '/offers'}? 'active'">
                     <a class="nav-link" th:href="@{/offers}">All Offers</a>
                 </li>
-                <li class="nav-item" th:classappend="${#request.getServletPath() == '/offers/favs'}? 'active'">
+                <li class="nav-item" th:classappend="${servletPath == '/offers/favs'}? 'active'">
                     <a class="nav-link" th:href="@{/offers/favs}">Favourites</a>
                 </li>
                 <li class="nav-item dropdown">
@@ -38,16 +38,16 @@
                         <a class="dropdown-item" th:href="@{/}">Something else here</a>
                     </div>
                 </li>
-                <li th:if="${session.user}" class="nav-item" th:classappend="${#request.getServletPath() == '/auth/logaout'}? 'active'">
+                <li th:if="${session.user}" class="nav-item" th:classappend="${servletPath == '/auth/logaout'}? 'active'">
                    <div class="form-inline my-2 my-lg-0 border px-3">
                         <div class="logged-user" th:text="|Wellcome, ${session.user.firstName}|" />
                         <a class="nav-link" th:href="@{/auth/logout}">Logout</a>
                    </div>
                 </li>
-                <li th:unless="${session.user}" class="nav-item" th:classappend="${#request.getServletPath() == '/auth/register'}? 'active'">
+                <li th:unless="${session.user}" class="nav-item" th:classappend="${servletPath == '/auth/register'}? 'active'">
                     <a class="nav-link" th:href="@{/auth/register}">Register</a>
                 </li>
-                <li th:unless="${session.user}" class="nav-item" th:classappend="${#request.getServletPath() == '/auth/login'}? 'active'">
+                <li th:unless="${session.user}" class="nav-item" th:classappend="${servletPath == '/auth/login'}? 'active'">
                     <a class="nav-link" th:href="@{/auth/login}">Login</a>
                 </li>
 <!--                <li>-->
