@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-<head th:replace="~{fragments/head :: head('All Posts')}"/>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head('Add/Edit Post')}"/>
 <body>
 <div class="container">
-    <h3 th:text="${title}">Add New Post</h3>
+    <h3 th:text="${title}">Post</h3>
     <form th:object="${post}" th:method="post" class="col s12" enctype="multipart/form-data">
 
         <div class="input-field col s12">

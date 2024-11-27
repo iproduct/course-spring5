@@ -7,7 +7,9 @@ import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
@@ -33,11 +35,17 @@ public class PostController {
     @GetMapping("/add")
     public String getPostForm(@ModelAttribute("post") Post article, Model model){
         model.addAttribute("path", "/posts/add");
+        model.addAttribute("title", "Add Post");
+
         return "post-form";
     }
 
     @PostMapping("/add")
-    public String addPost(@ModelAttribute("post") Post post) {
+    public String addPost(@Valid @ModelAttribute("post") Post post, Errors errors) {
+        log.warning("Invalid post data: " + errors.toString());
+        if (errors.hasErrors()) {
+            return "post-form";
+        }
         if(post.getId() == null) {  // create
             log.info("Create new post:" + post);
             postService.addPost(post);
