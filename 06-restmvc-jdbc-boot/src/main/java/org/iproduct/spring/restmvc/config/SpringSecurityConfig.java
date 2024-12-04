@@ -5,33 +5,41 @@ import org.iproduct.spring.restmvc.exception.EntityNotFoundException;
 import org.iproduct.spring.restmvc.service.UserService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.web.SecurityFilterChain;
 
-import static org.springframework.http.HttpMethod.*;
+import static org.iproduct.spring.restmvc.model.Role.ADMIN;
+import static org.springframework.http.HttpMethod.GET;
+import static org.springframework.http.HttpMethod.POST;
 
 @Configuration
 @EnableWebSecurity
 @Slf4j
-public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
+public class SpringSecurityConfig {
 
-        @Override
-        protected void configure (HttpSecurity http) throws Exception {
-        http.csrf().disable()
-                .authorizeRequests()
-//                .antMatchers(GET, "/api/users").hasAnyRole("ADMIN")
-//                .antMatchers(POST, "/**").hasAnyRole("USER", "ADMIN")
-//                .antMatchers(PUT, "/**").hasAnyRole("USER", "ADMIN")
-//                .antMatchers(DELETE, "/**").hasRole("ADMIN")
-                .antMatchers("/**").permitAll()
-                .and()
-                .formLogin()
-                .and()
-                .httpBasic();
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http.csrf(csrf -> csrf.disable())
+                .authorizeHttpRequests(authorizeHttpRequests ->
+                                authorizeHttpRequests
+                                        .requestMatchers(POST, "/api/auth/login", "/api/auth/register").permitAll()
+                                        .requestMatchers(GET, "/swagger-ui.html", "/swagger-ui/**", "/swagger-resources/**", "/v2/**").permitAll()
+                                        .requestMatchers(GET, "/api/articles").permitAll()
+                                        .requestMatchers(GET, "/api/users", "api/users/**").authenticated() //.hasRole(ADMIN.name())
+                                        .requestMatchers("/api/users", "api/users/**").hasRole(ADMIN.name())
+                                        .requestMatchers("/**").permitAll()
+                        //hasAnyRole(ADMIN.name(), AUTHOR.name(), READER.name())
+//                                .requestMatchers(GET, "/**").hasAnyRole(ADMIN.name(), AUTHOR.name(), READER.name())
+//                                .requestMatchers(POST, "/**").hasAnyRole(ADMIN.name(), AUTHOR.name())
+//                                .requestMatchers(PUT, "/**").hasAnyRole(ADMIN.name(), AUTHOR.name())
+//                                .requestMatchers(DELETE, "/**").hasAnyRole(ADMIN.name(), AUTHOR.name())
+                ).formLogin(Customizer.withDefaults());
+        return http.build();
     }
 
     @Bean

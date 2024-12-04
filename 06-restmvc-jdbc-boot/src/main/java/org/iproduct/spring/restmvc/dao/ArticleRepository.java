@@ -2,7 +2,7 @@ package org.iproduct.spring.restmvc.dao;
 
 import org.iproduct.spring.restmvc.model.Article;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 import java.util.Collection;
 import java.util.Optional;
 
