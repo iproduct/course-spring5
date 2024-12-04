@@ -23,6 +23,7 @@ import java.util.stream.Collectors;
 
 @Service
 @Slf4j
+@Transactional
 public class OfferServiceImpl implements OfferService {
 
     @Autowired
@@ -38,11 +39,13 @@ public class OfferServiceImpl implements OfferService {
     private ApplicationEventPublisher applicationEventPublisher;
 
     @Override
+    @Transactional(readOnly = true)
     public Collection<Offer> getOffers() {
         return offerRepo.findAll();
     }
 
     @Override
+    @Transactional(readOnly = true)
     public Offer getOfferById(Long id) {
         return offerRepo.findById(id).orElseThrow(() ->
                 new EntityNotFoundException(String.format("Offer with ID=%s not found.", id)));
