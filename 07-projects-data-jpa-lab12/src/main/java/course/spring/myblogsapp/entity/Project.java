@@ -16,7 +16,6 @@ import java.util.Set;
 @Table(name = "projects")
 @Data
 @NoArgsConstructor
-@RequiredArgsConstructor
 @AllArgsConstructor
 public class Project extends BaseEntity {
     @NonNull

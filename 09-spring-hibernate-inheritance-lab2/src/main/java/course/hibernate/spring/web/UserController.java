@@ -1,6 +1,7 @@
 package course.hibernate.spring.web;
 
 import course.hibernate.spring.dto.UserDetailDto;
+import course.hibernate.spring.dto.mapping.UserDtoMapper;
 import course.hibernate.spring.entity.User;
 import course.hibernate.spring.service.UserService;
 import org.modelmapper.ModelMapper;
@@ -17,10 +18,10 @@ import java.util.stream.Collectors;
 @RequestMapping("/api/users")
 public class UserController {
     private UserService userService;
-    private ModelMapper modelMapper;
+    private UserDtoMapper modelMapper;
 
     @Autowired
-    public UserController(UserService userService, ModelMapper modelMapper) {
+    public UserController(UserService userService, UserDtoMapper modelMapper) {
         this.userService = userService;
         this.modelMapper = modelMapper;
     }
@@ -34,6 +35,6 @@ public class UserController {
 
     @GetMapping("/{id}")
     UserDetailDto getUserById(@PathVariable("id") Long id) {
-        return modelMapper.map(userService.findById(id), UserDetailDto.class);
+        return modelMapper.mapUserToUserDetailDto(userService.findById(id));
     }
 }

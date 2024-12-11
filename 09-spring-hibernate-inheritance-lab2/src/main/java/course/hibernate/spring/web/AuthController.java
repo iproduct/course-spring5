@@ -4,6 +4,7 @@ import course.hibernate.spring.dto.Credentials;
 import course.hibernate.spring.dto.LoginResponse;
 import course.hibernate.spring.dto.UserCreateDto;
 import course.hibernate.spring.dto.UserSummaryDto;
+import course.hibernate.spring.dto.mapping.UserDtoMapper;
 import course.hibernate.spring.entity.Role;
 import course.hibernate.spring.entity.User;
 import course.hibernate.spring.exception.InvalidClientDataException;
@@ -29,13 +30,13 @@ import java.util.stream.Collectors;
 @RequestMapping("/api/auth")
 public class AuthController {
     private UserService userService;
-    private ModelMapper mapper;
     private AuthenticationManager authenticationManager;
     private JwtUtils jwtUtils;
+    private UserDtoMapper mapper;
 
     @Autowired
     public AuthController(UserService userService,
-                          ModelMapper mapper,
+                          UserDtoMapper mapper,
                           AuthenticationManager authenticationManager,
                           JwtUtils jwtUtils) {
         this.userService = userService;
@@ -55,7 +56,7 @@ public class AuthController {
                     String.format("Role: '%s' is invalid. You can self-register only in 'READER' role.",
                             userDto.getRoles()));
         }
-        User created = userService.create(mapper.map(userDto, User.class));
+        User created = userService.create(mapper.mapUserDtoToUser(userDto));
         return ResponseEntity.created(
                 ServletUriComponentsBuilder.fromCurrentRequest().pathSegment("{id}").build(created.getId())
         ).body(created);
@@ -72,7 +73,7 @@ public class AuthController {
         ));
         final User user = userService.findByUsername(credentials.getUsername());
         final String token = jwtUtils.generateToken(user);
-        return new LoginResponse(mapper.map(user, UserSummaryDto.class), token);
+        return new LoginResponse(mapper.mapUserToUserSummaryDto(user), token);
     }
 }
 
