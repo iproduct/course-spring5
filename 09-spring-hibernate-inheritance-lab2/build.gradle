@@ -1,12 +1,16 @@
 plugins {
+    id 'java'
     id 'org.springframework.boot' version '3.3.5'
     id 'io.spring.dependency-management' version '1.1.6'
-    id 'java'
+    id 'idea'
+    id "org.hibernate.orm" version "6.4.1.Final"
 }
-
+//apply plugin: 'org.hibernate.orm'
 group = 'course.hibernate'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+java {
+    sourceCompatibility = '17'
+}
 
 configurations {
     compileOnly {
@@ -16,6 +20,9 @@ configurations {
 
 repositories {
     mavenCentral()
+    maven {
+        url "https://invesdwin.de/repo/invesdwin-oss-remote/"
+    }
 }
 
 dependencies {
@@ -30,7 +37,7 @@ dependencies {
     implementation 'com.github.jmnarloch:modelmapper-spring-boot-starter:1.1.0'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    runtimeOnly 'mysql:mysql-connector-java'
+    runtimeOnly 'com.mysql:mysql-connector-j'
     testRuntimeOnly 'com.h2database:h2'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'

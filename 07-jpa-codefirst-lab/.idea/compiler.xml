@@ -11,7 +11,6 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.16/lombok-1.18.16.jar" />
         </processorPath>
         <module name="04-jpa-codefirst-lab" />
-        <module name="07-jpa-codefirst-lab" />
       </profile>
     </annotationProcessing>
   </component>
