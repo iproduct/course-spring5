@@ -34,6 +34,7 @@ public class Article {
     @NonNull
     @Size(max=512)
     @Basic(optional = false)
+    @Column()
     private String imageUrl;
     @NonNull
     @ElementCollection(fetch = FetchType.EAGER)
