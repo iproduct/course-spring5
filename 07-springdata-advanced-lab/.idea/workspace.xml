@@ -5,68 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c99c3bc1-3d8c-43b3-a064-a32062ad986c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../01-spring-core-demo/.idea/01-spring-core-demo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/modules/core-demo.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/modules/core-demo.test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07-myblogs-app/SCHEMA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/SpringdataAdvancedApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/dao/IngredientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/dao/LabelRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/dao/ShampooRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Ingredient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Label.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Shampoo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Size.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/init/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/util/PrintUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/shampoos-insert.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/course/springdata/advanced/SpringdataAdvancedApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-core-demo/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../01-spring-core-demo/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-spring-core-demo/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../01-spring-core-demo/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/libraries/Gradle__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/libraries/Gradle__junit_junit_4_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/modules/core-demo_main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/modules/core-demo_test.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab7/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/02-core-demo-lab8.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/02-core-demo-lab8.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-core-demo-lab8/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../07-myblogs-app/src/main/java/course/spring/myblogsapp/init/DataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../07-myblogs-app/src/main/java/course/spring/myblogsapp/init/DataInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../07-myblogs-app/work_shop_db.png" beforeDir="false" afterPath="$PROJECT_DIR$/../07-myblogs-app/work_shop_db.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../07-projects-data-jpa-lab11/src/main/java/course/spring/myblogsapp/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../07-projects-data-jpa-lab11/src/main/java/course/spring/myblogsapp/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate-annotations/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../09-webmvc-jsp-hibernate-annotations/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/6.5/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/6.5/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/6.5/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../12-reactive-streaming-demos/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/modules/12-reactive-streaming-demos.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/modules/12-reactive-streaming-demos.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/modules/12-reactive-streaming-demos.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/modules/12-reactive-streaming-demos.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../12-reactive-streaming-demos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-reactive-streaming-demos/12-reactive-streaming-demos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../12-reactive-streaming-demos/12-reactive-streaming-demos.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/dao/ShampooRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/dao/ShampooRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Ingredient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Label.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Label.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Shampoo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Shampoo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/init/AppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/init/AppInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,8 +35,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
   <component name="KotlinMultiplatform">
     <allAvailableExecutables />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -97,6 +53,9 @@
         <option name="mavenHome" value="C:\Users\office27\.m2\wrapper\dists\apache-maven-3.6.3-bin\1iopthnavndlasol9gbrbg6bf2\apache-maven-3.6.3" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="1jsbBTlSH8p7WjL5sMnxh9VDPaT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -107,27 +66,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="extract.method.default.visibility" value="private" />
-    <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.23772103" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "spring.configuration.checksum": "d04c7e67ddc13c9736f5edb4867b3022",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\CourseSpringData\git\spring-data\07-springdata-advanced-lab\src\main\resources" />
@@ -157,7 +116,7 @@
       </method>
     </configuration>
     <configuration name="SpringdataAdvancedApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="07-springdata-advanced-lab" />
+      <module name="springdata-advanced" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="course.springdata.advanced.SpringdataAdvancedApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -185,6 +144,7 @@
       <workItem from="1604930358017" duration="32000" />
       <workItem from="1608039235861" duration="1218000" />
       <workItem from="1608740843967" duration="2722000" />
+      <workItem from="1733951324111" duration="2132000" />
     </task>
     <task id="LOCAL-00001" summary="07-springdata-advanced-lab initial commit">
       <created>1604598525694</created>
@@ -212,70 +172,8 @@
     <MESSAGE value="07-springdata-advanced-lab - get shampoos by size" />
     <option name="LAST_COMMIT_MESSAGE" value="07-springdata-advanced-lab - get shampoos by size" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="526" y="205" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604595801198">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="526" y="205" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.920@0.0.1707.920" timestamp="1604595801198" />
-    <state x="612" y="98" key="#com.intellij.ide.util.MemberChooser" timestamp="1604597557198">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="612" y="98" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1604597557198" />
-    <state x="286" y="0" key="CommitChangelistDialog2" timestamp="1604599871689">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="286" y="0" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1604599871689" />
-    <state width="1651" height="603" key="GridCell.Tab.0.bottom" timestamp="1604679985225">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1651" height="603" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1604679985225" />
-    <state width="1651" height="603" key="GridCell.Tab.0.center" timestamp="1604679985224">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1651" height="603" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1604679985224" />
-    <state width="1651" height="603" key="GridCell.Tab.0.left" timestamp="1604679985224">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1651" height="603" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1604679985224" />
-    <state width="1651" height="603" key="GridCell.Tab.0.right" timestamp="1604679985224">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1651" height="603" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1604679985224" />
-    <state width="1651" height="603" key="GridCell.Tab.1.bottom" timestamp="1604679985225">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1651" height="603" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1604679985225" />
-    <state width="1651" height="603" key="GridCell.Tab.1.center" timestamp="1604679985225">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1651" height="603" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1604679985225" />
-    <state width="1651" height="603" key="GridCell.Tab.1.left" timestamp="1604679985225">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1651" height="603" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1604679985225" />
-    <state width="1651" height="603" key="GridCell.Tab.1.right" timestamp="1604679985225">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1651" height="603" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1604679985225" />
-    <state x="246" y="19" key="SettingsEditor" timestamp="1604595644984">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="246" y="19" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1604595644984" />
-    <state x="346" y="128" key="Vcs.Push.Dialog.v2" timestamp="1604599874116">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="346" y="128" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1604599874116" />
-    <state x="672" y="267" width="367" height="387" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1604595818342">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="672" y="267" width="367" height="387" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1707.920@0.0.1707.920" timestamp="1604595818342" />
-    <state x="421" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604603788616">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="421" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1707.920@0.0.1707.920" timestamp="1604603788616" />
-    <state x="519" y="166" key="extract.method.dialog" timestamp="1604599593499">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="519" y="166" key="extract.method.dialog/0.0.1707.920@0.0.1707.920" timestamp="1604599593499" />
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
   </component>
 </project>

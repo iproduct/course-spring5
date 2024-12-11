@@ -32,9 +32,9 @@ public class AppInitializer implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-//        // Fetch Shampoos by Size
-//        shampooRepo.findBySizeOrderById(MEDIUM).forEach(PrintUtil::printShampoo);
-//        System.out.println("-".repeat(170) + "\n");
+        // Fetch Shampoos by Size
+        shampooRepo.findBySizeOrderById(MEDIUM).forEach(PrintUtil::printShampoo);
+        System.out.println("-".repeat(170) + "\n");
 //
 //        // Fetch Shampoos by Size
 //        shampooRepo.findBySizeOrLabelOrderByPriceDesc(MEDIUM, labelRepo.findByTitle("Vital").get())
