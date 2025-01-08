@@ -1,7 +1,210 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="vehicles@localhost">
+<dataSource name="vehicles_2024@localhost">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.48">
-    <root id="1"/>
+    <root id="1">
+      <DefaultCasing>lower/lower</DefaultCasing>
+      <DefaultEngine>InnoDB</DefaultEngine>
+      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
+      <Grants>|root||javaweb|localhost|ALTER|G
+|root||root|localhost|ALTER|G
+|root||trayan|localhost|ALTER|G
+|root||javaweb|localhost|ALTER ROUTINE|G
+|root||root|localhost|ALTER ROUTINE|G
+|root||trayan|localhost|ALTER ROUTINE|G
+|root||javaweb|localhost|APPLICATION_PASSWORD_ADMIN|G
+|root||root|localhost|APPLICATION_PASSWORD_ADMIN|G
+|root||trayan|localhost|APPLICATION_PASSWORD_ADMIN|G
+|root||javaweb|localhost|BACKUP_ADMIN|G
+|root||root|localhost|BACKUP_ADMIN|G
+|root||trayan|localhost|BACKUP_ADMIN|G
+|root||javaweb|localhost|BINLOG_ADMIN|G
+|root||root|localhost|BINLOG_ADMIN|G
+|root||trayan|localhost|BINLOG_ADMIN|G
+|root||javaweb|localhost|BINLOG_ENCRYPTION_ADMIN|G
+|root||root|localhost|BINLOG_ENCRYPTION_ADMIN|G
+|root||trayan|localhost|BINLOG_ENCRYPTION_ADMIN|G
+|root||javaweb|localhost|CONNECTION_ADMIN|G
+|root||root|localhost|CONNECTION_ADMIN|G
+|root||trayan|localhost|CONNECTION_ADMIN|G
+|root||javaweb|localhost|CREATE|G
+|root||root|localhost|CREATE|G
+|root||trayan|localhost|CREATE|G
+|root||javaweb|localhost|CREATE ROLE|G
+|root||root|localhost|CREATE ROLE|G
+|root||trayan|localhost|CREATE ROLE|G
+|root||javaweb|localhost|CREATE ROUTINE|G
+|root||root|localhost|CREATE ROUTINE|G
+|root||trayan|localhost|CREATE ROUTINE|G
+|root||javaweb|localhost|CREATE TABLESPACE|G
+|root||root|localhost|CREATE TABLESPACE|G
+|root||trayan|localhost|CREATE TABLESPACE|G
+|root||javaweb|localhost|CREATE TEMPORARY TABLES|G
+|root||root|localhost|CREATE TEMPORARY TABLES|G
+|root||trayan|localhost|CREATE TEMPORARY TABLES|G
+|root||javaweb|localhost|CREATE USER|G
+|root||root|localhost|CREATE USER|G
+|root||trayan|localhost|CREATE USER|G
+|root||javaweb|localhost|CREATE VIEW|G
+|root||root|localhost|CREATE VIEW|G
+|root||trayan|localhost|CREATE VIEW|G
+|root||javaweb|localhost|DELETE|G
+|root||root|localhost|DELETE|G
+|root||trayan|localhost|DELETE|G
+|root||javaweb|localhost|DROP|G
+|root||root|localhost|DROP|G
+|root||trayan|localhost|DROP|G
+|root||javaweb|localhost|DROP ROLE|G
+|root||root|localhost|DROP ROLE|G
+|root||trayan|localhost|DROP ROLE|G
+|root||javaweb|localhost|ENCRYPTION_KEY_ADMIN|G
+|root||root|localhost|ENCRYPTION_KEY_ADMIN|G
+|root||trayan|localhost|ENCRYPTION_KEY_ADMIN|G
+|root||javaweb|localhost|EVENT|G
+|root||root|localhost|EVENT|G
+|root||trayan|localhost|EVENT|G
+|root||javaweb|localhost|EXECUTE|G
+|root||root|localhost|EXECUTE|G
+|root||trayan|localhost|EXECUTE|G
+|root||javaweb|localhost|FILE|G
+|root||root|localhost|FILE|G
+|root||trayan|localhost|FILE|G
+|root||javaweb|localhost|GROUP_REPLICATION_ADMIN|G
+|root||root|localhost|GROUP_REPLICATION_ADMIN|G
+|root||trayan|localhost|GROUP_REPLICATION_ADMIN|G
+|root||javaweb|localhost|INDEX|G
+|root||root|localhost|INDEX|G
+|root||trayan|localhost|INDEX|G
+|root||javaweb|localhost|INSERT|G
+|root||root|localhost|INSERT|G
+|root||trayan|localhost|INSERT|G
+|root||javaweb|localhost|LOCK TABLES|G
+|root||root|localhost|LOCK TABLES|G
+|root||trayan|localhost|LOCK TABLES|G
+|root||javaweb|localhost|PERSIST_RO_VARIABLES_ADMIN|G
+|root||mysql.session|localhost|PERSIST_RO_VARIABLES_ADMIN|G
+|root||root|localhost|PERSIST_RO_VARIABLES_ADMIN|G
+|root||trayan|localhost|PERSIST_RO_VARIABLES_ADMIN|G
+|root||javaweb|localhost|PROCESS|G
+|root||root|localhost|PROCESS|G
+|root||trayan|localhost|PROCESS|G
+|root||javaweb|localhost|REFERENCES|G
+|root||root|localhost|REFERENCES|G
+|root||trayan|localhost|REFERENCES|G
+|root||javaweb|localhost|RELOAD|G
+|root||root|localhost|RELOAD|G
+|root||trayan|localhost|RELOAD|G
+|root||javaweb|localhost|REPLICATION CLIENT|G
+|root||root|localhost|REPLICATION CLIENT|G
+|root||trayan|localhost|REPLICATION CLIENT|G
+|root||javaweb|localhost|REPLICATION SLAVE|G
+|root||root|localhost|REPLICATION SLAVE|G
+|root||trayan|localhost|REPLICATION SLAVE|G
+|root||javaweb|localhost|REPLICATION_SLAVE_ADMIN|G
+|root||root|localhost|REPLICATION_SLAVE_ADMIN|G
+|root||trayan|localhost|REPLICATION_SLAVE_ADMIN|G
+|root||javaweb|localhost|RESOURCE_GROUP_ADMIN|G
+|root||root|localhost|RESOURCE_GROUP_ADMIN|G
+|root||trayan|localhost|RESOURCE_GROUP_ADMIN|G
+|root||javaweb|localhost|RESOURCE_GROUP_USER|G
+|root||root|localhost|RESOURCE_GROUP_USER|G
+|root||trayan|localhost|RESOURCE_GROUP_USER|G
+|root||javaweb|localhost|ROLE_ADMIN|G
+|root||root|localhost|ROLE_ADMIN|G
+|root||trayan|localhost|ROLE_ADMIN|G
+|root||javaweb|localhost|SELECT|G
+|root||mysql.infoschema|localhost|SELECT|G
+|root||root|localhost|SELECT|G
+|root||trayan|localhost|SELECT|G
+|root||javaweb|localhost|SERVICE_CONNECTION_ADMIN|G
+|root||root|localhost|SERVICE_CONNECTION_ADMIN|G
+|root||trayan|localhost|SERVICE_CONNECTION_ADMIN|G
+|root||javaweb|localhost|SESSION_VARIABLES_ADMIN|G
+|root||mysql.session|localhost|SESSION_VARIABLES_ADMIN|G
+|root||root|localhost|SESSION_VARIABLES_ADMIN|G
+|root||trayan|localhost|SESSION_VARIABLES_ADMIN|G
+|root||javaweb|localhost|SET_USER_ID|G
+|root||root|localhost|SET_USER_ID|G
+|root||trayan|localhost|SET_USER_ID|G
+|root||javaweb|localhost|SHOW DATABASES|G
+|root||root|localhost|SHOW DATABASES|G
+|root||trayan|localhost|SHOW DATABASES|G
+|root||javaweb|localhost|SHOW VIEW|G
+|root||root|localhost|SHOW VIEW|G
+|root||trayan|localhost|SHOW VIEW|G
+|root||javaweb|localhost|SHUTDOWN|G
+|root||root|localhost|SHUTDOWN|G
+|root||trayan|localhost|SHUTDOWN|G
+|root||javaweb|localhost|SUPER|G
+|root||mysql.session|localhost|SUPER|G
+|root||root|localhost|SUPER|G
+|root||trayan|localhost|SUPER|G
+|root||javaweb|localhost|SYSTEM_USER|G
+|root||mysql.session|localhost|SYSTEM_USER|G
+|root||root|localhost|SYSTEM_USER|G
+|root||trayan|localhost|SYSTEM_USER|G
+|root||javaweb|localhost|SYSTEM_VARIABLES_ADMIN|G
+|root||mysql.session|localhost|SYSTEM_VARIABLES_ADMIN|G
+|root||root|localhost|SYSTEM_VARIABLES_ADMIN|G
+|root||trayan|localhost|SYSTEM_VARIABLES_ADMIN|G
+|root||javaweb|localhost|TABLE_ENCRYPTION_ADMIN|G
+|root||root|localhost|TABLE_ENCRYPTION_ADMIN|G
+|root||trayan|localhost|TABLE_ENCRYPTION_ADMIN|G
+|root||javaweb|localhost|TRIGGER|G
+|root||root|localhost|TRIGGER|G
+|root||trayan|localhost|TRIGGER|G
+|root||javaweb|localhost|UPDATE|G
+|root||root|localhost|UPDATE|G
+|root||trayan|localhost|UPDATE|G
+|root||javaweb|localhost|XA_RECOVER_ADMIN|G
+|root||root|localhost|XA_RECOVER_ADMIN|G
+|root||trayan|localhost|XA_RECOVER_ADMIN|G
+|root||javaweb|localhost|grant option|G
+|root||root|localhost|grant option|G
+|root||trayan|localhost|grant option|G
+%|schema||trayan|localhost|ALTER|G
+%|schema||trayan|localhost|ALTER ROUTINE|G
+%|schema||trayan|localhost|CREATE|G
+%|schema||trayan|localhost|CREATE ROUTINE|G
+%|schema||trayan|localhost|CREATE TEMPORARY TABLES|G
+%|schema||trayan|localhost|CREATE VIEW|G
+%|schema||trayan|localhost|DELETE|G
+%|schema||trayan|localhost|DROP|G
+%|schema||trayan|localhost|EVENT|G
+%|schema||trayan|localhost|EXECUTE|G
+%|schema||trayan|localhost|INDEX|G
+%|schema||trayan|localhost|INSERT|G
+%|schema||trayan|localhost|LOCK TABLES|G
+%|schema||trayan|localhost|REFERENCES|G
+%|schema||trayan|localhost|SELECT|G
+%|schema||trayan|localhost|SHOW VIEW|G
+%|schema||trayan|localhost|TRIGGER|G
+%|schema||trayan|localhost|UPDATE|G
+%|schema||trayan|localhost|grant option|G
+golang\\_projects\\_gorm|schema||javaweb|localhost|INSERT|G
+golang\\_projects\\_gorm|schema||javaweb|localhost|SELECT|G
+golang\\_projects\\_gorm|schema||javaweb|localhost|UPDATE|G
+javaweb|schema||javaweb|localhost|ALTER|G
+javaweb|schema||javaweb|localhost|ALTER ROUTINE|G
+javaweb|schema||javaweb|localhost|CREATE|G
+javaweb|schema||javaweb|localhost|CREATE ROUTINE|G
+javaweb|schema||javaweb|localhost|CREATE TEMPORARY TABLES|G
+javaweb|schema||javaweb|localhost|CREATE VIEW|G
+javaweb|schema||javaweb|localhost|DELETE|G
+javaweb|schema||javaweb|localhost|DROP|G
+javaweb|schema||javaweb|localhost|EVENT|G
+javaweb|schema||javaweb|localhost|EXECUTE|G
+javaweb|schema||javaweb|localhost|INDEX|G
+javaweb|schema||javaweb|localhost|INSERT|G
+javaweb|schema||javaweb|localhost|LOCK TABLES|G
+javaweb|schema||javaweb|localhost|REFERENCES|G
+javaweb|schema||javaweb|localhost|SELECT|G
+javaweb|schema||javaweb|localhost|SHOW VIEW|G
+javaweb|schema||javaweb|localhost|TRIGGER|G
+javaweb|schema||javaweb|localhost|UPDATE|G
+performance_schema|schema||mysql.session|localhost|SELECT|G
+sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
+      <ServerVersion>8.0.16</ServerVersion>
+    </root>
     <collation id="2" parent="1" name="armscii8_bin">
       <Charset>armscii8</Charset>
     </collation>
@@ -856,305 +1059,563 @@
     <collation id="272" parent="1" name="utf8mb4_zh_0900_as_cs">
       <Charset>utf8mb4</Charset>
     </collation>
-    <schema id="273" parent="1" name="bank">
+    <schema id="273" parent="1" name="account">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="274" parent="1" name="bankdb">
+    <schema id="274" parent="1" name="accounts">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="275" parent="1" name="blogs">
+    <schema id="275" parent="1" name="articlesdb8">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="276" parent="1" name="book_library">
+    <schema id="276" parent="1" name="bank">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="277" parent="1" name="camp">
+    <schema id="277" parent="1" name="bankdb">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="278" parent="1" name="cars">
+    <schema id="278" parent="1" name="blogs">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="279" parent="1" name="classicmodels">
+    <schema id="279" parent="1" name="book_library">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="280" parent="1" name="camp">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="281" parent="1" name="cars">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="282" parent="1" name="classicmodels">
       <CollationName>latin1_swedish_ci</CollationName>
     </schema>
-    <schema id="280" parent="1" name="diablo">
+    <schema id="283" parent="1" name="cooking">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="281" parent="1" name="employees">
+    <schema id="284" parent="1" name="course_kafka_2022">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="282" parent="1" name="events">
+    <schema id="285" parent="1" name="diablo">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="283" parent="1" name="fsd">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="284" parent="1" name="gamebar">
+    <schema id="286" parent="1" name="einvoice">
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
-    <schema id="285" parent="1" name="go_rest_api">
+    <schema id="287" parent="1" name="employees">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="286" parent="1" name="hotel">
+    <schema id="288" parent="1" name="ems">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="287" parent="1" name="hr">
+    <schema id="289" parent="1" name="events">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="290" parent="1" name="evgeni_hospital_system">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="291" parent="1" name="fmi_2023_articles">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="292" parent="1" name="fmi_2023_articles_webmvc">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="293" parent="1" name="fmi_2024_posts">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="294" parent="1" name="fsd">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="295" parent="1" name="fullstack_react_2022">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="296" parent="1" name="fundamentals_bookstore_2022">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="297" parent="1" name="gamebar">
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <schema id="298" parent="1" name="go_rest_api">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="299" parent="1" name="go_rest_api_test">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="300" parent="1" name="gohomework4">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="301" parent="1" name="golang_projects">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="302" parent="1" name="golang_projects_2021">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="303" parent="1" name="golang_projects_2024">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="304" parent="1" name="golang_projects_gorm">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="305" parent="1" name="golanghomework">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="306" parent="1" name="gorm_projects">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="307" parent="1" name="grpc-demo">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="308" parent="1" name="hibernate_accounts2">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="309" parent="1" name="hibernate_blogs">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="310" parent="1" name="hibernate_blogs2">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="311" parent="1" name="hibernate_books">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="312" parent="1" name="hibernate_books2">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="313" parent="1" name="hibernate_inheritance">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="314" parent="1" name="hibernate_inheritance2">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="315" parent="1" name="hibernate_native">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="316" parent="1" name="hibernate_native2">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="317" parent="1" name="high_performance_java_persistence">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="318" parent="1" name="hiperquiz">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="319" parent="1" name="his">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="320" parent="1" name="homework4go">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="321" parent="1" name="hotel">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="322" parent="1" name="hr">
       <CollationName>utf8_general_ci</CollationName>
     </schema>
-    <schema id="288" parent="1" name="information_schema">
+    <schema id="323" parent="1" name="information_schema">
       <CollationName>utf8_general_ci</CollationName>
     </schema>
-    <schema id="289" parent="1" name="java32ed">
+    <schema id="324" parent="1" name="java32ed">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="290" parent="1" name="javaweb">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="291" parent="1" name="minions_db">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="292" parent="1" name="mysql">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="293" parent="1" name="organization">
+    <schema id="325" parent="1" name="java_academy_2022">
       <CollationName>utf8_general_ci</CollationName>
     </schema>
-    <schema id="294" parent="1" name="performance_schema">
+    <schema id="326" parent="1" name="java_qa_2022">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="295" parent="1" name="projects">
+    <schema id="327" parent="1" name="javaweb">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="296" parent="1" name="restaurant">
+    <schema id="328" parent="1" name="javaweb2">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="297" parent="1" name="sakila">
+    <schema id="329" parent="1" name="kotlin_blogs">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="298" parent="1" name="school">
+    <schema id="330" parent="1" name="kotlin_blogs2">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="299" parent="1" name="school_jpa">
+    <schema id="331" parent="1" name="mapping">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="300" parent="1" name="shampoos">
+    <schema id="332" parent="1" name="minions_db">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="301" parent="1" name="soft_uni">
+    <schema id="333" parent="1" name="moodle">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="302" parent="1" name="sys">
+    <schema id="334" parent="1" name="movie-review-aggregation-application">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="303" parent="1" name="vehicles">
+    <schema id="335" parent="1" name="my-blogs-go2023">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="336" parent="1" name="myblogs2022">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="337" parent="1" name="mysql">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="338" parent="1" name="organization">
+      <CollationName>utf8_general_ci</CollationName>
+    </schema>
+    <schema id="339" parent="1" name="performance_schema">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="340" parent="1" name="projects">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="341" parent="1" name="projects_lab12">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="342" parent="1" name="recipes">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="343" parent="1" name="restaurant">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="344" parent="1" name="restmvc_springdata">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="345" parent="1" name="sakila">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="346" parent="1" name="school">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="347" parent="1" name="school_jpa">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="348" parent="1" name="services">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="349" parent="1" name="shampoos">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="350" parent="1" name="shampoos2">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="351" parent="1" name="soft_uni">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="352" parent="1" name="spring-jpa-fmi-2021">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="353" parent="1" name="spring_blogs_2022">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="354" parent="1" name="spring_blogs_2022_homeworks">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="355" parent="1" name="spring_fmi_2022_intro">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="356" parent="1" name="spring_intro_2022">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="357" parent="1" name="sys">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="358" parent="1" name="user_recipes">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="359" parent="1" name="vechicles">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="360" parent="1" name="vehicles">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="361" parent="1" name="vehicles2">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="362" parent="1" name="vehicles_2024">
       <Current>1</Current>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="304" parent="1" name="world">
+    <schema id="363" parent="1" name="work_shop_db">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <user id="305" parent="1" name="javaweb">
+    <schema id="364" parent="1" name="world">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="365" parent="1" name="ws_spring_blogs">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="366" parent="1" name="ws_spring_intro2">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <user id="367" parent="1" name="javaweb">
       <Host>localhost</Host>
     </user>
-    <user id="306" parent="1" name="mysql.infoschema">
+    <user id="368" parent="1" name="mysql.infoschema">
+      <CanLogin>0</CanLogin>
+      <Host>localhost</Host>
+      <Plugin>caching_sha2_password</Plugin>
+    </user>
+    <user id="369" parent="1" name="mysql.session">
+      <CanLogin>0</CanLogin>
+      <Host>localhost</Host>
+      <Plugin>caching_sha2_password</Plugin>
+    </user>
+    <user id="370" parent="1" name="mysql.sys">
+      <CanLogin>0</CanLogin>
+      <Host>localhost</Host>
+      <Plugin>caching_sha2_password</Plugin>
+    </user>
+    <user id="371" parent="1" name="newuser"/>
+    <user id="372" parent="1" name="root">
+      <Host>localhost</Host>
+      <Plugin>caching_sha2_password</Plugin>
+    </user>
+    <user id="373" parent="1" name="trayan">
       <Host>localhost</Host>
     </user>
-    <user id="307" parent="1" name="mysql.session">
-      <Host>localhost</Host>
-    </user>
-    <user id="308" parent="1" name="mysql.sys">
-      <Host>localhost</Host>
-    </user>
-    <user id="309" parent="1" name="newuser">
-      <Host>%</Host>
-    </user>
-    <user id="310" parent="1" name="root">
-      <Host>localhost</Host>
-    </user>
-    <table id="311" parent="303" name="cars"/>
-    <table id="312" parent="303" name="company"/>
-    <table id="313" parent="303" name="drivers"/>
-    <table id="314" parent="303" name="drivers_vehicles"/>
-    <table id="315" parent="303" name="planes"/>
-    <table id="316" parent="303" name="plates"/>
-    <table id="317" parent="303" name="trucks"/>
-    <table id="318" parent="303" name="vehicles"/>
-    <column id="319" parent="311" name="seats">
+    <table id="374" parent="362" name="cars">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="375" parent="362" name="company">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="376" parent="362" name="drivers">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="377" parent="362" name="drivers_vehicles">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="378" parent="362" name="planes">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="379" parent="362" name="plates">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="380" parent="362" name="trucks">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="381" parent="362" name="vehicles">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <column id="382" parent="374" name="seats">
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="320" parent="311" name="id">
+    <column id="383" parent="374" name="id">
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="321" parent="311" name="FKg6qv1q9ejeejme43pckefidi">
+    <foreign-key id="384" parent="374" name="FKg6qv1q9ejeejme43pckefidi">
       <ColNames>id</ColNames>
       <RefColNames>id</RefColNames>
       <RefTableName>vehicles</RefTableName>
     </foreign-key>
-    <key id="322" parent="311" name="PRIMARY">
+    <index id="385" parent="374" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="386" parent="374" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
-      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="323" parent="312" name="id">
+    <column id="387" parent="375" name="id">
       <DasType>decimal(19,2 digit)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="324" parent="312" name="name">
+    <column id="388" parent="375" name="name">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <key id="325" parent="312" name="PRIMARY">
+    <index id="389" parent="375" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="390" parent="375" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
-      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="326" parent="313" name="id">
+    <column id="391" parent="376" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="327" parent="313" name="full_name">
+    <column id="392" parent="376" name="full_name">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <key id="328" parent="313" name="PRIMARY">
+    <index id="393" parent="376" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="394" parent="376" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
-      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="329" parent="314" name="driver_id">
+    <column id="395" parent="377" name="driver_id">
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="330" parent="314" name="vehicle_id">
+    <column id="396" parent="377" name="vehicle_id">
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="331" parent="314" name="FKrshvjitxleo9qikcprqadosl8">
+    <foreign-key id="397" parent="377" name="FKrshvjitxleo9qikcprqadosl8">
       <ColNames>driver_id</ColNames>
       <RefColNames>id</RefColNames>
       <RefTableName>drivers</RefTableName>
     </foreign-key>
-    <foreign-key id="332" parent="314" name="FKox9bdh7xo1vvsdihr0cbdx48">
+    <foreign-key id="398" parent="377" name="FKox9bdh7xo1vvsdihr0cbdx48">
       <ColNames>vehicle_id</ColNames>
       <RefColNames>id</RefColNames>
       <RefTableName>vehicles</RefTableName>
     </foreign-key>
-    <index id="333" parent="314" name="FKox9bdh7xo1vvsdihr0cbdx48">
+    <index id="399" parent="377" name="PRIMARY">
+      <ColNames>driver_id
+vehicle_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="400" parent="377" name="FKox9bdh7xo1vvsdihr0cbdx48">
       <ColNames>vehicle_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="334" parent="314" name="PRIMARY">
+    <key id="401" parent="377" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
-      <UnderlyingIndexColNames>driver_id
-vehicle_id</UnderlyingIndexColNames>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="335" parent="315" name="passenger_capacity">
+    <column id="402" parent="378" name="passenger_capacity">
       <DasType>int(11)|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="336" parent="315" name="id">
+    <column id="403" parent="378" name="id">
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="337" parent="315" name="company_id">
+    <column id="404" parent="378" name="company_id">
       <DasType>decimal(19,2 digit)|0s</DasType>
       <Position>3</Position>
     </column>
-    <foreign-key id="338" parent="315" name="FKdas873njlrarg9wqrt0dokw8c">
+    <foreign-key id="405" parent="378" name="FKdas873njlrarg9wqrt0dokw8c">
       <ColNames>id</ColNames>
       <RefColNames>id</RefColNames>
       <RefTableName>vehicles</RefTableName>
     </foreign-key>
-    <foreign-key id="339" parent="315" name="FKjkacp0iw71opu2jlmjs2tq3eb">
+    <foreign-key id="406" parent="378" name="FKjkacp0iw71opu2jlmjs2tq3eb">
       <ColNames>company_id</ColNames>
       <RefColNames>id</RefColNames>
       <RefTableName>company</RefTableName>
     </foreign-key>
-    <index id="340" parent="315" name="FKjkacp0iw71opu2jlmjs2tq3eb">
+    <index id="407" parent="378" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="408" parent="378" name="FKjkacp0iw71opu2jlmjs2tq3eb">
       <ColNames>company_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="341" parent="315" name="PRIMARY">
+    <key id="409" parent="378" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
-      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="342" parent="316" name="id">
+    <column id="410" parent="379" name="id">
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="343" parent="316" name="plate_number">
+    <column id="411" parent="379" name="plate_number">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <foreign-key id="344" parent="316" name="FKhnvbimsain2shrj6hvqe4m2cy">
+    <foreign-key id="412" parent="379" name="FKhnvbimsain2shrj6hvqe4m2cy">
       <ColNames>id</ColNames>
       <RefColNames>id</RefColNames>
       <RefTableName>cars</RefTableName>
     </foreign-key>
-    <key id="345" parent="316" name="PRIMARY">
+    <index id="413" parent="379" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="414" parent="379" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
-      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="346" parent="317" name="load_capcity">
+    <column id="415" parent="380" name="load_capcity">
       <DasType>double|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="347" parent="317" name="id">
+    <column id="416" parent="380" name="id">
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="348" parent="317" name="FKjh6ghnjn1yc09ti1qnf2mn9en">
+    <foreign-key id="417" parent="380" name="FKjh6ghnjn1yc09ti1qnf2mn9en">
       <ColNames>id</ColNames>
       <RefColNames>id</RefColNames>
       <RefTableName>vehicles</RefTableName>
     </foreign-key>
-    <key id="349" parent="317" name="PRIMARY">
+    <index id="418" parent="380" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="419" parent="380" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
-      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="350" parent="318" name="type">
+    <column id="420" parent="381" name="type">
       <DasType>varchar(31)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="351" parent="318" name="id">
-      <AutoIncrement>1</AutoIncrement>
+    <column id="421" parent="381" name="id">
+      <AutoIncrement>3</AutoIncrement>
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="352" parent="318" name="fuel_type">
+    <column id="422" parent="381" name="fuel_type">
       <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="353" parent="318" name="model">
+    <column id="423" parent="381" name="model">
       <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="354" parent="318" name="price">
+    <column id="424" parent="381" name="price">
       <DasType>decimal(19,2 digit)|0s</DasType>
       <Position>5</Position>
     </column>
-    <key id="355" parent="318" name="PRIMARY">
+    <index id="425" parent="381" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="426" parent="381" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
-      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

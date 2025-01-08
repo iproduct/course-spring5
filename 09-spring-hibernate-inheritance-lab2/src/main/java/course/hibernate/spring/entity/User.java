@@ -34,7 +34,7 @@ public class User extends EntityBase implements UserDetails {
     @NotBlank
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
-    @ElementCollection(fetch = FetchType.EAGER)
+    @ElementCollection(fetch = FetchType.LAZY)
     @Enumerated(EnumType.STRING)
     private Set<Role> roles = Set.of(Role.READER);
     private boolean active = true;

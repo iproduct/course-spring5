@@ -5,15 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c99c3bc1-3d8c-43b3-a064-a32062ad986c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-jpa-codefirst-lab/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-jpa-codefirst-lab/.idea/dataSources/68d97674-fe15-482a-9e9a-7450d63b58f5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/.idea/dataSources/68d97674-fe15-482a-9e9a-7450d63b58f5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-jpa-codefirst-lab/04-jpa-codefirst-lab.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/04-jpa-codefirst-lab.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-jpa-codefirst-lab/src/main/java/course/springdata/codefirst/JpaCodeFirstMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/src/main/java/course/springdata/codefirst/JpaCodeFirstMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-jpa-codefirst-lab/src/main/java/course/springdata/codefirst/entity/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/src/main/java/course/springdata/codefirst/entity/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-jpa-codefirst-lab/src/main/java/course/springdata/codefirst/entity/Plane.java" beforeDir="false" afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/src/main/java/course/springdata/codefirst/entity/Plane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-jpa-codefirst-lab/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-jpa-codefirst-lab/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/target/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-jpa-codefirst-lab/target/classes/course/springdata/codefirst/JpaCodeFirstMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/target/classes/course/springdata/codefirst/JpaCodeFirstMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-jpa-codefirst-lab/target/classes/course/springdata/codefirst/entity/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/target/classes/course/springdata/codefirst/entity/Driver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-jpa-codefirst-lab/target/classes/course/springdata/codefirst/entity/Plane.class" beforeDir="false" afterPath="$PROJECT_DIR$/../07-jpa-codefirst-lab/target/classes/course/springdata/codefirst/entity/Plane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07-projects-data-jpa-lab12/src/main/java/course/spring/myblogsapp/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../07-projects-data-jpa-lab12/src/main/java/course/spring/myblogsapp/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/dao/ShampooRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/dao/ShampooRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Ingredient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Label.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Label.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Shampoo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/entity/Shampoo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/init/AppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/course/springdata/advanced/init/AppInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +89,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
-    "spring.configuration.checksum": "d04c7e67ddc13c9736f5edb4867b3022",
+    "spring.configuration.checksum": "4766c21fde39bbf857c39b5108cb04b4",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -144,7 +150,8 @@
       <workItem from="1604930358017" duration="32000" />
       <workItem from="1608039235861" duration="1218000" />
       <workItem from="1608740843967" duration="2722000" />
-      <workItem from="1733951324111" duration="2132000" />
+      <workItem from="1733951324111" duration="2203000" />
+      <workItem from="1734549495658" duration="1379000" />
     </task>
     <task id="LOCAL-00001" summary="07-springdata-advanced-lab initial commit">
       <created>1604598525694</created>
@@ -160,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1604599872907</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="project config and deps updated">
+      <option name="closed" value="true" />
+      <created>1733953526354</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733953526354</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,7 +185,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="07-springdata-advanced-lab initial commit" />
     <MESSAGE value="07-springdata-advanced-lab - get shampoos by size" />
-    <option name="LAST_COMMIT_MESSAGE" value="07-springdata-advanced-lab - get shampoos by size" />
+    <MESSAGE value="project config and deps updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="project config and deps updated" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

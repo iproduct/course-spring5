@@ -64,9 +64,9 @@ public class AppInitializer implements CommandLineRunner {
 //        shampooRepo.findWithIngredientsIn(Set.of("Berry", "Mineral-Collagen")).forEach(PrintUtil::printShampoo);
 //        System.out.println("-".repeat(170) + "\n");
 
-//        // Fetch Shampoos by Ingredients in list
-//        shampooRepo.findByCountOfIngredientsLowerThan(3).forEach(PrintUtil::printShampoo);
-//        System.out.println("-".repeat(170) + "\n");
+        // Fetch Shampoos by Ingredients in list
+        shampooRepo.findByCountOfIngredientsLowerThan(3).forEach(PrintUtil::printShampoo);
+        System.out.println("-".repeat(170) + "\n");
 
 //        // Delete ingredients by name
 //        String nameToDelete = "Macadamia Oil";

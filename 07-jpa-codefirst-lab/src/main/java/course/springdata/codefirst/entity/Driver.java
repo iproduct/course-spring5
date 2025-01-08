@@ -13,7 +13,7 @@ public class Driver {
     private Long id;
     @Column(name = "full_name")
     private String fullName;
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name="drivers_vehicles",
             joinColumns = @JoinColumn(name="driver_id", referencedColumnName = "id"),

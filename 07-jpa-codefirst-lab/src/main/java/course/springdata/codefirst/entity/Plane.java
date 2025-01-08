@@ -1,9 +1,6 @@
 package course.springdata.codefirst.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
@@ -11,7 +8,7 @@ import java.math.BigDecimal;
 public class Plane extends Vehicle{
     @Column(name="passenger_capacity")
     private int passengerCapacity;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     private Company company;
 
     public Plane(){}
@@ -41,6 +38,7 @@ public class Plane extends Vehicle{
         final StringBuilder sb = new StringBuilder("Plane{");
         sb.append(super.toString());
         sb.append("passengerCapacity=").append(passengerCapacity);
+        sb.append("company=").append(company);
         sb.append('}');
         return sb.toString();
     }
