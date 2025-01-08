@@ -2,7 +2,7 @@ package course.spring.blog.service.impl;
 
 import course.spring.blog.dao.PostRepository;
 import course.spring.blog.entity.Post;
-import course.spring.blog.exception.EntityNotFoundException;
+import course.spring.blog.exception.NonexistingEntityException;
 import course.spring.blog.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,7 +29,7 @@ public class PostServiceImpl implements PostService {
     @Override
     @Transactional(readOnly = true)
     public Post getPostById(Long id) {
-        return postRepo.findById(id).orElseThrow(() -> new EntityNotFoundException(String.format("Post with ID = '%d' not found", id)));
+        return postRepo.findById(id).orElseThrow(() -> new NonexistingEntityException(String.format("Post with ID = '%d' not found", id)));
     }
 
     @Override

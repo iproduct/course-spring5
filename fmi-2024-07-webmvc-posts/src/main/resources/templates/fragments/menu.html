@@ -5,12 +5,17 @@
             <li><a th:class="${path == '/'}? 'active' : ''" href="/">Home</a></li>
             <li><a th:class="${path == '/posts'}? 'active' : ''" href="/posts">Posts</a></li>
             <li><a th:class="${path == '/posts/add'}? 'active' : ''" href="/posts/add">Add Post</a></li>
+            <form style="display:inline" th:action="@{/logout}" method="post">
+                <button type="submit" name="submit" class="btn waves-effect waves-light blue">Logout</button>
+            </form>
         </ul>
-
         <ul id="nav-mobile" class="sidenav">
             <li><a th:class="${path == '/'}? 'active' : ''" href="/">Home</a></li>
             <li><a th:class="${path == '/posts'}? 'active' : ''" href="/posts">Posts</a></li>
             <li><a th:class="${path == '/posts/add'}? 'active' : ''" href="/posts/add">Add Post</a></li>
+            <form style="display:inline" th:action="@{/logout}" method="post">
+                <button type="submit" name="submit" class="btn waves-effect waves-light blue">Logout</button>
+            </form>
         </ul>
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>

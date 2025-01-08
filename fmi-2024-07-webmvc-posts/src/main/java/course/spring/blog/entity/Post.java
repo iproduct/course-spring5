@@ -32,6 +32,10 @@ public class Post {
     private String content;
     @NotNull
     private String imageUrl;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "AUTHOR_ID", nullable = true)
+    private User author;
+
     @DateTimeFormat(pattern="dd.MM.YYYY")
     private LocalDateTime created = LocalDateTime.now();
     @DateTimeFormat(pattern="dd.MM.YYYY")
@@ -39,4 +43,12 @@ public class Post {
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "TAGS")
     private Set<String> tags = Collections.EMPTY_SET;
+
+    public Post(@NonNull String title, @NonNull String content, String imageUrl, User author, Set<String> tags) {
+        this.title = title;
+        this.content = content;
+        this.imageUrl = imageUrl;
+        this.author = author;
+        this.tags = tags;
+    }
 }

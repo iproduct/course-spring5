@@ -5,7 +5,7 @@
 <div th:replace="~{fragments/menu :: menu(${path}, '')}"></div>
 <div class="container">
     <h3 th:text="${title}">Post</h3>
-    <form th:object="${post}" th:method="post" class="col s12" enctype="multipart/form-data">
+    <form th:object="${post}" th:action="@{/posts/add}" th:method="post" class="col s12" enctype="multipart/form-data">
 
         <div class="input-field col s12">
             <input type="text" th:field="*{title}" id="title" name="title"

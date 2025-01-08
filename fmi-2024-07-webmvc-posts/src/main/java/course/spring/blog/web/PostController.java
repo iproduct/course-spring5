@@ -56,7 +56,7 @@ public class PostController {
             return "post-form";
         }
         if (!file.isEmpty() && file.getOriginalFilename().length() > 0) {
-            var imgFilenamePattern = Pattern.compile(".+\\.(jpg|png)");
+            var imgFilenamePattern = Pattern.compile(".+\\.(jpe?g|png)");
             var matcher = imgFilenamePattern.matcher(file.getOriginalFilename());
             if (matcher.matches()) {
                 var ext = matcher.group(1);
@@ -67,9 +67,11 @@ public class PostController {
                     post.setImageUrl("uploads/" + filename);
                 } else {
                     model.addAttribute("fileError", "Error saving image: "+ file.getOriginalFilename());
+                    return "post-form";
                 }
             } else {
                 model.addAttribute("fileError", "Submit picture in [.jpeg | .png] format");
+                return "post-form";
             }
         }
         if (post.getId() == null) {  // create
