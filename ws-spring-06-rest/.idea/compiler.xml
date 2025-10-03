@@ -10,9 +10,6 @@
         <module name="intro" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="intro" target="11" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

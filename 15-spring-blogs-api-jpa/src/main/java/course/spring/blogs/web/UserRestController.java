@@ -48,8 +48,6 @@ public class UserRestController {
         ).body(created);
     }
 
-
-
     @PutMapping("/{id}")
     public User updateAticle(@PathVariable("id") Long id, @Valid @RequestBody User user, Errors errors) {
         handleValidationErrors(errors);
