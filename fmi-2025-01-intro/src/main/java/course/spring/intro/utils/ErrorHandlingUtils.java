@@ -12,7 +12,8 @@ public class ErrorHandlingUtils {
         if(errors.hasErrors()) {
             List<String> errorMessages = new ArrayList<>();
             List<String> fieldErrorMessages = errors.getFieldErrors().stream()
-                    .map(err -> String.format("%s for: '%s' = '%s'", err.getDefaultMessage(), err.getField(), err.getRejectedValue()))
+                    .map(err -> String.format("%s for: '%s' = '%s'",
+                            err.getDefaultMessage(), err.getField(), err.getRejectedValue()))
                     .collect(Collectors.toList());
             errorMessages.addAll(fieldErrorMessages);
             List<String> globalErrorMessages = errors.getGlobalErrors().stream()
