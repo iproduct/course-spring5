@@ -1,6 +1,8 @@
 package course.spring.intro.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -19,10 +21,13 @@ public class Article {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     @NonNull
+    @NotBlank
+    @Size(min = 3, max = 100)
     String title;
     @NonNull
     String content;
     @NonNull
+    @Size(min = 3, max = 60)
     String author;
     @ElementCollection
     Set<String> tags =  new HashSet<>();
