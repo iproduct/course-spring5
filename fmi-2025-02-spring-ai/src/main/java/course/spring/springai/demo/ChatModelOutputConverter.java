@@ -1,4 +1,4 @@
-package course.spring.springai.deepseek;
+package course.spring.springai.demo;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -6,14 +6,14 @@ import org.springframework.ai.converter.StructuredOutputConverter;
 import org.springframework.lang.NonNull;
 import org.springframework.util.StringUtils;
 
-class DeepSeekModelOutputConverter implements StructuredOutputConverter<DeepSeekModelResponse> {
+class ChatModelOutputConverter implements StructuredOutputConverter<ChatModelResponse> {
 
-    private static final Logger logger = LoggerFactory.getLogger(DeepSeekModelOutputConverter.class);
+    private static final Logger logger = LoggerFactory.getLogger(ChatModelOutputConverter.class);
     private static final String OPENING_THINK_TAG = "<think>";
     private static final String CLOSING_THINK_TAG = "</think>";
 
     @Override
-    public DeepSeekModelResponse convert(@NonNull String text) {
+    public ChatModelResponse convert(@NonNull String text) {
         if (!StringUtils.hasText(text)) {
             throw new IllegalArgumentException("Text cannot be blank");
         }
@@ -23,10 +23,10 @@ class DeepSeekModelOutputConverter implements StructuredOutputConverter<DeepSeek
         if (openingThinkTagIndex != -1 && closingThinkTagIndex != -1 && closingThinkTagIndex > openingThinkTagIndex) {
             String chainOfThought = text.substring(openingThinkTagIndex + OPENING_THINK_TAG.length(), closingThinkTagIndex);
             String answer = text.substring(closingThinkTagIndex + CLOSING_THINK_TAG.length());
-            return new DeepSeekModelResponse(chainOfThought, answer);
+            return new ChatModelResponse(chainOfThought, answer);
         } else {
             logger.debug("No <think> tags found in the response. Treating entire text as answer.");
-            return new DeepSeekModelResponse(null, text);
+            return new ChatModelResponse(null, text);
         }
     }
 

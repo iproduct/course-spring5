@@ -1,10 +1,9 @@
-package course.spring.springai.deepseek;
+package course.spring.springai.demo;
 
 import org.springframework.ai.vectorstore.chroma.autoconfigure.ChromaVectorStoreAutoConfiguration;
 import org.springframework.ai.vectorstore.pgvector.autoconfigure.PgVectorStoreAutoConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.PropertySource;
 
 /**
  * Excluding the below auto-configurations to avoid start up

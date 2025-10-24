@@ -1,4 +1,4 @@
-package course.spring.springai.deepseek;
+package course.spring.springai.demo;
 
 import org.springframework.lang.Nullable;
 

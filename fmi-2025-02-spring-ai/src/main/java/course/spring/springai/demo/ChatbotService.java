@@ -1,6 +1,5 @@
-package course.spring.springai.deepseek;
+package course.spring.springai.demo;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
 import org.springframework.ai.chat.client.ChatClient;
@@ -56,14 +55,14 @@ class ChatbotService {
                         .format(new ObjectMapper().readValue(jsonSchema, Map.class))
                         .build());
 
-        DeepSeekModelResponse response = chatClient
+        ChatModelResponse response = chatClient
             .prompt(prompt)
 //            .user(chatRequest.question())
             .advisors(advisorSpec ->
                 advisorSpec
                     .param("chat_memory_conversation_id", chatId))
             .call()
-            .entity(new DeepSeekModelOutputConverter());
+            .entity(new ChatModelOutputConverter());
         return new ChatResponse(chatId, response.chainOfThought(), response.answer());
     }
 
