@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        https://www.springframework.org/schema/util/spring-util.xsd">
+    <context:annotation-config/>
+    <context:component-scan base-package="course.spring.coredemo" />
+    <bean id="longIdGen" name="longIdGenerator" class="course.spring.coredemo.util.impl.LongIdGenerator"/>
+    <bean id="articleProviderFactory" class="course.spring.coredemo.service.impl.ArticleProviderFactoryInMemory" />
+    <bean id="articleProviderInMemory" name="inMemoryProvider"
+          class="course.spring.coredemo.service.impl.ArticleProviderInMemory"
+          factory-bean="articleProviderFactory"
+          factory-method="createArticleProvider"
+          c:idGen-ref="longIdGen"/>
+    <!--        <constructor-arg index="0" name="idGenerator" type="course.spring.coredemo.util.IdGenerator"-->
+    <!--                         ref="longIdGen"/>-->
+    <bean id="articlePresenter" name="articlePresenterClient"
+          class="course.spring.coredemo.client.ArticlePresenterClient"
+          p:articleProvider-ref="propertyArticleProvider"/>
+    <!--        <property name="articleProvider" ref="inMemoryProvider"/>-->
+
+</beans>

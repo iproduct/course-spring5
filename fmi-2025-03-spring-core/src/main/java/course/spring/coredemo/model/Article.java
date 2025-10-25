@@ -12,9 +12,7 @@ package course.spring.coredemo.model;
 //import org.springframework.data.annotation.LastModifiedDate;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 //@Entity
 public class Article {
@@ -33,26 +31,41 @@ public class Article {
     // Category of the article (e.g. Technology, Sports, etc.)
     private String category;
 
+    // Aritecle author
+    private String author;
+
     // Tags associated with the article
 //    @org.springframework.data.annotation.CollectionId
 //    @ElementCollection
-    private List<String> tags;
+    private Set<String> tags;
 
     // Date created for the article
 //    @CreatedDate
-    private LocalDateTime createdAt;
+    private LocalDateTime createdAt =  LocalDateTime.now();
 
     // Date last updated for the article
 //    @LastModifiedDate
-    private LocalDateTime updatedAt;
+    private LocalDateTime updatedAt = LocalDateTime.now();
 
     public Article() {}
 
-    public Article(String title, String content, String category) {
+    public Article(String title, String content, String author, String category, Set<String> tags) {
         this.title = title;
         this.content = content;
         this.category = category;
-        this.tags = new ArrayList<>();
+        this.tags = tags;
+        this.author = author;
+    }
+
+    public Article(Long id, String title, String content, String author, String category, Set<String> tags, LocalDateTime createdAt, LocalDateTime updatedAt) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.author = author;
+        this.category = category;
+        this.tags = tags;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
     public Long getId() {
@@ -79,6 +92,14 @@ public class Article {
         this.content = content;
     }
 
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
     public String getCategory() {
         return category;
     }
@@ -87,11 +108,11 @@ public class Article {
         this.category = category;
     }
 
-    public List<String> getTags() {
+    public Set<String> getTags() {
         return tags;
     }
 
-    public void setTags(List<String> tags) {
+    public void setTags(Set<String> tags) {
         this.tags = tags;
     }
 
@@ -109,5 +130,32 @@ public class Article {
 
     public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
+    }
+
+    @Override
+    public final boolean equals(Object o) {
+        if (!(o instanceof Article article)) return false;
+
+        return Objects.equals(id, article.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(id);
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Article{");
+        sb.append("id=").append(getId());
+        sb.append(", title='").append(getTitle()).append('\'');
+        sb.append(", content='").append(getContent()).append('\'');
+        sb.append(", category='").append(getCategory()).append('\'');
+        sb.append(", author='").append(getAuthor()).append('\'');
+        sb.append(", tags=").append(getTags());
+        sb.append(", createdAt=").append(getCreatedAt());
+        sb.append(", updatedAt=").append(getUpdatedAt());
+        sb.append('}');
+        return sb.toString();
     }
 }
