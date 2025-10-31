@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component("beanA")
 public class CircularDependencyBeanA {
     private CircularDependencyBeanB beanB;
-    private String message;
+    private String message = "Hi from Bean A! ";
 
 //    @Autowired
 //    public CircularDependencyBeanA(@Lazy CircularDependencyBeanB beanB) {
@@ -14,7 +14,7 @@ public class CircularDependencyBeanA {
 //    }
 
     public String getMessage() {
-        return message;
+        return message + beanB.getMessage();
     }
 
     public CircularDependencyBeanB getBeanB() {

@@ -1,10 +1,8 @@
 package course.spring.coredemo;
 
 import course.spring.coredemo.client.ArticlePresenterClient;
-import course.spring.coredemo.model.Article;
-import course.spring.coredemo.model.Car;
-import course.spring.coredemo.model.CarPark;
-import course.spring.coredemo.model.Engine;
+import course.spring.coredemo.config.AppConfig;
+import course.spring.coredemo.model.*;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.expression.BeanFactoryResolver;
 import org.springframework.expression.EvaluationContext;
@@ -22,11 +20,11 @@ import java.util.List;
 public class SpelDemo {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext ctx =
-                new AnnotationConfigApplicationContext("course.spring");
+                new AnnotationConfigApplicationContext(AppConfig.class);
 
         //@Value test
         ArticlePresenterClient presenter = ctx.getBean( ArticlePresenterClient.class);
-        presenter.presentArticles();
+//        presenter.presentArticles();
 
         SpelParserConfiguration config = new SpelParserConfiguration(
                 SpelCompilerMode.IMMEDIATE,
@@ -46,7 +44,7 @@ public class SpelDemo {
         System.out.println("value 3 = " + value3);
 
         boolean value4 = expressionParser
-                .parseExpression("not ('-5.000' matches '^-?\\d+(\\.\\d{2})?$')")
+                .parseExpression("not ('-5.00' matches '^-?\\d+(\\.\\d{2})?$')")
                 .getValue(Boolean.class);
         System.out.println("value 4 = " + value4);
 
@@ -68,13 +66,13 @@ public class SpelDemo {
         System.out.println(result2);
 
         String springThirdTitle = expressionParser.parseExpression(
-                "@simpleProvider.allPosts[2]?.title ?: 'no title'")
+                "@propertyArticleProvider.articles[2]?.title ?: 'no title'")
                 .getValue(context, String.class);
         System.out.println(springThirdTitle);
 
-        List<Article> springBooks = expressionParser.parseExpression(
+        List<Post> springBooks = expressionParser.parseExpression(
 //                        "@simpleProvider.allPosts.?[title matches '.*Spring.*'].![title]")
-                        "@simpleProvider.allPosts.?[#this.title matches '.*Spring.*'].![new course.spring.model.Post(#this['title'], #this['content'] + 'NEW!!!')]")
+                        "@propertyArticleProvider.articles.?[#this.title matches '.*Spring.*'].![new course.spring.coredemo.model.Post(#this['title'], #this['content'] + 'NEW!!!')]")
                 .getValue(context, List.class);
         System.out.println();
         springBooks.forEach(System.out::println);
@@ -84,16 +82,16 @@ public class SpelDemo {
         park.getCars().add(new Car("Opel", "Astra",
                 new Engine(4, 2500, 16, "engine model1"),2500, 2013 ));
         park.getCars().add(new Car("Opel1", "Zefira",
-                new Engine(4, 2500, 16, "engine model2"),2500, 2013 ));
+                new Engine(4, 2500, 8, "engine model2"),2500, 2013 ));
         park.getCars().add(new Car("Opel2", "Tigra",
-                new Engine(4, 2500, 16, "engine model3"),2500, 2013 ));
+                new Engine(4, 2500, 4, "engine model3"),2500, 2013 ));
         park.getCars().add(new Car("Opel3", "Cadet",
                 new Engine(4, 2500, 16, "engine model4"),2500, 2013 ));
 
         StandardEvaluationContext carParkContext = new StandardEvaluationContext(park);
         List<String> result4 = expressionParser.parseExpression(
 //                "cars.![model + ': ' + model.length() ]")
-                "cars.![model + ': ' + make ]")
+                "cars.![model + ': ' + make + ': ' + engine.numberOfCylinders ]")
                 .getValue(carParkContext, List.class);
         System.out.println(result4);
 
