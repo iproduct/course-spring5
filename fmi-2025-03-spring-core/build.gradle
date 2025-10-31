@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '3.5.7'
     id 'io.spring.dependency-management' version '1.1.7'
+    id 'idea'
 }
 
 group = 'course.spring'
@@ -14,6 +15,12 @@ java {
     }
 }
 
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}
 configurations {
     compileOnly {
         extendsFrom annotationProcessor

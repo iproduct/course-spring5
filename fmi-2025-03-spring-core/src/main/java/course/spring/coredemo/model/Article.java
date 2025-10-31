@@ -32,7 +32,7 @@ public class Article {
     private String category;
 
     // Aritecle author
-    private String author;
+    private User author;
 
     // Tags associated with the article
 //    @org.springframework.data.annotation.CollectionId
@@ -49,7 +49,7 @@ public class Article {
 
     public Article() {}
 
-    public Article(String title, String content, String author, String category, Set<String> tags) {
+    public Article(String title, String content, User author, String category, Set<String> tags) {
         this.title = title;
         this.content = content;
         this.category = category;
@@ -57,7 +57,16 @@ public class Article {
         this.author = author;
     }
 
-    public Article(Long id, String title, String content, String author, String category, Set<String> tags, LocalDateTime createdAt, LocalDateTime updatedAt) {
+    public Article(Long id, String title, String content, User author, String category,  Set<String> tags) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.category = category;
+        this.author = author;
+        this.tags = tags;
+    }
+
+    public Article(Long id, String title, String content, User author, String category, Set<String> tags, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.title = title;
         this.content = content;
@@ -92,11 +101,11 @@ public class Article {
         this.content = content;
     }
 
-    public String getAuthor() {
+    public User getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(User author) {
         this.author = author;
     }
 

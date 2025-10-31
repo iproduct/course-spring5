@@ -7,10 +7,7 @@ import course.spring.coredemo.service.impl.ArticleProviderInMemory;
 import course.spring.coredemo.util.IdGenerator;
 import course.spring.coredemo.util.impl.LongIdGenerator;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.*;
 
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -19,6 +16,7 @@ import java.util.concurrent.atomic.AtomicLong;
 @ComponentScan(basePackageClasses =  Fmi202503SpringCoreApplication.class)
 public class AppConfig {
     @Bean
+    @Scope("prototype")
     public IdGenerator<Long> idGen() {
         return new LongIdGenerator();
     }
