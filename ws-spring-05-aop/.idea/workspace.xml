@@ -4,37 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807ffab5-5f7a-4ae3-9523-bcd68be47063" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../fmi-2025-03-spring-core/src/main/java/course/spring/coredemo/aop/LoggingAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fmi-2025-03-spring-core/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fmi-2024-06-core-aop/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2024-06-core-aop/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fmi-2025-03-spring-core/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2025-03-spring-core/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fmi-2025-03-spring-core/src/main/java/course/spring/coredemo/Fmi202503SpringCoreApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2025-03-spring-core/src/main/java/course/spring/coredemo/Fmi202503SpringCoreApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fmi-2025-03-spring-core/src/main/java/course/spring/coredemo/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2025-03-spring-core/src/main/java/course/spring/coredemo/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fmi-2025-03-spring-core/src/main/java/course/spring/coredemo/service/impl/ArticleProviderInMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2025-03-spring-core/src/main/java/course/spring/coredemo/service/impl/ArticleProviderInMemory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fmi-2025-03-spring-core/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2025-03-spring-core/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="807ffab5-5f7a-4ae3-9523-bcd68be47063" name="Default Changelist" comment="AOP demo updated">
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_annotation_javax_annotation_api_1_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/core-demo.test.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/ws-spring-05-aop.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/ws-spring-05-aop.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/ws-spring-05-aop.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/ws-spring-05-aop.test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/ws-spring-05-aop.main.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coredemo/HelloSpringDI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coredemo/HelloSpringDI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/coredemo/AnnotationSpringDI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/coredemo/AppConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/coredemo/HelloSpringDI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/coredemo/aop/EntityCreationPublishingAspect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/coredemo/aop/LoggingAspect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/coredemo/aop/MethodProfilerAspect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/coredemo/aop/SystemArchitecture.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/coredemo/domain/AnotherArticleProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/coredemo/domain/ArticlePresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/coredemo/domain/ArticleProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/coredemo/domain/ConsoleArticlePresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/coredemo/domain/MockArticleProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/coredemo/domain/PresenterFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/coredemo/events/EntityCreationEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/coredemo/events/EntityCreationEventListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/coredemo/model/Article.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/coredemo/qualifiers/Alternative.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/coredemo/qualifiers/Mock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coredemo/aop/EntityCreationPublishingAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coredemo/aop/EntityCreationPublishingAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coredemo/aop/MethodProfilerAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coredemo/aop/MethodProfilerAspect.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,35 +145,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.AnnotationSpringDI.executor": "Run",
-    "Application.HelloSpringDI.executor": "Run",
-    "Gradle.Build ws-spring-05-aop.executor": "Run",
-    "Gradle.ws-spring-05-aop [:coredemo.AnnotationSpringDI.main()].executor": "Run",
-    "Gradle.ws-spring-05-aop [build].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "go.import.settings.migrated": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
-    "spring.configuration.checksum": "1096dc303d6041dade43c0613d03c54a",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AnnotationSpringDI.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloSpringDI.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build ws-spring-05-aop.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ws-spring-05-aop [:coredemo.AnnotationSpringDI.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ws-spring-05-aop [build].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;1096dc303d6041dade43c0613d03c54a&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="coredemo.qualifiers" />
@@ -285,9 +279,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AnnotationSpringDI" />
         <item itemvalue="Application.HelloSpringDI" />
         <item itemvalue="Gradle.ws-spring-05-aop [build]" />
-        <item itemvalue="Application.AnnotationSpringDI" />
       </list>
     </recent_temporary>
   </component>
@@ -339,7 +333,8 @@
       <workItem from="1730917190054" duration="185000" />
       <workItem from="1762538215831" duration="2183000" />
       <workItem from="1762540548423" duration="23000" />
-      <workItem from="1762540588742" duration="552000" />
+      <workItem from="1762540588742" duration="748000" />
+      <workItem from="1762541367452" duration="1248000" />
     </task>
     <task id="LOCAL-00001" summary="demo projects renamed">
       <created>1645023126204</created>
@@ -362,7 +357,23 @@
       <option name="project" value="LOCAL" />
       <updated>1645614131669</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="AOP demo updated">
+      <option name="closed" value="true" />
+      <created>1762541207671</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1762541207671</updated>
+    </task>
+    <task id="LOCAL-00005" summary="AOP demo updated">
+      <option name="closed" value="true" />
+      <created>1762541235772</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1762541235772</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -415,11 +426,23 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="demo projects renamed" />
     <MESSAGE value="aop demo added" />
-    <option name="LAST_COMMIT_MESSAGE" value="aop demo added" />
+    <MESSAGE value="AOP demo updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="AOP demo updated" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/coredemo/aop/MethodProfilerAspect.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="masterDetails">
     <states>

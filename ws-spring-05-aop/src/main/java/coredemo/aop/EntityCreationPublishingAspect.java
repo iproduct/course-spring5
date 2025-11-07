@@ -20,7 +20,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @Component
-//@Aspect
+@Aspect
 public class EntityCreationPublishingAspect implements  ApplicationContextAware{
     final static Logger log = LoggerFactory.getLogger(EntityCreationPublishingAspect.class);
 
@@ -39,8 +39,8 @@ public class EntityCreationPublishingAspect implements  ApplicationContextAware{
     public void entityCreationMethods(Article article) {
     }
 
-    @AfterReturning(value = "entityCreationMethods(article)", returning = "retVal")
-    public void logMethodCall(JoinPoint jp, Article article, Object retVal) {
+    @AfterReturning(value = "entityCreationMethods(article)")
+    public void logMethodCall(JoinPoint jp, Article article) {
         Pattern p = Pattern.compile("[^.]+$");
 //        Matcher m = p.matcher(jp.getArgs()[0].getClass().getName());
         Matcher m = p.matcher(article.getClass().getName());
@@ -49,7 +49,7 @@ public class EntityCreationPublishingAspect implements  ApplicationContextAware{
         log.info(eventPublisher + "");
         if(eventPublisher != null) {
             eventPublisher.publishEvent(
-                    new EntityCreationEvent(this, entityName, retVal));
+                    new EntityCreationEvent(this, entityName, article));
         }
     }
 
