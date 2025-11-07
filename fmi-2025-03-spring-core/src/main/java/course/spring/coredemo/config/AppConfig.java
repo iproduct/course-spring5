@@ -8,6 +8,9 @@ import course.spring.coredemo.util.IdGenerator;
 import course.spring.coredemo.util.impl.LongIdGenerator;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.*;
+import org.springframework.context.event.ApplicationEventMulticaster;
+import org.springframework.context.event.SimpleApplicationEventMulticaster;
+import org.springframework.core.task.SimpleAsyncTaskExecutor;
 
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -20,16 +23,22 @@ public class AppConfig {
     public IdGenerator<Long> idGen() {
         return new LongIdGenerator();
     }
-    @Bean("articleProviderInMemory")
-    @Qualifier("inMemory")
-    public ArticleProvider articleProvider() {
-        return new ArticleProviderInMemory(idGen());
-    }
+//    @Bean("articleProviderInMemory")
+//    @Qualifier("inMemory")
+//    public ArticleProvider articleProvider() {
+//        return new ArticleProviderInMemory(idGen());
+//    }
     @Bean
     public ArticlePresenterClient articlePresenterClient(
-            @Qualifier("fromProperties") ArticleProvider articleProvider) {
+            @Qualifier("articleProviderInMemory") ArticleProvider articleProvider) {
         var presenter =  new ArticlePresenterClient();
         presenter.setArticleProvider(articleProvider);
         return presenter;
+    }
+    @Bean
+    public ApplicationEventMulticaster applicationEventMulticaster() {
+        var eventMulticaster = new SimpleApplicationEventMulticaster();
+        eventMulticaster.setTaskExecutor(new SimpleAsyncTaskExecutor());
+        return eventMulticaster;
     }
 }

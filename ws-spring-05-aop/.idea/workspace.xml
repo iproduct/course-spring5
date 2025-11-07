@@ -5,23 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="807ffab5-5f7a-4ae3-9523-bcd68be47063" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/domain/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/domain/impl/PropertyFilePostProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/domain/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fmi-2024-05-core-spel-aop/src/main/java/course/spring/SpelDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fmi-2024-05-core-spel-aop/src/main/java/course/spring/model/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fmi-2024-05-core-spel-aop/src/main/java/course/spring/model/CarPark.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fmi-2024-05-core-spel-aop/src/main/java/course/spring/model/CircularDependencyBeanA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fmi-2024-05-core-spel-aop/src/main/java/course/spring/model/CircularDependencyBeanB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fmi-2024-05-core-spel-aop/src/main/java/course/spring/model/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/dao/impl/LongKeyGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/dao/impl/LongKeyGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/java/course/spring/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/resources/posts.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2024-03-core-annotation/src/main/resources/posts.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fmi-2025-03-spring-core/src/main/java/course/spring/coredemo/aop/LoggingAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fmi-2025-03-spring-core/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fmi-2024-06-core-aop/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2024-06-core-aop/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fmi-2025-03-spring-core/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2025-03-spring-core/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fmi-2025-03-spring-core/src/main/java/course/spring/coredemo/Fmi202503SpringCoreApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2025-03-spring-core/src/main/java/course/spring/coredemo/Fmi202503SpringCoreApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fmi-2025-03-spring-core/src/main/java/course/spring/coredemo/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2025-03-spring-core/src/main/java/course/spring/coredemo/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fmi-2025-03-spring-core/src/main/java/course/spring/coredemo/service/impl/ArticleProviderInMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2025-03-spring-core/src/main/java/course/spring/coredemo/service/impl/ArticleProviderInMemory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fmi-2025-03-spring-core/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2025-03-spring-core/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_annotation_javax_annotation_api_1_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/core-demo.test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/ws-spring-05-aop.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/ws-spring-05-aop.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/ws-spring-05-aop.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/ws-spring-05-aop.test.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coredemo/aop/EntityCreationPublishingAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coredemo/aop/EntityCreationPublishingAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/coredemo/aop/MethodProfilerAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coredemo/aop/MethodProfilerAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ws-spring-05-spel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ws-spring-05-spel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coredemo/HelloSpringDI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coredemo/HelloSpringDI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +55,28 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ws-spring-05-aop" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ws-spring-05-aop" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ws-spring-05-aop" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -64,6 +96,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;iproduct&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/iproduct/course-spring5.git&quot;,
+    &quot;accountId&quot;: &quot;d2beab1f-b49c-4200-ada1-8bf9db4401c6&quot;
+  }
+}</component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="true" />
   </component>
@@ -89,6 +133,9 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="99" />
     <option name="y" value="18" />
@@ -96,7 +143,7 @@
     <option name="height" value="822" />
   </component>
   <component name="ProjectId" id="1SvqGDbxjuXjwzRZ1oolQerjKJR" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -104,21 +151,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;1096dc303d6041dade43c0613d03c54a&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AnnotationSpringDI.executor": "Run",
+    "Application.HelloSpringDI.executor": "Run",
+    "Gradle.Build ws-spring-05-aop.executor": "Run",
+    "Gradle.ws-spring-05-aop [:coredemo.AnnotationSpringDI.main()].executor": "Run",
+    "Gradle.ws-spring-05-aop [build].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "go.import.settings.migrated": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "spring.configuration.checksum": "1096dc303d6041dade43c0613d03c54a",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="coredemo.qualifiers" />
@@ -146,7 +207,7 @@
       </method>
     </configuration>
     <configuration name="AnnotationSpringDI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="15" />
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="coredemo.AnnotationSpringDI" />
       <module name="ws-spring-05-aop.main" />
@@ -162,8 +223,7 @@
     </configuration>
     <configuration name="HelloSpringDI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="coredemo.HelloSpringDI" />
-      <module name="core-demo.main" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <module name="ws-spring-05-aop.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="coredemo.*" />
@@ -179,6 +239,28 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="ws-spring-05-aop [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
@@ -199,11 +281,13 @@
     <list>
       <item itemvalue="Application.AnnotationSpringDI" />
       <item itemvalue="Application.HelloSpringDI" />
+      <item itemvalue="Gradle.ws-spring-05-aop [build]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AnnotationSpringDI" />
         <item itemvalue="Application.HelloSpringDI" />
+        <item itemvalue="Gradle.ws-spring-05-aop [build]" />
+        <item itemvalue="Application.AnnotationSpringDI" />
       </list>
     </recent_temporary>
   </component>
@@ -218,6 +302,14 @@
         </serviceView>
       </list>
     </option>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.26094.121" />
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-IU-251.26094.121" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -245,6 +337,9 @@
       <workItem from="1670955707681" duration="4700000" />
       <workItem from="1730300672881" duration="663000" />
       <workItem from="1730917190054" duration="185000" />
+      <workItem from="1762538215831" duration="2183000" />
+      <workItem from="1762540548423" duration="23000" />
+      <workItem from="1762540588742" duration="552000" />
     </task>
     <task id="LOCAL-00001" summary="demo projects renamed">
       <created>1645023126204</created>

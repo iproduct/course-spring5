@@ -18,7 +18,7 @@ import java.util.Set;
 
 import static course.spring.coredemo.model.Role.*;
 
-//@SpringBootApplication
+@SpringBootApplication
 public class Fmi202503SpringCoreApplication {
 
     public static final List<Article> SAMPLE_ARTICLES = List.of(

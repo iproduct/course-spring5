@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
-//@Service("inMemoryProvider")
+@Service("articleProviderInMemory")
 public class ArticleProviderInMemory implements ArticleProvider {
     private Map<Long, Article> articles = new ConcurrentHashMap<>();
     private IdGenerator<Long> idGenerator;
