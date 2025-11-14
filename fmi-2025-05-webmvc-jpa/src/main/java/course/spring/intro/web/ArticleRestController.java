@@ -21,10 +21,10 @@ import java.util.List;
 
 import static course.spring.intro.utils.ErrorHandlingUtils.handleValidationErrors;
 
-@RestController
+//@RestController
 @RequestMapping("/api/articles")
 public class ArticleRestController {
-    @Autowired
+//    @Autowired
     ArticleRepository articleRepository;
 
     @GetMapping
