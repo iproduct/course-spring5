@@ -29,6 +29,7 @@ public class Article {
     @NonNull
     @Size(min = 3, max = 60)
     String author;
+    String imageUrl = "";
     @ElementCollection
     Set<String> tags =  new HashSet<>();
     @ElementCollection
