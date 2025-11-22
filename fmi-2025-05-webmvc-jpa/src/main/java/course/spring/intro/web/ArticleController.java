@@ -8,12 +8,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.util.UriComponentsBuilder;
 
+import java.net.URI;
 import java.util.Map;
 
 @Controller
@@ -31,10 +30,32 @@ public class ArticleController {
         return new ModelAndView("articles", Map.of("articles", articles, "path", "/"));
     }
 
+    @PostMapping
+    public String actionsArticle(@RequestParam(value = "edit", required = false) Long edit,
+                                       @RequestParam(value="delete", required = false) Long delete,
+                                       UriComponentsBuilder uriComponentsBuilder) {
+        log.info("actionsArticle edit: {}, delete {}", edit, delete);
+        if (edit != null ) {
+            URI uri = uriComponentsBuilder.path("/article-form")
+                    .query("mode=edit&articleId={id}").buildAndExpand(edit).toUri();
+            return "redirect:" + uri.toString();
+        }
+        if (delete != null ) {
+            articleService.deleteArticleById(delete);
+        }
+        return "redirect:/";
+    }
+
     @GetMapping("/article-form")
-    public String addArticle(@ModelAttribute("article") Article article, Model model) {
+    public String addArticle(@ModelAttribute("article") Article article,
+                             @RequestParam(value = "mode", required = false) String mode,
+                             @RequestParam(value = "articleId", required = false) Long articleId,
+                             Model model) {
         log.info("show article form: {}", article);
-        model.addAttribute("title", "Add Post");
+        if ("edit".equals(mode)) {
+            model.addAttribute("article", articleService.getArticleById(articleId));
+        }
+        model.addAttribute("title", "edit".equals(mode)? "Edit Post" : "Add Post");
         model.addAttribute("path", "/article-form");
         return "article-form";
     }

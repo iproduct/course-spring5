@@ -60,3 +60,7 @@ body {
 .container {
     flex: 1 0 auto;
 }
+
+.actions-column {
+    min-width: 120px;
+}

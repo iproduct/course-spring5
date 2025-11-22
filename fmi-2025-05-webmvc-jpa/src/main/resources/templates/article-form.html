@@ -6,6 +6,11 @@
 <div class="container">
     <h3 th:text="${title}">Post</h3>
     <form th:object="${article}" th:method="post" class="col s12" enctype="multipart/form-data">
+        <div th:if="${article.id} != null" class="input-field col s12">
+            <input type="text" th:field="*{id}" id="id" name="id"
+                   title="Article ID" th:errorclass="field-error" readonly>
+            <label path="id" for="id">ID</label>
+        </div>
 
         <div class="input-field col s12">
             <input type="text" th:field="*{title}" id="title" name="title"
