@@ -8,9 +8,9 @@ import java.util.Set;
 public interface ArticleService {
     List<Article> getAllArticles();
     List<Article> getArticlesByTags(Set<String> tags);
-    Article getArticleById(int id);
+    Article getArticleById(Long id);
     Article addArticle(Article article);
     Article updateArticle(Article article);
-    Article deleteArticleById(int id);
+    Article deleteArticleById(Long id);
     long getArticleCount();
 }

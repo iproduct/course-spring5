@@ -14,6 +14,7 @@
     <th>Created</th>
     <th>Modified</th>
     <th>Image</th>
+    <th>Actions</th>
     </thead>
     <tbody>
     <tr th:each="row, rowStat: ${articles}">
@@ -23,6 +24,10 @@
         <td th:text='${#strings.listJoin(row.tags, ", ")}'/>
         <td th:text='${#temporals.format(row.created, "dd.MM.YYYY HH:mm:ss")}'></td>
         <td th:text='${#temporals.format(row.modified, "dd.MM.YYYY HH:mm:ss")}'></td>
+        <td>
+            <img class="img-thumbnail" th:if="${row.imageUrl != null && !#strings.isEmpty(row.imageUrl)}" th:src="${row.imageUrl}" />
+        </td>
+
     </tr>
     </tbody>
 </table>

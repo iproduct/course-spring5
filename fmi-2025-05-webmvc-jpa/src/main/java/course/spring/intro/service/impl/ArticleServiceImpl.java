@@ -2,6 +2,7 @@ package course.spring.intro.service.impl;
 
 import course.spring.intro.dao.ArticleRepository;
 import course.spring.intro.entity.Article;
+import course.spring.intro.exception.EntityNotFoundException;
 import course.spring.intro.service.ArticleService;
 import org.springframework.stereotype.Service;
 
@@ -22,31 +23,35 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public List<Article> getArticlesByTags(Set<String> tags) {
-        return List.of();
+        return articleRepository.findByTagsContainingIgnoreCase(tags);
     }
 
     @Override
-    public Article getArticleById(int id) {
-        return null;
+    public Article getArticleById(Long id) {
+        return articleRepository.findById(id).orElseThrow(
+                () -> new EntityNotFoundException("Article with id " + id + " not found"));
     }
 
     @Override
     public Article addArticle(Article article) {
-        return null;
+        return articleRepository.save(article);
     }
 
     @Override
     public Article updateArticle(Article article) {
-        return null;
+        var foundArticle = getArticleById(article.getId());
+        return articleRepository.save(article);
     }
 
     @Override
-    public Article deleteArticleById(int id) {
-        return null;
+    public Article deleteArticleById(Long id) {
+        var deletedArticle = getArticleById(id);
+        articleRepository.deleteById(id);
+        return deletedArticle;
     }
 
     @Override
     public long getArticleCount() {
-        return 0;
+        return articleRepository.count();
     }
 }
