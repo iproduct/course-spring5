@@ -41,6 +41,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:3.5.7'
 	implementation 'org.webjars:bootstrap:5.3.3'
 	implementation 'org.webjars:materializecss:1.0.0'
+	implementation 'org.webjars:jquery:3.7.1'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.mysql:mysql-connector-j'

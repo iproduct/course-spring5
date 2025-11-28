@@ -6,7 +6,7 @@
 <div class="container">
     <h2>Error page</h2>
     <div th:if="${error}" th:text="${error}" class="errors"></div>
-    <form th:action="@{${redirectUrl}}" method="get">
+    <form th:action="@{/}" method="get">
         <div class="offset-sm-2 col-sm-10">
             <button type="submit" class="btn waves-effect waves-light blue" id="submit" name="submit" value="submit">Go Back
             </button>

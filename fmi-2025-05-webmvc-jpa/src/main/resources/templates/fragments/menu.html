@@ -1,4 +1,5 @@
-<nav th:fragment="menu(path, currentUserName)" class="light-blue lighten-1" role="navigation" xmlns:th="http://www.thymeleaf.org">
+<nav th:fragment="menu(path, currentUserName)" class="light-blue lighten-1" role="navigation"
+     xmlns:th="http://www.thymeleaf.org">
     <div class="nav-wrapper container">
         <a id="logo-container" href="#" class="brand-logo"><i class="brand-logo material-icons">library_books</i></a>
         <ul class="right hide-on-med-and-down">
@@ -7,12 +8,27 @@
             <form style="display:inline" th:action="@{/logout}" method="post">
                 <button type="submit" name="submit" class="btn waves-effect waves-light blue">Logout</button>
             </form>
+            <form style="display:inline" class="col s1 language-selector">
+                <select id="locales1" name="locales" class="locales">
+                    <option value="en-US" th:selected="${#locale.toLanguageTag() == 'en-US'}">EN</option>
+                    <option value="bg-BG" th:selected="${#locale.toLanguageTag() == 'bg-BG'}">BG</option>
+                </select>
+            </form>
         </ul>
         <ul id="nav-mobile" class="sidenav">
             <li><a th:class="${path == '/'}? 'active' : ''" href="/">All Posts</a></li>
             <li><a th:class="${path == '/article-form'}? 'active' : ''" href="/article-form">Add Post</a></li>
             <form style="display:inline" th:action="@{/logout}" method="post">
                 <button type="submit" name="submit" class="btn waves-effect waves-light blue">Logout</button>
+            </form>
+            <form class="language-form form-inline my-2 my-lg-0">
+                <div class="form-group language-selector">
+                    <label for="locales2" class="menu-label col-form-label">Language</label>
+                    <select id="locales2" name="locales" class="locales">
+                        <option value="en-US" th:selected="${#locale.toLanguageTag() == 'en-US'}">EN</option>
+                        <option value="bg-BG" th:selected="${#locale.toLanguageTag() == 'bg-BG'}">BG</option>
+                    </select>
+                </div>
             </form>
         </ul>
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
