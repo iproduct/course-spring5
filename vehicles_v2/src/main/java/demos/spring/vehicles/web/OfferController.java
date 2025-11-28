@@ -105,12 +105,12 @@ public class OfferController {
         try {
             offer.setSeller((User) session.getAttribute("user"));
             if (file != null && !file.isEmpty() && file.getOriginalFilename().length() > 0) {
-                if (Pattern.matches(".+\\.(jpg|png)", file.getOriginalFilename())) {
+                if (Pattern.matches(".+\\.(jpg|png|webp)", file.getOriginalFilename())) {
                     handleMultipartFile(file);
                     offer.setImageUrl("/" + UPLOAD_DIR + "/" + file.getOriginalFilename());
                 } else {
 //                    model.addAttribute("fileError", "Submit picture [.jpg, .png]");
-                    return redirectToAddOfferFormGet(offer, binding, "Submit picture [.jpg, .png]", redirectAttributes);
+                    return redirectToAddOfferFormGet(offer, binding, "Submit picture [.jpg, .png, .webp]", redirectAttributes);
                 }
             }
             log.info("POST Article: " + offer);

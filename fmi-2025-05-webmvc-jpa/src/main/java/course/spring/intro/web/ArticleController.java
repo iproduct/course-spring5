@@ -52,9 +52,14 @@ public class ArticleController {
     @PostMapping
     public String actionsArticle(@RequestParam(value = "edit", required = false) Long edit,
                                  @RequestParam(value = "delete", required = false) Long delete,
-                                 UriComponentsBuilder uriComponentsBuilder) {
+                                 UriComponentsBuilder uriComponentsBuilder,
+                                 RedirectAttributes redirectAttributes
+    ) {
         log.info("actionsArticle edit: {}, delete {}", edit, delete);
         if (edit != null) {
+//            redirectAttributes.addAttribute("mode", "edit");
+//            redirectAttributes.addAttribute("articleId", edit);
+//            return "redirect:/article-form";
             URI uri = uriComponentsBuilder.path("/article-form")
                     .query("mode=edit&articleId={id}").buildAndExpand(edit).toUri();
             return "redirect:" + uri.toString();

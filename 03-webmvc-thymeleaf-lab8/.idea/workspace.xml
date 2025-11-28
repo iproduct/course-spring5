@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0001d11-907d-4bf0-af89-4f1ebef4eac9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fmi-2025-05-webmvc-jpa/src/main/java/course/spring/intro/dao/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2025-05-webmvc-jpa/src/main/java/course/spring/intro/dao/ArticleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fmi-2025-05-webmvc-jpa/src/main/java/course/spring/intro/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2025-05-webmvc-jpa/src/main/java/course/spring/intro/service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fmi-2025-05-webmvc-jpa/src/main/java/course/spring/intro/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2025-05-webmvc-jpa/src/main/java/course/spring/intro/service/impl/ArticleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fmi-2025-05-webmvc-jpa/src/main/java/course/spring/intro/web/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2025-05-webmvc-jpa/src/main/java/course/spring/intro/web/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fmi-2025-05-webmvc-jpa/src/main/resources/templates/article-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2025-05-webmvc-jpa/src/main/resources/templates/article-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fmi-2025-05-webmvc-jpa/src/main/resources/templates/articles.html" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2025-05-webmvc-jpa/src/main/resources/templates/articles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fmi-2025-05-webmvc-jpa/src/main/resources/templates/fragments/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2025-05-webmvc-jpa/src/main/resources/templates/fragments/menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fmi-2025-05-webmvc-jpa/uploads/837df8ee-8127-46e7-a38e-6ab59b0484bb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fmi-2025-05-webmvc-jpa/uploads/c082744b-7e35-492a-b02f-c541ce6a73a0.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +231,7 @@
       <workItem from="1639595778388" duration="670000" />
       <workItem from="1669830207004" duration="1267000" />
       <workItem from="1701707826666" duration="559000" />
-      <workItem from="1763831462760" duration="456000" />
+      <workItem from="1763831462760" duration="1830000" />
     </task>
     <task id="LOCAL-00001" summary="demos updated">
       <created>1638388807049</created>
