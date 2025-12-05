@@ -3,8 +3,8 @@
     <div class="nav-wrapper container">
         <a id="logo-container" href="#" class="brand-logo"><i class="brand-logo material-icons">library_books</i></a>
         <ul class="right hide-on-med-and-down">
-            <li><a th:class="${path == '/'}? 'active' : ''" href="/">All Posts</a></li>
-            <li><a th:class="${path == '/article-form'}? 'active' : ''" href="/article-form">Add Post</a></li>
+            <li><a th:class="${path == '/'}? 'active' : ''" href="/" th:text="#{lbl.all_posts}">All Posts</a></li>
+            <li><a th:class="${path == '/article-form'}? 'active' : ''" href="/article-form" th:text="#{lbl.add}">Add Post</a></li>
             <form style="display:inline" th:action="@{/logout}" method="post">
                 <button type="submit" name="submit" class="btn waves-effect waves-light blue">Logout</button>
             </form>
@@ -16,8 +16,8 @@
             </form>
         </ul>
         <ul id="nav-mobile" class="sidenav">
-            <li><a th:class="${path == '/'}? 'active' : ''" href="/">All Posts</a></li>
-            <li><a th:class="${path == '/article-form'}? 'active' : ''" href="/article-form">Add Post</a></li>
+            <li><a th:class="${path == '/'}? 'active' : ''" href="/" th:text="#{lbl.all_posts}">All Posts</a></li>
+            <li><a th:class="${path == '/article-form'}? 'active' : ''" href="/article-form" th:text="#{lbl.add}">Add Post</a></li>
             <form style="display:inline" th:action="@{/logout}" method="post">
                 <button type="submit" name="submit" class="btn waves-effect waves-light blue">Logout</button>
             </form>
