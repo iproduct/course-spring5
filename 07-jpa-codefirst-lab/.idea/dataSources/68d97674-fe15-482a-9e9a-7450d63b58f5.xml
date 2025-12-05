@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="vehicles_2024@localhost">
-  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.48">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.53">
     <root id="1">
       <DefaultCasing>lower/lower</DefaultCasing>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -1401,14 +1401,14 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
     <column id="382" parent="374" name="seats">
-      <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
+      <StoredType>int(11)|0s</StoredType>
     </column>
     <column id="383" parent="374" name="id">
-      <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
+      <StoredType>bigint(20)|0s</StoredType>
     </column>
     <foreign-key id="384" parent="374" name="FKg6qv1q9ejeejme43pckefidi">
       <ColNames>id</ColNames>
@@ -1426,13 +1426,13 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="387" parent="375" name="id">
-      <DasType>decimal(19,2 digit)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
+      <StoredType>decimal(19,2 digit)|0s</StoredType>
     </column>
     <column id="388" parent="375" name="name">
-      <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
+      <StoredType>varchar(255)|0s</StoredType>
     </column>
     <index id="389" parent="375" name="PRIMARY">
       <ColNames>id</ColNames>
@@ -1446,13 +1446,13 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </key>
     <column id="391" parent="376" name="id">
       <AutoIncrement>1</AutoIncrement>
-      <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
+      <StoredType>bigint(20)|0s</StoredType>
     </column>
     <column id="392" parent="376" name="full_name">
-      <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
+      <StoredType>varchar(255)|0s</StoredType>
     </column>
     <index id="393" parent="376" name="PRIMARY">
       <ColNames>id</ColNames>
@@ -1465,14 +1465,14 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="395" parent="377" name="driver_id">
-      <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
+      <StoredType>bigint(20)|0s</StoredType>
     </column>
     <column id="396" parent="377" name="vehicle_id">
-      <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
+      <StoredType>bigint(20)|0s</StoredType>
     </column>
     <foreign-key id="397" parent="377" name="FKrshvjitxleo9qikcprqadosl8">
       <ColNames>driver_id</ColNames>
@@ -1500,17 +1500,17 @@ vehicle_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="402" parent="378" name="passenger_capacity">
-      <DasType>int(11)|0s</DasType>
       <Position>1</Position>
+      <StoredType>int(11)|0s</StoredType>
     </column>
     <column id="403" parent="378" name="id">
-      <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
+      <StoredType>bigint(20)|0s</StoredType>
     </column>
     <column id="404" parent="378" name="company_id">
-      <DasType>decimal(19,2 digit)|0s</DasType>
       <Position>3</Position>
+      <StoredType>decimal(19,2 digit)|0s</StoredType>
     </column>
     <foreign-key id="405" parent="378" name="FKdas873njlrarg9wqrt0dokw8c">
       <ColNames>id</ColNames>
@@ -1537,13 +1537,13 @@ vehicle_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="410" parent="379" name="id">
-      <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
+      <StoredType>bigint(20)|0s</StoredType>
     </column>
     <column id="411" parent="379" name="plate_number">
-      <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
+      <StoredType>varchar(255)|0s</StoredType>
     </column>
     <foreign-key id="412" parent="379" name="FKhnvbimsain2shrj6hvqe4m2cy">
       <ColNames>id</ColNames>
@@ -1561,13 +1561,13 @@ vehicle_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="415" parent="380" name="load_capcity">
-      <DasType>double|0s</DasType>
       <Position>1</Position>
+      <StoredType>double|0s</StoredType>
     </column>
     <column id="416" parent="380" name="id">
-      <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
+      <StoredType>bigint(20)|0s</StoredType>
     </column>
     <foreign-key id="417" parent="380" name="FKjh6ghnjn1yc09ti1qnf2mn9en">
       <ColNames>id</ColNames>
@@ -1585,27 +1585,27 @@ vehicle_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="420" parent="381" name="type">
-      <DasType>varchar(31)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
+      <StoredType>varchar(31)|0s</StoredType>
     </column>
     <column id="421" parent="381" name="id">
       <AutoIncrement>3</AutoIncrement>
-      <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
+      <StoredType>bigint(20)|0s</StoredType>
     </column>
     <column id="422" parent="381" name="fuel_type">
-      <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
+      <StoredType>varchar(255)|0s</StoredType>
     </column>
     <column id="423" parent="381" name="model">
-      <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
+      <StoredType>varchar(255)|0s</StoredType>
     </column>
     <column id="424" parent="381" name="price">
-      <DasType>decimal(19,2 digit)|0s</DasType>
       <Position>5</Position>
+      <StoredType>decimal(19,2 digit)|0s</StoredType>
     </column>
     <index id="425" parent="381" name="PRIMARY">
       <ColNames>id</ColNames>
