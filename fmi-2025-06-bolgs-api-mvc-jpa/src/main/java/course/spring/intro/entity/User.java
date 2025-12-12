@@ -54,6 +54,7 @@ public class User {
     private Set<Role> roles = Set.of(Role.READER);
     private boolean enabled = true;
     private String imageUrl;
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "author")
     @JsonIgnore
     private List<Article> articles =  new ArrayList<>();
