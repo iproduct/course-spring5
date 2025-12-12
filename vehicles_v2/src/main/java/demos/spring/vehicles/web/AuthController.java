@@ -73,7 +73,10 @@ public class AuthController {
                         @RequestParam("password") String password,
                         @ModelAttribute("redirectUrl") String redirectUrl,
                         RedirectAttributes redirectAttributes,
-                        HttpServletRequest request) {
+                        HttpServletRequest request
+//                        HttpSession httpSession,
+//                        SessionStatus
+                        ) {
         User loggedUser = authService.login(username, password);
         if (loggedUser == null) {
             String errors = "Invalid username or password.";
@@ -82,6 +85,7 @@ public class AuthController {
             redirectAttributes.addAttribute("redirectUrl", redirectUrl);
             return "redirect:login";
         } else {
+//            status.setComplete();
             request.getSession().invalidate();
             var session = request.getSession();
             session.setAttribute("user", loggedUser);
