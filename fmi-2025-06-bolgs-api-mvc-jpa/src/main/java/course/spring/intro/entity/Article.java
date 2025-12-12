@@ -19,21 +19,22 @@ public class Article {
     @Id
     @EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    private Long id;
     @NonNull
     @NotBlank
     @Size(min = 3, max = 100)
-    String title;
+    private String title;
     @NonNull
-    String content;
+    private String content;
     @NonNull
-    @Size(min = 3, max = 60)
-    String author;
-    @ElementCollection
-    Set<String> tags =  new HashSet<>();
-    @ElementCollection
+    @ManyToOne
+    @JoinColumn(name="AUTHOR_ID",  nullable = false)
+    private User author;
+    @ElementCollection(fetch = FetchType.EAGER)
+    private Set<String> tags =  new HashSet<>();
+    @ElementCollection(fetch = FetchType.EAGER)
     @Enumerated(EnumType.STRING)
-    Set<Category> categories = Set.of(Category.OTHER);
-    LocalDateTime created =  LocalDateTime.now();
-    LocalDateTime modified =  LocalDateTime.now();
+    private Set<Category> categories = Set.of(Category.OTHER);
+    private LocalDateTime created =  LocalDateTime.now();
+    private LocalDateTime modified =  LocalDateTime.now();
 }
