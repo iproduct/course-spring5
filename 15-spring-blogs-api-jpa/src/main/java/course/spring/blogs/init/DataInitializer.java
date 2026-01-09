@@ -55,7 +55,7 @@ public class DataInitializer implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
         if(userService.getUsersCount() == 0) {
             SAMPLE_USERS.forEach(userService::create);
-            log.info("Sample users created: {}", userService.getAllUsers());
+//            log.info("Sample users created: {}", userService.getAllUsers());
         }
         if(articleService.getArticlesCount() == 0) {
             try {

@@ -49,7 +49,6 @@ import static org.springframework.transaction.annotation.Isolation.SERIALIZABLE;
  * ArticleService default implementation
  */
 @Service
-@Transactional
 @Slf4j
 public class ArticleServiceImpl implements ArticleService {
     private final ArticleRepository articleRepo;
@@ -151,6 +150,7 @@ public class ArticleServiceImpl implements ArticleService {
 //        });
 //    }
 
+    @Transactional
     @Override
     public List<Article> createBatch(List<Article> articles) {
         DefaultTransactionDefinition def = new DefaultTransactionDefinition(TransactionDefinition.PROPAGATION_REQUIRED);
@@ -179,6 +179,7 @@ public class ArticleServiceImpl implements ArticleService {
      */
     @PreAuthorize("(#article.authorId == authentication.principal.id) or hasRole('ADMIN')")
     @Override
+    @Transactional
     public Article update(Article article) throws NonexistingEntityException, InvalidEntityDataException {
         var old = getArticleById(article.getId());
         article.setAuthor(old.getAuthor());
@@ -192,6 +193,7 @@ public class ArticleServiceImpl implements ArticleService {
      * @return
      */
     @Override
+    @Transactional
     public Article deleteArticleById(Long id) throws NonexistingEntityException {
         var old = getArticleById(id);
         articleRepo.deleteById(id);

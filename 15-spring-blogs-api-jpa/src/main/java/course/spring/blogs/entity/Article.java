@@ -6,6 +6,7 @@ import org.hibernate.validator.constraints.URL;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.time.LocalDateTime;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -39,7 +40,7 @@ public class Article {
     @NonNull
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "TAGS")
-    private Set<String> tags;
+    private Set<String> tags = new HashSet<>();
     @NonNull
     @ManyToOne(fetch = FetchType.EAGER)
 //    @JoinTable(name = "article_user",
@@ -53,4 +54,12 @@ public class Article {
     private LocalDateTime created = LocalDateTime.now();
     @PastOrPresent
     private LocalDateTime modified = LocalDateTime.now();
+
+    public Article(@NonNull String title, @NonNull String content, @NonNull String imageUrl, @NonNull Set<String> tags, @NonNull User author) {
+        this.title = title;
+        this.content = content;
+        this.imageUrl = imageUrl;
+        this.tags = tags;
+        this.author = author;
+    }
 }
