@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head('Login page')}"/>
+<body>
+<div th:replace="~{fragments/menu :: menu(${path}, '')}"></div>
+<div class="container">
+    <h2>Login page</h2>
+    <div th:if="${param.error}" class="errors">Wrong user or password</div>
+    <div th:if="${param.logout}">You have been logged out.</div>
+    <form th:action="@{/login}" method="post">
+        <div class="input-field col-sm-6">
+            <input type="text" id="username" name="username" autofocus="autofocus"/>
+            <label for="username">Username</label>
+        </div>
+        <div class="input-field col-sm-6">
+            <input type="password" id="password" name="password"/>
+            <label for="password">Password</label>
+        </div>
+        <div class="offset-sm-2 col-sm-10">
+            <button type="submit" class="btn waves-effect waves-light blue" id="submit" name="submit" value="submit">Log
+                in
+            </button>
+        </div>
+    </form>
+</div>
+<div th:replace="~{fragments/foot :: foot}"></div>
+</body>
+</html>
