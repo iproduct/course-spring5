@@ -33,4 +33,12 @@ public class Article {
     private Set<String> tags = new HashSet<>();
     private LocalDateTime created = LocalDateTime.now();
     private LocalDateTime modified = LocalDateTime.now();
+
+    public Article(String title, String content, String author, Set<Category> categories, Set<String> tags) {
+        this.title = title;
+        this.content = content;
+        this.author = author;
+        this.categories = categories;
+        this.tags = tags;
+    }
 }
