@@ -27,7 +27,8 @@ public class Article {
     private LocalDateTime created = LocalDateTime.now();
     private LocalDateTime modified = LocalDateTime.now();
 
-    public Article(String title, String content, String author, Set<Category> categories, Set<String> tags) {
+    public Article(Long id, String title, String content, String author, Set<Category> categories, Set<String> tags) {
+        this.id = id;
         this.title = title;
         this.content = content;
         this.author = author;

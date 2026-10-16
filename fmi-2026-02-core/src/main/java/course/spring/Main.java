@@ -1,5 +1,6 @@
 package course.spring;
 
+import course.spring.service.ArticleProvider;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -7,6 +8,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
+        var provider = ctx.getBean(ArticleProvider.class);
+        for(var article : provider.getArticles()){
+            System.out.println(article);
+        }
     }
 }
