@@ -25,7 +25,7 @@ repositories {
 
 dependencies {
     implementation 'org.springframework:spring-context:7.0.9'
-    implementation 'jakarta.inject:javax.inject:1'
+    implementation 'jakarta.inject:jakarta.inject-api:2.0.1'
     implementation 'jakarta.annotation:jakarta.annotation-api:2.1.1'
     implementation 'org.projectlombok:lombok:1.18.38'
     implementation 'org.slf4j:slf4j-simple:2.0.20'
