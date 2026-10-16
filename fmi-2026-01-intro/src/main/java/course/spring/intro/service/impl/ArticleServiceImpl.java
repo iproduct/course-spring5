@@ -13,8 +13,22 @@ import java.util.Set;
 
 @Service
 public class ArticleServiceImpl implements ArticleService {
-    @Autowired
     private ArticleRepository articleRepo;
+
+//    @Autowired
+//    public ArticleServiceImpl(ArticleRepository articleRepo) {
+//        this.articleRepo = articleRepo;
+//    }
+
+    public void setArticleRepo(ArticleRepository articleRepo) {
+        this.articleRepo = articleRepo;
+    }
+
+    public static ArticleService createArticleService(ArticleRepository articleRepo) {
+        var articleService = new ArticleServiceImpl();
+        articleService.setArticleRepo(articleRepo);
+        return articleService;
+    }
 
     @Override
     public Article create(Article article) {
