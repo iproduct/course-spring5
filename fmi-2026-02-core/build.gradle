@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'idea'
+}
+
+group = 'course.spring'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework:spring-context:7.0.9'
+    implementation 'jakarta.inject:javax.inject:1'
+    implementation 'jakarta.annotation:jakarta.annotation-api:2.1.1'
+    implementation 'org.projectlombok:lombok:1.18.38'
+    implementation 'org.slf4j:slf4j-simple:2.0.20'
+    annotationProcessor 'org.projectlombok:lombok:1.18.38'
+    testImplementation platform('org.junit:junit-bom:5.12.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.12.2'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
