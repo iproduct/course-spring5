@@ -8,12 +8,17 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
-    <context:property-placeholder location="classpath:article.properties" />
+    <context:property-placeholder location="classpath:article.properties"/>
     <bean id="articleProviderInMemory" class="course.spring.service.impl.ArticleProviderInMemory"
-          init-method="init" />
+          init-method="init"/>
+    <bean id="articleProviderFromProperties" class="course.spring.service.impl.ArticleProviderFromProperties">
+        <property name="articleTitles">
+            <value>Arfticle A, Article B, Article C</value>
+        </property>
+    </bean>
     <bean id="presenter" scope="singleton" class="course.spring.client.impl.ArticlePreseterImpl">
         <property name="provider">
-            <ref bean="articleProviderInMemory" />
+            <ref bean="articleProviderFromProperties"/>
         </property>
     </bean>
 
