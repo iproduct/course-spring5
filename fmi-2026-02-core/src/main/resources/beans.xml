@@ -10,7 +10,11 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
     <bean id="articleProviderInMemory" class="course.spring.service.impl.ArticleProviderInMemory"
           init-method="init" />
-
+    <bean scope="singleton" class="course.spring.client.impl.ArticlePreseterImpl">
+        <property name="articles">
+            <ref bean="articleProviderInMemory" />
+        </property>
+    </bean>
 
 
 </beans>
