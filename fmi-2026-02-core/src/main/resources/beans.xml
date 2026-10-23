@@ -8,10 +8,11 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:property-placeholder location="classpath:article.properties" />
     <bean id="articleProviderInMemory" class="course.spring.service.impl.ArticleProviderInMemory"
           init-method="init" />
-    <bean scope="singleton" class="course.spring.client.impl.ArticlePreseterImpl">
-        <property name="articles">
+    <bean id="presenter" scope="singleton" class="course.spring.client.impl.ArticlePreseterImpl">
+        <property name="provider">
             <ref bean="articleProviderInMemory" />
         </property>
     </bean>

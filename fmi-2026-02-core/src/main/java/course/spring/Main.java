@@ -1,5 +1,6 @@
 package course.spring;
 
+import course.spring.client.ArticlePresenter;
 import course.spring.service.ArticleProvider;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -9,9 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
     public static void main(String[] args) {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
-        var provider = ctx.getBean(ArticleProvider.class);
-        for(var article : provider.getArticles()){
-            System.out.println(article);
-        }
+        var presenter = ctx.getBean(ArticlePresenter.class);
+        presenter.presentArticles();
     }
 }

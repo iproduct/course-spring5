@@ -9,6 +9,9 @@ import java.util.List;
 public class ArticlePreseterImpl implements ArticlePresenter {
     private ArticleProvider provider;
 
+    public ArticlePreseterImpl() {
+    }
+
     public ArticlePreseterImpl(ArticleProvider provider) {
         this.provider = provider;
     }
