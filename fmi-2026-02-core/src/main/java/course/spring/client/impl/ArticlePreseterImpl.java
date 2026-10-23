@@ -7,18 +7,18 @@ import course.spring.service.ArticleProvider;
 import java.util.List;
 
 public class ArticlePreseterImpl implements ArticlePresenter {
-    private List<Article> articles;
+    private ArticleProvider provider;
 
-    public ArticlePreseterImpl(List<Article> articles) {
-        this.articles = articles;
+    public ArticlePreseterImpl(ArticleProvider provider) {
+        this.provider = provider;
     }
 
-    public void setArticles(List<Article> articles) {
-        this.articles = articles;
+    public void setProvider(ArticleProvider provider) {
+        this.provider = provider;
     }
 
     @Override
     public void presentArticles() {
-        articles.forEach(System.out::println);
+        provider.getArticles().forEach(System.out::println);
     }
 }
