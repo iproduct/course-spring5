@@ -17,8 +17,10 @@
     </bean>
     <bean id="articleRepoInMemory" class="course.spring.dao.impl.ArticleRepositoryInMemory"
           c:idGen-ref="longIdGen" />
+    <bean id="atricleProviderFactory" class="course.spring.service.impl.ArticleProviderFactory"
+          c:articlesRepo-ref="articleRepoInMemory" />
     <bean id="articleProviderInMemory" class="course.spring.service.impl.ArticleProviderInMemory"
-          init-method="init" c:articlesRepo-ref="articleRepoInMemory" />
+          factory-bean="atricleProviderFactory" factory-method="createArticleProvider" />
     <bean id="articleProviderFromProperties" class="course.spring.service.impl.ArticleProviderFromProperties"
           p:articleTitles="${articles.titles}">
 <!--        <property name="articleTitles" value="${articles.titles}" />-->

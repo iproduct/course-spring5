@@ -28,7 +28,7 @@ public class ArticleProviderInMemory implements ArticleProvider {
         this.articlesRepo = articlesRepo;
     }
 
-    public static ArticleProviderInMemory create(ArticlesRepository articlesRepo) {
+    public static ArticleProviderInMemory createInstance(ArticlesRepository articlesRepo) {
         return new ArticleProviderInMemory(articlesRepo);
     }
 
