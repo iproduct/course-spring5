@@ -10,7 +10,7 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
     <context:property-placeholder location="classpath:article.properties"/>
     <bean id="longIdGen" class="course.spring.dao.impl.IdGeneratorLong"
-        c:initialId="1000">
+        c:initialId="${initialGeneratedId}">
 <!--        <constructor-arg name="initialId" value="1000"/>-->
 <!--            <value>1000</value>-->
 <!--        </constructor-arg>-->
