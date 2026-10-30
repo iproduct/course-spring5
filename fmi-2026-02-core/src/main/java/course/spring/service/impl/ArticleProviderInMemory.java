@@ -4,6 +4,10 @@ import course.spring.dao.ArticlesRepository;
 import course.spring.model.Article;
 import course.spring.service.ArticleProvider;
 import jakarta.annotation.PostConstruct;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.List;
@@ -13,6 +17,9 @@ import java.util.stream.Collectors;
 
 import static course.spring.model.Category.*;
 
+@Service
+@Qualifier("IN_MEMORY")
+//@Primary
 public class ArticleProviderInMemory implements ArticleProvider {
     public static final List<Article> SAMPLE_ARTICLES =List.of(
             new Article(1L, "New in Spring 7", "Spring AI is a new Spring feature API ...", "Trayan Iliev",
@@ -24,6 +31,8 @@ public class ArticleProviderInMemory implements ArticleProvider {
     );
 
     private ArticlesRepository articlesRepo;
+
+    @Autowired
     public ArticleProviderInMemory(ArticlesRepository articlesRepo) {
         this.articlesRepo = articlesRepo;
     }
@@ -32,6 +41,7 @@ public class ArticleProviderInMemory implements ArticleProvider {
         return new ArticleProviderInMemory(articlesRepo);
     }
 
+    @PostConstruct
     public void init(){
         SAMPLE_ARTICLES.forEach(this::addArticle);
     }
