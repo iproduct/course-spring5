@@ -1,5 +1,6 @@
 package course.spring.service.impl;
 
+import course.spring.dao.ArticlesRepository;
 import course.spring.model.Article;
 import course.spring.service.ArticleProvider;
 import jakarta.annotation.PostConstruct;
@@ -22,6 +23,14 @@ public class ArticleProviderInMemory implements ArticleProvider {
                     Set.of(PROGRAMMING, AI), Set.of("spring", "ai", "ollama", "llm"))
     );
 
+    private ArticlesRepository articlesRepo;
+    public ArticleProviderInMemory(ArticlesRepository articlesRepo) {
+        this.articlesRepo = articlesRepo;
+    }
+
+    public static ArticleProviderInMemory create(ArticlesRepository articlesRepo) {
+        return new ArticleProviderInMemory(articlesRepo);
+    }
 
     public void init(){
         SAMPLE_ARTICLES.forEach(this::addArticle);
@@ -30,12 +39,11 @@ public class ArticleProviderInMemory implements ArticleProvider {
 
     @Override
     public List<Article> getArticles() {
-        return articles.values().stream().collect(Collectors.toList());
+        return articlesRepo.findAll();
     }
 
     @Override
     public Article addArticle(Article article) {
-        articles.put(article.getId(), article);
-        return article;
+        return articlesRepo.create(article);
     }
 }

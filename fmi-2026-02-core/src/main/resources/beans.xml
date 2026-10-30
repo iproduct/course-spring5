@@ -9,13 +9,16 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
     <context:property-placeholder location="classpath:article.properties"/>
-    <bean id="longIdGen" class="course.spring.dao.impl.IdGeneratorLong">
-        <constructor-arg name="initialId">
-            <value>1000</value>
-        </constructor-arg>
+    <bean id="longIdGen" class="course.spring.dao.impl.IdGeneratorLong"
+        c:initialId="1000">
+<!--        <constructor-arg name="initialId" value="1000"/>-->
+<!--            <value>1000</value>-->
+<!--        </constructor-arg>-->
     </bean>
+    <bean id="articleRepoInMemory" class="course.spring.dao.impl.ArticleRepositoryInMemory"
+          c:idGen-ref="longIdGen" />
     <bean id="articleProviderInMemory" class="course.spring.service.impl.ArticleProviderInMemory"
-          init-method="init"/>
+          init-method="init" c:articlesRepo-ref="articleRepoInMemory" />
     <bean id="articleProviderFromProperties" class="course.spring.service.impl.ArticleProviderFromProperties"
           p:articleTitles="${articles.titles}">
 <!--        <property name="articleTitles" value="${articles.titles}" />-->
@@ -23,7 +26,7 @@
 <!--        </property>-->
     </bean>
     <bean id="presenter" scope="singleton" class="course.spring.client.impl.ArticlePreseterImpl"
-        p:provider-ref="articleProviderFromProperties" />
+        p:provider-ref="articleProviderInMemory" />
 <!--        <property name="provider">-->
 <!--            <ref bean="articleProviderFromProperties"/>-->
 <!--        </property>-->
