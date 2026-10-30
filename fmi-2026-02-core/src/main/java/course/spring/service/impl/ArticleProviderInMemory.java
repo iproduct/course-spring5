@@ -21,7 +21,7 @@ public class ArticleProviderInMemory implements ArticleProvider {
             new Article(3L, "Running Spring AI Locally", "This post demonstrates how to run LLMs with Ollama and Spring AI ...", "Trayan Iliev",
                     Set.of(PROGRAMMING, AI), Set.of("spring", "ai", "ollama", "llm"))
     );
-    private Map<Long, Article> articles = new HashMap<>();
+
 
     public void init(){
         SAMPLE_ARTICLES.forEach(this::addArticle);

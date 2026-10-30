@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface ArticlesRepository {
     List<Article> findAll();
-    Article findById(int id);
+    Article create(Article article);
 }
