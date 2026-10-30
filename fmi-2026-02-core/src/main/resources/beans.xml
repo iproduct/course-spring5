@@ -11,16 +11,18 @@
     <context:property-placeholder location="classpath:article.properties"/>
     <bean id="articleProviderInMemory" class="course.spring.service.impl.ArticleProviderInMemory"
           init-method="init"/>
-    <bean id="articleProviderFromProperties" class="course.spring.service.impl.ArticleProviderFromProperties">
-        <property name="articleTitles">
-            <value>Arfticle A, Article B, Article C</value>
-        </property>
+    <bean id="articleProviderFromProperties" class="course.spring.service.impl.ArticleProviderFromProperties"
+          p:articleTitles="${articles.titles}">
+<!--        <property name="articleTitles" value="${articles.titles}" />-->
+<!--            <value>Arfticle A, Article B, Article C</value>-->
+<!--        </property>-->
     </bean>
-    <bean id="presenter" scope="singleton" class="course.spring.client.impl.ArticlePreseterImpl">
-        <property name="provider">
-            <ref bean="articleProviderFromProperties"/>
-        </property>
-    </bean>
+    <bean id="presenter" scope="singleton" class="course.spring.client.impl.ArticlePreseterImpl"
+        p:provider-ref="articleProviderFromProperties" />
+<!--        <property name="provider">-->
+<!--            <ref bean="articleProviderFromProperties"/>-->
+<!--        </property>-->
+<!--    </bean>-->
 
 
 </beans>
