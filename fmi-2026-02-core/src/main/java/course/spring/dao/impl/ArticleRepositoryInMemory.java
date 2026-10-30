@@ -7,20 +7,25 @@ import course.spring.model.Article;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class ArticleRepositoryInMemory implements ArticlesRepository {
     private Map<Long, Article> articles = new HashMap<>();
-    private
+    private IdGenerator<Long> idGen;
 
     public ArticleRepositoryInMemory(IdGenerator<Long> idGen) {
+        this.idGen = idGen;
     }
+
     public List<Article> findAll() {
-        return List.of();
+        return articles.values().stream().collect(Collectors.toList());
     }
 
     @Override
     public Article create(Article article) {
-        return null;
+        article.setId(idGen.getNextId());
+        articles.put(article.getId(), article);
+        return article;
     }
 
 
