@@ -22,17 +22,19 @@
     <bean id="articleProviderInMemory" class="course.spring.service.impl.ArticleProviderInMemory"
           factory-bean="atricleProviderFactory" factory-method="createArticleProvider" />
     <bean id="articleProviderFromProperties" class="course.spring.service.impl.ArticleProviderFromProperties"
-          p:articleTitles="${articles.titles}">
-<!--        <property name="articleTitles" value="${articles.titles}" />-->
-<!--            <value>Arfticle A, Article B, Article C</value>-->
-<!--        </property>-->
-    </bean>
+          p:articleTitles="${articles.titles}" />
+        <!--        <property name="articleTitles" value="${articles.titles}" />-->
+        <!--            <value>Arfticle A, Article B, Article C</value>-->
+        <!--        </property>-->
     <bean id="presenter" scope="singleton" class="course.spring.client.impl.ArticlePreseterImpl"
-        p:provider-ref="articleProviderInMemory" />
-<!--        <property name="provider">-->
-<!--            <ref bean="articleProviderFromProperties"/>-->
-<!--        </property>-->
-<!--    </bean>-->
+          p:provider-ref="articleProviderInMemory" />
+    <!--        <property name="provider">-->
+    <!--            <ref bean="articleProviderFromProperties"/>-->
+    <!--        </property>-->
+    <!--    </bean>-->
 
-
+    <bean id="usersRepoInMemory" class="course.spring.dao.impl.UsersRepositoryInMemory"
+          c:idGen-ref="longIdGen" />
+    <bean id="usersProviderInMemory" class="course.spring.service.impl.UsersProviderInMemory"
+         c:_0-ref="usersRepoInMemory" />
 </beans>

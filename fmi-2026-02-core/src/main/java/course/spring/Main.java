@@ -2,6 +2,7 @@ package course.spring;
 
 import course.spring.client.ArticlePresenter;
 import course.spring.service.ArticleProvider;
+import course.spring.service.UsersProvider;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -12,5 +13,7 @@ public class Main {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
         var presenter = ctx.getBean(ArticlePresenter.class);
         presenter.presentArticles();
+        var usersProvider = ctx.getBean(UsersProvider.class);
+        usersProvider.getUsers().forEach(System.out::println);
     }
 }

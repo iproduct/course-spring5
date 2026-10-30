@@ -18,12 +18,9 @@ public class UsersProviderInMemory implements UsersProvider {
     );
 
     private UsersRepository usersRepo;
+
     public UsersProviderInMemory(UsersRepository usersRepo) {
         this.usersRepo = usersRepo;
-    }
-
-    public static UsersProviderInMemory createInstance(UsersRepository usersRepo) {
-        return new UsersProviderInMemory(usersRepo);
     }
 
     public void init(){
