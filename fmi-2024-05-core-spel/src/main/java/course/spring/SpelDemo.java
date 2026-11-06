@@ -96,7 +96,7 @@ public class SpelDemo {
                 "cars.![model + ': ' + make ]")
                 .getValue(carParkContext, List.class);
         System.out.println(result4);
-
+//
         // #this
         List<Integer> primes = new ArrayList<Integer>();
         primes.addAll(Arrays.asList(2,3,5,7,11,13,17));

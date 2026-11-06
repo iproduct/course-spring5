@@ -10,6 +10,7 @@ import org.springframework.context.annotation.*;
 @Configuration
 @PropertySource("classpath:article.properties")
 @ComponentScan("course.spring")
+//@ImportResource("classpath:beans.xml")
 public class AppConfig {
     @Value("${initialGeneratedId:0}")
     private Long initialGeneratedId = 0L;
