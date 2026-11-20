@@ -51,8 +51,8 @@ public class PostController {
     @PostMapping("/add")
     public String addPost(@Valid @ModelAttribute("post") Post post, Errors errors,
                           @RequestParam("file") MultipartFile file, Model model) {
-        log.warning("Invalid post data: " + errors.toString());
         if (errors.hasErrors()) {
+            log.warning("Invalid post data: " + errors.toString());
             return "post-form";
         }
         if (!file.isEmpty() && file.getOriginalFilename().length() > 0) {

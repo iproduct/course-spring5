@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head('All Posts')}"/>
+<body>
+<div th:replace="~{fragments/menu :: menu(${path},'')}"></div>
+<div class="container">
+    <h1>All Posts</h1>
+    <form th:action="@{/posts}" th:method="post">
+        <table>
+            <thead>
+            <th>Number</th>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Tags</th>
+            <th>Created</th>
+            <th>Modified</th>
+            <th>Image</th>
+            </thead>
+            <tbody>
+            <tr th:each="row, rowStat: ${posts}">
+                <td th:text="${rowStat.index + 1}"/>
+                <td th:text="${row.title}"/>
+                <td th:text="${row.content}"/>
+                <td th:text='${#strings.listJoin(row.tags, ", ")}'/>
+                <td th:text='${#temporals.format(row.created, "dd.MM.YYYY HH:mm:ss")}'></td>
+                <td th:text='${#temporals.format(row.modified, "dd.MM.YYYY HH:mm:ss")}'></td>
+                <td>
+                    <img class="img-thumbnail" th:if="${row.imageUrl != null && !#strings.isEmpty(row.imageUrl)}"
+                         th:src="${row.imageUrl}"/>
+                </td>
+                <td>
+                    <button type="submit" class="btn waves-effect waves-light blue" name="edit" th:value="${row.id}">
+                        <i class="material-icons">edit</i>
+                    </button>
+                    <button type="submit" class="btn waves-effect waves-light red" name="delete" th:value="${row.id}">
+                        <i class="material-icons">delete</i>
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+<div th:replace="~{fragments/foot :: foot}"></div>
+</body>
+</html>
