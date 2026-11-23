@@ -20,7 +20,7 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "body-parser": "^1.19.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "formik": "^2.1.4",
     "materialize-css": "^1.0.0",
     "react": "^16.13.1",
