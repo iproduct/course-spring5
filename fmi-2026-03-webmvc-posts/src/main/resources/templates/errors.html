@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head('Error page')}"/>
+<body>
+<div th:replace="~{fragments/menu :: menu(${path}, '')}"></div>
+    <div class="container">
+        <!--/*@thymesVar id="message" type="String"*/-->
+        <div class="alert alert-danger" th:text="${message}"></div>
+        <button type="button" class="btn btn-primary" onclick="history.back()">Go Back</button>
+    </div>
+    <div th:replace="~{fragments/foot :: foot}"></div>
+</body>
+</html>
